@@ -1,0 +1,58 @@
+---
+title: "Week 12 — Traditional inference as shortcut"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+How do formulas approximate simulation?
+
+## Day-by-day
+
+### Monday — concept
+
+Sampling distributions and the approximation logic; means and
+proportions with standard errors as shortcuts for the simulation
+results from weeks 10–11.
+
+### Wednesday — micro-lab ticket
+
+Read a one-sample or two-sample t/z test output and write a
+conclusion in context.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab on a new test output;
+estimation-vs-testing application.
+
+## Primary source basis
+
+OpenIntro IMS Ch 13 (foundations-mathematical), Ch 19 (one-mean),
+Ch 20 (two-means), and Ch 21 (paired) — selected items.
+
+## Supplemental source / custom needs
+
+Bridging language back to weeks 10–11 (randomization / bootstrap)
+to frame formulas as shortcuts, not the intellectual center.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Recognize traditional tests as shortcuts to uncertainty
+      reasoning.
+- [ ] Interpret standard error conceptually.
+- [ ] Read common test output.
+- [ ] Connect traditional inference to prior simulation logic.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

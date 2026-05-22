@@ -1,0 +1,58 @@
+---
+title: "Week 14 — Meta-analysis and forest plots"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+How do studies become evidence?
+
+## Day-by-day
+
+### Monday — concept
+
+Single studies, systematic reviews, and meta-analysis; the parts of a
+forest plot.
+
+### Wednesday — micro-lab ticket
+
+Annotate a forest plot: identify study rows, effect measure, pooled
+estimate, and heterogeneity cues.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab on a new forest plot;
+meta-analysis critique application.
+
+## Primary source basis
+
+No IMS content. Custom-built from cited published forest plots and
+the instructor's existing publication-bias / rigor work.
+
+## Supplemental source / custom needs
+
+Externally-sourced forest plots (with attribution); a one-page
+meta-analysis mini-assignment worksheet.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Distinguish a systematic review from a meta-analysis.
+- [ ] Identify the parts of a forest plot.
+- [ ] Interpret a pooled estimate.
+- [ ] Explain heterogeneity conceptually.
+- [ ] Name reasons a meta-analysis can mislead.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD
+- Meta-analysis mini-assignment: TBD

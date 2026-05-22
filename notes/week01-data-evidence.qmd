@@ -1,0 +1,55 @@
+---
+title: "Week 1 — Data, evidence, and statistics"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+What can data tell us, and what can't it tell us?
+
+## Day-by-day
+
+### Monday — concept
+
+Direct instruction and worked examples introducing data, evidence, and
+the role of statistics in making claims under uncertainty.
+
+### Wednesday — micro-lab ticket
+
+Short scaffolded task: identify cases, variables, and the
+response/explanatory roles in a study description.
+
+### Friday — quiz / application
+
+Short quiz mirroring Wednesday's micro-lab on a new scenario, followed
+by a headline-critique application.
+
+## Primary source basis
+
+OpenIntro IMS Ch 1 (data-hello).
+
+## Supplemental source / custom needs
+
+Health and life-science framing for examples; no ISLBS or custom
+material required for week 1.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Identify cases and variables in a study description.
+- [ ] Distinguish response from explanatory variables.
+- [ ] Describe a statistical question in plain language.
+- [ ] Recognize when a headline overstates the evidence.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

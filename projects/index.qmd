@@ -1,0 +1,15 @@
+---
+title: "Projects"
+toc: false
+---
+
+Short, open-ended projects students can choose from. Each project page
+will describe the prompt, suggested data, and a rubric written in plain
+language.
+
+Planned projects (placeholders):
+
+- Open data exploration
+- Replicating a small published result
+- Designing a small study
+- A Bayesian reanalysis exercise

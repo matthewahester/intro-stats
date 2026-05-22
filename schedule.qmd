@@ -1,0 +1,24 @@
+---
+title: "Schedule"
+toc: true
+---
+
+> **Public version.** A generic week-by-week topic map. Specific dates
+> live in the LMS for each section.
+
+| Week | Topic                                  | Notes / Activities |
+| ---- | -------------------------------------- | ------------------ |
+| 1    | What is statistics? Variables and data | placeholder        |
+| 2    | Describing distributions               | placeholder        |
+| 3    | Bivariate descriptions                 | placeholder        |
+| 4    | Designing studies                      | placeholder        |
+| 5    | Probability foundations                | placeholder        |
+| 6    | Sampling distributions                 | placeholder        |
+| 7    | Confidence intervals                   | placeholder        |
+| 8    | Hypothesis tests                       | placeholder        |
+| 9    | Two-sample inference                   | placeholder        |
+| 10   | Regression                             | placeholder        |
+| 11   | Categorical data and chi-square        | placeholder        |
+| 12   | A first look at Bayesian reasoning     | placeholder        |
+| 13   | Reproducibility and rigor              | placeholder        |
+| 14   | Review and synthesis                   | placeholder        |

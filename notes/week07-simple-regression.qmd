@@ -1,0 +1,55 @@
+---
+title: "Week 7 — Simple regression"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+How do we model a numerical outcome?
+
+## Day-by-day
+
+### Monday — concept
+
+Simple linear regression as both prediction and association; slope,
+intercept, residuals, and prediction limits.
+
+### Wednesday — micro-lab ticket
+
+Interpret a regression output table (no R required) and write a slope
+sentence in context.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab; short prediction-and-limitations
+scenario.
+
+## Primary source basis
+
+OpenIntro IMS Ch 7 (model-slr) and Ch 24 (inf-model-slr).
+
+## Supplemental source / custom needs
+
+Health/life-science prediction vignettes; instructor-provided
+regression output.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Interpret slope and intercept in context.
+- [ ] Use a regression line for basic prediction.
+- [ ] Describe residuals conceptually.
+- [ ] Avoid causal overclaims.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

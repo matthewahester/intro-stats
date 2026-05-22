@@ -1,0 +1,32 @@
+---
+title: "Notes"
+toc: false
+---
+
+Lecture notes and conceptual write-ups will live here, one Quarto page
+per week. Each note is meant to stand on its own as a short reading
+that supports that week's Monday concept day, Wednesday micro-lab, and
+Friday quiz/application.
+
+## Weekly notes
+
+The placeholders below mirror the 15-week course spine. Real content
+will be filled in as the course is built.
+
+| Wk | Unit |
+|---:|---|
+| 1 | [Data, evidence, and statistics](week01-data-evidence.qmd) |
+| 2 | [Study design, bias, and causality](week02-study-design.qmd) |
+| 3 | [One-variable summaries](week03-one-variable-summaries.qmd) |
+| 4 | [Comparing groups](week04-comparing-groups.qmd) |
+| 5 | [Association](week05-association.qmd) |
+| 6 | [Confounding and multivariable thinking](week06-confounding.qmd) |
+| 7 | [Simple regression](week07-simple-regression.qmd) |
+| 8 | [Multiple / logistic regression interpretation](week08-multiple-logistic-regression.qmd) |
+| 9 | [Probability as risk and diagnosis](week09-probability-risk-diagnosis.qmd) |
+| 10 | [Randomization tests](week10-randomization-tests.qmd) |
+| 11 | [Bootstrap confidence intervals](week11-bootstrap-confidence-intervals.qmd) |
+| 12 | [Traditional inference as shortcut](week12-traditional-inference-shortcut.qmd) |
+| 13 | [Categorical outcomes](week13-categorical-outcomes.qmd) |
+| 14 | [Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd) |
+| 15 | [Final case synthesis](week15-final-case-synthesis.qmd) |

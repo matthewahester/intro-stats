@@ -1,0 +1,55 @@
+---
+title: "Week 4 — Comparing groups"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+How do outcomes differ across groups?
+
+## Day-by-day
+
+### Monday — concept
+
+Comparing distributions and proportions across groups; difference in
+means and difference in proportions as descriptive quantities.
+
+### Wednesday — micro-lab ticket
+
+Treatment-vs-control comparison: compute and describe a difference,
+without inference.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab on a new scenario; brief
+application on practical vs numerical significance.
+
+## Primary source basis
+
+OpenIntro IMS Ch 4–5 (descriptive parts), plus the descriptive halves
+of IMS Ch 17 (two proportions) and Ch 20–21 (two means / paired) split
+out for use here.
+
+## Supplemental source / custom needs
+
+Treatment / control framing; ISLBS biomedical examples once mirrored.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Compute and interpret simple group differences.
+- [ ] Distinguish numerical difference from practical importance.
+- [ ] Describe group comparisons with appropriate context.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

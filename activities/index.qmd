@@ -1,0 +1,15 @@
+---
+title: "Activities"
+toc: false
+---
+
+In-class activities and small worked examples will live here. The aim
+is short, self-contained pieces a student can pick up later for review.
+
+Planned activities (placeholders):
+
+- A first look at a dataset
+- Building a distribution by hand
+- Coin flips and the law of large numbers
+- Confidence intervals via simulation
+- A guided regression fit

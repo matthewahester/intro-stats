@@ -1,0 +1,55 @@
+---
+title: "Week 6 — Confounding and multivariable thinking"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+What else could explain the relationship?
+
+## Day-by-day
+
+### Monday — concept
+
+Confounding and lurking variables; the difference between crude and
+adjusted comparisons.
+
+### Wednesday — micro-lab ticket
+
+Compare a crude difference to a stratified one in a small two-by-two
+table.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab; short Simpson's-paradox case
+prompt.
+
+## Primary source basis
+
+Harvested from OpenIntro IMS Ch 1–3 examples and selected Ch 8 prose;
+no single IMS chapter is dedicated to this unit.
+
+## Supplemental source / custom needs
+
+Custom adjusted-vs-unadjusted cases; ISLBS clinical confounding
+examples once mirrored.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Explain confounding in plain language.
+- [ ] Compare crude and stratified results.
+- [ ] Describe why an observed association may be misleading.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

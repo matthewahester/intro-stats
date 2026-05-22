@@ -1,0 +1,54 @@
+---
+title: "Week 2 — Study design, bias, and causality"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+Where did the data come from?
+
+## Day-by-day
+
+### Monday — concept
+
+Observational studies versus experiments; how sampling and assignment
+shape what we can conclude.
+
+### Wednesday — micro-lab ticket
+
+Short scaffolded task: a "study design autopsy" on a research summary.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab on a new scenario, followed by a
+clinical-trial-vs-records-study comparison.
+
+## Primary source basis
+
+OpenIntro IMS Ch 2 (data-design).
+
+## Supplemental source / custom needs
+
+Clinical and biological examples; ISLBS supplements help here once it
+is mirrored.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Classify a study as observational or experimental.
+- [ ] Identify random sampling and random assignment.
+- [ ] State whether causal claims are justified.
+- [ ] Name plausible sources of bias or confounding.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

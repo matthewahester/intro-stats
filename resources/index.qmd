@@ -1,0 +1,15 @@
+---
+title: "Resources"
+toc: false
+---
+
+Readings, R primers, and outside links. The goal is a short, opinionated
+list — not a dump.
+
+Planned sections (placeholders):
+
+- A short list of readings worth doing
+- R/RStudio quick-start
+- Where to find clean public datasets
+- Reproducibility checklist
+- A short Bayesian reading list

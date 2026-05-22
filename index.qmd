@@ -1,0 +1,25 @@
+---
+title: "Intro to Statistics"
+subtitle: "Public course resources"
+toc: false
+---
+
+This site collects public-facing resources for **Intro to Statistics** —
+concepts, activities, and small reproducible R examples curated by
+[Matt Hester](https://matthewhester.com).
+
+It is a **curated resource site**, not a raw course archive. Anything
+syllabus- or roster-specific lives in the LMS; this site is what stays
+public.
+
+## Where to start
+
+- [Syllabus](syllabus.qmd) — course goals, structure, and policies
+  (sanitized for public view)
+- [Schedule](schedule.qmd) — week-by-week topic map
+- [Notes](notes/index.qmd) — lecture notes and conceptual write-ups
+- [Activities](activities/index.qmd) — in-class activities and worked
+  examples
+- [Assignments](assignments/index.qmd) — homework and lab descriptions
+- [Projects](projects/index.qmd) — small open-ended projects
+- [Resources](resources/index.qmd) — readings, R primers, and links

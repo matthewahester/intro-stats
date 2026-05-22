@@ -1,0 +1,16 @@
+---
+title: "Assignments"
+toc: false
+---
+
+Public, generic versions of homework and lab descriptions will live
+here. Concrete due dates, point values, and section-specific submission
+instructions stay in the LMS.
+
+Planned assignment pages (placeholders):
+
+- Lab 1 — Describing a dataset
+- Lab 2 — Sampling distributions
+- Lab 3 — A first inference
+- Lab 4 — Building and reading a regression
+- Lab 5 — Reproducibility checkpoint

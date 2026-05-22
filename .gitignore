@@ -1,0 +1,37 @@
+# --- Quarto build artefacts ---------------------------------------
+/.quarto/
+/_site/
+**/*.quarto_ipynb
+
+# --- OS junk ------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --- Private assessment machinery ---------------------------------
+# These directories live in the *private* teaching workspace
+# (D:/Teaching/_courses/intro-stats/).  If they ever reappear in this
+# public repo, treat that as a mistake and remove them before
+# committing.
+/bank/
+/builder/
+/_source_material/
+/_site_planning/
+/private/
+/private_assessments/
+/keys/
+/answer_keys/
+/exams/
+/quizzes/
+
+# --- Filename patterns for stray private artifacts ----------------
+# Answer keys, secure exam variants, raw R data dumps.
+*_key.*
+*_key_*.*
+*answer_key*
+*.RData
+*.rds
+
+# --- Local-only editor / IDE / R droppings ------------------------
+.Rhistory
+.Rproj.user/
+.vscode/

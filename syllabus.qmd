@@ -1,0 +1,31 @@
+---
+title: "Syllabus"
+toc: true
+---
+
+> **Public version.** This page is the sanitized, public-facing summary
+> of the syllabus. The full course syllabus — with section numbers, dates,
+> rosters, and institution-specific policies — lives in the LMS.
+
+## Course goals
+
+Placeholder. Add 3–5 student-facing learning outcomes here.
+
+## Topics
+
+Placeholder. Add a short list of major topic areas.
+
+## Structure
+
+Placeholder. Describe lecture/lab/activity rhythm, assessments, and how
+the public materials on this site relate to in-class work.
+
+## Tools
+
+Placeholder. R, RStudio, and small datasets hosted in `data/`.
+
+## Policies (public summary)
+
+Placeholder. Summarize what students should know about late work,
+collaboration, and AI tool use **without** copying institutional policy
+text verbatim.

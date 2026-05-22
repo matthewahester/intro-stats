@@ -1,0 +1,55 @@
+---
+title: "Week 5 — Association"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+Are two variables related?
+
+## Day-by-day
+
+### Monday — concept
+
+Association between variables: scatterplots, correlation, and
+two-way tables.
+
+### Wednesday — micro-lab ticket
+
+Describe the direction and strength of an association from a graph or
+table.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab; short headline-critique on
+association-vs-causation language.
+
+## Primary source basis
+
+OpenIntro IMS Ch 5 (bivariate numerical) and the intro framing of
+Ch 7 (model-slr).
+
+## Supplemental source / custom needs
+
+Headline critique vignettes; light custom material to anchor the
+association-vs-causation distinction.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Describe direction and strength of association.
+- [ ] Interpret correlation cautiously.
+- [ ] Avoid causal language for association alone.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

@@ -1,0 +1,55 @@
+---
+title: "Week 3 — One-variable summaries"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+What does one variable look like?
+
+## Day-by-day
+
+### Monday — concept
+
+Categorical and quantitative variables, frequency tables, and the
+core visual summaries.
+
+### Wednesday — micro-lab ticket
+
+Describe the shape, center, spread, and unusual values of a given
+graph or summary table.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab on a new scenario; short
+graph-interpretation application.
+
+## Primary source basis
+
+OpenIntro IMS Ch 4 (explore-categorical) and Ch 5 (explore-numerical).
+
+## Supplemental source / custom needs
+
+Health/life-science graph and table examples; no R required for
+students.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Choose appropriate summaries for categorical and quantitative
+      variables.
+- [ ] Describe shape, center, spread, and unusual values.
+- [ ] Avoid overinterpreting a single graph.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD

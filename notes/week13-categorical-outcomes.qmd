@@ -1,0 +1,55 @@
+---
+title: "Week 13 — Categorical outcomes"
+toc: true
+---
+
+> **Status:** placeholder. Real content will be developed during the
+> course build.
+
+## Big question
+
+How do we compare rates and proportions?
+
+## Day-by-day
+
+### Monday — concept
+
+Risk difference, relative risk, and odds ratio; two-way tables and
+the basic chi-square logic.
+
+### Wednesday — micro-lab ticket
+
+Compute and interpret a risk difference and relative risk from a
+clinical two-way table.
+
+### Friday — quiz / application
+
+Quiz mirroring Wednesday's micro-lab on a new clinical or biological
+categorical-outcome case.
+
+## Primary source basis
+
+OpenIntro IMS Ch 16 (one-prop), Ch 17 (two-props), and Ch 18 (tables).
+
+## Supplemental source / custom needs
+
+ISLBS clinical RR/OR examples once mirrored; custom risk/odds
+clusters drawn from health and life-science contexts.
+
+## Learning goals
+
+Students should be able to:
+
+- [ ] Compute and interpret basic risks.
+- [ ] Interpret risk difference and relative risk.
+- [ ] Recognize odds language.
+- [ ] Read two-way tables and basic chi-square output.
+
+## Assessment links
+
+Links to the bank/manifests for this week will appear here once items
+are built.
+
+- Micro-lab ticket: TBD
+- Friday quiz: TBD
+- Homework: TBD
