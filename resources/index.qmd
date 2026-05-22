@@ -3,13 +3,38 @@ title: "Resources"
 toc: false
 ---
 
-Readings, R primers, and outside links. The goal is a short, opinionated
-list — not a dump.
+Readings and outside links. The goal is a short, opinionated list — not
+a dump.
 
-Planned sections (placeholders):
+## Optional / supplemental texts
+
+::: {.callout-note appearance="simple"}
+### *Introductory Statistics for the Life and Biomedical Sciences*
+
+- **Publisher / source:** OpenIntro
+- **License:** Creative Commons BY-SA 3.0
+- **Where to get it:** the official OpenIntro project page
+
+<!--
+TODO (resources): confirm and link the canonical OpenIntro ISLBS page
+(URL likely under https://openintro.org/book/ but not verified from
+local source files yet) and add the canonical author list.  Authors
+were not recorded in our local planning notes; do not list them until
+verified from the official OpenIntro page.
+-->
+
+Used as an **optional supplemental reading** for biomedical and
+life-science framing in later units (probability as risk, diagnostic
+testing, categorical outcomes).  Adaptations of material from this
+book that appear in our course will carry the appropriate CC BY-SA
+3.0 attribution.
+:::
+
+## Planned sections (placeholders)
 
 - A short list of readings worth doing
-- R/RStudio quick-start
+- StatKey quick-start (used for simulation later in the semester)
 - Where to find clean public datasets
-- Reproducibility checklist
-- A short Bayesian reading list
+- How to read a graph / a table / a regression output
+
+More entries will be added as the course is built.
