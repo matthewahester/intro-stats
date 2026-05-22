@@ -1,40 +1,50 @@
 ---
 title: "Resources"
-toc: false
 ---
 
-Readings and outside links. The goal is a short, opinionated list — not
-a dump.
+# Resources
 
-## Optional / supplemental texts
+This course is built around open, student-accessible materials. The
+main source spine is **Introduction to Modern Statistics (2e)** from
+OpenIntro. We will also use selected biomedical and life-science
+contexts from **Introductory Statistics for the Life and Biomedical
+Sciences**, along with course-specific notes, StatKey activities,
+micro-lab tickets, interpretation-focused assignments, and a custom
+late-semester meta-analysis unit.
 
-::: {.callout-note appearance="simple"}
-### *Introductory Statistics for the Life and Biomedical Sciences*
+## Primary course text
 
-- **Publisher / source:** OpenIntro
-- **License:** Creative Commons BY-SA 3.0
-- **Where to get it:** the official OpenIntro project page
+**Introduction to Modern Statistics (2e)**
+Mine Çetinkaya-Rundel and Johanna Hardin. OpenIntro.
 
-<!--
-TODO (resources): confirm and link the canonical OpenIntro ISLBS page
-(URL likely under https://openintro.org/book/ but not verified from
-local source files yet) and add the canonical author list.  Authors
-were not recorded in our local planning notes; do not list them until
-verified from the official OpenIntro page.
--->
+This is the main open textbook and source spine for the course. We
+will not necessarily follow every section in textbook order, but many
+course topics, examples, and practice problems are adapted from or
+aligned with this text.
 
-Used as an **optional supplemental reading** for biomedical and
-life-science framing in later units (probability as risk, diagnostic
-testing, categorical outcomes).  Adaptations of material from this
-book that appear in our course will carry the appropriate CC BY-SA
-3.0 attribution.
-:::
+- Online textbook: <https://openintrostat.github.io/ims/>
+- OpenIntro book page: <https://www.openintro.org/book/ims/>
+- Source files: <https://github.com/openintrostat/ims>
+- License: Creative Commons Attribution-ShareAlike 3.0
 
-## Planned sections (placeholders)
+## Optional supplementary text
 
-- A short list of readings worth doing
-- StatKey quick-start (used for simulation later in the semester)
-- Where to find clean public datasets
-- How to read a graph / a table / a regression output
+**Introductory Statistics for the Life and Biomedical Sciences**
+Julie Vu and David Harrington. OpenIntro, First Edition.
 
-More entries will be added as the course is built.
+This text is used as an optional supplementary resource, especially
+for biomedical and life-science contexts. Selected sections, examples,
+or problems may be useful for topics involving health, biology, risk,
+diagnosis, and biomedical study design. The course does **not**
+require students to use R.
+
+- Official OpenIntro page: <https://www.openintro.org/book/biostat/>
+- License: Creative Commons Attribution-ShareAlike 3.0
+
+## Course-specific materials
+
+Additional course notes, activities, micro-lab tickets, assignments,
+and the late-semester meta-analysis unit are developed specifically
+for this UA Little Rock course. These materials are designed to
+emphasize interpretation, study design, uncertainty, evidence, and
+clear communication.
