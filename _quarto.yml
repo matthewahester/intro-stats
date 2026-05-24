@@ -70,6 +70,7 @@ website:
 
   page-footer:
     left: "© 2026 Matt Hester · Intro to Statistics"
+    center: "[Matt Hester · matthewhester.com](https://matthewhester.com/)"
     right: "Built with [Quarto](https://quarto.org)"
 
 format:
