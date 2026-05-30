@@ -3,22 +3,49 @@ title: "Schedule"
 toc: true
 ---
 
-> **Public version.** A generic week-by-week topic map. Specific dates
-> live in the LMS for each section.
+> **Public version.** A generic week-by-week topic map. Specific dates,
+> assignment prompts, and submission details live in the LMS for each
+> section.
 
-| Week | Topic                                  | Notes / Activities |
-| ---- | -------------------------------------- | ------------------ |
-| 1    | What is statistics? Variables and data | placeholder        |
-| 2    | Describing distributions               | placeholder        |
-| 3    | Bivariate descriptions                 | placeholder        |
-| 4    | Designing studies                      | placeholder        |
-| 5    | Probability foundations                | placeholder        |
-| 6    | Sampling distributions                 | placeholder        |
-| 7    | Confidence intervals                   | placeholder        |
-| 8    | Hypothesis tests                       | placeholder        |
-| 9    | Two-sample inference                   | placeholder        |
-| 10   | Regression                             | placeholder        |
-| 11   | Categorical data and chi-square        | placeholder        |
-| 12   | A first look at Bayesian reasoning     | placeholder        |
-| 13   | Reproducibility and rigor              | placeholder        |
-| 14   | Review and synthesis                   | placeholder        |
+This site holds the public spine: short, course-voice **weekly notes**,
+public-safe **Monday and Wednesday exit tickets** linked from each
+weekly page, and outbound pointers to OpenIntro IMS and ISLBS for a
+second voice. **Friday quizzes and the biweekly homework** are handled
+through Blackboard or in class as directed — they are not posted here.
+
+## Week-by-week
+
+| Wk | Topic | Notes / Activities |
+|---:|-------|--------------------|
+| 1 | Data, evidence, and statistics | [Week 1 notes](notes/week01-data-evidence.qmd) — cases, variables, types; reading a small dataset honestly |
+| 2 | Study design, bias, and causality | [Week 2 notes](notes/week02-study-design.qmd) — populations and samples, observational vs experimental, confounding |
+| 3 | One-variable summaries | [Week 3 notes](notes/week03-one-variable-summaries.qmd) — center, spread, shape; tables and graphs for a single variable |
+| 4 | Comparing groups | [Week 4 notes](notes/week04-comparing-groups.qmd) — conditional proportions, group differences, choosing the right display |
+| 5 | Association | planned |
+| 6 | Confounding and multivariable thinking | planned |
+| 7 | First-half synthesis and midterm | planned |
+| 8 | Simple regression | planned |
+| 9 | Multiple / logistic regression interpretation | planned |
+| 10 | Probability as risk and diagnosis | planned |
+| 11 | Simulation-based inference | planned |
+| 12 | Classical hypothesis testing | planned |
+| 13 | Categorical outcomes | planned |
+| 14 | Meta-analysis and forest plots | planned |
+| 15 | Final review | planned |
+
+## How to use this schedule
+
+- **Read by row.** Each row gives the week's topic and links to the
+  notes page when it's available. Weeks marked *planned* will fill
+  in as the course is built.
+- **Dates live in the LMS.** This site only shows "Week 1, Week 2,
+  …" so it stays useful across terms. The LMS is the authoritative
+  source for section-specific due dates and announcements.
+- **Exit tickets** are linked from each weekly notes page (look for
+  the *Assignments this week* section near the bottom of the page).
+  **Friday quizzes** and the **biweekly homework** are not posted
+  here — they are handled through Blackboard or in class as
+  directed.
+
+See the [Syllabus](syllabus.qmd) for the grading framework, late-work
+rule, and other course-wide policies.

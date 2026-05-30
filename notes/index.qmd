@@ -3,30 +3,61 @@ title: "Notes"
 toc: false
 ---
 
-Lecture notes and conceptual write-ups will live here, one Quarto page
-per week. Each note is meant to stand on its own as a short reading
-that supports that week's Monday concept day, Wednesday micro-lab, and
-Friday quiz/application.
+Course-voice weekly lesson pages for the 15-week Intro to Statistics
+spine. Each weekly page is the **main reading** for that week — a
+short textbook-depth read that teaches the concepts end-to-end, with
+outbound links to OpenIntro IMS and ISLBS for an alternate voice.
 
-## Weekly notes
+The weekly cadence is Monday concept / Wednesday application /
+Friday accountability. Monday and Wednesday **public-safe exit
+tickets** are linked from each weekly page. Friday quizzes and the
+biweekly homework are handled through Blackboard or in class as
+directed.
 
-The placeholders below mirror the 15-week course spine. Real content
-will be filled in as the course is built.
+## Available
 
-| Wk | Unit |
-|---:|---|
-| 1 | [Data, evidence, and statistics](week01-data-evidence.qmd) |
-| 2 | [Study design, bias, and causality](week02-study-design.qmd) |
-| 3 | [One-variable summaries](week03-one-variable-summaries.qmd) |
-| 4 | [Comparing groups](week04-comparing-groups.qmd) |
-| 5 | [Association](week05-association.qmd) |
-| 6 | [Confounding and multivariable thinking](week06-confounding.qmd) |
-| 7 | [Simple regression](week07-simple-regression.qmd) |
-| 8 | [Multiple / logistic regression interpretation](week08-multiple-logistic-regression.qmd) |
-| 9 | [Probability as risk and diagnosis](week09-probability-risk-diagnosis.qmd) |
-| 10 | [Randomization tests](week10-randomization-tests.qmd) |
-| 11 | [Bootstrap confidence intervals](week11-bootstrap-confidence-intervals.qmd) |
-| 12 | [Traditional inference as shortcut](week12-traditional-inference-shortcut.qmd) |
-| 13 | [Categorical outcomes](week13-categorical-outcomes.qmd) |
-| 14 | [Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd) |
-| 15 | [Final case synthesis](week15-final-case-synthesis.qmd) |
+- [Week 1 — Data, evidence, and statistics](week01-data-evidence.qmd) —
+  what counts as data, cases and variables, variable types (numerical
+  vs categorical, continuous vs discrete, nominal vs ordinal),
+  response vs explanatory variables, and reading a small dataset
+  honestly.
+- [Week 2 — Study design, bias, and causality](week02-study-design.qmd) —
+  populations and samples, parameters vs statistics, sampling and
+  representativeness, observational studies vs experiments, random
+  assignment, bias, confounding, and what each design can support.
+- [Week 3 — One-variable summaries](week03-one-variable-summaries.qmd) —
+  describing a single variable: frequency tables and bar plots for
+  categorical data; histograms, boxplots, and the center–spread–shape
+  vocabulary for numerical data; choosing the right summary.
+- [Week 4 — Comparing groups](week04-comparing-groups.qmd) —
+  comparing two or more groups: contingency tables and conditional
+  proportions; differences in proportions and differences in means;
+  choosing displays that answer the comparison question.
+
+## Planned
+
+Notes are added a few weeks at a time as the course is built. The
+sequence follows the 15-week course spine.
+
+**Two-variable description and confounding (Weeks 5–6)**
+
+- Week 5 — Association
+- Week 6 — Confounding and multivariable thinking
+
+**Modeling and synthesis (Weeks 7–9)**
+
+- Week 7 — First-half synthesis and midterm
+- Week 8 — Simple regression
+- Week 9 — Multiple / logistic regression interpretation
+
+**Probability and inference (Weeks 10–13)**
+
+- Week 10 — Probability as risk and diagnosis
+- Week 11 — Simulation-based inference
+- Week 12 — Classical hypothesis testing
+- Week 13 — Categorical outcomes
+
+**Evidence synthesis and close-out (Weeks 14–15)**
+
+- Week 14 — Meta-analysis and forest plots
+- Week 15 — Final review
