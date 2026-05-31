@@ -21,8 +21,8 @@ through Blackboard or in class as directed — they are not posted here.
 | 2 | Study design, bias, and causality | [Week 2 notes](notes/week02-study-design.qmd) — populations and samples, observational vs experimental, confounding |
 | 3 | One-variable summaries | [Week 3 notes](notes/week03-one-variable-summaries.qmd) — center, spread, shape; tables and graphs for a single variable |
 | 4 | Comparing groups | [Week 4 notes](notes/week04-comparing-groups.qmd) — conditional proportions, group differences, choosing the right display |
-| 5 | Association | planned |
-| 6 | Confounding and multivariable thinking | planned |
+| 5 | Association | [Week 5 notes](notes/week05-association.qmd) — scatterplots, correlation as a descriptive number, the linear-only caveat, association vs causation |
+| 6 | Confounding and multivariable thinking | [Week 6 notes](notes/week06-confounding.qmd) — confounders, stratification, Simpson's paradox, *alone* vs *after accounting for* |
 | 7 | First-half synthesis and midterm | planned |
 | 8 | Simple regression | planned |
 | 9 | Multiple / logistic regression interpretation | planned |

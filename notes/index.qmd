@@ -33,16 +33,21 @@ directed.
   comparing two or more groups: contingency tables and conditional
   proportions; differences in proportions and differences in means;
   choosing displays that answer the comparison question.
+- [Week 5 — Association](week05-association.qmd) — scatterplots and
+  the *direction / form / strength / unusual points* reading;
+  correlation as a single descriptive number for the linear part of
+  the relationship; why a near-zero correlation can still hide a
+  strong relationship; association vs causation in headlines.
+- [Week 6 — Confounding and multivariable thinking](week06-confounding.qmd) —
+  the *associated with both* definition of a confounder; comparing
+  within strata as a fairer descriptive move; Simpson's paradox;
+  the plain-English *alone / after accounting for* language as the
+  honest-reporting habit.
 
 ## Planned
 
 Notes are added a few weeks at a time as the course is built. The
 sequence follows the 15-week course spine.
-
-**Two-variable description and confounding (Weeks 5–6)**
-
-- Week 5 — Association
-- Week 6 — Confounding and multivariable thinking
 
 **Modeling and synthesis (Weeks 7–9)**
 
