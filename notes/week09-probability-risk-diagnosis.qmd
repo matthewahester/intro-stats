@@ -1,5 +1,5 @@
 ---
-title: "Week 9 — Probability as risk and diagnosis"
+title: "Week 9 — Multiple / logistic regression interpretation"
 toc: true
 ---
 
@@ -8,49 +8,57 @@ toc: true
 
 ## Big question
 
-How do chance, risk, and testing interact?
+What changes when we account for other variables, and how do we
+interpret a model that predicts a yes/no outcome?
 
 ## Day-by-day
 
 ### Monday — concept
 
-Probability as risk; conditional probability through diagnostic
-tables; sensitivity, specificity, false positives, and base rates.
+Multiple linear regression as Week 8's simple regression with more
+than one predictor; the *"holding constant"* coefficient
+interpretation; adjusted R² as a fairness tweak; common pitfalls
+(multicollinearity at intro depth).
 
-### Wednesday — micro-lab ticket
+### Wednesday — application
 
-Read a diagnostic two-by-two table and compute sensitivity,
-specificity, and predictive values.
+Read a real multiple-regression output table in context: name the
+response, the predictors, and what each coefficient is saying with
+the other variables held constant.
 
-### Friday — quiz / application
+### Friday — accountability
 
-Quiz mirroring Wednesday's micro-lab; screening-test case study.
+Logistic regression for a yes/no outcome: the difference between a
+linear and a logistic fit, what odds and log-odds mean at intuition
+depth, and how to interpret a logistic coefficient in plain English.
 
 ## Primary source basis
 
-No direct IMS chapter. Build from ISLBS Ch 2–3 once mirrored, plus
-custom diagnostic-table vignettes.
+IMS Chapter 8 (multiple regression) and Chapter 9 (logistic
+regression), extended with ISLBS Chapter 7 examples.
 
 ## Supplemental source / custom needs
 
-This week is **custom-built** in v1. ISLBS supplies most of the raw
-material; custom screening-test cases anchor the practical framing.
+Course-voice rewrites of the OpenIntro material, plus 1–2 clinical
+worked examples for the logistic Friday spine.
 
 ## Learning goals
 
 Students should be able to:
 
-- [ ] Interpret probability as risk and uncertainty.
-- [ ] Use two-way tables for diagnostic testing.
-- [ ] Explain false positives and false negatives.
-- [ ] Describe why rare events make positive tests harder to
-      interpret.
+- [ ] Read a multiple-regression output table and interpret each
+      coefficient *holding the other predictors constant*.
+- [ ] Explain what adjusted R² adds to plain R² and when it matters.
+- [ ] Recognize a multicollinearity warning at intuition depth.
+- [ ] Interpret a logistic-regression coefficient as a slope on the
+      log-odds scale and translate it to plain-English risk language.
 
 ## Assessment links
 
 Links to the bank/manifests for this week will appear here once items
 are built.
 
-- Micro-lab ticket: TBD
+- Monday exit ticket: TBD
+- Wednesday exit ticket: TBD
 - Friday quiz: TBD
 - Homework: TBD

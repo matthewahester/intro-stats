@@ -1,5 +1,5 @@
 ---
-title: "Week 10 — Randomization tests"
+title: "Week 10 — Probability as risk and diagnosis"
 toc: true
 ---
 

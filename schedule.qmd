@@ -23,8 +23,8 @@ through Blackboard or in class as directed — they are not posted here.
 | 4 | Comparing groups | [Week 4 notes](notes/week04-comparing-groups.qmd) — conditional proportions, group differences, choosing the right display |
 | 5 | Association | [Week 5 notes](notes/week05-association.qmd) — scatterplots, correlation as a descriptive number, the linear-only caveat, association vs causation |
 | 6 | Confounding and multivariable thinking | [Week 6 notes](notes/week06-confounding.qmd) — confounders, stratification, Simpson's paradox, *alone* vs *after accounting for* |
-| 7 | First-half synthesis and midterm | planned |
-| 8 | Simple regression | planned |
+| 7 | First-half synthesis and midterm | [Week 7 notes](notes/week07-synthesis-midterm.qmd) — Units 1–6 walkthrough on one connecting study; midterm-prep checklist; a single bounded forward-pointer to next week's regression line |
+| 8 | Simple regression | [Week 8 notes](notes/week08-simple-regression.qmd) — fitted line, slope and intercept in context, residuals and the residual-plot reading, least squares, *R²*, extrapolation, light outliers and leverage |
 | 9 | Multiple / logistic regression interpretation | planned |
 | 10 | Probability as risk and diagnosis | planned |
 | 11 | Simulation-based inference | planned |

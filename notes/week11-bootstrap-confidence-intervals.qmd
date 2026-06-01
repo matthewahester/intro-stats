@@ -1,5 +1,5 @@
 ---
-title: "Week 11 — Bootstrap confidence intervals"
+title: "Week 11 — Simulation-based inference"
 toc: true
 ---
 

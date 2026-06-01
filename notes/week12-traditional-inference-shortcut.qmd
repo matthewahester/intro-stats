@@ -1,5 +1,5 @@
 ---
-title: "Week 12 — Traditional inference as shortcut"
+title: "Week 12 — Classical hypothesis testing"
 toc: true
 ---
 

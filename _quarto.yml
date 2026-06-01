@@ -42,8 +42,8 @@ website:
           - notes/week04-comparing-groups.qmd
           - notes/week05-association.qmd
           - notes/week06-confounding.qmd
-          - notes/week07-simple-regression.qmd
-          - notes/week08-multiple-logistic-regression.qmd
+          - notes/week07-synthesis-midterm.qmd
+          - notes/week08-simple-regression.qmd
           - notes/week09-probability-risk-diagnosis.qmd
           - notes/week10-randomization-tests.qmd
           - notes/week11-bootstrap-confidence-intervals.qmd

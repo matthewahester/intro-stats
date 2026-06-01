@@ -43,16 +43,25 @@ directed.
   within strata as a fairer descriptive move; Simpson's paradox;
   the plain-English *alone / after accounting for* language as the
   honest-reporting habit.
+- [Week 7 — First-half synthesis and midterm](week07-synthesis-midterm.qmd) —
+  the Units 1–6 walkthrough as one connecting case (cases and
+  variables → design and scope → describe → compare → associate →
+  ask what else explains it); a midterm-prep checklist and a single
+  bounded forward-pointer to next week's regression line.
+- [Week 8 — Simple regression](week08-simple-regression.qmd) —
+  fitting a line to a scatterplot and reading it honestly: slope and
+  intercept in real units, residuals and the residual-plot reading,
+  least squares as the rule for choosing one line, *R²* as
+  descriptive strength of fit, the extrapolation caveat, and a light
+  look at outliers and leverage.
 
 ## Planned
 
 Notes are added a few weeks at a time as the course is built. The
 sequence follows the 15-week course spine.
 
-**Modeling and synthesis (Weeks 7–9)**
+**Modeling and synthesis (Week 9)**
 
-- Week 7 — First-half synthesis and midterm
-- Week 8 — Simple regression
 - Week 9 — Multiple / logistic regression interpretation
 
 **Probability and inference (Weeks 10–13)**
