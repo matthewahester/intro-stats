@@ -54,19 +54,27 @@ directed.
   least squares as the rule for choosing one line, *R²* as
   descriptive strength of fit, the extrapolation caveat, and a light
   look at outliers and leverage.
+- [Week 9 — Multiple and logistic regression, by interpretation](week09-multiple-logistic-regression.qmd) —
+  adding predictors to a model; the *holding the other variables
+  constant* coefficient reading; adjusted vs unadjusted coefficients as
+  the formal engine for the Week 6 confounding lesson; categorical
+  predictors and reference levels; adjusted *R²* as a reading; and an
+  interpretation-only look at logistic regression (reading a yes/no
+  model by direction and predicted probability).
+- [Week 10 — Probability as risk and diagnosis](week10-probability-risk-diagnosis.qmd) —
+  probability as long-run risk; conditional probability as *among the
+  subgroup*; why P(A | B) is not P(B | A); diagnostic two-way tables;
+  sensitivity and specificity, false positives and false negatives,
+  positive and negative predictive value; and why a positive test for a
+  rare condition can still be probably wrong (the base-rate effect).
 
 ## Planned
 
 Notes are added a few weeks at a time as the course is built. The
 sequence follows the 15-week course spine.
 
-**Modeling and synthesis (Week 9)**
+**Probability and inference (Weeks 11–13)**
 
-- Week 9 — Multiple / logistic regression interpretation
-
-**Probability and inference (Weeks 10–13)**
-
-- Week 10 — Probability as risk and diagnosis
 - Week 11 — Simulation-based inference
 - Week 12 — Classical hypothesis testing
 - Week 13 — Categorical outcomes

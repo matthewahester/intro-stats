@@ -25,8 +25,8 @@ through Blackboard or in class as directed — they are not posted here.
 | 6 | Confounding and multivariable thinking | [Week 6 notes](notes/week06-confounding.qmd) — confounders, stratification, Simpson's paradox, *alone* vs *after accounting for* |
 | 7 | First-half synthesis and midterm | [Week 7 notes](notes/week07-synthesis-midterm.qmd) — Units 1–6 walkthrough on one connecting study; midterm-prep checklist; a single bounded forward-pointer to next week's regression line |
 | 8 | Simple regression | [Week 8 notes](notes/week08-simple-regression.qmd) — fitted line, slope and intercept in context, residuals and the residual-plot reading, least squares, *R²*, extrapolation, light outliers and leverage |
-| 9 | Multiple / logistic regression interpretation | planned |
-| 10 | Probability as risk and diagnosis | planned |
+| 9 | Multiple / logistic regression interpretation | [Week 9 notes](notes/week09-multiple-logistic-regression.qmd) — adding predictors; the *holding constant* coefficient reading; adjusted vs unadjusted coefficients; categorical predictors; adjusted *R²* as a reading; interpretation-only logistic regression (direction + predicted probability) |
+| 10 | Probability as risk and diagnosis | [Week 10 notes](notes/week10-probability-risk-diagnosis.qmd) — probability as risk; conditional probability and P(A \| B) vs P(B \| A); diagnostic two-way tables; sensitivity, specificity, predictive values; false positives/negatives; base-rate effects |
 | 11 | Simulation-based inference | planned |
 | 12 | Classical hypothesis testing | planned |
 | 13 | Categorical outcomes | planned |
