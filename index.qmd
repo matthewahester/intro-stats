@@ -1,18 +1,22 @@
 ---
-title: "Intro to Statistics"
-subtitle: "Public course resources"
+pagetitle: "Intro to Statistics"
+description: |
+  Public-facing course resources for Intro to Statistics — concepts,
+  activities, and small reproducible examples for reasoning about data,
+  evidence, models, and uncertainty.
 toc: false
 ---
 
+![](assets/figures/intro-stats-hero.png){fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img}
+
 This site collects public-facing resources for **Intro to Statistics** —
-concepts, activities, and small reproducible R examples curated by
+the concepts, activities, and small reproducible examples behind reasoning
+with **data, evidence, models, and uncertainty**. Curated by
 [Matt Hester](https://matthewhester.com).
 
 It is a **curated resource site**, not a raw course archive. Anything
 syllabus- or roster-specific lives in the LMS; this site is what stays
 public.
-
-![](assets/figures/intro-stats-hero.png){fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img}
 
 ## Where to start
 
