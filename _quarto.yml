@@ -20,6 +20,8 @@ website:
   navbar:
     pinned: true
     background: dark
+    logo: assets/figures/intro-stats-icon.png
+    logo-alt: "Intro to Statistics crystal mark"
     left:
       - href: index.qmd
         text: Home
