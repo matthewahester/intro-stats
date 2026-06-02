@@ -12,6 +12,8 @@ It is a **curated resource site**, not a raw course archive. Anything
 syllabus- or roster-specific lives in the LMS; this site is what stays
 public.
 
+![](assets/figures/intro-stats-hero.png){fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img}
+
 ## Where to start
 
 - [Syllabus](syllabus.qmd) — course goals, structure, and policies
