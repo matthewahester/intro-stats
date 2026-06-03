@@ -48,8 +48,8 @@ website:
           - notes/week08-simple-regression.qmd
           - notes/week09-multiple-logistic-regression.qmd
           - notes/week10-probability-risk-diagnosis.qmd
-          - notes/week11-bootstrap-confidence-intervals.qmd
-          - notes/week12-traditional-inference-shortcut.qmd
+          - notes/week11-simulation-based-inference.qmd
+          - notes/week12-classical-hypothesis-testing.qmd
           - notes/week13-categorical-outcomes.qmd
           - notes/week14-meta-analysis-forest-plots.qmd
           - notes/week15-final-case-synthesis.qmd

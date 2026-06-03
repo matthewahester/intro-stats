@@ -67,16 +67,27 @@ directed.
   sensitivity and specificity, false positives and false negatives,
   positive and negative predictive value; and why a positive test for a
   rare condition can still be probably wrong (the base-rate effect).
+- [Week 11 — Simulation-based inference](week11-simulation-based-inference.qmd) —
+  could this be due to chance, and what values are plausible? The logic
+  of a randomization test (chance model, observed statistic, null
+  distribution, and the simulated p-value as evidence); bootstrapping and
+  the percentile confidence interval as a range of plausible values;
+  reading StatKey-style output; and reading p-values and intervals
+  honestly.
+- [Week 12 — Classical hypothesis testing](week12-classical-hypothesis-testing.qmd) —
+  the classical formula as a shortcut to the Week 11 simulation: null and
+  alternative hypotheses, the test statistic as (estimate − null) / SE,
+  the p-value from a normal/t model, the confidence interval as estimate
+  ± margin of error, reading one-proportion *z* and one- and two-mean *t*
+  output, and Type I / Type II errors with significance level and power.
 
 ## Planned
 
 Notes are added a few weeks at a time as the course is built. The
 sequence follows the 15-week course spine.
 
-**Probability and inference (Weeks 11–13)**
+**Probability and inference (Week 13)**
 
-- Week 11 — Simulation-based inference
-- Week 12 — Classical hypothesis testing
 - Week 13 — Categorical outcomes
 
 **Evidence synthesis and close-out (Weeks 14–15)**
