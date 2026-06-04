@@ -80,15 +80,18 @@ directed.
   the p-value from a normal/t model, the confidence interval as estimate
   ± margin of error, reading one-proportion *z* and one- and two-mean *t*
   output, and Type I / Type II errors with significance level and power.
+- [Week 13 — Categorical outcomes](week13-categorical-outcomes.qmd) —
+  how do we compare rates and proportions? Reading a 2×2 table; risk, the
+  risk difference, relative risk, and the odds ratio; why case-control
+  studies report an odds ratio and when it approximates relative risk;
+  expected counts under independence and the chi-square test as a
+  discrepancy summary, with the p-value as a right-tail area; and keeping
+  association separate from causation.
 
 ## Planned
 
 Notes are added a few weeks at a time as the course is built. The
 sequence follows the 15-week course spine.
-
-**Probability and inference (Week 13)**
-
-- Week 13 — Categorical outcomes
 
 **Evidence synthesis and close-out (Weeks 14–15)**
 
