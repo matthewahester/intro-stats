@@ -94,12 +94,10 @@ directed.
   weight, and the pooled diamond); heterogeneity as cross-study
   disagreement; and a cautious read of evidence strength. A source-gap week —
   instructor-original, with schematic (not real-study) figures.
-
-## Planned
-
-Notes are added a few weeks at a time as the course is built. The
-sequence follows the 15-week course spine.
-
-**Close-out (Week 15)**
-
-- Week 15 — Final review
+- [Week 15 — Final review](week15-final-review.qmd) — what claim can we
+  responsibly make? A whole-course synthesis that pulls the term's arc —
+  data and design, description and association, sampling and inference,
+  categorical outcomes, and evidence strength — into one responsible-claim
+  checklist and one cumulative scenario. The last class meeting is Monday,
+  Dec. 7 only; final-exam logistics live in Blackboard. A review aid, not
+  an exam preview.

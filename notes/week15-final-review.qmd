@@ -1,0 +1,245 @@
+---
+title: "Week 15 — Final review: What claim can we responsibly make?"
+subtitle: "MATH 21003 · Introduction to Statistical Methods · Fall 2026 · Week 15 (Mon Dec 7, 2026 — last class meeting)"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+license: "Final-review synthesis page. This page introduces no new material; it reviews concepts the course developed across Weeks 1–14 from OpenIntro IMS (Çetinkaya-Rundel & Hardin) and OpenIntro ISLBS (Vu & Harrington), both CC BY-SA 3.0. The cumulative scenario is an illustrative teaching example, not a real study. Course materials by Matt Hester, shared under CC BY-SA 3.0."
+---
+
+## This is the last class meeting
+
+This week is a single meeting: **Monday, December 7, 2026**. There is no
+Wednesday and no Friday class. There is no Week 15 exit ticket, no quiz, and
+no new homework. The cumulative **final exam** is given during the
+university's final-exam window (**December 9–15**); the exact date, time, and
+room are posted in **Blackboard**, not here.
+
+So this page is not a new lesson. It is the **final review** — one walkthrough
+that pulls the whole term back together around the question the course has
+been circling since Week 1.
+
+## The closing question
+
+Every week, under the vocabulary and the graphs, you were really learning to
+answer one question:
+
+> **What claim can we responsibly make?**
+
+Not "what does the data say it wants to say," and not "what would make the
+best headline" — but *what can we honestly conclude, and just as importantly,
+what can we not?* A responsible claim is one that matches its evidence: it
+names the kind of study it came from, it reports the size and the uncertainty
+of the effect, and it stops where the evidence stops. The final exam is, at
+bottom, a test of whether you can do that on a scenario you have not seen.
+
+## The arc of the course, in one read
+
+You do not need to re-study every week as if it were new. It is more useful
+to see how the weeks fit into a single chain of reasoning. Read it once,
+straight through.
+
+**Data and variables (Week 1).** Every analysis starts by naming the
+**cases** (who or what is in a row) and the **variables** (numerical or
+categorical; **response** vs **explanatory**). If you cannot say what the
+cases and variables are, you cannot yet say anything responsible.
+
+**Study design and causation (Weeks 2, 6).** *Where did the data come from?*
+An **experiment** with random assignment can license a causal claim; an
+**observational** study, by itself, usually cannot. **Confounding** — a third
+variable tied to both the explanatory variable and the response — is the
+standing reason an observational association can mislead. The honest move is
+the *alone* / *after accounting for* sentence: what the relationship looks
+like on its own, and what changes once you adjust for the obvious confounder.
+
+**Visualization and summaries (Weeks 3, 4).** Describe one variable by its
+**center, spread, shape, and unusual values**; compare groups with a
+**difference in means or proportions**. A numerical difference is real, but
+whether it *matters* and whether it is *causal* are separate questions.
+
+**Association (Week 5).** A **scatterplot** and a **correlation** describe how
+two numerical variables move together — the *linear* part of it. Correlation
+is a description, not a cause, and a small *r* means no apparent *linear*
+trend, not "no relationship."
+
+**Sampling and variability (Weeks 10, 11).** A sample is not the population,
+and a statistic computed from one sample would land somewhere slightly
+different in the next. That **sampling variability** is exactly why we need
+intervals and tests — to separate a real signal from the noise of "which
+sample did we happen to get." Week 10 also reframed probability as **risk**,
+and showed how **base rates** change what a positive test result means.
+
+**Confidence intervals (Weeks 11–12).** A **confidence interval** is a range
+of *plausible values* for the thing we are trying to estimate. A wide
+interval means an imprecise estimate; a narrow one means a precise estimate.
+The interpretive habit: an interval that **includes the no-effect value** (0
+for a difference, 1 for a ratio) cannot rule out "no effect."
+
+**p-values and hypothesis tests (Weeks 11–12).** A **p-value** measures how
+surprising the data would be if nothing were going on — *strength of
+evidence*, not a verdict. Simulation-based reasoning (Week 11) and the
+classical t/z/χ² tests (Week 12) are two routes to the same idea. Keep the
+two error types straight, and resist the ritual of "reject / fail to reject"
+as if it were the whole story.
+
+**Categorical outcomes — RR and OR (Week 13).** For yes/no outcomes in a
+$2\times2$ table: the **risk difference**, the **relative risk (RR)**, and the
+**odds ratio (OR)**. RR and OR are *ratios*, so their no-effect value is **1**.
+An OR is not a probability, and a large *relative* risk can still be a small
+*absolute* risk.
+
+**Meta-analysis and forest plots (Week 14) — short callback.** When many
+studies address one question, a **meta-analysis** combines their estimates
+into a single **pooled estimate**, pictured as a **forest plot** (each study a
+row with its interval; the pooled result a diamond). The grown-up caution:
+*pooling cannot rescue biased or mismatched studies* — a precise diamond is
+still not proof. That is as far as we take meta-analysis; the methods behind
+the pooling are beyond this course.
+
+**Practical vs statistical significance.** A result can be **statistically
+discernible** — the interval clears the no-effect value, the p-value is small
+— and still be **too small to matter** in practice. "Detectable" and
+"important" are different questions, and a responsible claim answers both.
+
+**Evidence strength and limitations.** The thread that runs through all of it:
+no single number is the whole story. Design limits what you can claim;
+confounding can fake an association; precision is not the same as validity;
+and heterogeneous or publication-biased evidence can be confidently wrong.
+The conclusion always carries its limits with it.
+
+## A responsible-claim checklist
+
+When a scenario lands in front of you — on the final, or in real life — walk
+these questions in order. They are the same questions, in the same order, the
+whole course practiced.
+
+1. **What is the question?** State plainly what is being asked.
+2. **What are the variables and groups?** Cases; response vs explanatory;
+   numerical vs categorical; which groups are being compared.
+3. **What was the study design?** Experiment or observational? Random
+   assignment? What is the scope of inference (who and when)?
+4. **What estimate or comparison was used?** A difference in means or
+   proportions, a correlation, a slope, a risk ratio or odds ratio, a pooled
+   estimate?
+5. **What does the interval or test say?** Does the confidence interval
+   include the no-effect value (0 or 1)? Is the p-value strong or weak
+   evidence?
+6. **Is the effect practically meaningful?** Detectable is not the same as
+   important — is the *size* of the effect enough to matter?
+7. **What can and cannot be concluded?** Write the one-sentence conclusion the
+   evidence supports — and name what it does *not* support.
+8. **What bias, confounding, or heterogeneity issues matter?** Name the most
+   plausible threat to the claim, and say which direction it could push the
+   result.
+
+A good answer on the final is rarely a single number. It is a short, honest
+paragraph that moves through this list.
+
+## One scenario, read end to end
+
+Here is the kind of integrated reading the final rewards. It reuses a
+**familiar, illustrative** scenario from the course (the same small
+blood-pressure trial we used at the midterm) — *not a real study*, just a
+clean case to practice the whole chain on. No new data, no calculator
+gymnastics; the work is in the reasoning.
+
+> A small trial randomly assigns 200 adults with high blood pressure: half
+> to a new medication, half to a placebo. After eight weeks, the medication
+> group's average systolic blood pressure is about **138 mm Hg** and the
+> placebo group's is about **145 mm Hg** — a difference of about **7 mm Hg**
+> in favor of the medication. Suppose a 95% confidence interval for that
+> 7 mm Hg difference does **not** include 0.
+
+Now walk the checklist.
+
+- **Question.** Does the new medication lower systolic blood pressure
+  compared with placebo?
+- **Variables and groups.** Cases are the 200 adults; the response is systolic
+  blood pressure (numerical); the explanatory variable is treatment group
+  (medication vs placebo — categorical). The comparison is a **difference in
+  means** (Week 4).
+- **Design.** A **randomized experiment**. Because participants were randomly
+  assigned, the comparison is a fair causal one (Week 2): random assignment is
+  what lets us move from "the medication group was lower" to "the medication
+  *appears to lower* blood pressure."
+- **Estimate and uncertainty.** The estimate is the 7 mm Hg difference; the
+  confidence interval is its range of plausible values (Weeks 11–12). Since
+  the interval excludes 0, the data are evidence of a real, non-zero effect —
+  a small p-value would say the same thing.
+- **Practically meaningful?** This is the separate question. A 7 mm Hg drop is
+  clinically modest but not trivial; whether it is "enough" depends on the
+  patient, the side effects, and the alternatives. *Detectable* and
+  *important* are not the same claim.
+- **Conclusion, with limits.** *In this randomized trial, the medication
+  lowered average systolic blood pressure by about 7 mm Hg compared with
+  placebo, and the data are consistent with a real effect.* What it does **not**
+  claim: that the effect is large, that it holds for people unlike these 200
+  adults, or that one trial is the last word.
+- **Threats.** Random assignment handles confounding here (its main job). The
+  open limits are the **small, specific sample** (scope of inference) and the
+  fact that this is **one study** — which is exactly the door Week 14 opened:
+  the responsible next step is to ask what *all* the trials of this medication
+  show together, not just this one.
+
+That is the whole course on one case: design, comparison, inference, the
+practical-vs-statistical distinction, and a conclusion that names its limits.
+
+## Studying for the final
+
+The final exam is cumulative and **case-based** — short scenarios with graphs,
+tables, or output, and written-conclusion questions — not a formula dump. To
+prepare:
+
+- **Review by re-reading, not re-deriving.** Skim each week's note page and
+  ask, for each, *what claim does this tool license, and what does it not?*
+  The weekly "What you should be able to do" lists are a fast self-check.
+- **Practice the checklist out loud.** Take any scenario from a past exit
+  ticket, quiz, or note page and walk the eight questions above. The exam
+  rewards the *order of reasoning*, not memorized definitions.
+- **Rehearse the cautions.** Association vs causation; confounding;
+  "detectable ≠ important"; an interval that includes the no-effect value;
+  RR/OR no-effect value of 1; pooled ≠ proof. These are the sentences that
+  turn a half-answer into a responsible one.
+- **Write short, honest conclusions.** Practice ending every scenario with one
+  sentence the evidence supports *and* one phrase about what it does not.
+
+You will not find exam questions on this page, and you should not try to
+predict them. Practice the *thinking* and the specific items take care of
+themselves.
+
+## Where things live
+
+- 🔒 **Final exam.** Cumulative; given in the **Dec 9–15** university window.
+  The exact date, time, room, and any rules (calculator, formula sheet) are
+  posted in **Blackboard**. This page does not contain exam content.
+- 🔒 **Project.** Your project deliverable and its due date are handled in
+  **Blackboard**; the submission window was earlier in the closing stretch.
+  Check Blackboard for your current status.
+- **Office hours and the consultation day (Tue Dec 8).** Use them — bring a
+  scenario you found hard and walk it through the checklist with me.
+- **No new homework, exit ticket, or quiz this week.**
+
+## Read more
+
+This review opens **no new chapters**. To brush up a specific idea, go back to
+the week where the course first built it — the weekly note pages are the
+review readings, and the OpenIntro books behind them (IMS and ISLBS, both
+CC BY-SA 3.0) remain the second voices for any topic you want to see again:
+
+- **Design and data:** Weeks 1–2, 6.
+- **Description and association:** Weeks 3–5.
+- **Probability, risk, and inference:** Weeks 10–12.
+- **Categorical outcomes and evidence synthesis:** Weeks 13–14.
+
+---
+
+*About this page:* This is a **final-review synthesis** page. It introduces no
+new statistical method; it reviews material the course developed across Weeks
+1–14 from OpenIntro *Introduction to Modern Statistics* (Çetinkaya-Rundel &
+Hardin) and OpenIntro *Introductory Statistics for the Life and Biomedical
+Sciences* (Vu & Harrington), both shared under CC BY-SA 3.0. The
+blood-pressure scenario is an **illustrative teaching example reused from the
+course, not a real study**. Course materials by Matt Hester, shared under
+CC BY-SA 3.0.

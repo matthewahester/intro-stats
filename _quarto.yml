@@ -52,7 +52,7 @@ website:
           - notes/week12-classical-hypothesis-testing.qmd
           - notes/week13-categorical-outcomes.qmd
           - notes/week14-meta-analysis-forest-plots.qmd
-          - notes/week15-final-case-synthesis.qmd
+          - notes/week15-final-review.qmd
       - section: "Activities"
         href: activities/index.qmd
         contents:
