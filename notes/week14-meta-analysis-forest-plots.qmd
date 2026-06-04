@@ -1,58 +1,296 @@
 ---
 title: "Week 14 — Meta-analysis and forest plots"
-toc: true
+subtitle: "MATH 21003 · Introduction to Statistical Methods · Fall 2026 · Week 14 (Nov 30 – Dec 4, 2026)"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+license: "Instructor-original lesson. Week 14 is a documented source gap: neither OpenIntro IMS nor OpenIntro ISLBS has a meta-analysis or forest-plot chapter, so this page is not adapted from either text. The figures are course-built schematics using illustrative, made-up values — not results from any real study. Course materials by Matt Hester, shared under CC BY-SA 3.0."
 ---
 
-> **Status:** placeholder. Real content will be developed during the
-> course build.
+## Why this week matters
 
-## Big question
+All term you have learned to read a *single* study: a confidence interval
+from one sample, a p-value from one test, a risk ratio from one $2\times2$
+table. But a single study is rarely the last word. Two studies of the same
+treatment can land in slightly different places — one looks promising,
+another looks like nothing — and the honest question becomes the one that
+runs through medicine, nursing, and public health: *taking all the studies
+together, what does the evidence actually say?*
 
-How do studies become evidence?
+This week is about that combining step. A **systematic review** gathers all
+the studies on a question; a **meta-analysis** combines their numbers into a
+single **pooled estimate**; and a **forest plot** is the picture that shows
+the whole thing at a glance — every study as one row, and the combined
+result as a diamond at the bottom. The rhythm: **Monday** sorts out single
+study versus systematic review versus meta-analysis, and why combining is
+worth doing; **Wednesday** reads a forest plot part by part; **Friday** asks
+the harder question — when do the studies disagree enough that a single
+pooled number would mislead, and how strong is the evidence really? The
+recurring caution this week is the most grown-up one in the course: *more
+studies, combined carefully, can make evidence stronger — but pooling cannot
+rescue biased studies, and a tidy diamond is still not proof.*
 
-## Day-by-day
+This is also the week the course's whole arc pays off. You will not learn a
+new effect measure here. The numbers a meta-analysis pools are exactly the
+ones you already know.
 
-### Monday — concept
+## A bridge from Weeks 11–13
 
-Single studies, systematic reviews, and meta-analysis; the parts of a
-forest plot.
+You arrive at this week already owning every piece except the combining
+step.
 
-### Wednesday — micro-lab ticket
+- From **Weeks 11–12** you own the **confidence interval** — a range of
+  plausible values — and the habit of reading a **p-value** as *strength of
+  evidence*, not a verdict. In a forest plot, each study is drawn as its
+  estimate plus a confidence interval. A study whose interval is wide is
+  imprecise; a study whose interval crosses the "no effect" mark is one that,
+  *on its own*, could be chance — the same reading you practiced in Week 11.
+- From **Week 13** you own the **risk ratio** and the **odds ratio** — the
+  ratios that compare an outcome between two groups. These are precisely the
+  numbers a clinical meta-analysis stacks up and pools. A forest plot of a
+  drug trial is, quite literally, a column of Week 13 risk ratios with their
+  confidence intervals.
+- From **Week 13** you also own the discipline that **association is not
+  causation by itself**. That carries straight through: a pooled estimate
+  built from observational studies is still observational. Combining ten
+  studies that could not prove cause does not manufacture a cause.
 
-Annotate a forest plot: identify study rows, effect measure, pooled
-estimate, and heterogeneity cues.
+So this week adds one genuinely new idea — *how separate estimates are
+combined and pictured* — on top of tools you have already practiced.
 
-### Friday — quiz / application
+## Monday: one study, a review, and a meta-analysis
 
-Quiz mirroring Wednesday's micro-lab on a new forest plot;
-meta-analysis critique application.
+Start by separating three things students often blur together.
 
-## Primary source basis
+A **single study** is one investigation: one sample, one estimate, one
+confidence interval. It is evidence, but partial. It can be small, it can be
+unlucky, and it can be one study among many that pointed the other way.
 
-No IMS content. Custom-built from cited published forest plots and
-the instructor's existing publication-bias / rigor work.
+A **systematic review** is a careful, transparent search for *all* the
+studies on a specific question, with a stated rule for which ones to keep. It
+is the difference between "here is a study I happened to find" and "here is
+what the whole body of research says, and here is exactly how we looked." A
+systematic review may stay in words — describing and weighing the studies it
+found.
 
-## Supplemental source / custom needs
+A **meta-analysis** is the quantitative step that often sits inside a
+systematic review: it **combines the studies' estimates into a single pooled
+estimate.** Not every systematic review includes a meta-analysis, and a
+responsible meta-analysis almost always rides on a systematic review — you
+should not pool studies you did not search for carefully.
 
-Externally-sourced forest plots (with attribution); a one-page
-meta-analysis mini-assignment worksheet.
+![A course-built schematic showing four boxes left to right connected by arrows, illustrating how a systematic review and meta-analysis turn many studies into one estimate. The first box, many studies, is labeled found by searching. An arrow leads to the second box, screen and appraise, labeled quality and relevance. An arrow leads to the third box, studies that qualify, labeled the included set. An arrow leads to the fourth box, pooled estimate, labeled the forest plot. Beneath the first two boxes a note reads that the systematic review is the find-plus-screen step; beneath the last two a note reads that the meta-analysis is the combine-their-estimates step. The figure is labeled a schematic evidence-synthesis pipeline, not a funnel plot.](../assets/figures/week14-evidence-pipeline.png){fig-alt="Four boxes connected by arrows. Many studies (found by searching), then screen and appraise (quality, relevance), then studies that qualify (the included set), then pooled estimate (the forest plot). A note says the systematic review is find plus screen the studies; another says the meta-analysis is combine their estimates. Labeled a schematic evidence-synthesis pipeline, not a funnel plot."}
 
-## Learning goals
+**Why combine at all?** Because a single study is often too small to settle
+the question. A small trial can show a real benefit but with a confidence
+interval so wide it also includes "no effect" — you saw exactly this in Week
+13, where a study could *hint* at a benefit while remaining too small to be
+convincing. Pooling several such studies uses all the data at once. The
+payoff, when the studies are genuinely measuring the same thing, is a more
+**precise** combined estimate — a narrower confidence interval — than any one
+study could give. That precision is the whole point, and it is also the part
+that can be abused, which is why Wednesday and Friday matter.
 
-Students should be able to:
+## Wednesday: reading a forest plot
 
-- [ ] Distinguish a systematic review from a meta-analysis.
-- [ ] Identify the parts of a forest plot.
-- [ ] Interpret a pooled estimate.
-- [ ] Explain heterogeneity conceptually.
-- [ ] Name reasons a meta-analysis can mislead.
+A forest plot looks busy the first time, but it is built from parts you
+already know. Read it one piece at a time.
 
-## Assessment links
+![A course-built schematic of the anatomy of a forest plot, drawn on a risk-ratio axis with a log scale running from 0.5 to 2 and a vertical red line of no effect at a risk ratio of 1. Four studies labeled Study A through Study D are stacked as rows. Each study is a blue square at its estimate with a horizontal whisker for its confidence interval; Study C has a noticeably larger square. At the bottom, separated by a dotted line, is an amber diamond labeled Pooled. Callouts on the right name the parts: the square is the study estimate or point estimate; the whisker is the confidence interval; a bigger square means more precise and more weight; the vertical line is the line of no effect at risk ratio one; and the diamond is the pooled estimate, narrower than any single study. The figure is labeled schematic and illustrative, not real study data.](../assets/figures/week14-forest-plot-anatomy.png){fig-alt="A forest plot on a risk-ratio log scale from 0.5 to 2 with a red vertical line of no effect at risk ratio 1. Four studies A to D are rows, each a blue square at its estimate with a horizontal confidence-interval whisker; Study C's square is larger. At the bottom an amber diamond labeled Pooled. Right-side callouts: square equals study estimate, whisker equals confidence interval, bigger square equals more precise and more weight, vertical line equals line of no effect at risk ratio 1, diamond equals pooled estimate narrower than any study. Labeled schematic, not real study data."}
 
-Links to the bank/manifests for this week will appear here once items
-are built.
+**Each row is one study.** The **square** marks that study's estimate — here
+a **risk ratio**, the Week 13 measure. The **horizontal whisker** is its
+**confidence interval**, the Week 11–12 range of plausible values. A short
+whisker means a precise study; a long whisker means an imprecise one.
 
-- Micro-lab ticket: TBD
-- Friday quiz: TBD
-- Homework: TBD
-- Meta-analysis mini-assignment: TBD
+**The vertical line is the line of no effect.** On a ratio scale — risk
+ratios or odds ratios — "no effect" is a ratio of **1**, not 0: a risk ratio
+of 1 means the outcome is equally likely in both groups. (If a forest plot
+instead pooled a *difference*, the line of no effect would be at 0. Either
+way, it is the value that means "no difference.") Reading a single study's
+row is then exactly the Week 11–12 move: *does its confidence interval cross
+the line of no effect?* If it does, that study on its own cannot rule out "no
+effect."
+
+**The square's size carries information too.** Bigger squares are drawn for
+studies that count more — the more **precise** studies, the ones with
+narrower intervals, usually the larger and better-run ones. This is the idea
+of **weight**: not every study counts equally, and the plot shows it. You do
+not compute the weights by hand in this course; you read them off the picture
+— *a bigger square is a study the combined estimate leans on more.*
+
+**The diamond is the pooled estimate.** At the bottom sits the meta-analysis
+result, drawn as a diamond whose width is its confidence interval. Two things
+are worth noticing every time.
+
+![A course-built schematic forest plot showing five studies labeled Study A through Study E as rows on a risk-ratio log scale from 0.5 to 2, with a red vertical line of no effect at risk ratio 1. Several individual study confidence intervals cross the line of no effect, drawn in grey, while their squares vary in size by precision. At the bottom an amber pooled diamond sits clearly to the left of the line of no effect and is noticeably narrower than any single study's interval. A note on the upper right reads that some single studies' confidence intervals cross risk ratio 1, so they could be chance on their own; a note near the diamond reads that the pooled estimate is narrow and stays below risk ratio 1. The figure is labeled schematic and illustrative, not real study data, and notes the course does not compute the pooling formula.](../assets/figures/week14-pooled-estimate-vs-studies.png){fig-alt="A schematic forest plot of five studies A to E on a risk-ratio log scale 0.5 to 2 with a red line of no effect at 1. Several study confidence intervals cross the line (grey); squares vary in size by precision. At the bottom an amber pooled diamond sits left of the line and is narrower than any single study. Notes: some single studies' CIs cross risk ratio 1 and could be chance on their own; the pooled estimate is narrow and stays below 1. Labeled schematic, not real data; the course does not compute the pooling formula."}
+
+First, the **diamond is narrower** than any single study's interval — that is
+the precision you bought by combining. Second, you read the diamond the same
+way you read any interval: *does it cross the line of no effect?* In the
+schematic above, several individual studies have intervals that touch or
+cross the line — each, alone, "could be chance" — yet the pooled diamond is
+narrow and sits entirely to one side. That is the classic reason to do a
+meta-analysis: several inconclusive studies can combine into one clear answer.
+
+The honest version of that sentence keeps the caution attached: the diamond
+is clearer *only if the studies belonged together in the first place.* That
+is Friday's question.
+
+## Friday: heterogeneity, bias, and the strength of evidence
+
+A pooled diamond is only as trustworthy as the studies under it. Three
+cautions decide how much to trust it.
+
+**Heterogeneity — are the studies even estimating the same thing?** A
+meta-analysis quietly assumes the studies are different looks at *one*
+underlying effect. Sometimes that is fair. Sometimes it is not: the studies
+used different doses, different patients, different lengths of follow-up, and
+they are really estimating *different* things. When that happens we say the
+studies are **heterogeneous**, and pooling them into a single number can
+paper over a real disagreement.
+
+![A course-built schematic with two small forest plots side by side on a risk-ratio scale, each with a red vertical line of no effect at risk ratio 1. On the left, labeled studies agree, four studies all sit to the left of the line with confidence intervals that overlap heavily; it is labeled low heterogeneity, pooling makes sense. On the right, labeled studies disagree, four studies are scattered across the line of no effect, some to the left and some to the right, with intervals that barely overlap; it is labeled high heterogeneity, a single pooled number can mislead. The whole figure is labeled schematic and illustrative, not real study data, and asks whether the studies are even estimating the same thing.](../assets/figures/week14-heterogeneity-contrast.png){fig-alt="Two small forest plots side by side on a risk-ratio scale with a red line of no effect at 1. Left, studies agree: four studies all left of the line with heavily overlapping confidence intervals, labeled low heterogeneity, pooling makes sense. Right, studies disagree: four studies scattered across the line, some left some right, intervals barely overlapping, labeled high heterogeneity, a single pooled number can mislead. Labeled schematic, not real study data, asking whether the studies estimate the same thing."}
+
+You can often *see* heterogeneity in the plot. When the studies line up on
+the same side with overlapping intervals (left panel), a single pooled
+estimate summarizes them fairly. When they are scattered across the line of
+no effect, some pointing each way (right panel), the pooled number is hiding
+a fight, and the right response is caution — *why do these studies disagree?*
+— not a confident diamond. You are not asked to compute a heterogeneity
+statistic in this course; you are asked to look, and to notice when the
+studies clearly do not agree. (Analysts do face a modeling choice here —
+roughly, whether to assume one shared true effect or to allow the effect to
+vary from study to study — but the *methods* behind that choice are well
+beyond this course. The reading skill is what matters: when studies scatter,
+trust the single number less.)
+
+**Publication bias — is the visible literature the whole literature?** A
+meta-analysis can only pool the studies it can find, and the studies that get
+*published* are not a random sample of the studies that get *run*. Striking,
+positive results are more likely to be written up and printed; quiet null
+results more often sit in a drawer. So the published record can tilt toward
+"it works," and a meta-analysis of only the visible studies can inherit that
+tilt. You do not need any special test to take this seriously — just the
+awareness that **absence of the boring studies can make an effect look bigger
+and surer than it is.**
+
+**Strength of evidence — pooled is not proof.** Put the three cautions
+together and the week's real lesson appears. A narrow pooled diamond is
+*precise*; precise is not the same as *correct*. Pooling cannot fix studies
+that were biased, cannot reconcile studies that disagree, and cannot turn
+observational association into causation. A meta-analysis of randomized
+trials of the same well-defined treatment can be very strong evidence; a
+meta-analysis of a scattered, observational, publication-biased literature
+can be confidently wrong. The skill Friday trains is to read a forest plot
+*and* the situation around it, and to say how much weight the evidence can
+bear — no more.
+
+## Common mistakes
+
+- **Reading the diamond as proof.** A pooled estimate is a precise summary of
+  the studies that went in. If those studies were biased, scattered, or
+  observational, the diamond is precise *and* untrustworthy.
+- **Thinking a bigger square means a bigger effect.** Square size is
+  **weight** — precision — not effect size. The effect is *where* the square
+  sits, not how big it is.
+- **Forgetting the line of no effect is at 1 for ratios.** For a risk ratio
+  or odds ratio, "no effect" is a ratio of 1, not 0. An interval that crosses
+  1 cannot rule out "no difference."
+- **Pooling studies that do not belong together.** If the studies are clearly
+  heterogeneous — different treatments, patients, or outcomes — a single
+  pooled number can hide a real disagreement rather than resolve it.
+- **Treating the published studies as all the studies.** Publication bias
+  means the visible literature can overstate an effect. More published
+  studies is not automatically more truth.
+- **Saying "meta-analysis," meaning "causation."** Combining many
+  observational studies gives a combined *association*. Whether you can say
+  "caused" still depends on the study designs from Weeks 2, 6, and 13.
+
+## What you should be able to do by Friday
+
+By the end of Week 14 you should be able to:
+
+- distinguish a **single study**, a **systematic review**, and a
+  **meta-analysis**, and say what each one adds;
+- explain in plain words **why** combining studies can give a more precise
+  estimate than any single study;
+- read a **forest plot** part by part — each study's **estimate** and
+  **confidence interval**, the **line of no effect**, the **square size** as
+  weight, and the **diamond** as the pooled estimate;
+- judge whether a study's interval, or the pooled diamond, **crosses the line
+  of no effect**, and say what that means;
+- explain **heterogeneity** conceptually — *are the studies estimating the
+  same thing?* — and spot it in a plot;
+- name reasons a meta-analysis can mislead (**publication bias**,
+  heterogeneity, pooling observational studies) and give a **cautious** read
+  of how strong the evidence is.
+
+## Assignments this week
+
+- **Monday check.** A short in-class concept check: tell apart a single
+  study, a systematic review, and a meta-analysis, and say which of two
+  studies counts for more and why. Plan for about **3–5 minutes**. Sheet:
+  [Week 14 Monday exit ticket](../assets/assignments/week14_monday_exit_ticket_student.pdf).
+- **Wednesday check.** A **forest-plot annotation**: label the parts of a
+  forest plot, read the pooled estimate and its interval, and say whether it
+  crosses the line of no effect. Plan for about **8–12 minutes**. Sheet:
+  [Week 14 Wednesday exit ticket](../assets/assignments/week14_wednesday_exit_ticket_student.pdf).
+- 🔒 **Friday quiz** — a short **meta-analysis critique**: read a forest plot
+  and write a careful, evidence-strength conclusion. Handled through
+  Blackboard or in class as directed; the prompt is not posted here, and
+  timing and submission details live in Blackboard.
+- 🔒 **Project** — this week falls in the course **project submission
+  window**. Your deliverable and its due date are posted in Blackboard, not
+  here.
+- **No new homework opens this week.** The biweekly homework ended with
+  Weeks 11–12; from here the **project** carries the synthesis work.
+
+## Read more
+
+This week is unusual: it has **no chapter in either course textbook.** IMS
+and ISLBS are excellent on single-study inference — confidence intervals,
+p-values, risk ratios — but neither one covers meta-analysis or forest plots,
+so there is no "second voice" reading to assign from them. The page above is
+the main explanation, and it stands on its own.
+
+If you want to *see* real forest plots in the wild, two trustworthy places to
+look:
+
+- **Cochrane** (cochrane.org) publishes systematic reviews across medicine,
+  most with a plain-language summary and a forest plot. The plain-language
+  summaries are written for non-specialists and are a good way to see this
+  week's ideas on real clinical questions.
+- **PRISMA** (prisma-statement.org) is the standard for *how* a systematic
+  review is reported — the searching-and-screening pipeline from Monday — if
+  you are curious how reviewers decide which studies get in.
+
+You will not be tested on anything in those sources beyond what this page
+teaches; they are there for the curious.
+
+*Looking back, and ahead:* the risk ratios and odds ratios of Week 13, drawn
+with the confidence intervals of Weeks 11–12, are exactly what a forest plot
+stacks and a meta-analysis pools — this week is where the course's tools come
+together. Next week is the final review: pulling the whole term into a single
+question — *what claim can we responsibly make?*
+
+---
+
+*Sources for this lesson:* This is an **instructor-original** page. Week 14
+is a documented gap in the course's two source texts — OpenIntro *Introduction
+to Modern Statistics* (Çetinkaya-Rundel & Hardin) and OpenIntro *Introductory
+Statistics for the Life and Biomedical Sciences* (Vu & Harrington) — neither
+of which covers meta-analysis or forest plots, so no material here is adapted
+from them. The lesson builds only on concepts the course already developed
+from those texts in earlier weeks (confidence intervals and p-values, Weeks
+11–12; risk ratios and odds ratios, Week 13). The four figures are
+**course-built schematics**: they use illustrative, made-up "Study A / B / …"
+values chosen only to show the parts of a forest plot and the contrast
+between agreeing and disagreeing studies. **They are not results from any real
+study**, and the pooled diamond is drawn to *illustrate* a precise summary,
+not computed from a pooling formula (the methods of meta-analysis are beyond
+this introductory course). For real, published forest plots, see Cochrane
+(cochrane.org) and the PRISMA reporting standard (prisma-statement.org).
+Course materials by Matt Hester, shared under CC BY-SA 3.0.

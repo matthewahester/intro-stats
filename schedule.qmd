@@ -30,7 +30,7 @@ through Blackboard or in class as directed — they are not posted here.
 | 11 | Simulation-based inference | [Week 11 notes](notes/week11-simulation-based-inference.qmd) — randomization tests, the null distribution, simulated p-values as evidence, bootstrap distributions, percentile confidence intervals, and reading StatKey-style output |
 | 12 | Classical hypothesis testing | [Week 12 notes](notes/week12-classical-hypothesis-testing.qmd) — null and alternative hypotheses, the test statistic and p-value from a normal/t model, confidence intervals, reading one-proportion *z* and one/two-mean *t* output, and Type I/II errors with significance level and power |
 | 13 | Categorical outcomes | [Week 13 notes](notes/week13-categorical-outcomes.qmd) — comparing rates and proportions: reading a 2×2 table; risk, the risk difference, relative risk, and the odds ratio; why case-control studies report an odds ratio; expected counts under independence and chi-square logic with the p-value as a right-tail area; and association versus causation |
-| 14 | Meta-analysis and forest plots | planned |
+| 14 | Meta-analysis and forest plots | [Week 14 notes](notes/week14-meta-analysis-forest-plots.qmd) — how do studies become evidence? Single study versus systematic review versus meta-analysis; reading a forest plot (each study's estimate and confidence interval, the line of no effect at RR = 1, square size as weight, and the pooled diamond); heterogeneity as cross-study disagreement; and a cautious read of evidence strength. An instructor-original, source-gap week with schematic (not real-study) figures |
 | 15 | Final review | planned |
 
 ## How to use this schedule

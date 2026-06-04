@@ -87,13 +87,19 @@ directed.
   expected counts under independence and the chi-square test as a
   discrepancy summary, with the p-value as a right-tail area; and keeping
   association separate from causation.
+- [Week 14 — Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd) —
+  how do studies become evidence? A single study versus a systematic review
+  versus a meta-analysis; reading a forest plot (each study's estimate and
+  confidence interval, the line of no effect at RR = 1, square size as
+  weight, and the pooled diamond); heterogeneity as cross-study
+  disagreement; and a cautious read of evidence strength. A source-gap week —
+  instructor-original, with schematic (not real-study) figures.
 
 ## Planned
 
 Notes are added a few weeks at a time as the course is built. The
 sequence follows the 15-week course spine.
 
-**Evidence synthesis and close-out (Weeks 14–15)**
+**Close-out (Week 15)**
 
-- Week 14 — Meta-analysis and forest plots
 - Week 15 — Final review
