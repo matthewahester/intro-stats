@@ -2,8 +2,6 @@
 title: "Resources"
 ---
 
-# Resources
-
 This course is built around open, student-accessible materials. The
 main source spine is **Introduction to Modern Statistics (2e)** from
 OpenIntro. We will also use selected biomedical and life-science
@@ -48,3 +46,15 @@ and the late-semester meta-analysis unit are developed specifically
 for this UA Little Rock course. These materials are designed to
 emphasize interpretation, study design, uncertainty, evidence, and
 clear communication.
+
+## Simulation and the LMS
+
+**StatKey and simulation applets** are used *conceptually* — to see
+sampling variability, randomization, and confidence intervals in
+action. They are tools for understanding, not software you are required
+to install or program.
+
+**Blackboard** is the official course system. Quizzes, homework,
+project submissions, official due dates, grades, and any private
+assessment material live there. This public site is the reading and
+review layer; it does not post answer keys or private assessments.

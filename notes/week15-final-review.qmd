@@ -64,6 +64,17 @@ two numerical variables move together — the *linear* part of it. Correlation
 is a description, not a cause, and a small *r* means no apparent *linear*
 trend, not "no relationship."
 
+**Regression and modeling (Weeks 8, 9).** Regression and adjusted models
+moved us from "two variables are associated" to "*how does the relationship
+look after accounting for other variables?*" A **fitted line** gives a slope
+and intercept in context (Week 8); adding predictors gives **adjusted
+coefficients** read as *holding the others constant*, and **logistic
+regression** turns that machinery toward yes/no outcomes as **predicted
+probabilities** (Week 9). The same responsible-claim checklist below applies
+to fitted lines, adjusted coefficients, and predicted probabilities just as it
+does to diagnostic tables, confidence intervals, p-values, risk ratios, odds
+ratios, and forest plots.
+
 **Sampling and variability (Weeks 10, 11).** A sample is not the population,
 and a statistic computed from one sample would land somewhere slightly
 different in the next. That **sampling variability** is exactly why we need
@@ -230,6 +241,7 @@ CC BY-SA 3.0) remain the second voices for any topic you want to see again:
 
 - **Design and data:** Weeks 1–2, 6.
 - **Description and association:** Weeks 3–5.
+- **Regression and modeling:** Weeks 8–9.
 - **Probability, risk, and inference:** Weeks 10–12.
 - **Categorical outcomes and evidence synthesis:** Weeks 13–14.
 

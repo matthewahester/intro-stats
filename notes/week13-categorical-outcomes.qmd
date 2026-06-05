@@ -220,9 +220,13 @@ table the two tests are equivalent, so use whichever the output shows).
 The mammogram study also makes a Week-12 point vivid: with a sample this
 enormous, the test had ample power to detect even a small effect — and it
 found none. That is the honest opposite of the other classic warning:
-**huge samples can make a trivial difference "significant," and they can
-also confirm, convincingly, that a difference is absent.** Statistical
-discernibility and practical importance are still two different things.
+**huge samples can make a trivial difference "significant" — and, just
+as usefully, they can give us enough precision to rule out any
+difference large enough to matter in context.** A failure to reject is
+never proof of "no effect"; what a very large, precise study can support
+is that any remaining difference is small enough to be practically
+unimportant. Statistical discernibility and practical importance are
+still two different things.
 
 ## Friday: reading a clinical categorical-outcome case
 

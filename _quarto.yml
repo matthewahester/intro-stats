@@ -14,7 +14,7 @@ website:
   site-url: https://matthewhester.com/intro-stats/
   description: |
     Public-facing course resources for Intro to Statistics — concepts,
-    activities, and reproducible R examples curated by Matt Hester.
+    activities, and interpretation-focused examples curated by Matt Hester.
   open-graph: true
 
   navbar:

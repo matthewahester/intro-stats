@@ -3,13 +3,25 @@ title: "Projects"
 toc: false
 ---
 
-Short, open-ended projects students can choose from. Each project page
-will describe the prompt, suggested data, and a rubric written in plain
-language.
+This is a **public project orientation**. If a project is assigned, the
+official prompt, due dates, submission instructions, rubric, and grading
+all live in **Blackboard**. This page offers general orientation only.
 
-Planned projects (placeholders):
+A course project asks you to apply the course's core habit: **read the
+data, identify the design, summarize the evidence, interpret the
+uncertainty, and make a responsible claim.** Expect the emphasis to be
+on *interpretation and communication* rather than advanced computation —
+**no R, coding, or advanced analysis is required** unless the instructor
+states otherwise in Blackboard.
 
-- Open data exploration
-- Replicating a small published result
-- Designing a small study
-- A Bayesian reanalysis exercise
+A good project-style statistical claim answers six questions:
+
+1. What question is being asked?
+2. What data were collected, and from whom?
+3. What variables are involved?
+4. What summary, comparison, model, interval, or p-value is relevant?
+5. What uncertainty or limitation matters?
+6. What claim can we responsibly make?
+
+For the official assignment and all submission details, check
+**Blackboard**.

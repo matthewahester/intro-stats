@@ -3,13 +3,18 @@ title: "Activities"
 toc: false
 ---
 
-In-class activities and small worked examples will live here. The aim
-is short, self-contained pieces a student can pick up later for review.
+Most in-class activities for this course are **embedded in the weekly
+notes** and worked during class meetings, rather than posted as separate
+handouts. The weekly notes are written to be picked up later for review,
+so the activity and its worked example stay together with the concept.
 
-Planned activities (placeholders):
+Where to look:
 
-- A first look at a dataset
-- Building a distribution by hand
-- Coin flips and the law of large numbers
-- Confidence intervals via simulation
-- A guided regression fit
+- **[Weekly notes](../notes/index.qmd)** — the primary guide; each week's
+  activities and worked examples are built into the notes.
+- **[Schedule](../schedule.qmd)** — the week-by-week topic map.
+- **[Assignments](../assignments/index.qmd)** — the public weekly exit
+  tickets, collected in one place.
+
+Any graded or submission-specific activity details — and anything not
+posted publicly — are handled in **Blackboard**.

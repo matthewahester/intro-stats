@@ -11,6 +11,12 @@ license: "Adapted in part from OpenIntro ISLBS (Vu & Harrington), under CC BY-SA
 
 ## Why this week matters
 
+Last week, logistic regression produced **predicted probabilities** for
+yes/no outcomes. This week we step back from models and study
+**probability directly**: how often something happens in the long run,
+how risk changes inside subgroups, and why diagnostic tests depend on
+base rates.
+
 A great deal of health and policy reasoning comes down to a single
 word: **risk**. What is the chance this test result is wrong? Given a
 positive screening result, what is the chance the patient actually has

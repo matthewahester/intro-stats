@@ -3,14 +3,31 @@ title: "Assignments"
 toc: false
 ---
 
-Public, generic versions of homework and lab descriptions will live
-here. Concrete due dates, point values, and section-specific submission
-instructions stay in the LMS.
+This page collects the **public-facing course work** — the weekly
+exit tickets you can pick up and review. Each exit ticket is also
+linked from its weekly notes page (look for *Assignments this week*
+near the bottom).
 
-Planned assignment pages (placeholders):
+**Quizzes, homework, grades, official due dates, project submissions,
+and answer keys live in Blackboard.** The public site is a reading and
+review layer, not the official gradebook or submission system.
 
-- Lab 1 — Describing a dataset
-- Lab 2 — Sampling distributions
-- Lab 3 — A first inference
-- Lab 4 — Building and reading a regression
-- Lab 5 — Reproducibility checkpoint
+## Public exit tickets by week
+
+Each week has a short **Monday** and **Wednesday** exit ticket (PDF):
+
+- **Week 1** — [Monday](../assets/assignments/week01_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week01_wednesday_exit_ticket_student.pdf)
+- **Week 2** — [Monday](../assets/assignments/week02_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week02_wednesday_exit_ticket_student.pdf)
+- **Week 3** — [Monday](../assets/assignments/week03_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week03_wednesday_exit_ticket_student.pdf)
+- **Week 4** — [Monday](../assets/assignments/week04_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week04_wednesday_exit_ticket_student.pdf)
+- **Week 5** — [Monday](../assets/assignments/week05_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week05_wednesday_exit_ticket_student.pdf)
+- **Week 6** — [Monday](../assets/assignments/week06_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week06_wednesday_exit_ticket_student.pdf)
+- **Week 7** — [Monday](../assets/assignments/week07_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week07_wednesday_exit_ticket_student.pdf)
+- **Week 8** — [Monday](../assets/assignments/week08_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week08_wednesday_exit_ticket_student.pdf)
+- **Week 9** — [Monday](../assets/assignments/week09_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week09_wednesday_exit_ticket_student.pdf)
+- **Week 10** — [Monday](../assets/assignments/week10_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week10_wednesday_exit_ticket_student.pdf)
+- **Week 11** — [Monday](../assets/assignments/week11_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week11_wednesday_exit_ticket_student.pdf)
+- **Week 12** — [Monday](../assets/assignments/week12_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week12_wednesday_exit_ticket_student.pdf)
+- **Week 13** — [Monday](../assets/assignments/week13_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week13_wednesday_exit_ticket_student.pdf)
+- **Week 14** — [Monday](../assets/assignments/week14_monday_exit_ticket_student.pdf) · [Wednesday](../assets/assignments/week14_wednesday_exit_ticket_student.pdf)
+- **Week 15** — no exit ticket; the [final-review notes](../notes/week15-final-review.qmd) are the week's material.

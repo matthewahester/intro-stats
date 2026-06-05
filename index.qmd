@@ -2,16 +2,16 @@
 pagetitle: "Intro to Statistics"
 description: |
   Public-facing course resources for Intro to Statistics — concepts,
-  activities, and small reproducible examples for reasoning about data,
-  evidence, models, and uncertainty.
+  activities, and interpretation-focused examples for reasoning about
+  data, evidence, models, and uncertainty.
 toc: false
 ---
 
 ![](assets/figures/intro-stats-hero.png){fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img}
 
 This site collects public-facing resources for **Intro to Statistics** —
-the concepts, activities, and small reproducible examples behind reasoning
-with **data, evidence, models, and uncertainty**. Curated by
+the concepts, activities, and interpretation-focused examples behind
+reasoning with **data, evidence, models, and uncertainty**. Curated by
 [Matt Hester](https://matthewhester.com).
 
 It is a **curated resource site**, not a raw course archive. Anything
@@ -20,12 +20,15 @@ public.
 
 ## Where to start
 
-- [Syllabus](syllabus.qmd) — course goals, structure, and policies
-  (sanitized for public view)
-- [Schedule](schedule.qmd) — week-by-week topic map
-- [Notes](notes/index.qmd) — lecture notes and conceptual write-ups
-- [Activities](activities/index.qmd) — in-class activities and worked
-  examples
-- [Assignments](assignments/index.qmd) — homework and lab descriptions
-- [Projects](projects/index.qmd) — small open-ended projects
-- [Resources](resources/index.qmd) — readings, R primers, and links
+- [Syllabus](syllabus.qmd) — public course overview and how this site
+  relates to Blackboard
+- [Schedule](schedule.qmd) — week-by-week topic map with links to the
+  weekly notes
+- [Notes](notes/index.qmd) — weekly notes and conceptual write-ups
+- [Activities](activities/index.qmd) — how in-class activities work
+  (most are embedded in the weekly notes)
+- [Assignments](assignments/index.qmd) — index of the public weekly
+  exit tickets
+- [Projects](projects/index.qmd) — public project orientation
+- [Resources](resources/index.qmd) — readings, tools, and links
+  (IMS, ISLBS, and StatKey / simulation support)

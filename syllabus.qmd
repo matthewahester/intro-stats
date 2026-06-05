@@ -3,29 +3,71 @@ title: "Syllabus"
 toc: true
 ---
 
-> **Public version.** This page is the sanitized, public-facing summary
-> of the syllabus. The full course syllabus — with section numbers, dates,
-> rosters, and institution-specific policies — lives in the LMS.
+> **Public version.** This page is the public-facing overview of
+> **MATH 21003 — Introduction to Statistical Methods, Fall 2026**. The
+> official syllabus — with section numbers, exact dates, grading rules,
+> accommodations, and full university policies — lives in **Blackboard**.
 
-## Course goals
+## Course purpose
 
-Placeholder. Add 3–5 student-facing learning outcomes here.
+Introduction to Statistical Methods is a first course in reasoning with
+data. By the end of the term, you should be able to:
 
-## Topics
+- **read data** — name the cases and variables, and say honestly what a
+  dataset can and cannot tell you;
+- **evaluate evidence** — recognize the study design behind a number and
+  what claims it does (and does not) license;
+- **understand uncertainty** — interpret variability, intervals, and
+  p-values as strength of evidence rather than verdicts;
+- **make responsible statistical claims** — state a conclusion that
+  matches its evidence and names its limits.
 
-Placeholder. Add a short list of major topic areas.
+## How this site fits
 
-## Structure
+This public site is the course's **reading and review layer** — a kind of
+open textbook. It holds the weekly notes, public exit tickets, and links
+to the open texts behind the course.
 
-Placeholder. Describe lecture/lab/activity rhythm, assessments, and how
-the public materials on this site relate to in-class work.
+**Blackboard is the official course system.** Announcements, due dates,
+quizzes, homework, project submissions, grades, and the full policy
+details all live there. When the two ever disagree, Blackboard is
+authoritative.
+
+## Weekly rhythm
+
+Each week follows a steady three-day pattern:
+
+- **Monday** — concept and reading: the week's main idea, with the
+  weekly notes as the anchor.
+- **Wednesday** — application and exit ticket: a short, hands-on check
+  that puts the idea to work.
+- **Friday** — quiz, accountability, and synthesis: pulling the week
+  together, handled through Blackboard or in class as directed.
 
 ## Tools
 
-Placeholder. R, RStudio, and small datasets hosted in `data/`.
+- **Course notes** — the weekly note pages on this site.
+- **Introduction to Modern Statistics (IMS)** — the main open textbook
+  and source spine.
+- **Introductory Statistics for the Life and Biomedical Sciences
+  (ISLBS)** — a supplement for biomedical and life-science contexts.
+- **StatKey or simulation applets** — used conceptually, to *see*
+  sampling variability and inference.
+- **A basic calculator** — as needed.
 
-## Policies (public summary)
+**No R and no coding are required for this course.** The public pages do
+not post private assessments or answer keys.
 
-Placeholder. Summarize what students should know about late work,
-collaboration, and AI tool use **without** copying institutional policy
-text verbatim.
+## Assessment (public overview)
+
+Your grade is built from a mix of the following; the exact weights, point
+values, and due dates are in **Blackboard**:
+
+- **exit tickets / participation** — short weekly checks;
+- **quizzes** — regular accountability;
+- **homework** — applied practice;
+- **a project or applied work** — putting the course's habits together;
+- **a final review and final assessment** — cumulative synthesis.
+
+For the official grading breakdown, late-work rule, accommodations, and
+academic-integrity and AI-use policies, see **Blackboard**.

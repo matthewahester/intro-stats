@@ -51,10 +51,10 @@ $$Z = \frac{\text{estimate} - \text{null}}{\text{SE}}
      = \frac{0.20 - 0}{0.078} = 2.56.$$
 
 This $Z$ is the **test statistic**: the observed gap is $2.56$ standard
-errors above zero. Mathematics (the **Central Limit Theorem**)
-guarantees that, for a statistic like this, the null distribution is
-approximately a smooth **normal curve** — so we no longer need to draw
-it by simulation. The p-value is the tail beyond $Z = 2.56$ on that
+errors above zero. Under the usual large-sample conditions, the
+**Central Limit Theorem** supports an approximate normal model for a
+statistic like this — so the null distribution is approximately a smooth
+**normal curve**, and we no longer need to draw it by simulation. The p-value is the tail beyond $Z = 2.56$ on that
 curve: $p = 0.0052$. Compare:
 
 | Method | p-value |

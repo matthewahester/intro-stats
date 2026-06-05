@@ -35,12 +35,12 @@ through Blackboard or in class as directed — they are not posted here.
 
 ## How to use this schedule
 
-- **Read by row.** Each row gives the week's topic and links to the
-  notes page when it's available. Weeks marked *planned* will fill
-  in as the course is built.
-- **Dates live in the LMS.** This site only shows "Week 1, Week 2,
-  …" so it stays useful across terms. The LMS is the authoritative
-  source for section-specific due dates and announcements.
+- **Read by row.** Each row gives the week's topic and links to its
+  public weekly notes page. All fifteen weeks are live.
+- **Dates live in Blackboard.** This site only shows "Week 1, Week 2,
+  …" so it stays useful across terms. Blackboard is the authoritative
+  source for section-specific due dates, quizzes, homework, project
+  submissions, grades, and announcements.
 - **Exit tickets** are linked from each weekly notes page (look for
   the *Assignments this week* section near the bottom of the page).
   **Friday quizzes** and the **biweekly homework** are not posted
