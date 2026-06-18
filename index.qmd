@@ -7,7 +7,9 @@ description: |
 toc: false
 ---
 
-![](assets/figures/intro-stats-hero.png){fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img}
+![](assets/figures/intro-stats-hero-web.webp){fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img}
+
+# Intro to Statistics {.course-landing-title}
 
 This site collects public-facing resources for **Intro to Statistics** —
 the concepts, activities, and interpretation-focused examples behind
