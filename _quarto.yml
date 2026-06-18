@@ -9,6 +9,9 @@ project:
     - "projects/*.qmd"
     - "resources/*.qmd"
 
+  resources:
+    - assets/figures/intro-stats-hero-web.webp
+    - assets/figures/intro-stats-hero-web-800.webp
 website:
   title: "Intro to Statistics"
   site-url: https://matthewhester.com/intro-stats/
