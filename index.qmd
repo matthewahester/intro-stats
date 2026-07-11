@@ -5,9 +5,10 @@ description: |
   activities, and interpretation-focused examples for reasoning about
   data, evidence, models, and uncertainty.
 toc: false
+page-layout: full
 ---
 
-![](assets/figures/intro-stats-hero-web-800.webp){srcset="assets/figures/intro-stats-hero-web-800.webp 800w, assets/figures/intro-stats-hero-web.webp 1400w" sizes="(min-width: 1200px) 1100px, 92vw" fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img .column-page}
+![](assets/figures/intro-stats-hero-web-800.webp){srcset="assets/figures/intro-stats-hero-web-800.webp 800w, assets/figures/intro-stats-hero-web.webp 1400w" sizes="(min-width: 1200px) 1100px, 92vw" fig-alt="Wide illustrated course identity image for Intro to Statistics, showing an amber crystal cluster surrounded by introductory statistics graphics including distributions, uncertainty, scatterplots, center and spread, and sampling distributions." .course-hero-img}
 
 # Intro to Statistics {.course-landing-title}
 
