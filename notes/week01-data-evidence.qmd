@@ -302,10 +302,10 @@ cover the same concepts:
 
 - **IMS — Chapter 1 ("Hello, data")**, §1.1 stent case study and
   §1.2 data basics. \
-  Hosted IMS book: <https://openintro-ims.netlify.app/>
+  [Hosted IMS book](https://openintro-ims.netlify.app/)
 - **ISLBS — *Introductory Statistics for the Life and Biomedical
   Sciences*, Chapter 1**, §1.1 LEAP case study and §1.2 data basics. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 ---
 

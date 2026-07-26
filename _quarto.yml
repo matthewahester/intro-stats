@@ -12,6 +12,11 @@ project:
   resources:
     - assets/figures/intro-stats-hero-web.webp
     - assets/figures/intro-stats-hero-web-800.webp
+
+# Declare the document language explicitly for every page in the project rather than
+# relying on the renderer's implicit default (WCAG 3.1.1 Language of Page).
+lang: en
+
 website:
   title: "Intro to Statistics"
   site-url: https://matthewhester.com/intro-stats/

@@ -20,9 +20,9 @@ will not necessarily follow every section in textbook order, but many
 course topics, examples, and practice problems are adapted from or
 aligned with this text.
 
-- Online textbook: <https://openintrostat.github.io/ims/>
-- OpenIntro book page: <https://www.openintro.org/book/ims/>
-- Source files: <https://github.com/openintrostat/ims>
+- [IMS online textbook](https://openintrostat.github.io/ims/)
+- [OpenIntro book page for IMS](https://www.openintro.org/book/ims/)
+- [IMS source files on GitHub](https://github.com/openintrostat/ims)
 - License: Creative Commons Attribution-ShareAlike 3.0
 
 ## Optional supplementary text
@@ -36,7 +36,7 @@ or problems may be useful for topics involving health, biology, risk,
 diagnosis, and biomedical study design. The course does **not**
 require students to use R.
 
-- Official OpenIntro page: <https://www.openintro.org/book/biostat/>
+- [Official OpenIntro page for ISLBS](https://www.openintro.org/book/biostat/)
 - License: Creative Commons Attribution-ShareAlike 3.0
 
 ## Course-specific materials

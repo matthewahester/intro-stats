@@ -328,7 +328,7 @@ voice at similar depth:
   passes — those simulation methods belong to Week 11, and here we read
   classical results. Note that IMS Chapter 17 covers the **risk
   difference** but **not** relative risk or the odds ratio. \
-  OpenIntro book page: <https://www.openintro.org/book/ims/>
+  [OpenIntro book page for IMS](https://www.openintro.org/book/ims/)
 - **ISLBS — *Introductory Statistics for the Life and Biomedical
   Sciences*, Chapter 8 *Inference for categorical data*** is the
   **clinical and risk-measure source** for this week. It is where
@@ -339,7 +339,7 @@ voice at similar depth:
   framing (mammogram, and the mosquito-net and related two-way tables).
   You can skip the sample-size formulas (§8.1.3) and the exact-test
   hand computations, which are beyond this course. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 *Looking ahead:* Week 14 turns from a single comparison to **many** of
 them at once — how separate studies are combined into one estimate through

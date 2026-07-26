@@ -308,18 +308,18 @@ same concepts at similar depth:
   categorical predictors* through §8.3 *Adjusted R-squared*.** Read
   these for the multiple-regression half. You can stop before §8.4
   (model selection) and skip the inference columns. \
-  Hosted IMS book: <https://openintro-ims.netlify.app/>
+  [Hosted IMS book](https://openintro-ims.netlify.app/)
 - **IMS — Chapter 9 ("Logistic regression").** Read this for the
   yes/no-outcome half, at the level of *what the model predicts* and
   *which way each predictor points*; the fitting math and inference are
   later-course material. \
-  Hosted IMS book: <https://openintro-ims.netlify.app/>
+  [Hosted IMS book](https://openintro-ims.netlify.app/)
 - **ISLBS — *Introductory Statistics for the Life and Biomedical
   Sciences*, Chapter 7 *Multiple linear regression*, §7.2–§7.3 and the
   PREVEND reanalysis in §7.6.** This is the clinical second voice for
   the adjustment material. ISLBS does **not** have a logistic-regression
   chapter, so for logistic use IMS Chapter 9 above. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 ---
 

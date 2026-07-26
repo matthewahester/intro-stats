@@ -302,7 +302,7 @@ second voice at similar depth:
   one-mean $t$, and two-mean $t$ examples. Read the worked examples and
   output; skip the by-hand derivations and conditions — we read results,
   we do not derive them. \
-  OpenIntro book page: <https://www.openintro.org/book/ims/>
+  [OpenIntro book page for IMS](https://www.openintro.org/book/ims/)
 - **ISLBS — *Introductory Statistics for the Life and Biomedical
   Sciences*, Chapter 4 §4.3** (the five-step hypothesis-test framework,
   the test–interval duality, and decision errors) **and Chapter 5
@@ -311,7 +311,7 @@ second voice at similar depth:
   swim study, and birth weight by smoking). The clinical $t$ outputs are
   your second voice for Wednesday. You can skip §5.4 (power
   calculations) and §5.5 (ANOVA), which are beyond this course. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 *Looking ahead:* Week 13 extends the test-and-interval tools from one
 proportion or one mean to **comparing** proportions on two-way tables —

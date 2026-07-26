@@ -258,13 +258,13 @@ second voice at similar depth:
   medical-consultant case, the bootstrap distribution, and the
   percentile rule). Read the figures and the case-study reasoning; the R
   code blocks are optional — we use StatKey, not R. \
-  OpenIntro book page: <https://www.openintro.org/book/ims/>
+  [OpenIntro book page for IMS](https://www.openintro.org/book/ims/)
 - **ISLBS — *Introductory Statistics for the Life and Biomedical
   Sciences*, Chapter 4 *Foundations for inference*, §4.1–§4.2**, for the
   ideas of *variability of an estimate* and a *confidence interval as
   plausible values*. ISLBS builds its intervals with a formula (next
   week's method), so read it this week only for the concepts. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 Keep the **opportunity-cost** and **medical-consultant** studies in
 mind: next week we re-run *exactly these two* with a classical formula

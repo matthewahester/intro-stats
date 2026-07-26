@@ -273,7 +273,7 @@ concepts at similar depth:
   risk, conditional probability, and the screening-test examples; you
   can skip the probability-distribution material in §2.1, which belongs
   to a later topic. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 - **A note on IMS.** Our primary text, *Introduction to Modern
   Statistics*, does **not** have a standalone probability or
   diagnostic-testing chapter, so there is no direct IMS counterpart to

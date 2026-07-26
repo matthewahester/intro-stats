@@ -329,11 +329,11 @@ cover the same concepts:
 
 - **IMS — Chapter 2 ("Study design")**, §2.1 sampling principles,
   §2.2 experiments, and §2.3 observational studies. \
-  Hosted IMS book: <https://openintro-ims.netlify.app/>
+  [Hosted IMS book](https://openintro-ims.netlify.app/)
 - **ISLBS — *Introductory Statistics for the Life and Biomedical
   Sciences*, Chapter 1, §1.3 data collection principles** (the
   ISLBS counterpart to the Week 2 material). \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 ---
 

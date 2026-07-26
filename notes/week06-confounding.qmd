@@ -334,14 +334,14 @@ same concepts at similar depth:
   in **Chapter 8, §8.1–§8.2** (Lending Club bankruptcy / verified
   income). Read those passages for the *narrative* only — the
   regression mechanics return in Weeks 8 and 9. \
-  Hosted IMS book: <https://openintro-ims.netlify.app/>
+  [Hosted IMS book](https://openintro-ims.netlify.app/)
 - **ISLBS — *Introductory Statistics for the Life and Biomedical
   Sciences*, Chapter 1 §1.7.1 *Case study: discrimination in
   developmental disability support*.** This is the DDS case used
   above, with the full set of figures and tables. §1.3 of the
   same chapter introduces the confounding vocabulary with the
   sunscreen example. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 ---
 

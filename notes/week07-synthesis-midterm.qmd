@@ -262,12 +262,12 @@ and ISLBS chapters we have been using:
   applications) and **Chapter 7 §7.1.4** (correlation). The
   same chapter §7.2 begins next week's material; do not start
   it yet. \
-  Hosted IMS book: <https://openintro-ims.netlify.app/>
+  [Hosted IMS book](https://openintro-ims.netlify.app/)
 - **ISLBS — Chapter 1** (data basics, study design,
   summarizing one variable, relationships between two
   variables) and the **DDS case in §1.7.1** as the Wk 6
   confounding anchor. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 ---
 

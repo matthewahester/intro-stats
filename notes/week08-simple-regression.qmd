@@ -384,12 +384,12 @@ cover the same concepts at similar depth:
   possum head lengths* through §7.3 *Outliers in linear
   regression*.** Stop before the chapter's inference material —
   that arrives later in this course. \
-  Hosted IMS book: <https://openintro-ims.netlify.app/>
+  [Hosted IMS book](https://openintro-ims.netlify.app/)
 - **ISLBS — *Introductory Statistics for the Life and
   Biomedical Sciences*, Chapter 6 *Simple linear regression*,
   §6.2 through §6.3.** §6.4 and §6.5 (inference and intervals)
   are later-course material in this sequence. \
-  OpenIntro book page: <https://www.openintro.org/book/biostat/>
+  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
 
 ---
 
