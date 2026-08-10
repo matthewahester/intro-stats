@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 452" width="840" height="452" role="img">
+  <title>The truth-by-decision table</title>
+  <desc>A two-by-two table. Columns are whether the null claim is true or false; rows are whether you reject it. The reject-when-true cell is a Type I error and the do-not-reject-when-false cell is a Type II error; the other two cells are correct.</desc>
+  <rect x="0" y="0" width="840" height="452" fill="#ffffff"/>
+  <text x="420" y="32" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1f2933" text-anchor="middle" font-weight="bold">Four things that can happen, and you never see which</text>
+  <text x="379" y="70" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5b6672" text-anchor="middle" font-weight="bold">The null claim is TRUE</text>
+  <text x="665" y="70" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5b6672" text-anchor="middle" font-weight="bold">The null claim is FALSE</text>
+  <text x="224" y="145" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5b6672" text-anchor="end" font-weight="bold">You reject it</text>
+  <text x="224" y="162" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="end">and report an effect</text>
+  <text x="224" y="263" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5b6672" text-anchor="end" font-weight="bold">You do not reject it</text>
+  <text x="224" y="280" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="end">and report nothing</text>
+  <rect x="236" y="92" width="286" height="118" fill="#f3e3d6" rx="6" stroke="#a33a3a" stroke-width="1.5"/>
+  <text x="250" y="118" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#a33a3a" text-anchor="start" font-weight="bold">Type I error</text>
+  <text x="250" y="142" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">You announce an effect that is not</text>
+  <text x="250" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">there.</text>
+  <text x="250" y="196" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">How often: the threshold you set, often 0.05</text>
+  <rect x="522" y="92" width="286" height="118" fill="#eef2f6" rx="6" stroke="#3f7a52" stroke-width="1.5"/>
+  <text x="536" y="118" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3f7a52" text-anchor="start" font-weight="bold">Correct decision</text>
+  <text x="536" y="142" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">You detect an effect that is really</text>
+  <text x="536" y="158" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">there.</text>
+  <text x="536" y="196" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">How often: the power of the study</text>
+  <rect x="236" y="210" width="286" height="118" fill="#eef2f6" rx="6" stroke="#3f7a52" stroke-width="1.5"/>
+  <text x="250" y="236" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3f7a52" text-anchor="start" font-weight="bold">Correct decision</text>
+  <text x="250" y="260" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">You stay quiet, and there was</text>
+  <text x="250" y="276" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">nothing to say.</text>
+  <text x="250" y="314" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">How often: one minus the threshold</text>
+  <rect x="522" y="210" width="286" height="118" fill="#f3e3d6" rx="6" stroke="#a33a3a" stroke-width="1.5"/>
+  <text x="536" y="236" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#a33a3a" text-anchor="start" font-weight="bold">Type II error</text>
+  <text x="536" y="260" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">A real effect was there and you</text>
+  <text x="536" y="276" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">missed it.</text>
+  <text x="536" y="314" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">How often: one minus the power</text>
+  <rect x="64" y="356" width="712" height="62" fill="#ffffff" rx="6" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="80" y="378" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">Choosing a smaller threshold moves you away from the top-left cell and toward the</text>
+  <text x="80" y="395" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">bottom-right one. You cannot shrink both errors by choosing; only a larger or</text>
+  <text x="80" y="412" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">better-designed study does that.</text>
+</svg>

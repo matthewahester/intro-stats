@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 486" width="920" height="486" role="img">
+  <title>A simulated null distribution beside the model curve</title>
+  <desc>Two panels on the same horizontal axis. On the left, a histogram of 1000 simulated sample rates centred on 0.80 with the bars at or below 0.74 shaded. On the right, a smooth bell curve over the same faint histogram with the same left tail shaded.</desc>
+  <rect x="0" y="0" width="920" height="486" fill="#ffffff"/>
+  <text x="460" y="30" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1f2933" text-anchor="middle" font-weight="bold">Same question, two ways to find the tail</text>
+  <line x1="55" y1="310" x2="385" y2="310" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="55" y1="74" x2="55" y2="310" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="55" y1="310" x2="385" y2="310" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="55" y1="239.762" x2="385" y2="239.762" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="55" y1="169.524" x2="385" y2="169.524" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="55" y1="99.286" x2="385" y2="99.286" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="70" y1="310" x2="70" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="70" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.70</text>
+  <line x1="130" y1="310" x2="130" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="130" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.74</text>
+  <line x1="190" y1="310" x2="190" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="190" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.78</text>
+  <line x1="250" y1="310" x2="250" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="250" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.82</text>
+  <line x1="310" y1="310" x2="310" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="310" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.86</text>
+  <line x1="370" y1="310" x2="370" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="370" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.90</text>
+  <line x1="51" y1="310" x2="55" y2="310" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="47" y="313.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">0</text>
+  <line x1="51" y1="239.762" x2="55" y2="239.762" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="47" y="243.562" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">50</text>
+  <line x1="51" y1="169.524" x2="55" y2="169.524" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="47" y="173.324" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">100</text>
+  <line x1="51" y1="99.286" x2="55" y2="99.286" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="47" y="103.086" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">150</text>
+  <text x="220" y="348" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">sample on-time rate if the claim is true</text>
+  <text x="220" y="60" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">Week 11: shuffle, then count</text>
+  <rect x="62.5" y="309.514" width="15" height="0.486" fill="#f3e3d6" stroke="#c2622d" stroke-width="1.1"/>
+  <rect x="77.5" y="308.601" width="15" height="1.399" fill="#f3e3d6" stroke="#c2622d" stroke-width="1.1"/>
+  <rect x="92.5" y="306.339" width="15" height="3.661" fill="#f3e3d6" stroke="#c2622d" stroke-width="1.1"/>
+  <rect x="107.5" y="301.311" width="15" height="8.689" fill="#f3e3d6" stroke="#c2622d" stroke-width="1.1"/>
+  <rect x="122.5" y="291.333" width="15" height="18.667" fill="#f3e3d6" stroke="#c2622d" stroke-width="1.1"/>
+  <rect x="137.5" y="273.785" width="15" height="36.215" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="152.5" y="246.714" width="15" height="63.286" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="167.5" y="210.665" width="15" height="99.335" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="182.5" y="170.384" width="15" height="139.616" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="197.5" y="134.879" width="15" height="175.121" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="212.5" y="114.706" width="15" height="195.294" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="227.5" y="117.161" width="15" height="192.839" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="242.5" y="142.174" width="15" height="167.826" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="257.5" y="181.927" width="15" height="128.073" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="272.5" y="224.788" width="15" height="85.212" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="287.5" y="260.89" width="15" height="49.11" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="302.5" y="285.661" width="15" height="24.339" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="317.5" y="299.714" width="15" height="10.286" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="332.5" y="306.329" width="15" height="3.671" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="347.5" y="308.906" width="15" height="1.094" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <rect x="362.5" y="309.731" width="15" height="0.269" fill="#eef2f6" stroke="#2f6f9f" stroke-width="1.1"/>
+  <line x1="130" y1="74" x2="130" y2="310" stroke="#a33a3a" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <text x="138" y="94" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#a33a3a" text-anchor="start">observed 0.74</text>
+  <text x="50" y="80" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">count</text>
+  <text x="220" y="372" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#c2622d" text-anchor="middle" font-weight="bold">shaded bars: 23 of 1,000 simulations</text>
+  <text x="220" y="390" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#c2622d" text-anchor="middle">landed at or below 0.74</text>
+  <line x1="545" y1="310" x2="875" y2="310" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="545" y1="74" x2="545" y2="310" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="545" y1="310" x2="875" y2="310" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="545" y1="239.762" x2="875" y2="239.762" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="545" y1="169.524" x2="875" y2="169.524" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="545" y1="99.286" x2="875" y2="99.286" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="560" y1="310" x2="560" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="560" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.70</text>
+  <line x1="620" y1="310" x2="620" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="620" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.74</text>
+  <line x1="680" y1="310" x2="680" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="680" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.78</text>
+  <line x1="740" y1="310" x2="740" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="740" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.82</text>
+  <line x1="800" y1="310" x2="800" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="800" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.86</text>
+  <line x1="860" y1="310" x2="860" y2="314" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="860" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.90</text>
+  <line x1="541" y1="310" x2="545" y2="310" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="537" y="313.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">0</text>
+  <line x1="541" y1="239.762" x2="545" y2="239.762" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="537" y="243.562" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">50</text>
+  <line x1="541" y1="169.524" x2="545" y2="169.524" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="537" y="173.324" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">100</text>
+  <line x1="541" y1="99.286" x2="545" y2="99.286" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="537" y="103.086" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">150</text>
+  <text x="710" y="348" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">sample on-time rate if the claim is true</text>
+  <text x="710" y="60" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">Week 12: draw the model, then read the area</text>
+  <rect x="552.5" y="309.514" width="15" height="0.486" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="567.5" y="308.601" width="15" height="1.399" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="582.5" y="306.339" width="15" height="3.661" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="597.5" y="301.311" width="15" height="8.689" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="612.5" y="291.333" width="15" height="18.667" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="627.5" y="273.785" width="15" height="36.215" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="642.5" y="246.714" width="15" height="63.286" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="657.5" y="210.665" width="15" height="99.335" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="672.5" y="170.384" width="15" height="139.616" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="687.5" y="134.879" width="15" height="175.121" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="702.5" y="114.706" width="15" height="195.294" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="717.5" y="117.161" width="15" height="192.839" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="732.5" y="142.174" width="15" height="167.826" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="747.5" y="181.927" width="15" height="128.073" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="762.5" y="224.788" width="15" height="85.212" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="777.5" y="260.89" width="15" height="49.11" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="792.5" y="285.661" width="15" height="24.339" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="807.5" y="299.714" width="15" height="10.286" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="822.5" y="306.329" width="15" height="3.671" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="837.5" y="308.906" width="15" height="1.094" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <rect x="852.5" y="309.731" width="15" height="0.269" fill="none" stroke="#c9d1d9" stroke-width="1"/>
+  <polygon points="545,310 545,309.897 546.65,309.88 548.3,309.861 549.95,309.839 551.6,309.814 553.25,309.785 554.9,309.752 556.55,309.714 558.2,309.671 559.85,309.622 561.5,309.567 563.15,309.504 564.8,309.433 566.45,309.353 568.1,309.262 569.75,309.16 571.4,309.046 573.05,308.918 574.7,308.774 576.35,308.613 578,308.433 579.65,308.233 581.3,308.01 582.95,307.763 584.6,307.489 586.25,307.185 587.9,306.849 589.55,306.478 591.2,306.07 592.85,305.621 594.5,305.129 596.15,304.589 597.8,303.998 599.45,303.353 601.1,302.65 602.75,301.884 604.4,301.053 606.05,300.151 607.7,299.174 609.35,298.119 611,296.98 612.65,295.754 614.3,294.436 615.95,293.022 617.6,291.508 619.25,289.888 620,289.116 620,310" fill="#f3e3d6"/>
+  <polyline points="545,309.897 546.65,309.88 548.3,309.861 549.95,309.839 551.6,309.814 553.25,309.785 554.9,309.752 556.55,309.714 558.2,309.671 559.85,309.622 561.5,309.567 563.15,309.504 564.8,309.433 566.45,309.353 568.1,309.262 569.75,309.16 571.4,309.046 573.05,308.918 574.7,308.774 576.35,308.613 578,308.433 579.65,308.233 581.3,308.01 582.95,307.763 584.6,307.489 586.25,307.185 587.9,306.849 589.55,306.478 591.2,306.07 592.85,305.621 594.5,305.129 596.15,304.589 597.8,303.998 599.45,303.353 601.1,302.65 602.75,301.884 604.4,301.053 606.05,300.151 607.7,299.174 609.35,298.119 611,296.98 612.65,295.754 614.3,294.436 615.95,293.022 617.6,291.508 619.25,289.888 620.9,288.16 622.55,286.319 624.2,284.362 625.85,282.285 627.5,280.086 629.15,277.76 630.8,275.306 632.45,272.722 634.1,270.006 635.75,267.156 637.4,264.173 639.05,261.057 640.7,257.808 642.35,254.426 644,250.916 645.65,247.278 647.3,243.517 648.95,239.638 650.6,235.644 652.25,231.542 653.9,227.34 655.55,223.044 657.2,218.662 658.85,214.205 660.5,209.683 662.15,205.105 663.8,200.485 665.45,195.834 667.1,191.165 668.75,186.492 670.4,181.829 672.05,177.192 673.7,172.594 675.35,168.052 677,163.582 678.65,159.2 680.3,154.92 681.95,150.761 683.6,146.737 685.25,142.864 686.9,139.158 688.55,135.634 690.2,132.306 691.85,129.188 693.5,126.294 695.15,123.635 696.8,121.223 698.45,119.07 700.1,117.184 701.75,115.573 703.4,114.245 705.05,113.206 706.7,112.46 708.35,112.012 710,111.862 711.65,112.012 713.3,112.46 714.95,113.206 716.6,114.245 718.25,115.573 719.9,117.184 721.55,119.07 723.2,121.223 724.85,123.635 726.5,126.294 728.15,129.188 729.8,132.306 731.45,135.634 733.1,139.158 734.75,142.864 736.4,146.737 738.05,150.761 739.7,154.92 741.35,159.2 743,163.582 744.65,168.052 746.3,172.594 747.95,177.192 749.6,181.829 751.25,186.492 752.9,191.165 754.55,195.834 756.2,200.485 757.85,205.105 759.5,209.683 761.15,214.205 762.8,218.662 764.45,223.044 766.1,227.34 767.75,231.542 769.4,235.644 771.05,239.638 772.7,243.517 774.35,247.278 776,250.916 777.65,254.426 779.3,257.808 780.95,261.057 782.6,264.173 784.25,267.156 785.9,270.006 787.55,272.722 789.2,275.306 790.85,277.76 792.5,280.086 794.15,282.285 795.8,284.362 797.45,286.319 799.1,288.16 800.75,289.888 802.4,291.508 804.05,293.022 805.7,294.436 807.35,295.754 809,296.98 810.65,298.119 812.3,299.174 813.95,300.151 815.6,301.053 817.25,301.884 818.9,302.65 820.55,303.353 822.2,303.998 823.85,304.589 825.5,305.129 827.15,305.621 828.8,306.07 830.45,306.478 832.1,306.849 833.75,307.185 835.4,307.489 837.05,307.763 838.7,308.01 840.35,308.233 842,308.433 843.65,308.613 845.3,308.774 846.95,308.918 848.6,309.046 850.25,309.16 851.9,309.262 853.55,309.353 855.2,309.433 856.85,309.504 858.5,309.567 860.15,309.622 861.8,309.671 863.45,309.714 865.1,309.752 866.75,309.785 868.4,309.814 870.05,309.839 871.7,309.861 873.35,309.88 875,309.897" fill="none" stroke="#2f6f9f" stroke-width="2.1" stroke-linejoin="round"/>
+  <line x1="620" y1="74" x2="620" y2="310" stroke="#a33a3a" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <text x="628" y="94" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#a33a3a" text-anchor="start">observed 0.74</text>
+  <text x="540" y="80" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">count</text>
+  <line x1="582.5" y1="202" x2="607.358" y2="279.336" stroke="#c2622d" stroke-width="1.3" stroke-linecap="round"/>
+  <polygon points="609.5,286 610.357,278.372 604.359,280.3" fill="#c2622d"/>
+  <text x="578" y="192" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#c2622d" text-anchor="middle" font-weight="bold">area = 0.017</text>
+  <line x1="545" y1="364" x2="875" y2="364" stroke="#5b6672" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="582.721" y1="364" x2="582.721" y2="368" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="582.721" y="381" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-3</text>
+  <line x1="625.147" y1="364" x2="625.147" y2="368" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="625.147" y="381" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-2</text>
+  <line x1="667.574" y1="364" x2="667.574" y2="368" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="667.574" y="381" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-1</text>
+  <line x1="710" y1="364" x2="710" y2="368" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="710" y="381" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0</text>
+  <line x1="752.426" y1="364" x2="752.426" y2="368" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="752.426" y="381" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">1</text>
+  <line x1="794.853" y1="364" x2="794.853" y2="368" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="794.853" y="381" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">2</text>
+  <line x1="837.279" y1="364" x2="837.279" y2="368" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="837.279" y="381" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">3</text>
+  <text x="710" y="400" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">the same axis, relabelled in standard units (z)</text>
+  <line x1="400" y1="190" x2="521" y2="190" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="528,190 521,186.85 521,193.15" fill="#1f2933"/>
+  <text x="464" y="168" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">replace the</text>
+  <text x="464" y="183" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">shuffling</text>
+  <text x="464" y="214" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">with a</text>
+  <text x="464" y="229" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">curve</text>
+  <text x="55" y="452" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="start">Both tails point at the same conclusion: a rate this low turns up in roughly two samples in a hundred when the</text>
+  <text x="55" y="468" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="start">advertised claim holds. The curve is a model of the shuffling, so the two areas agree closely but not exactly.</text>
+</svg>

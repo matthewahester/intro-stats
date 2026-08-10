@@ -6,292 +6,208 @@ format:
     toc: true
     toc-depth: 3
     number-sections: false
-license: "Adapted in part from OpenIntro ISLBS (Vu & Harrington), under CC BY-SA 3.0. Course adaptations by Matt Hester."
 ---
 
-## Why this week matters
+## Where this week starts
 
-Last week, logistic regression produced **predicted probabilities** for
-yes/no outcomes. This week we step back from models and study
-**probability directly**: how often something happens in the long run,
-how risk changes inside subgroups, and why diagnostic tests depend on
-base rates.
+Everything you have done since Week 3 has described a group. A mean summarised forty resting heart rates. A slope in Week 8 described how two measurements moved together across a sample. Even last week's odds ratio compared two kinds of people inside one data set. This week the object changes. You take a single person out of the group — someone just handed a test result, or who has just read a headline about a risk — and ask what the numbers say about them.
 
-A great deal of health and policy reasoning comes down to a single
-word: **risk**. What is the chance this test result is wrong? Given a
-positive screening result, what is the chance the patient actually has
-the disease? These are probability questions, and answering them well
-is the difference between a calm clinic and a panicked one.
+That question has a name: probability. In this course a probability is a proportion of some group, and nearly all of the skill is knowing which group. Get the group right and the arithmetic is division; get it wrong and no arithmetic will save you.
 
-This week treats probability as **risk** — a long-run chance — and
-then puts it to work on **diagnostic testing**. The skills are not
-new so much as renamed. In Week 5 you read **conditional proportions**
-off a two-way table ("among the smokers, what fraction…"). This week
-that becomes **conditional probability** ("among the people who tested
-positive, what is the chance…"). The Week 2 habit of asking *where did
-these numbers come from, and for what population* is what makes the
-week's punchline — **base rates matter** — land.
+Week 9 left something unfinished. Logistic regression handed you a fitted probability — the model puts this patient's chance at 0.18 — without our ever saying what a chance is, or what should happen to it when new information arrives. This week we say both, by counting people. A famous rule of probability sits behind everything below, and you will never need to write it down: a table of 1,000 imaginary people does the same work, and unlike the formula it cannot hide which denominator you are using.
 
-The rhythm: **Monday** introduces probability-as-risk and conditional
-probability. **Wednesday** practices the diagnostic table —
-sensitivity, specificity, and completing a two-way table.
-**Friday**'s quiz works a full screening-test case: false positives,
-false negatives, and what a positive result really means when the
-disease is rare.
+By Friday the sentence "this test is 90% accurate" should sound incomplete to you. You should be able to name the two numbers it compresses, explain why neither is the chance that your own positive result is real, and produce that chance yourself from a prevalence and a small table of counts.
 
-## Probability as long-run risk
+### Why this matters beyond the exam
 
-A **probability** is a number between 0 and 1 that describes how
-often something happens *in the long run*. If a condition has a
-probability of $0.093$ in some population, that means: among many,
-many people from that population, about $9.3$ out of every $100$ have
-it. Probability is the long-run proportion — exactly the kind of
-proportion you have been reading off tables since Week 3, now read as
-a *chance*.
+Picture someone who has just tested positive on a screening test for a serious but uncommon condition. They are told the test is 90% accurate, so they go home and spend three weeks believing they have a nine-in-ten chance of being ill. They cancel plans. They may accept an invasive follow-up they would have weighed differently with a clear head. In the situation we build below, their real chance is closer to one in twelve, and the right thing to feel is neither relief nor panic but a specific, quantified concern that justifies a second test.
 
-Two small pieces of vocabulary make the rest of the week easier. A
-probability of $0$ means the event never happens; a probability of $1$
-means it always happens; everything real lives in between. And the
-**complement** rule: the chance an event does *not* happen is one
-minus the chance it does. If the chance a test comes back positive is
-$0.07$, then the chance it comes back negative is $1 - 0.07 = 0.93$.
-That is the entire arithmetic of complements, and it is worth saying
-out loud because so much diagnostic reasoning is just "the positives
-and the negatives have to add to everyone."
+The pattern is not only medical. A fraud alert on your account, a security screen at an airport, a workplace drug test, an automated flag on a benefits application: every one searches a large population for something rare, and unless the error rate is tiny compared with how rare the thing is, most of the alarms are false. That is a fact about rarity, not a complaint about the test.
 
-When we say a screening test carries a "$7\%$ false-positive risk," we
-are making a long-run statement: out of many healthy people tested,
-about $7$ in $100$ will get a positive result anyway. Holding that
-long-run reading in mind is what keeps the rest of the week honest.
+## What you will be able to do
 
-## Conditional probability: the chance within a subgroup
+- State any probability as a proportion of a named group, and say out loud what its denominator is.
+- Turn a prevalence, a sensitivity, and a specificity into a table of counts for 1,000 people, without a formula.
+- Compute the chance that a positive result is real, and explain why it is not the sensitivity.
+- Explain, using counts, why an accurate test for a rare condition produces mostly false positives.
+- Separate absolute risk, risk difference, and relative risk in a claim, and say which one a headline reports.
+- Read a probability tree and a two-by-two table and name which cells any quoted number compares.
 
-Most useful risks are **conditional** — they describe the chance of
-something *within a particular subgroup*. We write the conditional
-probability of $A$ given $B$ as $P(A \mid B)$, read "the probability of
-$A$, among those for whom $B$ is true." It is computed exactly like a
-Week 5 conditional proportion: restrict to the subgroup $B$, then ask
-what fraction of *that* subgroup has $A$.
+## Words worth owning
 
-The ISLBS textbook tabulates a large population by age group and
-diabetes status (counts in thousands):
+| Term | What it means in this course |
+|---|---|
+| Probability | The proportion of a named group for whom something is true, or the fraction of times it happens over a long run of repeats. Never free-floating: always has a denominator. |
+| Prevalence, or base rate | The proportion of a population that has the condition, before anybody is tested. |
+| Conditional probability | A probability worked out inside a smaller group: among commuters, among people who tested positive. |
+| Sensitivity | Of the people who truly have the condition, the proportion the test calls positive. |
+| Specificity | Of the people who truly do not have it, the proportion the test calls negative. |
+| False positive | A positive result in a person without the condition. A false negative is the mirror image. |
+| Predictive value of a positive | Of the people whose result came back positive, the proportion who truly have the condition. |
+| Absolute risk and relative risk | The size of a chance itself, versus the ratio of two chances. Same evidence, very different sentences. |
 
-![A two-way table of a U.S. population by age group and diabetes status, counts in thousands, with row totals. The under-20, 20-44, 45-64, and 65-and-over rows show diabetes and no-diabetes counts; the 45-64 row is highlighted. A total row reads 29,100 with diabetes and 284,220 without, out of 313,320. Below the table, two boxes contrast P(diabetes given 45-64) = 13,400 / 81,926 which is about 0.164, against P(45-64 given diabetes) = 13,400 / 29,100 which is about 0.461 — the same two numbers answering different questions.](../assets/figures/week10-conditional-twoway.png){fig-alt="A two-way table with age groups in rows (under 20, 20 to 44, 45 to 64, 65 and over, and a total row) and columns for Diabetes, No diabetes, and Total, with counts in thousands. The 45 to 64 row is shaded. Beneath the table are two shaded boxes. The left box computes the probability of diabetes given age 45 to 64 as 13,400 divided by 81,926, about 0.164. The right box computes the probability of age 45 to 64 given diabetes as 13,400 divided by 29,100, about 0.461."}
+## Probability as a count of people
 
-Overall, the chance a randomly chosen person has diabetes is
-$29{,}100 / 313{,}320 \approx 0.093$. But *among people 65 and over*,
-the chance is $11{,}200 / 41{,}506 \approx 0.27$ — about three times
-higher. That second number is a conditional probability: restrict to
-the 65-and-over subgroup, then take the fraction with diabetes.
-Conditioning on a subgroup can move a risk a lot, which is why "the
-overall rate" and "the rate among older adults" are genuinely
-different statements.
+### Two honest ways to finish the sentence
 
-## The trap: $P(A \mid B)$ is not $P(B \mid A)$
+Ask ten people what "a 30% chance of rain tomorrow" means and you will get a small argument. Statistics need not settle it: a probability can always be finished in one of two concrete ways, and both are frequencies.
 
-Here is the single most important idea of the week, and the one most
-often gotten wrong. **The two directions of a conditional probability
-are different numbers.** "The chance of diabetes given you are 45–64"
-is not the same as "the chance you are 45–64 given that you have
-diabetes," even though both use the same cell count.
+The first is the **long-run relative frequency**. If a process can be repeated under the same conditions, the probability of an outcome is the fraction of repeats in which it happens, once the number of repeats is large. Flip a fair coin ten times and you may see seven heads; flip it ten thousand times and the fraction of heads settles near one half. That is a statement about the long run, not a promise about the next flip, and the commonest error in casual talk about chance is treating a long-run rate as a guarantee for one case.
 
-Read both off the table. Of the $81{,}926$ thousand people aged 45–64,
-$13{,}400$ have diabetes, so
+The second is a **proportion of a population**. "Three in a thousand adults in this age band have the condition" is a probability in exactly the sense we need: pick one adult from that population at random and the chance they have it is 0.003. Nothing is repeated. The probability is a fact about the composition of a group.
 
-$$P(\text{diabetes} \mid \text{45–64}) = \frac{13{,}400}{81{,}926} \approx 0.164.$$
+Both versions carry a denominator, and that is the habit to build. Whenever you meet a probability this week, finish the sentence "out of what group?" first. Out of everyone screened. Out of the people who have the condition. Out of the people who tested positive. Those are three different groups, and a number computed in one tells you almost nothing about the others.
 
-But of the $29{,}100$ thousand people *with diabetes*, $13{,}400$ are
-aged 45–64, so
+### Conditional probability read off a table
 
-$$P(\text{45–64} \mid \text{diabetes}) = \frac{13{,}400}{29{,}100} \approx 0.461.$$
+The word *conditional* sounds technical. The action is simple: shrink the group, then count.
 
-Same numerator, different denominators, very different answers —
-$16\%$ versus $46\%$. The question "given which group?" decides which
-denominator you use. Flipping the condition flips the denominator, and
-that is why the two numbers come apart.
+A campus survey asked 400 students two questions. Do you commute to campus, and did you miss any class last week because of transport? Here is the whole result.
 
-This is not a curiosity. It *is* the diagnostic-testing problem in
-disguise. A test's advertised accuracy is usually a statement like
-"the chance of a positive result *given* the disease." What a patient
-actually wants to know is the reverse: "the chance of the disease
-*given* a positive result." Those are $P(A \mid B)$ and $P(B \mid A)$,
-and the rest of the week is about why they can be wildly different.
+| | Missed a class | Did not miss | Total |
+|---|---|---|---|
+| Commuted | 60 | 140 | 200 |
+| Lived on campus | 20 | 180 | 200 |
+| Total | 80 | 320 | 400 |
 
-## Diagnostic tests: sensitivity and specificity
+Check the margins first, every time. The row totals are 200 and 200, which add to 400. The column totals are 80 and 320, which also add to 400. The table is internally consistent, so we can trust the cells.
 
-A diagnostic test sorts people two ways — they either have the
-condition or not, and the test reads either positive or negative. That
-is a two-by-two table, and two conditional probabilities describe how
-good the test is:
+Now three questions that all come out of that one table.
 
-- **Sensitivity** = $P(\text{test} + \mid \text{disease})$ — among
-  people who *have* the disease, the chance the test catches it. The
-  complement is the **false-negative rate**.
-- **Specificity** = $P(\text{test} - \mid \text{no disease})$ — among
-  people who are *healthy*, the chance the test correctly clears them.
-  The complement is the **false-positive rate**.
+The **overall** proportion who missed a class is 80 out of 400, which is 0.20. The group is everyone surveyed.
 
-For the mammogram example ISLBS uses, sensitivity is $0.89$ (so the
-false-negative rate is $11\%$) and specificity is $0.93$ (so the
-false-positive rate is $7\%$). Read those as conditional probabilities
-in the "given disease status" direction: *given* a woman has breast
-cancer, there is an $89\%$ chance the mammogram is positive; *given*
-she does not, there is a $7\%$ chance it is positive anyway. Both are
-statements about the test, conditioned on the truth.
+The proportion who missed a class **among commuters** is 60 out of 200, which is 0.30. The group has shrunk to the first row. In symbols, $P(\text{missed} \mid \text{commuted}) = 0.30$, and the vertical bar is read "given" or, more usefully, "within the group of".
 
-Notice the direction. Sensitivity and specificity condition on **what
-is true** and ask **what the test says**. The patient's question runs
-the other way — it conditions on **what the test says** and asks
-**what is true**. To answer it we need one more ingredient.
+The proportion who commuted **among those who missed a class** is 60 out of 80, which is 0.75. The group has shrunk to the first column instead.
 
-## What a positive test really tells you: predictive values and base rates
+Read those last two again. Both come from the same cell, the same 60 students, and they are 0.30 and 0.75. Thirty percent of commuters missed a class. Seventy-five percent of the students who missed a class were commuters. Neither sentence can be swapped for the other, and the only thing that changed was the denominator. Everything difficult in the rest of this week is a disguised version of that one swap.
 
-The number a patient actually wants is the **positive predictive
-value (PPV)**: $P(\text{disease} \mid \text{test} +)$ — among everyone
-who tests positive, the fraction who truly have the disease. Its
-partner is the **negative predictive value (NPV)**:
-$P(\text{no disease} \mid \text{test} -)$. These run in the
-patient's direction, and — this is the heart of the week — they depend
-on how common the disease is to begin with, the **base rate** (also
-called **prevalence**).
+## What a test knows and what your result means
 
-The cleanest way to see it is to run a hypothetical population through
-the test. Imagine $100{,}000$ women screened, with a breast-cancer
-prevalence of $0.35\%$:
+### Sensitivity and specificity belong to the test
 
-![A diagram following 100,000 screened women through a tree and into a two-by-two table. Of 100,000, about 350 have breast cancer and 99,650 do not. Among the 350 with cancer, the 89%-sensitive test gives about 311.5 true positives and 38.5 false negatives. Among the 99,650 without cancer, the 7% false-positive rate gives about 6,975.5 false positives and 92,674.5 true negatives. The total number of positive tests is 311.5 plus 6,975.5 equals 7,287, and the positive predictive value is 311.5 divided by 7,287, about 4 percent.](../assets/figures/week10-diagnostic-table-tree.png){fig-alt="A two-panel diagnostic figure. The left panel is a tree starting from 100,000 screened, splitting into breast cancer 350 and no cancer 99,650, and then each splitting into test-positive and test-negative branches: 311.5 true positives and 38.5 false negatives among those with cancer, and 6,975.5 false positives and 92,674.5 true negatives among those without. The right panel is a two-by-two table of the same four counts, with a callout that positive tests total 7,287 and the positive predictive value is 311.5 divided by 7,287, about 4 percent."}
+A test is judged by studying people whose true status is already known from a more definitive procedure. Two proportions come out of that study.
 
-Walk it through. Of $100{,}000$ women, about $350$ have cancer and
-$99{,}650$ do not. The test catches $89\%$ of the $350$ — about
-$311.5$ true positives — and misses the rest. But it also flags $7\%$
-of the $99{,}650$ healthy women — about $6{,}975.5$ false positives.
-So the total number of positive results is
-$311.5 + 6{,}975.5 = 7{,}287$, and of those, only $311.5$ truly have
-cancer:
+**Sensitivity** is the proportion of people who truly have the condition that the test calls positive. If sensitivity is 0.90, then among 100 people who genuinely have it, about 90 get a positive result and about 10 are missed.
 
-$$\text{PPV} = \frac{311.5}{7{,}287} \approx 0.04.$$
+**Specificity** is the proportion of people who truly do not have the condition that the test calls negative. If specificity is 0.90, then among 100 healthy people, about 90 are correctly cleared and about 10 get a false alarm.
 
-Read that out loud: **of every 100 women with a positive mammogram,
-only about 4 actually have breast cancer.** The test is good — $89\%$
-sensitive — and yet a positive result is *probably* a false alarm.
-Nothing is wrong with the test. The disease is simply rare, so the
-small percentage of false positives among the many healthy women
-outnumbers the true positives among the few sick ones. This is the
-$P(A \mid B)$-versus-$P(B \mid A)$ trap with stakes: sensitivity
-($89\%$) and PPV ($4\%$) point in opposite emotional directions.
+Both are conditional probabilities whose condition is the *true status*: they start from the truth and look at what the test said. That direction is why a single "accuracy" figure is not enough. One test can have sensitivity 0.99 and specificity 0.50, another the reverse, and calling either "accurate" says nothing about which mistake it makes. They are properties of the test itself, and changing the population leaves them roughly where they were.
 
-The base rate is the lever. Hold the test fixed and ask how PPV
-changes as the disease becomes more common:
+### Predictive value belongs to the test in a population
 
-![A curve of positive predictive value against prevalence, for a fixed test with sensitivity 89% and specificity 93%. The curve rises steeply from near zero and then levels off. The mammogram point at a prevalence of 0.35% sits near a PPV of about 4%; a second point at 10% prevalence sits near a PPV of about 59%. The figure is labeled an instructor-built schematic.](../assets/figures/week10-base-rate.png){fig-alt="A rising curve on axes where the horizontal axis is prevalence as a percent from 0 to 30 and the vertical axis is positive predictive value as a percent from 0 to 100. The curve climbs steeply at first and then flattens. A red point near a prevalence of 0.35 percent sits at a PPV of about 4 percent, labeled mammogram screening. A green point at 10 percent prevalence sits at a PPV of about 59 percent."}
+You do not know your true status. That is why you took the test. Your question runs in the opposite direction: given that my result is positive, what is the chance I have the condition?
 
-Same test, different worlds. At a $0.35\%$ base rate the PPV is about
-$4\%$; at a $10\%$ base rate the very same test has a PPV near $59\%$.
-A positive result means much more when the disease is common — for
-instance, when a test is run on people already showing symptoms rather
-than on the whole population. This is also why even a near-perfect
-test struggles against a very rare condition: a prenatal cfDNA screen
-with $98\%$ sensitivity and $99.5\%$ specificity, applied at a
-prevalence of $1$ in $800$, still yields a PPV of only about $20\%$.
-Rarity is hard to beat.
+That number is the **predictive value of a positive result**, and it is not the sensitivity. It starts from the result and looks back at the truth. Because the group who tested positive holds both true cases and false alarms, its make-up depends on how many true cases there were to find. Prevalence is therefore part of your result, even though it is nowhere in the test.
 
-The honest clinical reading, then, is never "the test is $93\%$
-accurate, so a positive means I'm $93\%$ likely to be sick." The
-right reading runs the patient's direction and remembers the base
-rate: *given* this positive result, and given how common the disease
-is in people like me, what is the chance I actually have it? Often a
-positive screen is a reason for a second, better test — not a
-diagnosis.
+Keep the two kinds of number separated by the direction you read them:
 
-## Common mistakes
+- Sensitivity and specificity start from the true status and ask what the test said.
+- Predictive value starts from what the test said and asks about the true status.
 
-- **"Sensitivity is the chance I'm sick given a positive test."** No —
-  that is PPV. Sensitivity conditions on *being sick* and asks what
-  the test says; PPV conditions on *the positive test* and asks what's
-  true. Different directions, often very different numbers.
-- **"A $93\%$-accurate test means a positive is $93\%$ likely to be
-  right."** Not when the disease is rare. The mammogram is $89\%$
-  sensitive and a positive is only about $4\%$ likely to be cancer.
-- **"Base rate doesn't matter if the test is good."** It always
-  matters. The same test gives PPV $\approx 4\%$ at a $0.35\%$ base
-  rate and $\approx 59\%$ at a $10\%$ base rate.
-- **"$P(A \mid B)$ equals $P(B \mid A)$."** Almost never. Same cell,
-  different denominators: $P(\text{diabetes}\mid\text{45–64})\approx
-  0.16$ but $P(\text{45–64}\mid\text{diabetes})\approx 0.46$.
-- **"A false positive means the test is broken."** No — false
-  positives are a built-in, expected fraction of healthy people
-  (here, $7\%$). A good test still produces them.
-- **"A negative result means I definitely don't have it."** Not quite
-  — the false-negative rate is the chance a truly sick person tests
-  negative. NPV, not certainty, is the honest reading.
+## Worked example — screening a crowd of 1,000 for a rare condition
 
-## What you should be able to do by Friday
+**Setting.** A county health department offers a free screening test at a community health fair. In the crowd that attends, about 1 person in 100 has the condition. The test has sensitivity 0.90 and specificity 0.90. A thousand people are tested over the weekend. What should a person with a positive result conclude?
 
-By the end of Week 10 you should be able to:
+**Step 1. Work with the whole crowd.** All 1,000 of them. A round number keeps every count a whole person.
 
-- read a probability as a long-run risk, and use the complement rule
-  ($P(\text{not } A) = 1 - P(A)$);
-- compute a conditional probability $P(A \mid B)$ from a two-way table
-  by restricting to the subgroup;
-- explain, with a table, why $P(A \mid B)$ and $P(B \mid A)$ are
-  different, and identify which one a question is asking for;
-- define **sensitivity** and **specificity** as conditional
-  probabilities, and name their false-negative and false-positive
-  complements;
-- build a hypothetical-population table from a prevalence, a
-  sensitivity, and a specificity, and read **PPV** and **NPV** off it;
-- explain why a positive test can still be *probably wrong* when the
-  disease is rare — the **base-rate** effect.
+**Step 2. Split by the truth, using the prevalence.** One in a hundred means 10 of the 1,000 have the condition, and the other 990 do not.
 
-## Assignments this week
+**Step 3. Split the 10 who have it, using the sensitivity.** The test finds 90% of them, which is 9 people. The remaining 1 is missed and gets a negative result.
 
-- **Monday check.** A short concept check on reading a probability as a
-  risk and a conditional probability from a small table. Aim for about
-  **3–5 minutes** in class. Sheet:
-  [Week 10 Monday exit ticket](../assets/assignments/week10_monday_exit_ticket_student.pdf).
-- **Wednesday check.** A short application completing a diagnostic
-  two-way table and reading sensitivity, specificity, and a conditional
-  probability. Aim for about **8–12 minutes** in class. Sheet:
-  [Week 10 Wednesday exit ticket](../assets/assignments/week10_wednesday_exit_ticket_student.pdf).
-- 🔒 **Friday quiz** — handled through Blackboard or in class as
-  directed. The quiz prompt is not posted here. Exact timing and
-  submission details live in Blackboard.
-- 🔒 **Homework 5 (biweekly, Weeks 9–10)** — posted and submitted
-  through Blackboard. It spans last week and this one; due near the
-  start of Week 11.
+**Step 4. Split the 990 who do not have it, using the specificity.** The test correctly clears 90%, which is 891 people. The other 10%, which is 99 people, get a false alarm.
 
-## Read more in IMS / ISLBS
+**Step 5. Collect everyone whose result was positive.** The 9 true cases plus the 99 false alarms, giving 108 positive results in all.
 
-The course page above is the main explanation for this week. If you
-want a second voice on the same material, this reading covers the same
-concepts at similar depth:
+![Two branchings turn one thousand people into four groups.](../assets/figures/week-10/test-tree.svg){fig-alt="A tree starting from 1,000 people splits into 10 with the condition and 990 without, then each of those splits by test result into 9 and 1, and 99 and 891."}
 
-- **ISLBS — *Introductory Statistics for the Life and Biomedical
-  Sciences*, Chapter 2 *Probability*, §2.1 (defining probability) and
-  §2.2 (conditional probability, the general multiplication idea, and
-  the diagnostic-testing / predictive-value material).** Read it for
-  risk, conditional probability, and the screening-test examples; you
-  can skip the probability-distribution material in §2.1, which belongs
-  to a later topic. \
-  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
-- **A note on IMS.** Our primary text, *Introduction to Modern
-  Statistics*, does **not** have a standalone probability or
-  diagnostic-testing chapter, so there is no direct IMS counterpart to
-  link this week. ISLBS Chapter 2 above is the second voice for this
-  material.
+**Step 6. Answer the question that was actually asked.** Among the 108 people holding a positive result, 9 truly have the condition.
 
----
+$$\text{predictive value of a positive} = \frac{9}{9 + 99} = \frac{9}{108} \approx 0.083$$
 
-*Sources adapted in this lesson:* OpenIntro *Introductory Statistics
-for the Life and Biomedical Sciences*, Vu & Harrington, Chapter 2
-§2.1 (probability as long-run proportion, the complement rule) and
-§2.2 (conditional probability, marginal/joint probabilities, the
-mammogram and prenatal-screening diagnostic examples, sensitivity,
-specificity, and predictive values), CC BY-SA 3.0. Source files at
-[github.com/OI-Biostat/oi_biostat_text](https://github.com/OI-Biostat/oi_biostat_text).
-The diabetes-by-age counts and the mammogram screening figures
-(prevalence $0.35\%$, sensitivity $89\%$, specificity $93\%$, and the
-hypothetical-population table totaling $100{,}000$) are quoted from the
-published ISLBS examples; the predictive-value-versus-prevalence curve
-is a course-built schematic using the mammogram test's characteristics
-and is labeled as such on the figure.
+**Checking the arithmetic.** The four cells are 9, 1, 99 and 891, and they add to 1,000. The condition split was 10 and 990. The result split was 108 positive and 892 negative. Every margin agrees, so the table is sound.
+
+![The same thousand people, one square each, coloured by what the test did.](../assets/figures/week-10/frequency-grid.svg){fig-alt="A grid of 1,000 squares. An outlined block of 108 squares marks everyone who tested positive, and only 9 of them, shown in dark blue, actually have the condition, while 99 in orange do not."}
+
+**What the result means in context.** About 108 people leave the fair holding a positive slip, and roughly 9 of them are ill. That is a chance of about 8%, which is exactly one in twelve. Ninety-nine of the 108, more than nine in every ten, are false alarms.
+
+And now the uncomfortable part. This test was not bad. It got 9 of the 10 sick people right and 891 of the 990 healthy people right, so it was correct about 900 of the 1,000 — exactly the 90% the flyer advertised. The 90% was true. It simply never was the number a person holding a positive slip wanted to know.
+
+Two further readings come out of the same table. A negative result here is genuinely reassuring: of the 892 who tested negative, 891 do not have the condition, a predictive value of about 0.999. And a positive result is not worthless. It moved a person from 1 in 100 to 1 in 12, a chance more than eight times as large. That is what a screening test is for: a reason to take the next test, not a diagnosis.
+
+### The same reasoning, transferred
+
+Move the same test into a different room. In a clinic, people arrive because something is already wrong: symptoms, a family history, an abnormal earlier finding. Suppose about 3 in 10 of them have the condition. The test is unchanged, sensitivity 0.90 and specificity 0.90.
+
+Run the identical six steps on 1,000 clinic patients. The prevalence splits them into 300 with the condition and 700 without. Of the 300, the test finds 270 and misses 30. Of the 700, it clears 630 and raises 70 false alarms. The positives number 270 plus 70, which is 340, so the predictive value of a positive is 270 out of 340, or about 0.794.
+
+What stayed the same: the test, both of its properties, all six steps, and the shape of the table. What changed: only the base rate, from 1 in 100 to 3 in 10. And the meaning of an identical slip of paper moved from about 8% to about 79%.
+
+![Holding the test fixed and changing only how common the condition is.](../assets/figures/week-10/ppv-by-prevalence.svg){fig-alt="A rising curve of the predictive value of a positive against prevalence for a fixed test. At 1 percent prevalence the curve sits near 8 percent, and at 30 percent prevalence it has climbed to about 79 percent."}
+
+This is why a careful clinician asks who was tested before interpreting a result. The paper is the same. The news is not.
+
+## Second worked example — a headline that doubles a small risk
+
+**Setting.** A state health bulletin reports that adults who follow a particular habit have "double the risk" of a rare complication over ten years. A local paper runs it as a warning. Should a reader change anything?
+
+The counts are these. Among 10,000 adults without the habit, 4 experienced the complication over ten years. Among 10,000 with it, 8 did. Both are conditional probabilities of the kind built above: one computed within the group without the habit, the other within the group with it.
+
+**Step 1. Absolute risk in each group.** Without the habit, 4 out of 10,000, which is 0.0004, or 0.04%. With it, 8 out of 10,000, which is 0.0008, or 0.08%.
+
+**Step 2. The risk difference.** Subtract: 0.0008 minus 0.0004 is 0.0004. In people, that is 4 extra complications per 10,000 adults over ten years, or 1 extra per 2,500.
+
+**Step 3. The relative risk.** Divide instead of subtracting.
+
+$$\text{relative risk} = \frac{0.0008}{0.0004} = 2.0$$
+
+The ratio is 2, which is where the word "double" came from. Nothing in the bulletin was false.
+
+**Step 4. Say both out loud and notice the difference.** "Doubles your risk" and "adds four cases per ten thousand people over a decade" describe the same two counts. The first says how the rates compare; the second says how many people are affected. A reader deciding whether to change their behaviour needs the second, and the headline gave only the first.
+
+**Why the ratio alone cannot tell you the size of anything.** Imagine a second habit where the ten-year risk without it is 20%, so 2,000 per 10,000, and with it is 40%, so 4,000 per 10,000. The relative risk is again exactly 2.0, but the risk difference is 20 percentage points, or 2,000 extra cases per 10,000 people. Two claims with identical ratios, one of them five hundred times larger in human terms. A ratio compares two numbers and then throws both away, which is why a responsible report states the absolute risk beside it.
+
+One caution carried forward from Week 2 and Week 6: these are observational counts. People with the habit may differ from people without it in many ways, so "double the risk" describes an association, not a demonstrated effect. The arithmetic is correct regardless; the causal verb is the part that is not earned.
+
+## The misreading to avoid
+
+Here is the thought, in the words students actually use: *"The test is 90% accurate and I tested positive, so there is a 90% chance I have it."*
+
+It is a completely reasonable thought, and it is wrong, so let us take it apart precisely rather than just declare it so.
+
+The 90% is a promise made to a group you are not standing in. Sensitivity says: of the people who have the condition, 90% test positive. It reads down the column of people who have it. Your question reads across the row of people who tested positive. The two directions share only one cell, the 9 true positives, and divide it by different totals — by 10 in one case and by 108 in the other. Same numerator, different denominator, different number. That is the commuting table again, wearing a lab coat.
+
+![One two-by-two table read two ways.](../assets/figures/week-10/two-way-reading.svg){fig-alt="The same two-by-two table shown twice. On the left the columns are shaded, giving sensitivity 9 of 10 and specificity 891 of 990. On the right the rows are shaded, giving 9 of 108 positives and 891 of 892 negatives."}
+
+There is also a plain counting reason, worth saying in one breath. The condition is rare, so there are only 10 sick people in the crowd of 1,000 and the test can find at most those 10. Meanwhile there are 990 healthy people, and even a small error rate applied to a large group produces many alarms: 10% of 990 is 99. Ninety-nine false alarms against nine real cases. The false positives win because the healthy group is enormous, not because the test is careless.
+
+A second misreading usually follows within a minute: *"So screening is pointless."* That is an overcorrection. The positive result did real work: it multiplied the chance by more than eight, and it narrowed 1,000 people down to 108 worth investigating. Screening is the first filter in a sequence, not the verdict, and the right response to a positive screen is a second, more specific test on that smaller and now much richer group — the same calculation run again with a new base rate.
+
+A third misreading is quieter: *"The prevalence is not part of the test, so it cannot be part of my result."* Two people holding the same slip of paper, one from the health fair and one from the symptom clinic, are holding different news, because they were drawn from different populations. Who was tested is not background detail. It is an input.
+
+## Practice on your own
+
+These are for you, on paper, with a calculator. Nothing here is collected. Build a table of counts before you divide anything.
+
+1. **A different test.** A test has sensitivity 0.95 and specificity 0.80, and 2 people in 100 in the screened population have the condition. Build the table for 1,000 people, find how many test positive, and work out the predictive value of a positive. Then write one sentence you would be comfortable saying to someone who just got that result.
+
+2. **Back to the commuters.** From the campus survey table above, find the proportion who did not miss a class among the commuters, and the proportion who commuted among the students who did not miss a class. Say which group each one describes, and explain to a friend why they are not the same number.
+
+3. **A headline with only a ratio.** A report says an exposure is associated with "50% higher risk" of an outcome, and that the ten-year risk without the exposure is 1 in 500. Express both risks per 10,000 people, give the risk difference, and write the sentence you would put in a newspaper so that a reader is neither frightened nor falsely reassured.
+
+4. **The second test.** Take the 108 people who tested positive at the health fair, 9 with the condition and 99 without. They are offered a confirmatory test with sensitivity 0.95 and specificity 0.99. Work out roughly how many of each group test positive again, and the predictive value of a second positive. Expected counts need not be whole people; leave them as decimals. Then say why two tests in sequence behave so differently from one.
+
+5. **Naming the number.** For each of these, say which quantity it is and which cells of a two-by-two table it compares: "the test catches 19 of every 20 cases"; "8 in 100 of those flagged actually have it"; "1 in 400 adults in this age band are affected"; "the rate is twice as high in the exposed group".
+
+## Where to read more
+
+- The life and biomedical sciences supplement is the strongest source this week; work through its probability chapter and its treatment of diagnostic testing in [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat).
+- For more practice reading proportions out of two-way tables, the machinery underneath every calculation above, see [Exploring categorical data](https://openintrostat.github.io/ims/explore-categorical.html).
+- For the connection back to odds and fitted probabilities, revisit [Logistic regression](https://openintrostat.github.io/ims/model-logistic.html), or browse [Introduction to Modern Statistics](https://openintrostat.github.io/ims) as a whole.
+- Course pages: the [course home page](../index.qmd), the [schedule](../schedule.qmd), and the [resources page](../resources/index.qmd). Last week's notes are at [Week 9](week09-multiple-logistic-regression.qmd).
+
+## Where this goes next
+
+This week the probabilities were handed to you: a prevalence from public health records, a sensitivity and a specificity from a validation study. Next week the direction reverses. You will have a data set and no probabilities at all, and the question becomes whether the pattern in front of you is the kind of thing chance alone produces. The tool is simulation: shuffle the labels, recompute, and repeat until you can see the whole range of what chance can do.
+
+Bring the denominator habit with you. In [Week 11](week11-simulation-based-inference.qmd) the phrase "how often does that happen by chance" has the same structure as this week's "out of what group", and the students who keep asking it are the ones for whom p-values in Week 12 arrive as an old friend rather than a new formula. The full sequence is laid out on the [course home page](../index.qmd).

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470" role="img">
+  <title>Predictive value of a positive against prevalence</title>
+  <desc>A rising curve showing how the chance that a positive result is real depends on how common the condition is, for a fixed test.</desc>
+  <rect x="0" y="0" width="720" height="470" fill="#ffffff"/>
+  <text x="30" y="32" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1f2933" text-anchor="start" font-weight="bold">Chance that a positive result is real</text>
+  <text x="30" y="52" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">The test never changes: sensitivity 0.90, specificity 0.90. Only the group tested changes.</text>
+  <line x1="90" y1="378" x2="650" y2="378" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="90" y1="82" x2="90" y2="378" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="90" y1="378" x2="650" y2="378" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="90" y1="304" x2="650" y2="304" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="90" y1="230" x2="650" y2="230" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="90" y1="156" x2="650" y2="156" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="90" y1="82" x2="650" y2="82" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="90" y1="378" x2="90" y2="382" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="90" y="395" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0%</text>
+  <line x1="202" y1="378" x2="202" y2="382" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="202" y="395" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">10%</text>
+  <line x1="314" y1="378" x2="314" y2="382" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="314" y="395" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">20%</text>
+  <line x1="426" y1="378" x2="426" y2="382" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="426" y="395" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">30%</text>
+  <line x1="538" y1="378" x2="538" y2="382" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="538" y="395" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">40%</text>
+  <line x1="650" y1="378" x2="650" y2="382" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="650" y="395" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">50%</text>
+  <line x1="86" y1="378" x2="90" y2="378" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="82" y="381.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">0%</text>
+  <line x1="86" y1="304" x2="90" y2="304" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="82" y="307.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">25%</text>
+  <line x1="86" y1="230" x2="90" y2="230" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="82" y="233.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">50%</text>
+  <line x1="86" y1="156" x2="90" y2="156" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="82" y="159.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">75%</text>
+  <line x1="86" y1="82" x2="90" y2="82" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="82" y="85.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">100%</text>
+  <text x="370" y="416" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">How common the condition is in the group tested</text>
+  <polyline points="90,378 92.8,371.471 95.6,365.192 98.4,359.151 101.2,353.333 104,347.727 106.8,342.321 109.6,337.105 112.4,332.069 115.2,327.203 118,322.5 120.8,317.951 123.6,313.548 126.4,309.286 129.2,305.156 132,301.154 134.8,297.273 137.6,293.507 140.4,289.853 143.2,286.304 146,282.857 148.8,279.507 151.6,276.25 154.4,273.082 157.2,270 160,267 162.8,264.079 165.6,261.234 168.4,258.462 171.2,255.759 174,253.125 176.8,250.556 179.6,248.049 182.4,245.602 185.2,243.214 188,240.882 190.8,238.605 193.6,236.379 196.4,234.205 199.2,232.079 202,230 204.8,227.967 207.6,225.978 210.4,224.032 213.2,222.128 216,220.263 218.8,218.438 221.6,216.649 224.4,214.898 227.2,213.182 230,211.5 232.8,209.851 235.6,208.235 238.4,206.65 241.2,205.096 244,203.571 246.8,202.075 249.6,200.607 252.4,199.167 255.2,197.752 258,196.364 260.8,195 263.6,193.661 266.4,192.345 269.2,191.053 272,189.783 274.8,188.534 277.6,187.308 280.4,186.102 283.2,184.916 286,183.75 288.8,182.603 291.6,181.475 294.4,180.366 297.2,179.274 300,178.2 302.8,177.143 305.6,176.102 308.4,175.078 311.2,174.07 314,173.077 316.8,172.099 319.6,171.136 322.4,170.188 325.2,169.254 328,168.333 330.8,167.426 333.6,166.533 336.4,165.652 339.2,164.784 342,163.929 344.8,163.085 347.6,162.254 350.4,161.434 353.2,160.625 356,159.828 358.8,159.041 361.6,158.265 364.4,157.5 367.2,156.745 370,156 372.8,155.265 375.6,154.539 378.4,153.824 381.2,153.117 384,152.419 386.8,151.731 389.6,151.051 392.4,150.38 395.2,149.717 398,149.062 400.8,148.416 403.6,147.778 406.4,147.147 409.2,146.524 412,145.909 414.8,145.301 417.6,144.701 420.4,144.107 423.2,143.521 426,142.941 428.8,142.368 431.6,141.802 434.4,141.243 437.2,140.69 440,140.143 442.8,139.602 445.6,139.068 448.4,138.539 451.2,138.017 454,137.5 456.8,136.989 459.6,136.484 462.4,135.984 465.2,135.489 468,135 470.8,134.516 473.6,134.037 476.4,133.564 479.2,133.095 482,132.632 484.8,132.173 487.6,131.719 490.4,131.269 493.2,130.825 496,130.385 498.8,129.949 501.6,129.518 504.4,129.091 507.2,128.668 510,128.25 512.8,127.836 515.6,127.426 518.4,127.02 521.2,126.618 524,126.22 526.8,125.825 529.6,125.435 532.4,125.048 535.2,124.665 538,124.286 540.8,123.91 543.6,123.538 546.4,123.169 549.2,122.804 552,122.442 554.8,122.083 557.6,121.728 560.4,121.376 563.2,121.027 566,120.682 568.8,120.339 571.6,120 574.4,119.664 577.2,119.33 580,119 582.8,118.673 585.6,118.348 588.4,118.026 591.2,117.707 594,117.391 596.8,117.078 599.6,116.767 602.4,116.459 605.2,116.154 608,115.851 610.8,115.551 613.6,115.253 616.4,114.958 619.2,114.665 622,114.375 624.8,114.087 627.6,113.802 630.4,113.519 633.2,113.238 636,112.959 638.8,112.683 641.6,112.409 644.4,112.137 647.2,111.867 650,111.6" fill="none" stroke="#2f6f9f" stroke-width="2.2" stroke-linejoin="round"/>
+  <line x1="90" y1="353.333" x2="101.2" y2="353.333" stroke="#a33a3a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <line x1="101.2" y1="353.333" x2="101.2" y2="378" stroke="#a33a3a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <text x="170" y="326" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="start" font-weight="bold">Health fair, whole crowd</text>
+  <text x="170" y="342" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="start">1 in 100 have it</text>
+  <text x="170" y="358" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="start">8.3% of positives are real</text>
+  <line x1="165" y1="340" x2="113.891" y2="349.863" stroke="#a33a3a" stroke-width="1.2" stroke-linecap="round"/>
+  <polygon points="108,351 114.403,352.514 113.38,347.212" fill="#a33a3a"/>
+  <circle cx="101.2" cy="353.333" r="5.2" fill="#a33a3a"/>
+  <line x1="90" y1="142.941" x2="426" y2="142.941" stroke="#3f7a52" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <line x1="426" y1="142.941" x2="426" y2="378" stroke="#3f7a52" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <text x="402" y="92" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="end" font-weight="bold">Clinic, people with symptoms</text>
+  <text x="402" y="108" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="end">3 in 10 have it</text>
+  <text x="402" y="124" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="end">79.4% of positives are real</text>
+  <line x1="406" y1="132" x2="413.89" y2="136.855" stroke="#3f7a52" stroke-width="1.2" stroke-linecap="round"/>
+  <polygon points="419,140 415.305,134.556 412.475,139.155" fill="#3f7a52"/>
+  <circle cx="426" cy="142.941" r="5.2" fill="#3f7a52"/>
+  <text x="30" y="452" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="start">Same test, same positive result, two very different pieces of news.</text>
+</svg>

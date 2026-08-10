@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" role="img">
+  <title>Healing rate at two clinics, pooled and split by wound severity</title>
+  <desc>Paired bars. Pooled, Clinic A heals 69 percent and Clinic B 79 percent. Among minor wounds A heals 90 percent and B 85 percent; among serious wounds A heals 60 percent and B 55 percent. The ranking reverses once the groups are split.</desc>
+  <rect x="0" y="0" width="900" height="480" fill="#ffffff"/>
+  <text x="450" y="32" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1f2933" text-anchor="middle" font-weight="bold">Healing rate at two clinics</text>
+  <text x="450" y="52" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">pooled, then split by wound severity</text>
+  <line x1="150" y1="370" x2="840" y2="370" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="150" y1="70" x2="150" y2="370" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="150" y1="370" x2="840" y2="370" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="150" y1="310" x2="840" y2="310" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="150" y1="250" x2="840" y2="250" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="150" y1="190" x2="840" y2="190" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="150" y1="130" x2="840" y2="130" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="150" y1="70" x2="840" y2="70" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="265" y1="370" x2="265" y2="374" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="265" y="387" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">Everyone</text>
+  <line x1="495" y1="370" x2="495" y2="374" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="495" y="387" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">Minor wounds</text>
+  <line x1="725" y1="370" x2="725" y2="374" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="725" y="387" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">Serious wounds</text>
+  <line x1="146" y1="370" x2="150" y2="370" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="142" y="373.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">0</text>
+  <line x1="146" y1="310" x2="150" y2="310" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="142" y="313.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">20</text>
+  <line x1="146" y1="250" x2="150" y2="250" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="142" y="253.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">40</text>
+  <line x1="146" y1="190" x2="150" y2="190" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="142" y="193.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">60</text>
+  <line x1="146" y1="130" x2="150" y2="130" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="142" y="133.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">80</text>
+  <line x1="146" y1="70" x2="150" y2="70" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="142" y="73.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">100</text>
+  <text x="495" y="408" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Wound severity group</text>
+  <text x="142" y="58" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="end">Percent healed</text>
+  <rect x="196" y="163" width="64.4" height="207" fill="#2f6f9f"/>
+  <rect x="426" y="100" width="64.4" height="270" fill="#2f6f9f"/>
+  <rect x="656" y="190" width="64.4" height="180" fill="#2f6f9f"/>
+  <rect x="269.6" y="133" width="64.4" height="237" fill="#c2622d"/>
+  <rect x="499.6" y="115" width="64.4" height="255" fill="#c2622d"/>
+  <rect x="729.6" y="205" width="64.4" height="165" fill="#c2622d"/>
+  <rect x="688" y="88" width="14" height="14" fill="#2f6f9f"/>
+  <text x="708" y="100" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">Clinic A</text>
+  <rect x="688" y="112" width="14" height="14" fill="#c2622d"/>
+  <text x="708" y="124" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">Clinic B</text>
+  <text x="228.2" y="154" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">69</text>
+  <text x="228.2" y="358" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle">n = 300</text>
+  <text x="458.2" y="91" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">90</text>
+  <text x="458.2" y="358" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle">n = 90</text>
+  <text x="688.2" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">60</text>
+  <text x="688.2" y="358" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle">n = 210</text>
+  <text x="301.8" y="124" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">79</text>
+  <text x="301.8" y="358" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle">n = 300</text>
+  <text x="531.8" y="106" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">85</text>
+  <text x="531.8" y="358" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle">n = 240</text>
+  <text x="761.8" y="196" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">55</text>
+  <text x="761.8" y="358" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle">n = 60</text>
+  <text x="150" y="440" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">Pooled, Clinic B looks better by ten percentage points. Split by severity, Clinic A</text>
+  <text x="150" y="457" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">heals the larger share in both groups, by five percentage points each time.</text>
+</svg>

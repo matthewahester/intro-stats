@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 425" width="840" height="425" role="img">
+  <title>Two different pictures with the same correlation</title>
+  <desc>Two scatterplots, both labelled with a correlation of about 0.80. The left panel is an even upward-slanting cloud; the right panel is a flat cluster plus one far-out case that produces the whole correlation by itself.</desc>
+  <rect x="0" y="0" width="840" height="425" fill="#ffffff"/>
+  <text x="420" y="28" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="bold">The same correlation, two different stories</text>
+  <text x="420" y="46" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="middle">why the number never travels without its picture</text>
+  <rect x="60" y="110" width="330" height="230" fill="none" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="60" y1="340" x2="390" y2="340" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="60" y1="229.423" x2="390" y2="229.423" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="60" y1="118.846" x2="390" y2="118.846" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="60" y1="340" x2="60" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="60" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0</text>
+  <line x1="146.842" y1="340" x2="146.842" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="146.842" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">10</text>
+  <line x1="233.684" y1="340" x2="233.684" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="233.684" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">20</text>
+  <line x1="320.526" y1="340" x2="320.526" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="320.526" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">30</text>
+  <line x1="56" y1="340" x2="60" y2="340" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="52" y="343.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">0</text>
+  <line x1="56" y1="229.423" x2="60" y2="229.423" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="52" y="233.223" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">25</text>
+  <line x1="56" y1="118.846" x2="60" y2="118.846" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="52" y="122.646" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">50</text>
+  <text x="225" y="378" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">explanatory variable</text>
+  <text x="225" y="78" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">An even upward drift</text>
+  <text x="60" y="98" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="start">response variable</text>
+  <circle cx="77.368" cy="282.5" r="4" fill="#2f6f9f"/>
+  <circle cx="86.053" cy="291.346" r="4" fill="#2f6f9f"/>
+  <circle cx="94.737" cy="304.615" r="4" fill="#2f6f9f"/>
+  <circle cx="103.421" cy="264.808" r="4" fill="#2f6f9f"/>
+  <circle cx="112.105" cy="260.385" r="4" fill="#2f6f9f"/>
+  <circle cx="120.789" cy="264.808" r="4" fill="#2f6f9f"/>
+  <circle cx="129.474" cy="229.423" r="4" fill="#2f6f9f"/>
+  <circle cx="138.158" cy="269.231" r="4" fill="#2f6f9f"/>
+  <circle cx="146.842" cy="251.538" r="4" fill="#2f6f9f"/>
+  <circle cx="155.526" cy="251.538" r="4" fill="#2f6f9f"/>
+  <circle cx="164.211" cy="207.308" r="4" fill="#2f6f9f"/>
+  <circle cx="172.895" cy="251.538" r="4" fill="#2f6f9f"/>
+  <circle cx="181.579" cy="233.846" r="4" fill="#2f6f9f"/>
+  <circle cx="190.263" cy="194.038" r="4" fill="#2f6f9f"/>
+  <circle cx="198.947" cy="180.769" r="4" fill="#2f6f9f"/>
+  <circle cx="207.632" cy="211.731" r="4" fill="#2f6f9f"/>
+  <circle cx="216.316" cy="229.423" r="4" fill="#2f6f9f"/>
+  <circle cx="225" cy="229.423" r="4" fill="#2f6f9f"/>
+  <text x="225" y="398" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">every case contributes a little</text>
+  <text x="72" y="132" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start" font-weight="bold">r = 0.80</text>
+  <rect x="450" y="110" width="330" height="230" fill="none" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="450" y1="340" x2="780" y2="340" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="450" y1="229.423" x2="780" y2="229.423" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="450" y1="118.846" x2="780" y2="118.846" stroke="#eef2f6" stroke-width="1" stroke-linecap="round"/>
+  <line x1="450" y1="340" x2="450" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="450" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0</text>
+  <line x1="536.842" y1="340" x2="536.842" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="536.842" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">10</text>
+  <line x1="623.684" y1="340" x2="623.684" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="623.684" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">20</text>
+  <line x1="710.526" y1="340" x2="710.526" y2="344" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="710.526" y="357" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">30</text>
+  <line x1="446" y1="340" x2="450" y2="340" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="442" y="343.8" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">0</text>
+  <line x1="446" y1="229.423" x2="450" y2="229.423" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="442" y="233.223" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">25</text>
+  <line x1="446" y1="118.846" x2="450" y2="118.846" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="442" y="122.646" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="end">50</text>
+  <text x="615" y="378" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">explanatory variable</text>
+  <text x="615" y="78" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">A flat cluster plus one case</text>
+  <text x="450" y="98" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="start">response variable</text>
+  <circle cx="476.053" cy="238.269" r="4" fill="#2f6f9f"/>
+  <circle cx="484.737" cy="278.077" r="4" fill="#2f6f9f"/>
+  <circle cx="484.737" cy="282.5" r="4" fill="#2f6f9f"/>
+  <circle cx="493.421" cy="233.846" r="4" fill="#2f6f9f"/>
+  <circle cx="493.421" cy="242.692" r="4" fill="#2f6f9f"/>
+  <circle cx="502.105" cy="229.423" r="4" fill="#2f6f9f"/>
+  <circle cx="502.105" cy="264.808" r="4" fill="#2f6f9f"/>
+  <circle cx="510.789" cy="269.231" r="4" fill="#2f6f9f"/>
+  <circle cx="510.789" cy="247.115" r="4" fill="#2f6f9f"/>
+  <circle cx="519.474" cy="251.538" r="4" fill="#2f6f9f"/>
+  <circle cx="519.474" cy="260.385" r="4" fill="#2f6f9f"/>
+  <circle cx="528.158" cy="273.654" r="4" fill="#2f6f9f"/>
+  <circle cx="528.158" cy="255.962" r="4" fill="#2f6f9f"/>
+  <circle cx="536.842" cy="233.846" r="4" fill="#2f6f9f"/>
+  <circle cx="536.842" cy="269.231" r="4" fill="#2f6f9f"/>
+  <circle cx="545.526" cy="260.385" r="4" fill="#2f6f9f"/>
+  <circle cx="554.211" cy="247.115" r="4" fill="#2f6f9f"/>
+  <circle cx="745.263" cy="139.413" r="4" fill="#2f6f9f"/>
+  <text x="615" y="398" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">one case produces the whole number</text>
+  <text x="462" y="132" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start" font-weight="bold">r = 0.80</text>
+  <text x="745.263" y="127.413" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#5b6672" text-anchor="middle">this one</text>
+</svg>

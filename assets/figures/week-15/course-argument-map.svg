@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 625" width="900" height="625" role="img">
+  <title>The course as one argument</title>
+  <desc>Six numbered links, from how the data were produced to bodies of evidence, each labelled with the weeks that built it, ending in the Week 15 question.</desc>
+  <rect x="0" y="0" width="900" height="625" fill="#ffffff"/>
+  <text x="450" y="34" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1f2933" text-anchor="middle" font-weight="bold">The course as one argument</text>
+  <text x="450" y="55" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#5b6672" text-anchor="middle">Each link sets a limit on what the next one is allowed to mean.</text>
+  <line x1="56" y1="109" x2="56" y2="151" stroke="#c9d1d9" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="56" cy="92" r="15" fill="#2f6f9f"/>
+  <text x="56" y="96.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+  <text x="88" y="90" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="bold">How the data were produced sets the ceiling</text>
+  <text x="88" y="108" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">Random assignment buys comparable groups; random sampling buys reach.</text>
+  <rect x="752" y="79" width="108" height="22" fill="#dbe6ef" rx="11"/>
+  <text x="806" y="94.5" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle">Weeks 1-2</text>
+  <line x1="56" y1="185" x2="56" y2="227" stroke="#c9d1d9" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="56" cy="168" r="15" fill="#2f6f9f"/>
+  <text x="56" y="172.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+  <text x="88" y="166" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="bold">A summary compresses, so keep the picture</text>
+  <text x="88" y="184" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">Center, spread, and shape can tell three different stories.</text>
+  <rect x="752" y="155" width="108" height="22" fill="#dbe6ef" rx="11"/>
+  <text x="806" y="170.5" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle">Weeks 3-4</text>
+  <line x1="56" y1="261" x2="56" y2="303" stroke="#c9d1d9" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="56" cy="244" r="15" fill="#2f6f9f"/>
+  <text x="56" y="248.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+  <text x="88" y="242" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="bold">An association is a pattern, not a mechanism</text>
+  <text x="88" y="260" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">A third variable, or the reverse order, fits the same scatterplot.</text>
+  <rect x="752" y="231" width="108" height="22" fill="#dbe6ef" rx="11"/>
+  <text x="806" y="246.5" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle">Weeks 5-6</text>
+  <line x1="56" y1="337" x2="56" y2="379" stroke="#c9d1d9" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="56" cy="320" r="15" fill="#2f6f9f"/>
+  <text x="56" y="324.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+  <text x="88" y="318" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="bold">A model adjusts for what was measured</text>
+  <text x="88" y="336" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">An adjusted estimate can shrink, grow, or change sign.</text>
+  <rect x="752" y="307" width="108" height="22" fill="#dbe6ef" rx="11"/>
+  <text x="806" y="322.5" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle">Weeks 8-9</text>
+  <line x1="56" y1="413" x2="56" y2="455" stroke="#c9d1d9" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="56" cy="396" r="15" fill="#2f6f9f"/>
+  <text x="56" y="400.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+  <text x="88" y="394" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="bold">Chance is a rival explanation you can size</text>
+  <text x="88" y="412" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">A p-value weighs that rival; an interval says how precise you are.</text>
+  <rect x="752" y="383" width="108" height="22" fill="#dbe6ef" rx="11"/>
+  <text x="806" y="398.5" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle">Weeks 10-13</text>
+  <circle cx="56" cy="472" r="15" fill="#2f6f9f"/>
+  <text x="56" y="476.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">6</text>
+  <text x="88" y="470" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="bold">One study is one line of a longer table</text>
+  <text x="88" y="488" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">Pooling sharpens precision and inherits every study's bias.</text>
+  <rect x="752" y="459" width="108" height="22" fill="#dbe6ef" rx="11"/>
+  <text x="806" y="474.5" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle">Week 14</text>
+  <rect x="40" y="520" width="820" height="58" fill="#eef2f6" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="450" y="544" font-family="Helvetica, Arial, sans-serif" font-size="14.5" fill="#1f2933" text-anchor="middle" font-weight="bold">Week 15: what claim can we responsibly make?</text>
+  <text x="450" y="564" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="middle">The chain runs forwards to build a claim and backwards to test one.</text>
+  <text x="40" y="604" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="start">Week 7 rehearsed links 1 to 3 on a single study, before the inference half began.</text>
+</svg>

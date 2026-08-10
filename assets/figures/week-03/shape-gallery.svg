@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img">
+  <title>Four distribution shapes worth naming on sight</title>
+  <desc>Four small histograms in a two by two grid: symmetric, right-skewed, left-skewed and bimodal, each with one sentence describing what the shape does to the mean and median.</desc>
+  <rect x="0" y="0" width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="34" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1f2933" text-anchor="middle" font-weight="bold">Four shapes worth naming on sight</text>
+  <text x="450" y="58" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">In every panel the horizontal axis is the value of the variable and a bar's height is how many cases fall in that bin.</text>
+  <text x="80" y="86" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2933" text-anchor="start" font-weight="bold">Symmetric</text>
+  <line x1="80" y1="226" x2="410" y2="226" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="80" y1="100" x2="80" y2="226" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="80" y="215.5" width="41.25" height="10.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="121.25" y="194.5" width="41.25" height="31.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="162.5" y="152.5" width="41.25" height="73.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="203.75" y="110.5" width="41.25" height="115.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="245" y="110.5" width="41.25" height="115.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="286.25" y="152.5" width="41.25" height="73.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="327.5" y="194.5" width="41.25" height="31.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="368.75" y="215.5" width="41.25" height="10.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <text x="80" y="254" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">The two halves are near mirror images. The mean and</text>
+  <text x="80" y="269" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">the median sit in almost the same place, so either one</text>
+  <text x="80" y="284" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">describes the center.</text>
+  <text x="490" y="86" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2933" text-anchor="start" font-weight="bold">Right-skewed</text>
+  <line x1="490" y1="226" x2="820" y2="226" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="490" y1="100" x2="490" y2="226" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="490" y="194.5" width="41.25" height="31.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="531.25" y="110.5" width="41.25" height="115.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="572.5" y="121" width="41.25" height="105" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="613.75" y="152.5" width="41.25" height="73.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="655" y="184" width="41.25" height="42" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="696.25" y="194.5" width="41.25" height="31.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="737.5" y="215.5" width="41.25" height="10.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="778.75" y="215.5" width="41.25" height="10.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <text x="490" y="254" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">The long thin tail points right, toward the large</text>
+  <text x="490" y="269" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">values. The mean is pulled above the median.</text>
+  <text x="80" y="318" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2933" text-anchor="start" font-weight="bold">Left-skewed</text>
+  <line x1="80" y1="458" x2="410" y2="458" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="80" y1="332" x2="80" y2="458" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="80" y="447.5" width="41.25" height="10.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="121.25" y="447.5" width="41.25" height="10.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="162.5" y="426.5" width="41.25" height="31.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="203.75" y="416" width="41.25" height="42" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="245" y="384.5" width="41.25" height="73.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="286.25" y="353" width="41.25" height="105" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="327.5" y="342.5" width="41.25" height="115.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="368.75" y="426.5" width="41.25" height="31.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <text x="80" y="486" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">The long thin tail points left, toward the small</text>
+  <text x="80" y="501" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">values. The mean is pulled below the median.</text>
+  <text x="490" y="318" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2933" text-anchor="start" font-weight="bold">Bimodal</text>
+  <line x1="490" y1="458" x2="820" y2="458" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="490" y1="332" x2="490" y2="458" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <rect x="490" y="437" width="41.25" height="21" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="531.25" y="374" width="41.25" height="84" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="572.5" y="405.5" width="41.25" height="52.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="613.75" y="437" width="41.25" height="21" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="655" y="437" width="41.25" height="21" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="696.25" y="405.5" width="41.25" height="52.5" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="737.5" y="374" width="41.25" height="84" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <rect x="778.75" y="437" width="41.25" height="21" fill="#dbe6ef" stroke="#2f6f9f" stroke-width="1.3"/>
+  <text x="490" y="486" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">Two separate peaks. A single center lands in the</text>
+  <text x="490" y="501" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">valley between them and describes neither group.</text>
+  <text x="80" y="522" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">The tail names the shape, not the peak. Bars piled on the left with a long thin tail stretching right is</text>
+  <text x="80" y="539" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">called right-skewed, not left-skewed.</text>
+</svg>

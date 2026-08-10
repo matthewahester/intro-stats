@@ -6,317 +6,194 @@ format:
     toc: true
     toc-depth: 3
     number-sections: false
-license: "Adapted in part from OpenIntro IMS (Çetinkaya-Rundel & Hardin) and OpenIntro ISLBS (Vu & Harrington), both under CC BY-SA 3.0. Course adaptations by Matt Hester."
 ---
 
-## Why this week matters
+## Where this week starts
 
-Statistics is not a stack of formulas. It is a way to evaluate
-**evidence** — to decide what you can and cannot reasonably claim
-from a set of numbers. Before any technique works, you have to be
-able to look at a dataset and answer four basic questions:
+You have already read several statistical claims today. Behind each one sits some data, and between the data and the claim sits a step of reasoning somebody performed on your behalf, usually without showing you the working. This course is about that step.
 
-- Who or what is being measured?
-- What was measured about them?
-- What is the question we're trying to answer?
-- What does the data, on its face, show?
+Here is the premise the whole term rests on. **Statistics is the discipline of deciding how much a body of evidence supports a claim.** It is not a list of formulas, and it is not a machine that converts numbers into truth. It is a set of habits for asking where a number came from, what it stands in for, and how much weight it can carry. Using those habits starts with agreeing on the objects: which things were observed, and what was recorded about each. That sounds like bookkeeping, but a surprising number of public mistakes with data begin with somebody being unclear about what one row of a table represented.
 
-This week is about getting fluent at those four questions on a small
-scale. By Friday you will look at a short study description and a
-small table and be able to talk back to it in clear, careful
-sentences. The bigger questions — *how* the data were collected, what
-biases could be hiding inside it, what claims it does and does not
-support — start in earnest in Week 2.
+By Friday, one thing should feel different. When a number lands in front of you, your first instinct should stop being "what do I calculate?" and start being three questions: **what are the cases, what was measured, and what comparison is being made?** Monday sets up the vocabulary, Wednesday puts it to work on a realistic table, and Friday's quiz is followed by an applied case.
 
-## What counts as data?
+### Why this matters beyond the exam
 
-When researchers measure or record something, they usually organize
-the result as a **dataset**: a structured collection of observations,
-recorded in a consistent way, so anyone reading the dataset later can
-see what was measured, on whom, and how.
+Suppose a clinic tells you the average recovery time after a minor operation is ten days, and you book yourself back at work on day eleven. Now suppose that ten came from a group in which most patients were moving normally by day four, while a handful who were older and sicker than you took six weeks. The average is not wrong. It is simply not a description of any particular patient, and it is not a promise about you. One number replaced a whole spread of people, and you planned against the number.
 
-Two small examples we will keep coming back to this semester.
+The same swap drives larger decisions: a district reads one average and closes a program, a city reads one rate and moves a bus route. The arithmetic was right and the conclusion was still unsupported, because nobody asked what the summary discarded.
 
-**The LEAP trial.** A public-health team studies whether early peanut
-exposure helps prevent peanut allergies in young children. They
-enroll 530 infants who are at risk of developing peanut allergy,
-randomly assign each child to either eat peanut products regularly
-(the "consumption" group) or avoid them (the "avoidance" group), and
-check at age five whether each child can safely eat peanuts. The
-final dataset records, for each child, which group they were in and
-whether they passed the food challenge. The reported result is
-striking: about 14% of children in the avoidance group failed the
-food challenge, compared with about 2% in the consumption group.
+## What you will be able to do
 
-![About 14% of the avoidance group failed the food challenge, versus about 2% of the consumption group — the gap that motivated introducing peanut early.](../assets/figures/leap_food_challenge.png){fig-alt="Bar chart comparing a 14 percent failure rate in the avoidance group to a 2 percent failure rate in the consumption group."}
+- **Point** to the cases and the variables in any data table, and say in one sentence what a single row stands for.
+- **Classify** a variable as numerical (discrete or continuous) or categorical (nominal or ordinal), and explain why the classification changes what you may do with it next.
+- **Name** the explanatory variable and the response variable in a stated comparison.
+- **Compute** a mean from a small set of values and state, in plain words, what that mean discards.
+- **Separate** a claim from the data behind it and from the inference that joins the two.
+- **Rewrite** an overreaching sentence about a data set into one the data can actually carry.
 
-**The stent trial.** A different team runs a randomized study of 451
-patients at risk of stroke. Patients in the treatment group receive
-a stent (a small mesh tube placed in a narrow artery) plus standard
-medical management; patients in the control group receive the
-standard medical management alone. The dataset records, for each
-patient, which group they were in and whether they had a stroke
-within 30 days and within one year. The reported result is also
-striking — but in the opposite direction: about 20% of patients in
-the stent group had a stroke within a year, compared with about 12%
-of patients in the control group.
+## Words worth owning
 
-![About 20% of the stent group had a stroke within a year, versus about 12% of the control group — a striking result pointing the opposite way from LEAP.](../assets/figures/stent_stroke.png){fig-alt="Bar chart comparing a 20 percent stroke rate in the stent group to a 12 percent stroke rate in the control group."}
+| Term | What it means in this course |
+|------|------------------------------|
+| Case | One thing you observed: a patient, a clinic visit, a county, a benefit claim. Also called the unit of observation. |
+| Variable | One characteristic recorded for every case, with its units named. |
+| Data table | A rectangle in which every row is one case and every column is one variable. |
+| Categorical variable | A variable whose values are labels for groups, such as walk, bus, or drive. |
+| Numerical variable | A variable whose values are quantities it makes sense to average, such as heart rate in beats per minute. |
+| Explanatory variable | The variable whose groups or levels you are comparing across. |
+| Response variable | The variable whose behavior you are comparing between those groups. |
+| Statistical inference | Reasoning from what you observed to a statement about what you did not. |
 
-Two well-run randomized studies; two striking results that point in
-opposite directions. The point isn't that one is right and one is
-wrong. The point is that **statistics is what lets you read each
-dataset carefully enough to decide what it does and does not
-support**. We will return to both studies more than once this
-semester.
+## Cases, variables, and the rectangular table
 
-The key point right now: the dataset is what makes the analysis
-*possible*. Statistics starts when you can read the dataset.
+Almost every data set organized for analysis has the same shape: a rectangle. Rows run down, columns run across, every cell holds one value. That is not a formatting preference — it is a claim that there is a well-defined collection of things, and that the same characteristics were recorded for each.
 
-## Cases, variables, and data tables
+All week we use one small invented data set. A campus health clinic sees ten students for routine visits and records, for each visit, an identifier, age in whole years, resting heart rate in beats per minute, the number of caffeinated drinks the day before, self-reported sleep quality, and usual commute mode. Ten students is far too few for any real conclusion, and exactly the right size for learning to read a table.
 
-Most datasets you see in this class will look like a table — rows
-and columns:
+### One row is one case
 
-| Patient ID | Treatment group   | Passed food challenge? |
-|-----------:|-------------------|-------------------------|
-| 100522     | Peanut consumption| Yes                     |
-| 103358     | Peanut consumption| Yes                     |
-| 105069     | Peanut avoidance  | Yes                     |
-| 994047     | Peanut avoidance  | Yes                     |
-| 997608     | Peanut consumption| Yes                     |
+A **case** is one thing you observed. Here it is one student's clinic visit, and everything on that row belongs to that visit and nothing else.
 
-The vocabulary:
+That sounds obvious until you notice the same study can be tabled at several levels. If each student had come in three times, you could build a table of thirty visits, or a table of ten students with their readings averaged into one row. Both are legitimate rectangles, they answer different questions, and a summary computed on one does not transfer to the other.
 
-- A **case** is one row. In this table each case is one child in the
-  study.
-- A **variable** is one column. Here the variables are *patient ID*,
-  *treatment group*, and *passed food challenge?*.
-- A **data table** (or **data matrix**) is the whole grid.
+So the first question is never "what does this number mean?" It is "what is a row?"
 
-Cases are not always people. Here are some examples of cases you'll
-see this term:
+![A data table: rows are cases, columns are variables, and one cell is one value.](../assets/figures/week-01/data-table-anatomy.svg){fig-alt="A ten-row campus clinic data table. Arrows label one row as one case, one column as one variable, and one outlined cell holding a resting heart rate of 96 beats per minute as one value."}
 
-- One **patient** on a hospital ward.
-- One **breath sample** from an asthma study.
-- One **birth** in a hospital records database.
-- One **county** in a public-health comparison.
-- One **frog egg clutch** in a biology study of maternal investment.
+### One column is one variable
 
-Whenever you read a new study description, the first thing to ask
-is: *what is one case here?* If you can answer that, the rest of the
-dataset's structure usually clicks into place.
+A **variable** is one characteristic recorded for every case. Resting heart rate is a variable; 96 beats per minute is a value of that variable for one case. Keep those two words apart: the machinery of this course operates on variables, while most of the stories people tell are about individual values.
 
-Sometimes a data table contains a blank, missing entry, or a code
-like `NA`. That usually means the value was not recorded for that
-case. It is not a new variable; it is a missing value for an
-existing variable.
+Two habits are worth building now. First, carry the units: "age" is not a variable, but "age in whole years at the visit" is. Half the arguments people have about data turn out to be arguments about units nobody stated.
 
-## Types of variables
+Second, not every column is something to analyze. The identifier column is a label so rows can be told apart; the average of S-01 through S-10 is meaningless, and ID numbers stored as digits are a standing invitation to nonsense.
 
-Once you know what your cases are, the next question is what kind of
-variables they have. There are two main types.
+### Why a variable's type decides everything downstream
 
-### Numerical variables
+Every variable lands in one of four places, and where it lands decides which picture, which summary, and which comparison are honest.
 
-A **numerical variable** records a number where the numerical
-relationships are meaningful — you can sensibly add, subtract,
-average, or compare two values.
+A **numerical** variable records a quantity. It is **discrete** when the quantity is a count and nothing sits between the possible values: a student had two caffeinated drinks or three, never 1.4 of them. It is **continuous** when the underlying quantity can take any value in a range and the recorded number is a rounding of it — the nurse writes 71, but 71.5 beats per minute is meaningful.
 
-- **Continuous** numerical variables can take any value within a
-  range. Height in centimeters, systolic blood pressure in mmHg,
-  PM₁₀ pollution levels in micrograms per cubic meter — all
-  continuous.
-- **Discrete** numerical variables jump between separate values,
-  usually integers. Number of hospital admissions per day, age in
-  whole years — discrete.
+A **categorical** variable records which group a case belongs to. It is **nominal** when the groups have no natural order: walk, bus, and drive are three modes of travel, and no arrangement of them is more correct than another. It is **ordinal** when the groups are ordered but the spacing is unknown: poor, fair, and good run in that order, but nothing says the step from poor to fair matches the step from fair to good.
 
-A telephone number is *not* a numerical variable, even though it
-looks like digits. You can't sensibly average phone numbers.
+![Every variable lands on one of four leaves, and the leaf decides what you may do next.](../assets/figures/week-01/variable-types.svg){fig-alt="A tree splitting Variable into Numerical and Categorical. Numerical splits into discrete (caffeinated drinks) and continuous (resting heart rate); Categorical splits into nominal (commute mode) and ordinal (sleep quality)."}
 
-### Categorical variables
+The practical test is to ask whether averaging the values would mean anything. The average of the ten resting heart rates is a quantity you could act on. The average of walk, bus, and drive is not a thing. If someone stores commute as 1, 2, and 3 to tidy the file and then reports a mean commute of 2.1, they have produced a number with no referent.
 
-A **categorical variable** records a label that tells you which
-group the case belongs to. The possible labels are called the
-**levels** of the variable.
+Ordinal variables are the genuinely awkward case. Coding poor, fair, and good as 1, 2, and 3 and averaging them assumes the steps are equally sized, which nobody has checked. Analysts sometimes do it anyway and say so; what you must not do is do it silently.
 
-- A **nominal** categorical variable has levels with no natural
-  ordering. Race, sex, dining station, blood type — nominal.
-- An **ordinal** categorical variable has levels that do have a
-  natural order. Pain rating on a 0–10 scale grouped into "low /
-  moderate / severe", or age grouped into 5-year bins — ordinal.
+## From a pile of numbers to a claim
 
-Some variables look numerical but are best treated as categorical in
-context. If a researcher records data from 11 specific study sites
-and labels them 1 through 11, the site number is technically a
-number but it doesn't make sense to "average two sites." In context,
-the site label is categorical.
+A rectangle is not yet evidence, because nobody can hold ten numbers in mind at once, let alone ten thousand. To say anything, you compress. Every act of compression is a trade: you gain something you can state in a sentence, and you lose something you can no longer see.
 
-## Response and explanatory variables
+### What a summary keeps and what it discards
 
-When a study asks a question like "does *this* affect *that*," the
-"that" is the **response variable** (the outcome of interest) and
-the "this" is the **explanatory variable** (the variable the study
-is examining to see how the response changes).
+A **summary statistic** is a single number computed from many values to stand in for them. The most familiar is the mean:
 
-Three quick examples:
+$$ \text{mean} = \frac{58 + 62 + 64 + 66 + 70 + 72 + 74 + 78 + 80 + 96}{10} = \frac{720}{10} = 72 $$
 
-| Research question | Explanatory variable | Response variable |
-|---|---|---|
-| Does early peanut exposure reduce peanut-allergy rates? | Treatment group (consumption vs avoidance) | Passed the food challenge at age 5? (yes / no) |
-| Does PM₁₀ exposure during pregnancy increase the chance of preterm birth? | Average gestational PM₁₀ exposure | Preterm-birth status (yes / no) |
-| Does altitude affect frog reproductive investment? | Altitude of the study site | Clutch size, egg size, clutch volume |
+So the mean resting heart rate is 72 beats per minute. True, checkable, useful — and also the moment ten numbers became one.
 
-Two important habits:
+What left the room? The mean does not tell you that five of the ten students sat below 72, four above it, and one exactly on it. It does not tell you the values run from 58 to 96, a range of 38 beats per minute. It does not tell you that the single reading of 96 is pulling it upward: drop that student and the remaining nine total 624, a mean of about 69.3. A mean is a property of a group, not a description of a person.
 
-- "Response" and "explanatory" are properties of *the research
-  question*, not of the variables themselves. The same variable could
-  be a response in one study and an explanatory variable in another.
-- Not every variable in a dataset has a role. In the frog example,
-  the researchers also recorded *latitude* and *body size of the
-  mother*. Latitude is environmental context; body size is an
-  auxiliary variable. Neither is the explanatory or the response
-  variable of *this* study.
+![Two clinics with the same mean resting heart rate and very different patients.](../assets/figures/week-01/same-mean-different-people.svg){fig-alt="Two dot plots on a shared resting heart rate axis. Clinic A's ten values are scattered from 58 to 96; Clinic B's ten values sit tightly between 70 and 74. Both panels carry the same dashed mean line at 72 beats per minute."}
 
-When you read a study description, identify the research question
-first, then point at which variables fill which role.
+Clinic B's ten students have heart rates of 70, 70, 71, 71, 72, 72, 73, 73, 74, and 74. Those also total 720, so Clinic B's mean is 72 beats per minute — exactly Clinic A's. Read only the summary and the two clinics are indistinguishable; look at the pictures and they are not the same place at all. In Clinic B, 72 describes essentially everybody; in Clinic A it describes almost nobody. A nurse deciding whom to follow up would behave differently in the two rooms, and the mean alone would never tell her which room she was in.
 
-## Evidence, claims, and context
+### Explanatory and response: naming the comparison
 
-A dataset, by itself, is just rows and columns. It becomes
-**evidence** when someone uses it to support a claim — and that
-claim is only as good as the dataset behind it.
+Most interesting claims are comparisons, and the two roles have names. The **explanatory variable** is the one whose groups or levels you compare across. The **response variable** is the one whose behavior you compare between them. In "students who walk to campus have lower resting heart rates than students who drive", commute mode is explanatory and resting heart rate is the response.
 
-Three habits to start practicing this week:
+Two cautions. These roles are not properties of the columns; they are a decision by the person asking. And calling a variable "explanatory" does not mean it explains anything: the word labels a position in your comparison, not a finding about the world.
 
-1. **Read the numbers in context.** A two-way table that shows ~14%
-   of children in the LEAP avoidance group failed the food challenge
-   and ~2% in the consumption group failed it is striking. So is a
-   summary that shows 20% of stent-group patients had a stroke
-   versus 12% of control-group patients. Each number tells you a
-   lot, but no single number tells you everything. (We'll ask "could
-   the difference be due to chance?" in Week 11, and "what about
-   other studies?" in Week 14.)
-2. **Distinguish what was measured from what wasn't.** If a study
-   collected age, sex, and blood pressure but didn't collect
-   exercise habits, you cannot say anything about exercise from
-   that dataset.
-3. **Be honest about how strong a single study's evidence is.** One
-   study, even a well-run one, is one study. The LEAP and stent
-   trials together illustrate this in opposite directions. We will
-   get a lot more careful about this in Weeks 2, 11, and 14.
+### Claim, data, and the inference in between
 
-This isn't about being cynical. It is about being honest.
+Nearly every quantitative statement in public has three layers stacked on each other. The **claim** is the sentence someone wants you to believe. The **data** are the recorded values actually in hand. The **inference** is the reasoning carrying the second to the first: the step saying these ten students license a statement about students in general, or about cause.
 
-## Example: reading a small study dataset
+Descriptive statistics lives entirely in the data layer. Say "the mean resting heart rate among these ten students was 72 beats per minute" and you have made no inference at all; you cannot be wrong unless your arithmetic is. Say "students have a mean resting heart rate of 72" and you have crossed into inference. This week the goal is to notice when you cross.
 
-Suppose a research team studies whether a shallow-breathing technique
-helps reduce asthma symptoms. They enroll 600 adults aged 18–69 who
-already rely on medication, randomly split them into two groups
-(one practicing the technique, one not), and at the end of the study
-score each participant on a 0–10 scale for symptom severity,
-medication use, activity level, and overall quality of life.
+## Worked example — reading a campus clinic table
 
-Use the four habits from the last section:
+**Setting.** The clinic table above: ten students, one routine visit each, six columns.
 
-- **What is one case?** One adult asthma patient enrolled in the
-  study.
-- **What variables were recorded?** Group assignment (technique vs
-  not), and four 0–10 scores (symptom severity, medication use,
-  activity, quality of life).
-- **Which variables are categorical? Numerical?** Group is
-  categorical (nominal). The four scores are numerical — you could
-  argue they are discrete because they are whole numbers on a 0–10
-  scale, or treat them as continuous because they are summary scores
-  of underlying quantities. Either is defensible if you say which
-  one you mean.
-- **What is the response, and what is the explanatory variable?**
-  Each of the four scores can be a response variable; group
-  assignment is the explanatory variable.
+**Step 1 — say what a row is.** One row is one student's routine clinic visit, so there are ten cases. A case is not a student's whole term, and not a heart rate. Everything below has to stay consistent with this sentence.
 
-That's the kind of reading we want by Friday.
+**Step 2 — list the variables with units and types.** Age in whole years and resting heart rate in beats per minute are both numerical and continuous underneath. Number of caffeinated drinks is numerical and discrete, because it is a count. Sleep quality is categorical and ordinal. Commute is categorical and nominal. The identifier is a label.
 
-## Common mistakes
+**Step 3 — summarize one numerical variable.** The ten heart rates sum to 720, so the mean is 720 divided by 10, or 72 beats per minute. Sorted, the fifth and sixth values are 70 and 72, so the middle of the list sits at 71. The two differ by one beat per minute, because the single high reading of 96 pulls on the mean but not on the middle.
 
-These tend to come up in Week 1 and are worth heading off now.
+**Step 4 — summarize one categorical variable.** For sleep quality you count rather than average: three students reported good, three fair, and four poor. Three plus three plus four is ten, the check that no case was lost. As a proportion, four out of ten, or 0.40, reported poor sleep. The type of the variable chose the summary for you.
 
-- **"Case = patient."** Not always. A case might be a birth, a
-  county, a clutch of eggs, or a day of measurements. Read the
-  dataset description carefully before assuming.
-- **"Numerical-looking = numerical variable."** Year, zip code, study
-  site number, patient ID — all "look numerical" but they don't
-  necessarily mean anything as a number. In context they are often
-  categorical labels.
-- **"This variable IS the response variable."** Response and
-  explanatory roles depend on the question being asked, not on the
-  variable itself.
-- **"The numbers speak for themselves."** They don't. Numbers
-  without a description of how they were collected, who they came
-  from, and what was *not* measured are nearly impossible to read
-  honestly.
-- **"One striking result settles the question."** A single study
-  can be a strong start but is rarely the end of the story. We'll
-  develop this throughout the term.
+**Step 5 — state what the summaries do and do not carry.** In these ten visits the mean resting heart rate was 72 beats per minute and 40 percent of students reported poor sleep. That describes ten people who walked into one clinic. It is not an estimate of anything about the campus, because we have said nothing about how these ten came to be in the table, and it says nothing about whether poor sleep raises heart rate.
 
-## What you should be able to do by Friday
+**What the result means in context.** Step 5 fixes what you may say once the arithmetic is over.
 
-By the end of Week 1 you should be able to:
+### The same reasoning, transferred
 
-- Read a short study description and identify what one case is.
-- Identify the variables in the dataset and classify each as
-  numerical (continuous or discrete) or categorical (nominal or
-  ordinal).
-- State the research question and identify the response and
-  explanatory variables.
-- Recognize when a variable is auxiliary — neither the response nor
-  the explanatory variable of the study in question.
-- Read a small data matrix (5–10 rows) and a small two-way summary
-  table without panic.
-- Write one or two careful sentences about what a small dataset does
-  and does not show.
+Same pass, different numbers, different subject. A state office reports that the mean time to process a benefit claim last month was twelve days. Eight claims were processed, taking 3, 4, 5, 5, 6, 7, 9, and 57 days.
 
-The Wednesday in-class exit ticket is about this. The Friday quiz
-and Homework 1 are too — they are handled separately (see below).
+A row is one claim, not one claimant — someone who filed twice appears twice. The variable is processing time in days, numerical and continuous underneath, recorded to the whole day. The eight values sum to 96, so the mean is 96 divided by 8, exactly 12 days. The middle of the sorted list falls between 5 and 6, at 5.5 days. Seven of the eight claims, or 87.5 percent, finished in nine days or fewer.
 
-## Assignments this week
+What stayed the same: the pass itself, and naming the case before touching a number. What changed: the cases are claims rather than people, and the distortion is far worse, because the reported mean is longer than every claim but one. "We process claims in twelve days on average" is misleading in both directions at once — it overstates the wait for nearly everybody while hiding the person who waited two months.
 
-- 📄 **Monday exit ticket** — short concept check on the LEAP and stent
-  variable types. Aim for **3–5 minutes**. \
-  [Download the Monday exit ticket (PDF)](../assets/assignments/week01_monday_exit_ticket_student.pdf)
-- 📄 **Wednesday exit ticket** — read two small datasets (MCU films and
-  a frog data matrix) and classify the variables. Aim for
-  **8–12 minutes**. \
-  [Download the Wednesday exit ticket (PDF)](../assets/assignments/week01_wednesday_exit_ticket_student.pdf)
-- 🔒 **Friday quiz** — handled through Blackboard or in class as
-  directed. The quiz prompt is not posted here. Exact timing and
-  submission details live in Blackboard.
-- 🔒 **Homework 1 (biweekly, covers Weeks 1–2)** — posted and submitted
-  through Blackboard. Due near the start of Week 3; exact due date
-  is on Blackboard.
+## Second worked example — taking a headline apart
 
-## Read more in IMS / ISLBS
+**Setting.** Someone reads the clinic table and writes: *"Walking to campus lowers your resting heart rate."* Your job is not to agree or disagree on instinct, but to take the sentence apart.
 
-The course page above is the main explanation for this week. If you
-want a second voice on the same material, the following readings
-cover the same concepts:
+![A claim, the measurement behind it, the comparison actually made, and what survives.](../assets/figures/week-01/claim-to-evidence.svg){fig-alt="Four stacked boxes flowing downward: the claim as read, what was actually measured, the comparison actually made using group means of 66.0 and 77.5 beats per minute, and the weaker statement the data actually support."}
 
-- **IMS — Chapter 1 ("Hello, data")**, §1.1 stent case study and
-  §1.2 data basics. \
-  [Hosted IMS book](https://openintro-ims.netlify.app/)
-- **ISLBS — *Introductory Statistics for the Life and Biomedical
-  Sciences*, Chapter 1**, §1.1 LEAP case study and §1.2 data basics. \
-  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
+**Step 1 — restate the claim, including its verb.** The claim is causal: *lowers*. It says that if a person switched from driving to walking, their resting heart rate would fall — a statement about a change, far stronger than a statement about what was seen.
 
----
+**Step 2 — say what was actually measured.** Resting heart rate at a single visit, for ten students who chose their own way to campus. Nobody was assigned a commute, measured twice, or followed over time.
 
-*Sources adapted in this lesson:* OpenIntro *Introduction to Modern
-Statistics* (2e), Çetinkaya-Rundel & Hardin, Chapter 1
-("Hello data"), §1.1 stent case study + §1.2 data basics, CC BY-SA 3.0;
-and OpenIntro *Introductory Statistics for the Life and Biomedical
-Sciences*, Vu & Harrington, Chapter 1 §1.1 LEAP case study + §1.2
-data basics, CC BY-SA 3.0. Source files at
-[github.com/openintrostat/ims](https://github.com/openintrostat/ims)
-and
-[github.com/OI-Biostat/oi_biostat_text](https://github.com/OI-Biostat/oi_biostat_text).
-The LEAP study is Du Toit et al., *NEJM* 372 (2015) 803–813; the
-stent study is Chimowitz et al., *NEJM* 365 (2011) 993–1003.
+**Step 3 — do the comparison the claim rests on.** Three students walk, with heart rates of 58, 66, and 74; those sum to 198, so the walkers' mean is 198 divided by 3, or 66.0 beats per minute. Four drive, with 64, 72, 78, and 96; those sum to 310, so the drivers' mean is 310 divided by 4, or 77.5. The gap is 77.5 minus 66.0, which is 11.5 beats per minute. As a check, the three bus riders sum to 212, and 198 plus 212 plus 310 is 720 — the total we already know is right.
+
+**Step 4 — test how much weight the comparison can hold.** One driver's reading of 96 is the highest value in the table; remove that student and the remaining three drivers average 214 divided by 3, or about 71.3, so the gap falls from 11.5 to about 5.3. A comparison that more than halves when one person leaves the room is not carrying much. The groups also overlap heavily: one walker sits at 74, higher than two of the four drivers. And they differ in other ways at once — the drivers averaged about 2.75 caffeinated drinks the previous day against about 0.7 for the walkers, and 21.25 years of age against about 18.7. Any of that could be doing the work the claim credits to walking.
+
+**Step 5 — write the sentence the data can carry.** *Among these ten students, the three who walked had a lower mean resting heart rate (66.0 beats per minute) than the four who drove (77.5), a gap of 11.5 beats per minute; with three and four students per group and clear differences in caffeine and age between them, these data cannot tell us whether commuting mode has any effect at all.*
+
+**What the result means in context.** Notice what happened to the verb. "Lowers" became "had a lower mean", with a hedge attached. That is not timidity; it is the strongest sentence this table can support.
+
+## The misreading to avoid
+
+Here is the sentence students write in week one, almost verbatim:
+
+> *"The mean resting heart rate is 72, so a typical student's resting heart rate is about 72."*
+
+It sounds harmless. It is the most consequential misreading of the term, and three things are wrong with it.
+
+**First, the mean is not a typical case.** It is a balance point of all the values. In the benefit-claims table the mean of twelve days is longer than seven of the eight actual waits. A mean can land where nobody is, and when a distribution has one long tail, it usually does.
+
+**Second, the two halves of the sentence are about different things.** "The mean is 72" is a fact about the ten rows in front of you. "A typical student is at 72" is a claim about students, a much larger group that was never observed. You crossed from the data layer into the inference layer inside one sentence, and the word "so" did it without asking permission.
+
+**Third, "typical" is quietly asking for a spread, not a center.** It is a statement about where most students fall, and no measure of center carries that alone. That is why the two clinic panels look nothing alike despite sharing a mean.
+
+A companion misreading is worth naming too: *"the numbers are real, so the claim is true."* Correct arithmetic can accompany a false claim, because the failure is rarely in the arithmetic — it is in the leap from what was measured to what is asserted. Every figure in the walking example was right to the last decimal, and the headline still was not supported.
+
+The repair for both is cheap. Before writing a sentence about data, name the cases you are describing, say whether you are describing them or generalizing beyond them, and quote a measure of spread beside any measure of center.
+
+## Practice on your own
+
+These are for your own checking, not for submission. Compare with a classmate on Wednesday.
+
+1. A shelter records, for each of 40 dogs housed, its weight in kilograms, its age in whole years, its breed group, and whether it is house-trained. State what a case is, classify each of the four variables as numerical (discrete or continuous) or categorical (nominal or ordinal), and explain why "mean breed group" is not a thing.
+
+2. Six delivery times, in minutes, are 18, 22, 25, 25, 30, and 100. Compute the mean and the middle of the sorted list. Which would you quote to a customer deciding whether to order, and what would you say alongside it?
+
+3. A campus paper reports: "Students who use the tutoring center earn higher grades, so the center raises grades." Identify the explanatory variable, the response variable, and the exact word that turns a description into a causal claim. Then list two ways the students who use the center might already differ from those who do not.
+
+4. Using the clinic table, compute the mean resting heart rate for the three bus riders and compare it with the walkers' 66.0 and the drivers' 77.5. Write one sentence about all three groups that a careful reader would sign, and one that overreaches.
+
+## Where to read more
+
+- [Introduction to Modern Statistics, Chapter 1, "Hello data"](https://openintrostat.github.io/ims/data-hello.html) is this week's reading. It covers cases, variables, and variable types with a different data set — the best kind of second explanation.
+- [Chapter 2, "Study design"](https://openintrostat.github.io/ims/data-design.html) is where next week begins; skimming its opening pages will make Monday easier.
+- [The whole of Introduction to Modern Statistics](https://openintrostat.github.io/ims) is online and is the main text for the course.
+- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) is the supplementary text, and its health examples sit close to our contexts.
+- The course [schedule](../schedule.qmd) lists what each meeting covers, the [syllabus](../syllabus.qmd) states the policies, and the [resources](../resources/index.qmd) page collects everything in one place.
+
+## Where this goes next
+
+This week you learned to read the table. Next week you learn to ask where the table came from, which decides how much any of it is worth. [Week 2](week02-study-design.qmd) covers observational studies and experiments, populations and samples, the forms of bias you will meet, and the difference between randomly *sampling* people and randomly *assigning* them to groups. The walking example is left deliberately unfinished: everything that made it unconvincing — self-selected groups, tiny numbers, other differences between the groups — has a name, and next week supplies them.
+
+Keep the clinic table in mind. We return to it in Week 3 to describe one variable properly, in Week 4 to compare groups honestly, and in Week 6 to ask whether caffeine or age was doing the work we credited to walking. The [notes index](index.qmd) lists every unit.

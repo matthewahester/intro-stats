@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" width="780" height="400" role="img">
+  <title>Two comparisons with the same gap between group means but very different overlap</title>
+  <desc>Two dot-plot panels. Both show group means seven beats per minute apart. On the left the two groups overlap heavily and most dots could belong to either group; on the right the groups are tightly clustered and completely separated.</desc>
+  <rect x="0" y="0" width="780" height="400" fill="#ffffff"/>
+  <line x1="80.263" y1="280" x2="80.263" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="80.263" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">55</text>
+  <line x1="122.368" y1="280" x2="122.368" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="122.368" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">60</text>
+  <line x1="164.474" y1="280" x2="164.474" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="164.474" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">65</text>
+  <line x1="206.579" y1="280" x2="206.579" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="206.579" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">70</text>
+  <line x1="248.684" y1="280" x2="248.684" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="248.684" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">75</text>
+  <line x1="290.789" y1="280" x2="290.789" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="290.789" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">80</text>
+  <line x1="332.895" y1="280" x2="332.895" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="332.895" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">85</text>
+  <line x1="375" y1="280" x2="375" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="375" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">90</text>
+  <line x1="55" y1="280" x2="375" y2="280" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="215" y="46" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">Same gap, heavy overlap</text>
+  <line x1="181.316" y1="88" x2="181.316" y2="284" stroke="#2f6f9f" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <line x1="240.263" y1="88" x2="240.263" y2="284" stroke="#c2622d" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <line x1="181.316" y1="88" x2="240.263" y2="88" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="181.316" y1="88" x2="181.316" y2="94" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="240.263" y1="88" x2="240.263" y2="94" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
+  <text x="210.789" y="78" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="middle" font-weight="bold">7 bpm apart</text>
+  <circle cx="147.632" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="172.895" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="189.737" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="206.579" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="223.421" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="240.263" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="257.105" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="273.947" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="273.947" cy="186.4" r="3.6" fill="#c2622d"/>
+  <circle cx="290.789" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="299.211" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="307.632" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="88.684" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="113.947" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="130.789" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="147.632" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="164.474" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="172.895" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="189.737" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="206.579" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="223.421" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="231.842" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="240.263" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="265.526" cy="270" r="3.6" fill="#2f6f9f"/>
+  <text x="61" y="140" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c2622d" text-anchor="start">No regular exercise</text>
+  <text x="61" y="226" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2f6f9f" text-anchor="start">Regular exercise</text>
+  <text x="215" y="318" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="middle">Resting heart rate (beats per minute)</text>
+  <text x="55" y="348" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">Sixteen of these twenty-four people sit in</text>
+  <text x="55" y="364" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">the band both groups occupy. Knowing one</text>
+  <text x="55" y="380" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">person's rate would not tell you their</text>
+  <text x="55" y="396" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">group.</text>
+  <line x1="450.263" y1="280" x2="450.263" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="450.263" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">55</text>
+  <line x1="492.368" y1="280" x2="492.368" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="492.368" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">60</text>
+  <line x1="534.474" y1="280" x2="534.474" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="534.474" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">65</text>
+  <line x1="576.579" y1="280" x2="576.579" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="576.579" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">70</text>
+  <line x1="618.684" y1="280" x2="618.684" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="618.684" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">75</text>
+  <line x1="660.789" y1="280" x2="660.789" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="660.789" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">80</text>
+  <line x1="702.895" y1="280" x2="702.895" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="702.895" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">85</text>
+  <line x1="745" y1="280" x2="745" y2="284" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="745" y="297" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">90</text>
+  <line x1="425" y1="280" x2="745" y2="280" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="585" y="46" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">Same gap, no overlap</text>
+  <line x1="551.316" y1="88" x2="551.316" y2="284" stroke="#2f6f9f" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <line x1="610.263" y1="88" x2="610.263" y2="284" stroke="#c2622d" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <line x1="551.316" y1="88" x2="610.263" y2="88" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="551.316" y1="88" x2="551.316" y2="94" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="610.263" y1="88" x2="610.263" y2="94" stroke="#1f2933" stroke-width="1.3" stroke-linecap="round"/>
+  <text x="580.789" y="78" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="middle" font-weight="bold">7 bpm apart</text>
+  <circle cx="593.421" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="601.842" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="601.842" cy="186.4" r="3.6" fill="#c2622d"/>
+  <circle cx="610.263" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="610.263" cy="186.4" r="3.6" fill="#c2622d"/>
+  <circle cx="610.263" cy="177.8" r="3.6" fill="#c2622d"/>
+  <circle cx="610.263" cy="169.2" r="3.6" fill="#c2622d"/>
+  <circle cx="610.263" cy="160.6" r="3.6" fill="#c2622d"/>
+  <circle cx="618.684" cy="195" r="3.6" fill="#c2622d"/>
+  <circle cx="618.684" cy="186.4" r="3.6" fill="#c2622d"/>
+  <circle cx="618.684" cy="177.8" r="3.6" fill="#c2622d"/>
+  <circle cx="618.684" cy="169.2" r="3.6" fill="#c2622d"/>
+  <circle cx="534.474" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="542.895" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="542.895" cy="261.4" r="3.6" fill="#2f6f9f"/>
+  <circle cx="551.316" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="551.316" cy="261.4" r="3.6" fill="#2f6f9f"/>
+  <circle cx="551.316" cy="252.8" r="3.6" fill="#2f6f9f"/>
+  <circle cx="551.316" cy="244.2" r="3.6" fill="#2f6f9f"/>
+  <circle cx="551.316" cy="235.6" r="3.6" fill="#2f6f9f"/>
+  <circle cx="559.737" cy="270" r="3.6" fill="#2f6f9f"/>
+  <circle cx="559.737" cy="261.4" r="3.6" fill="#2f6f9f"/>
+  <circle cx="559.737" cy="252.8" r="3.6" fill="#2f6f9f"/>
+  <circle cx="559.737" cy="244.2" r="3.6" fill="#2f6f9f"/>
+  <text x="431" y="140" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c2622d" text-anchor="start">No regular exercise</text>
+  <text x="431" y="226" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2f6f9f" text-anchor="start">Regular exercise</text>
+  <text x="585" y="318" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2933" text-anchor="middle">Resting heart rate (beats per minute)</text>
+  <text x="425" y="348" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">No value belongs to both groups. Here one</text>
+  <text x="425" y="364" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">person's rate alone would tell you which</text>
+  <text x="425" y="380" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">group they are in.</text>
+</svg>

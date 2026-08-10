@@ -139,3 +139,39 @@ code {
   border-radius: 3px;
   font-size: 0.9em;
 }
+
+/* Wide lesson content — let the one wide element scroll, not the whole page.
+
+   The weekly lesson pages carry long display equations and multi-column tables.
+   Neither of those wraps, so on a phone they widened the document itself and
+   pushed the navbar, the prose, and the figures past the right edge. Each now
+   scrolls inside its own box, which keeps the page the width of the viewport
+   and confines the sideways movement to the element that actually needs it.
+   The table rule is scoped to narrow viewports so that table layout at reading
+   widths is exactly what it was before. */
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.35rem;
+}
+
+@media (max-width: 575.98px) {
+  main table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  /* A long run of inline arithmetic cannot wrap, and an inline box ignores
+     overflow, so on a phone it was the last thing still widening the page.
+     Giving it a box of its own lets it scroll. Scoped to phone widths so that
+     inline mathematics sits on the text baseline everywhere else, unchanged. */
+  mjx-container:not([display="true"]) {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    vertical-align: middle;
+  }
+}

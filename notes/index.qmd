@@ -8,96 +8,94 @@ spine. Each weekly page is the **main reading** for that week — a
 short textbook-depth read that teaches the concepts end-to-end, with
 outbound links to OpenIntro IMS and ISLBS for an alternate voice.
 
+Every page follows the same shape: where the week starts and why it
+matters outside the exam, what you will be able to do by Friday, a
+short table of the words worth owning, the concepts themselves, two
+fully worked examples, the misreading to avoid, and a set of practice
+questions for your own checking. Worked examples use small invented
+data sets chosen to make the reasoning visible; where that is the
+case, the page says so.
+
 The weekly cadence is Monday concept / Wednesday application /
-Friday accountability. Monday and Wednesday **public-safe exit
-tickets** are linked from each weekly page. Friday quizzes and the
-biweekly homework are handled through Blackboard or in class as
-directed.
+Friday accountability. Friday quizzes and the biweekly homework are
+handled through Blackboard or in class as directed.
 
 ## Available
 
 - [Week 1 — Data, evidence, and statistics](week01-data-evidence.qmd) —
-  what counts as data, cases and variables, variable types (numerical
-  vs categorical, continuous vs discrete, nominal vs ordinal),
-  response vs explanatory variables, and reading a small dataset
-  honestly.
+  cases, variables, and what one row of a table stands for; the four
+  variable types and why the type decides every later move; what a
+  mean keeps and what it discards; and separating a claim from the
+  data behind it and the inference that joins the two.
 - [Week 2 — Study design, bias, and causality](week02-study-design.qmd) —
-  populations and samples, parameters vs statistics, sampling and
-  representativeness, observational studies vs experiments, random
-  assignment, bias, confounding, and what each design can support.
+  what happened before the data existed: populations and samples,
+  sampling bias as a direction rather than a shortage, observational
+  studies against experiments, what random *assignment* buys that
+  random *sampling* does not, and the three explanations that fit any
+  single association.
 - [Week 3 — One-variable summaries](week03-one-variable-summaries.qmd) —
-  describing a single variable: frequency tables and bar plots for
-  categorical data; histograms, boxplots, and the center–spread–shape
-  vocabulary for numerical data; choosing the right summary.
+  describing one variable through center, spread, and shape; naming
+  skew by the tail rather than the peak; the median and IQR as the
+  resistant pair; the boxplot read part by part; and what bin width
+  does to the story a histogram tells.
 - [Week 4 — Comparing groups](week04-comparing-groups.qmd) —
-  comparing two or more groups: contingency tables and conditional
-  proportions; differences in proportions and differences in means;
-  choosing displays that answer the comparison question.
-- [Week 5 — Association](week05-association.qmd) — scatterplots and
-  the *direction / form / strength / unusual points* reading;
-  correlation as a single descriptive number for the linear part of
-  the relationship; why a near-zero correlation can still hide a
-  strong relationship; association vs causation in headlines.
+  comparing two groups honestly: reading a group summary table,
+  side-by-side boxplots, and the gap between averages set against the
+  spread among individuals — so that an average difference is never
+  mistaken for a personal one.
+- [Week 5 — Association](week05-association.qmd) — scatterplots read
+  as direction, form, and strength, in that order; correlation as one
+  number for the straight-line part only; why a near-zero correlation
+  can still hide a strong pattern; and how a single unusual point can
+  move the number.
 - [Week 6 — Confounding and multivariable thinking](week06-confounding.qmd) —
-  the *associated with both* definition of a confounder; comparing
-  within strata as a fairer descriptive move; Simpson's paradox;
-  the plain-English *alone / after accounting for* language as the
-  honest-reporting habit.
+  the three conditions a third variable must meet before it can
+  distort a comparison; comparing like with like by looking within
+  strata; a worked reversal where the ranking flips; and what
+  adjustment can and cannot repair.
 - [Week 7 — First-half synthesis and midterm](week07-synthesis-midterm.qmd) —
-  the Units 1–6 walkthrough as one connecting case (cases and
-  variables → design and scope → describe → compare → associate →
-  ask what else explains it); a midterm-prep checklist and a single
-  bounded forward-pointer to next week's regression line.
+  the first six weeks assembled into one six-pass routine for reading
+  any study, and a ladder matching each design to the strongest verb
+  it can carry; worked end to end on one study, then on a claim that
+  looks like the same study and is not.
 - [Week 8 — Simple regression](week08-simple-regression.qmd) —
-  fitting a line to a scatterplot and reading it honestly: slope and
-  intercept in real units, residuals and the residual-plot reading,
-  least squares as the rule for choosing one line, *R²* as
-  descriptive strength of fit, the extrapolation caveat, and a light
-  look at outliers and leverage.
+  fitting one line and reading it in the units of the study: slope
+  and intercept, residuals and the residual plot, least squares as
+  the rule for choosing a line, R² as descriptive strength, and the
+  extrapolation caveat.
 - [Week 9 — Multiple and logistic regression, by interpretation](week09-multiple-logistic-regression.qmd) —
-  adding predictors to a model; the *holding the other variables
-  constant* coefficient reading; adjusted vs unadjusted coefficients as
-  the formal engine for the Week 6 confounding lesson; categorical
-  predictors and reference levels; adjusted *R²* as a reading; and an
-  interpretation-only look at logistic regression (reading a yes/no
-  model by direction and predicted probability).
+  adjustment written as a model: the *holding the others fixed*
+  reading, why an adjusted coefficient moves and which way, and an
+  interpretation-only look at logistic regression, odds, and the odds
+  ratio for a yes-or-no outcome.
 - [Week 10 — Probability as risk and diagnosis](week10-probability-risk-diagnosis.qmd) —
-  probability as long-run risk; conditional probability as *among the
-  subgroup*; why P(A | B) is not P(B | A); diagnostic two-way tables;
-  sensitivity and specificity, false positives and false negatives,
-  positive and negative predictive value; and why a positive test for a
-  rare condition can still be probably wrong (the base-rate effect).
+  probability as a count of people rather than a formula; conditional
+  probability as *among this subgroup*; why P(A | B) is not P(B | A);
+  sensitivity and specificity against predictive value; and why a
+  positive test for a rare condition is often still wrong.
 - [Week 11 — Simulation-based inference](week11-simulation-based-inference.qmd) —
-  could this be due to chance, and what values are plausible? The logic
-  of a randomization test (chance model, observed statistic, null
-  distribution, and the simulated p-value as evidence); bootstrapping and
-  the percentile confidence interval as a range of plausible values;
-  reading StatKey-style output; and reading p-values and intervals
-  honestly.
+  could chance alone have produced this? Shuffling labels to build a
+  null distribution and read a simulated p-value; then resampling
+  with replacement to bootstrap an interval and say how precise an
+  estimate is — and keeping the two procedures apart.
 - [Week 12 — Classical hypothesis testing](week12-classical-hypothesis-testing.qmd) —
-  the classical formula as a shortcut to the Week 11 simulation: null and
-  alternative hypotheses, the test statistic as (estimate − null) / SE,
-  the p-value from a normal/t model, the confidence interval as estimate
-  ± margin of error, reading one-proportion *z* and one- and two-mean *t*
-  output, and Type I / Type II errors with significance level and power.
+  the formula as a shortcut to the Week 11 simulation: null and
+  alternative claims, the test statistic as (estimate − null) / SE,
+  the p-value read honestly, the confidence interval, and what Type I
+  and Type II errors, significance level, and power actually mean.
 - [Week 13 — Categorical outcomes](week13-categorical-outcomes.qmd) —
-  how do we compare rates and proportions? Reading a 2×2 table; risk, the
-  risk difference, relative risk, and the odds ratio; why case-control
-  studies report an odds ratio and when it approximates relative risk;
-  expected counts under independence and the chi-square test as a
-  discrepancy summary, with the p-value as a right-tail area; and keeping
-  association separate from causation.
+  reading a two-way table without swapping the denominator; the risk
+  difference, relative risk, and odds ratio as three summaries of one
+  gap; when an odds ratio exaggerates; and expected counts and the
+  chi-square idea as a measure of discrepancy.
 - [Week 14 — Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd) —
-  how do studies become evidence? A single study versus a systematic review
-  versus a meta-analysis; reading a forest plot (each study's estimate and
-  confidence interval, the line of no effect at RR = 1, square size as
-  weight, and the pooled diamond); heterogeneity as cross-study
-  disagreement; and a cautious read of evidence strength. A source-gap week —
-  instructor-original, with schematic (not real-study) figures.
-- [Week 15 — Final review](week15-final-review.qmd) — what claim can we
-  responsibly make? A whole-course synthesis that pulls the term's arc —
-  data and design, description and association, sampling and inference,
-  categorical outcomes, and evidence strength — into one responsible-claim
-  checklist and one cumulative scenario. The last class meeting is Monday,
-  Dec. 7 only; final-exam logistics live in Blackboard. A review aid, not
-  an exam preview.
+  how single studies become a body of evidence: reading a forest plot
+  line by line, weighting by precision, heterogeneity as cross-study
+  disagreement, and what the published record leaves out. Figures are
+  course-built schematics using illustrative values, not results from
+  real studies.
+- [Week 15 — Final review](week15-final-review.qmd) — what claim can
+  we responsibly make? The whole course as one argument, a chart for
+  choosing the right comparison, the term's recurring misreadings
+  gathered in one place, and a checklist for writing a conclusion
+  someone can act on. A review aid, not an exam preview.

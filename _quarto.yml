@@ -1,13 +1,38 @@
 project:
   type: website
   output-dir: _site
+  # RENDER ALLOW-LIST. Fails safe — only the public sections below reach _site/.
+  # A bare "*.qmd" matches RECURSIVELY in Quarto 1.8.26, so any .qmd dropped anywhere in
+  # the tree would render and publish without anyone editing this file. The three public
+  # root pages are listed explicitly instead, and the private surfaces .gitignore already
+  # declares off-limits ("if they ever reappear in this public repo, treat that as a
+  # mistake") are negated as belt-and-suspenders. activities/, assignments/ and projects/
+  # are deliberately absent: their sources stay in the repository but are dormant, and
+  # nothing links to or renders them. The negations below are defence in depth — the
+  # allow-list is positive, so they change nothing today, but they keep the three dormant
+  # sections out if a broad glob is ever restored above. Note that dropping a directory
+  # from this list is not by itself enough to keep it out of _site/: while any RENDERED
+  # page still links to an unrendered .qmd, Quarto copies that source verbatim into the
+  # output to satisfy the link. The landing page's links were removed for that reason.
   render:
-    - "*.qmd"
-    - "notes/*.qmd"
-    - "activities/*.qmd"
-    - "assignments/*.qmd"
-    - "projects/*.qmd"
-    - "resources/*.qmd"
+    - index.qmd
+    - syllabus.qmd
+    - schedule.qmd
+    - notes/*.qmd
+    - resources/*.qmd
+    - "!activities/"
+    - "!assignments/"
+    - "!projects/"
+    - "!bank/"
+    - "!builder/"
+    - "!_source_material/"
+    - "!_site_planning/"
+    - "!private/"
+    - "!private_assessments/"
+    - "!keys/"
+    - "!answer_keys/"
+    - "!exams/"
+    - "!quizzes/"
 
   resources:
     - assets/figures/intro-stats-hero-web.webp
@@ -41,42 +66,50 @@ website:
   sidebar:
     style: floating
     collapse-level: 2
+    # Explicit href/text pairs: the sidebar label is a short navigation handle, while each
+    # page keeps its own full title and its "Week N" subtitle on the page itself. There is
+    # no Labs section because this course has no lab family.
     contents:
       - section: "Notes"
         href: notes/index.qmd
         contents:
-          - notes/index.qmd
-          - notes/week01-data-evidence.qmd
-          - notes/week02-study-design.qmd
-          - notes/week03-one-variable-summaries.qmd
-          - notes/week04-comparing-groups.qmd
-          - notes/week05-association.qmd
-          - notes/week06-confounding.qmd
-          - notes/week07-synthesis-midterm.qmd
-          - notes/week08-simple-regression.qmd
-          - notes/week09-multiple-logistic-regression.qmd
-          - notes/week10-probability-risk-diagnosis.qmd
-          - notes/week11-simulation-based-inference.qmd
-          - notes/week12-classical-hypothesis-testing.qmd
-          - notes/week13-categorical-outcomes.qmd
-          - notes/week14-meta-analysis-forest-plots.qmd
-          - notes/week15-final-review.qmd
-      - section: "Activities"
-        href: activities/index.qmd
-        contents:
-          - activities/index.qmd
-      - section: "Assignments"
-        href: assignments/index.qmd
-        contents:
-          - assignments/index.qmd
-      - section: "Projects"
-        href: projects/index.qmd
-        contents:
-          - projects/index.qmd
+          - href: notes/index.qmd
+            text: "Overview"
+          - href: notes/week01-data-evidence.qmd
+            text: "1 — Data and evidence"
+          - href: notes/week02-study-design.qmd
+            text: "2 — Study design, bias, causality"
+          - href: notes/week03-one-variable-summaries.qmd
+            text: "3 — One-variable summaries"
+          - href: notes/week04-comparing-groups.qmd
+            text: "4 — Comparing groups"
+          - href: notes/week05-association.qmd
+            text: "5 — Association"
+          - href: notes/week06-confounding.qmd
+            text: "6 — Confounding & multivariable thinking"
+          - href: notes/week07-synthesis-midterm.qmd
+            text: "7 — First-half synthesis"
+          - href: notes/week08-simple-regression.qmd
+            text: "8 — Simple regression"
+          - href: notes/week09-multiple-logistic-regression.qmd
+            text: "9 — Multiple & logistic regression"
+          - href: notes/week10-probability-risk-diagnosis.qmd
+            text: "10 — Probability, risk, diagnosis"
+          - href: notes/week11-simulation-based-inference.qmd
+            text: "11 — Simulation-based inference"
+          - href: notes/week12-classical-hypothesis-testing.qmd
+            text: "12 — Classical hypothesis testing"
+          - href: notes/week13-categorical-outcomes.qmd
+            text: "13 — Categorical outcomes"
+          - href: notes/week14-meta-analysis-forest-plots.qmd
+            text: "14 — Meta-analysis & forest plots"
+          - href: notes/week15-final-review.qmd
+            text: "15 — Final review"
       - section: "Resources"
         href: resources/index.qmd
         contents:
-          - resources/index.qmd
+          - href: resources/index.qmd
+            text: "Overview"
 
   page-footer:
     left: "© 2026 Matt Hester · Intro to Statistics"

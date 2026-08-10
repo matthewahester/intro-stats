@@ -6,291 +6,218 @@ format:
     toc: true
     toc-depth: 3
     number-sections: false
-license: "Instructor-original lesson. Week 14 is a documented source gap: neither OpenIntro IMS nor OpenIntro ISLBS has a meta-analysis or forest-plot chapter, so this page is not adapted from either text. The figures are course-built schematics using illustrative, made-up values — not results from any real study. Course materials by Matt Hester, shared under CC BY-SA 3.0."
 ---
 
-## Why this week matters
+## Where this week starts
 
-All term you have learned to read a *single* study: a confidence interval
-from one sample, a p-value from one test, a risk ratio from one $2\times2$
-table. But a single study is rarely the last word. Two studies of the same
-treatment can land in slightly different places — one looks promising,
-another looks like nothing — and the honest question becomes the one that
-runs through medicine, nursing, and public health: *taking all the studies
-together, what does the evidence actually say?*
+Every week of this course has ended in the same place: one study, one estimate, one interval, one careful sentence about what it does and does not support. This week the object you read changes. It is no longer a study but a *body* of studies — several trials of the same treatment, run in different clinics on different numbers of people, reaching results that do not all agree.
 
-This week is about that combining step. A **systematic review** gathers all
-the studies on a question; a **meta-analysis** combines their numbers into a
-single **pooled estimate**; and a **forest plot** is the picture that shows
-the whole thing at a glance — every study as one row, and the combined
-result as a diamond at the bottom. The rhythm: **Monday** sorts out single
-study versus systematic review versus meta-analysis, and why combining is
-worth doing; **Wednesday** reads a forest plot part by part; **Friday** asks
-the harder question — when do the studies disagree enough that a single
-pooled number would mislead, and how strong is the evidence really? The
-recurring caution this week is the most grown-up one in the course: *more
-studies, combined carefully, can make evidence stronger — but pooling cannot
-rescue biased studies, and a tidy diamond is still not proof.*
+That is the situation nearly every real health claim is in. A small trial finds a large benefit. A bigger one finds a small benefit. A third finds nothing at all. A committee then has to say something to patients. **Meta-analysis** is the set of habits for turning that pile into one defensible statement, and the **forest plot** is the picture that shows the pile and the statement at once.
 
-This is also the week the course's whole arc pays off. You will not learn a
-new effect measure here. The numbers a meta-analysis pools are exactly the
-ones you already know.
+Week 13 left you able to read a single comparison of rates, and you came back from the fall break with that skill intact. What was missing was scale: nothing so far tells you what to do when five people hand you five different intervals. That is this week's job, and the term's last new machinery.
 
-## A bridge from Weeks 11–13
+By Friday, a forest plot should stop looking like a decorative row of dots and start reading like a paragraph — which trial each row is, how sure it was, what it means to cross the vertical line, and when the diamond at the bottom is a fair summary rather than a mistake.
 
-You arrive at this week already owning every piece except the combining
-step.
+### Why this matters beyond the exam
 
-- From **Weeks 11–12** you own the **confidence interval** — a range of
-  plausible values — and the habit of reading a **p-value** as *strength of
-  evidence*, not a verdict. In a forest plot, each study is drawn as its
-  estimate plus a confidence interval. A study whose interval is wide is
-  imprecise; a study whose interval crosses the "no effect" mark is one that,
-  *on its own*, could be chance — the same reading you practiced in Week 11.
-- From **Week 13** you own the **risk ratio** and the **odds ratio** — the
-  ratios that compare an outcome between two groups. These are precisely the
-  numbers a clinical meta-analysis stacks up and pools. A forest plot of a
-  drug trial is, quite literally, a column of Week 13 risk ratios with their
-  confidence intervals.
-- From **Week 13** you also own the discipline that **association is not
-  causation by itself**. That carries straight through: a pooled estimate
-  built from observational studies is still observational. Combining ten
-  studies that could not prove cause does not manufacture a cause.
+A hospital committee is deciding whether to fund a pharmacist-led medication review for patients with high blood pressure. Someone circulates a study showing a six-unit drop in blood pressure compared with usual care. It is genuine and honestly reported, and it enrolled thirty-six people; four larger trials report more modest results. Reading only that study, the committee will over-promise and be surprised later. Reading all five in a forest plot, it sees one noisy row with a very long line sitting above four steadier rows. The decision changes because of how the evidence was assembled, not because anyone ran a new experiment.
 
-So this week adds one genuinely new idea — *how separate estimates are
-combined and pictured* — on top of tools you have already practiced.
+## What you will be able to do
 
-## Monday: one study, a review, and a meta-analysis
+- Explain, in a sentence a non-specialist would follow, why one study is rarely enough to settle a question.
+- Read every part of a forest plot: rows, markers, interval lines, marker sizes, the line of no effect, the diamond.
+- Combine several estimates into one precision-weighted estimate by hand, and say why that differs from the plain average.
+- Judge whether a set of studies is consistent enough that one combined number is honest.
+- Read a funnel plot for publication bias and describe what the missing region would have contained.
+- Name what meta-analysis cannot repair, and give an example of a body of evidence that is precise and wrong.
 
-Start by separating three things students often blur together.
+## Words worth owning
 
-A **single study** is one investigation: one sample, one estimate, one
-confidence interval. It is evidence, but partial. It can be small, it can be
-unlucky, and it can be one study among many that pointed the other way.
+| Term | What it means in this course |
+|---|---|
+| Meta-analysis | A study whose cases are other studies: it combines estimates from several studies of one question into one estimate with an interval. |
+| Forest plot | The standard picture of a meta-analysis — one row per study showing its estimate and interval, with the combined result at the bottom. |
+| Line of no effect | The vertical reference line at the value meaning the treatment did nothing: zero for a difference, one for a ratio. |
+| Weight | How much a study counts in the combination. A study earns weight by being precise, which usually means being large. |
+| Combined estimate | The single number a meta-analysis reports, drawn as a diamond whose width is its interval. |
+| Heterogeneity | Real disagreement between studies, beyond what their own uncertainty explains. |
+| Publication bias | The tendency for unimpressive studies to go unpublished, so the readable record is not the record of what was run. |
+| Funnel plot | A scatterplot of each study's estimate against its precision, used to spot the lopsidedness publication bias produces. |
 
-A **systematic review** is a careful, transparent search for *all* the
-studies on a specific question, with a stated rule for which ones to keep. It
-is the difference between "here is a study I happened to find" and "here is
-what the whole body of research says, and here is exactly how we looked." A
-systematic review may stay in words — describing and weighing the studies it
-found.
+## Why one study is rarely enough
 
-A **meta-analysis** is the quantitative step that often sits inside a
-systematic review: it **combines the studies' estimates into a single pooled
-estimate.** Not every systematic review includes a meta-analysis, and a
-responsible meta-analysis almost always rides on a systematic review — you
-should not pool studies you did not search for carefully.
+### What a single trial can and cannot tell you
 
-![A course-built schematic showing four boxes left to right connected by arrows, illustrating how a systematic review and meta-analysis turn many studies into one estimate. The first box, many studies, is labeled found by searching. An arrow leads to the second box, screen and appraise, labeled quality and relevance. An arrow leads to the third box, studies that qualify, labeled the included set. An arrow leads to the fourth box, pooled estimate, labeled the forest plot. Beneath the first two boxes a note reads that the systematic review is the find-plus-screen step; beneath the last two a note reads that the meta-analysis is the combine-their-estimates step. The figure is labeled a schematic evidence-synthesis pipeline, not a funnel plot.](../assets/figures/week14-evidence-pipeline.png){fig-alt="Four boxes connected by arrows. Many studies (found by searching), then screen and appraise (quality, relevance), then studies that qualify (the included set), then pooled estimate (the forest plot). A note says the systematic review is find plus screen the studies; another says the meta-analysis is combine their estimates. Labeled a schematic evidence-synthesis pipeline, not a funnel plot."}
+A well-run trial gives an unbiased estimate of an effect and an honest measure of how much it could have wobbled by chance. Those are two different things, and the second is where single studies get into trouble.
 
-**Why combine at all?** Because a single study is often too small to settle
-the question. A small trial can show a real benefit but with a confidence
-interval so wide it also includes "no effect" — you saw exactly this in Week
-13, where a study could *hint* at a benefit while remaining too small to be
-convincing. Pooling several such studies uses all the data at once. The
-payoff, when the studies are genuinely measuring the same thing, is a more
-**precise** combined estimate — a narrower confidence interval — than any one
-study could give. That precision is the whole point, and it is also the part
-that can be abused, which is why Wednesday and Friday matter.
+Suppose the medication review really lowers systolic blood pressure by about three units on average. A trial of thirty-six patients has a standard error near 4 mm Hg, so its 95 percent interval reaches about eight units out on each side. Such a trial can easily report 6.0, or 0.0, or minus 1.0, purely through the luck of which thirty-six people walked in the door. Nothing is wrong with it. The estimate is simply built from too little information to pin down a three-unit effect.
 
-## Wednesday: reading a forest plot
+Run that trial in a hundred clinics and the estimates scatter; if only the high ones make the news, the world learns a number nobody careful ever claimed. The remedy is not to distrust small studies but to stop reading them one at a time.
 
-A forest plot looks busy the first time, but it is built from parts you
-already know. Read it one piece at a time.
+### What combining studies buys, and what it cannot repair
 
-![A course-built schematic of the anatomy of a forest plot, drawn on a risk-ratio axis with a log scale running from 0.5 to 2 and a vertical red line of no effect at a risk ratio of 1. Four studies labeled Study A through Study D are stacked as rows. Each study is a blue square at its estimate with a horizontal whisker for its confidence interval; Study C has a noticeably larger square. At the bottom, separated by a dotted line, is an amber diamond labeled Pooled. Callouts on the right name the parts: the square is the study estimate or point estimate; the whisker is the confidence interval; a bigger square means more precise and more weight; the vertical line is the line of no effect at risk ratio one; and the diamond is the pooled estimate, narrower than any single study. The figure is labeled schematic and illustrative, not real study data.](../assets/figures/week14-forest-plot-anatomy.png){fig-alt="A forest plot on a risk-ratio log scale from 0.5 to 2 with a red vertical line of no effect at risk ratio 1. Four studies A to D are rows, each a blue square at its estimate with a horizontal confidence-interval whisker; Study C's square is larger. At the bottom an amber diamond labeled Pooled. Right-side callouts: square equals study estimate, whisker equals confidence interval, bigger square equals more precise and more weight, vertical line equals line of no effect at risk ratio 1, diamond equals pooled estimate narrower than any study. Labeled schematic, not real study data."}
+Combining buys precision: five trials of a few hundred people carry, together, far more information than any one, and the combined interval is narrower than every individual interval. It also buys visibility — stacked in one picture, patterns appear that no single paper shows, such as small trials all reporting larger effects than large ones.
 
-**Each row is one study.** The **square** marks that study's estimate — here
-a **risk ratio**, the Week 13 measure. The **horizontal whisker** is its
-**confidence interval**, the Week 11–12 range of plausible values. A short
-whisker means a precise study; a long whisker means an imprecise one.
+What combining cannot do is repair a flaw that every study shares. If all five trials measured blood pressure with an unblinded nurse who rounded down for the program group, all five estimates are too large by the same amount, and so is the combination. The interval narrows as you add studies, and it closes in confidently on the wrong number. That is the sentence to memorise this week: **combining biased studies gives you a precise biased result.** Precision is about random error only; nothing in the arithmetic inspects whether the studies were any good.
 
-**The vertical line is the line of no effect.** On a ratio scale — risk
-ratios or odds ratios — "no effect" is a ratio of **1**, not 0: a risk ratio
-of 1 means the outcome is equally likely in both groups. (If a forest plot
-instead pooled a *difference*, the line of no effect would be at 0. Either
-way, it is the value that means "no difference.") Reading a single study's
-row is then exactly the Week 11–12 move: *does its confidence interval cross
-the line of no effect?* If it does, that study on its own cannot rule out "no
-effect."
+## Reading a forest plot line by line
 
-**The square's size carries information too.** Bigger squares are drawn for
-studies that count more — the more **precise** studies, the ones with
-narrower intervals, usually the larger and better-run ones. This is the idea
-of **weight**: not every study counts equally, and the plot shows it. You do
-not compute the weights by hand in this course; you read them off the picture
-— *a bigger square is a study the combined estimate leans on more.*
+### The parts of the plot, named
 
-**The diamond is the pooled estimate.** At the bottom sits the meta-analysis
-result, drawn as a diamond whose width is its confidence interval. Two things
-are worth noticing every time.
+![A forest plot of five blood pressure trials, with every part of the plot named.](../assets/figures/week-14/forest-plot-anatomy.svg){fig-alt="Five trial rows, each with a square estimate sized by its weight and a horizontal 95 percent interval. Two intervals cross the dashed no-effect line at zero. A green diamond at 2.8 mm Hg marks the combined estimate and sits clear of zero."}
 
-![A course-built schematic forest plot showing five studies labeled Study A through Study E as rows on a risk-ratio log scale from 0.5 to 2, with a red vertical line of no effect at risk ratio 1. Several individual study confidence intervals cross the line of no effect, drawn in grey, while their squares vary in size by precision. At the bottom an amber pooled diamond sits clearly to the left of the line of no effect and is noticeably narrower than any single study's interval. A note on the upper right reads that some single studies' confidence intervals cross risk ratio 1, so they could be chance on their own; a note near the diamond reads that the pooled estimate is narrow and stays below risk ratio 1. The figure is labeled schematic and illustrative, not real study data, and notes the course does not compute the pooling formula.](../assets/figures/week14-pooled-estimate-vs-studies.png){fig-alt="A schematic forest plot of five studies A to E on a risk-ratio log scale 0.5 to 2 with a red line of no effect at 1. Several study confidence intervals cross the line (grey); squares vary in size by precision. At the bottom an amber pooled diamond sits left of the line and is narrower than any single study. Notes: some single studies' CIs cross risk ratio 1 and could be chance on their own; the pooled estimate is narrow and stays below 1. Labeled schematic, not real data; the course does not compute the pooling formula."}
+Read it from the outside in. The horizontal axis is the effect measured — the drop in systolic blood pressure under the program compared with usual care, in mm Hg. The vertical dashed line sits at zero, meaning the program did nothing. Each row is one trial, labelled on the left with how many people it enrolled and what it found.
 
-First, the **diamond is narrower** than any single study's interval — that is
-the precision you bought by combining. Second, you read the diamond the same
-way you read any interval: *does it cross the line of no effect?* In the
-schematic above, several individual studies have intervals that touch or
-cross the line — each, alone, "could be chance" — yet the pooled diamond is
-narrow and sits entirely to one side. That is the classic reason to do a
-meta-analysis: several inconclusive studies can combine into one clear answer.
+Inside a row, the square is that trial's estimate and the horizontal line is its 95 percent interval. The square's *size* is what makes a forest plot worth drawing: a bigger square means more weight in the combination. Trial A's square is a speck with an enormous line through it; Trial E's is large with a short line. You can see which trials drive the result without reading a number.
 
-The honest version of that sentence keeps the caution attached: the diamond
-is clearer *only if the studies belonged together in the first place.* That
-is Friday's question.
+Whether a row crosses the dashed line matters less than students expect. Trials A and B each cross zero, so neither alone rules out no benefit. They are not failures, and they are not evidence of no effect; they are evidence too weak to tell a three-unit benefit from nothing.
 
-## Friday: heterogeneity, bias, and the strength of evidence
+At the bottom sits the diamond: its centre is the combined estimate, its width the combined interval. Here it is narrower than any single row and clears the dashed line — the pooled evidence separates this program from no effect even though two of its five trials could not.
 
-A pooled diamond is only as trustworthy as the studies under it. Three
-cautions decide how much to trust it.
+### Weighting by precision
 
-**Heterogeneity — are the studies even estimating the same thing?** A
-meta-analysis quietly assumes the studies are different looks at *one*
-underlying effect. Sometimes that is fair. Sometimes it is not: the studies
-used different doses, different patients, different lengths of follow-up, and
-they are really estimating *different* things. When that happens we say the
-studies are **heterogeneous**, and pooling them into a single number can
-paper over a real disagreement.
+![Five trials drawn at the same estimate so that only precision differs.](../assets/figures/week-14/precision-and-weight.svg){fig-alt="Five intervals centred on one common value: the 36-person trial spans about 16 mm Hg while the 900-person trial spans about 3. Orange bars beside them show weight shares rising from 2 percent to 50 percent as the trials get larger."}
 
-![A course-built schematic with two small forest plots side by side on a risk-ratio scale, each with a red vertical line of no effect at risk ratio 1. On the left, labeled studies agree, four studies all sit to the left of the line with confidence intervals that overlap heavily; it is labeled low heterogeneity, pooling makes sense. On the right, labeled studies disagree, four studies are scattered across the line of no effect, some to the left and some to the right, with intervals that barely overlap; it is labeled high heterogeneity, a single pooled number can mislead. The whole figure is labeled schematic and illustrative, not real study data, and asks whether the studies are even estimating the same thing.](../assets/figures/week14-heterogeneity-contrast.png){fig-alt="Two small forest plots side by side on a risk-ratio scale with a red line of no effect at 1. Left, studies agree: four studies all left of the line with heavily overlapping confidence intervals, labeled low heterogeneity, pooling makes sense. Right, studies disagree: four studies scattered across the line, some left some right, intervals barely overlapping, labeled high heterogeneity, a single pooled number can mislead. Labeled schematic, not real study data, asking whether the studies estimate the same thing."}
+A meta-analysis does not average the estimates. It takes a **weighted** average, and the weight comes from precision:
 
-You can often *see* heterogeneity in the plot. When the studies line up on
-the same side with overlapping intervals (left panel), a single pooled
-estimate summarizes them fairly. When they are scattered across the line of
-no effect, some pointing each way (right panel), the pooled number is hiding
-a fight, and the right response is caution — *why do these studies disagree?*
-— not a confident diamond. You are not asked to compute a heterogeneity
-statistic in this course; you are asked to look, and to notice when the
-studies clearly do not agree. (Analysts do face a modeling choice here —
-roughly, whether to assume one shared true effect or to allow the effect to
-vary from study to study — but the *methods* behind that choice are well
-beyond this course. The reading skill is what matters: when studies scatter,
-trust the single number less.)
+$$w = \frac{1}{SE^{2}}$$
 
-**Publication bias — is the visible literature the whole literature?** A
-meta-analysis can only pool the studies it can find, and the studies that get
-*published* are not a random sample of the studies that get *run*. Striking,
-positive results are more likely to be written up and printed; quiet null
-results more often sit in a drawer. So the published record can tilt toward
-"it works," and a meta-analysis of only the visible studies can inherit that
-tilt. You do not need any special test to take this seriously — just the
-awareness that **absence of the boring studies can make an effect look bigger
-and surer than it is.**
+In words: a study's weight is one divided by its squared standard error. Halve a study's standard error and you quadruple its weight. Since the standard error of a difference in means falls with the square root of the sample size,
 
-**Strength of evidence — pooled is not proof.** Put the three cautions
-together and the week's real lesson appears. A narrow pooled diamond is
-*precise*; precise is not the same as *correct*. Pooling cannot fix studies
-that were biased, cannot reconcile studies that disagree, and cannot turn
-observational association into causation. A meta-analysis of randomized
-trials of the same well-defined treatment can be very strong evidence; a
-meta-analysis of a scattered, observational, publication-biased literature
-can be confidently wrong. The skill Friday trains is to read a forest plot
-*and* the situation around it, and to say how much weight the evidence can
-bear — no more.
+$$SE = \frac{2s}{\sqrt{n}}$$
 
-## Common mistakes
+where $s$ is the spread of the outcome inside a group and $n$ is the total number of people, four times the people gives half the standard error and so four times the weight. That is how a trial of 900 can be worth twenty-five trials of 36.
 
-- **Reading the diamond as proof.** A pooled estimate is a precise summary of
-  the studies that went in. If those studies were biased, scattered, or
-  observational, the diamond is precise *and* untrustworthy.
-- **Thinking a bigger square means a bigger effect.** Square size is
-  **weight** — precision — not effect size. The effect is *where* the square
-  sits, not how big it is.
-- **Forgetting the line of no effect is at 1 for ratios.** For a risk ratio
-  or odds ratio, "no effect" is a ratio of 1, not 0. An interval that crosses
-  1 cannot rule out "no difference."
-- **Pooling studies that do not belong together.** If the studies are clearly
-  heterogeneous — different treatments, patients, or outcomes — a single
-  pooled number can hide a real disagreement rather than resolve it.
-- **Treating the published studies as all the studies.** Publication bias
-  means the visible literature can overstate an effect. More published
-  studies is not automatically more truth.
-- **Saying "meta-analysis," meaning "causation."** Combining many
-  observational studies gives a combined *association*. Whether you can say
-  "caused" still depends on the study designs from Weeks 2, 6, and 13.
+The figure redraws the five trials at one common estimate, so the only visible difference is precision. The bars convert those widths into shares of the total weight: 2, 8, 8, 32 and 50 percent. Trial E alone holds half the weight; Trial A holds one fiftieth of it. A plain average would treat the thirty-six-person pilot as the equal of the nine-hundred-person trial, which nobody believes. Precision weighting just says formally what you already believed: attend to a study in proportion to what it knows.
 
-## What you should be able to do by Friday
+### Are these studies estimating the same thing?
 
-By the end of Week 14 you should be able to:
+![Two bodies of evidence: one consistent, one scattered.](../assets/figures/week-14/heterogeneity-panels.svg){fig-alt="Left panel shows five intervals that all overlap a shaded band running from 1 to 4 mm Hg. Right panel shows five intervals spread from below zero up to 13 mm Hg, with no single value falling inside all five."}
 
-- distinguish a **single study**, a **systematic review**, and a
-  **meta-analysis**, and say what each one adds;
-- explain in plain words **why** combining studies can give a more precise
-  estimate than any single study;
-- read a **forest plot** part by part — each study's **estimate** and
-  **confidence interval**, the **line of no effect**, the **square size** as
-  weight, and the **diamond** as the pooled estimate;
-- judge whether a study's interval, or the pooled diamond, **crosses the line
-  of no effect**, and say what that means;
-- explain **heterogeneity** conceptually — *are the studies estimating the
-  same thing?* — and spot it in a plot;
-- name reasons a meta-analysis can mislead (**publication bias**,
-  heterogeneity, pooling observational studies) and give a **cautious** read
-  of how strong the evidence is.
+Weighting only makes sense if there is one number to estimate. **Heterogeneity** is the name for the situation where there is not.
 
-## Assignments this week
+In the left panel the five trials scatter, but no more than their own intervals would predict, and every one of those intervals contains the whole band from 1 to 4 mm Hg. A single number can stand for the set without doing violence to any member.
 
-- **Monday check.** A short in-class concept check: tell apart a single
-  study, a systematic review, and a meta-analysis, and say which of two
-  studies counts for more and why. Plan for about **3–5 minutes**. Sheet:
-  [Week 14 Monday exit ticket](../assets/assignments/week14_monday_exit_ticket_student.pdf).
-- **Wednesday check.** A **forest-plot annotation**: label the parts of a
-  forest plot, read the pooled estimate and its interval, and say whether it
-  crosses the line of no effect. Plan for about **8–12 minutes**. Sheet:
-  [Week 14 Wednesday exit ticket](../assets/assignments/week14_wednesday_exit_ticket_student.pdf).
-- 🔒 **Friday quiz** — a short **meta-analysis critique**: read a forest plot
-  and write a careful, evidence-strength conclusion. Handled through
-  Blackboard or in class as directed; the prompt is not posted here, and
-  timing and submission details live in Blackboard.
-- 🔒 **Project** — this week falls in the course **project submission
-  window**. Your deliverable and its due date are posted in Blackboard, not
-  here.
-- **No new homework opens this week.** The biweekly homework ended with
-  Weeks 11–12; from here the **project** carries the synthesis work.
+In the right panel, five trials of a different program disagree in a way their intervals cannot absorb. One reports a 9-unit benefit with an interval from 5 to 13; another reports a 3-unit *harm* with an interval from minus 7 to 1. No value at all sits inside all five, so a diamond drawn under those rows would describe none of the trials above it.
 
-## Read more
+When you see that, the useful move is not to combine harder. Ask what differs between the studies: dose, patients, length of follow-up, definition of the outcome. Heterogeneity is usually information, not noise, and the honest report says "results ranged from a 3-unit harm to a 9-unit benefit, and here is what seems to separate them".
 
-This week is unusual: it has **no chapter in either course textbook.** IMS
-and ISLBS are excellent on single-study inference — confidence intervals,
-p-values, risk ratios — but neither one covers meta-analysis or forest plots,
-so there is no "second voice" reading to assign from them. The page above is
-the main explanation, and it stands on its own.
+The arithmetic in this week's examples assumes the trials share one true effect. When they do not, statisticians switch to a random-effects method that widens the combined interval to allow for the spread between studies.
 
-If you want to *see* real forest plots in the wild, two trustworthy places to
-look:
+## What the published record leaves out
 
-- **Cochrane** (cochrane.org) publishes systematic reviews across medicine,
-  most with a plain-language summary and a forest plot. The plain-language
-  summaries are written for non-specialists and are a good way to see this
-  week's ideas on real clinical questions.
-- **PRISMA** (prisma-statement.org) is the standard for *how* a systematic
-  review is reported — the searching-and-screening pipeline from Monday — if
-  you are curious how reviewers decide which studies get in.
+### Reading a funnel plot
 
-You will not be tested on anything in those sources beyond what this page
-teaches; they are there for the curious.
+![A funnel plot whose bottom-left corner is empty.](../assets/figures/week-14/funnel-plot-missing-corner.svg){fig-alt="Twelve dots plotted against standard error, scattering more widely toward the bottom. Every small and mid-sized trial sits right of the combined estimate of 7 minutes, and the shaded bottom-left region of the funnel holds no trials."}
 
-*Looking back, and ahead:* the risk ratios and odds ratios of Week 13, drawn
-with the confidence intervals of Weeks 11–12, are exactly what a forest plot
-stacks and a meta-analysis pools — this week is where the course's tools come
-together. Next week is the final review: pulling the whole term into a single
-question — *what claim can we responsibly make?*
+Everything above assumes you can see the studies that were run. Often you cannot. A small trial that finds nothing is harder to publish and easier to abandon half-finished. The published record therefore over-represents flattering results, and a meta-analysis reading only it inherits the tilt. This is **publication bias**.
 
----
+The **funnel plot** is the standard diagnostic. Plot every study as a dot: estimate on the horizontal axis, standard error on the vertical, most precise studies at the top. If nothing is missing, the dots form a symmetric triangle — precise studies clustered near the top, imprecise ones spreading below to both sides by chance alone.
 
-*Sources for this lesson:* This is an **instructor-original** page. Week 14
-is a documented gap in the course's two source texts — OpenIntro *Introduction
-to Modern Statistics* (Çetinkaya-Rundel & Hardin) and OpenIntro *Introductory
-Statistics for the Life and Biomedical Sciences* (Vu & Harrington) — neither
-of which covers meta-analysis or forest plots, so no material here is adapted
-from them. The lesson builds only on concepts the course already developed
-from those texts in earlier weeks (confidence intervals and p-values, Weeks
-11–12; risk ratios and odds ratios, Week 13). The four figures are
-**course-built schematics**: they use illustrative, made-up "Study A / B / …"
-values chosen only to show the parts of a forest plot and the contrast
-between agreeing and disagreeing studies. **They are not results from any real
-study**, and the pooled diamond is drawn to *illustrate* a precise summary,
-not computed from a pooling formula (the methods of meta-analysis are beyond
-this introductory course). For real, published forest plots, see Cochrane
-(cochrane.org) and the PRISMA reporting standard (prisma-statement.org).
-Course materials by Matt Hester, shared under CC BY-SA 3.0.
+Asymmetry is the warning sign. If the bottom-left corner is bare, with no small studies reporting small or negative results, the most economical explanation is that such studies were run and never surfaced. Note the limit: a lopsided funnel is *consistent* with publication bias, and equally consistent with small studies being run differently — on sicker patients, or with more support. Asymmetry raises the question. It does not close it.
+
+## Worked example — five trials of a blood pressure program
+
+**Setting.** Five clinics separately tested a pharmacist-led medication review against usual care for adults with high blood pressure. Each split its participants evenly and at random between the two arms and measured systolic blood pressure after six months. The spread inside a group was about 12 mm Hg in every trial, so the standard errors follow from the sample sizes. A positive effect means blood pressure fell further under the program.
+
+| Trial | People | Estimate (mm Hg) | Standard error | 95 percent interval | Weight |
+|---|---|---|---|---|---|
+| A | 36 | 6.0 | 4.0 | -2.0 to 14.0 | 2% |
+| B | 144 | 1.5 | 2.0 | -2.5 to 5.5 | 8% |
+| C | 144 | 5.0 | 2.0 | 1.0 to 9.0 | 8% |
+| D | 576 | 3.0 | 1.0 | 1.0 to 5.0 | 32% |
+| E | 900 | 2.4 | 0.8 | 0.8 to 4.0 | 50% |
+
+**Step 1 — check the intervals.** Each interval is the estimate give or take about two standard errors. For Trial A, $6.0 - 2(4.0) = -2.0$ and $6.0 + 2(4.0) = 14.0$. For Trial E, $2.4 - 2(0.8) = 0.8$ and $2.4 + 2(0.8) = 4.0$.
+
+**Step 2 — build the weights.** Each raw weight is one divided by the squared standard error: $1/4.0^2 = 0.0625$, $1/2.0^2 = 0.25$, $0.25$ again, $1/1.0^2 = 1$, and $1/0.8^2 = 1.5625$. Those add to $0.0625 + 0.25 + 0.25 + 1 + 1.5625 = 3.125$. Dividing each by 3.125 turns them into shares: $0.0625/3.125 = 0.02$, $0.25/3.125 = 0.08$, $1/3.125 = 0.32$, $1.5625/3.125 = 0.50$. Those are the percentages in the table, and they add to 100 percent.
+
+**Step 3 — combine.** The combined estimate is the weighted average
+
+$$\text{combined} = \frac{w_1 e_1 + w_2 e_2 + \cdots + w_k e_k}{w_1 + w_2 + \cdots + w_k}$$
+
+which, because the shares already add to one, is simply
+
+$$0.02(6.0) + 0.08(1.5) + 0.08(5.0) + 0.32(3.0) + 0.50(2.4)$$
+
+$$= 0.12 + 0.12 + 0.40 + 0.96 + 1.20 = 2.80$$
+
+**Step 4 — attach an interval.** The combined standard error is one divided by the square root of the total raw weight: $1/\sqrt{3.125} = 0.566$. Two standard errors is 1.13, so the interval runs from $2.80 - 1.13 = 1.67$ to $2.80 + 1.13 = 3.93$ — about 1.7 to 3.9 mm Hg.
+
+**Step 5 — compare with the plain average.** The five estimates sum to $6.0 + 1.5 + 5.0 + 3.0 + 2.4 = 17.9$, so the plain average is 3.58 — nearly a full unit higher, because it lets the 36-person pilot push up as hard as the 900-person trial pulls down.
+
+**What it means.** Across 1,800 patients in five trials, the program lowered systolic blood pressure by about 2.8 mm Hg, and values from roughly 1.7 to 3.9 are consistent with what was seen. Two of the five could not alone rule out no benefit; together the five can. The effect looks real but modest — useful across a population, invisible to any one patient — and that pairing is what a careful meta-analysis is for.
+
+### The same reasoning, transferred
+
+Three trials tested a supervised walking program for older adults, measuring how much further a participant could walk in six minutes, in metres. Trial X enrolled 100 people and reported 45 metres with a standard error of 12. Trials Y and Z each enrolled 400 and reported 9 and 18 metres with standard errors of 6.
+
+What stayed the same: the outcome is a difference in means, weights are one over the squared standard error, and the combination is a weighted average. What changed: metres instead of mm Hg, and three studies instead of five.
+
+The raw weights are $1/12^2 = 1/144$ and $1/6^2 = 1/36$ twice. Relative to the smallest, that is 1, 4 and 4, so the shares are one-ninth, four-ninths and four-ninths. The combination is $(1 \times 45 + 4 \times 9 + 4 \times 18)/9 = (45 + 36 + 72)/9 = 153/9 = 17.0$ metres, against a plain average of $(45 + 9 + 18)/3 = 24.0$ metres. The same pattern appears: the small study with the eye-catching result loses most of its influence once precision decides the weights.
+
+## Second worked example — twelve published trials of a sleep supplement
+
+**Setting.** A student searching for evidence on a herbal sleep supplement finds twelve published trials. Each reports extra minutes of sleep per night compared with a placebo. They come in three sizes.
+
+| Group | How many | Standard error | Estimates (minutes) | Weight each |
+|---|---|---|---|---|
+| Large | 3 | 2 | 3, 5, 7 | 25 |
+| Mid-sized | 4 | 5 | 9, 11, 13, 15 | 4 |
+| Small | 5 | 10 | 15, 18, 21, 24, 27 | 1 |
+
+**Step 1 — where the weights come from.** A standard error of 2 against one of 10 is a ratio of five, and weight goes as the square, so one large trial is worth twenty-five small ones. Weights of 25, 4 and 1 keep the arithmetic whole.
+
+**Step 2 — combine all twelve.** The large estimates sum to $3 + 5 + 7 = 15$, the mid-sized to $9 + 11 + 13 + 15 = 48$, the small to $15 + 18 + 21 + 24 + 27 = 105$. The weighted total is $25(15) + 4(48) + 1(105) = 375 + 192 + 105 = 672$, and the weights themselves total $25(3) + 4(4) + 1(5) = 75 + 16 + 5 = 96$. The combined estimate is $672/96 = 7.0$ minutes.
+
+**Step 3 — notice who is carrying the plot.** The three large trials hold 75 of the 96 weight units, just over three-quarters. The five small trials hold 5 of 96, about one-twentieth, though they are nearly half the studies.
+
+**Step 4 — look at the funnel.** Plotted against their standard errors, the smaller trials fill only the right-hand side: every mid-sized and small trial sits above 7 minutes, while the large trials, with least room to wander, sit at 3, 5 and 7. Nothing occupies the bottom-left region where small trials with weak or negative results would fall.
+
+**Step 5 — combine the large trials on their own.** They have equal standard errors, so they get equal weight, and their combined estimate is $(3 + 5 + 7)/3 = 5.0$ minutes — two full minutes below the all-twelve figure of 7.0.
+
+**What it means.** The all-twelve result is pulled upward by exactly the studies with the least information, and the funnel suggests those are the surviving half of a larger, less flattering set. Adding all twelve narrows the diamond, but narrower is not more honest here. A careful reader reports that the larger trials suggest about five extra minutes a night, that the smaller published ones suggest more in a pattern consistent with unpublished negative results, and that five minutes is not much either way.
+
+## The misreading to avoid
+
+Here is the thought, in the words students actually use: *"Five separate studies all pointed the same way, and the combined interval is really narrow. That has to be settled."*
+
+The first half is reasonable. The second half goes wrong, because it treats a narrow interval as a measure of how *right* the studies were. It is not: an interval measures how much a result could have wobbled through the luck of the draw. It says nothing about whether the measurement was fair, whether the groups were comparable, or whether the studies you found are those that were run.
+
+Take the five blood pressure trials again and suppose all five made the same mistake: the nurse taking the final reading knew who had been in the program, and every estimate came out 2.0 mm Hg too high. Shifting every estimate down by 2.0 shifts the combination down by 2.0, so the true combined effect would be $2.80 - 2.00 = 0.80$ mm Hg and the interval would run from $1.67 - 2.00 = -0.33$ to $3.93 - 2.00 = 1.93$. That interval now includes zero. The confident, narrow-looking diamond was reporting a shared flaw with great precision.
+
+A second version of the same misreading runs the other way: *"The studies disagree, so meta-analysis proves nothing."* Disagreement is a finding, often the most useful one on the page. When five intervals share no common value, the responsible report describes the range and what separates the studies.
+
+So hold two habits together. Before trusting a diamond, ask what the studies had in common besides the treatment. Before dismissing a scattered plot, ask what the scatter says about who the treatment works for.
+
+## Practice on your own
+
+For self-checking. Work each with a calculator and finish with a sentence of interpretation.
+
+1. A forest plot shows four trials of a step-count app, with estimates and 95 percent intervals in extra steps per day: 900 (-400 to 2,200); 300 (-100 to 700); 450 (150 to 750); 380 (240 to 520). Which rows cross the line of no effect, and which carries the largest square? Say how you can tell without the sample sizes.
+
+2. Two trials estimate the same effect. Trial P reports 8 units with a standard error of 4; Trial Q reports 2 units with a standard error of 2. Compute the raw weights, turn them into shares adding to one, and combine. Then take the plain average of 8 and 2 and explain why the two differ.
+
+3. A meta-analysis of six observational studies of a vitamin and heart disease reports a combined relative risk well below one, with a narrow interval. All six compared people who chose to take the vitamin with people who did not. Write two sentences a careful reader should add before treating this as evidence that the vitamin protects the heart.
+
+4. A funnel plot of eighteen trials of a tutoring program is lopsided: the small trials sit almost entirely on the beneficial side and the bottom-left is empty. Give two explanations for that picture, only one of which is publication bias, and say what would decide between them.
+
+5. Five trials of a diet report 1.0, 1.5, 9.0, 2.0 and 8.5 kilograms lost, with intervals about one kilogram wide on each side. Should the report lead with a single combined number? Write the two-sentence summary you would give instead.
+
+## Where to read more
+
+Be aware of a limitation this week: meta-analysis is beyond the scope of both open texts this course uses, so **these notes are the primary reading for Week 14**. The chapters below support the pieces the method is built from — intervals, standard errors, group comparisons — rather than the synthesis itself.
+
+- [Confidence intervals with bootstrapping](https://openintrostat.github.io/ims/foundations-bootstrapping.html) — Chapter 12 of *Introduction to Modern Statistics*: what an interval is and where its width comes from. Every horizontal line in a forest plot is one.
+- [Inference for comparing two independent means](https://openintrostat.github.io/ims/inference-two-means.html) — Chapter 20, for the estimate and standard error behind each row of this week's main example.
+- [Inference for two-way tables](https://openintrostat.github.io/ims/inference-tables.html) — Chapter 18, for the categorical outcomes many forest plots summarise.
+- [Introduction to Modern Statistics](https://openintrostat.github.io/ims) — the whole book, if you want the interval chapters in order.
+- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — a second explanation, with health examples throughout.
+- [StatKey](https://www.lock5stat.com/statkey) — draw repeated samples of size 36 and of size 900 from one population and watch the small-sample estimates scatter far more. That scatter is why weighting exists.
+- The course [schedule](../schedule.qmd) and [resources](../resources/index.qmd) pages list what to read before Wednesday's meeting.
+
+## Where this goes next
+
+Week 15 is the last meeting of the term, and it reviews the whole course as one argument rather than a list of topics. Meta-analysis is a fitting place to arrive, because it puts every earlier week to work: how the data were produced decides whether a study belongs in the pile, a summary can compress away what matters, an association is still not a mechanism however often it is replicated, and chance is a rival explanation you can now quantify for a whole body of evidence.
+
+Before then it is worth rereading [Week 13](week13-categorical-outcomes.qmd), since most published forest plots summarise risk differences and risk ratios rather than differences in means. Then go on to [Week 15](week15-final-review.qmd) for the review, or back to the [notes index](index.qmd) for every weekly note.

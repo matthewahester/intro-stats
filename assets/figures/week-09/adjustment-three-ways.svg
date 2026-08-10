@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 552" width="900" height="552" role="img">
+  <title>Unadjusted and adjusted estimates in three studies</title>
+  <desc>Three panels. In each, the unadjusted estimate and the adjusted estimate for the same comparison are drawn on one axis with a zero line. The adjusted estimate shrinks toward zero in the first panel, grows in the second, and changes sign in the third.</desc>
+  <rect x="0" y="0" width="900" height="552" fill="#ffffff"/>
+  <text x="24" y="30" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1f2933" text-anchor="start" font-weight="bold">What adjustment does to one estimate</text>
+  <text x="24" y="52" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="start">Each panel shows the same comparison twice: once on its own, once with one more variable in the model.</text>
+  <text x="24" y="80" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="start" font-weight="bold">Blood pressure and daily walking, 300 adults at a clinic</text>
+  <line x1="180" y1="154" x2="180" y2="158" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="180" y="171" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-0.20</text>
+  <line x1="283.846" y1="154" x2="283.846" y2="158" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="283.846" y="171" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-0.15</text>
+  <line x1="387.692" y1="154" x2="387.692" y2="158" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="387.692" y="171" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-0.10</text>
+  <line x1="491.538" y1="154" x2="491.538" y2="158" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="491.538" y="171" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-0.05</text>
+  <line x1="595.385" y1="154" x2="595.385" y2="158" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="595.385" y="171" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0</text>
+  <line x1="699.231" y1="154" x2="699.231" y2="158" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="699.231" y="171" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.05</text>
+  <text x="450" y="192" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">change in blood pressure (mm Hg) per extra minute walked per day</text>
+  <line x1="180" y1="154" x2="720" y2="154" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="595.385" y1="94" x2="595.385" y2="154" stroke="#5b6672" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <text x="172" y="116" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="end">unadjusted</text>
+  <text x="172" y="142" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="end">adjusted for age</text>
+  <line x1="221.538" y1="112" x2="470.769" y2="112" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="221.538" y1="107" x2="221.538" y2="117" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="470.769" y1="107" x2="470.769" y2="117" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="346.154,107 351.154,112 346.154,117 341.154,112" fill="#2f6f9f"/>
+  <line x1="366.923" y1="138" x2="616.154" y2="138" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="366.923" y1="133" x2="366.923" y2="143" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="616.154" y1="133" x2="616.154" y2="143" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="491.538,133 496.538,138 491.538,143 486.538,138" fill="#c2622d"/>
+  <text x="346.154" y="101" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle" font-weight="bold">-0.12</text>
+  <text x="491.538" y="127" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#c2622d" text-anchor="middle" font-weight="bold">-0.05</text>
+  <rect x="736" y="106" width="148" height="38" fill="#eef2f6" rx="6" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="746" y="123" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start" font-weight="bold">shrinks toward</text>
+  <text x="746" y="138" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start" font-weight="bold">zero</text>
+  <text x="24" y="240" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="start" font-weight="bold">Vegetable servings and a nutrition counseling program</text>
+  <line x1="204.545" y1="314" x2="204.545" y2="318" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="204.545" y="331" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-0.5</text>
+  <line x1="327.273" y1="314" x2="327.273" y2="318" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="327.273" y="331" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0</text>
+  <line x1="450" y1="314" x2="450" y2="318" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="450" y="331" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.5</text>
+  <line x1="572.727" y1="314" x2="572.727" y2="318" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="572.727" y="331" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">1.0</text>
+  <line x1="695.455" y1="314" x2="695.455" y2="318" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="695.455" y="331" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">1.5</text>
+  <text x="450" y="352" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">difference in servings per day, enrolled minus not enrolled</text>
+  <line x1="180" y1="314" x2="720" y2="314" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="327.273" y1="254" x2="327.273" y2="314" stroke="#5b6672" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <text x="172" y="276" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="end">unadjusted</text>
+  <text x="172" y="302" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="end">adjusted for baseline diet</text>
+  <line x1="278.182" y1="272" x2="523.636" y2="272" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="278.182" y1="267" x2="278.182" y2="277" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="523.636" y1="267" x2="523.636" y2="277" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="400.909,267 405.909,272 400.909,277 395.909,272" fill="#2f6f9f"/>
+  <line x1="450" y1="298" x2="646.364" y2="298" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="450" y1="293" x2="450" y2="303" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="646.364" y1="293" x2="646.364" y2="303" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="548.182,293 553.182,298 548.182,303 543.182,298" fill="#c2622d"/>
+  <text x="400.909" y="261" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle" font-weight="bold">0.3</text>
+  <text x="548.182" y="287" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#c2622d" text-anchor="middle" font-weight="bold">0.9</text>
+  <rect x="736" y="266" width="148" height="38" fill="#eef2f6" rx="6" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="746" y="283" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start" font-weight="bold">grows</text>
+  <text x="24" y="400" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="start" font-weight="bold">Length of stay at two hospitals</text>
+  <line x1="196.875" y1="474" x2="196.875" y2="478" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="196.875" y="491" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-1.5</text>
+  <line x1="281.25" y1="474" x2="281.25" y2="478" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="281.25" y="491" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-1.0</text>
+  <line x1="365.625" y1="474" x2="365.625" y2="478" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="365.625" y="491" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">-0.5</text>
+  <line x1="450" y1="474" x2="450" y2="478" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="450" y="491" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0</text>
+  <line x1="534.375" y1="474" x2="534.375" y2="478" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="534.375" y="491" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">0.5</text>
+  <line x1="618.75" y1="474" x2="618.75" y2="478" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="618.75" y="491" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">1.0</text>
+  <line x1="703.125" y1="474" x2="703.125" y2="478" stroke="#5b6672" stroke-width="1" stroke-linecap="round"/>
+  <text x="703.125" y="491" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">1.5</text>
+  <text x="450" y="512" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">difference in days of stay, Hospital B minus Hospital A</text>
+  <line x1="180" y1="474" x2="720" y2="474" stroke="#5b6672" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="450" y1="414" x2="450" y2="474" stroke="#5b6672" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <text x="172" y="436" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="end">unadjusted</text>
+  <text x="172" y="462" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="end">adjusted for severity</text>
+  <line x1="500.625" y1="432" x2="669.375" y2="432" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="500.625" y1="427" x2="500.625" y2="437" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="669.375" y1="427" x2="669.375" y2="437" stroke="#2f6f9f" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="585,427 590,432 585,437 580,432" fill="#2f6f9f"/>
+  <line x1="298.125" y1="458" x2="433.125" y2="458" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="298.125" y1="453" x2="298.125" y2="463" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="433.125" y1="453" x2="433.125" y2="463" stroke="#c2622d" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="365.625,453 370.625,458 365.625,463 360.625,458" fill="#c2622d"/>
+  <text x="585" y="421" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#2f6f9f" text-anchor="middle" font-weight="bold">0.8</text>
+  <text x="365.625" y="447" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#c2622d" text-anchor="middle" font-weight="bold">-0.5</text>
+  <rect x="736" y="426" width="148" height="38" fill="#eef2f6" rx="6" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="746" y="443" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start" font-weight="bold">changes sign</text>
+  <text x="24" y="536" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="start">The bar through each marker is the range of values the output reports as consistent with the data.</text>
+</svg>

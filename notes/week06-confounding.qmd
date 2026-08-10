@@ -6,363 +6,244 @@ format:
     toc: true
     toc-depth: 3
     number-sections: false
-license: "Adapted in part from OpenIntro IMS (Çetinkaya-Rundel & Hardin) and OpenIntro ISLBS (Vu & Harrington), both under CC BY-SA 3.0. Course adaptations by Matt Hester."
 ---
 
-## Why this week matters
+## Where this week starts
 
-Last week we saw that two variables can move together — meat
-consumption and life expectancy across countries, height and weight
-in a clinic, exam-one scores and final course grades. We learned to
-read direction, form, and strength from a scatterplot, and to put a
-single number on the linear part of the relationship. We were also
-careful: an association is **not** a causal claim.
+Last week you learned to describe a relationship: put two variables on a scatterplot, say whether the cloud drifts up or down, judge how tightly it holds, attach a correlation. That is honest work, but it stops one question short. A relationship is a fact about the data. It is not yet an explanation.
 
-This week we make that caution concrete. The question that drives
-Week 6 is short and almost always worth asking:
+This week supplies the missing question, short enough to carry around in your head: **what else could explain this?** It is not asking whether the pattern is really in the data — you can see that it is. It is asking whether the two variables are tied to each other, or whether both are tied to some third thing you have not yet put in the picture.
 
-> **What else could explain the relationship between these two
-> variables?**
+Give that third thing a name. If a variable differs between the groups you are comparing, is related to the response on its own, *and* is not simply a step on the path from one to the other, it is a **confounding variable**, and a comparison that ignores it is partly a comparison of that variable instead. The main tool against it is blunter than it sounds: stop comparing everybody to everybody, and start comparing like with like.
 
-That "what else" almost always has a name. A third variable that is
-associated with **both** the explanatory variable and the response
-variable can pull them together in a way that has nothing to do
-with one causing the other. That third variable is called a
-**confounding variable** (or, equivalently, a **lurking variable**).
+Monday builds the vocabulary, Wednesday puts it on real-looking tables including the case where splitting the data reverses the conclusion, and Friday's quiz and applied case ask you to do it on a study you have not seen. By then, reading "patients at Clinic A did worse" should prompt a question about who those patients were rather than a verdict about the clinic.
 
-This week's habit is to stop, every time we see a striking
-association from observational data, and ask: *what's the third
-variable, and what would the picture look like inside a fairer
-comparison?* When we do that — when we compare within subgroups
-that share the confounder — the apparent relationship sometimes
-weakens, sometimes vanishes, and sometimes reverses direction
-entirely. The reversal case has its own name: **Simpson's paradox**.
+### Why this matters beyond the exam
 
-Two big cautions live on top of everything this week:
+A city newspaper ranks local hospitals by the share of surgery patients who survive the year. One hospital sits at the bottom. Readers avoid it, a health board threatens it, funding is cut. But that hospital is the regional referral centre: it takes the transfers and complications the others cannot handle. Its patients were sicker before anyone touched them. The table compares hospitals; what it partly measures is who walked through the door.
 
-- Stratification is a **descriptive** tool. Comparing within
-  subgroups does not, by itself, prove anything causal. It just
-  makes the comparison fairer with respect to the confounder we
-  know about.
-- "Adjusting for" a variable does not eliminate confounding in
-  general. You can only adjust for confounders you have measured
-  and thought to include. There can always be another one you
-  haven't named.
+This is the ordinary way a naive comparison goes wrong, and the costs are real: patients get steered toward whichever hospital is best at avoiding hard cases. The habit this week installs — *ask who is in each group before you compare the groups* — is worth more in daily life than any formula in the course.
 
-## Confounding: a definition we can use
+## What you will be able to do
 
-A **confounding variable** is a third variable that is associated
-with both the explanatory variable and the response variable in the
-relationship you are reading. When a confounder is present, an
-observed association between explanatory and response might be
-real and entirely **not** the explanatory variable's "fault" —
-the confounder pulled both of them.
+- State the three conditions a third variable must meet to confound a comparison, and check them against a described study.
+- Stratify a comparison: split the data by a third variable and redo the comparison inside each slice.
+- Recombine the slices into one adjusted comparison and say how far it sits from the unadjusted one.
+- Recognize Simpson's paradox when a pooled comparison points the opposite way from every split one, and explain the reversal by group sizes.
+- Read "adjusted for age and smoking status" and say what has been ruled out and what has not.
+- Give two reasons an adjusted comparison can still mislead.
 
-A short example that ISLBS uses, and that we'll reuse all term:
+## Words worth owning
 
-> A study tracks sunscreen use and skin-cancer rates and finds that
-> people who use **more** sunscreen are **more** likely to develop
-> skin cancer. Does sunscreen cause skin cancer?
+| Term | What it means in this course |
+|------|------------------------------|
+| Confounding variable | Differs between the groups compared, separately moves the response, and is not a step on the path between them, so part of the gap belongs to it |
+| Lurking variable | A confounder nobody has identified yet |
+| Stratum | One slice of the data defined by a value of the third variable |
+| Stratification | Splitting the data into strata and comparing separately inside each one |
+| Unadjusted comparison | The comparison on everybody at once, ignoring the third variable. Also called crude |
+| Adjusted comparison | The comparison after both groups are put on the same footing by reweighting strata |
+| Simpson's paradox | The extreme case where the pooled comparison points the opposite way from every stratum |
+| Residual confounding | Confounding that survives adjustment, because the variable was measured coarsely or not at all |
 
-Almost certainly not. The hidden third variable is **sun exposure**:
-people who spend more time in the sun both use more sunscreen and
-have more skin cancer. Sun exposure is associated with the
-explanatory variable (sunscreen use) **and** with the response
-(skin cancer), and it produces the apparent association by itself.
+## What makes a variable a confounder
 
-That is the entire shape of a confounder. Two associations meeting
-at a third variable.
+### Three conditions, checked one at a time
 
-A practical version of the test: when you see an observational
-association, name a candidate confounder out loud. *Wealth* for
-country-level health comparisons. *Age* for almost anything in
-medicine. *Severity of disease at baseline* for treatment
-comparisons. *Time of day*, *experience*, *adherence*. Many of the
-honest sentences in statistics start with *we cannot rule out…*.
+Students meeting this idea often start objecting to every comparison they see. "But they didn't account for shoe size." That objection is true and useless. Three things must hold at once before a third variable can distort a comparison.
 
-## Stratification: compare within, not across
+**One: it differs between the groups being compared.** If two clinics see the same mix of wound severities, severity cannot explain any part of the gap between them, however powerfully it affects healing. A balanced variable has nothing to explain.
 
-When we suspect a confounder, the basic descriptive move is to
-compare the explanatory and response variables **within** levels of
-the confounder — that is, to **stratify**. Strata are subgroups
-defined by the confounder: age cohorts, income brackets, hospital
-sites, treatment-adherence bands.
+**Two: it is related to the response on its own.** Suppose the clinics really do see very different mixes of shoe size. If shoe size has nothing to do with healing, that imbalance is harmless. An imbalance matters only when the imbalanced thing moves the response.
 
-The picture inside each stratum is a fairer comparison than the
-overall picture, because the confounder is held roughly constant
-inside the stratum. If the explanatory–response relationship is
-similar inside each stratum, the overall pattern is not just a
-confounding artifact. If the relationship inside each stratum is
-much weaker than the overall pattern — or runs the other way —
-we have evidence the overall pattern was driven by the confounder.
+**Three: it is not a step on the path from the explanatory variable to the response.** Suppose Clinic A heals better *because* its nurses irrigate wounds more thoroughly. Thoroughness is not a rival explanation — it is how the clinic difference happens. A variable on that path is a **mediator**, and adjusting for one subtracts out part of the thing you wanted to see.
 
-A few honest things to say about stratification before we use it on
-real cases:
+Conditions one and two make confounding possible; condition three keeps adjustment from destroying a real finding. When you hear an objection to a study, ask which of the three is being claimed — and check condition one against the numbers the report already prints.
 
-- It is **descriptive**, not magic. It does not "prove" causation
-  in the way an experiment can.
-- It only addresses **the confounder you stratified on**. The
-  Wk 6 sunscreen-and-skin-cancer story stratifies on sun
-  exposure. It still doesn't rule out, say, skin type as a
-  separate confounder.
-- It needs **enough cases in each stratum** to compare. Stratifying
-  too finely yields strata with two or three observations, where
-  any apparent pattern is mostly noise.
+### The picture the conditions describe
 
-We will not formalize this further. The Week 9 lesson on
-multivariable models will return to "after accounting for X" with a
-proper modeling tool. This week we keep the move at the level of
-**look at the picture inside each subgroup, and compare**.
+![A clean comparison beside a confounded one, with the three conditions listed.](../assets/figures/week-06/confounding-diagram.svg){fig-alt="Two diagrams. On the left a single arrow runs from which clinic to whether the wound healed. On the right, wound severity points at both, so part of the clinic gap is a severity gap. Three conditions for a confounder appear below."}
 
-## Simpson's paradox: when the strata disagree with the whole
+On the left, one arrow. The only systematic difference between the two groups of patients is which clinic treated them, so the whole gap in healing belongs to the clinics. On the right, a second variable feeds both boxes: severity helps decide which clinic a patient reaches, and separately affects whether the wound heals. What you measure is now a clinic effect and a severity effect tangled together, and the two-variable table cannot separate them.
 
-The cleanest single illustration of confounding in this course is
-**Simpson's paradox**: a relationship between two variables in one
-direction reverses when a third variable is taken into account.
+The right-hand picture is a warning label, not a verdict. It does not say the clinics are identical, only that the observed gap is not clean.
 
-The reading exercise is to look at one scatterplot of two
-numerical variables, see a clear trend, then look at the same
-scatterplot colored by a third variable and watch the trend within
-each colored group go the opposite way. The single best worked
-example in the course's source materials is the Paralympic 1500m
-case study (IMS Ch 3).
+### Confounding belongs to a comparison, not to a variable
 
-![Two scatterplots of Men's 1500m gold-medal race time against year, for Olympic and Paralympic (T11, visually impaired) athletes. Left: an overall trend line for the combined data appears to slope **upward** — later races appear to be slower on average. Right: with the same data split by race type, the within-group trends both slope **downward** — within each type of race, athletes have gotten faster over time. *Illustrative reconstruction of the shape of `openintro::paralympic_1500` Men's 1500m gold-medal records (the figure-generation script swaps in the real `openintro::paralympic_1500` data automatically when that R package is installed).*](../assets/figures/wk06_paralympic_simpsons.png){fig-alt="Two scatterplots side by side. The left plot shows year on the x-axis and 1500m time on the y-axis with a single trend line that slopes upward across the combined data. The right plot shows the same data colored by race type — Olympic and T11 — with two separate downward-sloping trend lines, one per group."}
+It is tempting to file "age" away as a confounder and be done. Resist that. Age is a confounder *for a particular comparison in a particular study*. If your two groups happen to have identical age distributions, age confounds nothing here, even though it predicts almost every health outcome there is.
 
-What's going on? The two race types are imbalanced in three ways
-that together create the reversal:
+This is also where Week 2 comes back. Random assignment balances every background variable at once, on average — including the ones nobody measured or even thought of. That is why a randomized experiment leans far less on this week's machinery — any one trial can still come out imbalanced — and why this week is the repair work observational studies require.
 
-- There are **more** Olympic data points than T11 data points.
-- T11 times are **slower on average** than Olympic times (because
-  the athletes are running with severe visual impairment).
-- T11 races started **later in history** than the Olympic 1500m.
+## Comparing like with like
 
-In the overall cloud, the recent years are pulled upward by the
-T11 points being concentrated there and being slower. When we
-**look within each race type**, the year-by-year pattern is what
-you would expect: both groups have gotten faster.
+### Stratify first: split, then compare inside each slice
 
-The honest summary is the **stratified** one. Within each race
-type, athletes have gotten faster over time. The overall trend was
-misleading — it was driven by the composition of the data, not by
-the relationship between year and time within either type of race.
-That is the textbook shape of Simpson's paradox.
+The fix is unglamorous and it works: stop comparing everybody. Split the data by the suspected confounder and make the comparison separately inside each slice. Within "minor wounds only", both clinics are treating minor wounds, so severity cannot be doing any of the work.
 
-## A clinical worked example: the California DDS case
+Stratification is a discipline rather than a formula: name the variable that most plausibly differs between the groups, then look at the comparison inside its levels. Usually that means reading a table one row deeper than you were about to.
 
-A second example, from a different domain, makes the same point
-with hard numbers — and was the basis of an actual
-ethnic-discrimination allegation against a state agency.
+### Then put the slices back together
 
-The **California Department of Developmental Services (DDS)**
-allocates state funds to consumers with developmental disabilities.
-A team of researchers compared mean annual expenditures across
-ethnic groups, restricted the comparison to the two largest groups,
-and found:
+Stratified results are honest but awkward: you wanted one number and now you have several. The standard move is to combine them into a single **adjusted** comparison — a weighted average across strata that uses the *same* weights for both groups.
 
-| Group | Mean annual DDS expenditures |
-|---|---:|
-| Hispanic consumers | **\$11,066** |
-| White non-Hispanic consumers | **\$24,698** |
-| Crude gap | **\$13,632** in favor of White non-Hispanic consumers |
+$$ \text{adjusted rate} = w_1 \times (\text{rate in stratum one}) + w_2 \times (\text{rate in stratum two}) $$
 
-On its face, that is a large and alarming gap. An allegation of
-ethnic discrimination was brought.
+In words: pick a common mix of strata, with $w_1 + w_2 = 1$, then ask what each group's rate would have been facing that mix. The weights usually come from combining both groups, so the target is everybody in the study — and any difference between the adjusted numbers is one the mix cannot manufacture.
 
-Now bring in the obvious third variable. The DDS gives **more
-support to older consumers**, because older consumers have more
-expensive needs. And in this dataset, **Hispanic consumers skew
-younger than White non-Hispanic consumers** — more than half of
-Hispanic consumers in the sample were under 18, while a third of
-White non-Hispanic consumers were in the 22–50 cohort and another
-one-sixth were 51 and older.
+::: {.callout-note}
+Adjustment never changes the rate inside a stratum — those are what they are. It changes only the weights used to average them. Do not think of it as correcting the data; think of it as averaging both groups over the same mix.
+:::
 
-If we compare **inside** each age cohort instead of across the
-whole dataset, the picture changes completely.
+### What "adjusted for age" is telling you
 
-![The DDS mean-expenditure gap between Hispanic and White non-Hispanic consumers is enormous overall (left, in the dark gray bars) but essentially disappears once the comparison is made within age cohorts (right). The crude $13,632 gap becomes within-cohort differences of −$26, −$260, −$51, +$173, −$736, −$2,915 — and Hispanic averages are actually higher than White non-Hispanic averages in five of the six cohorts. *Data: California DDS, attribute-altered for privacy (oibiostat::dds.discr).*](../assets/figures/wk06_dds_stratified.png){fig-alt="Side-by-side bar plot. Left panel: two tall bars showing overall mean expenditures of about $11,066 for Hispanic and $24,698 for White non-Hispanic consumers. Right panel: six paired bars by age cohort, with the within-cohort differences essentially zero."}
+When a report says a comparison is "adjusted for age", read it as this sentence: *the researchers put the groups on the same age footing and then compared them.* That is a real accomplishment and a narrow one. It says nothing about income, smoking, or prior illness, and nothing about how finely age was handled — two broad bands is far weaker than single years.
 
-The honest reading is straightforward. The crude gap was real, but
-it was driven almost entirely by the **age** difference between
-the two populations, not by ethnicity. Within any given age
-cohort, expenditures for Hispanic consumers and White non-Hispanic
-consumers are nearly identical, and in most cohorts the Hispanic
-average is in fact slightly higher.
+So when you meet "adjusted for age and sex" in an abstract, the useful follow-up questions are: adjusted how finely, and what was left out?
 
-This is the analytical move at the heart of Week 6: **the
-unadjusted comparison and the within-cohort comparison can give
-opposite answers, and the within-cohort comparison is the fairer
-one when the confounder is real**. (And, again, this descriptive
-investigation does not by itself "prove" there is no discrimination
-— a separate model could ask harder questions, and a fuller analysis
-of this same example appears later in the course. But on the data we
-have, the crude headline overstated what the comparison supports.)
+## Worked example — Two clinics whose ranking reverses
 
-## A second look at meat and life expectancy
+**Setting.** A city health department reviews wound care at two urgent-care clinics. Each treated 300 patients with a stitched wound. The response is whether the wound healed without a return visit. At intake, before treatment, every wound was recorded as minor or serious.
 
-Week 5 ended with the same caution at the level of a country-level
-scatterplot. Higher per-capita meat consumption was associated
-with higher life expectancy, with a moderately strong correlation
-of about $r \approx 0.7$. The obvious third variable was
-**wealth**: richer countries consume more meat and have better
-health systems.
+| Clinic | Minor wounds | Serious wounds | All patients |
+|--------|--------------|----------------|--------------|
+| Clinic A | 81 healed of 90 | 126 healed of 210 | 207 healed of 300 |
+| Clinic B | 204 healed of 240 | 33 healed of 60 | 237 healed of 300 |
 
-Stratifying by income bracket does what the DDS table did, only
-gentler.
+**Step one — the unadjusted comparison.** Clinic A healed 207 of 300, or 69 percent. Clinic B healed 237 of 300, or 79 percent. Clinic B leads by ten percentage points. If the report stopped here, Clinic A would be the one in trouble.
 
-![Top: the country-level scatterplot of life expectancy against per-capita meat consumption with the overall trend (Week 5). Bottom: the same scatterplot faceted into low-, middle-, and high-income brackets. The aggregate upward trend largely flattens within income bracket — most of the apparent relationship was income doing the work. *Data: You et al., 2022, country-level averages.*](../assets/figures/wk06_meat_by_income.png){fig-alt="Two-panel figure. Top panel: aggregate scatterplot of life expectancy against per-capita meat consumption, with a clear positive trend. Bottom panel: same data split into three side-by-side scatterplots labeled low, middle, and high income, with the within-bracket trends much flatter than the aggregate."}
+**Step two — stratify.** Among minor wounds: Clinic A healed 81 of 90, or 90 percent, Clinic B 204 of 240, or 85 percent. Among serious wounds: Clinic A healed 126 of 210, or 60 percent, Clinic B 33 of 60, or 55 percent. Clinic A leads by five percentage points in each slice.
 
-Inside each income bracket, the scatterplot is much flatter than
-the overall picture. **Most of what looked like "meat consumption
-is associated with life expectancy" was income doing the work.**
-That doesn't mean meat consumption has zero relationship with life
-expectancy; it means the crude relationship overstated the
-relationship by ignoring the obvious confounder.
+![Clinic B leads overall, yet Clinic A leads inside both severity groups.](../assets/figures/week-06/stratified-comparison.svg){fig-alt="Paired bars of healing rates. Pooled, Clinic A is 69 percent and Clinic B is 79 percent. Among minor wounds A is 90 and B is 85; among serious wounds A is 60 and B is 55. The ranking reverses when the data are split."}
 
-That is the Week 5 → Week 6 continuity for this term: the same
-dataset answers two different questions. Week 5 asked *are they
-associated?* and the answer was yes. Week 6 asks *what else is
-going on?* and a large chunk of the association turns out to be a
-third variable.
+**Step three — check the three conditions.** Severity differs between the clinics: 210 of Clinic A's 300 wounds are serious, or 70 percent, against 60 of Clinic B's 300, or 20 percent. Severity moves healing on its own: the rate falls from 90 to 60 percent inside Clinic A and from 85 to 55 inside Clinic B. And it is not a step on the path from clinic to healing, because it was recorded at intake. All three hold.
 
-## A useful plain-English phrasing
+**Step four — adjust.** Pool the caseloads for a common mix: 90 plus 240 gives 330 minor wounds, and 210 plus 60 gives 270 serious, out of 600. The weights are 0.55 and 0.45. Score each clinic against that same mix.
 
-You will see the next sentence in many forms throughout the term:
+$$ \text{Clinic A} \colon \; 0.55 \times 0.90 + 0.45 \times 0.60 = 0.495 + 0.270 = 0.765 $$
 
-> *Looking at the association between X and Y alone, the data
-> suggest [some apparent effect]. After accounting for Z, the
-> apparent effect [shrinks / disappears / reverses].*
+$$ \text{Clinic B} \colon \; 0.55 \times 0.85 + 0.45 \times 0.55 = 0.4675 + 0.2475 = 0.715 $$
 
-The word **"alone"** flags the **crude / unadjusted** view. The
-phrase **"after accounting for"** (or **"after adjusting for"**)
-flags the **stratified / adjusted** view. A formal modeling tool
-for this kind of accounting arrives later; this week we keep the
-move descriptive. The verbal habit is exactly the same honest move:
+Adjusted for severity, Clinic A heals 76.5 percent against Clinic B's 71.5 — a lead of five percentage points, the same five it held inside each slice. That must happen when both slices show the same gap: a weighted average of five and five is five.
 
-> *Looking at past bankruptcy alone, borrowers with a past
-> bankruptcy paid about 0.74 percentage points more in interest on
-> average. After accounting for the borrower's other
-> characteristics — debt-to-income ratio, credit utilization,
-> whether their income source was verified — that gap shrinks to
-> about 0.39 points.* (IMS Ch 8.)
+**Step five — what it means.** Unadjusted, Clinic A trails by ten percentage points; on the same mix of wounds, it leads by five. Both are correct, and they describe different things. The pooled table says what happened to the patients each clinic actually saw. The adjusted comparison says how the clinics did on comparable wounds — what a patient choosing a clinic wants to know.
 
-Same move, same honest sentence. We are reading the descriptive
-shape of confounding here. Week 9 will give us a tool that does
-this kind of accounting in a more general way.
+The reversal stops being mysterious the moment you look at the mix.
 
-## Common mistakes
+![The pooled rate is a weighted average, pulled toward whichever wounds the clinic mostly sees.](../assets/figures/week-06/mixing-explains-reversal.svg){fig-alt="A percentage axis with one lane per clinic. Clinic A, seeing 70 percent serious wounds, has rates of 60 and 90 and pools to 69, near the lower rate. Clinic B, seeing 80 percent minor wounds, has 55 and 85 and pools to 79."}
 
-These come up every Week 6 and are worth heading off now.
+Each clinic's pooled rate is the average of its own two rates, weighted by its own caseload. Clinic A is 70 percent serious, so 0.30 times 90 plus 0.70 times 60 gives 69, close to its serious-wound rate. Clinic B is 80 percent minor, so 0.80 times 85 plus 0.20 times 55 gives 79. Clinic A's higher rates are averaged over a harder caseload and lose. Nothing was faked; an average moves when its weights move.
 
-- **"Confounder = anything that affects the outcome."** No. A
-  confounder must be associated with **both** the explanatory and
-  the response variable. Sun exposure is associated with both
-  sunscreen use and skin cancer; *that* is what makes it a
-  confounder. A variable that only affects the outcome but is not
-  associated with the explanatory variable is not a confounder.
-- **"If we control for one variable, the analysis is now
-  correct."** It is **fairer with respect to that one variable**.
-  Other confounders may still be hiding.
-- **"Simpson's paradox is rare or weird."** It is common any time
-  the subgroups have different compositions on the third variable
-  — different age mixes, different baseline severities, different
-  recruitment windows. The Paralympic case, the DDS case, the
-  Florence Nightingale hospital-mortality story, the airline
-  on-time-arrival story (IMS Ch 4 exercises), and the meat-by-
-  income story are five examples in our own source material
-  alone.
-- **"The overall comparison must be wrong if a stratified
-  comparison disagrees."** Not always. Whether the overall or the
-  stratified answer is the right one to report depends on the
-  question. The overall trend is the right summary if the
-  composition of the data **is** the question you care about. The
-  stratified version is the right summary if the question is
-  about the explanatory–response relationship *for a comparable
-  person.* In practice, the stratified version is what most
-  scientific and policy questions need.
-- **"Stratifying eliminates confounding."** Only with respect to
-  the variable you stratified on. There can always be another
-  one.
+### The same reasoning, transferred
 
-## What you should be able to do by Friday
+A university health clinic tests two appointment reminders. Six hundred appointments were reminded, 300 by text message and 300 by phone call, and the response is whether the patient arrived. The third variable is whether the appointment was a first visit or a follow-up, because first visits are missed more often and staff had been using text mainly for them.
 
-By the end of Week 6 you should be able to:
+By text, 150 of 200 first visits arrived, or 75 percent, and 90 of 100 follow-ups, or 90 percent; overall 240 of 300, or 80 percent. By phone, 70 of 100 first visits arrived, or 70 percent, and 170 of 200 follow-ups, or 85 percent; overall 240 of 300, again 80 percent.
 
-- **Define confounding** in plain language, using the
-  sun-exposure / sunscreen / skin-cancer example or another short
-  case.
-- **Identify a plausible confounder** in a short observational
-  scenario, and explain why it satisfies the "associated with
-  both" definition.
-- **Read a crude comparison and a stratified comparison side by
-  side** and describe what changes.
-- **Recognize Simpson's paradox** when the overall direction of an
-  association reverses (or vanishes) inside subgroups, and explain
-  what about the subgroup composition produced it.
-- **Use the phrasing distinction:** *the association between X and
-  Y alone…* vs *after accounting for Z…*, and recognize when a
-  reported "effect" is a crude versus an adjusted one.
+Pooled, the two reminders look identical. Split, text leads by five percentage points in both slices. Adjusting confirms it: combined, there are 300 first visits and 300 follow-ups, so both weights are one half, giving text an adjusted 82.5 percent against phone's 77.5 percent.
 
-## Assignments this week
+What stayed the same: a third variable that differed between the groups and moved the response on its own, and the same split-then-reweight arithmetic. What changed: the pooled comparison did not reverse — it *vanished*. Confounding does not always flip a sign; far more often it hides a real difference, shrinks one, or inflates one. A pooled zero is not evidence of no difference.
 
-- **Monday check.** A short concept check on the definition of
-  confounding and identifying a third variable in a one-paragraph
-  scenario. Aim for about **3–5 minutes** in class. Sheet:
-  [Week 6 Monday exit ticket](../assets/assignments/week06_monday_exit_ticket_student.pdf).
-- **Wednesday check.** A short application on reading a crude vs
-  stratified comparison: an aggregate-vs-grouped scatterplot or a
-  cohort-stratified table, and describing what changes and why.
-  Aim for about **8–12 minutes** in class. Sheet:
-  [Week 6 Wednesday exit ticket](../assets/assignments/week06_wednesday_exit_ticket_student.pdf).
-- 🔒 **Friday quiz** — handled through Blackboard or in class as
-  directed. The quiz prompt is not posted here. Exact timing and
-  submission details live in Blackboard.
-- 🔒 **Homework 3 (biweekly, Weeks 5–6)** — posted and submitted
-  through Blackboard. Due near the start of Week 7; exact due date
-  is on Blackboard.
+## Second worked example — A walking program and an age gap
 
-## Read more in IMS / ISLBS
+**Setting.** A community health centre offered a free walking group for one season and followed 300 adults: 120 joined and 180 did not. The response is numerical this time — average systolic blood pressure in mmHg at the end of the season. Age was recorded in two bands, under 55 and 55 and over. Spread inside each band was roughly twelve mmHg.
 
-The course page above is the main explanation for this week. If you
-want a second voice on the same material, these readings cover the
-same concepts at similar depth:
+| Group | Under 55 | 55 and over | Everyone |
+|-------|----------|-------------|----------|
+| Walking group | 90 adults, mean 124 | 30 adults, mean 136 | 120 adults, mean 127.0 |
+| No walking group | 45 adults, mean 128 | 135 adults, mean 140 | 180 adults, mean 137.0 |
 
-- **IMS — Chapter 3 ("Applications: Data"), §3.2 Simpson's
-  paradox.** The Paralympic 1500m case study in IMS is the same
-  one used above. \
-  IMS also touches the *adjusted vs unadjusted* idea qualitatively
-  in **Chapter 8, §8.1–§8.2** (Lending Club bankruptcy / verified
-  income). Read those passages for the *narrative* only — the
-  regression mechanics return in Weeks 8 and 9. \
-  [Hosted IMS book](https://openintro-ims.netlify.app/)
-- **ISLBS — *Introductory Statistics for the Life and Biomedical
-  Sciences*, Chapter 1 §1.7.1 *Case study: discrimination in
-  developmental disability support*.** This is the DDS case used
-  above, with the full set of figures and tables. §1.3 of the
-  same chapter introduces the confounding vocabulary with the
-  sunscreen example. \
-  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
+**Step one — the unadjusted comparison.** For the walking group, 90 times 124 plus 30 times 136 gives 15,240, and dividing by 120 gives 127.0. For the others, 45 times 128 plus 135 times 140 gives 24,660, divided by 180 gives 137.0. The walking group averages 10.0 mmHg lower.
 
----
+**Step two — is age a confounder here?** It differs between the groups: 90 of 120 walkers are under 55, or 75 percent, against 45 of 180 non-walkers, or 25 percent. It moves the response on its own: the mean rises from 124 to 136 across the bands inside the walking group and from 128 to 140 inside the other. And it is not on the causal path, since joining a walking group does not change how old you are.
 
-*Sources adapted in this lesson:* OpenIntro *Introduction to Modern
-Statistics* (2e), Çetinkaya-Rundel & Hardin, Chapter 3
-(*Applications: Data*), §3.2 *Simpson's paradox* (Paralympic 1500m
-case study), and Chapter 8 (*Linear regression with multiple
-predictors*), §8.1–§8.2 qualitative confounding framing, both CC
-BY-SA 3.0; and OpenIntro *Introductory Statistics for the Life and
-Biomedical Sciences*, Vu & Harrington, Chapter 1 §1.3 *Data
-collection principles* (confounding vocabulary, sunscreen example)
-and §1.7.1 *Case study: discrimination in developmental disability
-support* (the DDS case), CC BY-SA 3.0. Source files at
-[github.com/openintrostat/ims](https://github.com/openintrostat/ims)
-and
-[github.com/OI-Biostat/oi_biostat_text](https://github.com/OI-Biostat/oi_biostat_text).
-The Paralympic 1500m data are publicly available from the
-International Paralympic Committee and are packaged as
-`paralympic_1500` in the openintro R package. The California DDS
-data are based on real attributes of the state's
-developmental-services consumers and have been altered to maintain
-privacy; the version used above is `dds.discr` in the oibiostat R
-package. The meat-and-life-expectancy data are real, from You W. et
-al., *BMC Nutrition* 8 (2022), as in Week 5.
+**Step three — stratify.** Under 55, the difference is 124 minus 128, or 4.0 mmHg lower for walkers. At 55 and over, 136 minus 140, again 4.0 lower. The gap inside each band is far smaller than the gap overall.
+
+**Step four — adjust.** Combined, there are 135 adults under 55 and 165 at 55 and over, out of 300, so the weights are 0.45 and 0.55.
+
+$$ \text{walking group} \colon \; 0.45 \times 124 + 0.55 \times 136 = 55.8 + 74.8 = 130.6 $$
+
+$$ \text{no walking group} \colon \; 0.45 \times 128 + 0.55 \times 140 = 57.6 + 77.0 = 134.6 $$
+
+The age-adjusted difference is 130.6 minus 134.6, or 4.0 mmHg lower for walkers.
+
+**Step five — what it means.** A report prints both numbers together, because the pair says far more than either alone.
+
+```
+Comparison : walking group versus no walking group
+Outcome    : systolic blood pressure, mmHg
+
+                             Difference    Plausible range
+Unadjusted                        -10.0    -12.8 to  -7.2
+Adjusted for age band              -4.0     -7.2 to  -0.8
+```
+
+![Adjusting for age shrinks the blood pressure gap without reversing it.](../assets/figures/week-06/adjusted-versus-unadjusted.svg){fig-alt="A difference axis in mmHg with a dashed line at zero. The unadjusted difference is 10 lower, with a bar from about 13 to 7 below zero. Adjusted for age band it is 4 lower, with a bar from about 7 to 1 below zero."}
+
+Both estimates point the same way, so age does not reverse this comparison the way severity reversed the clinic one. But age accounts for most of the raw gap: of the ten mmHg, roughly six were the age difference between joiners and non-joiners, and roughly four survive adjustment. The ranges say how far each number might reasonably sit from the truth; Week 11 shows where they come from. Notice the adjusted estimate is smaller and less certain: when the groups are unevenly spread across the bands, as they are here, adjustment often costs precision.
+
+Written for a non-technical reader: *adults who joined the walking group had systolic blood pressure about four mmHg lower than adults who did not, once the groups were put on the same age footing. Because people chose whether to join, this shows an association and does not establish that walking caused the difference.*
+
+## What adjustment cannot repair
+
+**You can only adjust for what you measured.** If the health centre never recorded smoking, no arithmetic will remove smoking from the comparison. That is the flat ceiling on every observational study, and it is why "we adjusted for many variables" is a weaker sentence than it sounds.
+
+**You can only adjust as finely as you measured.** The walking study used two age bands. Inside "55 and over" the walkers might average 58 while the non-walkers average 71 — an age gap of thirteen years the adjustment never touched, because both sit in the same band. Whatever confounding survives is called residual confounding, and coarse categories are its commonest source.
+
+**Adjusting for the wrong variable does damage.** Suppose walking lowers blood pressure partly by lowering body weight. Then end-of-season weight sits on the causal path, and "adjusted for weight" would subtract out part of the program's real effect, making a working program look useless. Before adjusting, ask whether the variable was fixed before the comparison or could have been changed by it.
+
+None of this is a reason to give up on adjustment, only to report it precisely and keep the word *associated* in your conclusion until a randomized study earns a stronger verb.
+
+## The misreading to avoid
+
+Here is the sentence to watch for, and it will be said out loud this week:
+
+> "They adjusted for age, so now it's a fair comparison — walking really does lower blood pressure."
+
+The first half is nearly right and the second half does not follow. Adjusting for age removed the part of the gap that age accounted for, and nothing else. People who volunteer for a walking group also tend to sleep better, smoke less, and have the kind of schedule that permits a daily walk — none of which were measured, so none adjusted for. An adjusted association is still an association. The verb *lower* is causal, and this study has not earned it. Write "was associated with about four mmHg lower blood pressure, adjusted for age band" and you have said everything the data support.
+
+A second misreading appears whenever a table reverses:
+
+> "The pooled table says Clinic B is better and the split tables say Clinic A is better, so one of them must be wrong."
+
+Neither is wrong. Both are correct arithmetic about different quantities. The pooled rate describes what happened to the patients each clinic actually saw, mix and all. The stratified rates describe how each clinic did on comparable wounds. If your question is "how did this clinic's patients fare?", the pooled number is honest. If it is "which clinic should I go to with a serious wound?", the stratified number is. Statistics will not choose your question for you.
+
+And a third, which is more a mood than a claim:
+
+> "Simpson's paradox proves you can make numbers say anything."
+
+No. A pooled summary is a weighted average, and averages move when their weights move. Once you look at the mix, the reversal is not merely explainable — it is predictable. The paradox lives in our expectations, not in the arithmetic, and the remedy is always available: look at the mix.
+
+## Practice on your own
+
+These are for your own checking, not for submission. Work them with pencil and paper.
+
+1. A campus recreation centre reports that students who use the climbing wall get fewer winter colds. Name the third variable you think most plausibly confounds this comparison and argue for each of the three conditions. Then name a variable that fails condition two.
+
+2. A driving school compares two training programs on whether new drivers passed the road test on the first attempt. Compute each program's unadjusted pass rate, then each rate within route type, then the adjusted rates using the combined route counts as weights. Say which program you would recommend and why.
+
+| Program | Easy route | Hard route |
+|---------|-----------|------------|
+| Program P | 45 passed of 50 | 60 passed of 100 |
+| Program Q | 80 passed of 100 | 28 passed of 50 |
+
+3. An abstract reports: "After adjustment for age, sex, and household income, the association was attenuated but persisted." Write two sentences for a non-technical reader — one saying what has been ruled out, one saying what has not.
+
+4. An observational study of a diabetes education program adjusts for participants' end-of-program diet quality, then reports almost no benefit. Using condition three, decide whether that adjustment was appropriate, and say what the adjusted number now estimates.
+
+5. Invent your own reversal. Hold four rates fixed: Group One heals 80 percent of mild cases and 40 percent of severe ones; Group Two heals 70 percent and 30 percent. Choose caseloads so the pooled comparison favours Group Two, then state the rule you used.
+
+## Where to read more
+
+- [Introduction to Modern Statistics, Chapter 2: Study design](https://openintrostat.github.io/ims/data-design.html) — where confounding is introduced. Reread the observational-study sections alongside your Week 2 notes.
+- [Introduction to Modern Statistics, Chapter 8: Linear regression with multiple predictors](https://openintrostat.github.io/ims/model-mlr.html) — the formal machinery behind adjustment. Read it for the concept, not the algebra; Week 9 returns for the details.
+- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — its study design material carries several health examples of confounding.
+- [The whole of Introduction to Modern Statistics](https://openintrostat.github.io/ims), if you want to browse ahead.
+- Course pages: [the resources list](../resources/index.qmd) and [the schedule](../schedule.qmd).
+
+## Where this goes next
+
+Week 5 handed you a relationship; this week handed you the question that tests it. [Week 7](week07-synthesis-midterm.qmd) is a consolidation week: you will read one invented study front to back — design, cases and variables, one-variable summaries, group comparison, association, confounding check — and write a conclusion with its qualifications attached.
+
+Further out, this week is the ancestor of [Week 9](week09-multiple-logistic-regression.qmd). Multiple regression is stratification done all at once, across many variables, including numerical ones you could never split into tidy slices — and "holding the other variables fixed" does exactly the job the common weights did here.
+
+You can reach every unit from [the course home page](../index.qmd), and last week's material is at [Week 5](week05-association.qmd).

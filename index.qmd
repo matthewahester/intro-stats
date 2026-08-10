@@ -28,10 +28,5 @@ public.
 - [Schedule](schedule.qmd) — week-by-week topic map with links to the
   weekly notes
 - [Notes](notes/index.qmd) — weekly notes and conceptual write-ups
-- [Activities](activities/index.qmd) — how in-class activities work
-  (most are embedded in the weekly notes)
-- [Assignments](assignments/index.qmd) — index of the public weekly
-  exit tickets
-- [Projects](projects/index.qmd) — public project orientation
 - [Resources](resources/index.qmd) — readings, tools, and links
   (IMS, ISLBS, and StatKey / simulation support)

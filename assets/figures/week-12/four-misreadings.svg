@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" role="img">
+  <title>Four things a p-value does not say</title>
+  <desc>Four panels. Each shows a sentence students write about a p-value in red, with the correction underneath in dark text.</desc>
+  <rect x="0" y="0" width="900" height="500" fill="#ffffff"/>
+  <text x="450" y="32" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1f2933" text-anchor="middle" font-weight="bold">Four things a p-value does not say</text>
+  <text x="450" y="54" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">The study: 148 of 200 arrivals on time, against an advertised rate of 0.80</text>
+  <rect x="44" y="84" width="400" height="190" fill="#eef2f6" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="60" y="110" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">A student writes</text>
+  <text x="60" y="132" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">There is a 1.7 percent chance the agency's</text>
+  <text x="60" y="150" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">claim is true.</text>
+  <line x1="60" y1="164" x2="428" y2="164" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round"/>
+  <text x="60" y="184" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">What the number really says</text>
+  <text x="60" y="204" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">The 0.017 was computed by assuming the claim is</text>
+  <text x="60" y="220.5" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">true. A number that starts from an assumption</text>
+  <text x="60" y="237" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">cannot also measure how likely that assumption</text>
+  <text x="60" y="253.5" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">is.</text>
+  <rect x="456" y="84" width="400" height="190" fill="#eef2f6" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="472" y="110" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">A student writes</text>
+  <text x="472" y="132" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">There is a 98.3 percent chance the on-time</text>
+  <text x="472" y="150" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">rate is lower.</text>
+  <line x1="472" y1="164" x2="840" y2="164" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round"/>
+  <text x="472" y="184" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">What the number really says</text>
+  <text x="472" y="204" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">What is left of the curve is not a probability</text>
+  <text x="472" y="220.5" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">that any claim is right. Probabilities about</text>
+  <text x="472" y="237" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">claims need information a p-value never had.</text>
+  <rect x="44" y="286" width="400" height="190" fill="#eef2f6" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="60" y="312" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">A student writes</text>
+  <text x="60" y="334" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">The p-value is small, so the shortfall must</text>
+  <text x="60" y="352" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">be large.</text>
+  <line x1="60" y1="366" x2="428" y2="366" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round"/>
+  <text x="60" y="386" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">What the number really says</text>
+  <text x="60" y="406" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">A p-value blends the size of the gap with the</text>
+  <text x="60" y="422.5" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">size of the study. A trivial gap measured on</text>
+  <text x="60" y="439" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">enough cases produces a very small p-value.</text>
+  <rect x="456" y="286" width="400" height="190" fill="#eef2f6" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="472" y="312" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">A student writes</text>
+  <text x="472" y="334" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">If p had been 0.20, the rate would really be</text>
+  <text x="472" y="352" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#a33a3a" text-anchor="start">0.80.</text>
+  <line x1="472" y1="366" x2="840" y2="366" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round"/>
+  <text x="472" y="386" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start" font-weight="bold">What the number really says</text>
+  <text x="472" y="406" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">A large p-value means the data did not rule the</text>
+  <text x="472" y="422.5" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">claim out. Failing to rule something out is not</text>
+  <text x="472" y="439" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="start">the same as showing it is right.</text>
+  <text x="450" y="486" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">A p-value is a statement about data under a claim, never about the claim under the data.</text>
+</svg>

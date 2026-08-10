@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" role="img">
+  <title>Study design decision tree</title>
+  <desc>A decision tree with two separate questions: whether the researchers assigned the condition, and whether the cases were chosen by a chance device.</desc>
+  <rect x="0" y="0" width="800" height="520" fill="#ffffff"/>
+  <text x="400" y="30" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1f2933" text-anchor="middle" font-weight="bold">Where did these data come from?</text>
+  <rect x="250" y="46" width="300" height="44" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="400" y="72.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle">Did the researchers assign the condition?</text>
+  <line x1="390" y1="90" x2="196.822" y2="134.431" stroke="#5b6672" stroke-width="1.3" stroke-linecap="round"/>
+  <polygon points="190,136 197.528,137.501 196.116,131.361" fill="#5b6672"/>
+  <line x1="410" y1="90" x2="603.178" y2="134.431" stroke="#5b6672" stroke-width="1.3" stroke-linecap="round"/>
+  <polygon points="610,136 603.884,131.361 602.472,137.501" fill="#5b6672"/>
+  <text x="268" y="116" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#5b6672" text-anchor="middle" font-weight="bold">No</text>
+  <text x="536" y="116" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#5b6672" text-anchor="middle" font-weight="bold">Yes</text>
+  <rect x="50" y="136" width="250" height="54" fill="#ffffff" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="175" y="159" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">Observational study</text>
+  <text x="175" y="176" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">the groups formed themselves</text>
+  <rect x="500" y="136" width="250" height="54" fill="#ffffff" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="625" y="159" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">Experiment</text>
+  <text x="625" y="176" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">the researchers set the condition</text>
+  <line x1="175" y1="190" x2="175" y2="227" stroke="#5b6672" stroke-width="1.3" stroke-linecap="round"/>
+  <polygon points="175,234 178.15,227 171.85,227" fill="#5b6672"/>
+  <rect x="50" y="234" width="250" height="56" fill="#f3e3d6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="175" y="258" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">Association</text>
+  <text x="175" y="275" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">a rival explanation stays open</text>
+  <line x1="625" y1="190" x2="625" y2="223" stroke="#5b6672" stroke-width="1.3" stroke-linecap="round"/>
+  <polygon points="625,230 628.15,223 621.85,223" fill="#5b6672"/>
+  <rect x="490" y="230" width="270" height="42" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="625" y="255.5" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle">Assigned by a chance device?</text>
+  <line x1="610" y1="272" x2="511.456" y2="313.295" stroke="#5b6672" stroke-width="1.3" stroke-linecap="round"/>
+  <polygon points="505,316 512.673,316.2 510.239,310.389" fill="#5b6672"/>
+  <line x1="645" y1="272" x2="684.995" y2="311.106" stroke="#5b6672" stroke-width="1.3" stroke-linecap="round"/>
+  <polygon points="690,316 687.197,308.854 682.793,313.358" fill="#5b6672"/>
+  <text x="524" y="296" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle" font-weight="bold">No</text>
+  <text x="680" y="296" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle" font-weight="bold">Yes</text>
+  <rect x="415" y="316" width="175" height="62" fill="#f3e3d6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="502.5" y="343" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">Not randomized</text>
+  <text x="502.5" y="360" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#5b6672" text-anchor="middle">groups may differ at the start</text>
+  <rect x="600" y="316" width="175" height="62" fill="#dbe6ef" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="687.5" y="343" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">Randomized</text>
+  <text x="687.5" y="360" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#5b6672" text-anchor="middle">groups comparable at the start</text>
+  <rect x="40" y="400" width="720" height="100" fill="#eef2f6" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="400" y="426" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="bold">A separate question, for either kind of study:</text>
+  <text x="400" y="444" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="middle">were the cases chosen by a chance device?</text>
+  <rect x="64" y="454" width="330" height="36" fill="#dbe6ef" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="229" y="476.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Yes: the finding reaches the population</text>
+  <rect x="406" y="454" width="330" height="36" fill="#f3e3d6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="571" y="476.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">No: the finding describes only these cases</text>
+</svg>

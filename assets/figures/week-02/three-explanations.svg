@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 336" width="800" height="336" role="img">
+  <title>Three explanations for one association</title>
+  <desc>Three panels showing the same breakfast and grade point average association: breakfast affecting grades, grades affecting breakfast, and work hours affecting both while breakfast and grades are merely seen together.</desc>
+  <rect x="0" y="0" width="800" height="336" fill="#ffffff"/>
+  <text x="400" y="28" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="bold">One association, three arrangements</text>
+  <rect x="25" y="46" width="230" height="226" fill="none" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="140" y="74" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">1. Breakfast affects grades</text>
+  <rect x="285" y="46" width="230" height="226" fill="none" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="400" y="74" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">2. Grades affect breakfast</text>
+  <rect x="545" y="46" width="230" height="226" fill="none" rx="8" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="660" y="74" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="bold">3. Work hours affects both</text>
+  <rect x="33" y="186" width="84" height="36" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="75" y="208.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Breakfast</text>
+  <rect x="165" y="186" width="74" height="36" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="202" y="208.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Grades</text>
+  <line x1="121" y1="204" x2="154" y2="204" stroke="#2f6f9f" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="161,204 154,200.85 154,207.15" fill="#2f6f9f"/>
+  <text x="140" y="248" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">the claim being made</text>
+  <rect x="293" y="186" width="84" height="36" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="335" y="208.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Breakfast</text>
+  <rect x="425" y="186" width="74" height="36" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="462" y="208.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Grades</text>
+  <line x1="421" y1="204" x2="388" y2="204" stroke="#c2622d" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="381,204 388,207.15 388,200.85" fill="#c2622d"/>
+  <text x="400" y="248" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">the arrow runs backward</text>
+  <rect x="613" y="106" width="94" height="34" fill="#f3e3d6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="660" y="127.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Work hours</text>
+  <rect x="553" y="186" width="84" height="36" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="595" y="208.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Breakfast</text>
+  <rect x="685" y="186" width="74" height="36" fill="#eef2f6" rx="6" stroke="#5b6672" stroke-width="1.2"/>
+  <text x="722" y="208.5" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="middle">Grades</text>
+  <line x1="641" y1="140" x2="607.696" y2="176.809" stroke="#c2622d" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="603,182 610.032,178.923 605.361,174.696" fill="#c2622d"/>
+  <line x1="679" y1="140" x2="712.304" y2="176.809" stroke="#c2622d" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="717,182 714.639,174.696 709.968,178.923" fill="#c2622d"/>
+  <line x1="641" y1="204" x2="681" y2="204" stroke="#5b6672" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <text x="660" y="248" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#5b6672" text-anchor="middle">seen together, no arrow earned</text>
+  <text x="400" y="306" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2933" text-anchor="middle">The number on the page is the same in all three. The design, not the number, decides which one you may claim.</text>
+</svg>

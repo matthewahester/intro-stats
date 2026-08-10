@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 530" width="940" height="530" role="img">
+  <title>From a claim to what the data support</title>
+  <desc>Four stacked boxes running downward from a claim, through what was measured and the comparison made, to the weaker statement the data actually support.</desc>
+  <rect x="0" y="0" width="940" height="530" fill="#ffffff"/>
+  <text x="470" y="30" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="bold">From a claim to what the data support</text>
+  <text x="470" y="52" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#5b6672" text-anchor="middle">Four questions to ask before you believe a number</text>
+  <rect x="60" y="70" width="560" height="70" fill="#eef2f6" rx="6" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="74" y="92" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="start" font-weight="bold">1. The claim as you read it</text>
+  <text x="74" y="116" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">Walking to campus lowers your resting heart rate.</text>
+  <text x="650" y="92" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#a33a3a" text-anchor="start">The verb is doing a great deal of work</text>
+  <text x="650" y="107" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#a33a3a" text-anchor="start">here.</text>
+  <rect x="60" y="170" width="560" height="90" fill="#eef2f6" rx="6" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="74" y="192" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="start" font-weight="bold">2. What was actually measured</text>
+  <text x="74" y="216" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">Resting heart rate at one clinic visit, for ten students who chose</text>
+  <text x="74" y="232" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">their own commute.</text>
+  <text x="650" y="192" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">One visit, not a change over time. Ten</text>
+  <text x="650" y="207" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">students, not a population.</text>
+  <rect x="60" y="290" width="560" height="90" fill="#eef2f6" rx="6" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="74" y="312" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="start" font-weight="bold">3. The comparison actually made</text>
+  <text x="74" y="336" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">Mean of the 3 walkers, 66.0 bpm, against the mean of the 4 drivers,</text>
+  <text x="74" y="352" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">77.5 bpm.</text>
+  <text x="650" y="312" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">Drop the single reading of 96 and the gap</text>
+  <text x="650" y="327" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5b6672" text-anchor="start">falls from 11.5 to 5.3 bpm.</text>
+  <rect x="60" y="410" width="560" height="90" fill="#eef2f6" rx="6" stroke="#c9d1d9" stroke-width="1.2"/>
+  <text x="74" y="432" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2933" text-anchor="start" font-weight="bold">4. What these data support</text>
+  <text x="74" y="456" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">In this small group the walkers had the lower average. Nothing here</text>
+  <text x="74" y="472" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2933" text-anchor="start">shows walking caused it.</text>
+  <text x="650" y="432" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#3f7a52" text-anchor="start">This is the sentence you can defend.</text>
+  <line x1="340" y1="140" x2="340" y2="161" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="340,168 343.15,161 336.85,161" fill="#1f2933"/>
+  <line x1="340" y1="260" x2="340" y2="281" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="340,288 343.15,281 336.85,281" fill="#1f2933"/>
+  <line x1="340" y1="380" x2="340" y2="401" stroke="#1f2933" stroke-width="1.4" stroke-linecap="round"/>
+  <polygon points="340,408 343.15,401 336.85,401" fill="#1f2933"/>
+</svg>

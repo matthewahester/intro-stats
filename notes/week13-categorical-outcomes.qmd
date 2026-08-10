@@ -6,369 +6,248 @@ format:
     toc: true
     toc-depth: 3
     number-sections: false
-license: "Adapted in part from OpenIntro IMS (Çetinkaya-Rundel & Hardin) and OpenIntro ISLBS (Vu & Harrington), both under CC BY-SA 3.0. Course adaptations by Matt Hester."
 ---
 
-## Why this week matters
+## Where this week starts
 
-For two weeks we have asked the questions of inference about a single
-number — *is this one proportion different from a benchmark? is this one
-mean what we expected?* This week the question becomes a **comparison**:
-two groups, a yes/no outcome, and the everyday question that runs through
-medicine, public health, and the life sciences — *does the rate differ
-between these groups, and by how much?* A treated group versus a control
-group. People who took a drug versus people who did not. Exposed versus
-unexposed.
+A campus health center tried something small. Of the 500 appointments booked in one month, it randomly picked half to get a text message the day before; the other 250 got nothing. Then somebody counted. Among the 250 reminded appointments, 20 were missed. Among the 250 that got no text, 40 were missed.
 
-The honest answer needs two layers. First, *how big is the difference?*
-We have three standard ways to size it up — the **risk difference**, the
-**relative risk**, and the **odds ratio** — and they are not
-interchangeable. Second, *could the difference be chance?* That is the
-same hypothesis-testing engine from Week 12, now pointed at a **two-way
-table** through the **chi-square** idea. The rhythm: **Monday** builds the
-three risk measures from a 2×2 table; **Wednesday** turns the table into a
-test — expected counts and the chi-square logic; **Friday** reads a real
-clinical categorical-outcome case and writes a careful conclusion. The
-recurring caution this week: *a number that compares two groups can be
-right and still be misread* — a large relative risk on a rare outcome can
-be a tiny absolute change, and "associated" is still not "caused."
+That is the entire data set. There is no average to take, no line to fit, no standard deviation to work out. Every observation is a word rather than a number: kept or missed, reminded or not. Data that arrive as labels instead of measurements are **categorical**, and most evidence you meet outside this room arrives that way — infected or not, hired or not, voted or stayed home.
 
-## A bridge from Weeks 10 and 12
+Week 12 handed you the machinery of a formal test: a null claim, a test statistic, a p-value, two ways to be wrong. It did not hand you the front half of the job. Before you can test anything about counts you have to organize them, and that is where almost all of the damage happens: a table can be sliced three ways, each producing a legitimate proportion, only one of which addresses the question asked. By Friday you should be able to produce three honest summaries of one gap and notice which one a writer chose.
 
-You have already done most of the hard thinking. Back in **Week 10** you
-read **two-way tables** for diagnostic testing, you worked with **risk as
-a conditional probability** — the chance of an outcome *given* a group —
-and you learned the **base-rate caution** that a rare condition makes a
-positive result harder to interpret. Everything this week is built on
-that table-reading. Relative risk and the odds ratio are just two of those
-conditional probabilities (or odds) placed side by side as a ratio.
+### Why this matters beyond the exam
 
-And from **Week 12** you already own the inference engine: a **test
-statistic**, a **p-value**, and a **significance level**, with the p-value
-read as **strength of evidence** (the habit from Week 11). This week adds
-no new logic of testing — it applies the Week 12 engine to a categorical
-comparison. When you read a chi-square result on Wednesday, you are doing
-exactly what you did with a $t$- or $z$-test: ask whether what you see is
-more than chance would produce.
+Suppose a headline says a supplement doubles the risk of a rare liver condition. "Doubles" sounds like a reason to throw the bottle out. But a ratio hides the size of what it doubles. If the condition strikes 2 people in 100,000 a year, doubling takes it to 4 in 100,000; if it strikes 20 in 100, doubling takes it to 40 in 100. The same word covers both, and only one is a reason to change what you swallow.
 
-## Monday: rates, risks, and three ways to compare two groups
+The clinic has the mirror-image problem. Its director must decide whether the texting service is worth paying for, and for that the ratio is nearly useless. What the director needs is the difference: about eight fewer missed appointments per hundred reminded. That multiplies by appointments per year and the cost of an empty slot, and becomes a budget line. Ratios describe an association; differences decide what to do.
 
-Start with the object everything rests on — the **2×2 table**. Two groups
-down the side, a yes/no outcome across the top, four counts inside. Label
-them $a$, $b$, $c$, $d$:
+## What you will be able to do
 
-![A course-built schematic of a two-by-two table for two groups and a yes/no outcome. Down the left are two groups, exposed and unexposed; across the top is the outcome, yes and no. The four inside cells are labeled a, b, c, and d: a is exposed with the outcome, b is exposed without, c is unexposed with the outcome, d is unexposed without. The exposed row total is a plus b and the unexposed row total is c plus d. A panel on the right defines four measures from the same four cells: risk in the exposed equals a over a plus b; risk in the unexposed equals c over c plus d; the risk difference equals a over a plus b minus c over c plus d; the relative risk equals the ratio of those two risks; and the odds ratio equals a over b divided by c over d, which simplifies to a times d over b times c. A note reads that relative risk compares risks while the odds ratio compares odds.](../assets/figures/week13-two-way-table-risk-measures.png){fig-alt="A two-by-two table with rows exposed and unexposed and columns outcome yes and no, cells labeled a, b, c, d, with row totals a plus b and c plus d. A side panel lists risk in exposed equals a over a plus b, risk in unexposed equals c over c plus d, risk difference equals the difference of the two risks, relative risk equals the ratio of the two risks, and odds ratio equals a over b divided by c over d equals a d over b c, with a note that relative risk compares risks and the odds ratio compares odds."}
+- Build a two-way table from a short study description and fill in its row, column, and grand totals.
+- Take a stated percentage, say which total it was divided by, and recompute it conditioning on the other margin.
+- Compute the risk in each group, then the risk difference and the relative risk, and say what each claims.
+- Turn a probability into odds and back, and explain why an odds ratio is not a relative risk.
+- Say what a chi-square statistic compares, and why a mismatch weighs more where the expected count is small.
+- Read a finding reported as a ratio and ask, out loud, for the baseline risk behind it.
 
-The **risk** of the outcome in a group is just its proportion: for the
-exposed group, $a/(a+b)$. From the two risks you can build three
-comparisons, each answering a slightly different question.
+## Words worth owning
 
-**Risk difference** — *how many more cases per 100?* Subtract the two
-risks. In the **opportunity-cost-style** clinical world a clean example is
-the **CPR study** you met last week: survival was $11/50 = 0.22$ in the
-control group and $14/40 = 0.35$ in the treatment group, a risk
-difference of
+| Term | What it means in this course |
+|------|------------------------------|
+| Two-way table | A grid of counts; rows are one variable's categories, columns another's. |
+| Margin | A total along an edge: a row total, a column total, or the grand total. |
+| Conditional proportion | A count divided by its own row or column total, not by the grand total. |
+| Risk | The conditional proportion of a group that had the outcome we are watching for. |
+| Risk difference | One risk minus the other, in percentage points: extra cases per hundred people. |
+| Relative risk | One risk divided by the other: how many times as often, with no hint of the baseline. |
+| Odds ratio | One group's odds divided by the other's; odds is the chance of the outcome over the chance of no outcome. |
+| Expected count | What a cell would hold, on average, if the two variables were unrelated. |
 
-$$0.35 - 0.22 = 0.13,$$
+## Reading a two-way table without fooling yourself
 
-13 more survivors per 100 patients. The risk difference is an **absolute**
-measure, on the same scale as the risks themselves, and it travels with a
-confidence interval just like Week 12: the $90\%$ interval here is
-$(-0.027,\ 0.287)$. Because that interval **contains $0$**, "no
-difference" is still plausible — the study cannot rule out chance.
-Contrast the **fish-oil** trial, where the heart-attack rate was $0.0112$
-on fish oil versus $0.0155$ on placebo, a risk difference of $-0.0043$
-with a $95\%$ interval of $(-0.0071,\ -0.0015)$. That interval lies
-**entirely below $0$**, so fish oil really did lower the rate — by about
-$0.15$ to $0.71$ percentage points. Small, but real.
+Here is the clinic month laid out properly: rows are the groups, columns the outcomes, edges the totals.
 
-**Relative risk** — *how many times as likely?* Divide the two risks
-instead of subtracting. A relative risk (RR) of $2$ means the outcome is
-twice as likely in one group as the other; an RR of $0.73$ means the
-exposed group has $73\%$ of the risk — a reduction. Relative risk is a
-**ratio**, which makes it feel dramatic, and that is exactly its trap: a
-relative risk can be large while the absolute change is tiny. "Doubles
-your risk" sounds alarming, but doubling a $1$-in-a-million risk is still
-almost nothing. Always read a relative risk *next to* the underlying
-risks.
+|  | Missed | Kept | Row total |
+|------|------|------|------|
+| Reminder sent | 20 | 230 | 250 |
+| No reminder | 40 | 210 | 250 |
+| Column total | 60 | 440 | 500 |
 
-**Odds ratio** — *how do the odds compare?* Odds are not the same as
-probability: the **odds** of an outcome are (cases)/(non-cases), so $a/b$
-in the exposed group. The **odds ratio (OR)** divides the two groups'
-odds, and it has a tidy shortcut straight from the table:
+Before reading anything out of a table, check that it closes. The rows give 250 and 250; the columns give 60 and 440; and 60 plus 440 is 500. A table that does not close hides a category you were not told about.
 
-$$\text{OR} = \frac{a/b}{c/d} = \frac{ad}{bc}.$$
+![One two-way table with every margin named.](../assets/figures/week-13/two-way-table-anatomy.svg){fig-alt="A two-by-two table of 500 clinic appointments. Rows are reminder sent and no reminder; columns are missed and kept. Arrows mark the row margin of 250, the column margin of 60 missed, and the grand total of 500."}
 
-An odds ratio of $1$ means no association; above $1$ the exposure goes
-with higher odds of the outcome; below $1$, lower. The odds ratio matters
-because of **how some studies are built**. In a **case-control study**,
-researchers start by collecting people who already have the outcome (the
-cases) and people who do not (the controls), then look *backward* at
-exposure. That design is the only practical way to study a rare disease —
-but it means you *cannot* read the true risk of the disease from the
-table, because the researchers chose how many cases to include. You can
-still compute the **odds ratio**, and that is why case-control studies
-report it.
+### Margins, and the three totals they give you
 
-A clean clinical example: a **case-control study of newborn pulmonary
-hypertension (PPHN) and a class of antidepressants (SSRIs)** sampled $337$
-infants with PPHN and $836$ without, then checked SSRI exposure. Among the
-cases, $14$ were exposed and $323$ were not; among the controls, $6$ were
-exposed and $830$ were not. The odds ratio is
+The word *margin* is literal: the totals live in the margins of the grid. The **row margins** describe the groups — here 250 and 250, so the groups were the same size. The **column margins** describe the outcomes with no regard to group: 60 missed, 440 kept. The **grand total**, 500, is everybody.
 
-$$\text{OR} = \frac{14 \times 830}{323 \times 6} = 6.00.$$
+### Joint, marginal, and conditional are three different questions
 
-The odds of SSRI exposure were six times higher for infants with PPHN
-than for those without — strong evidence of an association worth
-investigating. Notice what we did *not* say: we did not say PPHN is "six
-times as likely," because in a case-control design we cannot estimate that
-risk at all.
+Every count in a table can be divided by three different things, and each division has its own name. Divide a middle count by the **grand total** and you get a *joint proportion*: 20 divided by 500 is 0.04, so 4 percent of appointments were both reminded and missed. Divide a margin by the grand total instead and you get a *marginal proportion*: 60 divided by 500 is 0.12, the month's overall no-show rate. Both are tidy, and both are silent about whether reminders did anything.
 
-(One bridge to keep straight: odds ratios also show up in **logistic
-regression** — the Week 9 model for yes/no outcomes — but this week we
-read them **directly from a 2×2 table**, no model required.)
+Divide by a **row or column total** and you get a *conditional proportion*, which is where the teaching lives. Conditioning means holding something fixed and looking only inside it. Hold the reminder group fixed: 20 of its 250 appointments were missed, so 0.08. Hold the other group fixed: 40 of 250, so 0.16. Those two numbers are the comparison the study was built to make. When the outcome is one we would rather avoid, a conditional proportion gets called a **risk**.
 
-### When relative risk and the odds ratio disagree
+Now condition the other way, on the outcome instead of the group. Among the 60 missed appointments, 20 had a reminder — 33 percent — and 40 did not. Both statements are arithmetically correct, but only conditioning on the group addresses "did the reminder help?". Conditioning on the outcome describes the composition of the missed appointments instead. Mixing the two up is the most common error people make with tables.
 
-Students often treat RR and OR as the same number. They are not, and the
-gap between them depends on **how common the outcome is**.
+## Three summaries of the same gap
 
-![A course-built schematic comparing relative risk and odds ratio on two hypothetical two-by-two tables, both built so the relative risk equals two. In the left table the outcome is common, about thirty percent overall: the exposed group has forty cases of one hundred, a risk of 0.40, and the unexposed group has twenty of one hundred, a risk of 0.20, so the relative risk is 2.00 but the odds ratio is 2.67, meaning the odds ratio overstates the relative risk. In the right table the outcome is rare, about three tenths of a percent overall: the exposed group has four cases of one thousand, a risk of 0.004, and the unexposed group has two of one thousand, a risk of 0.002, so the relative risk is 2.00 and the odds ratio is 2.00 as well, the rare-disease approximation. The takeaway is that the odds ratio approximates the relative risk only when the outcome is rare.](../assets/figures/week13-relative-risk-vs-odds-ratio.png){fig-alt="Two hypothetical two-by-two tables. Left, common outcome about thirty percent: exposed 40 of 100 risk 0.40, unexposed 20 of 100 risk 0.20, relative risk 2.00 but odds ratio 2.67, the odds ratio overstates. Right, rare outcome about three tenths of one percent: exposed 4 of 1000 risk 0.004, unexposed 2 of 1000 risk 0.002, relative risk 2.00 and odds ratio 2.00, the rare-disease approximation. Caption: odds ratio approximates relative risk only when the outcome is rare."}
+You now have two risks, 0.08 and 0.16. There are three standard ways to compress that pair into one number, and the choice among them is rhetorical as much as statistical.
 
-Both tables are rigged to have the **same relative risk of $2.0$**. When
-the outcome is **common** (about $30\%$ here), the odds ratio inflates to
-$2.67$ — it *overstates* the relative risk. When the outcome is **rare**
-(about $0.3\%$), the odds ratio is $2.00$, essentially equal to the
-relative risk. This is the **rare-disease approximation**: an odds ratio
-is a good stand-in for a relative risk only when the outcome is
-uncommon. It is why headlines that quote an odds ratio for a *common*
-outcome as if it were a relative risk can badly mislead.
+### The risk difference, and what it buys
 
-## Wednesday: two-way tables, expected counts, and the chi-square idea
+The **risk difference** is subtraction. Taking the no-reminder group as the baseline, 0.16 minus 0.08 is 0.08, reported as eight percentage points. In units: for every hundred appointments that got a reminder, about eight fewer were missed.
 
-Sizing up the difference is half the job. The other half is the Week 12
-question: *could the pattern in this table be chance?* For categorical
-data the tool is the **chi-square test of independence**, and its logic is
-simpler than its name.
+"Percentage points" is not the same phrase as "percent". The risk fell by eight percentage points. It also fell by half, which is 50 percent of its old value. Keep the two words apart.
 
-Begin with a question: **what would the table look like if the two
-variables were unrelated?** If a group made no difference, each group
-should show the *same* outcome rate as the table overall. Those
-"if-independent" counts are the **expected counts**, and they come from a
-single rule:
+The difference is the summary that converts into decisions. It also travels badly, because it depends on the baseline risk, and this clinic's baseline is not every clinic's.
 
-$$\text{expected count} = \frac{(\text{row total}) \times (\text{column total})}{\text{table total}}.$$
+### The relative risk, and what it hides
 
-You do not memorize a derivation; you read the expected count as *what we
-would expect in this cell if the two variables were independent*. Then you
-compare the **observed** counts to those expected counts. Where the table
-departs from independence, observed and expected pull apart; where they
-match, the table looks independent.
+The **relative risk** is division: 0.16 divided by 0.08 is 2.0, so an appointment with no reminder was missed twice as often. Flip the comparison and 0.08 divided by 0.16 is 0.5, and the same fact reads "the reminder halved the risk". Always check which group sits on the bottom of the fraction, because 2.0 and 0.5 can describe the identical table.
 
-![A course-built figure showing observed versus expected counts for a two-by-two table of mosquito-net use and malaria, from an OpenIntro ISLBS exercise. The left side is the table: the net group had 22 children with malaria (expected 26 if net use and malaria were independent) and 78 without (expected 74), totaling 100; the no-net group had 30 with malaria (expected 26) and 70 without (expected 74), totaling 100; column totals are 52 with malaria and 148 without, grand total 200. The net-and-malaria cell is highlighted. The right panel shows the chi-square idea with one cell: the expected count if independent is one hundred times fifty-two over two hundred, which equals 26; that one cell's contribution is 22 minus 26 squared over 26, equal to 0.62; adding all four cells gives a chi-square of 1.66; with degrees of freedom equal to one, that is not large, so there is no clear association, and software supplies the p-value.](../assets/figures/week13-expected-counts-and-chisq.png){fig-alt="Observed versus expected counts for mosquito-net use and malaria. Net row: 22 malaria (expected 26), 78 no malaria (expected 74), total 100. No-net row: 30 malaria (expected 26), 70 no malaria (expected 74), total 100. Column totals 52 and 148, grand total 200. A side panel computes the expected count as row total times column total over n equals 100 times 52 over 200 equals 26, one cell's contribution as 22 minus 26 squared over 26 equals 0.62, the total chi-square as 1.66, with degrees of freedom one, not large, so no clear association; software gives the p-value."}
+![The same two bars carry both summaries of the gap.](../assets/figures/week-13/risk-difference-and-ratio.svg){fig-alt="Two bars giving the share of appointments missed: 8 percent with a reminder and 16 percent without. A double-headed arrow marks the gap of eight percentage points, and a note reads that the shorter bar is half the height of the taller."}
 
-The **chi-square statistic** adds up, over every cell, how far observed
-sits from expected — squared, then scaled by the expected count:
+Relative risk travels between settings better, which is why research papers lean on it. It also strips out what a reader needs to judge importance: "twice as often" reads the same whether the risk went from 1 in a million to 2 in a million or from 30 percent to 60 percent.
 
-$$\chi^2 = \sum \frac{(\text{observed} - \text{expected})^2}{\text{expected}}.$$
+### Odds, and why they are not probabilities
 
-You will not crank a full chi-square by hand in this course; the point is
-the **logic** the formula encodes. **Bigger gaps between observed and
-expected counts make a bigger $\chi^2$, and a bigger $\chi^2$ means a
-smaller p-value** — stronger evidence the variables are related. The
-p-value itself is a **right-tail area**, read off a chi-square curve whose
-shape is set by the **degrees of freedom**, $df = (\text{rows} - 1)\times
-(\text{columns} - 1)$.
+**Odds** compare an outcome to its absence rather than to the whole group. In the reminder group, 20 appointments were missed and 230 kept, so the odds of missing are 20 to 230, about 0.087; in the other group, 40 to 210, about 0.190. In general,
 
-![A course-built figure of the chi-square distribution showing the right-tail p-value idea. Three densities are drawn for degrees of freedom one, two, and four; all are positive and right-skewed. On the degrees-of-freedom-two curve an observed chi-square of 5.99 is marked with a red line, and the area to its right is shaded as the p-value, which equals 0.05. An annotation states that bigger gaps between observed and expected counts give a bigger chi-square and a smaller p, and that the p-value is the right-tail area.](../assets/figures/week13-chi-square-distribution.png){fig-alt="Chi-square density curves for degrees of freedom one, two, and four, all right-skewed and positive. On the df-two curve a vertical line marks an observed chi-square of 5.99 and the area to the right is shaded as the p-value equal to 0.05. Text notes that bigger observed-minus-expected gaps give a larger chi-square and a smaller p-value, and that the p-value is the right-tail area."}
+$$\text{odds} = \frac{p}{1 - p}$$
 
-So the whole test reads as one sentence: *the chi-square measures how far
-the observed counts stray from what independence predicts, and the p-value
-is the chance of straying that far if the variables were truly unrelated.*
+where $p$ is the probability of the outcome, and going back is $p = \text{odds} / (1 + \text{odds})$. A probability of 0.5 is odds of 1, usually said as "even odds", and a probability of 0.8 is odds of 4. But a probability of 0.05 is odds of about 0.053, close enough that down there the two scales are nearly interchangeable.
 
-Two contrasting reads make it concrete. In the **mosquito-net** table
-above, $\chi^2 = 1.66$ on $1$ degree of freedom — a small statistic, no
-clear association in these $200$ children, even though the observed risks
-($0.22$ with a net versus $0.30$ without) *hint* at a benefit. The hint is
-real but the evidence is thin: a point estimate is not proof, and a small
-study can leave chance on the table. Compare a study of how an
-**iPod-selling script** affected whether sellers disclosed a known defect:
-there the observed and expected counts pulled far apart, giving
-$\chi^2 = 40.13$ on $2$ degrees of freedom — astronomically far into the
-tail, decisive evidence the script and the disclosure were related.
+The **odds ratio** divides one group's odds by the other's, and the cross-product of the table is the cleanest route to it: 40 times 230 is 9,200, and 20 times 210 is 4,200, so the odds ratio is 9,200 divided by 4,200, about 2.19. The relative risk for that same table was 2.00, so the odds ratio sits further from 1.
 
-## Comparing two proportions, formally
+### When the odds ratio runs ahead of the risk ratio
 
-When the table is exactly **2×2**, the chi-square test and the
-**two-proportion $z$-test** are two routes to the same conclusion, and the
-$z$ route fits last week's machinery exactly. The test statistic keeps the
-familiar form,
+That gap is no accident, and it is not small when the outcome is common. Take two comparisons that both double the risk. From 5 percent to 10 percent, the odds go from 0.05 divided by 0.95, about 0.0526, to 0.10 divided by 0.90, about 0.1111, so the odds ratio is 2.11 against a relative risk of 2.00. From 40 percent to 80 percent, the odds go from 0.40 divided by 0.60, about 0.667, to 0.80 divided by 0.20, which is exactly 4. The odds ratio is 4 divided by 0.667, which is 6.0 — while the relative risk is still 2.00.
 
-$$z = \frac{(\hat p_1 - \hat p_2) - 0}{\text{SE}},$$
+![Odds climb away from probability as the outcome becomes common.](../assets/figures/week-13/odds-versus-probability.svg){fig-alt="A curve of odds against probability rises slowly near zero and steeply past 0.5, pulling away from the dashed equal-value line. Beside it, doubling risk from 5 to 10 percent gives an odds ratio of 2.1; from 40 to 80 percent it gives 6.0."}
 
-— an estimate, minus the null value of "no difference," over a standard
-error — and the p-value is a tail of the normal curve. Take the
-**mammogram** study: over $\approx 90{,}000$ women, breast-cancer deaths
-were $500$ of $44{,}925$ in the screened group and $505$ of $44{,}910$ in
-the control group. The difference in death rates is about $-0.00012$,
-giving $z = -0.17$ and a two-sided p-value of $0.8650$ — nowhere near
-significant, so we **fail to reject**: no detectable difference in
-breast-cancer deaths. The chi-square test on the same $2\times2$ table
-agrees, with $\chi^2 = 0.02$ on $1$ degree of freedom (for a $2\times2$
-table the two tests are equivalent, so use whichever the output shows).
+The reason is the denominator. Odds divide by the chance of *not* having the outcome, so when the outcome is common that leftover chance is small and shrinking and the fraction blows up. Under roughly 10 percent in both groups, an odds ratio and a relative risk are close enough that a careless reader is not badly misled. Above that, an odds ratio is a ratio of odds and nothing more.
 
-The mammogram study also makes a Week-12 point vivid: with a sample this
-enormous, the test had ample power to detect even a small effect — and it
-found none. That is the honest opposite of the other classic warning:
-**huge samples can make a trivial difference "significant" — and, just
-as usefully, they can give us enough precision to rule out any
-difference large enough to matter in context.** A failure to reject is
-never proof of "no effect"; what a very large, precise study can support
-is that any remaining difference is small enough to be practically
-unimportant. Statistical discernibility and practical importance are
-still two different things.
+## Observed counts against expected counts
 
-## Friday: reading a clinical categorical-outcome case
+Everything so far has been description. The inference question is the Week 12 question in new clothing: if the reminder truly changed nothing, how surprising is a table like this one?
 
-Friday pulls the week together on a real case, read end to end. The skill
-is not computing — it is **interpreting**: given a 2×2 table or a printed
-chi-square result, say what the comparison is, choose the right measure,
-and write a conclusion a careful reader would trust.
+So write down the table you would expect if the reminder changed nothing. "Nothing" means the missed rate is the same in both groups, and the only sensible value for that shared rate is the overall one, 0.12. Applied to each group of 250, that is 30 missed and 220 kept per row. The general recipe is
 
-Work the mosquito-net case as that exercise. The risk of malaria was
-$22/100 = 0.22$ with a net and $30/100 = 0.30$ without — a **risk
-difference** of $-0.08$ and a **relative risk** of $0.22/0.30 \approx
-0.73$, meaning netted children had about three-quarters the risk. On its
-face, a protective effect. But the **chi-square** is only $1.66$ on $1$
-degree of freedom — the evidence from these $200$ children is **not strong
-enough** to rule out chance. The responsible conclusion holds both
-thoughts at once: *the observed pattern suggests nets help, but this study
-is too small to be convincing; a larger trial is needed.* That sentence —
-an effect estimate **and** an honest read of the evidence behind it — is
-exactly what Week 13 is training.
+$$\text{expected count} = \frac{\text{row total} \times \text{column total}}{\text{grand total}}$$
 
-A second discipline carries over from all term: **a chi-square test, or a
-risk ratio, shows association, not causation by itself.** Whether you can
-say "caused" still depends on the **study design** from Weeks 2 and 6 — a
-randomized experiment earns causal language; an observational comparison
-does not, no matter how small the p-value.
+and for the top-left cell that is 250 times 60, divided by 500, which is 30. Expected counts need not be whole numbers; they are averages, not predictions about a particular month.
 
-## Common mistakes
+### What the chi-square statistic adds up
 
-- **Reading an odds ratio as a probability or a relative risk.** An OR of
-  $6$ does not mean "six times as likely." It compares **odds**, and it
-  only approximates a relative risk when the outcome is **rare**.
-- **Quoting a relative risk without the absolute risk.** "Doubles the
-  risk" can mean a huge change or a negligible one. Always pair RR with
-  the underlying risks or the risk difference.
-- **Trying to get a risk or a relative risk from a case-control study.**
-  The design fixes how many cases there are, so the disease risk is not
-  estimable — report the **odds ratio**.
-- **Thinking expected counts are something you observed.** Expected counts
-  are *what independence would predict*, not data. The test compares the
-  two.
-- **Treating a big $\chi^2$ as proof of a strong or important effect.** A
-  large $\chi^2$ (or tiny p) rules out *chance*; it says nothing about the
-  *size* of the association, and with huge samples even trivial
-  associations clear the bar.
-- **Saying "associated" and meaning "caused."** Chi-square and risk ratios
-  measure association. Causation still rides on the study design.
+The clinic saw 20 missed among the reminded where 30 were expected, and 40 in the other row where 30 were expected. Every one of the four cells is off by exactly ten.
 
-## What you should be able to do by Friday
+![What the clinic saw, beside what no difference would have produced.](../assets/figures/week-13/observed-versus-expected.svg){fig-alt="Two count tables side by side. The observed table reads 20 and 230 in the reminder row and 40 and 210 without; the expected table reads 30 and 220 in both rows. Every cell is off by ten and the four mismatch terms add to 7.58."}
 
-By the end of Week 13 you should be able to:
+The chi-square statistic turns those four mismatches into one number:
 
-- read a **2×2 table** and compute a **risk**, a **risk difference**, a
-  **relative risk**, and an **odds ratio** ($ad/bc$), and say in words what
-  each one means;
-- explain why a **case-control** study reports an **odds ratio** rather
-  than a risk, and when an odds ratio approximates a relative risk;
-- explain **expected counts** as "what we would expect if the variables
-  were independent," and read the **chi-square** logic — bigger
-  observed-versus-expected gaps give a bigger $\chi^2$ and a smaller
-  p-value;
-- read a **chi-square** result (the statistic, the degrees of freedom, the
-  p-value) or a **two-proportion** test and **conclude in context**;
-- keep **association** separate from **causation**, and a **relative**
-  measure separate from an **absolute** one;
-- write a careful conclusion that pairs an **effect estimate** with an
-  honest read of the **evidence** behind it.
+$$X^2 = \sum \frac{(\text{observed} - \text{expected})^2}{\text{expected}}$$
 
-## Assignments this week
+Read that in words. Square each cell's miss so misses in either direction count alike, then divide by the expected count so a gap of ten matters more where 30 were expected than where 220 were. Add the four terms — 3.33 from each missed cell, 0.45 from each kept cell — for about 7.58. Software reports:
 
-- **Monday check.** A short in-class concept check on reading a 2×2 table:
-  compute a risk, a risk difference, and a relative risk, and say what each
-  means. Plan for about **3–5 minutes**. Sheet:
-  [Week 13 Monday exit ticket](../assets/assignments/week13_monday_exit_ticket_student.pdf).
-- **Wednesday check.** A short application on a **risk/odds table**: from a
-  2×2, find the relative risk and the odds ratio, or read a chi-square
-  result and state the conclusion. Plan for about **8–12 minutes**.
-  Sheet: [Week 13 Wednesday exit ticket](../assets/assignments/week13_wednesday_exit_ticket_student.pdf).
-- 🔒 **Friday quiz** — handled through Blackboard or in class as directed.
-  The quiz prompt is not posted here. Timing and submission details live in
-  Blackboard.
-- 🔒 **Project checkpoint** — this week falls in the course **project**
-  window. Your checkpoint deliverable and its due date are posted in
-  Blackboard, not here.
-- **No new homework opens this week.** Homework 6 (Weeks 11–12) was the
-  last biweekly set; from here the **project** carries the synthesis work.
+```
+Two-way table: reminder text (yes / no) by appointment (missed / kept)
 
-## Read more in IMS / ISLBS
+  Pearson chi-square statistic   7.576
+  degrees of freedom             1
+  p-value                        0.0059
+```
 
-The course page above is the main explanation for this week. For a second
-voice at similar depth:
+Degrees of freedom are the rows minus one times the columns minus one, so 1 here. The p-value means what it did last week: if reminders truly made no difference, a table at least this far off would turn up about six times in a thousand months like this one.
 
-- **IMS — *Introduction to Modern Statistics*, Chapter 17 *Inference for
-  comparing two proportions*** (the **risk difference**, the two-proportion
-  $z$ confidence interval and test, with the CPR, fish-oil, and mammogram
-  examples) **and Chapter 18 *Inference for two-way tables*** (expected
-  counts, the chi-square statistic and distribution, degrees of freedom,
-  and reading the p-value, with the iPod study). Read the worked examples
-  and output; skip the by-hand derivations and the randomization/bootstrap
-  passes — those simulation methods belong to Week 11, and here we read
-  classical results. Note that IMS Chapter 17 covers the **risk
-  difference** but **not** relative risk or the odds ratio. \
-  [OpenIntro book page for IMS](https://www.openintro.org/book/ims/)
-- **ISLBS — *Introductory Statistics for the Life and Biomedical
-  Sciences*, Chapter 8 *Inference for categorical data*** is the
-  **clinical and risk-measure source** for this week. It is where
-  **relative risk** and the **odds ratio** are developed — §8.5 on
-  outcome-based (case-control) studies is the source for the odds ratio,
-  the $ad/bc$ shortcut, the rare-disease approximation, and the PPHN/SSRI
-  example — and §8.2–§8.3 give the clinical two-proportion and chi-square
-  framing (mammogram, and the mosquito-net and related two-way tables).
-  You can skip the sample-size formulas (§8.1.3) and the exact-test
-  hand computations, which are beyond this course. \
-  [OpenIntro book page for ISLBS](https://www.openintro.org/book/biostat/)
+::: {.callout-note}
+Some software applies a small correction when a table is two by two, moving this p-value from about 0.006 to about 0.009. Both are small, and the reading of the study does not change.
+:::
 
-*Looking ahead:* Week 14 turns from a single comparison to **many** of
-them at once — how separate studies are combined into one estimate through
-**meta-analysis and forest plots**. The risk ratios and odds ratios you
-read this week are exactly the quantities a meta-analysis pools. That is
-next week's business.
+The statistic is silent about direction — it would report the same 7.58 if the reminded group had missed more — and about size, since a big enough study flags a gap of half a percentage point. So it never travels alone: report the two risks, then the difference, then the test.
 
----
+## Worked example — a walk-in clinic compares two wound dressings
 
-*Sources adapted in this lesson:* This page draws on OpenIntro
-*Introduction to Modern Statistics* (2e), Çetinkaya-Rundel & Hardin:
-Chapter 17 for the difference in proportions, the two-proportion $z$
-confidence interval and test, and the CPR, fish-oil, and mammogram
-examples; and Chapter 18 for two-way tables, expected counts, the
-chi-square statistic and distribution, degrees of freedom, and the iPod
-example. It draws on OpenIntro *Introductory Statistics for the Life and
-Biomedical Sciences*, Vu & Harrington, Chapter 8 — the clinical and
-risk-measure source — for relative risk and the odds ratio (§8.5,
-case-control studies, including the PPHN/SSRI example and the $ad/bc$
-shortcut) and for the clinical two-proportion and chi-square framing
-(§8.2–§8.3, including the mammogram and mosquito-net tables). Relative
-risk and the odds ratio are taken from ISLBS; IMS Chapter 17 supports the
-risk difference and two-proportion inference but does not supply RR or OR.
-OpenIntro materials are CC BY-SA 3.0. Source files:
-[IMS](https://github.com/openintrostat/ims) and
-[OI-Biostat](https://github.com/OI-Biostat/oi_biostat_text). The public
-figures are course-built schematics or reconstructions using the
-source-grounded values documented in the Week 13 extraction notes; the
-two-way-table template and the relative-risk-versus-odds-ratio comparison
-are labeled instructor-built schematics, and the mosquito-net chi-square
-figure recomputes its expected counts and statistic ($\chi^2 = 1.66$) from
-the displayed counts.
+**Setting.** A walk-in clinic treated 400 minor wounds, randomly assigning each to one of two dressings, 200 apiece, and checked for infection two weeks later. Dressing A produced 24 infections; dressing B produced 6.
+
+**Step 1 — build the table and close the margins.**
+
+|  | Infection | No infection | Row total |
+|------|------|------|------|
+| Dressing A | 24 | 176 | 200 |
+| Dressing B | 6 | 194 | 200 |
+| Column total | 30 | 370 | 400 |
+
+Check it: the rows give 200 and 200, the columns give 30 and 370, and both routes reach 400.
+
+**Step 2 — condition on the group.** Dressing A: 24 divided by 200 is 0.12. Dressing B: 6 divided by 200 is 0.03.
+
+**Step 3 — risk difference.** 0.12 minus 0.03 is 0.09, nine percentage points. Per hundred wounds, dressing A produced about nine more infections.
+
+**Step 4 — relative risk.** 0.12 divided by 0.03 is 4.0. A wound under dressing A became infected four times as often.
+
+**Step 5 — odds ratio.** Odds under A are 24 to 176; under B, 6 to 194. By cross-product, 24 times 194 is 4,656 and 6 times 176 is 1,056, so the odds ratio is 4,656 divided by 1,056, about 4.41.
+
+**Step 6 — the mismatch test.** If the dressing made no difference, each group of 200 would be expected to yield 15 infections and 185 clean wounds, so every cell is off by nine. Software reports a chi-square statistic of about 11.68 with 1 degree of freedom and a p-value of about 0.0006.
+
+**What it means.** Infection was about four times as common under dressing A, or nine more cases per hundred wounds. Because infection was fairly uncommon in both groups, the odds ratio of 4.41 sits close to the relative risk of 4.0. Random assignment is what lets this be read as an effect rather than an association.
+
+### The same reasoning, transferred
+
+A second clinic ran a smaller version: 120 wounds, 60 under each dressing, with 9 infections under A and 3 under B.
+
+The path is identical. Risks: 9 divided by 60 is 0.15, and 3 divided by 60 is 0.05. Risk difference: 0.10, ten percentage points. Relative risk: 3.0. Odds ratio by cross-product, using the 51 and 57 wounds that stayed clean: 9 times 57 is 513, 3 times 51 is 153, and 513 divided by 153 is about 3.35.
+
+What stayed the same is the order of operations. What changed is worth sitting with: the relative risk fell from 4.0 to 3.0, but the risk difference *rose* from nine percentage points to ten, because wounds here became infected more often to begin with. A smaller ratio can carry a larger absolute effect. And three infections could easily have been one or six, so every summary here inherits that wobble.
+
+## Second worked example — a commuting survey where the margin decides the story
+
+**Setting.** A campus survey asked 600 students how they get to campus and whether they had been late to a first-period class in the past week. Of them, 300 walk, 200 take the bus, and 100 drive. Late at least once: 60 walkers, 56 bus riders, 34 drivers.
+
+**Step 1 — build the table.**
+
+|  | Late at least once | Not late | Row total |
+|------|------|------|------|
+| Walk | 60 | 240 | 300 |
+| Bus | 56 | 144 | 200 |
+| Drive | 34 | 66 | 100 |
+| Column total | 150 | 450 | 600 |
+
+Rows close at 300, 200, and 100; columns at 150 and 450, which add to 600.
+
+**Step 2 — the claim as printed.** The student paper wrote: *"Walkers are the campus's late-comers. Four in ten students who were late walk to campus, more than any other group."*
+
+**Step 3 — check its arithmetic.** It is right. Of the 150 late students, 60 walk, and 60 divided by 150 is 0.40; bus riders are 37 percent of them and drivers 23 percent.
+
+**Step 4 — recondition on the other margin.** Those percentages divide by the *late* total. The question "does walking go with being late?" needs division by the *mode* total. Walkers: 60 divided by 300 is 0.20. Bus riders: 56 divided by 200 is 0.28. Drivers: 34 divided by 100 is 0.34. Walkers are the *least* likely group to be late.
+
+**Step 5 — see why both are true.** Walkers are half the student body, so even at the lowest rate they supply more late students than a group of 100 at the highest rate. The first calculation measures how big a group is; the second, how it behaves.
+
+**Step 6 — the mismatch test.** The overall lateness rate is 0.25, so expected counts are each row total times 0.25: 75, 50, and 25 late, with 225, 150, and 75 not late. Walkers came in 15 under and drivers 9 over. Software reports a chi-square statistic of about 9.28 with 2 degrees of freedom — 3 rows minus 1 times 2 columns minus 1 — and a p-value of about 0.0097.
+
+**What it means.** Lateness rates climb steadily from walkers to drivers, and a gradient this steep would be unusual if mode and lateness were unrelated. But nothing was assigned: students chose their mode, and drivers may live farther out. The honest sentence is "students who drive reported being late more often", not "driving makes students late".
+
+## The misreading to avoid
+
+Here is the sentence, close to how it gets said aloud:
+
+::: {.callout-note}
+*Forty percent of the students who were late walk to campus. That is more than any other group. So walking is what makes people late.*
+:::
+
+The first two sentences are correct arithmetic. The third follows from neither, and the break is a swapped denominator before it is a leap from association to cause. "Forty percent of the late students walk" conditions on the outcome; "walkers are late more often" would condition on the group. Those are different fractions with different denominators, and the second is 20 percent, the smallest rate in the table.
+
+The defence is a habit, not a formula. Every time you meet a percentage about a table, say out loud what it is a percentage *of*. Forty percent *of the late students*. Twenty percent *of the walkers*. Once the denominator is spoken, the two stop sounding alike.
+
+A second misreading arrives whenever a ratio travels alone. *The risk doubled, so this is twice as dangerous for me.* A relative risk of 2 gives the ratio and nothing about the size: doubling 2 in 100,000 is a change you can reasonably ignore, doubling 30 in 100 is not.
+
+The third is quieter. *The odds ratio was 6, so that group is six times as likely to have the condition.* Only if the condition is rare. Earlier in this note an odds ratio of 6.0 described a risk moving from 40 percent to 80 percent — a doubling. When an odds ratio is attached to a common outcome, hunt for the underlying percentages first.
+
+## Practice on your own
+
+These are for you, not for submission. Check yourself by making every margin close.
+
+1. A campus food pantry study followed 800 students for a semester: 300 used the pantry at least once and 500 never did. Among users, 90 reported skipping a meal for cost reasons; among non-users, 100 did. Build the table with its margins, compute the risk in each group, the risk difference, the relative risk, and the odds ratio, and write one sentence for each. Then say why a pantry user might report *more* skipped meals without the pantry having caused it.
+
+2. From that same table, compute the proportion of all meal-skippers who were pantry users. State which margin it is divided by, and why it does not address whether the pantry helped.
+
+3. Convert each of these to the other scale, showing the arithmetic: a probability of 0.25; a probability of 0.90; odds of 3; odds of 0.2. Then say which case has odds and probability closest together.
+
+4. A study reports a relative risk of 1.5 and an odds ratio of 3.2 for one comparison. Without seeing counts, what can you say about how common the outcome was?
+
+5. For the commuting table above, compute the expected count for all six cells, then name the cell contributing most to the chi-square statistic and say why.
+
+## Where to read more
+
+- [Inference for a single proportion](https://openintrostat.github.io/ims/inference-one-prop.html) — the one-group case and proportions as estimates.
+- [Inference for comparing two proportions](https://openintrostat.github.io/ims/inference-two-props.html) — this unit's comparison, with intervals as well as tests.
+- [Inference for two-way tables](https://openintrostat.github.io/ims/inference-tables.html) — expected counts and the chi-square idea, including larger tables.
+- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — the same ideas in a clinical setting, where risk and odds ratios are the working vocabulary.
+- [StatKey](https://www.lock5stat.com/statkey) — its test for a difference in proportions will shuffle a two-way table for you, worth doing once.
+- The whole of [Introduction to Modern Statistics](https://openintrostat.github.io/ims), plus the course [schedule](../schedule.qmd) and [resources](../resources/index.qmd) pages.
+
+## Where this goes next
+
+Fall break falls between this unit and the next, so there is a gap in the Monday-Wednesday-Friday rhythm before Week 14 begins. Use a little of it to re-read one section: conditioning on the group versus conditioning on the outcome is what pays off for the rest of the term.
+
+Week 14 changes the unit of analysis. Instead of asking what one study shows, you will ask how a pile of studies becomes a body of evidence, reading a forest plot line by line — one row per study, an estimate, an interval, a line of no effect. Nearly every estimate on such a plot is a number of the kind you built this week, so the vocabulary carries straight over. Continue to [Week 14 — Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd), look back at [Week 12 — Classical hypothesis testing](week12-classical-hypothesis-testing.qmd) for where the p-value came from, or return to the [notes index](index.qmd).
