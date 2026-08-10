@@ -14,11 +14,11 @@ Every comparison you made in [Week 4](week04-comparing-groups.qmd) had a group i
 
 This week that label turns into a number. A clinic does not only ask whether a patient walks; it asks how many minutes a day. A county does not only ask whether a town is remote; it asks how many miles to the nearest hospital. When both variables are numerical and both are measured on the same case, the question changes shape. It is no longer "which group is higher?" but "as one number goes up, what happens to the other?"
 
-That question comes with a picture of its own, the scatterplot, and a number of its own, the correlation. Both are easy to over-read, so this week spends about as much time on what they refuse to tell you as on what they say. Monday builds the picture, Wednesday puts a number on it, and Friday's applied case is mostly an exercise in resisting the number.
+That question comes with a picture of its own, the scatterplot, and a number of its own, the correlation. Both are easy to over-read, so this week spends about as much time on what they refuse to tell you as on what they say.
 
 One thing this week deliberately does not do is fit a line. You will see a line drawn through a cloud once, because nothing else makes its point as fast, but the recipe waits for Week 8. For now the job is describing a relationship honestly.
 
-### Why this matters beyond the exam
+### Why this matters
 
 A regional health system is choosing where to open three walk-in clinics. The slide that decides it shows one number: across the forty neighborhoods already served, the correlation between the number of clinics and the share of adults reporting a routine checkup is 0.72. Strong, positive, obvious — build more clinics.
 

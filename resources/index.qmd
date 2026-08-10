@@ -6,9 +6,8 @@ This course is built around open, student-accessible materials. The
 main source spine is **Introduction to Modern Statistics (2e)** from
 OpenIntro. We will also use selected biomedical and life-science
 contexts from **Introductory Statistics for the Life and Biomedical
-Sciences**, along with course-specific notes, StatKey activities,
-micro-lab tickets, interpretation-focused assignments, and a custom
-late-semester meta-analysis unit.
+Sciences**, along with course-specific weekly notes, simulation tools,
+and a custom late-semester meta-analysis unit.
 
 ## Primary course text
 
@@ -41,20 +40,18 @@ require students to use R.
 
 ## Course-specific materials
 
-Additional course notes, activities, micro-lab tickets, assignments,
-and the late-semester meta-analysis unit are developed specifically
-for this UA Little Rock course. These materials are designed to
-emphasize interpretation, study design, uncertainty, evidence, and
-clear communication.
+The weekly notes on this site, and the late-semester meta-analysis unit,
+are written specifically for this course. They are designed to emphasize
+interpretation, study design, uncertainty, evidence, and clear
+communication.
 
-## Simulation and the LMS
+## Simulation tools
 
 **StatKey and simulation applets** are used *conceptually* — to see
 sampling variability, randomization, and confidence intervals in
 action. They are tools for understanding, not software you are required
 to install or program.
 
-**Blackboard** is the official course system. Quizzes, homework,
-project submissions, official due dates, grades, and any private
-assessment material live there. This public site is the reading and
-review layer; it does not post answer keys or private assessments.
+This public site is the course's reading and review layer. The learning
+management system and the official institutional syllabus are
+authoritative for how the course itself is run.

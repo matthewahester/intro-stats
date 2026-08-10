@@ -18,7 +18,7 @@ Answering that means knowing what chance alone produces, and no formula arrives 
 
 There are two jobs here and two kinds of resampling. The first asks whether chance alone is a workable explanation for what you saw: a randomization test. The second takes your estimate and asks how precise it is: a bootstrap. Both make a mound-shaped picture, and students who blur them spend Week 12 lost.
 
-### Why this matters beyond the exam
+### Why this matters beyond the classroom
 
 A campus health service runs a pilot. Twenty students get a coaching session, twenty get a handout, and the coached group reports better sleep. A director sees 75% against 35%, calls it a success, and funds the session everywhere. But the director never asked how often a gap that big appears when the session does nothing, and without that they cannot tell a program worth scaling from a lucky twenty students.
 
@@ -209,7 +209,7 @@ Nothing here is collected. These are for a quiet half hour with a calculator.
 
 - The randomization half of this week is [Hypothesis testing with randomization](https://openintrostat.github.io/ims/foundations-randomization.html). Work its examples with the pictures beside you rather than the formulas.
 - The bootstrap half is [Confidence intervals with bootstrapping](https://openintrostat.github.io/ims/foundations-bootstrapping.html), which develops "percentile interval" carefully.
-- [StatKey](https://www.lock5stat.com/statkey) is the tool used in class on Wednesday. Its randomization and bootstrap pages run a thousand shuffles while you watch, worth doing slowly at least once.
+- [StatKey](https://www.lock5stat.com/statkey) is the tool behind this week's simulations. Its randomization and bootstrap pages run a thousand shuffles while you watch, worth doing slowly at least once.
 - The [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) supplement gives these ideas a health framing, and [Introduction to Modern Statistics](https://openintrostat.github.io/ims) is browsable whole.
 - Course pages: the [course home page](../index.qmd), the [schedule](../schedule.qmd), and the [resources page](../resources/index.qmd). Last week's notes are at [Week 10](week10-probability-risk-diagnosis.qmd).
 

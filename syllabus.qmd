@@ -3,15 +3,17 @@ title: "Syllabus"
 toc: true
 ---
 
-> **Public version.** This page is the public-facing overview of
-> **MATH 21003 — Introduction to Statistical Methods, Fall 2026**. The
-> official syllabus — with section numbers, exact dates, grading rules,
-> accommodations, and full university policies — lives in **Blackboard**.
+> **Public overview.** This page describes what the course is about and how
+> to use this site. It is not the official syllabus.
 
 ## Course purpose
 
 Introduction to Statistical Methods is a first course in reasoning with
-data. By the end of the term, you should be able to:
+data. It is about the step between a number and the claim someone makes
+from it: where the number came from, what it stands in for, and how much
+weight it can carry.
+
+By the end of the course, you should be able to:
 
 - **read data** — name the cases and variables, and say honestly what a
   dataset can and cannot tell you;
@@ -22,31 +24,28 @@ data. By the end of the term, you should be able to:
 - **make responsible statistical claims** — state a conclusion that
   matches its evidence and names its limits.
 
-## How this site fits
+## What this site provides
 
 This public site is the course's **reading and review layer** — a kind of
-open textbook. It holds the weekly notes, public exit tickets, and links
-to the open texts behind the course.
+open textbook. It holds the weekly notes and links to the open texts
+behind them. Everything here is readable by anyone, at any time, without
+signing in.
 
-**Blackboard is the official course system.** Announcements, due dates,
-quizzes, homework, project submissions, grades, and the full policy
-details all live there. When the two ever disagree, Blackboard is
-authoritative.
+- **[Notes](notes/index.qmd)** — one page per week, and the main reading.
+  Each page teaches a topic end to end, works through examples, names the
+  misreading it is easiest to make, and closes with questions you can use
+  to check yourself.
+- **[Schedule](schedule.qmd)** — the week-by-week topic map, showing the
+  order ideas are built in and which note page goes with each week.
+- **[Resources](resources/index.qmd)** — the open textbooks, tools, and
+  reference material the notes draw on.
 
-## Weekly rhythm
-
-Each week follows a steady three-day pattern:
-
-- **Monday** — concept and reading: the week's main idea, with the
-  weekly notes as the anchor.
-- **Wednesday** — application and exit ticket: a short, hands-on check
-  that puts the idea to work.
-- **Friday** — quiz, accountability, and synthesis: pulling the week
-  together, handled through Blackboard or in class as directed.
+A good way to use it: read the week's note page before the topic is
+covered, then return to it afterwards and work the self-check questions
+without looking back at the worked examples.
 
 ## Tools
 
-- **Course notes** — the weekly note pages on this site.
 - **Introduction to Modern Statistics (IMS)** — the main open textbook
   and source spine.
 - **Introductory Statistics for the Life and Biomedical Sciences
@@ -55,19 +54,21 @@ Each week follows a steady three-day pattern:
   sampling variability and inference.
 - **A basic calculator** — as needed.
 
-**No R and no coding are required for this course.** The public pages do
-not post private assessments or answer keys.
+No R and no coding are required for this course.
 
-## Assessment (public overview)
+## Where the official course lives
 
-Your grade is built from a mix of the following; the exact weights, point
-values, and due dates are in **Blackboard**:
+This site is a public reading layer and nothing more. The **learning
+management system (LMS)** and the **official institutional syllabus** are
+authoritative for everything about running the course, including:
 
-- **exit tickets / participation** — short weekly checks;
-- **quizzes** — regular accountability;
-- **homework** — applied practice;
-- **a project or applied work** — putting the course's habits together;
-- **a final review and final assessment** — cumulative synthesis.
+- section details and dates;
+- instructor and contact information;
+- assessment and grading;
+- submitted work and feedback;
+- course policies;
+- accommodations;
+- announcements.
 
-For the official grading breakdown, late-work rule, accommodations, and
-academic-integrity and AI-use policies, see **Blackboard**.
+Where this site and the official course materials ever differ, the
+official materials govern.

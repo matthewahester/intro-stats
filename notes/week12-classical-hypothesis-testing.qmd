@@ -14,9 +14,9 @@ Last week you tested a claim with your hands: outcomes on cards, group labels sh
 
 This week the shuffling goes away and a formula stands in its place. Nothing else changes. The question is still whether chance alone could plausibly have produced a result like yours, and the picture is still a distribution with your result marked and a tail shaded. Only its source changes: a mathematical model now stands in for the simulation.
 
-Why bother, when simulation already worked? Because a formula is quick, needs no computer, and is the language of nearly every study you will ever read. By Friday you should be able to see "t = 2.45, p = 0.014" and say what claim was on trial, what the 2.45 counts, and what the 0.014 is — and is not — the probability of.
+Why bother, when simulation already worked? Because a formula is quick, needs no computer, and is the language of nearly every study you will ever read. By the end of this week you should be able to see "t = 2.45, p = 0.014" and say what claim was on trial, what the 2.45 counts, and what the 0.014 is — and is not — the probability of.
 
-### Why this matters beyond the exam
+### Why this matters beyond the classroom
 
 Picture a hospital committee deciding whether to buy a text-message reminder system for the thousand patients it sees each year. The vendor's report says the program lowered blood pressure and prints "p = 0.014" in bold. A member who has only learned the word "significant" votes yes. A member who has done this week's work asks how big the drop was, and how precisely it was measured.
 
@@ -200,7 +200,7 @@ One rule to carry out of this week: a p-value is a statement about data under a 
 
 ## Practice on your own
 
-These are for your own checking, not for submission. Work them on paper before Friday's quiz and bring what puzzles you to Wednesday.
+These are for your own checking, not for submission. Work them on paper, and note what puzzles you.
 
 1. A campus health service claims that 30 percent of students get a flu shot each year. A survey of 400 randomly selected students finds 132 who did. Write both claims in words and in notation for a two-sided question, then compute the sample proportion, the standard error under the null claim, and the test statistic. Before looking anything up, say whether you expect a large or small p-value.
 2. Two groups audit a cafeteria's claim that 90 percent of orders arrive within five minutes. One times 40 orders and finds 32 fast; the other times 400 and finds 320. Both saw 80 percent. Without computing a p-value, say which group has the stronger case and name the quantity that makes the difference.

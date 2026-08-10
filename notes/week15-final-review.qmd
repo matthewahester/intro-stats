@@ -1,6 +1,6 @@
 ---
 title: "Week 15 — Final review: What claim can we responsibly make?"
-subtitle: "MATH 21003 · Introduction to Statistical Methods · Fall 2026 · Week 15 (Mon Dec 7, 2026 — last class meeting)"
+subtitle: "MATH 21003 · Introduction to Statistical Methods · Fall 2026 · Week 15 (Dec 7, 2026)"
 format:
   html:
     toc: true
@@ -10,7 +10,7 @@ format:
 
 ## Where this week starts
 
-This week has one meeting and no new machinery. What arrives instead is the shape of everything before it. The course was never fourteen topics; it was one argument, built in order, each piece deciding what the next is allowed to mean.
+This week brings no new machinery. What arrives instead is the shape of everything before it. The course was never fourteen topics; it was one argument, built in order, each piece deciding what the next is allowed to mean.
 
 Here is that argument in a single breath. How the data were produced sets a ceiling on what any comparison can show. A summary compresses. An association is a pattern, not a mechanism. A model adjusts for what somebody measured, and nothing else. Chance is a rival explanation whose size can be measured. And one study is one line of a longer table. Every technique you met serves one of those six sentences.
 
@@ -18,7 +18,7 @@ Week 14 left you at the widest scale, reading a forest plot in which a dozen stu
 
 One note first. Every number here is invented for teaching: the arithmetic is real and worth checking with a calculator, the studies are not.
 
-### Why this matters beyond the exam
+### Why this matters beyond the classroom
 
 Picture a clinic manager holding a one-page summary from a vendor: patients on the new therapy schedule recovered about four days faster. Four days is a lot. The schedule costs money and reshuffles staffing, and she has a meeting on Thursday. If all she can read is the four, the decision has been made for her. If she can ask who ended up on each schedule, the four shrinks to about two, and two days may not be worth the reshuffle. That one question — were the groups comparable before anything happened to them? — separates buying a real improvement from buying a difference in who was sick to begin with.
 

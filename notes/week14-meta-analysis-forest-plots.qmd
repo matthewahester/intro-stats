@@ -16,9 +16,9 @@ That is the situation nearly every real health claim is in. A small trial finds 
 
 Week 13 left you able to read a single comparison of rates, and you came back from the fall break with that skill intact. What was missing was scale: nothing so far tells you what to do when five people hand you five different intervals. That is this week's job, and the term's last new machinery.
 
-By Friday, a forest plot should stop looking like a decorative row of dots and start reading like a paragraph — which trial each row is, how sure it was, what it means to cross the vertical line, and when the diamond at the bottom is a fair summary rather than a mistake.
+By the end of this week, a forest plot should stop looking like a decorative row of dots and start reading like a paragraph — which trial each row is, how sure it was, what it means to cross the vertical line, and when the diamond at the bottom is a fair summary rather than a mistake.
 
-### Why this matters beyond the exam
+### Why this matters beyond the classroom
 
 A hospital committee is deciding whether to fund a pharmacist-led medication review for patients with high blood pressure. Someone circulates a study showing a six-unit drop in blood pressure compared with usual care. It is genuine and honestly reported, and it enrolled thirty-six people; four larger trials report more modest results. Reading only that study, the committee will over-promise and be surprised later. Reading all five in a forest plot, it sees one noisy row with a very long line sitting above four steadier rows. The decision changes because of how the evidence was assembled, not because anyone ran a new experiment.
 
@@ -214,7 +214,7 @@ Be aware of a limitation this week: meta-analysis is beyond the scope of both op
 - [Introduction to Modern Statistics](https://openintrostat.github.io/ims) — the whole book, if you want the interval chapters in order.
 - [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — a second explanation, with health examples throughout.
 - [StatKey](https://www.lock5stat.com/statkey) — draw repeated samples of size 36 and of size 900 from one population and watch the small-sample estimates scatter far more. That scatter is why weighting exists.
-- The course [schedule](../schedule.qmd) and [resources](../resources/index.qmd) pages list what to read before Wednesday's meeting.
+- The course [schedule](../schedule.qmd) and [resources](../resources/index.qmd) pages list further reading for this unit.
 
 ## Where this goes next
 

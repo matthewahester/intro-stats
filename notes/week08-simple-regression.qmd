@@ -16,9 +16,9 @@ This week you meet the tool built for that situation. When both variables are nu
 
 The second new thing is output literacy. From here on you read printed statistical output rather than produce it — no coding, nothing to install. You find the slope, say what it means in the units of the study, and notice the number nearby that quietly reports the line has the wrong shape. The one line fitted by hand below is there so you can see where a printed slope comes from.
 
-By Friday a scatterplot with a line through it should read like a sentence you can say out loud — including the part most people skip, which is what the line does not entitle anyone to claim.
+By the end of this week a scatterplot with a line through it should read like a sentence you can say out loud — including the part most people skip, which is what the line does not entitle anyone to claim.
 
-### Why this matters beyond the exam
+### Why this matters beyond the course
 
 A wellness programme reads a fitted line off its own clinic records and prints a poster: exercise one more hour a week and drop your resting heart rate by three beats. That takes a comparison between different people and sells it as a promise about one person's future. If the people in those records who exercise more are also younger, lighter, and less likely to smoke, part of those three beats belongs to age, weight, and smoking.
 
@@ -265,7 +265,7 @@ Two smaller misreadings travel with the big one. First: "$R^2$ is 0.93, so the m
 
 ## Practice on your own
 
-For your own checking, not for submission. Bring whatever puzzles you to Wednesday's application meeting.
+For your own checking, not for submission.
 
 1. **Say the slope.** A campus health service fits, across 120 students, the line $\hat{y} = 8.9 - 0.06x$, where $x$ is hours of paid work per week and $\hat{y}$ is predicted hours of sleep per night. Write one sentence giving the slope's meaning in the study's units, with no causal verb. Then say what the intercept 8.9 describes, and whether anyone in that study could have it.
 

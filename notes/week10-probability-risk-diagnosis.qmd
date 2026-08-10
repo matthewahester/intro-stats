@@ -16,9 +16,9 @@ That question has a name: probability. In this course a probability is a proport
 
 Week 9 left something unfinished. Logistic regression handed you a fitted probability — the model puts this patient's chance at 0.18 — without our ever saying what a chance is, or what should happen to it when new information arrives. This week we say both, by counting people. A famous rule of probability sits behind everything below, and you will never need to write it down: a table of 1,000 imaginary people does the same work, and unlike the formula it cannot hide which denominator you are using.
 
-By Friday the sentence "this test is 90% accurate" should sound incomplete to you. You should be able to name the two numbers it compresses, explain why neither is the chance that your own positive result is real, and produce that chance yourself from a prevalence and a small table of counts.
+By the end of this week the sentence "this test is 90% accurate" should sound incomplete to you. You should be able to name the two numbers it compresses, explain why neither is the chance that your own positive result is real, and produce that chance yourself from a prevalence and a small table of counts.
 
-### Why this matters beyond the exam
+### Why this matters beyond the classroom
 
 Picture someone who has just tested positive on a screening test for a serious but uncommon condition. They are told the test is 90% accurate, so they go home and spend three weeks believing they have a nine-in-ten chance of being ill. They cancel plans. They may accept an invasive follow-up they would have weighed differently with a clear head. In the situation we build below, their real chance is closer to one in twelve, and the right thing to feel is neither relief nor panic but a specific, quantified concern that justifies a second test.
 

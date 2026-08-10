@@ -14,9 +14,9 @@ Weeks 1 and 2 asked where numbers come from: what was measured, who was sampled,
 
 Take a single variable — the wait for a clinic visit, the trip time on a shuttle route, this morning's commute — and answer three questions: what **shape**, what **center**, how much **spread** around that center. Always in that order, because shape decides which center and which spread are honest to report.
 
-One scheduling note. Monday is the Labor Day holiday, so this week meets Wednesday and Friday only: the concept material and the application land together on Wednesday, which makes it a long, dense meeting — read this page before you come. Friday keeps its usual shape, the short quiz then the applied case. By Friday one instinct should have changed: hand you forty numbers today and you will probably average them, and averaging first should come to feel incomplete.
+By the end of this week one instinct should have changed: hand you forty numbers today and you will probably average them, and averaging first should come to feel incomplete.
 
-### Why this matters beyond the exam
+### Why this matters beyond this course
 
 A campus shuttle office runs two routes to the same building. Both average 20 minutes, and both averages get published. On one route the trips run 18 to 22 minutes; on the other, 12 to 28. A student with a 9 o'clock class picks whichever is convenient. The average hid the only thing that student needed: one route lets you plan, the other makes you late some mornings, and the published number gave no warning.
 
@@ -240,7 +240,7 @@ A way to catch yourself in either error: after writing a summary sentence, ask h
 
 ## Practice on your own
 
-These are for self-checking before Friday, not for submission.
+These are for self-checking, not for submission.
 
 1. A nutrition class records the servings of vegetables each of twelve students ate yesterday: 0, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6, 12. Build the five-number summary, compute the IQR, apply the fence rule, and decide whether 12 is flagged. Then write one sentence describing this distribution for a reader who never sees the data.
 

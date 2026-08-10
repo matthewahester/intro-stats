@@ -16,9 +16,9 @@ You already have the idea. In Week 6 you compared like with like by splitting th
 
 The second half of the week changes the outcome itself. So far the response has been numerical — blood pressure, days of stay, servings a day. Many real questions are yes-or-no: did the patient come back, did the sample test positive. A straight line is the wrong shape for a probability, and its replacement, logistic regression, reports itself in a unit you have not used yet — odds.
 
-You will not fit any of these models; reading them is the skill. By Friday you should be able to take an output block row by row and say which two people each row compares.
+You will not fit any of these models; reading them is the skill. By the end of this week you should be able to take an output block row by row and say which two people each row compares.
 
-### Why this matters beyond the exam
+### Why this matters beyond the course
 
 Two hospitals report their average length of stay, and Hospital B's patients stay 0.8 days longer. Adjust for how sick patients were on arrival and the comparison reverses: among patients admitted in similar condition, stays at B are half a day shorter. B is the referral hospital. A board that moves resources on the unadjusted number has the story backwards.
 
@@ -202,7 +202,7 @@ Three questions to ask of any adjusted estimate: which variables are in the mode
 
 ## Practice on your own
 
-Try these and check against your notes; bring what puzzles you to Wednesday.
+Try these and check against your notes.
 
 1. Using the clinic's adjusted equation, find the predicted blood pressure for a 45-year-old who walks 20 minutes a day and for one the same age who walks 50. State the difference, then explain how you could have known it without computing either prediction.
 

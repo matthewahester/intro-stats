@@ -6,23 +6,13 @@ project:
   # the tree would render and publish without anyone editing this file. The three public
   # root pages are listed explicitly instead, and the private surfaces .gitignore already
   # declares off-limits ("if they ever reappear in this public repo, treat that as a
-  # mistake") are negated as belt-and-suspenders. activities/, assignments/ and projects/
-  # are deliberately absent: their sources stay in the repository but are dormant, and
-  # nothing links to or renders them. The negations below are defence in depth — the
-  # allow-list is positive, so they change nothing today, but they keep the three dormant
-  # sections out if a broad glob is ever restored above. Note that dropping a directory
-  # from this list is not by itself enough to keep it out of _site/: while any RENDERED
-  # page still links to an unrendered .qmd, Quarto copies that source verbatim into the
-  # output to satisfy the link. The landing page's links were removed for that reason.
+  # mistake") are negated as belt-and-suspenders.
   render:
     - index.qmd
     - syllabus.qmd
     - schedule.qmd
     - notes/*.qmd
     - resources/*.qmd
-    - "!activities/"
-    - "!assignments/"
-    - "!projects/"
     - "!bank/"
     - "!builder/"
     - "!_source_material/"
@@ -46,8 +36,8 @@ website:
   title: "Intro to Statistics"
   site-url: https://matthewhester.com/intro-stats/
   description: |
-    Public-facing course resources for Intro to Statistics — concepts,
-    activities, and interpretation-focused examples curated by Matt Hester.
+    Public-facing course notes for Intro to Statistics — concepts and
+    interpretation-focused examples curated by Matt Hester.
   open-graph: true
 
   navbar:

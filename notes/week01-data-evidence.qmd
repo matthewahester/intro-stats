@@ -14,9 +14,9 @@ You have already read several statistical claims today. Behind each one sits som
 
 Here is the premise the whole term rests on. **Statistics is the discipline of deciding how much a body of evidence supports a claim.** It is not a list of formulas, and it is not a machine that converts numbers into truth. It is a set of habits for asking where a number came from, what it stands in for, and how much weight it can carry. Using those habits starts with agreeing on the objects: which things were observed, and what was recorded about each. That sounds like bookkeeping, but a surprising number of public mistakes with data begin with somebody being unclear about what one row of a table represented.
 
-By Friday, one thing should feel different. When a number lands in front of you, your first instinct should stop being "what do I calculate?" and start being three questions: **what are the cases, what was measured, and what comparison is being made?** Monday sets up the vocabulary, Wednesday puts it to work on a realistic table, and Friday's quiz is followed by an applied case.
+By the end of this week, one thing should feel different. When a number lands in front of you, your first instinct should stop being "what do I calculate?" and start being three questions: **what are the cases, what was measured, and what comparison is being made?**
 
-### Why this matters beyond the exam
+### Why this matters beyond this course
 
 Suppose a clinic tells you the average recovery time after a minor operation is ten days, and you book yourself back at work on day eleven. Now suppose that ten came from a group in which most patients were moving normally by day four, while a handful who were older and sicker than you took six weeks. The average is not wrong. It is simply not a description of any particular patient, and it is not a promise about you. One number replaced a whole spread of people, and you planned against the number.
 
@@ -174,7 +174,7 @@ The repair for both is cheap. Before writing a sentence about data, name the cas
 
 ## Practice on your own
 
-These are for your own checking, not for submission. Compare with a classmate on Wednesday.
+These are for your own checking, not for submission. Compare with a classmate.
 
 1. A shelter records, for each of 40 dogs housed, its weight in kilograms, its age in whole years, its breed group, and whether it is house-trained. State what a case is, classify each of the four variables as numerical (discrete or continuous) or categorical (nominal or ordinal), and explain why "mean breed group" is not a thing.
 
@@ -187,7 +187,7 @@ These are for your own checking, not for submission. Compare with a classmate on
 ## Where to read more
 
 - [Introduction to Modern Statistics, Chapter 1, "Hello data"](https://openintrostat.github.io/ims/data-hello.html) is this week's reading. It covers cases, variables, and variable types with a different data set — the best kind of second explanation.
-- [Chapter 2, "Study design"](https://openintrostat.github.io/ims/data-design.html) is where next week begins; skimming its opening pages will make Monday easier.
+- [Chapter 2, "Study design"](https://openintrostat.github.io/ims/data-design.html) is where next week begins; skimming its opening pages will make that material easier.
 - [The whole of Introduction to Modern Statistics](https://openintrostat.github.io/ims) is online and is the main text for the course.
 - [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) is the supplementary text, and its health examples sit close to our contexts.
 - The course [schedule](../schedule.qmd) lists what each meeting covers, the [syllabus](../syllabus.qmd) states the policies, and the [resources](../resources/index.qmd) page collects everything in one place.

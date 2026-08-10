@@ -9,16 +9,12 @@ short textbook-depth read that teaches the concepts end-to-end, with
 outbound links to OpenIntro IMS and ISLBS for an alternate voice.
 
 Every page follows the same shape: where the week starts and why it
-matters outside the exam, what you will be able to do by Friday, a
+matters beyond the exam, what you will be able to do by the end of it, a
 short table of the words worth owning, the concepts themselves, two
 fully worked examples, the misreading to avoid, and a set of practice
 questions for your own checking. Worked examples use small invented
 data sets chosen to make the reasoning visible; where that is the
 case, the page says so.
-
-The weekly cadence is Monday concept / Wednesday application /
-Friday accountability. Friday quizzes and the biweekly homework are
-handled through Blackboard or in class as directed.
 
 ## Available
 
@@ -53,7 +49,7 @@ handled through Blackboard or in class as directed.
   distort a comparison; comparing like with like by looking within
   strata; a worked reversal where the ranking flips; and what
   adjustment can and cannot repair.
-- [Week 7 — First-half synthesis and midterm](week07-synthesis-midterm.qmd) —
+- [Week 7 — First-half synthesis](week07-synthesis-midterm.qmd) —
   the first six weeks assembled into one six-pass routine for reading
   any study, and a ladder matching each design to the strongest verb
   it can carry; worked end to end on one study, then on a claim that

@@ -3,27 +3,25 @@ title: "Schedule"
 toc: true
 ---
 
-> **Public version.** A generic week-by-week topic map. Specific dates,
-> assignment prompts, and submission details live in the LMS for each
-> section.
+> **Public version.** A generic week-by-week topic map, kept in "Week 1,
+> Week 2, …" form so it stays useful across terms.
 
-This site holds the public spine: short, course-voice **weekly notes**,
-public-safe **Monday and Wednesday exit tickets** linked from each
-weekly page, and outbound pointers to OpenIntro IMS and ISLBS for a
-second voice. **Friday quizzes and the biweekly homework** are handled
-through Blackboard or in class as directed — they are not posted here.
+The table below shows the order the course builds ideas in, and which
+weekly note page goes with each topic. Each note page is the main reading
+for that week, with outbound pointers to OpenIntro IMS and ISLBS for a
+second voice.
 
 ## Week-by-week
 
-| Wk | Topic | Notes / Activities |
-|---:|-------|--------------------|
+| Wk | Topic | Notes |
+|---:|-------|-------|
 | 1 | Data, evidence, and statistics | [Week 1 notes](notes/week01-data-evidence.qmd) — cases, variables, types; reading a small dataset honestly |
 | 2 | Study design, bias, and causality | [Week 2 notes](notes/week02-study-design.qmd) — populations and samples, observational vs experimental, confounding |
 | 3 | One-variable summaries | [Week 3 notes](notes/week03-one-variable-summaries.qmd) — center, spread, shape; tables and graphs for a single variable |
 | 4 | Comparing groups | [Week 4 notes](notes/week04-comparing-groups.qmd) — conditional proportions, group differences, choosing the right display |
 | 5 | Association | [Week 5 notes](notes/week05-association.qmd) — scatterplots, correlation as a descriptive number, the linear-only caveat, association vs causation |
 | 6 | Confounding and multivariable thinking | [Week 6 notes](notes/week06-confounding.qmd) — confounders, stratification, Simpson's paradox, *alone* vs *after accounting for* |
-| 7 | First-half synthesis and midterm | [Week 7 notes](notes/week07-synthesis-midterm.qmd) — Units 1–6 walkthrough on one connecting study; midterm-prep checklist; a single bounded forward-pointer to next week's regression line |
+| 7 | First-half synthesis | [Week 7 notes](notes/week07-synthesis-midterm.qmd) — Units 1–6 walkthrough on one connecting study; a six-pass routine for reading any study; a single bounded forward-pointer to next week's regression line |
 | 8 | Simple regression | [Week 8 notes](notes/week08-simple-regression.qmd) — fitted line, slope and intercept in context, residuals and the residual-plot reading, least squares, *R²*, extrapolation, light outliers and leverage |
 | 9 | Multiple / logistic regression interpretation | [Week 9 notes](notes/week09-multiple-logistic-regression.qmd) — adding predictors; the *holding constant* coefficient reading; adjusted vs unadjusted coefficients; categorical predictors; adjusted *R²* as a reading; interpretation-only logistic regression (direction + predicted probability) |
 | 10 | Probability as risk and diagnosis | [Week 10 notes](notes/week10-probability-risk-diagnosis.qmd) — probability as risk; conditional probability and P(A \| B) vs P(B \| A); diagnostic two-way tables; sensitivity, specificity, predictive values; false positives/negatives; base-rate effects |
@@ -31,21 +29,18 @@ through Blackboard or in class as directed — they are not posted here.
 | 12 | Classical hypothesis testing | [Week 12 notes](notes/week12-classical-hypothesis-testing.qmd) — null and alternative hypotheses, the test statistic and p-value from a normal/t model, confidence intervals, reading one-proportion *z* and one/two-mean *t* output, and Type I/II errors with significance level and power |
 | 13 | Categorical outcomes | [Week 13 notes](notes/week13-categorical-outcomes.qmd) — comparing rates and proportions: reading a 2×2 table; risk, the risk difference, relative risk, and the odds ratio; why case-control studies report an odds ratio; expected counts under independence and chi-square logic with the p-value as a right-tail area; and association versus causation |
 | 14 | Meta-analysis and forest plots | [Week 14 notes](notes/week14-meta-analysis-forest-plots.qmd) — how do studies become evidence? Single study versus systematic review versus meta-analysis; reading a forest plot (each study's estimate and confidence interval, the line of no effect at RR = 1, square size as weight, and the pooled diamond); heterogeneity as cross-study disagreement; and a cautious read of evidence strength. An instructor-original, source-gap week with schematic (not real-study) figures |
-| 15 | Final review | [Week 15 notes](notes/week15-final-review.qmd) — what claim can we responsibly make? The whole-course synthesis: the arc from data and design through inference, categorical outcomes, and evidence strength, plus a responsible-claim checklist and one cumulative scenario. **Monday, Dec. 7 only** — the last class meeting; no Wednesday or Friday class. Final-exam logistics live in Blackboard |
+| 15 | Final review | [Week 15 notes](notes/week15-final-review.qmd) — what claim can we responsibly make? The whole-course synthesis: the arc from data and design through inference, categorical outcomes, and evidence strength, plus a responsible-claim checklist and one cumulative scenario |
 
 ## How to use this schedule
 
 - **Read by row.** Each row gives the week's topic and links to its
-  public weekly notes page. All fifteen weeks are live.
-- **Dates live in Blackboard.** This site only shows "Week 1, Week 2,
-  …" so it stays useful across terms. Blackboard is the authoritative
-  source for section-specific due dates, quizzes, homework, project
-  submissions, grades, and announcements.
-- **Exit tickets** are linked from each weekly notes page (look for
-  the *Assignments this week* section near the bottom of the page).
-  **Friday quizzes** and the **biweekly homework** are not posted
-  here — they are handled through Blackboard or in class as
-  directed.
+  weekly notes page. All fifteen weeks are live.
+- **Read ahead, then back.** The topics are cumulative: each week assumes
+  the one before it, and Weeks 7 and 15 are deliberate synthesis points
+  that gather what came earlier.
+- **Weeks, not dates.** This map is deliberately generic, so it describes
+  the sequence of ideas rather than one term's calendar.
 
-See the [Syllabus](syllabus.qmd) for the grading framework, late-work
-rule, and other course-wide policies.
+Section details and dates are set in the learning management system (LMS)
+and the official institutional syllabus. See the
+[Syllabus](syllabus.qmd) page for what this site does and does not cover.

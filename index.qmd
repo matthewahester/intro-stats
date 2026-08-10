@@ -1,9 +1,9 @@
 ---
 pagetitle: "Intro to Statistics"
 description: |
-  Public-facing course resources for Intro to Statistics — concepts,
-  activities, and interpretation-focused examples for reasoning about
-  data, evidence, models, and uncertainty.
+  Public-facing course notes for Intro to Statistics — concepts and
+  interpretation-focused examples for reasoning about data, evidence,
+  models, and uncertainty.
 toc: false
 page-layout: full
 ---
@@ -12,19 +12,19 @@ page-layout: full
 
 # Intro to Statistics {.course-landing-title}
 
-This site collects public-facing resources for **Intro to Statistics** —
-the concepts, activities, and interpretation-focused examples behind
-reasoning with **data, evidence, models, and uncertainty**. Curated by
+This site collects public-facing notes for **Intro to Statistics** — the
+concepts and interpretation-focused examples behind reasoning with
+**data, evidence, models, and uncertainty**. Curated by
 [Matt Hester](https://matthewhester.com).
 
-It is a **curated resource site**, not a raw course archive. Anything
-syllabus- or roster-specific lives in the LMS; this site is what stays
-public.
+It is a **reading and review layer**, not a raw course archive. Anything
+section-specific lives in the learning management system; this site is
+what stays public.
 
 ## Where to start
 
-- [Syllabus](syllabus.qmd) — public course overview and how this site
-  relates to Blackboard
+- [Syllabus](syllabus.qmd) — what the course is about and how to use
+  this site
 - [Schedule](schedule.qmd) — week-by-week topic map with links to the
   weekly notes
 - [Notes](notes/index.qmd) — weekly notes and conceptual write-ups

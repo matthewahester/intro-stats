@@ -14,9 +14,9 @@ Last week you learned to describe one variable on its own: its shape, its center
 
 The move is easy to do badly, and most people do. It is very natural to compute two averages, subtract, and stop. But a difference in averages tells you almost nothing about what any individual person experienced. This week's real content is the discipline that keeps you from stopping there: compare centers, but also spreads, also shapes, and always look at how much the groups overlap before you say anything about a person.
 
-By Friday you should be able to look at a pair of side-by-side boxplots, or a small table of group summaries, and write two or three sentences a careful reader would accept: how big the gap is in the units of the problem, how much the groups overlap, and what the comparison does not establish. One thing it cannot establish is whether a gap this size could have appeared by chance alone. We name that question this week and leave it until Week 11.
+By the end of this week you should be able to look at a pair of side-by-side boxplots, or a small table of group summaries, and write two or three sentences a careful reader would accept: how big the gap is in the units of the problem, how much the groups overlap, and what the comparison does not establish. One thing it cannot establish is whether a gap this size could have appeared by chance alone. We name that question this week and leave it until Week 11.
 
-### Why this matters beyond the exam
+### Why this matters
 
 Picture an administrator choosing between two staffing plans for a walk-in clinic. The average wait is twenty-three minutes under Plan A and twenty-three under Plan B, so the choice looks like a coin flip and the administrator picks whichever is cheaper. But suppose that under Plan A nearly every patient waits between fifteen and thirty minutes, while under Plan B most are seen inside a quarter of an hour and a handful wait more than an hour. Those are not the same clinic to be a patient in. The average hid the entire difference, and a real decision got made on the wrong number.
 

@@ -14,9 +14,9 @@ A campus health center tried something small. Of the 500 appointments booked in 
 
 That is the entire data set. There is no average to take, no line to fit, no standard deviation to work out. Every observation is a word rather than a number: kept or missed, reminded or not. Data that arrive as labels instead of measurements are **categorical**, and most evidence you meet outside this room arrives that way — infected or not, hired or not, voted or stayed home.
 
-Week 12 handed you the machinery of a formal test: a null claim, a test statistic, a p-value, two ways to be wrong. It did not hand you the front half of the job. Before you can test anything about counts you have to organize them, and that is where almost all of the damage happens: a table can be sliced three ways, each producing a legitimate proportion, only one of which addresses the question asked. By Friday you should be able to produce three honest summaries of one gap and notice which one a writer chose.
+Week 12 handed you the machinery of a formal test: a null claim, a test statistic, a p-value, two ways to be wrong. It did not hand you the front half of the job. Before you can test anything about counts you have to organize them, and that is where almost all of the damage happens: a table can be sliced three ways, each producing a legitimate proportion, only one of which addresses the question asked. By the end of this week you should be able to produce three honest summaries of one gap and notice which one a writer chose.
 
-### Why this matters beyond the exam
+### Why this matters beyond the classroom
 
 Suppose a headline says a supplement doubles the risk of a rare liver condition. "Doubles" sounds like a reason to throw the bottle out. But a ratio hides the size of what it doubles. If the condition strikes 2 people in 100,000 a year, doubling takes it to 4 in 100,000; if it strikes 20 in 100, doubling takes it to 40 in 100. The same word covers both, and only one is a reason to change what you swallow.
 
@@ -248,6 +248,6 @@ These are for you, not for submission. Check yourself by making every margin clo
 
 ## Where this goes next
 
-Fall break falls between this unit and the next, so there is a gap in the Monday-Wednesday-Friday rhythm before Week 14 begins. Use a little of it to re-read one section: conditioning on the group versus conditioning on the outcome is what pays off for the rest of the term.
+Fall break falls between this unit and the next, so there is a gap before Week 14 begins. Use a little of it to re-read one section: conditioning on the group versus conditioning on the outcome is what pays off for the rest of the term.
 
 Week 14 changes the unit of analysis. Instead of asking what one study shows, you will ask how a pile of studies becomes a body of evidence, reading a forest plot line by line — one row per study, an estimate, an interval, a line of no effect. Nearly every estimate on such a plot is a number of the kind you built this week, so the vocabulary carries straight over. Continue to [Week 14 — Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd), look back at [Week 12 — Classical hypothesis testing](week12-classical-hypothesis-testing.qmd) for where the p-value came from, or return to the [notes index](index.qmd).

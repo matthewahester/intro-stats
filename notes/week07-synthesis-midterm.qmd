@@ -1,5 +1,5 @@
 ---
-title: "Week 7 — First-half synthesis and midterm"
+title: "Week 7 — First-half synthesis"
 subtitle: "MATH 21003 · Introduction to Statistical Methods · Fall 2026 · Week 7 (Oct 5–9, 2026)"
 format:
   html:
@@ -14,11 +14,11 @@ For six weeks the tools arrived one at a time, on purpose: cases and variables, 
 
 Real studies do not arrive one tool at a time. A study arrives as a paragraph — a few sentences on collection, a table of summaries, one plot, a headline — and all six weeks are relevant at once. Knowing six techniques separately is not the same skill as reading one study with all six.
 
-There is an in-class midterm at the end of this week, which is why the week consolidates instead of adding. Nothing new is introduced: no new statistic, no new plot, no new formula. What is new is a routine — a fixed order of six questions you put to any study, and the habit of writing your conclusion in a verb the design can carry. Boring routines are what stop a reader from being fooled by an exciting number.
+This week consolidates instead of adding. Nothing new is introduced: no new statistic, no new plot, no new formula. What is new is a routine — a fixed order of six questions you put to any study, and the habit of writing your conclusion in a verb the design can carry. Boring routines are what stop a reader from being fooled by an exciting number.
 
-Week 6 also left something unfinished: you learned to check a third variable by splitting the data, but not when to reach for that check, or what to write down afterward. By Friday it will be step six of something automatic.
+Week 6 also left something unfinished: you learned to check a third variable by splitting the data, but not when to reach for that check, or what to write down afterward. By the end of this week it will be step six of something automatic.
 
-### Why this matters beyond the exam
+### Why this matters beyond the course
 
 Picture a clinic manager with one year of outreach money. A study crosses her desk showing that patients who sleep less report worse daytime alertness, so she funds a sleep-education campaign. If most of that gap actually travels with night-shift employment — people on late shifts sleep less *and* are tired for reasons the shift itself creates — the campaign is aimed at the wrong thing and nothing moves. The study was not fraudulent. It was read one pass too shallow.
 
@@ -174,7 +174,7 @@ A quieter misreading rides along with the first: *"Saying 'is associated with' i
 
 ## Practice on your own
 
-These are for your own checking as you review. Bring the ones that fought back to class.
+These are for your own checking as you review.
 
 1. A city report states: "Neighborhoods with more bus stops have higher rates of adults meeting exercise guidelines." Run all six passes on that one sentence, saying for each what you can determine and what the sentence withholds. Then name two third variables and argue both halves of the confounding definition.
 

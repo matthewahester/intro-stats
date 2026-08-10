@@ -14,9 +14,9 @@ Week 1 ended with a habit: before interpreting any number, ask what the cases ar
 
 That decision, not the arithmetic afterwards, settles what the number is worth. Two studies can report the same difference, from samples of the same size, and one supports a recommendation while the other supports a raised eyebrow. Nothing in the two numbers tells you which is which, so the question for the week is: where did these data come from?
 
-Monday builds the vocabulary that separates the two situations, Wednesday runs headlines through it, and Friday's applied case asks you to read a study description cold. By Friday, "students who eat breakfast have higher grades, so eat breakfast" should stop sounding like one claim and start sounding like two: one the data can check, and one that has been attached to it.
+By the end of this week, "students who eat breakfast have higher grades, so eat breakfast" should stop sounding like one claim and start sounding like two: one the data can check, and one that has been attached to it.
 
-### Why this matters beyond the exam
+### Why this matters beyond this course
 
 A state health department is deciding whether to fund home visits for new parents. One evaluation compares families who signed up for an existing program with families who did not, and the sign-up families do better. A second study offers the program to everyone and lets a chance device decide who receives it. The first comparison can be explained entirely by who signs up — families with a working phone, a schedule with slack in it, someone who already trusts the department. If money follows that evidence, families get a program that may do nothing, and one that would have helped never gets built.
 
@@ -210,7 +210,7 @@ The third misreading is quieter: *"It was a randomized trial, so it applies to e
 
 ## Practice on your own
 
-Work these for your own checking before Friday, and bring what puzzles you.
+Work these for your own checking.
 
 1. A fitness company reports that customers who open its app at least four times a week lost more weight over six months than customers who open it less. Name the cases, the explanatory variable, the response, and who assigned the condition. Then write the strongest claim the design supports, plus one rival explanation.
 
@@ -224,8 +224,8 @@ Work these for your own checking before Friday, and bring what puzzles you.
 
 ## Where to read more
 
-- [Introduction to Modern Statistics, Chapter 2: Study design](https://openintrostat.github.io/ims/data-design.html) covers this week's spine, including sampling methods and experimental principles. Read it before Wednesday.
-- [Chapter 3: Applications — Data](https://openintrostat.github.io/ims/data-applications.html) works through study descriptions of the kind Friday's case uses.
+- [Introduction to Modern Statistics, Chapter 2: Study design](https://openintrostat.github.io/ims/data-design.html) covers this week's spine, including sampling methods and experimental principles.
+- [Chapter 3: Applications — Data](https://openintrostat.github.io/ims/data-applications.html) works through study descriptions of the kind this week's material uses.
 - [Chapter 1: Hello data](https://openintrostat.github.io/ims/data-hello.html) is worth a second pass if cases and variables still feel slippery.
 - [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) treats study design with clinical examples.
 - The [course schedule](../schedule.qmd) lists what each meeting covers, and the [resources page](../resources/index.qmd) collects extra practice.

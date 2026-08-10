@@ -16,9 +16,9 @@ This week supplies the missing question, short enough to carry around in your he
 
 Give that third thing a name. If a variable differs between the groups you are comparing, is related to the response on its own, *and* is not simply a step on the path from one to the other, it is a **confounding variable**, and a comparison that ignores it is partly a comparison of that variable instead. The main tool against it is blunter than it sounds: stop comparing everybody to everybody, and start comparing like with like.
 
-Monday builds the vocabulary, Wednesday puts it on real-looking tables including the case where splitting the data reverses the conclusion, and Friday's quiz and applied case ask you to do it on a study you have not seen. By then, reading "patients at Clinic A did worse" should prompt a question about who those patients were rather than a verdict about the clinic.
+This week builds the vocabulary, puts it on real-looking tables including the case where splitting the data reverses the conclusion, and applies it to a study you have not seen. By the end, reading "patients at Clinic A did worse" should prompt a question about who those patients were rather than a verdict about the clinic.
 
-### Why this matters beyond the exam
+### Why this matters
 
 A city newspaper ranks local hospitals by the share of surgery patients who survive the year. One hospital sits at the bottom. Readers avoid it, a health board threatens it, funding is cut. But that hospital is the regional referral centre: it takes the transfers and complications the others cannot handle. Its patients were sicker before anyone touched them. The table compares hospitals; what it partly measures is who walked through the door.
 
