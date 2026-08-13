@@ -9,8 +9,15 @@
    Design rules:
      - Quarto + Bootstrap (cosmo) handle layout. We only tune
        colors, type, and a few component edges.
-     - No JS, no SCSS — plain CSS.
+     - No JS, no SCSS — plain CSS. No @import, no url(), no
+       remote asset.
      - One accent color (iron). Used sparingly.
+     - Base font size and the font stacks are set in _quarto.yml
+       as fontsize/mainfont/monofont, not here, so they are not
+       declared twice.
+     - Nothing below hides overflow at the document level. Where
+       a single wide element cannot fit, it gets its own scroll
+       box rather than the page getting one.
    ============================================================= */
 
 /* Color tokens — same family as the main site, kept here so
@@ -25,12 +32,13 @@
   --crystal-blue: #5b7a8c;
   --iron-accent:  #8a4a2b;
   --radius-card:  8px;
+  --cs-line-height: 1.65;
 }
 
 body {
   background-color: var(--stone-50);
   color: var(--stone-700);
-  line-height: 1.65;
+  line-height: var(--cs-line-height);
 }
 
 h1, h2, h3, h4 {
@@ -117,6 +125,7 @@ h1.course-landing-title {
   line-height: 1.2;
 }
 .course-landing-subtitle {
+  display: block;
   margin: 0 0 1.6rem 0;
   font-size: 1.1rem;
   line-height: 1.5;
@@ -140,38 +149,103 @@ code {
   font-size: 0.9em;
 }
 
-/* Wide lesson content — let the one wide element scroll, not the whole page.
+/* Wide course tables scroll inside their own box on small screens
+   rather than forcing the page to scroll sideways. */
+@media (max-width: 767px) {
+  table { display: block; overflow-x: auto; }
+}
 
-   The weekly lesson pages carry long display equations and multi-column tables.
-   Neither of those wraps, so on a phone they widened the document itself and
-   pushed the navbar, the prose, and the figures past the right edge. Each now
-   scrolls inside its own box, which keeps the page the width of the viewport
-   and confines the sideways movement to the element that actually needs it.
-   The table rule is scoped to narrow viewports so that table layout at reading
-   widths is exactly what it was before. */
-mjx-container[display="true"] {
-  display: block;
+/* Narrow screens: let the navbar brand SHRINK instead of measuring
+   wider than the viewport. A flex child will not shrink below its
+   content width without min-width:0, so a long course title kept a
+   345px box in a 390px viewport — the theme drew it ellipsised, but
+   the box still crossed the edge. This makes the measured box agree
+   with what is actually painted. It constrains one flex child; it
+   does NOT hide document overflow, and it leaves desktop untouched. */
+@media (max-width: 767px) {
+  .navbar > .container-fluid,
+  .navbar-brand-container,
+  .navbar-brand { min-width: 0; }
+  .navbar-title {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+}
+
+/* ---------------------------------------------------------------
+   WIDE LESSON CONTENT — let the one wide element scroll, not the
+   whole page.
+
+   The weekly lesson pages carry long display equations, long runs of
+   inline arithmetic, and multi-column tables. None of those wrap, so
+   without these rules they widen the document itself and push the
+   navbar, the prose, and the figures past the right edge. Each now
+   scrolls inside its own box, which keeps the page the width of the
+   viewport and confines the sideways movement to the element that
+   actually needs it.
+
+   Three of these apply at EVERY width, deliberately: a twelve-column
+   table and a sixty-term inline expression both overflowed a 1440px
+   viewport, so a phone-only rule would have left the desktop broken.
+   What they change there is confined to an element that did not fit
+   anyway — a table narrower than the column still fills it as before.
+
+   The math selectors are written for MathML, because that is what the
+   site emits (html-math-method: mathml in _quarto.yml). MathJax
+   selectors would match nothing here, so they are deliberately absent.
+   --------------------------------------------------------------- */
+
+/* DISPLAY mathematics. The rule is on the PARAGRAPH, not on the <math>
+   element, and that is the point: the renderer emits
+   `<p><math display="block">…</math></p>`, and browsers do not make a
+   MathML element a scroll container, so putting overflow on the math
+   itself measures exactly the same overflow as no rule at all. An
+   equation that fits shows no scrollbar. */
+p:has(> math[display="block"]) {
   max-width: 100%;
   overflow-x: auto;
-  overflow-y: hidden;
   padding-bottom: 0.35rem;
 }
 
-@media (max-width: 575.98px) {
-  main table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-  }
+/* INLINE mathematics, at every width. A long run of inline arithmetic
+   cannot wrap either, and an inline box IGNORES overflow, so giving it
+   a box of its own is what makes the overflow containable at all.
 
-  /* A long run of inline arithmetic cannot wrap, and an inline box ignores
-     overflow, so on a phone it was the last thing still widening the page.
-     Giving it a box of its own lets it scroll. Scoped to phone widths so that
-     inline mathematics sits on the text baseline everywhere else, unchanged. */
-  mjx-container:not([display="true"]) {
-    display: inline-block;
-    max-width: 100%;
-    overflow-x: auto;
-    vertical-align: middle;
-  }
+   The trade, stated: an inline-block with a scrollbox takes its
+   baseline from its bottom edge, so `vertical-align` has to be
+   restored by hand. Short inline mathematics therefore sits a little
+   differently than a bare MathML run would. That is a deliberate
+   exchange for a page that cannot be pushed sideways by one long
+   expression. */
+math[display="inline"] {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: middle;
+}
+
+/* Wide TABLES scroll at every width, not only on phones. The rule
+   above stops at 767px, which is fine for a three-column table and
+   wrong for a twelve-column one: past that breakpoint the table set
+   the document's width and pushed the whole page sideways on a desktop
+   too. A table narrower than the column still fills it as before; only
+   one that genuinely does not fit gains its own scrollbar. */
+main table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Figures stay inside the reading column at every width. The lesson
+   figures are author-sized, so without this a wide asset sets the page
+   width instead of fitting it. */
+main img,
+figure img,
+.quarto-figure img {
+  max-width: 100%;
+  height: auto;
 }

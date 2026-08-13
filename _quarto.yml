@@ -115,6 +115,11 @@ format:
     anchor-sections: true
     smooth-scroll: true
     link-external-newwindow: true
+    # Render mathematics as browser-native MathML instead of loading the MathJax runtime.
+    # The equations become live text — selectable, searchable, and available to assistive
+    # technology — and the page stops pulling a script to typeset them. The overflow rules
+    # in styles.css target MathML elements to match.
+    html-math-method: mathml
     fontsize: 1.05em
     mainfont: "Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
     monofont: "JetBrains Mono, Consolas, Menlo, monospace"
