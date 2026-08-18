@@ -226,6 +226,23 @@ math[display="inline"] {
   max-width: 100%;
   overflow-x: auto;
   vertical-align: middle;
+
+  /* No scrollbar chrome on an inline formula. `overflow-x: auto` silently makes the
+     OTHER axis a scroll container as well -- CSS computes an `overflow-y: visible` to
+     `auto` the moment one axis scrolls -- and MathML's stretchy fences and accents
+     overshoot the inline box by a pixel or two. So every ordinary expression earned a
+     one-line-tall vertical scrollbar, which Chromium paints as a pair of up/down
+     arrows trailing the mathematics. The horizontal scroll box is still wanted for the
+     long case, so the box stays and only its chrome goes: nothing is clipped that the
+     scroll container was not clipping already, and reclaiming the scrollbar's gutter
+     clips marginally less than before. A long inline run still scrolls by wheel, drag,
+     and touch, and a long DISPLAY equation -- the usual home of one -- keeps the
+     visible scrollbar the paragraph rule above gives it. */
+  scrollbar-width: none;      /* Firefox 64+, Chromium 121+ */
+}
+
+math[display="inline"]::-webkit-scrollbar {
+  display: none;              /* older Chromium and WebKit */
 }
 
 /* Wide TABLES scroll at every width, not only on phones. The rule
