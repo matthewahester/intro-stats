@@ -10,9 +10,9 @@ format:
 
 ## Where this week starts
 
-You have already read several statistical claims today. Behind each one sits some data, and between the data and the claim sits a step of reasoning somebody performed on your behalf, usually without showing you the working. This course is about that step.
+Here is the premise the whole term rests on. **Statistics is the discipline of deciding how much a body of evidence supports a claim.** It is not a list of formulas, and it is not a machine that converts numbers into truth. It is a set of habits for asking where a number came from, what it stands in for, and how much weight it can carry.
 
-Here is the premise the whole term rests on. **Statistics is the discipline of deciding how much a body of evidence supports a claim.** It is not a list of formulas, and it is not a machine that converts numbers into truth. It is a set of habits for asking where a number came from, what it stands in for, and how much weight it can carry. Using those habits starts with agreeing on the objects: which things were observed, and what was recorded about each. That sounds like bookkeeping, but a surprising number of public mistakes with data begin with somebody being unclear about what one row of a table represented.
+Statistical claims are everywhere once you start noticing — a poll, a health headline, an average on a dashboard. Behind each one sits some data, and between the data and the claim sits a step of reasoning somebody performed on your behalf, usually without showing you the working. This course is about that step, and taking it well starts with agreeing on the objects: which things were observed, and what was recorded about each. That sounds like bookkeeping, but a surprising number of public mistakes with data begin with somebody being unclear about what one row of a table represented.
 
 By the end of this week, one thing should feel different. When a number lands in front of you, your first instinct should stop being "what do I calculate?" and start being three questions: **what are the cases, what was measured, and what comparison is being made?**
 
