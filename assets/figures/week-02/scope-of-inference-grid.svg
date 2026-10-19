@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 456" width="640" height="456" role="img" aria-labelledby="title desc">
+  <title id="title">Scope of inference: what random sampling and random assignment each allow you to conclude</title>
+  <desc id="desc">Two-by-two grid. Columns: treatments randomly assigned or not. Rows: cases randomly sampled or not. Random assignment justifies cause and effect; random sampling justifies generalizing to the population.</desc>
+  <rect x="0" y="0" width="640" height="456" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="390" y="26" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#1c1b19" font-weight="600">Were the treatments randomly assigned?</text>
+  <text x="270" y="52" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="600">Yes: an experiment with</text>
+  <text x="270" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="600">random assignment</text>
+  <text x="510" y="52" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#35566b" font-weight="600">No: an observational study</text>
+  <text x="510" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#35566b" font-weight="600">(or no random assignment)</text>
+  <text x="28" y="248" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#1c1b19" font-weight="600" transform="rotate(-90 28 248)">Were the cases randomly sampled?</text>
+  <text x="100" y="166" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Yes:</text>
+  <text x="100" y="184" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">random sample</text>
+  <text x="100" y="318" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">No:</text>
+  <text x="100" y="336" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">volunteers or</text>
+  <text x="100" y="352" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">convenience</text>
+  <rect x="150" y="96" width="240" height="152" fill="#e9cdbd" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="164" y="124" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Cause and effect:</text>
+  <text x="164" y="143" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b" font-weight="600">justified</text>
+  <text x="164" y="168" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Generalize to the population:</text>
+  <text x="164" y="187" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#35566b" font-weight="600">justified</text>
+  <text x="164" y="224" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">e.g., randomly chosen households,</text>
+  <text x="164" y="240" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">then randomly split into two groups</text>
+  <rect x="390" y="96" width="240" height="152" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="404" y="124" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Cause and effect:</text>
+  <text x="404" y="143" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">not justified</text>
+  <text x="404" y="168" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Generalize to the population:</text>
+  <text x="404" y="187" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#35566b" font-weight="600">justified</text>
+  <text x="404" y="224" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">e.g., a random-sample health survey</text>
+  <rect x="150" y="248" width="240" height="152" fill="#e9cdbd" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="164" y="276" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Cause and effect:</text>
+  <text x="164" y="295" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b" font-weight="600">justified</text>
+  <text x="164" y="320" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Generalize to the population:</text>
+  <text x="164" y="339" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">not justified; only to people</text>
+  <text x="164" y="357" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">like those in the study</text>
+  <text x="164" y="376" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">e.g., a medical trial with volunteers</text>
+  <rect x="390" y="248" width="240" height="152" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="404" y="276" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Cause and effect:</text>
+  <text x="404" y="295" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">not justified</text>
+  <text x="404" y="320" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Generalize to the population:</text>
+  <text x="404" y="339" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">not justified; only to people</text>
+  <text x="404" y="357" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">like those in the study</text>
+  <text x="404" y="376" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">e.g., an opt-in online poll</text>
+  <text x="320" y="426" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Assumes a well-run study and a difference larger than chance alone would produce.</text>
+  <text x="320" y="444" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Shaded cells: random assignment, so a causal conclusion is justified.</text>
+</svg>

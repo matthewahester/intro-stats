@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Resting heart rate against daily steps for 10 hypothetical adults, with the least-squares line and one residual</title>
+  <desc id="desc">Scatterplot of 10 hypothetical adults: resting heart rate falls as daily steps rise. Line: predicted rate = 84.0 − 1.50 × steps. Adult F (6.3 thousand steps, 80 bpm) sits 5.45 bpm above its prediction of 74.55 bpm.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="30" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="133" y1="330" x2="133" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="133" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="133" y1="330" x2="133" y2="30" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="239" y1="330" x2="239" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="239" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="239" y1="330" x2="239" y2="30" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="345" y1="330" x2="345" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="345" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="345" y1="330" x2="345" y2="30" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="451" y1="330" x2="451" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="451" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <line x1="451" y1="330" x2="451" y2="30" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="557" y1="330" x2="557" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="557" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10</text>
+  <line x1="557" y1="330" x2="557" y2="30" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="330" x2="80" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="334" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">64</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="270" x2="80" y2="270" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="274" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">68</text>
+  <line x1="80" y1="270" x2="610" y2="270" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="210" x2="80" y2="210" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="214" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">72</text>
+  <line x1="80" y1="210" x2="610" y2="210" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="150" x2="80" y2="150" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="154" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">76</text>
+  <line x1="80" y1="150" x2="610" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="90" x2="80" y2="90" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="94" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">80</text>
+  <line x1="80" y1="90" x2="610" y2="90" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="30" x2="80" y2="30" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="34" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">84</text>
+  <line x1="80" y1="30" x2="610" y2="30" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="345" y="370" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Average daily steps (thousands)</text>
+  <text x="34" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 180)">Resting heart rate (beats per minute)</text>
+  <line x1="143.6" y1="79.5" x2="572.9" y2="261.75" stroke="#1c1b19" stroke-width="2.5"/>
+  <line x1="360.9" y1="171.75" x2="360.9" y2="90" stroke="#8a4a2b" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <circle cx="143.6" cy="75" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="134.6" y="76" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">A</text>
+  <circle cx="186" cy="135" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="177" y="142" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">B</text>
+  <circle cx="233.7" cy="105" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="224.7" y="106" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">C</text>
+  <circle cx="270.8" cy="180" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="261.8" y="187" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">D</text>
+  <circle cx="307.9" cy="135" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="298.9" y="136" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">E</text>
+  <circle cx="408.6" cy="195" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="399.6" y="202" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">G</text>
+  <circle cx="456.3" cy="195" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="447.3" y="196" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">H</text>
+  <circle cx="509.3" cy="240" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="500.3" y="247" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">I</text>
+  <circle cx="572.9" cy="300" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="563.9" y="307" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">J</text>
+  <circle cx="360.9" cy="171.75" r="4.5" fill="#ffffff" stroke="#8a4a2b" stroke-width="2"/>
+  <circle cx="360.9" cy="90" r="7" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="372.9" y="95" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b" font-weight="bold">Adult F: observed 80 bpm</text>
+  <text x="372.9" y="113" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Predicted: 84.0 − 1.50(6.3) = 74.55</text>
+  <text x="372.9" y="131" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Residual: 80 − 74.55 = +5.45 bpm</text>
+  <line x1="98.55" y1="236" x2="124.55" y2="236" stroke="#1c1b19" stroke-width="2.5"/>
+  <text x="132.55" y="240" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Least-squares line: ŷ = 84.0 − 1.50x</text>
+  <circle cx="111.55" cy="256" r="5.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="132.55" y="260" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">One hypothetical adult (A to J)</text>
+  <line x1="111.55" y1="270" x2="111.55" y2="284" stroke="#8a4a2b" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <text x="132.55" y="281" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Residual for Adult F (observed minus predicted)</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 370" width="640" height="370" role="img" aria-labelledby="title desc">
+  <title id="title">The four possible outcomes of a hypothesis test</title>
+  <desc id="desc">A 2 by 2 table. Columns: H0 true, HA true. Rows: reject H0, fail to reject H0. Rejecting a true H0 is a Type I error (probability α). Failing to reject when HA is true is a Type II error. The other two cells are correct decisions.</desc>
+  <rect x="0" y="0" width="640" height="370" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="405" y="28" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">What is actually true (unknown to you)</text>
+  <text x="302.5" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">H0 is true</text>
+  <text x="507.5" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">HA is true</text>
+  <text x="28" y="74" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Your decision</text>
+  <rect x="200" y="88" width="205" height="118" fill="#e9cdbd" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="302.5" y="128" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#8a4a2b" font-weight="700">Type I error</text>
+  <text x="302.5" y="152" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">a false alarm</text>
+  <text x="302.5" y="176" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">probability = α</text>
+  <rect x="405" y="88" width="205" height="118" fill="#c9d8e1" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="507.5" y="128" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#35566b" font-weight="700">Correct decision</text>
+  <text x="507.5" y="152" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">a real difference detected</text>
+  <text x="507.5" y="176" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">probability = power</text>
+  <rect x="200" y="206" width="205" height="118" fill="#c9d8e1" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="302.5" y="246" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#35566b" font-weight="700">Correct decision</text>
+  <text x="302.5" y="270" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">no false alarm</text>
+  <text x="302.5" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">probability = 1 − α</text>
+  <rect x="405" y="206" width="205" height="118" fill="#e9cdbd" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="507.5" y="246" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#8a4a2b" font-weight="700">Type II error</text>
+  <text x="507.5" y="270" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">a real difference missed</text>
+  <text x="507.5" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">probability = 1 − power</text>
+  <text x="186" y="143" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19" font-weight="600">Reject H0</text>
+  <text x="186" y="161" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">(p-value ≤ α)</text>
+  <text x="186" y="261" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19" font-weight="600">Fail to reject H0</text>
+  <text x="186" y="279" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">(p-value &gt; α)</text>
+  <text x="405" y="354" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Orange cells are errors; blue cells are correct decisions.</text>
+</svg>

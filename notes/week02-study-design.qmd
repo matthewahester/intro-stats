@@ -8,230 +8,279 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: does eating breakfast make people slimmer?
 
-Week 1 ended with a habit: before interpreting any number, ask what the cases are, what was measured, and what comparison is being made. This week pushes that first question further back. Before the data table existed, somebody decided who would be in it and under what conditions.
+A hypothetical headline reads: *"Adults who eat breakfast every day weigh less than adults who skip it."* Behind it is a survey of 5,000 adults who reported their eating habits and their weight, and the daily breakfast eaters did weigh less on average.
 
-That decision, not the arithmetic afterwards, settles what the number is worth. Two studies can report the same difference, from samples of the same size, and one supports a recommendation while the other supports a raised eyebrow. Nothing in the two numbers tells you which is which, so the question for the week is: where did these data come from?
+Before reading on, think about these questions:
 
-By the end of this week, "students who eat breakfast have higher grades, so eat breakfast" should stop sounding like one claim and start sounding like two: one the data can check, and one that has been attached to it.
+1. Could the breakfast eaters weigh less for a reason that has nothing to do with breakfast itself?
+2. Would this survey justify telling a friend, "Eat breakfast and you will lose weight"?
+3. What would you want to know about how the 5,000 adults were chosen before believing the result describes adults in general?
 
-### Why this matters beyond this course
+In [Week 1](week01-data-evidence.qmd) you asked what the data are: the cases, the variables, and the comparison being made. This week asks **how the data were produced**, because that decides what they can and cannot tell you. No amount of careful arithmetic later can repair a weak design.
 
-A state health department is deciding whether to fund home visits for new parents. One evaluation compares families who signed up for an existing program with families who did not, and the sign-up families do better. A second study offers the program to everyone and lets a chance device decide who receives it. The first comparison can be explained entirely by who signs up — families with a working phone, a schedule with slack in it, someone who already trusts the department. If money follows that evidence, families get a program that may do nothing, and one that would have helped never gets built.
+## Why the way data were collected matters
 
-The smaller version arrives weekly, in a supplement label or a campus survey. Asking "who ended up in this comparison, and who decided?" costs one sentence and is the cheapest protection you have.
+Claims built on data are everywhere. A poll says most residents oppose a new tax. A report says people who take a vitamin supplement catch fewer colds. Each claim is only as good as the process behind its numbers. A poll that hears mostly from angry residents overstates opposition however many people respond. Comparing people who chose to take a supplement with people who did not mixes the supplement's effect with everything else that differs between those two groups, such as diet and income.
+
+Two design questions come before any graph or calculation:
+
+- **Who was measured, and how were they chosen?** This decides whether results can be generalized from the sample to a larger population.
+- **Who decided which cases got which treatment?** This decides whether a difference between groups can be read as cause and effect.
+
+Health agencies issuing advice, city councils reading a public survey, and doctors choosing a treatment all rely on these two questions whenever they act on evidence.
 
 ## What you will be able to do
 
-- Classify a study as observational or experimental by naming who assigned the condition.
-- Name the population, the sampling frame, and the sample, and say where the gaps between them sit.
-- Spot selection, non-response, and measurement bias, and say which direction each pushes the result.
-- Distinguish random assignment from random sampling, and state what each buys.
-- Explain what a control group and blinding change about what a comparison supports.
-- Rewrite a causal headline into the strongest claim its design supports.
+By the end of this week you can:
 
-## Words worth owning
+- tell whether a study is an observational study or an experiment, and name its cases, explanatory variable, and response variable;
+- explain what random sampling and random assignment each allow you to conclude;
+- place a study in the scope-of-inference grid and say who its conclusions apply to and whether they can be causal;
+- recognize convenience samples, voluntary response, and non-response, and predict which way a bias is likely to push an estimate;
+- explain what a confounding variable is and why it blocks causal conclusions from observational data;
+- describe what a control group, a placebo, and blinding each add to an experiment.
 
-| Term | What it means in this course |
-|------|------------------------------|
-| Population | Every case the conclusion is meant to cover. |
-| Sampling frame | The list the sample was really drawn from. Rarely the whole population, and that gap is where trouble starts. |
-| Observational study | Researchers record conditions the cases already had. Nobody assigns anything. |
-| Experiment | Researchers assign the condition each case receives. |
-| Random sampling | A chance device decides which cases enter the study at all. |
-| Random assignment | A chance device decides a case's group, once it is already in the study. |
-| Confounding variable | A variable linked to the explanatory variable and separately related to the response, so it offers a rival explanation. |
-| Bias | Systematic error: a push in one direction that stays put however much data you collect. |
+## Words to know this week
 
-## What happened before the data existed
+| Term | Meaning |
+|---|---|
+| Population, sample | The whole group of cases you want to learn about; the cases actually measured. |
+| Parameter | A number describing the population, such as $p$ or $\mu$; usually unknown. |
+| Statistic | A number computed from a sample, such as $\hat{p}$ or $\bar{x}$, used to estimate a parameter. |
+| Simple random sample | A sample chosen so that every possible group of $n$ cases has the same chance of being selected. |
+| Bias | A tendency of a method to miss the parameter in the same direction, sample after sample. |
+| Convenience sample | Cases that were easy to reach, such as people walking past a table on campus. |
+| Voluntary response sample | People who chose to respond to an open invitation, such as an online poll. |
+| Non-response bias | Bias that arises when selected people do not respond and differ from those who do. |
+| Observational study | A study that records variables without assigning treatments; the cases sort themselves into groups. |
+| Experiment | A study in which the researcher assigns the treatment to the cases. |
+| Random assignment | Using chance to decide which cases receive which treatment. |
+| Control group | The comparison group, which gets no treatment, usual care, or a placebo. |
+| Placebo | A fake treatment that looks like the real one but has no active ingredient. |
+| Blinding | Keeping participants (single-blind), or participants and evaluators (double-blind), unaware of who got which treatment. |
+| Confounding variable | A variable associated with both the explanatory and the response variable, so its effect is mixed up with the effect being studied. |
+| Scope of inference | Who a study's conclusions apply to, and whether those conclusions can be causal. |
 
-Every dataset is the residue of a procedure: somebody chose the cases, somebody set the conditions those cases were under, somebody chose how the outcome would be measured. Each can put a result where it does not belong.
+## Where the data came from: samples and populations
 
-### Somebody assigned the condition, or nobody did
+Most statistical questions are about a **population**: all adults in a town, or all patients with a certain condition. Measuring everyone, which is called a **census**, is usually too costly or too slow, so we measure a **sample** and learn about the population from it. Whether that works depends on how the sample was chosen.
 
-The most useful question you can ask about a study is who decided which cases got which condition. Not whether the topic is medical, not whether the sample is large — who did the assigning?
+### Populations, parameters, and statistics
 
-A clinic wants to know whether a twelve-week walking program lowers resting heart rate. Version one: the clinic advertises the program, sixty patients sign up, sixty similar patients do not, and it compares resting heart rate at the end. Version two: the clinic recruits one hundred and twenty patients and lets a chance device decide, for each one, between walking and stretching. In version one the patients sorted themselves, which makes it observational; in version two the clinic sorted them with a coin, which makes it an experiment.
+A **parameter** describes the population; a **statistic** is computed from a sample. The notation keeps them apart: $p$ is a population proportion and $\hat{p}$ (read "p-hat") is a sample proportion, while $\mu$ and $\bar{x}$ are the matching means. Parameters are usually unknown, and statistics are how we estimate them.
 
-The difference is not effort or expense. In version one the groups were assembled by whatever makes a person sign up for a walking program — energy, free time, a doctor's warning, a working knee — and each is separately related to resting heart rate. In version two the only thing separating the groups is the coin.
+The figure below shows a hypothetical population of 200 people, 80 of whom support a proposal, so $p = 80/200 = 0.40$. In real life you would never see this. Chance picked 20 of the 200, and 7 of those 20 support the proposal, so $\hat{p} = 7/20 = 0.35$.
 
-![The two questions a study design has to answer, and what each one buys.](../assets/figures/week-02/design-decision-tree.svg){fig-alt="A decision tree. The first question asks who assigned the condition, splitting into observational study and experiment; the experiment branch splits again on random assignment. A separate band asks whether the cases were chosen by chance."}
+![One simple random sample of 20 people drawn from a population of 200](../assets/figures/week-02/random-sample-from-population.svg){fig-alt="Grid of 200 dots for a hypothetical population with 80 supporters, so p = 0.40. Twenty dots chosen by chance are ringed and copied into a sample of 20; 7 of the 20 support the proposal, so p-hat = 0.35."}
 
-Read the tree twice. First follow the branches from the top: assignment, then whether it was randomized. Then read only the band across the bottom, which asks how the cases entered the study at all. The two questions are independent, and collapsing them is the most common error of the week.
+The statistic is close to the parameter but not equal to it. Another random sample would almost surely contain different people and could give a different $\hat{p}$, perhaps 0.45 or 0.30. This **sampling variability** is not a mistake, and because chance did the choosing, later weeks can measure its size.
 
-### Population, frame, and the gap between them
+### Random sampling lets chance choose who is measured
 
-Suppose you want to know what fraction of the roughly nine thousand undergraduates at a university commute to campus. The population is those nine thousand, and the sample is the group you get data on. Between them sits the sampling frame: the list or situation the sample was really drawn from.
+In a **simple random sample** of size $n$, every possible group of $n$ cases has the same chance of being the sample. In practice you number a list of the population (the sampling frame) and let a random number generator pick $n$ of the numbers. Neither the researcher nor the cases decide who is in the sample: chance does.
 
-The frame is where studies quietly go wrong, because it is almost never announced. Email a random selection from the registrar's list and the frame nearly matches the population. Stand outside the library at ten on a Tuesday morning and the frame is "students near the library, mid-morning, mid-week" — and commuters compress their schedules and leave, so they are less likely to be there. Your sample is not a small version of the population; it is a faithful version of a different group.
+This matters because people choosing "typical" cases tend to pick convenient or memorable ones, while chance has no preferences. A random sample tends to resemble the population in every respect, including traits nobody measured, so its statistics vary *around* the parameter rather than landing systematically above or below it.
 
-![The same campus sampled from one corner and sampled by chance.](../assets/figures/week-02/sampling-and-bias.svg){fig-alt="Three copies of a hundred-dot campus with forty commuters. A twenty-dot corner sample finds two, an estimate of ten percent; a twenty-dot chance sample finds nine, forty-five percent, against the true forty percent."}
+Chapter 2 of *Introduction to Modern Statistics* (IMS), the free textbook linked under Read further, also describes **stratified sampling**, which takes a simple random sample within each of several groups (such as each class year), and **cluster sampling**, which randomly chooses whole groups (such as residence halls) and measures everyone in them. Both still let chance do the choosing.
 
-Forty of the hundred students commute, so the truth is forty percent. The corner sample of twenty finds two and reports ten percent; the chance sample of twenty finds nine and reports forty-five. The chance sample is not perfect — another draw would miss differently — but the corner sample is wrong in a way luck has nothing to do with. Keep collecting from that same corner, however many students you add, and you keep landing near ten percent. Chance error shrinks as you collect more; bias does not move at all.
+### How samples go wrong: sources of bias
 
-### Three shapes of bias you will actually meet
+A sampling method is **biased** if it tends to miss the parameter in the same direction, sample after sample. Common sources:
 
-**Selection bias**: the procedure that gets a case into the sample is itself related to what you are measuring. The library steps are selection bias — standing where commuters are not, in order to count commuters — and it pushes the estimate down. Online reviews qualify too, because people who write them felt something strongly.
+- **Convenience samples.** Asking students at the campus gym how often they exercise will overstate exercise among all students.
+- **Voluntary response.** Online polls and call-in shows hear from people who choose to respond, often those with strong feelings, especially negative ones.
+- **Non-response.** Even a random sample becomes biased when many selected people do not respond and differ from those who do. If only 20% respond, ask who the other 80% are.
+- **Undercoverage.** The sampling frame leaves people out, as when a survey that calls only landlines misses everyone without one.
+- **Response bias.** Question wording or a sensitive topic pushes replies one way. "Do you agree that the city should protect children by lowering speed limits near schools?" invites agreement.
 
-**Non-response bias**: you invite a proper sample, but who replies depends on the topic. A campus emails a food-service survey to nine thousand students and four hundred reply. Students who had a bad week have a reason to click; content students have none, so measured satisfaction is pushed down.
+Size offers no protection. In 1936 a popular US magazine mailed mock ballots to about ten million people, received more than two million back, and predicted that Alf Landon would defeat President Franklin Roosevelt. Roosevelt won in a landslide. The magazine's mailing lists leaned toward better-off households, and the people who mailed ballots back leaned toward Landon as well.
 
-**Measurement bias**, sometimes called response bias: the instrument or the question moves the recorded value away from the real one. A bathroom scale reading two pounds heavy does it. So does asking students how many alcoholic drinks they had last week while a nurse holds the clipboard, and so does "do you agree that the university should protect students by expanding the shuttle service?", which puts the reason for agreeing inside the question.
+So keep two kinds of error apart. **Sampling variability** (chance error) comes from which cases happened to be chosen; under random sampling it is centered on the truth and shrinks as $n$ grows. **Bias** comes from how cases were chosen or measured; it pushes every sample the same way, and a larger sample does not shrink it. Worked example 2 puts numbers on this difference.
 
-Naming the shape is half the work; say the direction too. "There might be bias" is a shrug. "Non-response bias, pushing satisfaction down, so the real figure is probably higher than these four hundred replies suggest" is usable.
+## Observational studies and experiments
 
-## What randomizing buys, and what it does not
+The second design question is how the cases ended up in the groups being compared.
 
-The word "random" appears in two places in study design, doing two different jobs. Separate them firmly enough that you can say which one a study is missing.
+### Observational studies record what already happens
 
-### Random assignment buys a fair comparison
+In an **observational study**, researchers record variables without assigning any treatment. The breakfast survey is observational: the adults decided for themselves whether to eat breakfast. Observational studies are often the only ethical or practical option, since nobody can be assigned to smoke for twenty years or to live next to a highway. They can reveal an **association**, a pattern in which values of one variable tend to go with values of another. On their own, they cannot show that one variable causes changes in the other.
 
-A university health center runs a four-week sleep-coaching program. A chance device puts two hundred of its four hundred students into coaching and two hundred onto a wait list. Before anything starts, the center records background characteristics of both groups.
+### Confounding: why association is not causation
 
-![Background characteristics of the two groups before the program began.](../assets/figures/week-02/randomization-balance.svg){fig-alt="A dot chart of four background characteristics measured before the sleep program began. The coaching and wait-list percentages sit within three percentage points of each other in every row."}
+A **confounding variable** is associated with both the explanatory and the response variable, so its effect gets mixed up with the effect being studied. People who eat breakfast every day may also exercise more and keep steadier routines, and those habits affect weight on their own. If so, breakfast eaters would weigh less on average even if breakfast had no effect at all.
 
-Thirty-seven percent of the coaching group works twenty or more hours a week, against thirty-five percent of the control group. The other three rows behave the same way, and no gap exceeds three percentage points.
+![A possible confounder behind the association between breakfast and body weight](../assets/figures/week-02/confounding-arrow-diagram.svg){fig-alt="Arrow diagram. A possible confounder, exercise and a steady daily routine, points to both eating breakfast every day (explanatory variable) and body weight (response variable); a dashed line marks the observed association."}
 
-The coin knew nothing about work hours, family background, housing, or baseline sleep. It balanced those four because it balances everything — motivation, anxiety, caffeine, roommate noise, and the dozen variables nobody would think to measure. Random assignment is the only move in statistics that handles variables you have never heard of.
+Confounding does not make the causal claim false; it means the data cannot separate the competing explanations. Breakfast might help, do nothing, or even work slightly against weight loss while the confounder does the work. [Week 6](week06-confounding.qmd) returns to confounding, including comparisons made within groups of a confounder, which help only for confounders someone thought to measure.
 
-Be exact about "balanced", though. It does not make the groups identical, and on any single variable they will not be. It makes any difference a product of chance alone, and chance is something the second half of this course knows how to quantify. Large systematic differences become unlikely, not impossible, and less likely as the groups grow.
+### Experiments and the power of random assignment
 
-### Random sampling buys reach
+In an **experiment**, the researcher assigns the treatment. That alone is not enough: a doctor who gives a new drug to the patients she expects to benefit most creates groups that differ before the drug does anything. The remedy is **random assignment**, letting chance decide who gets which treatment, for example by shuffling cards or using a random number generator.
 
-Random sampling does a different job: it decides who enters the study at all. When a chance device draws cases from a frame that matches the population, the sample resembles the population in that same "differs only by chance" way, so conclusions about the sample extend to the population.
+The diagram below shows 20 hypothetical volunteers, 8 of whom exercise regularly, split by chance into two groups of 10. The treatment group got 5 of the regular exercisers and the control group got 3. That is not a perfect split, but no one chose it, and with larger groups the proportions tend to come out closer together.
 
-Random assignment does none of that. Assign four hundred volunteers to two groups with a perfect coin and you have a clean comparison among those four hundred volunteers. If volunteers are unusual, and they usually are, the effect you measure need not be the effect anywhere else. The two randomizations combine like this:
+![Random assignment of 20 volunteers into a treatment group and a control group](../assets/figures/week-02/random-assignment-diagram.svg){fig-alt="Twenty hypothetical volunteers, 8 of whom exercise regularly, are split by chance into two groups of 10. The treatment group gets 5 regular exercisers and the control group gets 3; the response is then measured and compared."}
 
-| | Cases assigned by chance | Cases not assigned by chance |
-|---|---|---|
-| **Cases sampled by chance** | A causal claim about the population | An association in the population |
-| **Cases not sampled by chance** | A causal claim about these cases only | An association among these cases only |
+Random assignment tends to balance every trait in this way, including traits nobody measured, such as diet, genetics, and motivation. If the groups' responses then differ by more than chance alone would produce, the treatment is the most plausible explanation. That is why a well-run randomized experiment can support a cause-and-effect conclusion and an observational study cannot.
 
-Read it as a diagnostic. The column decides whether your verb may be causal; the row decides who the sentence is about. Randomized trials almost always sit in the bottom-left cell, because chance decided the groups but not who joined the study.
+### Control groups, placebos, and blinding
 
-### Control groups and blinding
+IMS lists four principles of experimental design:
 
-A control group makes the comparison mean something. Colds resolve in a week, chronic pain fluctuates, and students sleep more after a heavy exam period whatever anyone teaches them. Measure one group before and after and you have measured the program plus everything else that happened, with no way to separate the two. A placebo goes further, holding the experience of being treated constant so the comparison isolates the active ingredient rather than the attention.
+- **Control.** Keep everything except the treatment as alike as possible across groups (IMS's example: every patient takes the pill with the same glass of water), and compare the treatment with a control group. Colds and back pain often improve on their own, so improvement means little without a comparison.
+- **Randomize.** Assign treatments at random.
+- **Replicate.** Use enough cases that chance differences between groups are small compared with a real effect.
+- **Block.** If a variable such as age is known to affect the response, sort the cases into blocks by that variable and randomize within each block.
 
-Blinding keeps expectation out of the measurement. In a single-blind study the participants do not know their condition; in a double-blind study the people recording the outcome do not know either. A participant who believes she got the real treatment reports feeling better, and an assessor who knows the group reads an ambiguous result generously. Blinding participants in the sleep study is impossible — a student knows whether she attended four weeks of sessions — which is why a wrist device, not a question, should record the outcome.
+People often feel better simply because they believe they are being treated; this is the **placebo effect**. So a drug trial usually gives the control group a **placebo**, such as a sugar pill that looks like the real drug, and the comparison then isolates the effect of the active ingredient. **Blinding** guards against expectations: patients who know their group may report differently, and evaluators who know may judge the treated group more favorably without meaning to. In a **double-blind** study neither the patients nor the evaluators know who got which treatment. When blinding is impossible (people know whether they have been assigned to walk thirty minutes a day), a careful report says that expectations may explain part of any difference.
 
-## Three explanations for one association
+## Scope of inference: what sampling and assignment each allow
 
-When two variables move together in an observational study, at least three arrangements produce the pattern, and the data alone cannot tell them apart.
+Random sampling and random assignment are two different uses of chance, and each buys something different:
 
-![Three arrangements that produce the same association between two variables.](../assets/figures/week-02/three-explanations.svg){fig-alt="Three panels for the same breakfast and grades association: an arrow from breakfast to grades, an arrow from grades to breakfast, and a third where work hours points at both while breakfast and grades share a dashed line."}
+- **Random sampling** decides *who is in the study*. It lets you **generalize** from the sample to the population.
+- **Random assignment** decides *which treatment each case gets*. It lets you draw a **cause-and-effect** conclusion.
 
-The first panel is what the headline wants. The second is reverse causation, which sounds silly until you say it out loud: students whose coursework is going well have calmer mornings, and calmer mornings include breakfast. The third is confounding, and it does the most damage, because a third variable pushing both breakfast and grades produces the same association with no causal path between them.
+Crossing the two gives a study's **scope of inference**.
 
-A fourth rival the picture cannot draw is chance: the association may be a fluke of who landed in this sample. Ruling chance out removes one rival of four rather than promoting an association to a cause.
+![Scope of inference: what random sampling and random assignment each allow you to conclude](../assets/figures/week-02/scope-of-inference-grid.svg){fig-alt="Two-by-two grid. Columns: treatments randomly assigned or not. Rows: cases randomly sampled or not. Random assignment justifies cause and effect; random sampling justifies generalizing to the population."}
 
-## Worked example — reading a headline about breakfast and grades
+- **Both (top left).** Rare, because randomly sampled people usually cannot be required to join an experiment. One example: randomly chosen households are randomly sent one of two letters about saving water. The conclusion is causal and applies to the population sampled.
+- **Sampling only (top right).** A well-run random-sample survey. Associations generalize to the population, but no causal claim is justified.
+- **Assignment only (bottom left).** Most medical trials, which randomly assign volunteers. The conclusion is causal for people like the volunteers; extending it further is a judgment the design does not guarantee.
+- **Neither (bottom right).** An opt-in or convenience study. It shows an association among the people studied, and nothing more.
 
-**Setting.** A campus newspaper surveys six hundred students and reports "Eating breakfast raises your grades". The two hundred forty who eat breakfast most days have a mean grade point average of 3.12; the other three hundred sixty average 2.88.
+### When is a causal claim justified?
 
-**Step 1 — name the pieces.** The cases are the six hundred respondents. The explanatory variable is the breakfast habit, categorical with two levels; the response is grade point average on a four-point scale.
+From a single study, a causal claim is justified when the study is a well-run randomized experiment and the difference between groups is larger than chance alone would plausibly produce. Weeks 11 and 12 show how to judge that.
 
-**Step 2 — find who assigned.** Nobody. Students arrived with their habits already attached, so this is observational and the groups assembled themselves.
+Observational studies cannot establish causation one at a time, but many of them together sometimes can. Smoking and lung cancer is the classic case. Randomly assigning people to smoke was never an option, yet the evidence became overwhelming: the association was strong and appeared in study after study and population after population, risk rose with the amount smoked, smoking came before the disease, and laboratory work showed how tobacco smoke damages lung tissue. Each of these features makes confounding a less believable explanation, and no single observational study supplies them all.
 
-**Step 3 — compute what was observed.** The difference in means is
+When you read a claim, ask: Was the treatment assigned, and was the assignment random? Was there a control group, and blinding? Who was studied, and how were they chosen? Does the language match the design? Words like *causes*, *reduces*, and *boosts* claim causation; *is linked to* and *is associated with* claim only association. "Breakfast linked to lower weight" fits an observational survey; "Breakfast causes weight loss" does not.
 
-$$3.12 - 2.88 = 0.24$$
+## Worked example 1: standing desks and back pain
 
-on the four-point scale. As a check, the overall mean is
+**The question.** A physical therapist recruits 60 office workers through a flyer at one large hospital (all numbers in this example are hypothetical). A random number generator places 30 of them in a group that gets a standing desk for eight weeks; the other 30 keep their usual desks. Each worker rates their back pain from 0 (none) to 10 (worst imaginable) at the start and at the end. On average, ratings fell by 1.8 in the standing-desk group and by 0.6 in the usual-desk group. What kind of study is this, can it support a cause-and-effect claim, and to whom does it apply?
 
-$$\frac{240 \times 3.12 + 360 \times 2.88}{600} = \frac{748.8 + 1036.8}{600} = 2.976$$
+**Step 1: cases and variables.** The cases are the 60 workers. The explanatory variable is desk type (standing or usual), which is categorical. The response variable is the change in back-pain rating, which is numerical.
 
-closer to 2.88 than to 3.12, as it should be, since the non-breakfast group is larger.
+**Step 2: observational study or experiment?** The therapist, not the workers, decided who got a standing desk, so this is an experiment.
 
-**Step 4 — state what the verb requires.** For "raises" to be earned, the groups would have to be alike in everything else that affects grades: paid work, morning classes, commuting, sleep, financial stress, course load.
+**Step 3: random assignment and balance.** Chance made the assignment. As a check, 24 of the 60 workers reported at the start that they exercise regularly; 13 of them landed in the standing-desk group and 11 in the usual-desk group, so the proportions of regular exercisers were
 
-**Step 5 — show a rival explanation that fits the same numbers.** Suppose the real driver is paid work. Split each group by whether the student works twenty or more hours a week:
+$$\frac{13}{30} \approx 0.43 \qquad \text{and} \qquad \frac{11}{30} \approx 0.37.$$
 
-| Group | Works under twenty hours | Works twenty or more hours | Group mean |
-|-------|--------------------------|----------------------------|------------|
-| Eats breakfast most days | 222 students, mean 3.15 | 18 students, mean 2.75 | 3.12 |
-| Does not eat breakfast | 117 students, mean 3.15 | 243 students, mean 2.75 | 2.88 |
+They are not identical, but nobody chose them, and the same chance balance applies to traits that were never measured.
 
-Check it. For the breakfast group,
+**Step 4: control, placebo, blinding.** The usual-desk group is the control group, and it matters here: back pain often eases with time, and the control group's ratings fell by 0.6 with no new desk. No placebo desk exists, and workers cannot be blinded to their own desk. Because pain is self-rated, part of any difference could come from expectations.
 
-$$\frac{222 \times 3.15 + 18 \times 2.75}{240} = \frac{699.30 + 49.50}{240} = 3.12$$
+**Step 5: the comparison.** The difference in mean change is
 
-and for the other group,
+$$1.8 - 0.6 = 1.2$$
 
-$$\frac{117 \times 3.15 + 243 \times 2.75}{360} = \frac{368.55 + 668.25}{360} = 2.88$$
+on the 0-to-10 rating, so the standing-desk group's ratings fell 1.2 more on average. Whether that is more than random assignment alone would produce is a question for [Week 11](week11-simulation-based-inference.qmd); for this example, suppose it is.
 
-Both group means come out exactly as reported. Now look inside the columns. Breakfast eaters and non-eaters share a mean of 3.15 among students working under twenty hours, and 2.75 among those working twenty or more, so breakfast makes no difference within either kind of student. The whole 0.24 gap comes from the mix: 18 of 240 breakfast eaters work heavy hours, seven and a half percent, against 243 of 360, or sixty-seven and a half percent.
+**Step 6: random sampling?** No. The workers volunteered after seeing a flyer at one hospital, and people who respond to a flyer about back pain may have worse pain, or more motivation, than office workers in general.
 
-**Step 6 — what this means.** The table is not a finding. It shows that the reported numbers are perfectly consistent with breakfast doing nothing, and equally consistent with breakfast helping; the survey cannot separate those, so the headline's verb claims more than the design carries. A defensible rewrite: students who eat breakfast most days averaged 0.24 higher, a gap that may reflect breakfast or may reflect who has a schedule with room for it.
+**Step 7: the grid.** Random assignment yes, random sampling no: the bottom-left cell of the scope-of-inference grid.
 
-**Step 7 — what would license the verb.** Random assignment of breakfast would, within the study. Failing that, comparing like with like on the plausible confounders, the technique Week 6 develops, gets closer — but you can adjust only for what you measured.
+**Conclusion in context.** If the 1.2 difference is larger than chance alone would produce, the design supports the claim that standing desks reduced back pain *for these 60 volunteers*, with the caution that they knew their desk and rated their own pain. It does not by itself justify the same claim for all office workers. That would need a good argument that these volunteers resemble office workers generally, or a study that samples workers more widely.
 
-### The same reasoning, transferred
+## Worked example 2: how voluntary response distorts a town poll
 
-Among a city's forty neighborhoods, the twenty with the most tree cover have a childhood asthma rate of 8.2 percent and the twenty with the least have 11.6 percent, a difference of 3.4 percentage points. A council member says planting trees prevents childhood asthma.
+**The question.** A town of 10,000 adults is considering a small tax to build a park (all numbers here are hypothetical). Suppose, though in real life no one could know it, that the town is evenly split, so $p = 0.50$. The town posts an online poll open to everyone. Supporters feel only mildly positive, and 5% of them respond; opponents feel strongly, and 15% of them respond. What will the poll report, and would a bigger poll fix the problem?
 
-What stayed the same: nobody assigned tree cover, so the groups formed themselves; rival explanations appear as soon as you look, since household income, traffic volume, and the age of housing all travel with tree cover and each separately affects asthma; and the honest verb is still "is associated with".
+**Step 1: supporters and opponents.**
 
-What changed: the response is a proportion rather than a mean, and the cases are neighborhoods rather than children. Even if the association were causal, it is a statement about neighborhood rates. It does not follow that one child's risk falls when a tree goes in on her street, because a pattern across groups need not hold within them.
+$$0.50 \times 10{,}000 = 5{,}000 \text{ supporters} \qquad \text{and} \qquad 10{,}000 - 5{,}000 = 5{,}000 \text{ opponents}.$$
 
-## Second worked example — a randomized sleep-coaching trial
+**Step 2: who responds.**
 
-**Setting.** The health center emails all four thousand students an invitation, and four hundred enrol. A chance device assigns two hundred to a four-week coaching program and two hundred to a wait list who receive it at the end. A wrist device records nightly sleep for one week before and one week at the end, so the outcome never depends on memory.
+$$0.05 \times 5{,}000 = 250 \text{ supporters}, \qquad 0.15 \times 5{,}000 = 750 \text{ opponents}, \qquad 250 + 750 = 1{,}000 \text{ respondents}.$$
 
-**Step 1 — classify the design.** The center assigned the condition, so this is an experiment, and it assigned by chance, so it is randomized. But the four hundred volunteered, so the cases were not sampled at random: the bottom-left cell above.
+The overall response rate is $1{,}000 / 10{,}000 = 0.10$, or 10%.
 
-**Step 2 — check that the coin worked.** The balance figure above is this study. No background gap exceeds three percentage points, which is what chance assignment usually looks like at this size.
+**Step 3: the poll's estimate.** Among respondents, the proportion who support the tax is
 
-**Step 3 — compute the comparison.** Baseline mean nightly sleep was 6.4 hours in both groups. At the end, coaching averaged 7.2 hours and control 6.6:
+$$\hat{p} = \frac{250}{1{,}000} = 0.25,$$
 
-$$7.2 - 6.6 = 0.6 \text{ hours,}$$
+so the poll reports 25% support and 75% opposition.
 
-thirty-six minutes a night. Because the baselines matched, the difference in change is the same: coaching gained 0.8 hours, control gained 0.2, and $0.8 - 0.2 = 0.6$. Notice that the control group moved. Without it you would have credited the program with the full 0.8 hours, when a quarter of that gain happened to students who received nothing.
+![Who responded to a voluntary online poll, compared with the whole town](../assets/figures/week-02/voluntary-response-bias.svg){fig-alt="Two stacked bars. In a hypothetical town of 10,000 adults, 50% support a park tax. Only 5% of supporters and 15% of opponents responded, so of the 1,000 respondents 25% support the tax and 75% oppose it."}
 
-**Step 4 — what the design supports.** Among these four hundred students, the thirty-six-minute difference is caused by the program, so long as it is larger than chance assignment alone would produce — the question the second half of this course answers. Random assignment left chance as the only rival explanation, including for the variables nobody measured; the wrist device removed self-report bias; the wait-list control removed everything else that happened during those four weeks.
+**Step 4: the error.**
 
-**Step 5 — what it does not support.** The four hundred are volunteers out of four thousand invited, an enrolment rate of ten percent, and volunteers for a sleep study are plausibly the students most unhappy with their sleep — the ones with the most room to improve. So "the average student here would gain thirty-six minutes" is not supported. Random assignment never bought that sentence; random sampling would have, and this study did none.
+$$\hat{p} - p = 0.25 - 0.50 = -0.25,$$
 
-**Step 6 — how to repair the reach.** Draw a random sample from the registrar's list, invite those students, and report what fraction agreed, so a reader can judge how far the finding travels. Or replicate the program in visibly different groups. Generalization is earned by design or by replication, never by sample size.
+so the poll understates support by 25 percentage points. An evenly split town looks opposed three to one, since $0.75 / 0.25 = 3$.
 
-## The misreading to avoid
+**Step 5: would a bigger poll help?** In a city of 100,000 adults with the same split and the same response rates, 50,000 support the tax and 50,000 oppose it, so
 
-The wrong thought, in the words students actually use: *"That survey had fifty thousand responses and the experiment had two hundred people. Obviously the survey is more reliable."*
+$$0.05 \times 50{,}000 = 2{,}500, \qquad 0.15 \times 50{,}000 = 7{,}500, \qquad \hat{p} = \frac{2{,}500}{2{,}500 + 7{,}500} = \frac{2{,}500}{10{,}000} = 0.25.$$
 
-It deserves a serious reply, because more data really is better when the data are aimed at the right target. Take a campus of ten thousand students, thirty percent of whom — three thousand — favour a parking proposal. A voluntary web poll goes out. Opponents are angrier, so thirty percent of the seven thousand opponents reply, giving 2,100, while ten percent of the three thousand supporters bother, giving 300. Out of 2,400 replies,
+Ten times as many respondents give exactly the same wrong estimate. The error comes from *who* responds, and more responses of the same kind do not change it.
 
-$$\frac{300}{2400} = 0.125,$$
+The dot plots below simulate 20 polls for each of three methods. In the voluntary polls, as in the town, supporters respond one-third as often as opponents. Random samples of 100 adults, assuming everyone selected responds, gave estimates from 0.43 to 0.59, scattered around the true 0.50. Voluntary polls of 100 gave estimates from 0.18 to 0.33. Voluntary polls of 1,000 were much tighter, from 0.224 to 0.286, but clustered around 0.25, not 0.50. Even the closest of the 40 voluntary polls, at 0.33, was 0.17 below the truth.
 
-so the poll reports 12.5 percent against a truth of thirty percent. Run the same procedure on a campus ten times the size: 3,000 supporter replies and 21,000 opponent replies, and 3,000 divided by 24,000 is 12.5 percent again. Ten times the data, identical error. A genuine random sample of two hundred would instead scatter around thirty percent, and the scatter shrinks as the sample grows.
+![Twenty simulated polls per method: bigger voluntary polls are tighter but still far from the truth](../assets/figures/week-02/bigger-sample-same-bias.svg){fig-alt="Dot plots of simulated estimates of support. Random samples of 100 fall from 0.43 to 0.59 around the true 0.50. Voluntary polls of 100 fall from 0.18 to 0.33, and of 1,000 from 0.224 to 0.286, near 0.25."}
 
-The over-correction is the second wrong thought: *"So observational studies prove nothing and it is all just correlation."* Nobody ever randomly assigned people to smoke for thirty years, yet the link between smoking and lung cancer is about as settled as anything in health science. It was built from many observational studies whose biases pointed in different directions, from a dose-response pattern in which heavier smoking tracked higher risk, and from the failure of every rival explanation proposed. Observational evidence carries extra assumptions; the job is to state them, not to ignore them or give up.
+**Step 6: what would fix it?** A random sample, plus serious follow-up (reminders, calls) so that nearly everyone selected responds. Random selection protects you only if the selected people actually respond. The random samples above scatter because of sampling variability, but they are centered on the truth, and that scatter shrinks as $n$ grows. The same arithmetic describes non-response bias: if a random sample were drawn but supporters answered at one-third the rate of opponents, the estimate would be pulled the same way.
 
-The third misreading is quieter: *"It was a randomized trial, so it applies to everyone."* Randomized assignment says the comparison inside the study is fair. It says nothing about who got into the study.
+**Conclusion in context.** The poll's 25% support reflects who chose to respond, not the town, which is evenly divided. A bigger voluntary poll would only repeat that figure with more apparent precision: the design, not the sample size, is the problem. And because a real pollster never sees the response rates of supporters and opponents, this kind of bias is hard to detect or correct afterward.
 
-## Practice on your own
+## Transfer: text-message reminders at a health clinic
 
-Work these for your own checking.
+The same reasoning applies in a new setting (hypothetical numbers): do a clinic's text-message reminders reduce missed appointments?
 
-1. A fitness company reports that customers who open its app at least four times a week lost more weight over six months than customers who open it less. Name the cases, the explanatory variable, the response, and who assigned the condition. Then write the strongest claim the design supports, plus one rival explanation.
+**Design A: patients choose.** Last year patients could sign up for reminders. Of the 400 who signed up, 32 missed their next appointment; of the 600 who did not, 90 missed it:
 
-2. A dining service leaves comment cards at one dining hall exit for a week. Three hundred come back and seventy-four percent report being satisfied. Identify the population and the frame this procedure used. Which shape of bias is most serious, and which direction does it push the seventy-four percent?
+$$\frac{32}{400} = 0.08 \qquad \text{and} \qquad \frac{90}{600} = 0.15,$$
 
-3. A trial assigns three hundred patients with chronic knee pain, by a chance device, to physical therapy or usual care. Pain is rated by the patients themselves from zero to ten. Write down what the randomization handled and what it did not, then name one change to the measurement that would strengthen the study.
+a gap of $0.15 - 0.08 = 0.07$, or 7 percentage points.
 
-4. Two studies report the same difference in average blood pressure between a low-sodium and a usual diet. Study A assigned diets by chance to one hundred fifty volunteers recruited by advertisement. Study B drew fifteen thousand adults at random from a national list and recorded what they already ate. For each, say what the design licenses you to claim, and about whom.
+Who decided which patients got reminders? The patients did, so this is an observational study. Patients who sign up may be more organized, have reliable phones and transportation, or be more engaged with their own care, and each of those traits lowers missed appointments on its own. Because of these possible confounders, the gap of 7 percentage points mixes the effect of reminders with the effect of being the kind of patient who signs up.
 
-5. Find a health claim you saw this week. Copy the sentence, circle its verb, and write out what would have to be true about the study for that verb to be earned.
+**Design B: chance chooses.** This year the clinic takes 4,000 patients with upcoming appointments and randomly assigns 2,000 to receive reminders and 2,000 not to. With reminders, 220 missed; without, 280 missed:
 
-## Where to read more
+$$\frac{220}{2{,}000} = 0.11 \qquad \text{and} \qquad \frac{280}{2{,}000} = 0.14,$$
 
-- [Introduction to Modern Statistics, Chapter 2: Study design](https://openintrostat.github.io/ims/data-design.html) covers this week's spine, including sampling methods and experimental principles.
-- [Chapter 3: Applications — Data](https://openintrostat.github.io/ims/data-applications.html) works through study descriptions of the kind this week's material uses.
-- [Chapter 1: Hello data](https://openintrostat.github.io/ims/data-hello.html) is worth a second pass if cases and variables still feel slippery.
-- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) treats study design with clinical examples.
-- The [course schedule](../schedule.qmd) lists what each meeting covers, and the [resources page](../resources/index.qmd) collects extra practice.
+a gap of $0.14 - 0.11 = 0.03$, or 3 percentage points.
+
+Random assignment balances organization, phone access, transportation, and engagement between the groups, apart from chance differences. If a gap of 3 percentage points is larger than chance alone would produce, it can be attributed to the reminders, for this clinic's patients. The 4,000 were not sampled from patients everywhere, so applying the result to a clinic that serves a very different community is a judgment call.
+
+**What to notice.** The observational gap (7 percentage points) is more than twice the experimental gap (3 percentage points). Taking the experiment's 3 percentage points as the better estimate of what reminders do, most of the 7 percentage point gap in Design A came from *who chose* reminders, not from the reminders. (The two designs also drew on different years' patients, so this comparison is rough.) The same two questions settled it: who decided the groups, and who was studied.
+
+## A common misreading: a random sample proves cause and effect
+
+The misreading goes like this: *"The researchers used a large random sample of 10,000 adults, so their finding that coffee drinkers live longer means coffee extends life."* (The study is hypothetical.)
+
+Random sampling makes the sample look like the population. But the coffee drinkers in the sample still *chose* coffee. If coffee drinkers in the population differ from non-drinkers in income, smoking, or health, a representative sample reproduces those differences faithfully. Random sampling copies the population's confounding into the sample rather than removing it. Only random assignment of the treatment breaks the link between the treatment and everything else about the people who get it.
+
+The mirror-image mistake is just as common: *"A randomized trial proved the drug works, so it works for everyone."* Random assignment supports a causal conclusion for people like those who were studied. If every volunteer was under 50, the trial says little directly about 80-year-olds.
+
+A short way to remember the difference: random **sampling** is about *who* is in the study; random **assignment** is about *what* they get.
+
+## Practice questions (ungraded)
+
+1. A hypothetical college emails a survey about dining-hall hours to all 8,000 of its students, and 900 reply. Name the population and the sample, compute the response rate, and describe one way the 900 might differ from the students who did not reply. *What to look for:* who cares most about dining-hall hours?
+2. In a hypothetical study using medical records, a researcher finds that adults who own dogs have lower average blood pressure than adults who do not. Is this an observational study or an experiment? Name one possible confounding variable and explain how it alone could produce the association.
+3. Forty hypothetical students who responded to a campus ad are randomly assigned to use a sleep-tracking app or not for a month, and the app group reports sleeping longer. Which cell of the scope-of-inference grid does this study belong in? What can it conclude, and about whom?
+4. Why does a trial of a new pain reliever give the control group a placebo instead of nothing, and what does making the trial double-blind add?
+5. A hypothetical news website's poll of 50,000 readers finds that 70% oppose a new state law. A friend says 50,000 is so many that the result must be accurate. What is wrong with this reasoning, and what would be a better way to learn what the state's adults think? *What to look for:* can size fix bias?
+6. A hypothetical health department mails a survey to a simple random sample of 400 households, and 120 surveys come back. What is the response rate, and why might the results be biased even though the households were chosen at random?
+
+## Read further on study design
+
+- [Introduction to Modern Statistics, Chapter 2: Study design](https://openintrostat.github.io/ims/data-design.html) covers sampling principles and strategies, observational studies, and experiments.
+- [Introduction to Modern Statistics, Chapter 3: Applications: Data](https://openintrostat.github.io/ims/data-applications.html) applies the ideas of the first two chapters to a case study.
+- Optional, for biomedical examples: [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat/), Chapter 1, Introduction to data.
+
+The IMS book shows R code in places. Skip the code and read the output and the explanation around it; you will not write or run any code in this course.
 
 ## Where this goes next
 
-Next week the course turns from where data come from to what a single variable looks like once you have it. [Week 3](week03-one-variable-summaries.qmd) is about shape, center, and spread. That work assumes this week: a beautifully drawn histogram of a badly collected sample is a beautifully drawn wrong picture, and you will be expected to say so.
+The previous week, [Week 1: Data, evidence, and statistics](week01-data-evidence.qmd), set up the vocabulary of cases and variables used here. Next, [Week 3: One-variable summaries](week03-one-variable-summaries.qmd) describes what data show, one variable at a time. Keep this week's design questions in mind there: a careful summary of a biased sample precisely describes the wrong group.
 
-The third-variable problem returns in [Week 6](week06-confounding.qmd) as confounding, where you learn to compare like with like and to read "adjusted for age" in an abstract. The chance explanation is the business of the second half of the term. The vocabulary of cases and variables is back in [Week 1](week01-data-evidence.qmd), and the [notes index](index.qmd) has everything in order.
+Later, [Week 6: Confounding and multivariable thinking](week06-confounding.qmd) develops confounding, and [Week 11: Simulation-based inference](week11-simulation-based-inference.qmd) uses random assignment itself to judge whether a difference is larger than chance alone would produce. See also [all weekly notes](index.qmd) and the [course schedule](../schedule.qmd).

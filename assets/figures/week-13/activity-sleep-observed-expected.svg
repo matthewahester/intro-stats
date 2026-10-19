@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390" width="640" height="390" role="img" aria-labelledby="title desc">
+  <title id="title">Observed counts and counts expected under independence, activity and sleep survey</title>
+  <desc id="desc">Paired bars for six cells. Good sleep observed vs expected: low 72 vs 89.28, moderate 116 vs 111.60, high 91 vs 78.12. Poor sleep: low 88 vs 70.72, moderate 84 vs 88.40, high 49 vs 61.88.</desc>
+  <rect x="0" y="0" width="640" height="390" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="80" y1="300" x2="330" y2="300" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="370" y1="300" x2="620" y2="300" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="300" x2="80" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="304" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="80" y1="257.31" x2="330" y2="257.31" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="370" y1="257.31" x2="620" y2="257.31" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="257.31" x2="80" y2="257.31" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="261.31" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">25</text>
+  <line x1="80" y1="214.62" x2="330" y2="214.62" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="370" y1="214.62" x2="620" y2="214.62" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="214.62" x2="80" y2="214.62" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="218.62" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">50</text>
+  <line x1="80" y1="171.92" x2="330" y2="171.92" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="370" y1="171.92" x2="620" y2="171.92" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="171.92" x2="80" y2="171.92" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="175.92" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">75</text>
+  <line x1="80" y1="129.23" x2="330" y2="129.23" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="370" y1="129.23" x2="620" y2="129.23" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="129.23" x2="80" y2="129.23" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="133.23" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">100</text>
+  <line x1="80" y1="86.54" x2="330" y2="86.54" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="370" y1="86.54" x2="620" y2="86.54" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="86.54" x2="80" y2="86.54" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="90.54" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">125</text>
+  <line x1="80" y1="300" x2="80" y2="78" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="34" y="189" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 189)">Number of adults</text>
+  <rect x="90" y="16" width="14" height="14" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <text x="110" y="28" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Observed count</text>
+  <rect x="240" y="16" width="14" height="14" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="260" y="28" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Expected count if activity and sleep were independent</text>
+  <line x1="80" y1="300" x2="330" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="205" y="60" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Reported good sleep</text>
+  <rect x="86.67" y="177.05" width="32" height="122.95" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <rect x="124.67" y="147.54" width="32" height="152.46" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="102.67" y="172.05" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">72</text>
+  <text x="140.67" y="142.54" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b">89.28</text>
+  <text x="121.67" y="318" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Low</text>
+  <rect x="170" y="101.91" width="32" height="198.09" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <rect x="208" y="109.42" width="32" height="190.58" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="186" y="96.91" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">116</text>
+  <text x="224" y="104.42" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b">111.60</text>
+  <text x="205" y="318" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Moderate</text>
+  <rect x="253.33" y="144.6" width="32" height="155.4" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <rect x="291.33" y="166.6" width="32" height="133.4" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="269.33" y="139.6" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">91</text>
+  <text x="307.33" y="161.6" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b">78.12</text>
+  <text x="288.33" y="318" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">High</text>
+  <line x1="370" y1="300" x2="620" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="495" y="60" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Reported poor sleep</text>
+  <rect x="376.67" y="149.72" width="32" height="150.28" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <rect x="414.67" y="179.23" width="32" height="120.77" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="392.67" y="144.72" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">88</text>
+  <text x="430.67" y="174.23" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b">70.72</text>
+  <text x="411.67" y="318" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Low</text>
+  <rect x="460" y="156.55" width="32" height="143.45" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <rect x="498" y="149.04" width="32" height="150.96" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="476" y="151.55" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">84</text>
+  <text x="514" y="144.04" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b">88.40</text>
+  <text x="495" y="318" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Moderate</text>
+  <rect x="543.33" y="216.32" width="32" height="83.68" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <rect x="581.33" y="194.33" width="32" height="105.67" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="559.33" y="211.32" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">49</text>
+  <text x="597.33" y="189.33" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b">61.88</text>
+  <text x="578.33" y="318" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">High</text>
+  <text x="350" y="346" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Physical activity level</text>
+  <text x="320" y="376" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Hypothetical survey of 500 adults. Expected count = row total × column total ÷ 500.</text>
+</svg>

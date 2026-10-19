@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Foot length and reading score for 30 hypothetical children in grades 1, 3 and 5</title>
+  <desc id="desc">Scatterplot of reading score against foot length with three clusters by grade. Overall the dots rise from lower left to upper right, r = 0.91, but within each grade there is almost no pattern (r = 0.13, 0.08 and −0.09).</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="26" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="600">Foot length and reading score</text>
+  <text x="20" y="44" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">30 hypothetical children, 10 in each of three grades</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="80" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">16</text>
+  <line x1="80" y1="330" x2="80" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="138.89" y1="330" x2="138.89" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="138.89" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">17</text>
+  <line x1="138.89" y1="330" x2="138.89" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="197.78" y1="330" x2="197.78" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="197.78" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">18</text>
+  <line x1="197.78" y1="330" x2="197.78" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="256.67" y1="330" x2="256.67" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="256.67" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">19</text>
+  <line x1="256.67" y1="330" x2="256.67" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="315.56" y1="330" x2="315.56" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="315.56" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20</text>
+  <line x1="315.56" y1="330" x2="315.56" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="374.44" y1="330" x2="374.44" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="374.44" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">21</text>
+  <line x1="374.44" y1="330" x2="374.44" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="433.33" y1="330" x2="433.33" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="433.33" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">22</text>
+  <line x1="433.33" y1="330" x2="433.33" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="492.22" y1="330" x2="492.22" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="492.22" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">23</text>
+  <line x1="492.22" y1="330" x2="492.22" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="551.11" y1="330" x2="551.11" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="551.11" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">24</text>
+  <line x1="551.11" y1="330" x2="551.11" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="610" y1="330" x2="610" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">25</text>
+  <line x1="610" y1="330" x2="610" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="330" x2="80" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="334" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">10</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="262.5" x2="80" y2="262.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="266.5" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">30</text>
+  <line x1="80" y1="262.5" x2="610" y2="262.5" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="195" x2="80" y2="195" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="199" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">50</text>
+  <line x1="80" y1="195" x2="610" y2="195" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="127.5" x2="80" y2="127.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="131.5" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">70</text>
+  <line x1="80" y1="127.5" x2="610" y2="127.5" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="60" x2="80" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="64" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">90</text>
+  <line x1="80" y1="60" x2="610" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="345" y="370" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Foot length (cm)</text>
+  <text x="34" y="195" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 195)">Reading score (0 to 100 scale)</text>
+  <circle cx="150.67" cy="259.12" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="221.33" cy="269.25" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="186" cy="238.88" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="250.78" cy="252.38" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="168.33" cy="282.75" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="203.67" cy="245.62" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="239" cy="276" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="138.89" cy="262.5" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="215.44" cy="228.75" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="191.89" cy="289.5" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <rect x="316.94" y="183.75" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="275.72" y="200.62" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="369.94" y="163.5" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="346.39" y="210.75" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="299.28" y="153.38" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="393.5" y="190.5" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="328.72" y="173.62" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="287.5" y="193.88" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="358.17" y="204" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <rect x="375.83" y="166.88" width="9" height="9" fill="#4d6b3c" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="468.67,121.5 463.17,131.5 474.17,131.5" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="427.44,97.88 421.94,107.88 432.94,107.88" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="515.78,135 510.28,145 521.28,145" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="445.11,84.38 439.61,94.38 450.61,94.38" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="492.22,111.38 486.72,121.38 497.72,121.38" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="409.78,141.75 404.28,151.75 415.28,151.75" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="539.33,104.62 533.83,114.62 544.83,114.62" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="456.89,91.12 451.39,101.12 462.39,101.12" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="486.33,128.25 480.83,138.25 491.83,138.25" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="504,114.75 498.5,124.75 509.5,124.75" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <text x="134.89" y="210.75" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b" font-weight="600">Grade 1 (circles)</text>
+  <text x="276.22" y="139.88" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#4d6b3c" font-weight="600">Grade 3 (squares)</text>
+  <text x="405.78" y="78.38" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b" font-weight="600">Grade 5 (triangles)</text>
+  <rect x="390" y="250" width="225" height="46" fill="#ffffff" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="400" y="269" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="600">All 30 children: r = 0.91</text>
+  <text x="400" y="287" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Grades 1, 3, 5: r = 0.13, 0.08, −0.09</text>
+</svg>

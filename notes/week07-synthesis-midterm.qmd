@@ -8,195 +8,152 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: would you believe this headline?
 
-For six weeks the tools arrived one at a time, on purpose: cases and variables, then study design, then shape and center and spread, then comparing groups, then association between two numerical variables, and finally Week 6's hardest question — what else could be producing the pattern you just described?
+Here is a made-up headline: "Adults who drink green tea every day have fewer heart attacks, study finds." Before believing it, write down three questions you would want the study to settle. This page shows where each question fits in one routine for reading any study.
 
-Real studies do not arrive one tool at a time. A study arrives as a paragraph — a few sentences on collection, a table of summaries, one plot, a headline — and all six weeks are relevant at once. Knowing six techniques separately is not the same skill as reading one study with all six.
+## Why this week matters: one study, every tool
 
-This week consolidates instead of adding. Nothing new is introduced: no new statistic, no new plot, no new formula. What is new is a routine — a fixed order of six questions you put to any study, and the habit of writing your conclusion in a verb the design can carry. Boring routines are what stop a reader from being fooled by an exciting number.
-
-Week 6 also left something unfinished: you learned to check a third variable by splitting the data, but not when to reach for that check, or what to write down afterward. By the end of this week it will be step six of something automatic.
-
-### Why this matters beyond the course
-
-Picture a clinic manager with one year of outreach money. A study crosses her desk showing that patients who sleep less report worse daytime alertness, so she funds a sleep-education campaign. If most of that gap actually travels with night-shift employment — people on late shifts sleep less *and* are tired for reasons the shift itself creates — the campaign is aimed at the wrong thing and nothing moves. The study was not fraudulent. It was read one pass too shallow.
-
-You will make smaller versions of that decision constantly: whether a supplement is worth the money, whether a city policy has evidence behind it or only a correlation.
+Weeks 1 to 6 each gave you one tool: naming cases and variables, judging how data were produced, summarizing, comparing groups, describing association, and thinking about confounding. A real claim, such as a diet story in the news, needs all of them, in order. This week adds no new methods; it reads two illustrative studies from question to conclusion.
 
 ## What you will be able to do
 
-- Run six ordered passes over an unfamiliar study description and say, in a sentence each, what every pass found.
-- Name the cases, the explanatory variable, and the response variable from a paragraph of prose, with units attached.
-- Compare two groups using centers, spreads, and overlap together, stating the difference in the units of the problem.
-- Check a named third variable within strata and report whether the comparison shrank, grew, reversed, or held.
-- Choose the strongest verb a design supports, and write a two-sentence conclusion carrying its own qualifications.
-- Explain why a much larger sample does not repair a badly built one.
+By the end of this week you can:
 
-## Words worth owning
+- name a study's question, unit of observation, explanatory variable and response variable;
+- tell an observational study from a randomized experiment, and say whether the cases were randomly sampled;
+- choose summaries that fit the variables and state a comparison in context, with units;
+- explain how a confounding variable can change an unadjusted comparison, and read an adjusted one;
+- state what a study can and cannot conclude about cause and effect and about a wider population.
 
-| Term | What it means in this course |
-|------|------------------------------|
-| case | one row of the data table — the person, school, or day that was measured |
-| explanatory variable | the variable you are treating as the possible reason for the pattern |
-| response variable | the outcome you are trying to understand |
-| observational study | researchers recorded what people were already doing and assigned nothing |
-| response rate | the share of invited people who replied; a small share warns you about who is missing |
-| confounding variable | a third variable that travels with the explanatory variable *and* is separately related to the response |
-| stratify | split the data by the third variable, then compare inside each group |
-| hedge | a verb that reports exactly as much as the design supports, such as "was higher among" |
+## Words to carry from the first half
 
-## Six passes through one study
+| Term | Meaning |
+|---|---|
+| Unit of observation (case) | The person, animal, place or thing that one row of data describes. |
+| Explanatory variable | The variable that may influence the outcome, often defining the groups compared. |
+| Response variable | The outcome measured on each case. |
+| Observational study | Researchers record variables as they occur, without assigning the explanatory variable. |
+| Randomized experiment | Researchers use chance to assign cases to treatment groups. |
+| Random sample | Cases chosen from a population by chance, so the sample tends to resemble the population. |
+| Confounding variable | A variable associated with both the explanatory and the response variable, which can create, hide or distort an association. |
+| Unadjusted comparison | A comparison of groups that ignores other variables. |
+| Adjusted comparison | A comparison made within levels of another variable, taking that variable's influence out of the gap. |
+| Scope of inference | What a design lets you conclude: whether results extend to a population, and whether a gap shows cause and effect. |
 
-The routine has six passes in a fixed order, and the order matters. Each borrows a tool from an earlier week. An early failure poisons everything after it: if you cannot say who is in the data, no later arithmetic rescues the reading.
+## Reading a study from question to conclusion
 
-![The six-pass routine for reading any study, with the week each tool comes from.](../assets/figures/week-07/study-reading-map.svg){fig-alt="Six numbered boxes in a flow: how were the data produced, what are the cases and variables, what does one variable look like, how do the groups compare, how do two variables move together, what else could explain the pattern."}
+The same six steps take you from a claim to a responsible conclusion. Steps 1 to 3 come before any numbers, step 4 holds the arithmetic, and steps 5 and 6 are where misleading reports usually go wrong.
 
-There is no pass for significance; that arrives in Weeks 11 and 12.
+![Six steps for reading a study, from question to conclusion](../assets/figures/week-07/reading-a-study-flow.svg){fig-alt="Flow diagram of six steps: question, data production, variables, summaries and comparison, association and confounders, conclusion. Step 2 (random sampling, random assignment) limits what step 6 can claim."}
 
-### The first three passes: where these data came from and what is in them
+### The six-step checklist for any study
 
-**Pass one asks how the data were produced.** Was there an intervention that researchers assigned, or did they record what people were already doing? Who could have ended up in this data set, and who could not? If it was a survey, how many were invited and how many replied? This is Week 2, and it is first because it sets a ceiling on every later claim. An observational study cannot be argued upward into an experiment by clever analysis.
+| Step | Questions to ask | Where you learned it |
+|---|---|---|
+| 1. Question | What is claimed, and about whom? | [Week 1](week01-data-evidence.qmd) |
+| 2. Data production | Were the cases randomly sampled? Was the explanatory variable assigned by chance? | [Week 2](week02-study-design.qmd) |
+| 3. Variables | What is one case? Which variable is explanatory and which is the response? Is each categorical or quantitative? | [Week 1](week01-data-evidence.qmd) |
+| 4. Summaries and comparison | What does a graph show? What are the center and spread, or percentages, in each group? How big is the difference, in the response's units? | [Week 3](week03-one-variable-summaries.qmd), [Week 4](week04-comparing-groups.qmd) |
+| 5. Association and confounders | How strong is the association? What else differs between the groups? Does the gap survive an adjusted comparison? | [Week 5](week05-association.qmd), [Week 6](week06-confounding.qmd) |
+| 6. Conclusion | Cause and effect, or association only? For these cases, or for a wider population? | [Week 2](week02-study-design.qmd) |
 
-**Pass two asks what the cases and variables are.** Say out loud: one row of this table is one ______. Then name the explanatory and response variables with their units. This is Week 1, and it is where most misreadings begin, because a headline often names one thing while the study measured another. "Sleep improves grades" sounds like it measured grades; if the response was a self-rated alertness item, the headline has swapped in a variable the study does not contain.
+For the green-tea headline in the warm-up: did people choose to drink tea, or was it assigned (step 2)? Who was studied, and does the claim reach beyond them (steps 1 and 6)? What else do daily tea drinkers do differently, such as diet or exercise (step 5)?
 
-**Pass three asks what one variable looks like alone.** Shape, center, spread — the Week 3 questions. A mean without a spread is half a report. Skipping this pass is how a difference between two means gets treated as enormous when it is small next to the variation inside either group.
+### Two design questions set the scope of a conclusion
 
-### The last three passes: comparison, association, and the third variable
+Step 2 limits step 6. Random sampling decides whether results extend to a population; random assignment decides whether a gap between groups can be read as cause and effect.
 
-**Pass four compares groups.** Difference in means or medians, in the units of the problem, alongside the spreads and the overlap. Week 4's warning applies every time: two groups can differ on average while most individuals in one look like most individuals in the other.
+| | Explanatory variable randomly assigned | Not randomly assigned |
+|---|---|---|
+| **Cases randomly sampled** | Cause and effect, for the population | Association only, for the population |
+| **Cases not randomly sampled** | Cause and effect, for these cases | Association only, for these cases |
 
-**Pass five asks how two numerical variables move together.** Direction, form, strength — read off the picture first, then summarized by a correlation if the form is roughly linear. A correlation is one number for linear strength only. It is not a slope, it says nothing about curvature, and it carries no cause.
+Random assignment tends to make the groups alike in every other variable, measured or not, so a gap too large for the random split alone points to the treatment.
 
-**Pass six asks what else could explain the pattern.** Name a specific third variable — not "other factors", an actual variable someone could have measured. Then check the Week 6 definition in two parts: is it associated with the explanatory variable, and is it separately related to the response? If both hold, split the data on it and compare inside each group. Whatever happens is a finding.
+### How comparison, association and confounding fit together
 
-## Choosing the verb your design can carry
+A comparison between groups ([Week 4](week04-comparing-groups.qmd)) is an association between a categorical explanatory variable and the response ([Week 5](week05-association.qmd)). In an observational study the groups form themselves and often differ in other ways; a difference that also affects the response confounds the comparison. An adjusted comparison ([Week 6](week06-confounding.qmd)) can remove confounding only by the measured variables it adjusts for.
 
-The six passes produce a pile of observations. Turning it into a sentence is where studies get overstated, and it happens in one word: the verb. "Was higher among" and "raises" describe the same numbers and make different claims. The design decides which one you have earned.
+## Worked example 1: a walking program and falls in older adults
 
-![Study designs from weakest to strongest, each paired with the strongest verb it supports.](../assets/figures/week-07/claim-strength-ladder.svg){fig-alt="A ladder of six designs, weakest at the bottom: a single story, a volunteer survey, an observational comparison, an adjusted observational study, one randomized experiment, several agreeing ones. Only the top two license causal verbs."}
+**The study (hypothetical).** A county health department reviewed records for 1,000 adults aged 65 and older who use its senior centers. Some had chosen to join a twice-weekly walking program. The records show whether each adult joined, their age group, and whether they fell at least once in the 12 months after the program started.
 
-### A ladder of verbs
+**Steps 1 to 3: question, design, variables.** The question is whether joining goes with fewer falls, and ideally whether it prevents them. The unit of observation is one adult. The explanatory variable is program membership (joined or not joined) and the response is whether the adult fell (yes or no); both are categorical. Adults chose whether to join, so the study is observational, and they are one county's center users, not a random sample.
 
-Read the ladder from the bottom. One person's story supports "happened to one person" and nothing wider. A volunteer survey supports "was reported by the people who replied" — note that the subject there is the repliers, not the population. An observational study with groups compared supports "was higher among", a statement about an observed comparison, not a mechanism. One that adjusts for measured variables earns a little more: "is still associated with, after accounting for age and shift work" — and you name the variables, because "adjusted" means nothing until the reader knows adjusted for what.
+**Step 4: summaries and comparison.** With two categorical variables, compare the percentage who fell in each group.
 
-Only the top two rungs license causal language, and even there the wording is careful: one randomized experiment supports "caused, in this study", and several agreeing experiments support the plain verb "causes". Nothing done to observational data promotes it onto those rungs, because what random assignment buys — groups comparable before anything happened — cannot be bought afterward with arithmetic.
+| Age group | Program | Adults | Fell | Percent who fell |
+|---|---|---|---|---|
+| 65 to 74 | Joined | 300 | 45 | 15.0% |
+| 65 to 74 | Not joined | 200 | 36 | 18.0% |
+| 75 and older | Joined | 100 | 25 | 25.0% |
+| 75 and older | Not joined | 400 | 112 | 28.0% |
+| All ages | Joined | 400 | 70 | 17.5% |
+| All ages | Not joined | 600 | 148 | 24.7% |
 
-### Hedges that are honest, not vague
+The unadjusted comparison uses the all-ages rows: $70/400 = 0.175$, so 17.5% of joiners fell, and $148/600 \approx 0.247$, so 24.7% of non-joiners fell. Joiners fell less often, by a gap of $24.7 - 17.5 = 7.2$ percentage points.
 
-Students often hear hedged language as weakness. It is the opposite: a hedge is a precise report of how far the evidence reaches, and using the wrong one is an error of fact, not of tone.
+**Step 5: association and a possible confounder.** Age is a strong candidate. Among joiners, $300/400 = 0.75$, or 75%, were aged 65 to 74, against $200/600 \approx 0.33$, or 33%, of non-joiners. Age is also related to falling. Combining both program groups, $(45 + 36)/(300 + 200) = 81/500 = 0.162$, or 16.2%, of the younger adults fell, compared with $(25 + 112)/(100 + 400) = 137/500 = 0.274$, or 27.4%, of the older adults. Because age is associated with both variables, it can confound the comparison. Within each age group the gap is 3.0 percentage points (15.0% against 18.0%, and 25.0% against 28.0%), less than half of the unadjusted 7.2.
 
-*"Is associated with"* says two variables travel together in these data and commits to nothing about why. *"Was higher among"* is narrower and often better, naming the direction and the group in one breath. *"These data cannot separate X from Y"* is a finding rather than an apology: it tells the reader which alternative explanation is still standing.
+![Percent of older adults who fell, by walking program and age group (hypothetical)](../assets/figures/week-07/walking-program-fall-rates.svg){fig-alt="Bar chart. All ages: 17.5% of joiners fell vs 24.7% of non-joiners, a 7.2 percentage point gap. Ages 65 to 74: 15.0% vs 18.0%. Ages 75 and older: 25.0% vs 28.0%. Within each age group the gap is 3.0 percentage points."}
 
-Two habits belong here too. Attach the population you observed — "among the 80 students who came to this clinic", not "among college students". And report the third-variable check whichever way it came out; a comparison that survives adjustment beats one nobody checked.
+**Step 6: conclusion in context.** In these records, program members fell less often. About $7.2 - 3.0 = 4.2$ of the 7.2 percentage points trace back to joiners being younger; within the same age group, joiners still fell about 3 percentage points less often. That remaining gap might come from the program, but chance or other differences could also explain it: people who choose a walking group may already have better balance, strength or health. The study shows an association that survives adjustment for age group, not that the program prevents falls, and it describes center users in one county, not all older adults. A randomized experiment is the way to test the causal question.
 
-## Worked example — reading a campus clinic sleep study end to end
+## Worked example 2: a randomized trial of a reduced-sodium diet
 
-**Setting.** A campus health center reviewed the intake forms of every student who came in for a routine visit during one month — 80 students in all. Each form recorded average nightly sleep over the past week, in hours, an alertness score from a standard daytime questionnaire running from 0 to 100 where higher means more alert, and whether the student works a late shift.
+**The study (hypothetical).** Twenty-four volunteers with mildly high blood pressure were randomly split into two groups of 12. One group followed a reduced-sodium meal plan for six weeks; the other kept their usual diet. Nurses who did not know the group assignments measured systolic blood pressure at the start and end. The response is the change, end minus start, in millimeters of mercury (mm Hg), so a negative change means blood pressure went down.
 
-**Pass one — how were these data produced?** Observational, one clinic, one month, nothing assigned. The people in the data chose to come in, so they are not a random sample of students on campus. Ceiling set: no causal verb is available, whatever the numbers do.
+**Steps 1 to 3: question, design, variables.** The question is whether the plan lowers systolic blood pressure. The unit of observation is one volunteer. The explanatory variable, diet (reduced sodium or usual), is categorical; the response, change in blood pressure, is quantitative. Chance, not the volunteers, decided who changed diet, so this is a randomized experiment. The volunteers are not a random sample of any population.
 
-**Pass two — what are the cases and variables?** One row is one student. The explanatory variable is nightly sleep in hours; the response is the alertness score, 0 to 100. The third variable we will check is late-shift work, a yes-or-no variable. Twenty-four students work a late shift and 56 do not, and $24 + 56 = 80$, so everyone is accounted for.
+**Step 4: graph first, then numbers.** The dot plot shows every value; in order, they are:
 
-**Pass three — what does one variable look like?** Sleep hours had a mean of 6.7 hours, a median of 6.9, a standard deviation of 1.2 hours, and quartiles at 6.0 and 7.6. The mean sitting below the median signals a mild left skew — a few very short sleepers pulling the mean down. Alertness had a mean of 64.4, a median of 65, and a standard deviation of 12.3. Hold on to that 12.3: it is the typical person-to-person distance from the mean, and every difference below is judged against it.
+- Reduced sodium: $-12, -9, -8, -7, -6, -6, -5, -4, -3, -2, 0, 2$
+- Usual diet: $-6, -4, -3, -2, -1, 0, 0, 1, 2, 3, 4, 6$
 
-**Pass four — how do the groups compare?** Split the students at 7 hours. Forty slept fewer than 7 hours and 40 slept 7 hours or more.
+![Change in systolic blood pressure for 24 volunteers, by diet group (hypothetical)](../assets/figures/week-07/sodium-trial-dot-plot.svg){fig-alt="Dot plot of blood pressure change. Reduced sodium: −12 to 2 mm Hg, mean −5.0, 10 of 12 had a drop. Usual diet: −6 to 6, mean 0.0, 5 of 12 had a drop. The groups overlap, but the reduced-sodium dots sit farther left."}
 
-| Sleep group | Late shift | No late shift | All |
-|-------------|-----------|---------------|-----|
-| Under 7 hours | 18 students, mean alertness 56.5 | 22 students, mean alertness 62.0 | 40 students |
-| 7 hours or more | 6 students, mean alertness 64.1 | 34 students, mean alertness 70.1 | 40 students |
-| All | 24 students | 56 students | 80 students |
+Both groups look roughly symmetric with no outliers, so the mean and standard deviation are sensible summaries ([Week 3](week03-one-variable-summaries.qmd)).
 
-To get mean alertness for all 40 short sleepers, pool the two shift groups, weighting each cell by how many students it holds:
+```
+Group            n    mean   median    SD    min   max
+Reduced sodium  12   -5.00    -5.5    3.91   -12     2
+Usual diet      12    0.00     0.0    3.46    -6     6
+```
 
-$$\frac{18 \times 56.5 + 22 \times 62.0}{40} = \frac{1017 + 1364}{40} = \frac{2381}{40} = 59.525$$
+By hand: the reduced-sodium values add to $-60$, so $\bar{x} = -60/12 = -5.0$; the usual-diet values add to 0, so $\bar{x} = 0.0$. With 12 values, each median is the average of the 6th and 7th ordered values: $(-6 + (-5))/2 = -5.5$ and $(0 + 0)/2 = 0$. For the usual diet, the squared distances from the mean add to 132, so $s = \sqrt{132/11} = \sqrt{12} \approx 3.46$ mm Hg. For reduced sodium, the distances from the mean of $-5$ are $-7, -4, -3, -2, -1, -1, 0, 1, 2, 3, 5, 7$; their squares add to 168, so $s = \sqrt{168/11} \approx \sqrt{15.27} \approx 3.91$ mm Hg.
 
-and among students sleeping 7 hours or more:
+The difference in means, reduced sodium minus usual diet, is $-5.0 - 0.0 = -5.0$ mm Hg. The groups overlap, but 10 of the 12 reduced-sodium volunteers ended with lower blood pressure, against 5 of the 12 on the usual diet, and the gap between the means is larger than either group's standard deviation.
 
-$$\frac{6 \times 64.1 + 34 \times 70.1}{40} = \frac{384.6 + 2383.4}{40} = \frac{2768}{40} = 69.2$$
+**Step 5: other explanations.** Random assignment tends to balance age, weight, salt habits and everything else, measured or not, so confounding is not the worry it was in Worked example 1. The nurses did not know who was on which diet, so that knowledge could not nudge their readings. The remaining worry is chance: even a diet with no effect would produce some gap between two randomly formed groups of 12. [Week 11](week11-simulation-based-inference.qmd) shows how to check whether a 5 mm Hg gap would be surprising from the random split alone.
 
-The observed gap is $69.2 - 59.525 = 9.675$, about 9.7 on the alertness scale, favoring the longer sleepers. Now judge it against pass three: the standard deviation of alertness is 12.3, so the gap is smaller than one typical person-to-person distance. Plenty of short sleepers here were more alert than plenty of long sleepers. The groups differ on average and overlap heavily at the same time.
+**Step 6: conclusion in context.** If that check shows the gap is too large for chance alone, the design supports a cause-and-effect conclusion: for these volunteers, the reduced-sodium plan lowered systolic blood pressure about 5 mm Hg more, on average, than the usual diet over six weeks. Because the volunteers were not randomly sampled, extending this to all adults with mildly high blood pressure depends on how closely they resemble these volunteers.
 
-**Pass five — how do two numerical variables move together?** Treated as a numerical variable rather than two buckets, sleep against alertness gives a scatterplot that slopes upward, is roughly straight, and has a correlation of 0.52: direction positive, form roughly linear, strength moderate. That 0.52 does not say how much alertness goes with an extra hour of sleep — that is a slope, and slopes arrive next week.
+## Transfer: bike lanes and traffic deaths across cities
 
-**Pass six — what else could explain the pattern?** Late-shift work is the obvious candidate, so check both halves of the definition. Is it associated with the explanatory variable? Among late-shift students, 18 of 24 slept fewer than 7 hours, or 75 percent; among the others, 22 of 56, about 39 percent — a gap of roughly 36 percentage points, so yes. Is it separately related to the response? Among short sleepers, mean alertness was 56.5 for late-shift students against 62.0 for the others; among longer sleepers, 64.1 against 70.1. Late-shift students are less alert at both sleep levels, so yes again: shift work is a genuine confounding variable here.
+A hypothetical report on 30 mid-sized cities that chose to share their records finds that cities with more miles of protected bike lanes per 100,000 residents had fewer traffic deaths per 100,000 residents per year, with correlation $r = -0.48$.
 
-![The design summary and the comparison, pooled and within shift groups.](../assets/figures/week-07/stratified-study-panel.svg){fig-alt="A design summary table above a dot chart. The pooled gap in mean alertness between short and longer sleepers is 9.7, wider than the within-shift gaps of 7.6 among late-shift students and 8.1 among the rest."}
+Run the same six steps. The unit of observation is a city, not a person. Both variables are quantitative rates per 100,000 residents, which makes large and small cities comparable. No one assigned bike lanes by chance, and the cities chose to take part rather than being randomly sampled, so this is an observational study of these 30 cities. A correlation of $-0.48$ is a moderate negative linear association, with plenty of scatter; before trusting it, check the scatterplot, because $r$ describes only straight-line patterns and one unusual city can pull it. Possible confounders include population density (dense cities tend to have more bike lanes and slower traffic) and public transit use (transit-heavy cities often add bike lanes, and more riders means fewer cars). The supported conclusion: among these cities, more bike lanes went with fewer traffic deaths. The study cannot show that building lanes would lower deaths, and it says nothing direct about any individual cyclist's risk.
 
-Now compare inside each shift group. Among late-shift students the gap is $64.1 - 56.5 = 7.6$; among the others, $70.1 - 62.0 = 8.1$. Weighting those by shift-group size gives one adjusted gap:
+## A common misreading: adjusting for one variable proves cause
 
-$$\frac{24 \times 7.6 + 56 \times 8.1}{80} = \frac{182.4 + 453.6}{80} = \frac{636}{80} = 7.95$$
+In Worked example 1, adjusting for age shrank the gap from 7.2 to 3.0 percentage points, and it is tempting to call those 3.0 percentage points the program's true effect. That reading goes too far: the remaining gap might be the program's effect, but these records cannot show it. Adjusting removes confounding only by the variables you adjusted for, and only as finely as the groups allow: within the "75 and older" group, joiners may still be younger than non-joiners. Joiners may also differ in balance, fitness, health or motivation, none of which the records show. More adjustment can make an observational comparison more convincing, but never equivalent to a randomized experiment, where chance also balances the variables nobody measured.
 
-The gap shrinks from about 9.7 to about 8.0 once shift work is held fixed. It shrank, but it did not vanish or reverse. Some of what looked like a sleep pattern was really a shift-work pattern; most of it was not.
+## Practice for this week (ungraded)
 
-**The conclusion, written out.** Among the 80 students who visited this clinic during one month, mean alertness was about 9.7 higher for those sleeping 7 hours or more than for those sleeping less. Late-shift work accounts for part of that difference: within students of the same shift status the gap is about 8.0. Because these students chose to come in and nothing was assigned, these data cannot show that sleeping longer would raise a given student's alertness, and they need not describe students who never came in.
+1. A hypothetical survey of 500 randomly selected adults in one state finds that those who sleep less than six hours a night report more sick days. Name the case, the two variables and the design. To whom does the result extend, and what can it not show? *What to look for:* how the 500 adults were chosen, and whether anyone assigned how much they slept.
+2. Suppose the walking program in Worked example 1 had admitted only adults who first passed a balance test. Which checklist step does this change, and how does it affect the conclusion?
+3. Patients who chose physical therapy at home recovered faster, on average, than patients who chose therapy at a clinic. Suggest one possible confounding variable and explain how it could be related to both variables.
+4. In a hypothetical experiment, a researcher randomly assigns 40 tomato plants to two fertilizers, 20 plants each. After eight weeks the mean heights are 62 cm with fertilizer A and 55 cm with fertilizer B. State the difference in means with units, and the kind of conclusion the design supports if the gap is larger than chance would produce.
+5. In the walking-program bar chart, how can you tell without arithmetic that age is related to falling? *What to look for:* compare the two Joined bars, and then the two Not joined bars, across the age groups.
 
-![A defensible write-up of this study beside an overreaching one.](../assets/figures/week-07/two-conclusions.svg){fig-alt="Two columns of three sentences. The left reports a comparison, the adjusted gap, and the limit of the design. The right uses a causal verb, promises an individual gain, and claims proof, with each fault named in red."}
+## Read further in the free textbook
 
-Every sentence in that figure's left column is a pass from the routine, written down. Every sentence on the right is the same arithmetic with a verb it did not earn.
+The two applications chapters of *Introduction to Modern Statistics* (IMS) below pull the first half together. You can skip the R code and read the output and explanation.
 
-### The same reasoning, transferred
+- [IMS Chapter 3, Applications: Data](https://openintrostat.github.io/ims/data-applications.html) closes the part on data and study design (Chapters 1 and 2).
+- [IMS Chapter 6, Applications: Explore](https://openintrostat.github.io/ims/explore-applications.html) closes the part on exploring categorical and numerical data (Chapters 4 and 5).
 
-A school district compares reading gains for 150 third graders. Ninety attended an after-school reading club; 60 did not. Mean gain over the year was 14.2 for attenders and 11.0 for the others, a difference of 3.2 on the district's reading scale, with a standard deviation of gains near 6 in each group. What stayed the same: the design is observational — families chose the club — so the verb ceiling is "was higher among"; a gap of 3.2 against a spread near 6 is heavy overlap again; and the third-variable check runs as before, since family income or a child's starting reading level would travel with attendance and separately relate to the gain.
+## Where the course goes next
 
-What changed: the response is a gain rather than a level, and the group sizes are lopsided, so any pooled average leans toward the larger group. The routine and the ceiling are unchanged.
-
-## Second worked example — a wellness app's claim that looks like the same study
-
-**Setting.** A sleep-tracking app surveys all 40,000 of its registered users with one question, asking them to rate daytime alertness from 0 to 100. Two thousand reply, and the company matches each reply to its own records of who has the bedtime-reminder feature switched on: 1,200 of the repliers use it and 800 do not. Mean self-rated alertness is 71 among feature users and 59 among non-users. The company posts: "Our bedtime reminder raises alertness by twelve."
-
-**Pass one.** Observational, and self-selected twice over. Of 40,000 invited, 2,000 replied, a response rate of $2000 / 40000 = 0.05$, or 5 percent. The 38,000 who did not reply are not a random slice, and there is a specific reason to expect them to differ: people who feel good about their sleep are likelier to fill out a sleep survey. And nobody assigned the feature — users switched it on themselves.
-
-**Pass two.** One row is one *replier*, not one user, and the response is a single self-rated item, not a scored questionnaire. The company says "raises alertness"; the study measured a one-question self-rating among volunteers.
-
-**Pass three.** Nothing to work with. Two means are reported and no spread, no shape, no range. Without a standard deviation you cannot tell whether a difference of 12 is large next to the variation between people or small inside it — and that is the half that would let you push back.
-
-**Pass four.** The comparison is 1,200 repliers against 800, and $1200 + 800 = 2000$, so those groups are the whole reply pool. The difference is $71 - 59 = 12$ on the self-rating scale. Note what pass one already did to that number: it compares people who chose the feature with those who did not, among people who chose to reply.
-
-**Pass five.** There is no second numerical variable, so this pass has nothing to describe — worth writing down, because the report holds one comparison and no picture at all.
-
-**Pass six.** No third variable is checked, and several are obvious. Someone who turns on a bedtime reminder is already trying to sleep better; that motivation is associated with using the feature and separately related to alertness through a dozen other habits.
-
-**What is supportable.** Among the 5 percent of users who chose to reply, those who reported using the bedtime reminder also reported higher alertness, on average. That sentence is the whole harvest.
-
-The app's difference is 12 and the clinic's was 9.7; the app's sample is 2,000 and the clinic's was 80. On both counts the app looks better, and it is the far weaker study. A difference produced by a self-selected slice of a self-selected group, with no third variable checked, does not become trustworthy by being large.
-
-## The misreading to avoid
-
-Here is the thought, in the words students actually use: *"The app study had 2,000 people and the clinic study had 80, so obviously the app study is stronger. Bigger sample, better evidence."*
-
-It feels like common sense, and half of it is true. A larger sample does reduce one problem: the random wobble from happening to draw these particular people rather than some others, which Weeks 11 and 12 will make precise. But a large sample does nothing to the other problem, which is bias — a systematic tilt in *who ends up in the data at all*. If the 5 percent who replied are the enthusiastic ones, collecting 20,000 replies from the same self-selecting process gives you the enthusiastic ones more precisely. A big biased sample is not a better estimate; it is a more confident wrong one.
-
-The clinic study is not clean either — students who visit a health center are their own selected group. What makes it stronger is not its size but the passes it survives: the cases are stated, the response is a real instrument, the spread is reported, and a third variable was named and checked.
-
-A quieter misreading rides along with the first: *"Saying 'is associated with' is just being modest about the word 'causes'."* It is neither modesty nor a synonym. "Is associated with" claims the two variables travel together in the data you have; "causes" claims that changing one would change the other. Most of the clinic's sleep gap survived adjustment for shift work, and it remains entirely possible that an unmeasured variable — total hours worked, say — produces both the short sleep and the low alertness. Adjusting for what you measured never adjusts for what you did not.
-
-## Practice on your own
-
-These are for your own checking as you review.
-
-1. A city report states: "Neighborhoods with more bus stops have higher rates of adults meeting exercise guidelines." Run all six passes on that one sentence, saying for each what you can determine and what the sentence withholds. Then name two third variables and argue both halves of the confounding definition.
-
-2. A clinic reports mean pain rating 4.8 among 60 patients who chose physical therapy and 6.1 among 40 who chose medication alone, with a standard deviation near 2.0 in each group; lower ratings mean less pain. State the difference in the units of the problem, say what the spreads imply about overlap, and choose the strongest verb this design supports.
-
-3. One study randomly assigned 120 volunteers to two conditions; another collected 15,000 responses from an open web form. Decide which supports the stronger verb, then write two sentences explaining why the larger number does not settle it.
-
-4. Return to the clinic table and suppose the late-shift means had been 56.5 for short sleepers and 60.5 for longer sleepers, all four group sizes unchanged. Recompute the pooled mean alertness for each sleep group, the two within-shift gaps, and the size-weighted adjusted gap. Does shift work now explain more of the pooled difference, or less?
-
-5. Rewrite this sentence so it is defensible, then name which pass each change came from: "Our study of 500 patients proves that daily walking prevents high blood pressure in adults over fifty."
-
-## Where to read more
-
-- The two applications chapters are built for exactly this week's skill — full study descriptions read end to end: [Applications: Data, Chapter 3 of Introduction to Modern Statistics](https://openintrostat.github.io/ims/data-applications.html) and [Applications: Explore, Chapter 6](https://openintrostat.github.io/ims/explore-applications.html).
-- To refresh pass one, reread [Study design, Chapter 2](https://openintrostat.github.io/ims/data-design.html); for passes three and four, [Exploring numerical data, Chapter 5](https://openintrostat.github.io/ims/explore-numerical.html).
-- The whole of [Introduction to Modern Statistics](https://openintrostat.github.io/ims) is online for reading around a topic that is not sitting right.
-- For the same ideas in health and biology contexts, [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) covers design and exploratory work early on.
-- [StatKey](https://www.lock5stat.com/statkey) is the browser tool this course uses when simulation arrives in Week 11; clicking around it now makes it familiar later.
-- Course pages: the [schedule](../schedule.qmd) and the [resources page](../resources/index.qmd).
-
-## Where this goes next
-
-Pass five ended unfinished. You described the sleep-and-alertness relationship with a correlation of 0.52 and then had to stop, because a correlation cannot say how much alertness goes with one more hour of sleep. [Week 8](week08-simple-regression.qmd) supplies that piece: the regression line, its slope read in the units of the problem, the residuals measuring how far the line misses, and the output block you will read rather than produce. Everything on this week's ladder still applies — fitting a line to observational data produces a description and no causal verb.
-
-Keep the routine where you can find it. From Week 8 on, each new tool slots into one of these six passes rather than replacing them: regression sharpens pass five, the inference weeks sharpen pass four, Week 9's adjusted models sharpen pass six. To revisit the third-variable check, go back to [Week 6](week06-confounding.qmd); the [notes index](index.qmd) lists every unit.
+This week closes the first half. If adjusted comparisons still feel unfamiliar, revisit [Week 6: Confounding and multivariable thinking](week06-confounding.qmd). Next, [Week 8: Simple regression](week08-simple-regression.qmd) turns the association in step 5 into a fitted line $\hat{y} = b_0 + b_1 x$. The [notes overview](index.qmd) lists every week, and the [course schedule](../schedule.qmd) shows where this week sits in the term.

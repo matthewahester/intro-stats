@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Weekly exercise and resting heart rate for 15 hypothetical adults</title>
+  <desc id="desc">Scatterplot of resting heart rate against weekly exercise hours for 15 hypothetical adults. Rates drift down from about 80 to 62 bpm; one adult at 8 hours and 80 bpm sits well above the pattern. r = −0.66, or −0.90 without that adult.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="26" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="600">Weekly exercise and resting heart rate</text>
+  <text x="20" y="44" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">15 hypothetical adults, one dot per adult</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="100.38" y1="330" x2="100.38" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="100.38" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="100.38" y1="330" x2="100.38" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="202.31" y1="330" x2="202.31" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="202.31" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="202.31" y1="330" x2="202.31" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="304.23" y1="330" x2="304.23" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="304.23" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="304.23" y1="330" x2="304.23" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="406.15" y1="330" x2="406.15" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="406.15" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="406.15" y1="330" x2="406.15" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="508.08" y1="330" x2="508.08" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="508.08" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <line x1="508.08" y1="330" x2="508.08" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="610" y1="330" x2="610" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10</text>
+  <line x1="610" y1="330" x2="610" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="330" x2="80" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="334" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">55</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="291.43" x2="80" y2="291.43" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="295.43" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">60</text>
+  <line x1="80" y1="291.43" x2="610" y2="291.43" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="252.86" x2="80" y2="252.86" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="256.86" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">65</text>
+  <line x1="80" y1="252.86" x2="610" y2="252.86" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="214.29" x2="80" y2="214.29" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="218.29" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">70</text>
+  <line x1="80" y1="214.29" x2="610" y2="214.29" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="175.71" x2="80" y2="175.71" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="179.71" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">75</text>
+  <line x1="80" y1="175.71" x2="610" y2="175.71" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="137.14" x2="80" y2="137.14" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="141.14" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">80</text>
+  <line x1="80" y1="137.14" x2="610" y2="137.14" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="98.57" x2="80" y2="98.57" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="102.57" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">85</text>
+  <line x1="80" y1="98.57" x2="610" y2="98.57" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="60" x2="80" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="64" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">90</text>
+  <line x1="80" y1="60" x2="610" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="345" y="370" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Moderate exercise (hours per week)</text>
+  <text x="34" y="195" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 195)">Resting heart rate (bpm)</text>
+  <circle cx="100.38" cy="137.14" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="125.87" cy="106.29" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="151.35" cy="168" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="176.83" cy="144.86" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="202.31" cy="191.14" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="227.79" cy="160.29" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="253.27" cy="183.43" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="278.75" cy="214.29" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="304.23" cy="198.86" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="329.71" cy="175.71" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="355.19" cy="229.71" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="406.15" cy="237.43" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="457.12" cy="222" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="559.04" cy="276" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="508.08" cy="137.14" r="6.5" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <line x1="498.08" y1="131.14" x2="464.08" y2="113.14" stroke="#8a4a2b" stroke-width="1.2"/>
+  <text x="460.08" y="109.14" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#8a4a2b" font-weight="600">Unusual adult: 8 hours, 80 bpm</text>
+  <rect x="96" y="274" width="230" height="46" fill="#ffffff" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="106" y="293" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="600">All 15 adults: r = −0.66</text>
+  <text x="106" y="311" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Without the unusual adult: r = −0.90</text>
+</svg>

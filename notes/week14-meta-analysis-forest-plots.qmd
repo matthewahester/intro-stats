@@ -8,216 +8,298 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: three trials, three different headlines
 
-Every week of this course has ended in the same place: one study, one estimate, one interval, one careful sentence about what it does and does not support. This week the object you read changes. It is no longer a study but a *body* of studies — several trials of the same treatment, run in different clinics on different numbers of people, reaching results that do not all agree.
+Three hypothetical randomized trials tested the same low-sodium diet program against usual eating. Each measured systolic blood pressure after eight weeks.
 
-That is the situation nearly every real health claim is in. A small trial finds a large benefit. A bigger one finds a small benefit. A third finds nothing at all. A committee then has to say something to patients. **Meta-analysis** is the set of habits for turning that pile into one defensible statement, and the **forest plot** is the picture that shows the pile and the statement at once.
+- Trial A (120 people) found that the program group averaged 5.5 mmHg lower than the usual-eating group, a statistically significant difference.
+- Trial B (480 people) found a 3.0 mmHg drop, also statistically significant.
+- Trial C (120 people) found a 3.5 mmHg drop, but its 95% confidence interval included zero, so its headline read "Diet program has no significant effect."
 
-Week 13 left you able to read a single comparison of rates, and you came back from the fall break with that skill intact. What was missing was scale: nothing so far tells you what to do when five people hand you five different intervals. That is this week's job, and the term's last new machinery.
+Before reading on, take a minute with two questions. Does the program lower blood pressure, and by roughly how much? Does Trial C's headline cancel out the other two?
 
-By the end of this week, a forest plot should stop looking like a decorative row of dots and start reading like a paragraph — which trial each row is, how sure it was, what it means to cross the vertical line, and when the diamond at the bottom is a fair summary rather than a mistake.
-
-### Why this matters beyond the classroom
-
-A hospital committee is deciding whether to fund a pharmacist-led medication review for patients with high blood pressure. Someone circulates a study showing a six-unit drop in blood pressure compared with usual care. It is genuine and honestly reported, and it enrolled thirty-six people; four larger trials report more modest results. Reading only that study, the committee will over-promise and be surprised later. Reading all five in a forest plot, it sees one noisy row with a very long line sitting above four steadier rows. The decision changes because of how the evidence was assembled, not because anyone ran a new experiment.
-
-## What you will be able to do
-
-- Explain, in a sentence a non-specialist would follow, why one study is rarely enough to settle a question.
-- Read every part of a forest plot: rows, markers, interval lines, marker sizes, the line of no effect, the diamond.
-- Combine several estimates into one precision-weighted estimate by hand, and say why that differs from the plain average.
-- Judge whether a set of studies is consistent enough that one combined number is honest.
-- Read a funnel plot for publication bias and describe what the missing region would have contained.
-- Name what meta-analysis cannot repair, and give an example of a body of evidence that is precise and wrong.
-
-## Words worth owning
-
-| Term | What it means in this course |
-|---|---|
-| Meta-analysis | A study whose cases are other studies: it combines estimates from several studies of one question into one estimate with an interval. |
-| Forest plot | The standard picture of a meta-analysis — one row per study showing its estimate and interval, with the combined result at the bottom. |
-| Line of no effect | The vertical reference line at the value meaning the treatment did nothing: zero for a difference, one for a ratio. |
-| Weight | How much a study counts in the combination. A study earns weight by being precise, which usually means being large. |
-| Combined estimate | The single number a meta-analysis reports, drawn as a diamond whose width is its interval. |
-| Heterogeneity | Real disagreement between studies, beyond what their own uncertainty explains. |
-| Publication bias | The tendency for unimpressive studies to go unpublished, so the readable record is not the record of what was run. |
-| Funnel plot | A scatterplot of each study's estimate against its precision, used to spot the lopsidedness publication bias produces. |
+This week gives you a principled way to settle questions like these: put all the results on one picture, give each study a say that matches its precision, and read off a combined estimate with its own interval. We return to these three trials in Worked example 1.
 
 ## Why one study is rarely enough
 
-### What a single trial can and cannot tell you
+Every study is one sample. Weeks 11 and 12 showed that a statistic varies from sample to sample, so two honest, well-run studies of the same question can report noticeably different numbers. A small study has a wide confidence interval: it can miss a real but modest effect, or overstate one by chance. Studies also differ in who enrolled, how the treatment was delivered and how the outcome was measured.
 
-A well-run trial gives an unbiased estimate of an effect and an honest measure of how much it could have wobbled by chance. Those are two different things, and the second is where single studies get into trouble.
+So when a clinic decides which treatment to offer, or a city decides which program to fund, the best evidence is usually not one study but a **systematic review**: a planned search for every study on a question, with rules written in advance about which studies count. When the studies measure similar outcomes, a **meta-analysis** combines their results into one pooled estimate. The standard picture of a meta-analysis is the **forest plot**.
 
-Suppose the medication review really lowers systolic blood pressure by about three units on average. A trial of thirty-six patients has a standard error near 4 mm Hg, so its 95 percent interval reaches about eight units out on each side. Such a trial can easily report 6.0, or 0.0, or minus 1.0, purely through the luck of which thirty-six people walked in the door. Nothing is wrong with it. The estimate is simply built from too little information to pin down a three-unit effect.
+Forest plots are so central to evidence-based health care that Cochrane, an international network that produces systematic reviews of health research, uses a simplified one as its logo. The logo summarizes randomized trials of a short course of corticosteroid drugs given to pregnant women expected to give birth too early. Several of the individual trials were too small to be convincing on their own; combined, they showed a clear reduction in deaths among the premature babies. Reading that kind of picture, and saying responsibly what a body of evidence supports, is this week's goal.
 
-Run that trial in a hundred clinics and the estimates scatter; if only the high ones make the news, the world learns a number nobody careful ever claimed. The remedy is not to distrust small studies but to stop reading them one at a time.
+## What you will be able to do
 
-### What combining studies buys, and what it cannot repair
+By the end of this week you can:
 
-Combining buys precision: five trials of a few hundred people carry, together, far more information than any one, and the combined interval is narrower than every individual interval. It also buys visibility — stacked in one picture, patterns appear that no single paper shows, such as small trials all reporting larger effects than large ones.
+- explain why a collection of studies usually tells you more than any single study;
+- read an effect size with its 95% confidence interval, for a difference in means and for a risk ratio, and say whether it is compatible with no effect;
+- read a forest plot: the squares, the horizontal lines, the line of no effect and the pooled diamond;
+- explain inverse-variance weighting in words, and compute a fixed-effect pooled estimate, its SE and its 95% confidence interval from a few studies;
+- describe heterogeneity, the random-effects idea and publication bias, and say what a funnel plot can reveal;
+- write a responsible conclusion about what a body of evidence does and does not show.
 
-What combining cannot do is repair a flaw that every study shares. If all five trials measured blood pressure with an unblinded nurse who rounded down for the program group, all five estimates are too large by the same amount, and so is the combination. The interval narrows as you add studies, and it closes in confidently on the wrong number. That is the sentence to memorise this week: **combining biased studies gives you a precise biased result.** Precision is about random error only; nothing in the arithmetic inspects whether the studies were any good.
+## Words to know this week
 
-## Reading a forest plot line by line
+| Term | Meaning |
+|---|---|
+| Systematic review | A study of studies: a planned, documented search for all studies on a question, with inclusion rules set in advance. |
+| Meta-analysis | The statistical step that combines the results of several studies into one pooled estimate. |
+| Effect size | A number that measures how big a difference or association is, such as a difference in means or a risk ratio. |
+| Risk ratio (RR) | The risk of the outcome in one group divided by the risk in the comparison group. |
+| Line of no effect | The vertical line on a forest plot at the value that means no difference: 0 for differences, 1 for ratios. |
+| Forest plot | A chart with one row per study, showing its estimate and confidence interval, and a diamond for the pooled estimate. |
+| Weight | How much say a study has in the pooled estimate. |
+| Inverse-variance weighting | Giving each study a weight of 1 divided by its SE squared, so more precise studies count more. |
+| Pooled estimate | The weighted average of the study estimates. |
+| Fixed-effect model | A model that assumes every study estimates one common true effect. |
+| Random-effects model | A model that lets the true effect differ from study to study and estimates the average true effect. |
+| Heterogeneity | Variation among study results that is larger than chance alone would produce. |
+| Publication bias | Distortion that arises when whether a study is published depends on what it found. |
+| Funnel plot | A scatterplot of each study's estimate against its SE, used to look for missing studies. |
 
-### The parts of the plot, named
+## Effect sizes with confidence intervals
 
-![A forest plot of five blood pressure trials, with every part of the plot named.](../assets/figures/week-14/forest-plot-anatomy.svg){fig-alt="Five trial rows, each with a square estimate sized by its weight and a horizontal 95 percent interval. Two intervals cross the dashed no-effect line at zero. A green diamond at 2.8 mm Hg marks the combined estimate and sits clear of zero."}
+A meta-analysis does not combine headlines or p-values. It combines **effect sizes**, each reported with a measure of its uncertainty. This week uses two effect sizes you have already met.
 
-Read it from the outside in. The horizontal axis is the effect measured — the drop in systolic blood pressure under the program compared with usual care, in mm Hg. The vertical dashed line sits at zero, meaning the program did nothing. Each row is one trial, labelled on the left with how many people it enrolled and what it found.
+### Difference in means: no effect is zero
 
-Inside a row, the square is that trial's estimate and the horizontal line is its 95 percent interval. The square's *size* is what makes a forest plot worth drawing: a bigger square means more weight in the combination. Trial A's square is a speck with an enormous line through it; Trial E's is large with a short line. You can see which trials drive the result without reading a number.
+When the response variable is quantitative, such as blood pressure, a study can report the difference in sample means, $\bar{x}_{\text{program}} - \bar{x}_{\text{usual}}$, and its standard error. Using the normal model from Week 12, an approximate 95% confidence interval is
 
-Whether a row crosses the dashed line matters less than students expect. Trials A and B each cross zero, so neither alone rules out no benefit. They are not failures, and they are not evidence of no effect; they are evidence too weak to tell a three-unit benefit from nothing.
+$$\text{estimate} \pm 1.96 \times \text{SE}.$$
 
-At the bottom sits the diamond: its centre is the combined estimate, its width the combined interval. Here it is narrower than any single row and clears the dashed line — the pooled evidence separates this program from no effect even though two of its five trials could not.
+A difference of 0 means no effect. If the interval includes 0, the data are compatible with no difference; if the whole interval lies on one side of 0, the result is statistically significant at the 5% level in a two-sided test. Keep the meaning of "95%" straight: the method that produced the interval captures the true difference in about 95% of samples in the long run. Any one interval either contains the true value or it does not.
 
-### Weighting by precision
+### Risk ratio: no effect is one
 
-![Five trials drawn at the same estimate so that only precision differs.](../assets/figures/week-14/precision-and-weight.svg){fig-alt="Five intervals centred on one common value: the 36-person trial spans about 16 mm Hg while the 900-person trial spans about 3. Orange bars beside them show weight shares rising from 2 percent to 50 percent as the trials get larger."}
+When the response is categorical, such as whether a person had a fall, each group's risk is the proportion of its members who had the outcome, and a study can compare the two risks by division:
 
-A meta-analysis does not average the estimates. It takes a **weighted** average, and the weight comes from precision:
+$$\text{RR} = \frac{\text{risk in the program group}}{\text{risk in the comparison group}}.$$
 
-$$w = \frac{1}{SE^{2}}$$
+An RR of 1 means no effect. An RR of 0.75 means the program group's risk was 25% lower; an RR of 1.25 means it was 25% higher.
 
-In words: a study's weight is one divided by its squared standard error. Halve a study's standard error and you quadruple its weight. Since the standard error of a difference in means falls with the square root of the sample size,
+Ratios are lopsided on an ordinary number line. Halving a risk (RR of 0.5) moves 0.5 away from 1, while doubling it (RR of 2) moves a full 1 away, even though both are equally large changes. The natural logarithm fixes this: $\ln(0.5) = -0.693$ and $\ln(2) = 0.693$, the same distance from $\ln(1) = 0$. So meta-analysts do all the arithmetic for ratios on the log scale, where estimates behave approximately normally, and then convert back with $e^x$ (the $e^x$ button on a scientific calculator). Forest plots of ratios use a logarithmic axis for the same reason.
 
-$$SE = \frac{2s}{\sqrt{n}}$$
+![Two effect sizes and their lines of no effect](../assets/figures/week-14/effect-size-scales.svg){fig-alt="Top: trial A, difference −5.5 mmHg, 95% CI −9.42 to −1.58, lies below 0 (no effect); trial C, −3.5, CI −7.42 to 0.42, crosses 0. Bottom: on a log axis 0.5 and 2 are equally far from 1; fall-prevention trial 1 has RR 0.60, CI 0.27 to 1.31."}
 
-where $s$ is the spread of the outcome inside a group and $n$ is the total number of people, four times the people gives half the standard error and so four times the weight. That is how a trial of 900 can be worth twenty-five trials of 36.
+In the top panel, Trial A's interval lies entirely below 0, while Trial C's crosses it. In the bottom panel, the row labeled Fall trial 1 shows Trial 1, the smallest of four hypothetical fall-prevention trials used later on this page (9 of 120 program participants and 15 of 120 usual-care participants had a medically treated fall), with RR 0.60 and 95% CI 0.27 to 1.31. Its interval looks lopsided in ordinary units (it reaches 0.33 below the estimate of 0.60 but 0.71 above it), yet it is symmetric on the log axis.
 
-The figure redraws the five trials at one common estimate, so the only visible difference is precision. The bars convert those widths into shares of the total weight: 2, 8, 8, 32 and 50 percent. Trial E alone holds half the weight; Trial A holds one fiftieth of it. A plain average would treat the thirty-six-person pilot as the equal of the nine-hundred-person trial, which nobody believes. Precision weighting just says formally what you already believed: attend to a study in proportion to what it knows.
+## Reading a forest plot
 
-### Are these studies estimating the same thing?
+### What each mark on a forest plot means
 
-![Two bodies of evidence: one consistent, one scattered.](../assets/figures/week-14/heterogeneity-panels.svg){fig-alt="Left panel shows five intervals that all overlap a shaded band running from 1 to 4 mm Hg. Right panel shows five intervals spread from below zero up to 13 mm Hg, with no single value falling inside all five."}
+![Forest plot of four hypothetical fall-prevention trials](../assets/figures/week-14/forest-plot-falls-trials.svg){fig-alt="Forest plot on a log axis. Trial risk ratios 0.60, 1.04, 0.75 and 0.84; every 95% CI crosses the line of no effect at 1. Trial 4 has 67.9% of the weight. Pooled diamond: RR 0.83, CI 0.71 to 0.98, entirely left of 1."}
 
-Weighting only makes sense if there is one number to estimate. **Heterogeneity** is the name for the situation where there is not.
+A forest plot stacks one row per study. For each study:
 
-In the left panel the five trials scatter, but no more than their own intervals would predict, and every one of those intervals contains the whole band from 1 to 4 mm Hg. A single number can stand for the set without doing violence to any member.
+- the **square** marks the study's estimate, and its area is proportional to the study's weight, so the biggest squares belong to the most precise studies;
+- the **horizontal line** is the study's 95% confidence interval;
+- the dashed vertical **line of no effect** sits at 1 for ratios and at 0 for differences.
 
-In the right panel, five trials of a different program disagree in a way their intervals cannot absorb. One reports a 9-unit benefit with an interval from 5 to 13; another reports a 3-unit *harm* with an interval from minus 7 to 1. No value at all sits inside all five, so a diamond drawn under those rows would describe none of the trials above it.
+At the bottom, the **diamond** shows the pooled estimate: its center is the pooled value, and its left and right tips are the ends of its 95% confidence interval. The labels under the axis tell you which side favors which group. Always check them, because on some plots the benefit is on the right.
 
-When you see that, the useful move is not to combine harder. Ask what differs between the studies: dose, patients, length of follow-up, definition of the outcome. Heterogeneity is usually information, not noise, and the honest report says "results ranged from a 3-unit harm to a 9-unit benefit, and here is what seems to separate them".
+### Reading the fall-prevention forest plot
 
-The arithmetic in this week's examples assumes the trials share one true effect. When they do not, statisticians switch to a random-effects method that widens the combined interval to allow for the spread between studies.
+The figure summarizes four hypothetical randomized trials of a twelve-month exercise program for adults aged 70 and older. The outcome is having at least one fall that needed medical care, so an RR below 1 favors the program. Reading it row by row:
 
-## What the published record leaves out
+- Three of the four squares sit left of 1, and Trial 2's sits just right of it.
+- Every horizontal line crosses 1. On its own, no trial found a statistically significant difference.
+- Trial 4, with 2,000 participants, has by far the biggest square: it carries 67.9% of the weight.
+- The diamond is centered at 0.83, and its tips, 0.71 and 0.98, both lie left of 1.
 
-### Reading a funnel plot
+Together, the trials point to about a 17% lower risk of a medically treated fall (because $1 - 0.83 = 0.17$), and the pooled interval excludes no effect even though no single trial's interval did. Worked example 2 shows exactly where the diamond comes from.
 
-![A funnel plot whose bottom-left corner is empty.](../assets/figures/week-14/funnel-plot-missing-corner.svg){fig-alt="Twelve dots plotted against standard error, scattering more widely toward the bottom. Every small and mid-sized trial sits right of the combined estimate of 7 minutes, and the shaded bottom-left region of the funnel holds no trials."}
+## Combining studies by inverse-variance weighting
 
-Everything above assumes you can see the studies that were run. Often you cannot. A small trial that finds nothing is harder to publish and easier to abandon half-finished. The published record therefore over-represents flattering results, and a meta-analysis reading only it inherits the tilt. This is **publication bias**.
+### Why precise studies get more say
 
-The **funnel plot** is the standard diagnostic. Plot every study as a dot: estimate on the horizontal axis, standard error on the vertical, most precise studies at the top. If nothing is missing, the dots form a symmetric triangle — precise studies clustered near the top, imprecise ones spreading below to both sides by chance alone.
+A simple average would treat a 240-person trial and a 2,000-person trial as equally informative. A meta-analysis instead weights each study by its precision:
 
-Asymmetry is the warning sign. If the bottom-left corner is bare, with no small studies reporting small or negative results, the most economical explanation is that such studies were run and never surfaced. Note the limit: a lopsided funnel is *consistent* with publication bias, and equally consistent with small studies being run differently — on sicker patients, or with more support. Asymmetry raises the question. It does not close it.
+$$w = \frac{1}{\text{SE}^2}.$$
 
-## Worked example — five trials of a blood pressure program
+Because an SE shrinks roughly like $1/\sqrt{n}$, a study with four times as many participants has about half the SE, and therefore about four times the weight.
 
-**Setting.** Five clinics separately tested a pharmacist-led medication review against usual care for adults with high blood pressure. Each split its participants evenly and at random between the two arms and measured systolic blood pressure after six months. The spread inside a group was about 12 mm Hg in every trial, so the standard errors follow from the sample sizes. A positive effect means blood pressure fell further under the program.
+### The fixed-effect pooled estimate in three steps
 
-| Trial | People | Estimate (mm Hg) | Standard error | 95 percent interval | Weight |
-|---|---|---|---|---|---|
-| A | 36 | 6.0 | 4.0 | -2.0 to 14.0 | 2% |
-| B | 144 | 1.5 | 2.0 | -2.5 to 5.5 | 8% |
-| C | 144 | 5.0 | 2.0 | 1.0 to 9.0 | 8% |
-| D | 576 | 3.0 | 1.0 | 1.0 to 5.0 | 32% |
-| E | 900 | 2.4 | 0.8 | 0.8 to 4.0 | 50% |
+The **fixed-effect model** (also called the common-effect model) assumes every study is estimating the same true effect, so the study results differ only by chance. Under that assumption:
 
-**Step 1 — check the intervals.** Each interval is the estimate give or take about two standard errors. For Trial A, $6.0 - 2(4.0) = -2.0$ and $6.0 + 2(4.0) = 14.0$. For Trial E, $2.4 - 2(0.8) = 0.8$ and $2.4 + 2(0.8) = 4.0$.
+1. Give each study the weight $w_i = 1/\text{SE}_i^2$.
+2. Compute the weighted average: $\text{pooled estimate} = \dfrac{\sum w_i \times \text{estimate}_i}{\sum w_i}$.
+3. Compute the pooled SE, $1/\sqrt{\sum w_i}$, and the 95% interval, pooled estimate $\pm 1.96 \times$ pooled SE.
 
-**Step 2 — build the weights.** Each raw weight is one divided by the squared standard error: $1/4.0^2 = 0.0625$, $1/2.0^2 = 0.25$, $0.25$ again, $1/1.0^2 = 1$, and $1/0.8^2 = 1.5625$. Those add to $0.0625 + 0.25 + 0.25 + 1 + 1.5625 = 3.125$. Dividing each by 3.125 turns them into shares: $0.0625/3.125 = 0.02$, $0.25/3.125 = 0.08$, $1/3.125 = 0.32$, $1.5625/3.125 = 0.50$. Those are the percentages in the table, and they add to 100 percent.
+This pooled SE is always smaller than the smallest SE among the studies: combining information buys precision. Precision is not the same as correctness, though. If the studies share a bias, the pooled result inherits it, and its narrow interval makes it look more certain than it deserves.
 
-**Step 3 — combine.** The combined estimate is the weighted average
+## Worked example 1: pooling three blood-pressure trials
 
-$$\text{combined} = \frac{w_1 e_1 + w_2 e_2 + \cdots + w_k e_k}{w_1 + w_2 + \cdots + w_k}$$
+**Question.** For the three hypothetical low-sodium diet trials from the warm-up, what is the fixed-effect pooled difference in mean systolic blood pressure (program minus usual diet), and what is its 95% confidence interval? A negative difference means lower blood pressure on the program.
 
-which, because the shares already add to one, is simply
-
-$$0.02(6.0) + 0.08(1.5) + 0.08(5.0) + 0.32(3.0) + 0.50(2.4)$$
-
-$$= 0.12 + 0.12 + 0.40 + 0.96 + 1.20 = 2.80$$
-
-**Step 4 — attach an interval.** The combined standard error is one divided by the square root of the total raw weight: $1/\sqrt{3.125} = 0.566$. Two standard errors is 1.13, so the interval runs from $2.80 - 1.13 = 1.67$ to $2.80 + 1.13 = 3.93$ — about 1.7 to 3.9 mm Hg.
-
-**Step 5 — compare with the plain average.** The five estimates sum to $6.0 + 1.5 + 5.0 + 3.0 + 2.4 = 17.9$, so the plain average is 3.58 — nearly a full unit higher, because it lets the 36-person pilot push up as hard as the 900-person trial pulls down.
-
-**What it means.** Across 1,800 patients in five trials, the program lowered systolic blood pressure by about 2.8 mm Hg, and values from roughly 1.7 to 3.9 are consistent with what was seen. Two of the five could not alone rule out no benefit; together the five can. The effect looks real but modest — useful across a population, invisible to any one patient — and that pairing is what a careful meta-analysis is for.
-
-### The same reasoning, transferred
-
-Three trials tested a supervised walking program for older adults, measuring how much further a participant could walk in six minutes, in metres. Trial X enrolled 100 people and reported 45 metres with a standard error of 12. Trials Y and Z each enrolled 400 and reported 9 and 18 metres with standard errors of 6.
-
-What stayed the same: the outcome is a difference in means, weights are one over the squared standard error, and the combination is a weighted average. What changed: metres instead of mm Hg, and three studies instead of five.
-
-The raw weights are $1/12^2 = 1/144$ and $1/6^2 = 1/36$ twice. Relative to the smallest, that is 1, 4 and 4, so the shares are one-ninth, four-ninths and four-ninths. The combination is $(1 \times 45 + 4 \times 9 + 4 \times 18)/9 = (45 + 36 + 72)/9 = 153/9 = 17.0$ metres, against a plain average of $(45 + 9 + 18)/3 = 24.0$ metres. The same pattern appears: the small study with the eye-catching result loses most of its influence once precision decides the weights.
-
-## Second worked example — twelve published trials of a sleep supplement
-
-**Setting.** A student searching for evidence on a herbal sleep supplement finds twelve published trials. Each reports extra minutes of sleep per night compared with a placebo. They come in three sizes.
-
-| Group | How many | Standard error | Estimates (minutes) | Weight each |
+| Trial | Participants | Difference in means (mmHg) | SE (mmHg) | 95% CI (mmHg) |
 |---|---|---|---|---|
-| Large | 3 | 2 | 3, 5, 7 | 25 |
-| Mid-sized | 4 | 5 | 9, 11, 13, 15 | 4 |
-| Small | 5 | 10 | 15, 18, 21, 24, 27 | 1 |
+| A | 120 | $-5.5$ | 2.0 | $-9.42$ to $-1.58$ |
+| B | 480 | $-3.0$ | 1.0 | $-4.96$ to $-1.04$ |
+| C | 120 | $-3.5$ | 2.0 | $-7.42$ to $0.42$ |
 
-**Step 1 — where the weights come from.** A standard error of 2 against one of 10 is a ratio of five, and weight goes as the square, so one large trial is worth twenty-five small ones. Weights of 25, 4 and 1 keep the arithmetic whole.
+**Step 1: weights.** $w_A = 1/2.0^2 = 0.25$, $w_B = 1/1.0^2 = 1$ and $w_C = 1/2.0^2 = 0.25$. The total is $\sum w = 1.5$. As shares of the total, A and C each get $0.25/1.5 = 16.7\%$ and B gets $1/1.5 = 66.7\%$. Trial B has four times the participants of Trial A and half the SE, so it has four times the weight.
 
-**Step 2 — combine all twelve.** The large estimates sum to $3 + 5 + 7 = 15$, the mid-sized to $9 + 11 + 13 + 15 = 48$, the small to $15 + 18 + 21 + 24 + 27 = 105$. The weighted total is $25(15) + 4(48) + 1(105) = 375 + 192 + 105 = 672$, and the weights themselves total $25(3) + 4(4) + 1(5) = 75 + 16 + 5 = 96$. The combined estimate is $672/96 = 7.0$ minutes.
+**Step 2: weighted average.**
 
-**Step 3 — notice who is carrying the plot.** The three large trials hold 75 of the 96 weight units, just over three-quarters. The five small trials hold 5 of 96, about one-twentieth, though they are nearly half the studies.
+$$\frac{0.25(-5.5) + 1(-3.0) + 0.25(-3.5)}{1.5} = \frac{-1.375 - 3.0 - 0.875}{1.5} = \frac{-5.25}{1.5} = -3.5 \text{ mmHg}.$$
 
-**Step 4 — look at the funnel.** Plotted against their standard errors, the smaller trials fill only the right-hand side: every mid-sized and small trial sits above 7 minutes, while the large trials, with least room to wander, sit at 3, 5 and 7. Nothing occupies the bottom-left region where small trials with weak or negative results would fall.
+For comparison, the simple average is $(-5.5 - 3.0 - 3.5)/3 = -4.0$ mmHg. The weighted average sits closer to Trial B's result because B is the most precise.
 
-**Step 5 — combine the large trials on their own.** They have equal standard errors, so they get equal weight, and their combined estimate is $(3 + 5 + 7)/3 = 5.0$ minutes — two full minutes below the all-twelve figure of 7.0.
+**Step 3: SE and interval.** The pooled SE is $1/\sqrt{1.5} = 1/1.2247 = 0.816$ mmHg. The 95% interval is $-3.5 \pm 1.96 \times 0.816 = -3.5 \pm 1.60$, which runs from $-5.10$ to $-1.90$ mmHg.
 
-**What it means.** The all-twelve result is pulled upward by exactly the studies with the least information, and the funnel suggests those are the surviving half of a larger, less flattering set. Adding all twelve narrows the diamond, but narrower is not more honest here. A careful reader reports that the larger trials suggest about five extra minutes a night, that the smaller published ones suggest more in a pattern consistent with unpublished negative results, and that five minutes is not much either way.
+![Inverse-variance weights as blocks on a balance beam](../assets/figures/week-14/weighting-balance-bp-trials.svg){fig-alt="Three hypothetical diet trials: estimates −5.5, −3.0 and −3.5 mmHg with SEs 2, 1 and 2. Block heights show weights 16.7%, 66.7% and 16.7%. The beam balances at the weighted average −3.5, not the simple average −4.0."}
 
-## The misreading to avoid
+The figure shows the same calculation as a balance. Each trial is a block placed at its estimate, with height equal to its weight. A weightless beam carrying these blocks balances at the weighted average, $-3.5$, not at the simple average, $-4.0$.
 
-Here is the thought, in the words students actually use: *"Five separate studies all pointed the same way, and the combined interval is really narrow. That has to be settled."*
+**Conclusion in context.** Taken together, the three hypothetical trials estimate that the diet program lowers average systolic blood pressure by about 3.5 mmHg compared with usual eating, with a 95% confidence interval from about 1.9 to 5.1 mmHg lower. Trial C's "no significant effect" headline was misleading: its estimate, $-3.5$, equals the pooled estimate, and its interval was simply too wide to exclude 0. Because all three are randomized trials, a causal reading (the program lowered blood pressure) is reasonable, provided the trials were well run.
 
-The first half is reasonable. The second half goes wrong, because it treats a narrow interval as a measure of how *right* the studies were. It is not: an interval measures how much a result could have wobbled through the luck of the draw. It says nothing about whether the measurement was fair, whether the groups were comparable, or whether the studies you found are those that were run.
+## Worked example 2: pooling four fall-prevention trials on the log scale
 
-Take the five blood pressure trials again and suppose all five made the same mistake: the nurse taking the final reading knew who had been in the program, and every estimate came out 2.0 mm Hg too high. Shifting every estimate down by 2.0 shifts the combination down by 2.0, so the true combined effect would be $2.80 - 2.00 = 0.80$ mm Hg and the interval would run from $1.67 - 2.00 = -0.33$ to $3.93 - 2.00 = 1.93$. That interval now includes zero. The confident, narrow-looking diamond was reporting a shared flaw with great precision.
+**Question.** For the four hypothetical exercise-program trials in the forest plot above, what is the fixed-effect pooled risk ratio, and what is its 95% confidence interval?
 
-A second version of the same misreading runs the other way: *"The studies disagree, so meta-analysis proves nothing."* Disagreement is a finding, often the most useful one on the page. When five intervals share no common value, the responsible report describes the range and what separates the studies.
+Each trial reports its counts, its RR and the SE of $\ln(\text{RR})$, which the trial computed from its counts with a formula we do not need here.
 
-So hold two habits together. Before trusting a diamond, ask what the studies had in common besides the treatment. Before dismissing a scattered plot, ask what the scatter says about who the treatment works for.
+| Trial | People with a treated fall, program | People with a treated fall, usual care | RR | ln(RR) | SE of ln(RR) |
+|---|---|---|---|---|---|
+| 1 | 9 of 120 | 15 of 120 | 0.60 | $-0.511$ | 0.40 |
+| 2 | 28 of 200 | 27 of 200 | 1.04 | $0.036$ | 0.25 |
+| 3 | 39 of 400 | 52 of 400 | 0.75 | $-0.288$ | 0.20 |
+| 4 | 151 of 1,000 | 180 of 1,000 | 0.84 | $-0.176$ | 0.10 |
 
-## Practice on your own
+For example, Trial 1's risk ratio is $(9/120)/(15/120) = 0.075/0.125 = 0.60$, and $\ln(0.60) = -0.511$. The ln(RR) column is computed from each unrounded ratio (for Trial 4, $0.151/0.180 = 0.8389$ and $\ln(0.8389) = -0.176$), so it can differ in the third decimal from the log of the two-decimal RR. All the arithmetic below uses the rounded values in the ln(RR) and SE columns.
 
-For self-checking. Work each with a calculator and finish with a sentence of interpretation.
+**Step 1: weights.** $1/0.40^2 = 6.25$, $1/0.25^2 = 16$, $1/0.20^2 = 25$ and $1/0.10^2 = 100$. The total is $\sum w = 147.25$, so Trial 4 carries $100/147.25 = 67.9\%$ of the weight.
 
-1. A forest plot shows four trials of a step-count app, with estimates and 95 percent intervals in extra steps per day: 900 (-400 to 2,200); 300 (-100 to 700); 450 (150 to 750); 380 (240 to 520). Which rows cross the line of no effect, and which carries the largest square? Say how you can tell without the sample sizes.
+**Step 2: weighted average on the log scale.**
 
-2. Two trials estimate the same effect. Trial P reports 8 units with a standard error of 4; Trial Q reports 2 units with a standard error of 2. Compute the raw weights, turn them into shares adding to one, and combine. Then take the plain average of 8 and 2 and explain why the two differ.
+$$\sum w_i \ln(\text{RR}_i) = 6.25(-0.511) + 16(0.036) + 25(-0.288) + 100(-0.176) = -3.194 + 0.576 - 7.200 - 17.600 = -27.418.$$
 
-3. A meta-analysis of six observational studies of a vitamin and heart disease reports a combined relative risk well below one, with a narrow interval. All six compared people who chose to take the vitamin with people who did not. Write two sentences a careful reader should add before treating this as evidence that the vitamin protects the heart.
+The pooled log risk ratio is $-27.418/147.25 = -0.1862$.
 
-4. A funnel plot of eighteen trials of a tutoring program is lopsided: the small trials sit almost entirely on the beneficial side and the bottom-left is empty. Give two explanations for that picture, only one of which is publication bias, and say what would decide between them.
+**Step 3: SE and interval on the log scale.** The pooled SE is $1/\sqrt{147.25} = 1/12.135 = 0.0824$. The interval is $-0.1862 \pm 1.96 \times 0.0824 = -0.1862 \pm 0.1615$, which runs from $-0.3477$ to $-0.0247$.
 
-5. Five trials of a diet report 1.0, 1.5, 9.0, 2.0 and 8.5 kilograms lost, with intervals about one kilogram wide on each side. Should the report lead with a single combined number? Write the two-sentence summary you would give instead.
+**Step 4: back to the ratio scale.** $e^{-0.1862} = 0.830$, $e^{-0.3477} = 0.706$ and $e^{-0.0247} = 0.976$. Rounded, the pooled RR is 0.83, with a 95% confidence interval from 0.71 to 0.98. Notice that this interval is not symmetric around 0.83 (it reaches 0.12 below and 0.15 above); it is symmetric on the log scale, where the arithmetic was done.
 
-## Where to read more
+Statistical software prints the same result in a short block like this one. The heterogeneity line is explained in the next section.
 
-Be aware of a limitation this week: meta-analysis is beyond the scope of both open texts this course uses, so **these notes are the primary reading for Week 14**. The chapters below support the pieces the method is built from — intervals, standard errors, group comparisons — rather than the synthesis itself.
+```
+Fixed-effect meta-analysis, risk ratio, 4 trials
+Pooled RR 0.83    95% CI 0.71 to 0.98
+Heterogeneity: Q = 1.72 on 3 df, p = 0.63, I² = 0%
+```
 
-- [Confidence intervals with bootstrapping](https://openintrostat.github.io/ims/foundations-bootstrapping.html) — Chapter 12 of *Introduction to Modern Statistics*: what an interval is and where its width comes from. Every horizontal line in a forest plot is one.
-- [Inference for comparing two independent means](https://openintrostat.github.io/ims/inference-two-means.html) — Chapter 20, for the estimate and standard error behind each row of this week's main example.
-- [Inference for two-way tables](https://openintrostat.github.io/ims/inference-tables.html) — Chapter 18, for the categorical outcomes many forest plots summarise.
-- [Introduction to Modern Statistics](https://openintrostat.github.io/ims) — the whole book, if you want the interval chapters in order.
-- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — a second explanation, with health examples throughout.
-- [StatKey](https://www.lock5stat.com/statkey) — draw repeated samples of size 36 and of size 900 from one population and watch the small-sample estimates scatter far more. That scatter is why weighting exists.
-- The course [schedule](../schedule.qmd) and [resources](../resources/index.qmd) pages list further reading for this unit.
+**Conclusion in context.** Across four hypothetical randomized trials, the exercise program is estimated to lower the risk of a medically treated fall by about 17% (RR 0.83). The 95% confidence interval runs from about a 29% reduction (0.71) to about a 2% reduction (0.98), so the benefit could be modest. Still, the combined evidence is not compatible with no effect at the 5% level, even though no single trial reached significance on its own.
+
+## Do the studies agree? Heterogeneity and random effects
+
+### Consistent and heterogeneous sets of studies
+
+The fixed-effect model assumes one true effect. Before trusting it, ask whether the study results scatter more than their own confidence intervals would lead you to expect. Variation beyond chance is called **heterogeneity**.
+
+The first check is visual: do the horizontal lines broadly overlap? A numerical check is the statistic $Q = \sum w_i (\text{estimate}_i - \text{pooled})^2$. If the studies differ only by chance, Q tends to be about equal to its degrees of freedom, the number of studies minus 1. From Q, software reports
+
+$$I^2 = \frac{Q - \text{df}}{Q},$$
+
+set to 0% when Q is below df. $I^2$ describes roughly what percentage of the variation among study results reflects real differences rather than chance. As a rough guide, values near 25% are called low, near 50% moderate, and near 75% or above high.
+
+For the four fall-prevention trials, $Q = 1.72$ on 3 degrees of freedom. Q is below its df, so $I^2 = 0\%$: the spread among the trials, including Trial 2's estimate on the far side of 1, is no more than chance alone would be expected to produce. The software output in Worked example 2 also shows $p = 0.63$. That is the p-value for a test of $H_0$: all the trials share one true effect. A large p-value means you fail to reject $H_0$; it does not prove the trials agree, because with only a few studies this test often misses real heterogeneity. That is why the picture and $I^2$ matter too.
+
+![Consistent versus heterogeneous sets of studies](../assets/figures/week-14/consistent-vs-heterogeneous.svg){fig-alt="Two hypothetical sets of five studies that share the same five SEs. Left: clustered, I² = 0%, both models give −3.9 mmHg (−5.2 to −2.7). Right: scattered, I² = 85%; fixed effect −3.9 (−5.2 to −2.7), random effects −4.1 (−7.5 to −0.8)."}
+
+Both panels of the figure show five hypothetical studies of a blood-pressure outcome with the same five standard errors, and both give almost the same fixed-effect diamond, about $-3.9$ mmHg. On the left, the intervals overlap heavily and $I^2 = 0\%$. On the right, some intervals do not overlap at all (Study 1's runs from about $-12.4$ to $-6.6$, Study 5's from about $-2.9$ to $6.9$), and $I^2 = 85\%$. The same diamond tells two different stories.
+
+### Random-effects pooling in words
+
+When heterogeneity is real, the studies are not all estimating one number. Programs are delivered differently, populations differ, and outcomes are measured on different schedules. The **random-effects model** treats each study's true effect as drawn from a distribution of true effects and estimates the average of that distribution.
+
+In practice, the model estimates the between-study variance, written $\tau^2$ ("tau squared"), and adds it to every study's squared SE before weighting, so each weight becomes $1/(\text{SE}^2 + \tau^2)$. Three consequences follow:
+
+- the weights become more equal, because the same $\tau^2$ is added to every study, so small studies get relatively more say;
+- the pooled interval is wider, because it now includes uncertainty about how much the true effects vary;
+- when $\tau^2 = 0$, as in the left panel, the random-effects and fixed-effect results are identical.
+
+In the right panel, the random-effects estimate is $-4.1$ mmHg with a 95% confidence interval from $-7.5$ to $-0.8$, far wider than the fixed-effect interval from $-5.2$ to $-2.7$. The wider interval is the more honest summary. With heterogeneity this large, the most useful next question is not "What is the average?" but "Why do these studies disagree?"
+
+## Missing studies: publication bias and funnel plots
+
+A meta-analysis can only combine the studies it can find. **Publication bias** arises when studies with striking, statistically significant results are more likely to be published, and published sooner and more visibly, than studies that found little. When small studies with unexciting results stay in file drawers, the published record overstates the effect, and pooling it gives a precise-looking but biased result.
+
+A **funnel plot** is a scatterplot with one dot per study: the estimate on the horizontal axis and the SE on the vertical axis, drawn with the most precise studies at the top. Large studies land near the true effect; small studies scatter widely near the bottom. Without bias the cloud is roughly symmetric, like an upside-down funnel. With publication bias, one lower corner is thin or empty.
+
+![Funnel plot of 20 hypothetical studies of a cold supplement](../assets/figures/week-14/funnel-plot-cold-supplement.svg){fig-alt="Each dot is a study, estimate against SE, most precise at top. 9 published studies (filled) and 11 never published (hollow), all smaller studies that found no benefit. All 20 pool to −0.01 days; the 9 published pool to −0.34 days."}
+
+The figure shows 20 hypothetical studies of a supplement claimed to shorten colds, where, by construction, the true effect is zero. In this illustration, large studies were always published, but a smaller study was published only if it found an apparent benefit. The 9 published studies (filled dots) pool to a difference of $-0.34$ days, colds about 8 hours shorter, with a 95% confidence interval from $-0.64$ to $-0.04$ that excludes zero. All 20 studies together pool to $-0.01$ days, essentially nothing. In practice you never see the hollow dots; you see only a funnel with its lower right corner missing.
+
+The grey dashed lines mark the pooled estimate of all 20 studies plus or minus 1.96 SE at each level of SE; without bias, about 95% of studies fall between them. Here one study of the 20 (a published one with SE 0.80 and an estimate of $-1.92$ days) falls outside, which is about what that 95% leads you to expect.
+
+Two cautions keep funnel plots honest. Asymmetry can have other causes: small studies are sometimes run in different populations, or with less care, than large ones. And with fewer than about ten studies, a funnel plot is too sparse to judge. The strongest protection is structural: registering trials before their results are known, and searching trial registries and unpublished reports rather than journals alone.
+
+## A common misreading: counting significant studies
+
+The misreading goes like this: "Four trials tested the exercise program and none found a significant effect, so the program does not work." Tallying significant and non-significant studies is called **vote counting**, and it misleads in three ways.
+
+First, "not statistically significant" does not mean "no effect." An interval that crosses the line of no effect is compatible with no effect *and* with a real benefit; small studies often cannot tell the two apart. Second, a tally ignores the size, direction and precision of each result. Several imprecise estimates that mostly point the same way add up, which is exactly what the pooled diamond in Worked example 2 shows (RR 0.83, 95% CI 0.71 to 0.98). Third, vote counting can mislead in the opposite direction: a published record full of small, significant studies can look convincing while the studies that found nothing sit unpublished, as in the funnel plot.
+
+The better habit is to read the estimates and intervals, and to let the weighted pooled estimate, not a tally of p-values below 0.05, summarize the evidence.
+
+## Writing a responsible conclusion from a body of evidence
+
+A good conclusion about a collection of studies covers six questions in plain words:
+
+1. **Direction and size.** What is the pooled estimate, in units a reader understands?
+2. **Precision.** What does the confidence interval allow, especially at the end nearest no effect?
+3. **Consistency.** Do the studies agree, or is there heterogeneity that needs explaining?
+4. **Study quality.** Were the studies randomized or observational? Pooling does not remove confounding or bias inside the studies.
+5. **Completeness.** Could studies be missing because of publication bias?
+6. **Scope.** Who was studied, and who was not?
+
+For the fall-prevention trials, a responsible summary might read: "Four hypothetical randomized trials in adults aged 70 and older together suggest that the exercise program reduces medically treated falls by about 17% (95% CI 2% to 29%). The trial results are consistent with one another ($I^2 = 0\%$), although four trials give little power to detect real differences. The benefit may be modest, and with only four trials we cannot check well for missing studies. The evidence says nothing directly about younger adults."
+
+## Transfer: later school start times and teen sleep
+
+**Question.** Three hypothetical studies compared high schools that moved their start time later with similar schools that did not. The response variable is average nightly sleep reported by students, in minutes. Each study reports the later-start mean minus the comparison mean, so positive values mean more sleep, and each report gives only a 95% confidence interval. What does this body of evidence support?
+
+| Study | Difference in mean sleep (minutes) | 95% CI (minutes) |
+|---|---|---|
+| 1 | 34 | 14.4 to 53.6 |
+| 2 | 22 | 12.2 to 31.8 |
+| 3 | 28 | 18.2 to 37.8 |
+
+**Step 1: recover each SE from its interval.** A 95% interval is $2 \times 1.96 = 3.92$ SEs wide, so SE $=$ (upper $-$ lower)$/3.92$. This works when the interval was built as estimate $\pm 1.96$ SE. Each interval here is symmetric about its estimate (for Study 1, $34 - 14.4 = 53.6 - 34 = 19.6$), which fits that. For a ratio, you would do this on the log scale. So for Study 1, the SE is $(53.6 - 14.4)/3.92 = 39.2/3.92 = 10$ minutes. For Studies 2 and 3, $19.6/3.92 = 5$ minutes.
+
+**Step 2: weights.** $1/10^2 = 0.01$ for Study 1 and $1/5^2 = 0.04$ for each of Studies 2 and 3, for a total of 0.09. With half the SE, Studies 2 and 3 each get four times Study 1's weight.
+
+**Step 3: pooled estimate.** $(0.01 \times 34 + 0.04 \times 22 + 0.04 \times 28)/0.09 = (0.34 + 0.88 + 1.12)/0.09 = 2.34/0.09 = 26.0$ minutes.
+
+**Step 4: SE and interval.** The pooled SE is $1/\sqrt{0.09} = 1/0.3 = 3.33$ minutes, so the 95% interval is $26.0 \pm 1.96 \times 3.33 = 26.0 \pm 6.5$, from about 19.5 to 32.5 minutes.
+
+**Step 5: consistency.** All three intervals overlap, and $Q = 0.01(34 - 26)^2 + 0.04(22 - 26)^2 + 0.04(28 - 26)^2 = 0.64 + 0.64 + 0.16 = 1.44$ on 2 degrees of freedom. Q is below its df, so $I^2 = 0\%$.
+
+**Step 6: design and completeness.** None of these studies was randomized. Schools chose whether to change their start times, and schools that chose to change may differ in other ways, such as family income, bus routes or how sleep was surveyed. Pooling three observational studies narrows the interval for the association, but it cannot remove confounding that the studies share. Three studies are also far too few for a funnel plot.
+
+**Conclusion in context.** In three hypothetical studies, students at schools with later start times reported sleeping about 26 minutes more per night than students at comparison schools (95% CI about 19.5 to 32.5 minutes). The results are consistent with one another ($I^2 = 0\%$), which is encouraging, though three studies can say little about disagreement. None was randomized, so part of the difference may reflect other differences between the schools. The evidence is consistent with later start times increasing teen sleep; it does not establish it.
+
+## Practice on your own (ungraded)
+
+1. A forest plot of risk ratios from a hypothetical meta-analysis shows a study with RR 0.70 and 95% CI 0.45 to 1.09. Is this study's result statistically significant at the 5% level? Does it show that the treatment has no effect? *What to look for:* where the line of no effect sits, and what a wide interval can and cannot rule out.
+2. Study X has SE 3.0 and Study Y has SE 1.5 for the same kind of estimate. Under inverse-variance weighting, how many times as much weight does Study Y get? *What to look for:* weight is 1 divided by the SE squared.
+3. Two hypothetical studies of a walking program report differences in mean resting heart rate of $-4$ beats per minute (SE 2) and $-1$ beat per minute (SE 1). Find the fixed-effect pooled estimate, its SE and its 95% confidence interval. Does the interval include 0? *What to look for:* the pooled estimate should land closer to the more precise study.
+4. A funnel plot of 25 studies has plenty of small studies showing a benefit but almost none showing no benefit or harm. Give two different explanations. *What to look for:* one explanation involves which studies get published; the other involves how small studies might differ from large ones.
+5. A hypothetical news story says, "Five of eight studies found no significant link between the food additive and headaches, so there is no link." What would you want to see before agreeing? *What to look for:* estimates, intervals, weights and a pooled result, not a tally.
+6. Write a two-sentence conclusion for a hypothetical meta-analysis of six observational studies that found a pooled risk ratio of 1.25 (95% CI 1.05 to 1.49) for a health problem among people with long-term night-shift work, with $I^2 = 10\%$. *What to look for:* size, precision, consistency, and what an observational design can and cannot show.
+
+## Where to read further
+
+Neither free textbook for this course covers meta-analysis directly, so this page is your main source for forest plots, pooling, heterogeneity and publication bias. What the textbooks do cover well is the building block underneath all of it: confidence intervals and standard errors.
+
+- [IMS Chapter 12, Confidence intervals with bootstrapping](https://openintrostat.github.io/ims/foundations-bootstrapping.html) explains what a confidence interval is and what "95% confident" means.
+- [IMS Chapter 13, Inference with mathematical models](https://openintrostat.github.io/ims/foundations-mathematical.html) covers the standard error, the normal model and intervals of the form estimate plus or minus 1.96 SE.
+- Optional, for biomedical examples: Chapter 4, Foundations for inference, in [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat/).
+
+The IMS book shows R code in places; you can skip the code and read the output and the explanation.
 
 ## Where this goes next
 
-Week 15 is the last meeting of the term, and it reviews the whole course as one argument rather than a list of topics. Meta-analysis is a fitting place to arrive, because it puts every earlier week to work: how the data were produced decides whether a study belongs in the pile, a summary can compress away what matters, an association is still not a mechanism however often it is replicated, and chance is a rival explanation you can now quantify for a whole body of evidence.
-
-Before then it is worth rereading [Week 13](week13-categorical-outcomes.qmd), since most published forest plots summarise risk differences and risk ratios rather than differences in means. Then go on to [Week 15](week15-final-review.qmd) for the review, or back to the [notes index](index.qmd) for every weekly note.
+This week drew on ideas from across the course: study design ([Week 2](week02-study-design.qmd)), confidence intervals and standard errors ([Week 11](week11-simulation-based-inference.qmd) and [Week 12](week12-classical-hypothesis-testing.qmd)), and comparing proportions between groups ([Week 13: Categorical outcomes](week13-categorical-outcomes.qmd)). Next, [Week 15: Final review](week15-final-review.qmd) brings the whole course together, and reading a forest plot is a good way to practice confidence intervals, study design and group comparisons together. See the [notes overview](index.qmd) for every week and the [course schedule](../schedule.qmd) for the order of the weeks.

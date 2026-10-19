@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Inverse-variance weights as blocks on a balance beam</title>
+  <desc id="desc">Three hypothetical diet trials: estimates −5.5, −3.0 and −3.5 mmHg with SEs 2, 1 and 2. Block heights show weights 16.7%, 66.7% and 16.7%. The beam balances at the weighted average −3.5, not the simple average −4.0.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="24" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">95% confidence intervals from each trial</text>
+  <text x="20" y="56" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial A (n = 120)</text>
+  <line x1="145.31" y1="52" x2="487.42" y2="52" stroke="#35566b" stroke-width="2"/>
+  <rect x="312.36" y="48" width="8" height="8" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="82" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial B (n = 480)</text>
+  <line x1="339.93" y1="78" x2="510.98" y2="78" stroke="#35566b" stroke-width="2"/>
+  <rect x="421.45" y="74" width="8" height="8" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="108" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial C (n = 120)</text>
+  <line x1="232.58" y1="104" x2="574.69" y2="104" stroke="#35566b" stroke-width="2"/>
+  <rect x="399.64" y="100" width="8" height="8" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="146" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">Weights as blocks on a beam (block height is proportional to weight)</text>
+  <text x="20" y="166" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Weights: A 16.7%, B 66.7%, C 16.7%</text>
+  <line x1="120" y1="290" x2="600" y2="290" stroke="#1c1b19" stroke-width="3"/>
+  <rect x="308.36" y="263.5" width="16" height="25" fill="#c9d8e1" stroke="#35566b" stroke-width="1.2"/>
+  <text x="316.36" y="257.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">A</text>
+  <rect x="417.45" y="188.5" width="16" height="100" fill="#c9d8e1" stroke="#35566b" stroke-width="1.2"/>
+  <text x="425.45" y="182.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">B</text>
+  <rect x="395.64" y="263.5" width="16" height="25" fill="#c9d8e1" stroke="#35566b" stroke-width="1.2"/>
+  <text x="403.64" y="257.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">C</text>
+  <polygon points="403.64,291.5 391.64,312 415.64,312" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="419.64" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b" font-weight="bold">Balance point −3.5</text>
+  <text x="419.64" y="323" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">(weighted average)</text>
+  <line x1="381.82" y1="292" x2="381.82" y2="320" stroke="#8a8780" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="375.82" y="330" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">Simple average −4.0</text>
+  <line x1="120" y1="342" x2="600" y2="342" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="120" y1="342" x2="120" y2="347" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="120" y="361" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−10</text>
+  <line x1="207.27" y1="342" x2="207.27" y2="347" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="207.27" y="361" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−8</text>
+  <line x1="294.55" y1="342" x2="294.55" y2="347" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="294.55" y="361" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−6</text>
+  <line x1="381.82" y1="342" x2="381.82" y2="347" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="381.82" y="361" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−4</text>
+  <line x1="469.09" y1="342" x2="469.09" y2="347" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="469.09" y="361" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−2</text>
+  <line x1="556.36" y1="342" x2="556.36" y2="347" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="556.36" y="361" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <text x="360" y="386" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Difference in mean systolic blood pressure, program minus usual diet (mmHg)</text>
+  <line x1="556.36" y1="36" x2="556.36" y2="342" stroke="#1c1b19" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="551.36" y="128" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">No effect</text>
+</svg>

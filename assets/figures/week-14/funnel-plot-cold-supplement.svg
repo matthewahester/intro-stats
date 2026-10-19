@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 452" width="640" height="452" role="img" aria-labelledby="title desc">
+  <title id="title">Funnel plot of 20 hypothetical studies of a cold supplement</title>
+  <desc id="desc">Each dot is a study, estimate against SE, most precise at top. 9 published studies (filled) and 11 never published (hollow), all smaller studies that found no benefit. All 20 pool to −0.01 days; the 9 published pool to −0.34 days.</desc>
+  <rect x="0" y="0" width="640" height="452" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="90" y1="360" x2="610" y2="360" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="90" y1="360" x2="90" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="90" y1="360" x2="90" y2="365" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="90" y="379" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−3</text>
+  <line x1="176.67" y1="360" x2="176.67" y2="365" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="176.67" y="379" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−2</text>
+  <line x1="263.33" y1="360" x2="263.33" y2="365" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="263.33" y="379" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−1</text>
+  <line x1="350" y1="360" x2="350" y2="365" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="350" y="379" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="436.67" y1="360" x2="436.67" y2="365" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="436.67" y="379" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1</text>
+  <line x1="523.33" y1="360" x2="523.33" y2="365" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="523.33" y="379" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="610" y1="360" x2="610" y2="365" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="379" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">3</text>
+  <text x="350" y="400" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Difference in mean cold length (days), supplement minus placebo</text>
+  <text x="44" y="210" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 44 210)">Standard error (days)</text>
+  <line x1="85" y1="60" x2="90" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="82" y="64" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.0</text>
+  <line x1="85" y1="106.15" x2="90" y2="106.15" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="82" y="110.15" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.2</text>
+  <line x1="85" y1="152.31" x2="90" y2="152.31" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="82" y="156.31" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.4</text>
+  <line x1="85" y1="198.46" x2="90" y2="198.46" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="82" y="202.46" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.6</text>
+  <line x1="85" y1="244.62" x2="90" y2="244.62" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="82" y="248.62" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.8</text>
+  <line x1="85" y1="290.77" x2="90" y2="290.77" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="82" y="294.77" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">1.0</text>
+  <line x1="85" y1="336.92" x2="90" y2="336.92" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="82" y="340.92" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">1.2</text>
+  <polyline points="128.27,360 349.1,60 569.92,360" fill="none" stroke="#8a8780" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <line x1="349.1" y1="60" x2="349.1" y2="360" stroke="#1c1b19" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <line x1="320.5" y1="60" x2="320.5" y2="360" stroke="#8a4a2b" stroke-width="2"/>
+  <text x="355.1" y="36" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">All 20 pooled: −0.01</text>
+  <text x="314.5" y="36" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#8a4a2b" font-weight="bold">Published only: −0.34</text>
+  <circle cx="360.4" cy="117.69" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="350" cy="129.23" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="374.27" cy="140.77" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="304.93" cy="152.31" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="357.8" cy="163.85" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="397.67" cy="175.38" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="264.2" cy="186.92" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="402" cy="198.46" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="259.87" cy="210" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="434.93" cy="221.54" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="389" cy="233.08" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="183.6" cy="244.62" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="416.73" cy="256.15" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="264.2" cy="267.69" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="407.2" cy="279.23" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="185.33" cy="290.77" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="504.27" cy="302.31" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="378.6" cy="313.85" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="161.07" cy="325.38" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <circle cx="474.8" cy="336.92" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <circle cx="470" cy="82" r="5.5" fill="#35566b" stroke="#35566b" stroke-width="1"/>
+  <text x="482" y="86" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Published (9)</text>
+  <circle cx="470" cy="104" r="5.5" fill="#ffffff" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="482" y="108" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Never published (11)</text>
+  <text x="605" y="196" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-weight="bold">Lower right: small</text>
+  <text x="605" y="212" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">studies that found</text>
+  <text x="605" y="228" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">no benefit stay hidden</text>
+  <text x="344" y="422" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">← Favors supplement</text>
+  <text x="356" y="422" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Favors placebo →</text>
+  <text x="16" y="444" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Grey dashed lines: pooled estimate of all 20 studies ± 1.96 × SE</text>
+</svg>

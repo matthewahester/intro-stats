@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Coffee and blood pressure for 24 hypothetical adults: one unadjusted line against two adjusted parallel lines</title>
+  <desc id="desc">Scatterplot of systolic blood pressure against daily cups of coffee for 12 nonsmokers (circles) and 12 smokers (triangles). The dashed unadjusted line rises 2.5 mmHg per cup; the two adjusted lines rise 0.8 mmHg per cup, 9.0 mmHg apart.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="70" y1="340" x2="470" y2="340" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="340" x2="70" y2="40" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="340" x2="70" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="70" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="70" y1="340" x2="70" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="127.14" y1="340" x2="127.14" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="127.14" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1</text>
+  <line x1="127.14" y1="340" x2="127.14" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="184.29" y1="340" x2="184.29" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="184.29" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="184.29" y1="340" x2="184.29" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="241.43" y1="340" x2="241.43" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="241.43" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">3</text>
+  <line x1="241.43" y1="340" x2="241.43" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="298.57" y1="340" x2="298.57" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="298.57" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="298.57" y1="340" x2="298.57" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="355.71" y1="340" x2="355.71" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="355.71" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">5</text>
+  <line x1="355.71" y1="340" x2="355.71" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="412.86" y1="340" x2="412.86" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="412.86" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="412.86" y1="340" x2="412.86" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="470" y1="340" x2="470" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="470" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">7</text>
+  <line x1="470" y1="340" x2="470" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="340" x2="70" y2="340" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="344" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">110</text>
+  <line x1="70" y1="340" x2="470" y2="340" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="290" x2="70" y2="290" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">115</text>
+  <line x1="70" y1="290" x2="470" y2="290" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="240" x2="70" y2="240" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="244" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">120</text>
+  <line x1="70" y1="240" x2="470" y2="240" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="190" x2="70" y2="190" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="194" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">125</text>
+  <line x1="70" y1="190" x2="470" y2="190" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="140" x2="70" y2="140" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="144" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">130</text>
+  <line x1="70" y1="140" x2="470" y2="140" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="90" x2="70" y2="90" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="94" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">135</text>
+  <line x1="70" y1="90" x2="470" y2="90" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="40" x2="70" y2="40" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="44" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">140</text>
+  <line x1="70" y1="40" x2="470" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="270" y="380" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Coffee (cups per day)</text>
+  <text x="24" y="190" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 24 190)">Systolic blood pressure (mmHg)</text>
+  <line x1="70" y1="269" x2="470" y2="94" stroke="#8a8780" stroke-width="2.2" stroke-dasharray="7 5"/>
+  <line x1="70" y1="260" x2="470" y2="204" stroke="#35566b" stroke-width="2.4"/>
+  <line x1="70" y1="170" x2="470" y2="114" stroke="#8a4a2b" stroke-width="2.4"/>
+  <circle cx="70" cy="280" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="70" cy="300" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="127.14" cy="310" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="127.14" cy="190" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="127.14" cy="220" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="127.14" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="184.29" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="184.29" cy="260" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="184.29" cy="200" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="241.43" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="241.43" cy="290" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="298.57" cy="190" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <polygon points="184.29,173.5 178.11,184.55 190.46,184.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="241.43,83.5 235.25,94.55 247.6,94.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="241.43,143.5 235.25,154.55 247.6,154.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="298.57,203.5 292.4,214.55 304.75,214.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="298.57,63.5 292.4,74.55 304.75,74.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="298.57,103.5 292.4,114.55 304.75,114.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="355.71,103.5 349.54,114.55 361.89,114.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="355.71,133.5 349.54,144.55 361.89,144.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="355.71,183.5 349.54,194.55 361.89,194.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="412.86,123.5 406.68,134.55 419.03,134.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="412.86,73.5 406.68,84.55 419.03,84.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <polygon points="470,143.5 463.82,154.55 476.18,154.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <text x="480" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">All 24 together,</text>
+  <text x="480" y="85" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">unadjusted slope 2.5</text>
+  <text x="480" y="128" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b" font-weight="600">Smokers,</text>
+  <text x="480" y="143" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">adjusted slope 0.8</text>
+  <text x="480" y="201" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b" font-weight="600">Nonsmokers,</text>
+  <text x="480" y="216" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b">adjusted slope 0.8</text>
+  <circle cx="88" cy="58" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <text x="100" y="62" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Nonsmokers (12 adults)</text>
+  <polygon points="88,73.5 81.83,84.55 94.17,84.55" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.2"/>
+  <text x="100" y="84" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Smokers (12 adults)</text>
+</svg>

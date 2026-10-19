@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="title desc">
+  <title id="title">Two hypothetical situations with the same relative risk of 2.0 but very different risk differences</title>
+  <desc id="desc">Bars of cases per 1,000 people. Common outcome: 200 with the risk factor and 100 without, a difference of 100 per 1,000. Rare outcome: 2 with and 1 without, a difference of 1 per 1,000. Both ratios equal 2.0.</desc>
+  <rect x="0" y="0" width="640" height="360" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="200" y1="48" x2="200" y2="116" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="200" y1="178" x2="200" y2="246" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="200" y1="272" x2="200" y2="296" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="272" y1="48" x2="272" y2="116" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="272" y1="178" x2="272" y2="246" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="272" y1="272" x2="272" y2="296" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="344" y1="48" x2="344" y2="116" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="344" y1="178" x2="344" y2="246" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="344" y1="272" x2="344" y2="296" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="416" y1="48" x2="416" y2="116" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="416" y1="178" x2="416" y2="246" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="416" y1="272" x2="416" y2="296" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="488" y1="48" x2="488" y2="116" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="488" y1="178" x2="488" y2="246" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="488" y1="272" x2="488" y2="296" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="560" y1="48" x2="560" y2="116" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="560" y1="178" x2="560" y2="246" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="560" y1="272" x2="560" y2="296" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="20" y="40" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Common outcome: relative risk 200 ÷ 100 = 2.0</text>
+  <text x="190" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#8a4a2b" font-weight="600">With the risk factor</text>
+  <rect x="200" y="52" width="288" height="26" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <text x="496" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">200 per 1,000</text>
+  <text x="190" y="104" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#35566b" font-weight="600">Without the risk factor</text>
+  <rect x="200" y="86" width="144" height="26" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <text x="352" y="104" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">100 per 1,000</text>
+  <text x="206" y="134" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">risk difference 200 − 100 = 100 per 1,000 people</text>
+  <text x="20" y="170" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Rare outcome: relative risk 2 ÷ 1 = 2.0</text>
+  <text x="190" y="200" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#8a4a2b" font-weight="600">With the risk factor</text>
+  <rect x="200" y="182" width="2.88" height="26" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <text x="210.88" y="200" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">2 per 1,000</text>
+  <text x="190" y="234" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#35566b" font-weight="600">Without the risk factor</text>
+  <rect x="200" y="216" width="1.5" height="26" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <text x="209.44" y="234" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">1 per 1,000</text>
+  <text x="206" y="264" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">risk difference 2 − 1 = 1 per 1,000 people</text>
+  <line x1="200" y1="296" x2="560" y2="296" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="200" y1="296" x2="200" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="200" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="272" y1="296" x2="272" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="272" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">50</text>
+  <line x1="344" y1="296" x2="344" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="344" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">100</text>
+  <line x1="416" y1="296" x2="416" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="416" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">150</text>
+  <line x1="488" y1="296" x2="488" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="488" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">200</text>
+  <line x1="560" y1="296" x2="560" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="560" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">250</text>
+  <text x="380" y="336" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Cases per 1,000 people over the same period</text>
+</svg>

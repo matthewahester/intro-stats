@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Bootstrap distribution of the mean sodium, with the middle 95% marked off by the 2.5th and 97.5th percentiles</title>
+  <desc id="desc">Histogram of 1,000 bootstrap means of sodium, centered near 498 mg. Lines mark the 2.5th percentile, 489.9 mg, and the 97.5th percentile, 506.4 mg; the middle 95% of bootstrap means lie between them.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <polygon points="70,320 203.42,320 203.42,70 70,70" fill="#f6efe9" stroke="none" stroke-width="1"/>
+  <polygon points="481.86,320 610,320 610,70 481.86,70" fill="#f6efe9" stroke="none" stroke-width="1"/>
+  <rect x="103.75" y="317.92" width="16.88" height="2.08" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="120.62" y="317.92" width="16.88" height="2.08" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="137.5" y="315.83" width="16.88" height="4.17" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="154.38" y="313.75" width="16.88" height="6.25" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="171.25" y="305.42" width="16.88" height="14.58" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="188.12" y="295" width="16.88" height="25" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="205" y="280.42" width="16.88" height="39.58" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="221.88" y="270" width="16.88" height="50" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="238.75" y="234.58" width="16.88" height="85.42" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="255.62" y="201.25" width="16.88" height="118.75" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="272.5" y="174.17" width="16.88" height="145.83" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="289.38" y="170" width="16.88" height="150" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="306.25" y="117.92" width="16.88" height="202.08" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="323.12" y="120" width="16.88" height="200" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="340" y="111.67" width="16.88" height="208.33" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="356.88" y="130.42" width="16.88" height="189.58" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="373.75" y="151.25" width="16.88" height="168.75" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="390.62" y="188.75" width="16.88" height="131.25" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="407.5" y="224.17" width="16.88" height="95.83" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="424.38" y="230.42" width="16.88" height="89.58" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="441.25" y="257.5" width="16.88" height="62.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="458.12" y="288.75" width="16.88" height="31.25" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="475" y="286.67" width="16.88" height="33.33" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="491.88" y="305.42" width="16.88" height="14.58" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="508.75" y="313.75" width="16.88" height="6.25" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="525.62" y="317.92" width="16.88" height="2.08" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="542.5" y="317.92" width="16.88" height="2.08" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <rect x="559.38" y="317.92" width="16.88" height="2.08" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <line x1="70" y1="320" x2="70" y2="70" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="65" y1="320" x2="70" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="324" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="65" y1="278.33" x2="70" y2="278.33" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="282.33" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">20</text>
+  <line x1="65" y1="236.67" x2="70" y2="236.67" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="240.67" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">40</text>
+  <line x1="65" y1="195" x2="70" y2="195" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="199" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">60</text>
+  <line x1="65" y1="153.33" x2="70" y2="153.33" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="157.33" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">80</text>
+  <line x1="65" y1="111.67" x2="70" y2="111.67" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="115.67" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">100</text>
+  <line x1="65" y1="70" x2="70" y2="70" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="74" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">120</text>
+  <text x="30" y="195" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 30 195)">Number of bootstrap means</text>
+  <line x1="70" y1="320" x2="610" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="320" x2="70" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="70" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">482</text>
+  <line x1="137.5" y1="320" x2="137.5" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="137.5" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">486</text>
+  <line x1="205" y1="320" x2="205" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="205" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">490</text>
+  <line x1="272.5" y1="320" x2="272.5" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="272.5" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">494</text>
+  <line x1="340" y1="320" x2="340" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="340" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">498</text>
+  <line x1="407.5" y1="320" x2="407.5" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="407.5" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">502</text>
+  <line x1="475" y1="320" x2="475" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="475" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">506</text>
+  <line x1="542.5" y1="320" x2="542.5" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="542.5" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">510</text>
+  <line x1="610" y1="320" x2="610" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">514</text>
+  <text x="340" y="360" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Bootstrap sample mean sodium (mg per serving)</text>
+  <line x1="203.42" y1="320" x2="203.42" y2="56" stroke="#8a4a2b" stroke-width="2.5"/>
+  <text x="197.42" y="48" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#8a4a2b" font-weight="600">2.5th percentile</text>
+  <text x="197.42" y="64" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#8a4a2b">489.9 mg</text>
+  <line x1="481.86" y1="320" x2="481.86" y2="56" stroke="#8a4a2b" stroke-width="2.5"/>
+  <text x="487.86" y="48" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b" font-weight="600">97.5th percentile</text>
+  <text x="487.86" y="64" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b">506.4 mg</text>
+  <text x="88.88" y="100" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">25 means</text>
+  <text x="88.88" y="115" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">below</text>
+  <text x="591.12" y="100" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">25 means</text>
+  <text x="591.12" y="115" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">above</text>
+  <line x1="340" y1="107.67" x2="340" y2="95.67" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="340" y="89.67" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">original sample mean 498.0</text>
+</svg>

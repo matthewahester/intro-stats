@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Forest plot of four hypothetical fall-prevention trials</title>
+  <desc id="desc">Forest plot on a log axis. Trial risk ratios 0.60, 1.04, 0.75 and 0.84; every 95% CI crosses the line of no effect at 1. Trial 4 has 67.9% of the weight. Pooled diamond: RR 0.83, CI 0.71 to 0.98, entirely left of 1.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="16" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="bold">Study</text>
+  <text x="440" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="bold">RR (95% CI)</text>
+  <text x="628" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19" font-weight="bold">Weight</text>
+  <line x1="341.67" y1="44" x2="341.67" y2="240" stroke="#1c1b19" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="346.67" y="50" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Line of no effect</text>
+  <text x="16" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial 1 (n = 240)</text>
+  <line x1="185.98" y1="66" x2="374.49" y2="66" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="278.11" y="63.88" width="4.25" height="4.25" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="440" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">0.60 (0.27 to 1.31)</text>
+  <text x="628" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">4.2%</text>
+  <text x="16" y="104" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial 2 (n = 400)</text>
+  <line x1="287.08" y1="100" x2="404.9" y2="100" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="342.59" y="96.6" width="6.8" height="6.8" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="440" y="104" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">1.04 (0.64 to 1.69)</text>
+  <text x="628" y="104" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">10.9%</text>
+  <text x="16" y="138" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial 3 (n = 800)</text>
+  <line x1="259.91" y1="134" x2="354.17" y2="134" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="302.79" y="129.75" width="8.5" height="8.5" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="440" y="138" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">0.75 (0.51 to 1.11)</text>
+  <text x="628" y="138" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">17.0%</text>
+  <text x="16" y="172" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial 4 (n = 2,000)</text>
+  <line x1="296.94" y1="168" x2="344.07" y2="168" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="312.01" y="159.5" width="17" height="17" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="440" y="172" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">0.84 (0.69 to 1.02)</text>
+  <text x="628" y="172" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">67.9%</text>
+  <line x1="16" y1="192" x2="628" y2="192" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="16" y="218" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="bold">Pooled (fixed effect)</text>
+  <polygon points="299.86,214 319.28,205 338.7,214 319.28,223" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <text x="440" y="218" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="bold">0.83 (0.71 to 0.98)</text>
+  <text x="628" y="218" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19" font-weight="bold">100%</text>
+  <line x1="175" y1="250" x2="425" y2="250" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="175" y1="250" x2="175" y2="255" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="175" y="269" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.25</text>
+  <line x1="258.33" y1="250" x2="258.33" y2="255" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="258.33" y="269" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.5</text>
+  <line x1="341.67" y1="250" x2="341.67" y2="255" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="341.67" y="269" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1</text>
+  <line x1="425" y1="250" x2="425" y2="255" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="425" y="269" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <text x="300" y="290" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Risk ratio (log scale)</text>
+  <text x="335.67" y="310" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">← Favors exercise program</text>
+  <text x="347.67" y="310" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Favors usual care →</text>
+  <text x="16" y="352" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Square: the trial's estimate; its area is proportional to the trial's weight.</text>
+  <text x="16" y="370" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Horizontal line: the trial's 95% confidence interval.</text>
+  <text x="16" y="388" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Diamond: center is the pooled estimate; left and right tips are its 95% confidence interval.</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Six steps for reading a study, from question to conclusion</title>
+  <desc id="desc">Flow diagram of six steps: question, data production, variables, summaries and comparison, association and confounders, conclusion. Step 2 (random sampling, random assignment) limits what step 6 can claim.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <rect x="11" y="14" width="194" height="140" fill="#c9d8e1" stroke="#35566b" stroke-width="2" rx="8"/>
+  <text x="23" y="38" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">1  Question</text>
+  <text x="23" y="60" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">What is the claim?</text>
+  <text x="23" y="77" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">About which people,</text>
+  <text x="23" y="94" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">animals or places?</text>
+  <text x="193" y="144" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-style="italic">Week 1</text>
+  <rect x="224" y="14" width="194" height="140" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="2" rx="8"/>
+  <text x="236" y="38" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">2  Data production</text>
+  <text x="236" y="60" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Were cases randomly</text>
+  <text x="236" y="77" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">sampled? Was the</text>
+  <text x="236" y="94" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">explanatory variable</text>
+  <text x="236" y="111" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">assigned by chance?</text>
+  <text x="406" y="144" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-style="italic">Week 2</text>
+  <rect x="437" y="14" width="194" height="140" fill="#c9d8e1" stroke="#35566b" stroke-width="2" rx="8"/>
+  <text x="449" y="38" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">3  Variables</text>
+  <text x="449" y="60" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">What is one case?</text>
+  <text x="449" y="77" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Explanatory variable?</text>
+  <text x="449" y="94" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Response variable?</text>
+  <text x="449" y="111" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Is each categorical</text>
+  <text x="449" y="128" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">or quantitative?</text>
+  <text x="619" y="144" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-style="italic">Week 1</text>
+  <rect x="11" y="196" width="194" height="140" fill="#c9d8e1" stroke="#35566b" stroke-width="2" rx="8"/>
+  <text x="23" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">4  Summaries</text>
+  <text x="23" y="242" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Graph first. Center and</text>
+  <text x="23" y="259" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">spread, or percentages.</text>
+  <text x="23" y="276" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">How big is the gap,</text>
+  <text x="23" y="293" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">in the response's units?</text>
+  <text x="193" y="326" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-style="italic">Weeks 3 and 4</text>
+  <rect x="224" y="196" width="194" height="140" fill="#c9d8e1" stroke="#35566b" stroke-width="2" rx="8"/>
+  <text x="236" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">5  Association</text>
+  <text x="236" y="242" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Do the variables move</text>
+  <text x="236" y="259" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">together? What else</text>
+  <text x="236" y="276" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">differs between groups?</text>
+  <text x="236" y="293" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Adjusted comparison?</text>
+  <text x="406" y="326" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-style="italic">Weeks 5 and 6</text>
+  <rect x="437" y="196" width="194" height="140" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="2" rx="8"/>
+  <text x="449" y="220" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">6  Conclusion</text>
+  <text x="449" y="242" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Cause and effect, or</text>
+  <text x="449" y="259" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">association only?</text>
+  <text x="449" y="276" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">For these cases, or</text>
+  <text x="449" y="293" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">a wider population?</text>
+  <text x="619" y="326" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-style="italic">Week 2</text>
+  <line x1="206" y1="84" x2="216" y2="84" stroke="#1c1b19" stroke-width="2"/>
+  <polygon points="223,84 214,79 214,89" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <line x1="419" y1="84" x2="429" y2="84" stroke="#1c1b19" stroke-width="2"/>
+  <polygon points="436,84 427,79 427,89" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <line x1="206" y1="266" x2="216" y2="266" stroke="#1c1b19" stroke-width="2"/>
+  <polygon points="223,266 214,261 214,271" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <line x1="419" y1="266" x2="429" y2="266" stroke="#1c1b19" stroke-width="2"/>
+  <polygon points="436,266 427,261 427,271" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <polyline points="534,155 534,175 108,175 108,188" fill="none" stroke="#1c1b19" stroke-width="2"/>
+  <polygon points="108,195 103,186 113,186" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <text x="320" y="364" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="bold">Step 2 limits step 6: random assignment is needed for a cause-and-effect claim,</text>
+  <text x="320" y="384" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="bold">and random sampling is needed to generalize to a larger population.</text>
+</svg>

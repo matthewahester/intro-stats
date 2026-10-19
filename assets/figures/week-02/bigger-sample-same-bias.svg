@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Twenty simulated polls per method: bigger voluntary polls are tighter but still far from the truth</title>
+  <desc id="desc">Dot plots of simulated estimates of support. Random samples of 100 fall from 0.43 to 0.59 around the true 0.50. Voluntary polls of 100 fall from 0.18 to 0.33, and of 1,000 from 0.224 to 0.286, near 0.25.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="190" y1="348" x2="615" y2="348" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="190" y1="348" x2="190" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="190" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.0</text>
+  <line x1="250.71" y1="348" x2="250.71" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="250.71" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.1</text>
+  <line x1="311.43" y1="348" x2="311.43" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="311.43" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.2</text>
+  <line x1="372.14" y1="348" x2="372.14" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="372.14" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.3</text>
+  <line x1="432.86" y1="348" x2="432.86" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="432.86" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.4</text>
+  <line x1="493.57" y1="348" x2="493.57" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="493.57" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.5</text>
+  <line x1="554.29" y1="348" x2="554.29" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="554.29" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.6</text>
+  <line x1="615" y1="348" x2="615" y2="353" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="615" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.7</text>
+  <text x="402.5" y="390" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Estimated proportion who support the park tax (p̂)</text>
+  <line x1="493.57" y1="44" x2="493.57" y2="348" stroke="#1c1b19" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="493.57" y="36" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">true p = 0.50</text>
+  <line x1="341.79" y1="44" x2="341.79" y2="348" stroke="#8a8780" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <text x="341.79" y="36" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">support among responders: 0.25</text>
+  <line x1="190" y1="136" x2="615" y2="136" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="20" y="120" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Random samples</text>
+  <text x="20" y="137" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">n = 100 each</text>
+  <circle cx="451.07" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="463.21" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="463.21" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="469.29" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="469.29" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="487.5" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="487.5" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="493.57" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="493.57" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="499.64" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="499.64" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="505.71" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="505.71" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="511.79" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="517.86" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="517.86" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="523.93" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="542.14" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="548.21" cy="128" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="548.21" cy="120.5" r="3.3" fill="#35566b" stroke="#ffffff" stroke-width="0.6"/>
+  <line x1="190" y1="236" x2="615" y2="236" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="20" y="220" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Voluntary polls</text>
+  <text x="20" y="237" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">n = 100 each</text>
+  <circle cx="299.29" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="299.29" cy="220.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="305.36" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="311.43" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="311.43" cy="220.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="311.43" cy="213" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="317.5" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="317.5" cy="220.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="323.57" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="335.71" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="335.71" cy="220.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="341.79" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="353.93" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="353.93" cy="220.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="360" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="366.07" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="366.07" cy="220.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="372.14" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="378.21" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="390.36" cy="228" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <line x1="190" y1="336" x2="615" y2="336" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="20" y="320" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Voluntary polls</text>
+  <text x="20" y="337" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">n = 1,000 each</text>
+  <circle cx="326" cy="328" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="326" cy="320.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="331.46" cy="313" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="334.5" cy="328" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="336.32" cy="320.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="340.57" cy="328" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="341.18" cy="313" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="342.39" cy="320.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="342.39" cy="305.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="343.61" cy="298" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="344.21" cy="290.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="344.82" cy="283" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="345.43" cy="275.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="346.64" cy="328" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="349.07" cy="320.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="349.07" cy="313" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="349.68" cy="305.5" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="352.11" cy="298" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="356.36" cy="328" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+  <circle cx="363.64" cy="328" r="3.3" fill="#8a4a2b" stroke="#ffffff" stroke-width="0.6"/>
+</svg>

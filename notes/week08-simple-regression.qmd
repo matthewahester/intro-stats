@@ -8,286 +8,303 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: what is an extra thousand steps worth?
 
-Weeks 4 and 6 compared groups: whether one group's centre sat higher than another's, and whether a third variable was doing the work. That way of comparing runs out as soon as the explanatory variable is numerical and finely graded: nobody can sort adults into a three-hours-a-week group and a three-and-a-half-hours-a-week group and expect either to hold anybody. Week 5 did put two numerical variables on a single scatterplot, but the correlation it produced reports only how tightly the dots hug a straight line, never how much the response shifts when the explanatory variable moves by one unit.
+Two adults live similar lives, except that one averages about 4,000 steps a day and the other about 10,000. How much lower would you guess the second person's resting heart rate is? Write down a number of beats per minute. Then ask two harder questions: what evidence would you want before trusting your guess, and if the more active person does have a lower heart rate, does that show that walking *caused* it?
 
-This week you meet the tool built for that situation. When both variables are numerical, you draw one straight line through the cloud of dots on a scatterplot and let it summarize. That is a regression line, and it hands you two numbers: where it starts and how steeply it tilts. The week is about what those numbers mean and when they mean nothing.
+In [Week 5](week05-association.qmd) you described relationships like this with a scatterplot and a correlation $r$. The correlation gives the direction and strength of a straight-line pattern, but not *how much* the response changes when the explanatory variable changes. This week supplies that piece: a straight line fitted to the data, called a **regression line**.
 
-The second new thing is output literacy. From here on you read printed statistical output rather than produce it — no coding, nothing to install. You find the slope, say what it means in the units of the study, and notice the number nearby that quietly reports the line has the wrong shape. The one line fitted by hand below is there so you can see where a printed slope comes from.
+## Why a fitted line matters for evidence
 
-By the end of this week a scatterplot with a line through it should read like a sentence you can say out loud — including the part most people skip, which is what the line does not entitle anyone to claim.
+Fitted lines sit behind many quantitative claims: that each extra hour of weekly exercise goes with lower average blood pressure, that counties with higher smoking rates have more hospital admissions for heart disease, that enrollment will grow next year. Reading such a claim carefully means asking four questions. What is the predicted change in the response for a one-unit change in the explanatory variable? How closely do the actual values follow the line? Is the prediction made inside the range of the data or far outside it? And was the study designed to support a causal claim, or only an association? This week gives you the tools for the first three. The fourth reaches back to study design in [Week 2](week02-study-design.qmd) and confounding in [Week 6](week06-confounding.qmd).
 
-### Why this matters beyond the course
+## What you will be able to do this week
 
-A wellness programme reads a fitted line off its own clinic records and prints a poster: exercise one more hour a week and drop your resting heart rate by three beats. That takes a comparison between different people and sells it as a promise about one person's future. If the people in those records who exercise more are also younger, lighter, and less likely to smoke, part of those three beats belongs to age, weight, and smoking.
+By the end of this week you can:
 
-The other everyday cost is extrapolation. A fitted line runs forever on paper, and a spreadsheet will evaluate it anywhere. A city that fits a line to five years of water demand and reads off year twenty has not made a forecast; it has assumed nothing bends. Two habits stop both mistakes: read a slope as a comparison, and never read a line outside the range that produced it.
+- write the least-squares line $\hat{y} = b_0 + b_1 x$ from regression output or from $\bar{x}$, $s_x$, $\bar{y}$, $s_y$ and $r$;
+- interpret the slope in context, with units, using "predicted" and "on average";
+- decide whether the intercept has a sensible meaning;
+- compute a residual and explain what its sign and size say about one case;
+- read a residual plot and recognize when a straight line is the wrong shape;
+- interpret $R^2$ as the proportion of variability in the response explained by the line;
+- recognize when a prediction is an extrapolation that should not be trusted;
+- read the estimate and standard error columns of a regression output table.
 
-## What you will be able to do
+## Words to know for simple regression
 
-- Read a fitted line off a scatterplot or an output block and write the equation it stands for.
-- Compute a predicted value and a residual for one case, and say which way the miss went.
-- Explain what least squares is choosing, and show by arithmetic that a rival line does worse.
-- State a slope in the units of the study, in wording that claims association rather than cause.
-- Decide whether an intercept is a real quantity or an artefact of running the line past the data.
-- Read $R^2$ as a share of variability, and use a residual plot to judge whether a straight line was the right shape.
+| Term | What it means |
+|---|---|
+| Explanatory variable ($x$) | The variable used to predict; on the horizontal axis. |
+| Response variable ($y$) | The variable being predicted; on the vertical axis. |
+| Least-squares line | The line that makes the sum of squared residuals as small as possible; also called the regression line or fitted line. |
+| Predicted value ($\hat{y}$, "y-hat") | The response value the line gives for a particular $x$. |
+| Slope ($b_1$) | The predicted change in the response for each one-unit increase in $x$, on average. |
+| Intercept ($b_0$) | The predicted response when $x = 0$; meaningful only if $x = 0$ makes sense and lies near the data. |
+| Residual | Observed minus predicted, $y - \hat{y}$; positive above the line, negative below it. |
+| Residual plot | Residuals graphed against $x$, used to check whether a straight line suits the data. |
+| $R^2$ (R-squared) | The proportion of the variability in the response that the line explains; between 0 and 1. |
+| Extrapolation | Using the line to predict at $x$ values outside the range of the data. |
+| Standard error (SE) | How much an estimate, such as the slope, would typically vary from one random sample to another. |
 
-## Words worth owning
+## The least-squares line
 
-| Term | What it means in this course |
-|------|------------------------------|
-| explanatory variable | the variable on the horizontal axis, the one you compare across; numerical this week, though it need not always be |
-| response variable | the variable on the vertical axis, the one the line predicts; numerical this week, though it need not always be |
-| fitted line | the one straight line chosen to summarize the association |
-| predicted value | what the line says the response should be at a given value of the explanatory variable, written $\hat{y}$ |
-| residual | measured value minus predicted value, so a positive residual means the case sat above the line |
-| least squares | the rule for choosing the line: make the total of the squared residuals as small as possible |
-| slope | how much the predicted response changes when the explanatory variable rises by one unit |
-| R-squared | the share of the variation in the response that the fitted line accounts for, between zero and one |
+### A running example: daily steps and resting heart rate
 
-## What a fitted line is actually doing
+The table gives illustrative values for a random sample of 10 hypothetical adults. The explanatory variable $x$ is average daily steps, in thousands; the response variable $y$ is resting heart rate, in beats per minute (bpm).
 
-A community clinic pulls the records of eight adult patients. For each it has hours of moderate aerobic exercise in a typical week and resting heart rate in beats per minute. The numbers are invented for teaching and deliberately tidy, so every step below stays checkable by hand; real records are messier.
+| Adult | Daily steps (thousands) | Resting heart rate (bpm) |
+|---|---|---|
+| A | 2.2 | 81 |
+| B | 3.0 | 77 |
+| C | 3.9 | 79 |
+| D | 4.6 | 74 |
+| E | 5.3 | 77 |
+| F | 6.3 | 80 |
+| G | 7.2 | 73 |
+| H | 8.1 | 73 |
+| I | 9.1 | 70 |
+| J | 10.3 | 66 |
 
-| Patient | Hours per week | Resting heart rate |
-|---------|----------------|--------------------|
-| A | 0 | 83 |
-| B | 1 | 75 |
-| C | 2 | 70 |
-| D | 3 | 73 |
-| E | 4 | 67 |
-| F | 5 | 69 |
-| G | 6 | 60 |
-| H | 7 | 59 |
+The summaries are $\bar{x} = 6.0$ thousand steps with $s_x = 2.67$, and $\bar{y} = 75.0$ bpm with $s_y = 4.71$. The correlation is $r = -0.851$, a strong negative association: adults who walk more tend to have lower resting heart rates. The least-squares line is
 
-Plot those eight pairs and the dots drift downward from left to right. That is the association: patients reporting more weekly exercise tend to have lower resting heart rates. "Tend to" is doing real work, because patient D at three hours has a higher rate than patient C at two.
+$$\hat{y} = 84.0 - 1.50x,$$
 
-### The line is a rule for predicting
+read as "predicted resting heart rate equals 84.0 minus 1.50 times daily steps in thousands." The hat on $\hat{y}$ is a reminder that the line gives a *prediction*, not anyone's observed value.
 
-A regression line replaces the eight dots with one instruction. Here it is
+![Resting heart rate against daily steps for 10 hypothetical adults, with the least-squares line and one residual](../assets/figures/week-08/steps-heart-rate-fit.svg){fig-alt="Scatterplot of 10 hypothetical adults: resting heart rate falls as daily steps rise. Line: predicted rate = 84.0 − 1.50 × steps. Adult F (6.3 thousand steps, 80 bpm) sits 5.45 bpm above its prediction of 74.55 bpm."}
 
-$$\hat{y} = 80 - 3x$$
+### Predicted values and residuals
 
-where $x$ is hours per week and $\hat{y}$, read "y-hat", is the heart rate the line predicts. At four hours it predicts $80 - 3(4) = 68$ beats per minute; at six hours, $80 - 18 = 62$.
+To use the line for one adult, substitute that adult's $x$. Adult F averages 6.3 thousand steps, so
 
-Notice what the line is not. It is not a claim that any patient had those rates. Patient E, at four hours, measured 67, not 68. The line is a summary in the sense Week 1 gave that word: it keeps the drift and throws away the individuals.
+$$\hat{y} = 84.0 - 1.50(6.3) = 84.0 - 9.45 = 74.55 \text{ bpm}.$$
 
-### Residuals are what the line missed
+Adult F's observed heart rate is 80 bpm. The gap between observed and predicted is the **residual**:
 
-What the line threw away has a name. A **residual** is measured minus predicted:
+$$\text{residual} = y - \hat{y} = 80 - 74.55 = 5.45 \text{ bpm}.$$
 
-$$\text{residual} = y - \hat{y}$$
+Always compute observed minus predicted. A positive residual means the dot is above the line: this adult's heart rate is higher than the line predicts for that many steps. Adult D averages 4.6 thousand steps, so the prediction is $84.0 - 1.50(4.6) = 84.0 - 6.9 = 77.1$ bpm; the observed value is 74, so the residual is $74 - 77.1 = -3.1$ bpm, below the line. A residual is the part of a value the line does not account for: genetics, stress, caffeine or measurement error may all play a part, but the line only knows steps.
 
-Patient E measured 67 against a prediction of 68, a residual of $67 - 68 = -1$: one beat below the line. Patient F, at five hours, measured 69 against a prediction of 65, a residual of $+4$. Positive means above the line, negative below, and the size is the vertical gap in the units of the response.
+### Why the line is called least squares
 
-![The least-squares line through eight clinic patients, with each patient's residual drawn as a vertical segment.](../assets/figures/week-08/clinic-fit-and-residuals.svg){fig-alt="Scatterplot of resting heart rate against weekly exercise hours for eight patients. The dots fall from about 83 to 59 beats per minute as hours rise, and a straight line runs through them with a dashed vertical segment from each dot."}
+Many lines could be drawn through the same dots, and each gives every adult a residual. Adding the residuals would let misses above the line cancel misses below it, so instead we square each residual (making every term positive and making large misses count more) and add the squares. The **least-squares line** is the one line with the smallest possible sum of squared residuals.
 
-Residuals are the honest part of a regression: the record of every place the summary was wrong. Half of this week's work is reading them.
+The figure compares two ways of predicting. The left panel ignores steps and predicts the mean, 75.0 bpm, for everyone; its squared residuals add up to 200.0. The least-squares line on the right leaves only 55.3. No other straight line does better: the line $\hat{y} = 85 - 2x$ looks reasonable by eye, but its squared residuals add up to about 111.4.
 
-### Why the fit is called least squares
+![Predicting with the mean alone versus the least-squares line: the line leaves a much smaller sum of squared residuals](../assets/figures/week-08/least-squares-comparison.svg){fig-alt="Two panels, same 10 hypothetical adults. Predicting 75.0 bpm for everyone leaves a sum of squared residuals of 200.0; the least-squares line leaves 55.3, so R-squared = 1 − 55.3/200.0 = 0.72."}
 
-Of all the straight lines through that cloud, why this one? Square every residual, add the squares, and take the line that makes the total smallest. That total is the only thing being minimized, which is what **least squares** names.
+Every least-squares line passes through the point of averages $(\bar{x}, \bar{y})$: here $84.0 - 1.50(6.0) = 75.0$, exactly $\bar{y}$. Its residuals also add up to zero, apart from rounding. For the 10 adults they are $0.30$, $-2.50$, $0.85$, $-3.10$, $0.95$, $5.45$, $-0.20$, $1.15$, $-0.35$ and $-2.55$, which sum to $0$.
 
-For $\hat{y} = 80 - 3x$ the eight residuals are $+3$, $-2$, $-4$, $+2$, $-1$, $+4$, $-2$ and $0$, and the squares add to $9 + 4 + 16 + 4 + 1 + 16 + 4 + 0 = 54$. A rival, $\hat{y} = 82 - 3.5x$, looks plausible enough, but its residuals are $+1$, $-3.5$, $-5$, $+1.5$, $-1$, $+4.5$, $-1$ and $+1.5$, whose squares add to 65 — worse, so least squares rejects it. Nothing beats 54 here, and that is what makes $\hat{y} = 80 - 3x$ *the* fitted line rather than *a* line.
+### Finding the slope and intercept from summary statistics
 
-Why square rather than just add the misses? Because misses cancel: a line overshooting by ten and undershooting by ten has residuals adding to zero while fitting nothing. Squaring removes the signs and makes one enormous miss count for more than several small ones. The gaps are measured vertically because the response is what is being predicted.
+Software usually fits the line, but the least-squares slope and intercept have short formulas built from five summaries:
 
-Two facts fall out of the rule. Residuals from a least-squares line always add to exactly zero, so the line cannot be improved by sliding it up or down. And the line always passes through the point whose coordinates are the two averages: hours average 3.5, rates average 69.5, and indeed $80 - 3(3.5) = 69.5$.
+$$b_1 = r \, \frac{s_y}{s_x}, \qquad b_0 = \bar{y} - b_1 \bar{x}.$$
 
-## Reading the two numbers in the units of the study
+The ratio $s_y / s_x$ converts from units of $x$ to units of $y$, and the intercept formula forces the line through the point of averages. For the running example,
 
-A fitted line is useless to a reader who cannot say what it means in the language of the study.
+$$b_1 = -0.851 \times \frac{4.71}{2.67} = -0.851 \times 1.764 \approx -1.50, \qquad b_0 = 75.0 - (-1.50)(6.0) = 75.0 + 9.0 = 84.0.$$
 
-### The slope, said out loud
+Two consequences follow. The slope always has the same sign as $r$, because standard deviations are positive. And if $r = 0$, the line is flat at $\bar{y}$: knowing $x$ does not change the prediction. When computing by hand, keep three decimals in $r$ and in $s_y / s_x$ and round at the end.
 
-The clinic slope is $-3$. Slope units are always response units per one unit of the explanatory variable, so this is three beats per minute per hour of weekly exercise, and it is negative.
+## Interpreting the slope and the intercept
 
-The sentence to write is:
+### The slope: predicted change per unit of x, on average
 
-> Comparing two patients in these records whose weekly exercise differs by one hour, the one who exercises more has a resting heart rate about three beats per minute lower, on average.
+::: {.callout-tip}
+**Slope sentence.** "For each additional *one unit of x*, the predicted *response* is *higher or lower* by *the size of the slope, with its units*, on average." Fill in the italic parts from the context.
+:::
 
-It is long on purpose. *Comparing two patients*, because a slope compares cases. *In these records*, because that is where the data came from. *On average*, because patients scatter around the line. And no causal verb, for reasons the misreading section gives below.
+For the running example: *for each additional 1,000 daily steps, the predicted resting heart rate is 1.50 bpm lower, on average.* Both "predicted" and "on average" matter, because individual adults scatter around the line, as Adult F does.
 
-![The same fitted line with rise-over-run triangles that read the slope in the units of the study.](../assets/figures/week-08/slope-triangle.svg){fig-alt="The downward fitted line with two step triangles beneath it. A one hour step to the right drops the line three beats per minute, and a four hour step drops it twelve, so the rate of change is the same everywhere."}
+The units matter too. The slope is in bpm per thousand steps. Recorded in single steps, the same data give a slope of $-1.50 / 1000 = -0.0015$ bpm per step: the same relationship in different units. So the size of a slope does not tell you how strong a relationship is; $r$ and $R^2$ do that.
 
-Because the summary is straight, the step is the same everywhere: two hours to three drops the prediction from 74 to 71, and three hours to seven drops it from 71 to 59, twelve beats over four hours, which is again three per hour. That constancy is an assumption the line imposes, not a fact the data proved.
+You can scale the slope to any change in $x$. In the warm-up, the second adult walks $10 - 4 = 6$ thousand more steps, so the line predicts a heart rate lower by $6 \times 1.50 = 9.0$ bpm. Directly: $84.0 - 1.50(4) = 78.0$ and $84.0 - 1.50(10) = 69.0$, a difference of 9.0 bpm. Compare that with your guess.
 
-### The intercept, and when it means nothing
+### The intercept: meaningful only when x = 0 makes sense
 
-The intercept is the predicted response when the explanatory variable equals zero. Here it is 80: a patient reporting no weekly aerobic exercise is predicted to have a resting heart rate of 80 beats per minute. That is a meaningful statement, and only because zero hours is real and observed — patient A is sitting right at zero.
+The intercept $b_0 = 84.0$ is the predicted resting heart rate for an adult who takes no steps at all. Nobody in the data walked fewer than 2.2 thousand steps, and someone confined to bed probably differs from these adults in many ways, so 84.0 bpm is not a trustworthy prediction. Its role is to set the height of the line. Read an intercept as "the predicted response when $x = 0$" only if $x = 0$ is possible *and* lies inside or near the range of the data. In a study of weekly exercise minutes and blood pressure where many adults reported 0 minutes, the intercept would be the predicted blood pressure for adults who do not exercise, a meaningful quantity.
 
-An intercept earns its meaning under two conditions: zero must be possible for that variable, and zero must be inside or near the range measured. Neither is guaranteed. Fit heart rate to age using adults between 40 and 70, and the intercept describes a newborn. In such cases it is bookkeeping that positions the line, not a fact about anybody, and saying so is part of reading output well.
+### Reading a regression output table
 
-### R-squared as a share of variability
+Software reports a fitted line as a table of coefficients. For the running example:
 
-Heart rates in these records vary, from 59 to 83. Some of that spread lines up with exercise hours and some does not; $R^2$, said "R-squared", puts a number on the split. Take each rate, subtract the average of 69.5, square it, and add: that total is 432, all the up-and-down there is to account for. Square and add the residuals instead and you get 54, the up-and-down the line failed to account for. So
+| Term | Estimate | Std. error |
+|---|---|---|
+| Intercept | 84.00 | 2.13 |
+| Daily steps (thousands) | -1.50 | 0.33 |
 
-$$R^2 = 1 - \frac{54}{432} = 1 - 0.125 = 0.875$$
+R-squared = 0.724, with $n = 10$ adults.
 
-The line accounts for 87.5 percent of the variation in resting heart rate; 12.5 percent is left in the residuals. In simple regression $R^2$ is also the correlation squared, so the correlation here is about $-0.94$, negative because the line slopes down.
+The **Estimate** in the Intercept row is $b_0$, and the Estimate in the row named after the explanatory variable is the slope $b_1$, so the table says $\hat{y} = 84.00 - 1.50x$. Programs label things differently, and many add a test statistic and a p-value, which you will learn to read in [Week 12](week12-classical-hypothesis-testing.qmd).
 
-Read $R^2$ as a share and nothing else: not the probability that the line is right, not the percentage of predictions that come out correct, and not evidence of cause.
+The **Std. error** column describes sampling variability. A different random sample of 10 adults would give a somewhat different line, and the slope's standard error, 0.33 bpm per thousand steps, measures how much the slope estimate would typically vary from sample to sample. Here the estimate is about $1.50 / 0.33 \approx 4.5$ standard errors from zero. A slope several standard errors from zero is hard to explain as sampling variation alone; later weeks make this precise.
 
-### The residual plot is the diagnostic
+## Residuals and R-squared: how well does the line fit?
 
-A **residual plot** puts the residuals on the vertical axis and the explanatory variable on the horizontal, with a flat line at zero for reference. You are not looking for anything in particular; you are looking for the absence of everything, a shapeless band above and below zero.
+### Reading a residual plot
 
-Any shape is a message. A plot that curves — low, then high, then low — says the data bends and the line does not. A plot that fans open says predictions are far less dependable at one end than the other. A lone dot far from the rest says one case is doing something the others are not.
+A residual plot puts $x$ on the horizontal axis and each residual on the vertical axis, with a reference line at 0. It is like tilting the scatterplot until the fitted line lies flat, which makes departures easy to see. You hope to see a shapeless band of dots above and below zero with about the same spread everywhere, as in the running example.
 
-![Two residual plots side by side: one with no pattern left, one with a clear arch.](../assets/figures/week-08/residual-plots.svg){fig-alt="Two panels of residuals against the explanatory variable. Left, eight clinic residuals scatter above and below zero with no shape. Right, twenty-four seedling residuals sit low, then high, then low, tracing an arch."}
+![Residual plot for the heart rate and steps line: no curve and no fan shape](../assets/figures/week-08/steps-residual-plot.svg){fig-alt="Residuals of the 10 hypothetical adults plotted against daily steps scatter above and below zero with no curve or fan. Adult F has the largest residual, +5.45 bpm; Adult D has −3.10 bpm."}
 
-The left panel is the clinic data, unremarkable in the best way. The right panel comes from a greenhouse study you will read below, and it arches — yet it has the larger $R^2$ of the two.
+Three patterns call for caution:
 
-## Worked example — exercise hours and resting heart rate at a clinic
+- **A curve** (an arch or a U): the relationship is not straight, and the line misses systematically.
+- **A fan**, where residuals spread out as $x$ grows: predictions are less precise for some $x$ values than others.
+- **A residual far from the rest**: a possible recording error or a different kind of case. One extreme case can pull the whole line; such a case is called influential, as in the sleep and reaction-time example of [Week 5](week05-association.qmd).
 
-**Setting.** The eight clinic patients above, fitted from scratch, so that the numbers quoted so far become numbers you have watched being produced.
+The next figure shows a curve. Hypothetical test drives of one car at ten steady speeds from 35 to 80 miles per hour give a straight line $\hat{y} = 45.9 - 0.30x$ for fuel efficiency in miles per gallon (mpg), with $R^2 = 0.79$, which sounds respectable. But the residual is $-3.8$ mpg at 35 mph, rises to $+2.5$ mpg at 55 mph, and falls back to $-3.8$ mpg at 80 mph. The line predicts too high at both ends and too low in the middle. The summary "each extra mile per hour costs 0.30 mpg" hides the real shape: efficiency barely changes from 35 to 55 mph, then drops quickly.
 
-**Step 1: the two averages.** The hours add to $0+1+2+3+4+5+6+7 = 28$, so the average is $28 \div 8 = 3.5$ hours. The rates add to $83+75+70+73+67+69+60+59 = 556$, so the average is $556 \div 8 = 69.5$ beats per minute.
+![A straight line fitted to curved values, and the residual plot that exposes the curve](../assets/figures/week-08/speed-fuel-curve.svg){fig-alt="Left: fuel efficiency of one hypothetical car at speeds from 35 to 80 mph, with a straight line, R-squared 0.79. Right: the residuals are negative at both ends and positive in the middle, forming an arch."}
 
-**Step 2: build the two columns least squares needs.** For each patient take how far its hours sit from 3.5 and how far its rate sits from 69.5, multiply those deviations, and separately square the hours deviation.
+### R-squared: the share of variability explained
 
-| Hours | Rate | Hours minus 3.5 | Rate minus 69.5 | Product | Hours deviation squared |
-|-------|------|-----------------|-----------------|---------|-------------------------|
-| 0 | 83 | -3.5 | 13.5 | -47.25 | 12.25 |
-| 1 | 75 | -2.5 | 5.5 | -13.75 | 6.25 |
-| 2 | 70 | -1.5 | 0.5 | -0.75 | 2.25 |
-| 3 | 73 | -0.5 | 3.5 | -1.75 | 0.25 |
-| 4 | 67 | 0.5 | -2.5 | -1.25 | 0.25 |
-| 5 | 69 | 1.5 | -0.5 | -0.75 | 2.25 |
-| 6 | 60 | 2.5 | -9.5 | -23.75 | 6.25 |
-| 7 | 59 | 3.5 | -10.5 | -36.75 | 12.25 |
-| **Total** | | | | **-126** | **42** |
+Heart rates in the running example range from 66 to 81 bpm. How much of that variability does the line account for? Without steps, the best single prediction is the mean, leaving a total squared error of 200.0; with the line, 55.3 remains. The fraction remaining is $55.3 / 200.0 = 0.2765$, about 28%, so the fraction explained is
 
-**Step 3: divide to get the slope.** The slope is the product total divided by the squared-deviation total:
+$$R^2 = 1 - \frac{55.3}{200.0} = 1 - 0.2765 = 0.7235 \approx 0.72.$$
 
-$$b_1 = \frac{-126}{42} = -3$$
+::: {.callout-note}
+**Interpreting $R^2$.** About 72% of the variability in resting heart rate among these adults is explained by the linear relationship with daily steps. The other 28% reflects everything else that makes heart rates differ.
+:::
 
-The sign is not an accident: a product is negative whenever a patient is below average on one variable and above average on the other, which is the shape of a downward association.
+With one explanatory variable, $R^2$ is the square of the correlation: $(-0.851)^2 = 0.724$, as in the output table (0.7235 differs only because 55.3 was rounded). Squaring removes the sign, so check the slope for direction. Also know what $R^2$ does *not* tell you. It does not show that a line is the right shape (the fuel-efficiency line had $R^2 = 0.79$). It does not show that $x$ causes $y$. It does not protect predictions far outside the data. And a modest $R^2$ does not make a slope useless: in health research individuals differ for many reasons at once, and a line can still describe a genuine average trend.
 
-**Step 4: place the line.** It passes through the two averages, so $69.5 = b_0 + (-3)(3.5)$, where $b_0$ is the intercept, giving $b_0 = 69.5 + 10.5 = 80$. The fitted line is $\hat{y} = 80 - 3x$.
+## Prediction and the danger of extrapolation
 
-**Step 5: predict, then subtract.**
+### Predicting inside the range of the data
 
-| Hours | Measured rate | Predicted rate | Residual |
-|-------|---------------|----------------|----------|
-| 0 | 83 | 80 | 3 |
-| 1 | 75 | 77 | -2 |
-| 2 | 70 | 74 | -4 |
-| 3 | 73 | 71 | 2 |
-| 4 | 67 | 68 | -1 |
-| 5 | 69 | 65 | 4 |
-| 6 | 60 | 62 | -2 |
-| 7 | 59 | 59 | 0 |
+For an adult averaging 5,000 steps a day, $\hat{y} = 84.0 - 1.50(5.0) = 84.0 - 7.5 = 76.5$ bpm. Because 5.0 lies inside the observed range of 2.2 to 10.3 thousand steps, the data support this prediction. Read it as an estimate of the average heart rate among such adults; an individual could be several bpm away, since residuals here reach 5.45 bpm.
 
-Those residuals add to zero, as they must, and squared they add to 54 — the total the rival line could not beat.
+### Extrapolation: when the line runs past the data
 
-**Step 6: get $R^2$.** The squared deviations of the rates from 69.5 add to 432, so $R^2 = 1 - 54/432 = 0.875$.
+A fitted line describes the data only over the observed range of $x$. Beyond it, the true pattern may bend, level off or stop making sense, and the data cannot warn you. Using the line there is **extrapolation**.
 
-**What this means in context.** Among these eight patients, resting heart rate and weekly exercise move together closely, and the line accounts for about 87.5 percent of the variation in rate. That describes eight people who walked into one clinic: not a treatment plan, and thin evidence about anyone else.
+Consider 9 hypothetical children, one at each age from 2 to 10, with heights of 87, 95, 103, 109, 116, 122, 128, 133 and 139 cm. The least-squares line is $\hat{y} = 76.2 + 6.42x$, with $x$ in years and $\hat{y}$ in centimeters, and the fit is nearly perfect: $R^2 = 0.995$. Across these ages, predicted height is about 6.4 cm greater for each additional year of age. Now ask the line about a 30-year-old:
 
-### The same reasoning, transferred
+$$\hat{y} = 76.2 + 6.42(30) = 76.2 + 192.6 = 268.8 \text{ cm},$$
 
-Same reasoning, new subject, opposite sign. A state health department has five counties' worth of data: primary-care clinics per ten thousand residents, and the percentage of adults reporting a routine check-up in the past year.
+about 269 cm, or nearly 8 feet 10 inches. That is absurd: human growth slows and stops around the end of the teenage years, so the childhood pattern does not continue.
 
-| Clinics per ten thousand | Percentage with a check-up |
-|--------------------------|----------------------------|
-| 1 | 56 |
-| 2 | 55 |
-| 3 | 64 |
-| 4 | 63 |
-| 5 | 72 |
+![Extrapolation: a growth line for children aged 2 to 10, carried out to age 30](../assets/figures/week-08/child-height-extrapolation.svg){fig-alt="Heights of 9 hypothetical children aged 2 to 10 lie close to the line predicted height = 76.2 + 6.42 × age, R-squared 0.995. At age 30 the line predicts about 269 cm, far above the 150 to 190 cm of most adults."}
 
-The averages are 3 clinics and 62 percent. The deviation products are $(-2)(-6) = 12$, $(-1)(-7) = 7$, $(0)(2) = 0$, $(1)(1) = 1$ and $(2)(10) = 20$, adding to 40; the squared clinic deviations are 4, 1, 0, 1 and 4, adding to 10. So the slope is $40 \div 10 = 4$ and the intercept is $62 - 4(3) = 50$, giving $\hat{y} = 50 + 4x$.
+A nearly perfect fit inside the data says nothing about outside it. Interpreting an intercept is often extrapolation too, as in the steps example.
 
-What stayed the same: two averages, two columns, one division, the averages used to place the line. What changed: the slope is positive, so the sentence runs the other way — comparing two counties one clinic per ten thousand residents apart, the better-supplied county has about four percentage points more adults reporting a check-up. And the intercept has lost its meaning: it describes a county with no clinics, and no such county is here.
+::: {.callout-warning}
+**Before you predict, check the range.** If the $x$ value is outside the data, say so and treat the result as a guess about a pattern the data never showed.
+:::
 
-## Second worked example — a greenhouse study whose line has the wrong shape
+## Worked example 1: a sleep and reaction-time line from summary statistics
 
-**Setting.** A campus greenhouse plants fast-growing seedlings and measures height in centimetres. Four are measured at each of six ages — 10, 15, 20, 25, 30 and 35 days after planting. Someone fits a straight line and prints this:
+**The question.** In a hypothetical study, 25 college students reported how many hours they slept the night before and then took a computer reaction test, timed in milliseconds (ms); smaller is faster. Sleep ranged from 4.5 to 9.0 hours. Mean sleep was $\bar{x} = 6.8$ hours with $s_x = 1.2$; mean reaction time was $\bar{y} = 290$ ms with $s_y = 30$; the correlation was $r = -0.62$. Find the least-squares line, interpret it, find $R^2$, and predict the reaction time after 8 hours of sleep.
 
-```
-Coefficients
+**Step 1: variables.** The explanatory variable $x$ is hours of sleep; the response $y$ is reaction time in ms.
 
-                       Estimate    Std. Error    t value
-(Intercept)              2.0886        0.8015        2.6
-day                      0.5883        0.0333       17.7
+**Step 2: slope and intercept.**
 
-Residual standard error    1.393
-Multiple R-squared         0.9341
-Degrees of freedom            22
-```
+$$b_1 = -0.62 \times \frac{30}{1.2} = -0.62 \times 25 = -15.5 \text{ ms per hour}, \qquad b_0 = 290 - (-15.5)(6.8) = 290 + 105.4 = 395.4 \text{ ms}.$$
 
-![A regression output block with the intercept, slope, standard error, and R-squared labelled.](../assets/figures/week-08/regression-output.svg){fig-alt="A block of printed regression output with four numbers boxed in colour: the intercept estimate 2.0886, the slope estimate 0.5883, its standard error 0.0333, and the R-squared value 0.9341, each with a matching note beneath."}
+**Step 3: equation and check.** The line is $\hat{y} = 395.4 - 15.5x$. It passes through the point of averages: $395.4 - 15.5(6.8) = 395.4 - 105.4 = 290$ ms.
 
-**Step 1: assemble the line.** The Estimate column holds the two numbers: the row named for the variable carries the slope, the row named Intercept carries the intercept. So the fitted line is $\hat{y} = 2.0886 + 0.5883x$, with $x$ in days and $\hat{y}$ in centimetres.
+**Step 4: interpret.** For each additional hour of sleep, the predicted reaction time is 15.5 ms shorter (faster), on average. The intercept, 395.4 ms, is the prediction for 0 hours of sleep. Zero hours is far outside the data (the least sleep was 4.5 hours), so the intercept only positions the line.
 
-**Step 2: say the slope in units.** Comparing seedlings one day apart in age, the older is about 0.59 centimetres taller on average in this greenhouse. Across five days that is roughly $5 \times 0.5883 = 2.94$ centimetres.
+**Step 5: $R^2$.** $R^2 = (-0.62)^2 = 0.3844 \approx 0.38$. About 38% of the variability in reaction times is explained by the linear relationship with sleep; the other 62% comes from other differences among students.
 
-**Step 3: interrogate the intercept.** At day zero the line predicts 2.0886 centimetres. Nothing was measured before day 10, and on planting day the seed is under the soil with no height at all. This intercept positions the line; it is not a fact about seedlings.
+**Step 6: predict.** Eight hours is inside the observed range:
 
-**Step 4: read $R^2$.** The output reports 0.9341, so the line accounts for about 93 percent of the variation in height. That looks like a triumph, and it is where most readers stop.
+$$\hat{y} = 395.4 - 15.5(8) = 395.4 - 124.0 = 271.4 \text{ ms}.$$
 
-**Step 5: check the residuals anyway.** Average the four measured heights at each age and compare them with what the line predicts.
+For 6 hours, $395.4 - 15.5(6) = 395.4 - 93.0 = 302.4$ ms; the difference, 31.0 ms, is two hours times 15.5 ms per hour.
 
-| Day | Average measured height | Line predicts | Average gap |
-|-----|-------------------------|---------------|-------------|
-| 10 | 6.55 | 7.97 | -1.42 |
-| 15 | 11.45 | 10.91 | 0.54 |
-| 20 | 15.00 | 13.85 | 1.15 |
-| 25 | 17.55 | 16.80 | 0.75 |
-| 30 | 19.75 | 19.74 | 0.01 |
-| 35 | 21.65 | 22.68 | -1.03 |
+**Conclusion in context.** In this hypothetical sample, students who slept more tended to react faster: the predicted reaction time is about 15.5 ms faster per extra hour of sleep, on average, with a predicted reaction time of about 271 ms after 8 hours. Sleep explains only about 38% of the variability, so individuals scatter widely around the line. Because students chose their own sleep, this is an association: students who sleep more may also differ in caffeine use, stress or schedules. A causal claim would need a randomized experiment that assigned amounts of sleep.
 
-The gaps are not scattered: they start well below zero, climb above it in the middle, and fall below again at the end — the arch in the right panel above. The line sits too high at both ends of the study and too low in the middle, and the miss repeats at each age rather than cancelling out.
+## Worked example 2: reading output for age and blood pressure
 
-**What this means in context.** Seedlings do not grow in a straight line. They grow fast at first and then slow, and a straight line through a bending curve has to cut the corners. $R^2$ of 0.93 did not notice, because it only asks how much of the up-and-down the line captured, never whether the shape was right. Inside the measured range the line is a rough summary, off by a centimetre or so in a predictable direction. Outside it the line is worse: at day 60 it predicts $2.0886 + 0.5883(60) = 37.4$ centimetres, while the growth it was fitted to was already flattening.
+**The question.** A hypothetical health survey measured systolic blood pressure, in millimeters of mercury (mmHg), for a random sample of 40 adults aged 25 to 70, with age in years as the explanatory variable. The output was:
 
-One more line of output deserves a word. The standard error, 0.0333, says how far the slope estimate would move if the greenhouse were restocked and the study run again. It is the first number in this course that measures uncertainty rather than describing the data in hand, and Week 11 gives that idea its own machinery.
+| Term | Estimate | Std. error |
+|---|---|---|
+| Intercept | 98.2 | 5.3 |
+| Age (years) | 0.62 | 0.11 |
 
-## The misreading to avoid
+R-squared = 0.46, with $n = 40$ adults.
 
-Here is the sentence students write every year:
+Write the line, interpret the slope and intercept, find the residual for a 50-year-old whose blood pressure is 140 mmHg, and interpret $R^2$, $r$ and the slope's standard error.
 
-> The slope is $-3$, so if I exercise one more hour a week, my resting heart rate will drop by three beats.
+**Step 1: the equation.** From the Estimate column, $\hat{y} = 98.2 + 0.62x$.
 
-Three things have gone wrong in it.
+**Step 2: slope and intercept.** For each additional year of age, the predicted systolic blood pressure is 0.62 mmHg higher, on average, or $10 \times 0.62 = 6.2$ mmHg per decade. The survey compares different people at one moment, so the slope describes differences between age groups, not what happens as one person ages. The intercept, 98.2 mmHg, is the prediction at age 0, far outside the data (the youngest adult was 25), so it has no useful meaning here.
 
-**It converts a comparison between people into a change within a person.** The slope came from comparing eight different patients, and nobody in that data changed anything. The line reports that patients differing by an hour of weekly exercise also tend to differ by three beats per minute; it says nothing about a patient who takes up an extra hour, because no before-and-after measurement exists in the study.
+**Step 3: a residual.**
 
-**Everything else that differs between those patients rides along.** People who exercise more also tend to be younger, lighter, less likely to smoke, and free of the illnesses that make exercise hard. All of it travels with the hours, and least squares cannot separate any of it: it is arithmetic on two columns and knows nothing about the columns nobody collected. This is Week 6's confounding in a new outfit.
+$$\hat{y} = 98.2 + 0.62(50) = 98.2 + 31.0 = 129.2 \text{ mmHg}, \qquad \text{residual} = 140 - 129.2 = 10.8 \text{ mmHg}.$$
 
-**The arrow could point the other way.** Someone whose resting heart rate is already low may find exercise easier and so do more of it. The arithmetic is indifferent: put heart rate on the horizontal axis instead and least squares will cheerfully fit a line to that too. Nothing in the calculation knows which variable came first or which was assigned; only the study design settles that, and this design assigned nothing.
+This person's blood pressure is 10.8 mmHg above the line's prediction for age 50. By contrast, a 30-year-old with 110 mmHg has $\hat{y} = 98.2 + 0.62(30) = 98.2 + 18.6 = 116.8$ mmHg and a residual of $110 - 116.8 = -6.8$ mmHg, below the line.
 
-So write "is associated with". Had patients been randomly assigned to exercise schedules, as in Week 2, the causal verb would be earned.
+**Step 4: $R^2$ and $r$.** About 46% of the variability in systolic blood pressure is explained by the linear relationship with age. The correlation is the square root of $R^2$ with the sign of the slope: $r = +\sqrt{0.46} \approx 0.68$, a moderately strong positive association.
 
-Two smaller misreadings travel with the big one. First: "$R^2$ is 0.93, so the model is right." The seedlings refute that — a fine $R^2$ and a line that bends the wrong way at both ends. Second: reading the line where no data lives. The clinic line at twenty hours a week predicts $80 - 3(20) = 20$ beats per minute, a rate incompatible with being alive.
+**Step 5: the standard error.** The slope's standard error, 0.11 mmHg per year, describes how much the slope estimate would typically vary from one random sample of 40 adults to another. The estimate is about $0.62 / 0.11 \approx 5.6$ standard errors above zero, so sampling variation alone is an unlikely explanation for the positive slope; [Week 12](week12-classical-hypothesis-testing.qmd) makes this reasoning formal.
 
-## Practice on your own
+**Conclusion in context.** Among these 40 hypothetical adults, predicted systolic blood pressure rises by about 0.62 mmHg per year of age, about 6 mmHg per decade, on average. Age explains about 46% of the variability, so adults of the same age still differ a great deal, as the 50-year-old 10.8 mmHg above the line shows.
 
-For your own checking, not for submission.
+## Transfer: the same reasoning for used-car prices
 
-1. **Say the slope.** A campus health service fits, across 120 students, the line $\hat{y} = 8.9 - 0.06x$, where $x$ is hours of paid work per week and $\hat{y}$ is predicted hours of sleep per night. Write one sentence giving the slope's meaning in the study's units, with no causal verb. Then say what the intercept 8.9 describes, and whether anyone in that study could have it.
+The same moves work in a different setting. A hypothetical set of 30 online listings for one model of used car records each car's age (1 to 10 years) and listed price (in thousands of dollars):
 
-2. **Take a residual.** Using the same line, one student works 20 hours a week and sleeps 6.9 hours a night. Compute the predicted value, then the residual, and say whether this student sleeps more or less than the line expected.
+| Term | Estimate | Std. error |
+|---|---|---|
+| Intercept | 24.6 | 0.9 |
+| Age (years) | -1.85 | 0.15 |
 
-3. **Judge a residual plot.** A residual plot shows a band of dots narrow on the left, fanning steadily wider to the right, with no bend. Say what that does and does not tell you: is the straight shape in trouble, are predictions equally trustworthy across the range?
+R-squared = 0.84, with $n = 30$ listings.
 
-4. **Repair an overclaim.** A news item reports that each extra hour of weekly exercise lowers resting heart rate by three beats; the study behind it was observational. Rewrite the claim so it says what a fitted line supports, then name one variable that could account for part of the slope.
+**Line and slope.** $\hat{y} = 24.6 - 1.85x$. For each additional year of age, the predicted listed price is 1.85 thousand dollars (1,850 dollars) lower, on average.
 
-5. **Try it in a browser.** Open [StatKey](https://www.lock5stat.com/statkey) and choose one of the two-quantitative-variable datasets. Say its slope out loud in that dataset's own units, then look at the residuals and judge whether a straight line was fair.
+**Intercept.** Age 0 (a new car) is possible and only one year below the youngest car in the data, so the intercept, 24.6 thousand dollars, is a mild extrapolation rather than nonsense. With no new cars in the data, treat it as the line's rough guess, not a new-car price.
 
-## Where to read more
+**Residual.** A 6-year-old car is listed at 11.5 thousand dollars. Its predicted price is $24.6 - 1.85(6) = 24.6 - 11.1 = 13.5$, so its residual is $11.5 - 13.5 = -2.0$ thousand dollars: 2,000 dollars below the line's prediction for its age. The residual flags the listing as unusual but does not say why: the car might be a bargain, or it might have high mileage or damage.
 
-- [Introduction to Modern Statistics, Chapter 7](https://openintrostat.github.io/ims/model-slr.html) — the fitted line, residuals, least squares, $R^2$, and residual plots. The reading for the week.
-- [Chapter 5, Exploring numerical data](https://openintrostat.github.io/ims/explore-numerical.html) — if scatterplots still feel unsteady, twenty minutes here first.
-- [Introduction to Modern Statistics](https://openintrostat.github.io/ims) — the whole book, readable in a browser.
-- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — the same ideas in clinical and biological examples.
-- [StatKey](https://www.lock5stat.com/statkey) — a browser tool with nothing to install, useful for putting a line on a scatterplot and watching the residuals move.
-- The course [resources page](../resources/index.qmd) and the [schedule](../schedule.qmd).
+**$R^2$.** About 84% of the variability in listed prices is explained by the linear relationship with age; mileage, condition and features may account for much of the rest.
 
-## Where this goes next
+**Extrapolation.** For a 12-year-old car the line predicts $24.6 - 1.85(12) = 24.6 - 22.2 = 2.4$ thousand dollars, which looks plausible but is outside the data. For a 14-year-old car it predicts $24.6 - 1.85(14) = 24.6 - 25.9 = -1.3$ thousand dollars, an impossible negative price; the line reaches zero at $24.6 / 1.85 \approx 13.3$ years. The 12-year prediction is also an extrapolation. It looks sensible, but the data cannot confirm it, and the further you go past 10 years the less the line can be trusted, as the impossible 14-year value shows.
 
-Next week the output block grows. Instead of one row for one explanatory variable, [Week 9](week09-multiple-logistic-regression.qmd) shows several rows at once, and each slope changes meaning: it becomes the comparison between two cases differing in that one variable while matching on the others. That is Week 6's stratification done arithmetically, and it is why an adjusted slope can shrink, grow, or flip its sign. The same week takes on yes-or-no outcomes, where a straight line is the wrong tool from the start.
+**Conclusion in context.** Among these 30 hypothetical listings, older cars were listed for less: the predicted listed price is about 1,850 dollars lower per year of age, on average, and age explains about 84% of the variability in listed price. The line should not be used for cars older than 10 years, the oldest in the data.
 
-If the shift from group comparisons to a fitted line felt abrupt, [Week 7](week07-synthesis-midterm.qmd) is worth rereading: the study-reading pass is the same, with a scatterplot where a group comparison used to sit. The [notes index](index.qmd) has every unit in order.
+**What carried over.** Read the equation from the Estimate column, state the slope with units, check whether $x = 0$ makes sense, compute residuals as observed minus predicted, read $R^2$ as a share of variability explained, and check the range before predicting.
+
+## A common misreading: the slope shows what would happen if you changed x
+
+A tempting sentence about the running example is: "The slope is $-1.50$, so if you walk 1,000 more steps a day, your resting heart rate will drop by 1.5 bpm." This reads the slope as the effect of *changing* one person's $x$, which these data cannot support:
+
+- **The slope compares different people.** Nobody in the data changed their walking, so the data say nothing direct about what happens when someone does.
+- **Confounding.** Adults who walk more may also be younger, smoke less or eat differently, and the slope bundles all of that together with walking ([Week 6](week06-confounding.qmd)).
+- **Direction.** People whose hearts are already in good condition may find it easier to walk a lot; this is called reverse causation.
+
+A careful version is: "Among these adults, those who walked 1,000 more steps a day had resting heart rates 1.50 bpm lower, on average, according to the fitted line." A causal claim would need a randomized experiment that assigned walking programs ([Week 2](week02-study-design.qmd)).
+
+A related slip is to read a large slope as a strong relationship. As the slope section showed, a slope's size depends on its units; strength is measured by $r$ and $R^2$.
+
+## Practice questions for this week (ungraded)
+
+1. In a hypothetical study of 50 adults, weekly hours of exercise ($x$) and resting heart rate in bpm ($y$) have $\bar{x} = 4$, $s_x = 2$, $\bar{y} = 72$, $s_y = 8$ and $r = -0.5$. Find the least-squares line and interpret its slope in one sentence. *What to look for:* find $b_1$ before $b_0$, and use units, "predicted" and "on average."
+2. Using $\hat{y} = 84.0 - 1.50x$, find the residual for Adult J (10.3 thousand steps, 66 bpm). Is Adult J above or below the line? Check your work against the residual plot.
+3. A hypothetical line predicts daily emergency-room visits for heat-related illness from the day's high temperature, fitted to days with highs from 80 °F to 105 °F: $\hat{y} = -40 + 0.5x$. Does the intercept have a useful meaning? What does the line predict for a 70 °F day, and why not trust it?
+4. In a hypothetical sample of children aged 6 to 12, a regression of reading level on shoe size has $R^2 = 0.64$. A parent concludes that bigger feet help children read. Explain what 0.64 means and what is wrong with the conclusion. *What to look for:* a variable related to both.
+5. A residual plot shows residuals tightly clustered near zero for small $x$ and spreading widely for large $x$, with no curve. What does this say about predictions from the line?
+6. Two students fit a line to the same distance and travel-time data, one with distance in miles and one in kilometers. Will their slopes match? Will their $R^2$ values match? Explain briefly.
+
+## Read further on simple regression
+
+- *Introduction to Modern Statistics*, [Chapter 7, Linear regression with a single predictor](https://openintrostat.github.io/ims/model-slr.html): fitting a line, residuals, least squares, $R^2$ and outliers, with more examples. The book shows R code in places; skip the code and read the output and explanation.
+- Optional, for biomedical examples: Vu and Harrington, *Introductory Statistics for the Life and Biomedical Sciences*, Chapter 6, Simple linear regression, free from [OpenIntro's biostatistics book page](https://www.openintro.org/book/biostat/).
+- In [StatKey](https://www.lock5stat.com/statkey/), open Descriptive Statistics and Graphs, then Two Quantitative Variables. Choose a built-in dataset, look at the scatterplot, correlation and fitted line, and ask whether a straight line suits the pattern.
+
+## Where this goes next: more than one explanatory variable
+
+The steps example raised age, smoking and diet as possible confounders, and a single slope cannot separate them. Next you will read regression output with several explanatory variables, where each slope is interpreted with the others held fixed (an adjusted comparison), and meet logistic regression for yes-or-no outcomes. The Estimate column, slopes with units, residuals and caution about extrapolation all carry forward.
+
+- Previous: [Week 7: First-half synthesis](week07-synthesis-midterm.qmd)
+- Next: [Week 9: Multiple and logistic regression interpretation](week09-multiple-logistic-regression.qmd)
+- [All lesson notes](index.qmd)
+- [Course schedule](../schedule.qmd)

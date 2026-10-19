@@ -8,213 +8,268 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: could a gap this large come from chance alone?
 
-Last week every probability was handed to you: a prevalence from health records, a sensitivity and a specificity from a validation study. This week nobody hands you a probability. You have to build one.
+In an illustrative sleep experiment, 20 volunteers were split at random into two groups of 10. The "phones away" group put their phone in another room one hour before bed for a week; the other group kept their usual routine. On the last night, the phones-away group took 12.6 minutes on average to fall asleep and the usual-routine group took 18.7 minutes, a gap of 6.1 minutes.
 
-Here is the situation the rest of this course is about. You compare two groups and one of them did better. What you do not know is whether a gap that size is unusual. Two groups treated identically still come out different, every time, because the people in them differ, and a coin flip decided who went where. So the honest question is never "is there a difference" — there always is — but "is this difference bigger than the gaps chance manufactures on its own?"
+Before reading on, write down your first thoughts on this question: **if putting the phone away made no difference at all, could the random split alone have produced a gap of 6.1 minutes?** What would you need to know to decide?
 
-Answering that means knowing what chance alone produces, and no formula arrives this week. Instead you make chance produce its gaps in front of you, hundreds of times, with a deck of cards.
+You know from [Week 2](week02-study-design.qmd) that random assignment makes groups comparable, and from [Week 4](week04-comparing-groups.qmd) how to describe a difference between groups. This week asks whether a difference is larger than chance usually produces, and how precisely one sample pins down a population value, using only repeated random shuffling and resampling.
 
-There are two jobs here and two kinds of resampling. The first asks whether chance alone is a workable explanation for what you saw: a randomization test. The second takes your estimate and asks how precise it is: a bootstrap. Both make a mound-shaped picture, and students who blur them spend Week 12 lost.
+## Why chance explanations need checking
 
-### Why this matters beyond the classroom
+Every study that compares groups finds some difference, even when the treatment does nothing, because no two groups are exactly alike. A health department weighing a sleep tip, a seed supplier testing a new seed coating, and a consumer group checking a nutrition label all face the same question: is this pattern a real signal, or the kind of wobble chance produces all the time?
 
-A campus health service runs a pilot. Twenty students get a coaching session, twenty get a handout, and the coached group reports better sleep. A director sees 75% against 35%, calls it a success, and funds the session everywhere. But the director never asked how often a gap that big appears when the session does nothing, and without that they cannot tell a program worth scaling from a lucky twenty students.
-
-The opposite mistake is quieter: a small pilot finds nothing, someone concludes the idea does not work, and in truth a study that small would have missed a useful effect most of the time.
+Simulation answers by building the "chance alone" world directly: re-run the random part of the study many times and look at what it produces. The ideas you meet here (null hypotheses, p-values, standard errors, confidence intervals) are the same ones behind the formulas in [Week 12](week12-classical-hypothesis-testing.qmd).
 
 ## What you will be able to do
 
-- Describe a randomization test as a physical procedure with cards, in the right order, and compute the statistic it tests.
-- Read a null distribution: what one bar counts, why the pile sits where it sits, how wide chance made it.
-- Turn "how many simulated results were at least as extreme as ours" into a p-value, and state what that number does and does not claim.
-- Describe a bootstrap resample, say why the drawing uses replacement, and name what resampling cannot repair.
-- Read an interval of plausible values off a bootstrap distribution and write it as a sentence about the population.
+By the end of this week you can:
 
-## Words worth owning
+- explain sampling variability: why a statistic changes from sample to sample while the parameter stays fixed;
+- state null and alternative hypotheses for a comparison of two groups;
+- carry out the logic of a randomization test and estimate a p-value as a proportion of shuffles;
+- describe how the bootstrap resamples with replacement, and read a 95% percentile interval from a bootstrap distribution;
+- explain what "95% confidence" does and does not mean;
+- choose the right StatKey menu for a randomization test or a bootstrap interval;
+- write a conclusion in context that matches the strength of the evidence and the study design.
 
-| Term | What it means in this course |
+## Words to know this week
+
+| Term | Meaning this week |
 |---|---|
-| Chance-alone claim | The assumption that the grouping made no difference, so any gap is a by-product of who landed where. Its formal name, the null hypothesis, arrives next week. |
-| Statistic | The one number that carries the comparison: a difference in proportions or a difference in means. |
-| Randomization test | Shuffle the group labels many times, recompute the statistic each time, and see how ordinary the real one looks against that background. |
-| Null distribution | The pile those shuffles produce: what chance alone can do, given these group sizes. |
-| At least as extreme | The counting rule. Simulated results as far from the centre as yours or further, counted in both directions. |
-| p-value | The fraction of simulated chance-alone results at least as extreme as yours. A statement about data under an assumption, never a probability that the assumption holds. |
-| Bootstrap resample | A new sample the same size as yours, drawn from your own data with replacement, so some cases appear twice and others not at all. |
-| Interval of plausible values | The middle 95% of a bootstrap distribution, read as a range for the population. |
+| Parameter | A number describing a whole population or process, such as $\mu$ or $p$. Usually unknown. |
+| Statistic | A number computed from a sample, such as $\bar{x}$ or $\hat{p}$. It changes from sample to sample. |
+| Sampling variability | The variation of a statistic from one random sample, or one random assignment, to another. |
+| Null hypothesis $H_0$ | The "nothing going on" claim: no effect, only chance. |
+| Alternative hypothesis $H_A$ | The claim the study looks for evidence of. |
+| Randomization test | A test that shuffles the group labels many times, as if $H_0$ were true, to see what chance alone produces. |
+| Null distribution | The statistics from all the shuffles; also called a randomization distribution. |
+| p-value | The probability, assuming $H_0$ is true, of a statistic at least as extreme as the observed one. A randomization test estimates it by the proportion of shuffles that are at least that extreme. |
+| Bootstrap resample | A sample of the same size drawn with replacement from the original sample. |
+| Bootstrap distribution | The statistics from many bootstrap resamples. |
+| Percentile interval | The middle 95% of a bootstrap distribution, from its 2.5th to its 97.5th percentile. |
+| Standard error (SE) | The standard deviation of a statistic across repeated samples. |
+| Confidence level | The long-run proportion of intervals, made by the same method, that capture the parameter. |
 
-## What chance alone can produce
+## Sampling variability: every sample tells a slightly different story
 
-### Shuffling the labels, told with a deck of cards
+### Statistics vary from sample to sample; parameters stay put
 
-Start with the study you will meet in full below. Forty students, twenty coached and twenty handed a printed sheet, and twenty-two of the forty report better sleep four weeks later. The coached group holds fifteen of those twenty-two. How lopsided would that look if the coaching did nothing?
+Imagine a very large town in which exactly 30% of adults have high blood pressure, so the population proportion is $p = 0.30$. In real life you would not know that number; here it is fixed in advance (a hypothetical population) so you can watch what samples do. A survey of 50 randomly chosen adults gives a sample proportion $\hat{p}$. A second survey of 50 different adults would very likely give a different $\hat{p}$, though nothing about the town changed.
 
-Take that claim seriously. If the session changed nothing, each of the twenty-two who improved would have improved either way, and each of the eighteen who did not would have stayed put. The outcomes were settled before the assignment, and all the coin flip did was decide which label went with which outcome.
+The dot plot shows 100 such random samples of 50 adults, drawn by computer. Each dot is one sample's $\hat{p}$.
 
-Then the labels are stickers, and you may peel them off and stick them back differently. That is the whole procedure:
+![Sampling variability: sample proportions from 100 random samples of 50 adults drawn from one population](../assets/figures/week-11/sampling-variability-dotplot.svg){fig-alt="Dot plot of sample proportions from 100 random samples of 50 adults drawn from a population where 30% have high blood pressure. The dots pile up near 0.30 but range from 0.16 to 0.52."}
 
-1. Write the forty outcomes on cards: twenty-two marked improved, eighteen marked not improved.
-2. Shuffle, then deal twenty into a coaching pile and twenty into a handout pile.
-3. Compute the same statistic you computed on the real study, the coaching proportion minus the handout proportion, then go back to step two.
+What to notice:
 
-Notice what is held fixed and what is broken. Held fixed: the forty outcomes and the two group sizes. Broken: the link between a person's outcome and their group — exactly what the chance-alone claim says was never there.
+- The sample proportions pile up around the parameter, 0.30. Their average is 0.312.
+- They range from 0.16 to 0.52. Most (93 of 100) landed within 0.10 of 0.30, and only 9 hit 0.30 exactly.
+- No sample is "wrong". Each is an honest random sample; the differences come from chance alone.
 
-![One deck of forty outcome cards, dealt as the study ran and then dealt again after a shuffle.](../assets/figures/week-11/shuffle-cards.svg){fig-alt="Two panels of forty small squares. In the top panel the coaching row shows 15 filled squares of 20 and the handout row 7 of 20, a difference of 0.40. After one shuffle the rows show 12 and 10, a difference of 0.10."}
+The standard deviation of these 100 sample proportions is about 0.066. It measures how far a typical sample proportion lands from the parameter. The standard deviation of a statistic across repeated samples is called its **standard error** (SE), so the SE of $\hat{p}$ for samples of 50 from this town is about 0.066. Larger samples give smaller standard errors, which is why bigger surveys are more precise.
 
-That shuffle put twelve improvements in the coaching pile and ten in the handout pile, a difference of 0.10. Not zero, and it was never going to be zero. Shuffling makes gaps; measuring how big they usually get is the job.
+### Two sources of chance: random sampling and random assignment
 
-### The null distribution, and how to read it
+Chance enters a study in two ways.
 
-Pile a thousand shuffled differences up by value and you have a **null distribution**: the distribution of the statistic in a world where the chance-alone claim is true. Read every one you meet in three steps.
+- **Random sampling** makes a statistic vary because each sample holds different people. The question is how far the statistic might be from the parameter; the bootstrap addresses this.
+- **Random assignment** makes a difference between groups vary because each random split puts different people in each group. The question is whether an observed difference is bigger than the split alone would produce; the randomization test addresses this.
 
-**Where is it centred?** Near zero, and it has to be. Shuffling makes the two piles interchangeable, so neither has any reason to run ahead of the other.
+Both tools repeat the chance process many times and look at the pattern of results. In practice the tools are used more widely: a bootstrap interval can also estimate a difference between randomly assigned groups, as in the seed-coating example later on this page. In StatKey (see Read further), **Sampling Distributions > Proportion** lets you do what the dot plot did: set a population proportion and sample size, then generate samples.
 
-**How wide is it?** This is the part students skim and the part that carries the information. Differences of 0.10 either way were entirely ordinary: 681 of the 1,000 shuffles landed between -0.10 and 0.10, and differences of 0.20 turned up 96 times one way and 124 the other. Chance manufactured gaps of twenty percentage points all afternoon. That width is a fact about sample size, not about sleep.
+## The logic of a randomization test
 
-**What is one bar?** One bar counts shuffles, not students. A bar of height 96 means ninety-six imaginary versions of this study — worlds in which the coaching did nothing — came out at 0.20.
+Back to the sleep experiment: the groups differed by $\bar{x}_{\text{usual}} - \bar{x}_{\text{away}} = 18.7 - 12.6 = 6.1$ minutes. A randomization test asks: *if the phone habit had no effect, how often would random assignment alone produce a difference this large?* It answers in four steps.
 
-![A thousand shuffles, piled up by the difference each one produced.](../assets/figures/week-11/null-distribution.svg){fig-alt="A histogram of 1,000 shuffled differences, mound-shaped and centred on zero, with 681 shuffles between -0.10 and 0.10. Dashed lines mark plus and minus 0.40; only 12 and 13 shuffles reached those shaded outer bars."}
+### Step 1: state the two competing claims
 
-### From a count of shuffles to a p-value
+- $H_0$ (no effect): putting the phone away makes no difference. Each volunteer would have taken the same time to fall asleep in either group, so $\mu_{\text{usual}} - \mu_{\text{away}} = 0$.
+- $H_A$ (the researchers' claim): putting the phone away shortens the time, so $\mu_{\text{usual}} - \mu_{\text{away}} > 0$.
 
-Put the real result on the picture and count. The study found 0.40. Twelve shuffles reached 0.40 or higher. Thirteen reached -0.40 or lower, and those count too: before the study nobody had grounds to insist that coaching could only help, so a gap of 0.40 the other way would have been just as surprising.
+Here $\mu_{\text{usual}}$ and $\mu_{\text{away}}$ are the long-run mean times under each routine. The alternative points one way because the researchers said, before collecting data, that they were testing whether the habit *shortens* the time.
 
-$$\frac{12 + 13}{1000} = \frac{25}{1000} = 0.025$$
+### Step 2: shuffle the group labels as if there were no effect
 
-That fraction is the **p-value**. Say what it means slowly, because the wording is the idea: *if the coaching did nothing, about twenty-five studies in every thousand would produce a gap at least as large as the one we saw.* The assumption is stated up front, and the sentence counts studies rather than people.
+If $H_0$ is true, each person's time is fixed, and the labels "phones away" and "usual" are tags the random split happened to attach. So re-run the split: write the 20 times on 20 cards, shuffle, deal 10 to each label, and compute the new difference in means. The diagram shows one shuffle.
 
-Two footnotes. First, the number wobbles, since the simulation is itself a sample; here we can check it, because this deck is small enough for a computer to work out the exact answer instead of sampling deals, and across every possible deal the exact fraction is 0.0248. Second, and more important: 0.025 is small, but a p-value never says how big the effect is. It addresses one question — is chance alone a strained explanation? — and refuses every other.
+![One shuffle: the same 20 times to fall asleep, with the group labels dealt out again at random](../assets/figures/week-11/shuffle-labels-diagram.svg){fig-alt="Two panels. Top: the actual groups, phones away (mean 12.6 minutes) and usual routine (mean 18.7), difference 6.1. Bottom: the same 20 values dealt into new groups at random, difference −0.9."}
 
-## Resampling to measure how precise an estimate is
+Here the "phones away" label landed on 5 people from each real group (in the bottom rows, count the solid and the dashed borders). The new means were 16.1 and 15.2 minutes, a difference of $15.2 - 16.1 = -0.9$ minutes: what chance alone produced this time.
 
-### Why drawing from your own sample works
+### Step 3: repeat many times to build the null distribution
 
-Change the setting completely: no experiment, no two groups, no chance-alone claim. A campus survey draws 200 students at random and asks whether they skipped a meal in the past week because of cost. Sixty-two say yes, so the estimate of the campus proportion is 62 out of 200, which is 0.31.
+Repeat the shuffle 1,000 times and plot all 1,000 differences. That plot is the **null distribution**: what random assignment produces when the habit does nothing. It centers near 0, because under $H_0$ neither label has an advantage, and its spread shows how big a gap chance alone can create.
 
-The estimate is not the news. The news is that a different 200 students would have given a different number, and you need to know by how much. If a second survey could easily have returned 0.24 or 0.38, then quoting "31%" misleads people.
+### Step 4: locate the observed statistic and find the p-value
 
-You cannot run a hundred more surveys. Your one sample of 200 is the best available picture of the campus, so treat it as a stand-in and take the extra samples from it. Put the 200 responses in a bag, 62 marked yes and 138 marked no. Draw one out, record it, put it back, and repeat until you have drawn 200. Compute that resample's proportion, then do it all again, a thousand times.
+Mark the observed difference on the null distribution and count the shuffles at least as extreme, in the direction $H_A$ names:
 
-Two features of that recipe do the real work. **Put the card back**, because without replacement you would draw all 200 cards and get your original sample back every time, so every resample would give 0.31. And **draw the same number**, because resamples of 50 would bounce far more than real surveys of 200 do.
+$$\text{p-value} \approx \frac{\text{number of shuffles at least as extreme as the observed statistic}}{\text{total number of shuffles}}$$
 
-![One sample, drawn from over and over, becomes a distribution of estimates.](../assets/figures/week-11/bootstrap-schematic.svg){fig-alt="A left-to-right schematic: a sample of 200 students with 62 yes, an arrow for drawing 200 cards with replacement, three resamples giving 0.290, 0.295 and 0.325, and a mound-shaped pile of 1,000 resample proportions."}
+A small p-value means a difference at least as large as the one observed would be rare if $H_0$ were true, so the data give evidence against $H_0$; the smaller the p-value, the stronger the evidence. A large p-value means such differences are common under chance alone. That does not show $H_0$ is true, only that the data are consistent with it. Studies often compare the p-value with a significance level $\alpha$ chosen in advance, commonly $\alpha = 0.05$; Week 12 develops that rule and its risks.
 
-One warning, and it is where the honest limits sit. **The bootstrap measures precision, not accuracy.** If the survey reached only the most engaged students, every resample inherits that skew and what you get is a narrow, confident, wrong range. Week 2's questions about how the data came to exist come first, as they always did.
+### One tail or two tails
 
-### Reading the middle 95 percent
+Count in the direction $H_A$ names:
 
-A thousand resamples give a thousand proportions. Sort them, throw away the lowest 25 and the highest 25, and report the range of the 950 that remain. Because 950 out of 1,000 is 95%, that range is a **95% interval** — a percentile interval, since its endpoints are percentiles of the bootstrap distribution. Here the cut points landed at 0.250 and 0.375.
+- "greater than": shuffles **at or above** the observed statistic (right tail);
+- "less than": shuffles **at or below** it (left tail);
+- "different from": shuffles **at least as far from 0** as the observed statistic, on **either side** (both tails).
 
-![The middle 95 percent of a thousand resample proportions, read as an interval.](../assets/figures/week-11/bootstrap-interval.svg){fig-alt="A mound-shaped histogram of 1,000 bootstrap proportions centred near 0.31. Green lines at 0.250 and 0.375 bracket the middle 950 resamples; the shaded outer bars are the lowest 25 and highest 25, which were discarded."}
+Choose the direction from the research question before seeing the data; picking a tail afterward makes the evidence look stronger than it is.
 
-Be careful with the 95. It does **not** mean there is a 95% probability that the campus proportion lies between 0.250 and 0.375. That proportion is a fixed number, either inside the range or not. The 95 describes the procedure. If many teams each drew their own random sample of 200 and each built an interval this way, about 95 in every 100 of those intervals would contain the true campus value. You hold one of them and do not get to know which kind.
+### Running a randomization test in StatKey
 
-## Worked example — a sleep-coaching session and forty students
+Open **Randomization Hypothesis Tests > Test for Difference in Means** (numerical response) or **Test for Difference In Proportions** (yes/no response). Enter your groups with **Edit Data** and press **Generate 1000 Samples**. Tick **Right Tail**, **Left Tail** or **Two-Tail** to match $H_A$, and type the observed statistic into the box on the horizontal axis; StatKey reports the proportion of shuffles beyond it. Check the order of subtraction: if StatKey computes phones away minus usual, the observed difference is $-6.1$ and you want the left tail. Each run uses new shuffles, so counts vary a little.
 
-**Setting.** A campus health service recruits 40 students who sleep badly. A coin flip assigns 20 to a 15-minute coaching session and 20 to a printed sheet carrying the same advice. Four weeks later each reports whether their sleep improved.
+## Worked example 1: a randomization test for phones and sleep
 
-**Step 1. Build the table and check its margins.**
+**Question.** Do the illustrative data give convincing evidence that putting the phone away one hour before bed shortens the time it takes to fall asleep?
 
-| | Improved | Did not improve | Total |
+| Group | Minutes to fall asleep (10 volunteers each) | Sum | Mean |
 |---|---|---|---|
-| Coaching | 15 | 5 | 20 |
-| Handout | 7 | 13 | 20 |
-| Total | 22 | 18 | 40 |
+| Phones away | 12, 8, 15, 10, 22, 9, 14, 11, 18, 7 | 126 | 12.6 |
+| Usual routine | 20, 14, 25, 11, 17, 30, 16, 13, 22, 19 | 187 | 18.7 |
 
-Rows: 15 and 5 make 20, and 7 and 13 make 20. Columns: 15 and 7 make 22, and 5 and 13 make 18. Everything reaches 40, so the cells can be trusted.
+**Step 1: the hypotheses.** $H_0: \mu_{\text{usual}} - \mu_{\text{away}} = 0$ (no effect) and $H_A: \mu_{\text{usual}} - \mu_{\text{away}} > 0$ (the habit shortens the time). The direction was set before the data were collected, because the researchers asked whether the habit *shortens* the time.
 
-**Step 2. Choose the statistic and compute it.** The outcome is a yes or no, so compare proportions.
+**Step 2: the observed statistic.** $\bar{x}_{\text{away}} = 126/10 = 12.6$ minutes and $\bar{x}_{\text{usual}} = 187/10 = 18.7$ minutes, so the observed difference is $18.7 - 12.6 = 6.1$ minutes.
 
-$$\hat{p}_{\text{coaching}} - \hat{p}_{\text{handout}} = \frac{15}{20} - \frac{7}{20} = 0.75 - 0.35 = 0.40$$
+**Step 3: shuffle 1,000 times.** Pool the 20 times, deal them at random into two groups of 10, compute usual minus phones away, and repeat.
 
-The hats mean "estimated from a sample". In words: forty more improvements per hundred students in the coached group.
+![Randomization distribution: 1,000 shuffled differences, with the observed difference of 6.1 minutes marked](../assets/figures/week-11/randomization-null-dotplot.svg){fig-alt="Dot plot of 1,000 shuffled differences in mean time to fall asleep, centered near 0 and ranging from −7.9 to 8.1 minutes. A line marks the observed 6.1; 16 shuffles are at or above it."}
 
-**Step 3. State the chance-alone claim in words.** The session made no difference: the 22 who improved would have improved either way, and the coin flip only sorted them.
+**Step 4: read the null distribution.** The shuffled differences center on 0 (mean 0.01 minutes), with a standard deviation of 2.65 minutes and a range of −7.9 to 8.1 minutes; 736 of the 1,000 fall between −3 and 3. With no effect, gaps of a few minutes either way are routine.
 
-**Step 4. Shuffle, once by hand and then a thousand times by machine.** Forty cards, 22 improved and 18 not, dealt 20 and 20. The first shuffle gave the coaching pile 12 improvements and the handout pile 10, so 0.60 minus 0.50, which is 0.10. Across the full thousand the differences cluster on zero.
+**Step 5: the p-value.** Only 16 of the 1,000 shuffles gave a difference of 6.1 minutes or more (the orange dots).
 
-**Step 5. Count what is at least as extreme, then divide.** Twelve shuffles reached 0.40 or more and thirteen reached -0.40 or less, so the p-value is 25 out of 1,000, which is 0.025.
+$$\text{p-value} \approx \frac{16}{1000} = 0.016$$
 
-**Checking the arithmetic.** The twelve bar heights are 2, 1, 10, 39, 124, 217, 247, 217, 96, 35, 10 and 2, which add to 1,000, so no shuffle went missing. The left tail is 2 plus 1 plus 10, which is 13; the right tail is 10 plus 2, which is 12.
+**Step 6: interpret.** If the phone habit made no difference, random assignment alone would produce a gap of 6.1 minutes or more only about 1.6% of the time. That is rare enough to count as convincing evidence against $H_0$. At a significance level of $\alpha = 0.05$ chosen in advance, researchers would reject $H_0$, since 0.016 is below 0.05.
 
-**What it means in context.** If the session did nothing, a gap this large would appear in about 25 of every 1,000 runs of this study, roughly one in forty. That is uncomfortable enough for the chance-alone story that a reasonable person stops leaning on it. And because students were randomly assigned, a causal reading is available here in a way it was not in Weeks 6 and 7.
+**Conclusion in context.** The data give convincing evidence that, for volunteers like these, putting the phone away one hour before bed shortens the time it takes to fall asleep; in this sample the average gap was about 6 minutes. Because the groups were formed by random assignment, a cause-and-effect reading is reasonable. The 20 people were volunteers, not a random sample of adults, so extending the result to all adults goes beyond these data.
 
-Now the restraint, because the p-value said nothing about size. Resample the two groups the bootstrap way, 20 outcomes with replacement from each, and the middle 95% of the resulting differences runs from about 0.10 to about 0.65 — between ten and sixty-five extra improvements per hundred students. That range holds both "barely worth booking the room" and "rebuild the service around it", and it belongs beside the p-value.
+::: {.callout-note}
+**Simulation wobble.** Another run of 1,000 shuffles would give a slightly different count; for this experiment, runs typically land between about 5 and 17. Every count in that range leads to the same conclusion. For a two-sided question (does the habit change the time in either direction?), also count the shuffles at or below −6.1. There were 8, for 24 in all and a p-value of about 0.024.
+:::
 
-### The same reasoning, transferred
+## The bootstrap: learning from a single sample
 
-Same logic, a numerical outcome. A clinic asks 12 volunteers with mildly raised resting heart rates to sit still for five minutes. Six, chosen at random, follow a guided breathing exercise; the other six sit quietly. Each person's drop in resting heart rate is recorded in beats per minute.
+A randomization test asks whether an effect is there. The next question is how precisely a sample pins down a parameter. In practice you have one sample, not the 100 of the blood-pressure dot plot, and the population is unknown. The **bootstrap** uses the sample as a stand-in for the population.
 
-The breathing drops are 8, 5, 11, 6, 9 and 9, which sum to 48, so the mean drop is 8. The quiet drops are 4, 2, 7, 3, 5 and 3, which sum to 24, so the mean drop is 4. The difference in means is 4 beats per minute.
+The running example: a consumer group bought a random sample of 16 cans of one brand of vegetable soup and measured the sodium in one serving from each. The illustrative values, in milligrams (mg), are 470, 502, 488, 515, 496, 479, 530, 491, 507, 484, 499, 522, 476, 510, 493 and 506. The label says 480 mg. The sample mean is $\bar{x} = 7968/16 = 498.0$ mg and the sample standard deviation is $s = 16.73$ mg. How far might 498.0 be from $\mu$, the mean sodium per serving of all cans of this soup?
 
-Now the same steps. Write the twelve drops on twelve cards, which carry numbers instead of words. Shuffle, deal six and six, recompute the difference in means. A thousand shuffles produced a gap of 4 or more, one way or the other, twelve times, so 0.012. And twelve cards split into groups of six in only 924 ways, so a computer can check every split; exactly 12 of the 924 are at least as extreme, which is 0.013.
+### Resampling with replacement
 
-What stayed the same: the chance-alone claim, the shuffling, the counting rule, the division. What changed: the outcome is a measurement, so the statistic is a difference in means rather than a difference in proportions.
+A **bootstrap resample** is drawn the way you would draw names from a hat if you put each name back after reading it: pick one of the 16 values at random, record it, return it, and repeat until you have 16 values. Some values appear two or more times in a resample and others not at all. The diagram shows the first three resamples, sorted so repeats sit side by side.
 
-## Second worked example — how many students skip meals, and how precisely we know it
+![Bootstrap resampling: each resample draws 16 values with replacement from the original 16](../assets/figures/week-11/bootstrap-resampling-diagram.svg){fig-alt="The 16 sodium values in the original sample (mean 498.0 mg), then three bootstrap resamples of 16 drawn with replacement. Some values repeat and others are left out; resample means are 490.9, 496.6 and 501.9 mg."}
 
-**Setting.** A campus food-security committee needs a defensible number for how many students go without meals for financial reasons. A random sample of 200 enrolled students is contacted, and 62 report skipping a meal in the past week because of cost.
+The three resample means were 490.9, 496.6 and 501.9 mg. Resample 1 drew 470 and 502 four times each and left out 7 of the 16 original values. On average a resample of 16 leaves out about 6 values, roughly a third. That mixing makes resample means vary, and the way they vary imitates how sample means would vary if you could buy new samples of 16 cans.
 
-**Step 1. Name the statistic and compute it.**
+Replacement matters: without it, every resample would be the original 16 values in a new order, with the same mean every time.
 
-$$\hat{p} = \frac{62}{200} = 0.31$$
+### The bootstrap distribution and the percentile interval
 
-**Step 2. Notice that the question has changed shape.** No group labels, no chance-alone claim, nothing to shuffle between. What the committee needs is how far from 0.31 the truth could reasonably sit.
+Repeat the resampling 1,000 times and record each resample mean. Those 1,000 means form the **bootstrap distribution**. Two features matter:
 
-**Step 3. Build the bag and draw one resample.** Two hundred cards, 62 yes and 138 no. Draw, record, replace, repeat until 200 cards have been drawn. The first resample came out with 58 yes cards, a proportion of 0.29 — close to 0.31 but not equal to it, which is the point.
+- Its **center** sits near the sample mean, not near the unknown $\mu$. The bootstrap does not improve the estimate; it measures its uncertainty.
+- Its **spread** estimates the sampling variability of $\bar{x}$. Its standard deviation is the **bootstrap standard error**.
 
-**Step 4. Do it a thousand times, then trim.** The proportions pile into a mound whose average came out at 0.310, which is no surprise, since every resample is drawn from a bag that is 31% yes. The centre carries no new information; the **spread** is what you came for. Set aside the lowest 25 and the highest 25, and the surviving 950 run from 0.250 to 0.375.
+For a 95% **percentile interval**, sort the 1,000 bootstrap means and cut off the lowest 2.5% (25 means) and the highest 2.5% (25 means). The cut-offs are the 2.5th and 97.5th percentiles, and the interval between them holds the middle 95% of the bootstrap distribution.
 
-**Step 5. Write the sentence a committee can use.** "In a random sample of 200 students, 31% reported skipping a meal in the past week because of cost. Plausible values for the student body as a whole run from about 25% to about 37.5%." On a campus of 12,000 students, that is roughly 3,000 to 4,500 people.
+### What 95% confidence means
 
-**Checking the arithmetic.** 62 out of 200 is 31 out of 100, so 0.31 exactly. The cut points sit at whole numbers of cards, since $0.250 \times 200 = 50$ and $0.375 \times 200 = 75$. And a check from outside the simulation: the standard formula for a proportion, which Week 12 will supply, gives 0.246 to 0.374. Two very different methods agree to within a few thousandths.
+"95% confidence" describes the method, not any single interval. If you repeated the whole process many times (new random sample, bootstrap, interval), about 95% of the intervals would capture the parameter and about 5% would miss.
 
-**What it means in context.** The width is the finding. A survey of 200 cannot pin a share this size down more tightly than a band twelve and a half percentage points wide, and a committee reporting "31% of students skip meals" without that band claims a precision it does not have. The fix for a tighter number is more students surveyed, not more resamples.
+The figure goes back to the hypothetical town, where $p = 0.30$ is known. For each of the 100 samples in the first dot plot, a computer made a 95% bootstrap percentile interval for $p$.
 
-## The misreading to avoid
+![What 95% confidence means: 95% bootstrap intervals from 100 samples, 96 of which capture p = 0.30](../assets/figures/week-11/confidence-interval-ladder.svg){fig-alt="One hundred horizontal 95% bootstrap intervals, one per random sample of 50 adults, in two panels of 50, against a line at the population proportion 0.30. 96 intervals cross the line and 4 miss it."}
 
-Here is the sentence students actually say: *"The p-value is 0.025, so there is only a 2.5% chance that the coaching did nothing."* Almost everyone says it once, so take it apart rather than calling it wrong.
+Here 96 of the 100 intervals capture $p = 0.30$ and 4 miss: those from the samples whose $\hat{p}$ was unusually far from 0.30 (0.16, 0.46, 0.48 and 0.52). A capture rate of 96% is close to the promised 95%; another 100 samples might give 93 or 97. In practice you see one interval and never learn whether it is a hit. The 95% is your confidence in the method that produced it.
 
-Every one of those thousand shuffles was carried out inside a world where the coaching did nothing; that assumption is what gave us permission to shuffle. A simulation run under an assumption can report how data behave given the assumption. It cannot turn around and report on the assumption. The p-value is the fraction of chance-alone worlds that produce data as striking as yours. The sentence above asks for the fraction of worlds-that-produced-data-like-yours in which chance was the whole story. Different fractions, different denominators.
+Two cautions. For bootstrap percentile intervals the capture rate is only approximately 95%, and it can fall short when the sample is small or the data are strongly skewed. And an interval for a mean or proportion is about that parameter, not about individual values.
 
-You met this swap in Week 10. Sensitivity asked "of the people who have the condition, how many test positive", and predictive value asked "of the people who tested positive, how many have the condition" — one cell of one table divided by two different totals. Put "chance alone was the whole story" where "has the condition" was, and "this study produced a gap of 0.40" where "tested positive" was, and you have this week's error exactly.
+### Building a bootstrap interval in StatKey
 
-The second misreading runs the other way: *"The p-value came out at 0.30, so the program does nothing."* With twenty per group, chance routinely produced gaps of 0.20 by itself, so a study that small can miss a real effect easily. Failing to show that chance is strained is not the same as showing that nothing is there. The honest report is "this study could not distinguish the program from chance", delivered with an interval showing how much room a real effect still has.
+Open **Bootstrap Confidence Intervals > CI for Single Mean, Median, St.Dev.** for a mean, **CI for Single Proportion** for a proportion, or **CI for Difference In Means** or **CI for Difference In Proportions** for two groups. Enter the sample with **Edit Data**, press **Generate 1000 Samples**, and tick **Two-Tail**. StatKey marks off the middle 95% (0.025 in each tail) and shows the two cut-offs on the axis: the ends of the percentile interval. It also reports the standard error.
 
-The third is aimed at the bootstrap: *"Drawing the same student twice is making up data."* No information is being added. The bag stands in for the population, and every draw from it is a legitimate draw from that stand-in.
+## Worked example 2: a bootstrap interval for sodium in soup
 
-The fourth follows students into Week 12, so keep a rule for it. Shuffling labels *between* groups tests whether chance suffices, and that picture is centred on zero. Drawing with replacement *inside* one sample measures precision, and that picture is centred on your estimate.
+**Question.** Using the illustrative sample of 16 cans, estimate $\mu$, the mean sodium per serving for all cans of this soup, with a 95% bootstrap percentile interval. Is the label value of 480 mg plausible for $\mu$?
 
-## Practice on your own
+**Step 1: the sample statistic.** Sorted, the 16 values are 470, 476, 479, 484, 488, 491, 493, 496, 499, 502, 506, 507, 510, 515, 522 and 530. Their sum is 7,968, so $\bar{x} = 7968/16 = 498.0$ mg.
 
-Nothing here is collected. These are for a quiet half hour with a calculator.
+**Step 2: resample.** Draw 1,000 bootstrap resamples of size 16 with replacement and record each mean. The first three appear in the resampling diagram above.
 
-1. **A different two-group study.** A campus writing centre tries a new drop-in format. Of the 15 students who used it, 11 said it helped; of the 15 who used the old format, 6 said it helped. Compute the difference in proportions, then describe the deck you would shuffle.
+**Step 3: the bootstrap distribution.**
 
-2. **Reading somebody else's null distribution.** A study produced a difference in means of 2.6 units, and 500 shuffles gave 9 results of 2.6 or more and 7 of -2.6 or less. Compute the fraction at least as extreme, then write one sentence beginning "If the grouping made no difference" that says what the fraction describes.
+![Bootstrap distribution of the mean sodium, with the middle 95% marked off by the 2.5th and 97.5th percentiles](../assets/figures/week-11/bootstrap-distribution-percentiles.svg){fig-alt="Histogram of 1,000 bootstrap means of sodium, centered near 498 mg. Lines mark the 2.5th percentile, 489.9 mg, and the 97.5th percentile, 506.4 mg; the middle 95% of bootstrap means lie between them."}
 
-3. **A bootstrap by hand.** Eight students reported these minutes of exercise yesterday: 10, 25, 0, 40, 15, 30, 20, 20. Compute the sample mean, then build five resamples of size eight by drawing with replacement and compute each resample mean. What does the spread of those five tell you that the sample mean did not?
+The bootstrap means form a roughly symmetric mound. Their mean is 497.97 mg, almost exactly the sample mean, and their standard deviation is 4.09 mg, so the bootstrap standard error is about 4.1 mg. They range from 484.4 to 511.3 mg.
 
-4. **Four sentences about one interval.** A survey of 400 adults estimates that 0.18 of them delayed filling a prescription because of cost, with a bootstrap interval from 0.145 to 0.216. For each sentence, decide whether you would put your name to it, and say why.
-   - "Eighteen percent of all adults delayed filling a prescription."
-   - "There is a 95% probability that the true proportion is between 0.145 and 0.216."
-   - "Values from about 0.145 to about 0.216 are plausible for the population this sample came from."
-   - "This shows that cost is a barrier to taking medication."
+**Step 4: the percentile interval.** Sorted, the 25th and 26th bootstrap means are 489.875 and 489.9375 mg, and the 975th and 976th are 506.375 and 506.4375 mg. Taking the midpoint of each pair as the cut-off (so exactly 25 means fall below the lower one and 25 above the upper one) and rounding to one decimal place gives the **95% percentile interval: 489.9 mg to 506.4 mg**.
 
-5. **Which simulation fits?** Say whether a randomization test or a bootstrap is right, and describe one repetition: a city wants a range for the proportion of households with no car; a lab compares mean germination time under two lighting conditions.
+**Step 5: a quick check.** The sample mean plus or minus two bootstrap standard errors is $498.0 \pm 2(4.09) = 498.0 \pm 8.18$, or 489.8 to 506.2 mg, very close to the percentile interval because the bootstrap distribution is roughly symmetric.
 
-## Where to read more
+**Step 6: compare with the label.** The whole interval lies above 480 mg; none of the 1,000 bootstrap means was at or below 480 mg (the lowest was 484.4). So 480 mg is not a plausible value for the mean sodium, according to these data.
 
-- The randomization half of this week is [Hypothesis testing with randomization](https://openintrostat.github.io/ims/foundations-randomization.html). Work its examples with the pictures beside you rather than the formulas.
-- The bootstrap half is [Confidence intervals with bootstrapping](https://openintrostat.github.io/ims/foundations-bootstrapping.html), which develops "percentile interval" carefully.
-- [StatKey](https://www.lock5stat.com/statkey) is the tool behind this week's simulations. Its randomization and bootstrap pages run a thousand shuffles while you watch, worth doing slowly at least once.
-- The [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) supplement gives these ideas a health framing, and [Introduction to Modern Statistics](https://openintrostat.github.io/ims) is browsable whole.
-- Course pages: the [course home page](../index.qmd), the [schedule](../schedule.qmd), and the [resources page](../resources/index.qmd). Last week's notes are at [Week 10](week10-probability-risk-diagnosis.qmd).
+**Conclusion in context.** We are 95% confident that the mean sodium per serving across all cans of this soup is between about 490 and 506 mg, roughly 10 to 26 mg above the 480 mg on the label. "95% confident" means the method behind this interval captures the true mean in about 95% of random samples. Whether that gap matters for health is a separate question, and the conclusion rests on the 16 cans being a fair random sample of the soup on sale.
+
+## Transfer: a seed coating and germination
+
+The same reasoning works for a yes/no response. A seed supplier wanted to know whether a new seed coating changes germination. In an illustrative experiment, 100 bean seeds were randomly assigned: 50 were coated and 50 were left uncoated, and after ten days each seed was recorded as germinated or not. The coating could help seeds sprout, but it could also damage some of them, so the supplier asked a two-sided question: does the coating change germination in either direction?
+
+| Group | Germinated | Did not germinate | Total | Proportion germinated |
+|---|---|---|---|---|
+| Coated | 41 | 9 | 50 | 0.82 |
+| Uncoated | 33 | 17 | 50 | 0.66 |
+| Both groups | 74 | 26 | 100 | 0.74 |
+
+**Statistic.** $\hat{p}_{\text{coated}} - \hat{p}_{\text{uncoated}} = 41/50 - 33/50 = 0.82 - 0.66 = 0.16$, a gap of 16 percentage points.
+
+**Hypotheses.** Let $p_{\text{coated}}$ and $p_{\text{uncoated}}$ be the long-run proportions of these seeds that germinate with and without the coating. $H_0: p_{\text{coated}} - p_{\text{uncoated}} = 0$ (each seed would have germinated, or not, either way) and $H_A: p_{\text{coated}} - p_{\text{uncoated}} \ne 0$.
+
+**Shuffle.** Under $H_0$ the 74 "germinated" and 26 "did not germinate" outcomes are fixed; only the labels were random. So shuffle 74 "germinated" cards and 26 "did not germinate" cards, deal 50 to each label, and compute the difference in proportions germinated (coated minus uncoated). In StatKey, use **Randomization Hypothesis Tests > Test for Difference In Proportions**, entering 41 of 50 and 33 of 50 with **Edit Data**.
+
+**Result of 1,000 shuffles.** The shuffled differences centered on 0, with a standard deviation of about 0.087, and ranged from −0.24 to 0.32. Because $H_A$ is two-sided, count both tails: 60 shuffles gave 0.16 or more and 44 gave −0.16 or less, 104 in all.
+
+$$\text{p-value} \approx \frac{60 + 44}{1000} = \frac{104}{1000} = 0.104$$
+
+**Interpret.** If the coating made no difference, a gap of 16 percentage points or more in either direction would turn up in roughly 1 of every 10 random assignments. That is not rare, so these data do not give convincing evidence that the coating changes germination; at $\alpha = 0.05$ the supplier would fail to reject $H_0$.
+
+**What this does not mean.** It does not show that the coating is useless. A real gain of 16 percentage points would matter to a grower, but with 50 seeds per group the study was too small to tell a gap that size from chance. A larger trial would give a clearer answer. With these data, a bootstrap interval for $p_{\text{coated}} - p_{\text{uncoated}}$ (StatKey's **CI for Difference In Proportions**) would show the range of effects the data allow.
+
+## A common misreading: the p-value as the chance of no effect
+
+It is tempting to read the phone experiment's p-value of 0.016 as "a 1.6% chance that the habit has no effect", or "a 98.4% chance that it works". That is not what a p-value measures.
+
+The p-value was computed by *assuming* $H_0$. It describes the data, given no effect: if there were no effect, a difference of 6.1 minutes or more would turn up about 1.6% of the time. It is not the chance that the hypothesis is true. Reversing it is the same mistake as confusing the chance of a positive test among people with a disease with the chance of disease among people who test positive, from [Week 10](week10-probability-risk-diagnosis.qmd). Whether "no effect" is likely also depends on things the p-value never uses, such as what other studies found.
+
+Two related misreadings:
+
+- **"A large p-value proves there is no effect."** The seed-coating trial's p-value of 0.104 means the data are consistent with no effect, not that the effect is zero. Small studies often miss real effects.
+- **"95% of the values fall inside the 95% interval."** The sodium interval, 489.9 to 506.4 mg, is about the mean. The individual cans ranged from 470 to 530 mg, far wider.
+
+## Practice questions (ungraded)
+
+1. Two hypothetical polls of the same county, taken the same week with separate random samples of 400 adults, report 44% and 48% support for a new park tax. Does the difference mean one poll was done badly? *What to look for:* the role of sampling variability.
+2. In a hypothetical experiment, 24 tomato plants were randomly assigned, 12 to a new fertilizer and 12 to none; the fertilized plants were 2.4 cm taller on average. In 1,000 shuffles, 180 gave a difference of 2.4 cm or more. Find the one-sided p-value and say in one sentence what it tells you about the fertilizer. *What to look for:* whether 180 out of 1,000 is rare.
+3. Suppose the sleep experiment had shown a gap of only 2.0 minutes. From the dot plot of shuffled differences, would you expect a small or a large p-value? Explain using where 2.0 sits.
+4. A classmate says, "A bootstrap resample is just the original sample again, so every resample mean equals 498.0." Use the resampling diagram to explain the mistake.
+5. A 95% bootstrap interval for students' mean nightly sleep at a college is 6.4 to 7.1 hours (illustrative). Which statement fits the meaning of 95% confidence, and why? (a) 95% of the students sleep between 6.4 and 7.1 hours. (b) Intervals made this way capture the mean in about 95% of random samples.
+6. A school district randomly assigns 30 classrooms to a new reading program and 30 to the usual one, then records whether each classroom meets a reading benchmark. Which StatKey menu would you open to test whether the program changes the proportion meeting the benchmark? *What to look for:* a yes/no response and two groups.
+
+## Read further on simulation-based inference
+
+- *Introduction to Modern Statistics*, 2nd edition (Çetinkaya-Rundel and Hardin, OpenIntro): [Chapter 11, Hypothesis testing with randomization](https://openintrostat.github.io/ims/foundations-randomization.html) works through randomization tests with case studies, and [Chapter 12, Confidence intervals with bootstrapping](https://openintrostat.github.io/ims/foundations-bootstrapping.html) covers the bootstrap and interpreting confidence intervals. Skip the R code; read the output and explanation.
+- [StatKey](https://www.lock5stat.com/statkey/) runs free in a web browser. This week's menus: Randomization Hypothesis Tests, Bootstrap Confidence Intervals and Sampling Distributions.
+- Optional, for health and biology examples: *Introductory Statistics for the Life and Biomedical Sciences* (Vu and Harrington, OpenIntro), chapter 4, Foundations for inference, from the [book's home page](https://www.openintro.org/book/biostat/).
 
 ## Where this goes next
 
-Everything you did this week was honest and slow, and before there was a computer on every desk nobody could afford a thousand shuffles. So statisticians described mathematically what a null distribution would look like if you did all that shuffling — smooth curves whose width follows from the sample sizes — and used those instead. Week 12 hands you that machinery: null and alternative claims written formally, a test statistic measured in units of typical variation, a p-value read off a curve, and the two kinds of error a decision can make.
-
-Read it as a shortcut, not a new subject. Every picture in [Week 12](week12-classical-hypothesis-testing.qmd) is a smooth version of one you built by hand this week, and when a formula's conditions fail the shuffling still works while the formula quietly stops being trustworthy. The full sequence is on the [course home page](../index.qmd).
+- Previous: [Week 10: Probability as risk and diagnosis](week10-probability-risk-diagnosis.qmd).
+- Next: [Week 12: Classical hypothesis testing](week12-classical-hypothesis-testing.qmd), where mathematical models replace the shuffled and resampled distributions and significance levels and decision errors get fuller treatment. The logic stays the same: assume $H_0$, ask how surprising the data are, and interpret with care.
+- See [all weekly notes](index.qmd) and the [course schedule](../schedule.qmd).

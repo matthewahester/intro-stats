@@ -8,217 +8,305 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: does 58 out of 100 settle the question?
 
-Last week you tested a claim with your hands: outcomes on cards, group labels shuffled, the statistic recomputed, a thousand times over. That pile of results was the null distribution — a picture of what chance alone produces when the claim being tested is true. You marked the real result on it, counted the shuffles that landed at least as far out, and called that proportion a p-value.
+A city health office (hypothetical) says that half of its adults meet the weekly physical-activity guideline. You survey a random sample of 100 adults in the city and find that 58 meet it, so $\hat{p} = 58/100 = 0.58$.
 
-This week the shuffling goes away and a formula stands in its place. Nothing else changes. The question is still whether chance alone could plausibly have produced a result like yours, and the picture is still a distribution with your result marked and a tail shaded. Only its source changes: a mathematical model now stands in for the simulation.
+Before calculating anything, write down your first reaction to two questions:
 
-Why bother, when simulation already worked? Because a formula is quick, needs no computer, and is the language of nearly every study you will ever read. By the end of this week you should be able to see "t = 2.45, p = 0.014" and say what claim was on trial, what the 2.45 counts, and what the 0.014 is — and is not — the probability of.
+1. Does 58 out of 100 make you doubt the city's figure of 50%?
+2. Would you feel differently if 580 of 1,000 surveyed adults met the guideline, the same 58%?
 
-### Why this matters beyond the classroom
+In [Week 11](week11-simulation-based-inference.qmd) you would have settled this by simulation. This week replaces the simulated samples with a smooth curve; by the end of the section on p-values you will have a precise reply to each question, and the two replies differ.
 
-Picture a hospital committee deciding whether to buy a text-message reminder system for the thousand patients it sees each year. The vendor's report says the program lowered blood pressure and prints "p = 0.014" in bold. A member who has only learned the word "significant" votes yes. A member who has done this week's work asks how big the drop was, and how precisely it was measured.
+## Why a formula can stand in for the simulation
 
-The gap opens the other way too. A study reports no significant difference and a headline turns that into "no difference". A study too small to notice a real effect and a study that genuinely found nothing produce the same sentence and mean entirely different things.
+Reports of medical trials, health surveys and policy evaluations rarely show a simulation. They show sentences such as "attendance rose by 10 percentage points (95% confidence interval 2 to 18; p = 0.02)." This week shows what each of those numbers says and when a writer leans on it too hard. The formulas need only a calculator and a table, and they show why larger samples give sharper evidence, but they hold only under conditions you must check.
 
 ## What you will be able to do
 
-- State a null and an alternative claim in plain words, then write each one in notation.
-- Compute a test statistic as the distance from an observed result to a null value, measured in standard errors.
-- Read a p-value off a reference distribution and say in one sentence which probability it reports.
-- Name which of the four standard misreadings a sentence commits, and rewrite it defensibly.
-- Place a study in the truth-by-decision table, say what each kind of error would mean there, and describe what would raise its power.
-- Separate a statistically significant result from a practically important one, using an estimate and its interval.
+By the end of this week you can:
 
-## Words worth owning
+- state null and alternative hypotheses in words and in symbols before looking at the data;
+- check the conditions for a normal model and compute a standard error;
+- compute a $z$ test statistic, find its p-value with a table or StatKey, and interpret it in context;
+- build a 95% confidence interval as estimate $\pm$ 1.96 SE and explain what "95% confident" means;
+- explain why a two-sided test and a confidence interval tell a consistent story;
+- describe Type I errors, Type II errors and power in plain words;
+- separate statistical significance from practical importance, and explain why a p-value is not proof.
 
-| Term | What it means in this course |
-|------|------------------------------|
-| Null hypothesis | The deliberately boring claim on trial: no effect, or the advertised value is right. Written H0, and it names one number. |
-| Alternative hypothesis | What you would credit if the null fails. Written HA. It names a departure or a direction, never a value. |
-| Test statistic | How far the observed result sits from the null value, counted in standard errors, not original units. |
-| Standard error | The typical sample-to-sample wobble of a statistic; the ruler a test statistic is measured with. |
-| p-value | The probability of a result at least as extreme as the one observed, computed while assuming the null claim is true. |
-| Significance level | A threshold chosen before seeing the data, below which you agree to call a p-value small. Written alpha. |
-| Type I and Type II error | Rejecting a true null claim; and failing to reject a false one. |
-| Power | The chance a study would detect an effect of a stated size if it is real. A property of the design. |
+## Words to know this week
 
-## From shuffling to a formula
+| Term | Meaning this week |
+|---|---|
+| Null hypothesis $H_0$ | The skeptical claim of no change or no difference. It names one value for the parameter, such as $p = 0.50$. |
+| Alternative hypothesis $H_A$ | What the investigator suspects instead, such as $p \ne 0.50$, chosen before seeing the data. |
+| Null value $p_0$ | The value of the population proportion named in $H_0$. |
+| Standard error (SE) | The standard deviation of a statistic across repeated samples: its typical sample-to-sample variation. |
+| Test statistic $z$ | How many standard errors the observed statistic lies from the null value. |
+| p-value | Assuming $H_0$ is true, the probability of a test statistic at least as extreme as the one observed. |
+| Significance level $\alpha$ | A cutoff for calling a p-value small, chosen in advance; often 0.05. |
+| Confidence interval | A range of plausible parameter values, from a method with a known long-run capture rate. |
+| Type I error | Rejecting $H_0$ when it is true: a false alarm. |
+| Type II error | Failing to reject $H_0$ when $H_A$ is true: a missed difference. |
+| Power | The probability of rejecting $H_0$ when a particular alternative is true. |
+| Practical significance | Whether a difference is large enough to matter in the real setting. |
 
-A city transit agency advertises that 80 percent of its buses arrive on time. A sceptical student group records 200 randomly chosen arrivals over one month and finds 148 on time. That is 148 divided by 200, or 0.74 — six hundredths short of the advertised rate.
+## From simulation to a mathematical model
 
-Six hundredths is not nothing, but 200 arrivals is not the whole fleet. Even if the agency's figure were exactly right, a sample of 200 would not land on 0.80 every time; it would wobble. So the honest question is not whether the sample fell short, but whether a shortfall this size is an ordinary wobble.
+In Week 11 the null distribution was a dot plot of simulated statistics, and it was roughly bell-shaped. The normal model is the smooth curve that describes that shape; once you know its center and spread, you can find tail areas without simulating.
 
-Last week you would have settled that by simulating: draw 200 arrivals from a fleet whose true rate really is 0.80, compute the sample rate, repeat a thousand times, count how often you land at 0.74 or lower. That is the left panel below. This week you draw a smooth curve through the histogram and read the area under its left tail instead.
+### Stating the hypotheses before looking at the data
 
-![The same null question answered twice: by simulation on the left, by a model curve on the right.](../assets/figures/week-12/simulation-to-model.svg){fig-alt="Two panels on one horizontal axis. The left is a histogram of one thousand simulated on-time rates centred at 0.80 with bars at or below 0.74 shaded. The right is a smooth curve with the same left tail shaded, area 0.017."}
+A test weighs two claims about a parameter, a number that describes the whole population, such as the proportion $p$ of all the city's adults who meet the guideline. The null hypothesis names one value; the alternative is what you conclude if the data argue strongly against it. For the warm-up:
 
-The two panels share almost everything: same axis, same centre, same width, same shaded region. The simulation put twenty-three of its thousand samples at or below 0.74; the curve puts 0.017 of its area there. Close but not identical, because the curve models the shuffling rather than transcribing it. Both agree on what matters: a shortfall this large turns up in roughly two samples in a hundred when the claim holds.
+$$H_0: p = 0.50 \qquad H_A: p \ne 0.50$$
 
-### The two claims, in words before symbols
+This alternative is **two-sided**: a true proportion either above or below 0.50 would contradict the city. A **one-sided** alternative such as $H_A: p > 0.50$ fits only a question that was one-directional from the start; choosing the direction after seeing the data overstates the evidence. Hypotheses are about parameters ($p$, $\mu$), never about statistics ($\hat{p}$, $\bar{x}$). You already know that $\hat{p} = 0.58$; the question is what that says about $p$.
 
-Before any arithmetic, write both claims down, and write them in words first. Notation that arrives before the sentence it abbreviates is notation you will misuse.
+### The normal model for a sample proportion
 
-![One question, two claims, written first in words and then in notation.](../assets/figures/week-12/two-claims.svg){fig-alt="Two panels. The left states the null claim, that the fleet on-time rate really is 80 percent, as p equals 0.80. The right states the alternative, that the rate is lower, as p below 0.80. Both claims are about the whole fleet."}
+Sample proportions vary from one random sample to the next. That variation follows a normal curve closely when two conditions hold:
 
-The **null hypothesis** is the claim on trial. Here it says the on-time rate across every arrival the agency runs really is 0.80, and the 0.74 is ordinary sampling variation. In notation, $H_0: p = 0.80$, where $p$ is the fleet's true rate.
+- **Independence:** the data come from a random sample or a randomized experiment, and one person's response does not affect another's.
+- **Success-failure condition:** you expect at least 10 successes and at least 10 failures. In a test, check $n p_0 \ge 10$ and $n(1 - p_0) \ge 10$.
 
-Notice that it names one specific number. It has to: the method asks what the world would look like if the null claim were true, and "somewhere below 0.80" gives you nothing to centre a distribution on. The **alternative hypothesis** is what you would credit if the null fails: $H_A: p$ is below $0.80$, in words, the real rate is lower than advertised. It names a direction, not a value.
+Then $\hat{p}$ is approximately normal, centered at the true $p$, with standard error
 
-Three habits to build now. Both claims are about the population, never the sample — writing $H_0: \hat{p} = 0.80$ makes no sense, since everyone can see the sample gave 0.74. Choose the direction of the alternative before you look, because picking whichever tail your result landed in manufactures surprise. And you never prove the null claim; the method only finds evidence against it.
+$$\text{SE} = \sqrt{\frac{p(1-p)}{n}}.$$
 
-### The test statistic as a distance in units of noise
+A test assumes $H_0$ is true, so it puts $p_0$ into this formula. For the warm-up, $100 \times 0.50 = 50$ successes and 50 failures are expected, and
 
-The observed gap is $0.74 - 0.80 = -0.06$. Is 0.06 large? The question is empty until you say large compared to what, and here the comparison is to the typical wobble of a sample this size.
+$$\text{SE} = \sqrt{\frac{0.50 \times 0.50}{100}} = \sqrt{0.0025} = 0.05.$$
 
-That wobble is the standard error. For a sample proportion, when the null claim holds,
+With 1,000 adults, $\text{SE} = \sqrt{0.25/1000} \approx 0.0158$. Ten times the data shrinks the standard error by a factor of $\sqrt{10} \approx 3.16$, not 10: precision grows with the square root of the sample size.
 
-$$ SE = \sqrt{\frac{p_0 (1 - p_0)}{n}} = \sqrt{\frac{0.80 \times 0.20}{200}} = \sqrt{0.0008} \approx 0.0283 $$
+A sample mean behaves in a similar way. It is approximately normal, centered at $\mu$, with standard error $\sigma/\sqrt{n}$, which you estimate by $s/\sqrt{n}$. Small samples call for a slightly wider curve, the t distribution; the transfer example shows why that hardly matters for a large sample.
 
-with $p_0$ the null value and $n$ the sample size. In words: audits of 200 arrivals, drawn from a fleet that really runs at 80 percent, usually land within about three hundredths of 0.80. Now gap and wobble can be compared, and the comparison is division:
+### The z test statistic: counting standard errors
 
-$$ z = \frac{\hat{p} - p_0}{SE} = \frac{0.74 - 0.80}{0.0283} \approx -2.12 $$
+A test statistic measures the distance from the null value in units of standard error:
 
-Read it aloud: the sample rate sits about 2.12 standard errors below the advertised rate. That is the whole content of a test statistic. Every one you will meet — $z$ and $t$, and in squared-up form chi-square and $F$ — measures the same thing: how far the data sit from what the null claim predicted, relative to the typical size of the noise. The units cancel, so 2.12 means the same thing for a proportion or a blood pressure.
+$$z = \frac{\text{observed statistic} - \text{null value}}{\text{SE}}, \qquad \text{so for one proportion} \quad z = \frac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}}.$$
 
-## Reading a p-value honestly
+For the warm-up, $z = (0.58 - 0.50)/0.05 = 0.08/0.05 = 1.60$: the sample sits 1.6 standard errors above the claimed value. With 1,000 adults, $z = 0.08/0.0158 \approx 5.06$. Every $z$ is judged against the same standard normal curve, with center 0 and standard deviation 1, on which values within about 2 of zero are common and values beyond 3 are rare.
 
-### What the number actually counts
+### The p-value and how to read it
 
-Here is the sentence, worth memorising in this exact shape: **a p-value is the probability of a result at least as extreme as the one observed, computed while assuming the null claim is true.**
+The **p-value** is the probability, computed assuming $H_0$ is true, of a test statistic at least as extreme as the one observed. For a two-sided test it is the total area in both tails, beyond $z$ and beyond $-z$.
 
-Three parts carry the weight. It is a probability *of a result*, so it is a statement about data. It counts results *at least as extreme*, which is why it is a tail area. And it is computed *assuming the null claim is true*, so it describes what data would do in a world we stipulated, not which world we are in.
+![Null models for the sample proportion when p = 0.50, with 100 adults and with 1,000 adults](../assets/figures/week-12/null-model-tail-areas.svg){fig-alt="Two normal curves centered at 0.50. For n = 100 (SE 0.05) the tails beyond 0.42 and 0.58 are shaded, total area about 0.11. For n = 1,000 (SE about 0.016) the curve is narrow and 0.58 is about 5 SE out, area below 0.0001."}
 
-For the bus audit, the tail left of $z = -2.12$ is about 0.017. In the language of the study: if the 80 percent figure were exactly right and the students repeated their audit over and over, about seventeen audits in every thousand would come back at 0.74 or lower. They got one on the first try. That is real evidence, but of the form *this would be a coincidence*, not proof.
+With 100 adults each shaded tail holds about 0.055, so the p-value is about 0.11. In words: according to the normal model, if half of the city's adults met the guideline, about 11% of random samples of 100 would land 8 or more percentage points from 50%, in one direction or the other. That is not unusual, so this sample is not convincing evidence against the city. With 1,000 adults the p-value is below 0.0001: if the city were right, a count 80 or more away from 500, in either direction, would almost never happen. The same 58% is weak evidence in the small sample and very strong evidence in the large one.
 
-One decision has to be explicit. The students suspected overstatement, so they used one tail. With no direction in mind they would count both tails and report $2 \times 0.017 = 0.034$: same data, same statistic, different p-value, because a different set of results counts as extreme.
+A basic calculator cannot find normal areas, so use the table below or StatKey: open **Theoretical Distributions > Normal**, keep mean 0 and standard deviation 1, choose the two-tail option, and set the cutoff to your $z$. StatKey shows the area in each tail; add the two tail areas (or double one) to get the two-sided p-value.
 
-### The threshold is a convention, not a fact of nature
+| Size of $z$ (ignore the sign) | Two-sided p-value | Area in one tail |
+|---|---|---|
+| 1.00 | 0.317 | 0.159 |
+| 1.50 | 0.134 | 0.067 |
+| 1.645 | 0.100 | 0.050 |
+| 1.96 | 0.050 | 0.025 |
+| 2.33 | 0.020 | 0.010 |
+| 2.576 | 0.010 | 0.005 |
+| 3.00 | 0.0027 | 0.0013 |
+| 3.29 | 0.0010 | 0.0005 |
 
-You will be told to compare the p-value with 0.05 and reject the null claim when it comes out smaller. That is a useful discipline, and 0.05 is a genuine convention with a history in early twentieth-century agricultural statistics. But it is not a boundary in the world: nothing about the fleet changes as a p-value slides from 0.051 to 0.049.
+For $z = 1.60$, the table brackets the two-sided p-value between 0.100 and 0.134; StatKey shows about 0.055 in each tail, so the p-value is about 0.110.
 
-Several habits follow. Report the p-value itself, not just the verdict. Fix the threshold before seeing the data, because one chosen afterwards is not a threshold. Treat 0.06 and 0.04 as nearly the same evidence. And be wary of a study that tested twenty things and reports the one below 0.05: when the null claim holds for all twenty, roughly one in twenty clears that bar by luck.
+::: {.callout-note}
+The normal curve is an approximation. For the warm-up with 100 adults, a simulation gives a p-value of about 0.13 rather than 0.11. Differences of that size change no conclusion on this page.
+:::
 
-## When a decision goes wrong
+### Significance level and the decision
 
-![The truth-by-decision table, with both kinds of error named.](../assets/figures/week-12/truth-by-decision.svg){fig-alt="A two-by-two table. Columns are whether the null claim is true or false; rows are whether you reject it. Rejecting a true null is a Type I error, failing to reject a false null is a Type II error; the other two cells are correct."}
+Choose a **significance level** $\alpha$ before looking at the data; 0.05 is the usual choice. If the p-value is at most $\alpha$, **reject $H_0$**: the data would be hard to explain by chance variation alone if $H_0$ were true. Otherwise, **fail to reject $H_0$**: the data are consistent with it.
 
-### Two ways to be wrong
+Say "fail to reject," never "accept." A jury's verdict of "not guilty" does not declare the defendant innocent; it says the evidence fell short. The survey of 100 adults fails to reject $H_0$, yet the city's true proportion could still be 0.55 or 0.60: the sample is too small to tell. Always finish with a sentence in context that gives the direction and size of the result.
 
-Agreeing to decide from a threshold is agreeing to be wrong sometimes. The columns above are the two ways the world could be, the rows the two things you could do. Two of the four cells are fine and two are not.
+## Confidence intervals from the normal model
 
-A **Type I error** is rejecting a null claim that was true — a false alarm. Here the students would accuse the agency of overstating punctuality when the fleet really runs at 80 percent, their sample having drifted low by chance. Its rate is the threshold you chose: at alpha of 0.05 you accept a false alarm in about five percent of studies where the null claim holds.
+A test asks whether one value of the parameter is believable. A confidence interval asks which values are.
 
-A **Type II error** is failing to reject a null claim that was false — a miss. Here the fleet really runs at 74 percent and the audit lets it off. This rate has no tidy value in advance, because it depends on how wrong the null claim is: a fleet at 74 percent is easier to catch than one at 79 percent.
+### Estimate plus or minus 1.96 standard errors
 
-The two trade against each other. Dropping your threshold from 0.05 to 0.01 makes false alarms rarer and misses commoner; raising it does the reverse. No threshold makes both small, because it only decides where to draw a line on a picture you already have. What reduces both is a better picture: more data, cleaner measurement, less noise by design. And you never learn which column you were in.
+About 95% of the area under any normal curve lies within 1.96 standard deviations of its center, so in about 95% of samples $\hat{p}$ lands within 1.96 SE of the true $p$. Turned around, that gives the interval
 
-### Power, in plain words
+$$\hat{p} \pm 1.96 \times \text{SE}, \qquad \text{where} \quad \text{SE} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.$$
 
-**Power** is the chance a study would detect an effect of a stated size, supposing that effect is really there. It is the top-right cell of the table, and it is one minus the Type II error rate.
+With no null value to assume, the standard error uses $\hat{p}$, and the success-failure check uses the observed counts of successes and failures. The quantity $1.96 \times \text{SE}$ is the **margin of error**. For 90% or 99% confidence, replace 1.96 with 1.645 or 2.576; more confidence needs a wider interval.
 
-Power belongs to a design, not to the data you ended up with, so ask about it before collecting anything. Four things move it: a larger real effect, a larger sample, less variability between cases, and a more permissive threshold, which buys detections at the price of false alarms.
+For the warm-up, $\text{SE} = \sqrt{0.58 \times 0.42/100} = \sqrt{0.002436} \approx 0.0494$, and the margin of error is $1.96 \times 0.0494 \approx 0.097$, so the interval runs from $0.58 - 0.097 = 0.483$ to $0.58 + 0.097 = 0.677$. With 1,000 adults, $\text{SE} = \sqrt{0.0002436} \approx 0.0156$, the margin is $1.96 \times 0.0156 \approx 0.031$, and the interval runs from 0.549 to 0.611.
 
-The consequence is blunt. A low-powered study is not neutral; it was always likely to report nothing, whatever the truth. So "no significant difference" from a small study is close to uninformative, and the next question is how big an effect it could have seen.
+### What 95% confidence means
 
-## Worked example — is the on-time rate really eighty percent?
+The 95% describes the **method**, not any one interval. If the study were repeated many times, about 95% of the intervals would capture the true parameter. The figure shows 40 intervals, each from its own simulated random sample of 200, drawn from a hypothetical population whose true proportion is 0.30.
 
-**Setting.** A transit agency advertises an 80 percent on-time rate. A student group records 200 randomly chosen arrivals across one month; 148 arrive on time. Test at a significance level of 0.05 whether the true rate is lower than advertised.
+![Forty 95% confidence intervals from forty random samples of 200 when the true proportion is 0.30](../assets/figures/week-12/ci-ladder-repeated-samples.svg){fig-alt="Forty intervals, each a sample proportion plus or minus 1.96 SE from a simulated sample of 200. A vertical line marks the true proportion 0.30. Thirty-eight intervals cross it; two, in orange, miss it, one only just (upper end 0.299)."}
 
-**Step 1 — write both claims.** The null claim says the fleet's true rate really is 80 percent and this sample wobbled low; the alternative says the true rate is below 80 percent. In notation, $H_0: p = 0.80$ against $H_A: p$ below $0.80$. One-sided, because the suspicion was one-sided from the start.
+Here 38 of the 40 intervals cross 0.30. The two misses came from samples with an unusually high proportion (78 of 200, or 0.39) and a low one (48 of 200, or 0.24), whose interval stops just short of 0.30 at 0.299. A real study produces just one interval, and you never learn whether it is a hit or a miss. So "we are 95% confident that $p$ is between 0.483 and 0.677" means that the interval came from a method that captures $p$ about 95% of the time. It does not mean that 95% of the adults, or 95% of future sample proportions, fall in that range.
 
-**Step 2 — check the model is usable.** The curve is an approximation and needs enough data behind it. The usual condition is that the null claim predicts at least ten successes and ten failures: $200 \times 0.80 = 160$ on-time and $200 \times 0.20 = 40$ late. Both clear ten, and the arrivals were random.
+### Tests and intervals tell a consistent story
 
-**Step 3 — estimate and standard error.** The sample rate is $\hat{p} = 148 / 200 = 0.74$, and under the null claim
+A two-sided test at $\alpha = 0.05$ rejects $H_0$ when the null value lies outside the 95% interval and fails to reject when it lies inside. With 100 adults, 0.50 lies inside 0.483 to 0.677 (p about 0.11); with 1,000, it lies outside 0.549 to 0.611 (p below 0.0001). The interval adds what the test cannot: how large the difference might be. For a proportion, the test puts $p_0$ in the standard error while the interval uses $\hat{p}$, so in rare borderline cases the two can disagree; then report both and call the evidence borderline.
 
-$$ SE = \sqrt{\frac{0.80 \times 0.20}{200}} = \sqrt{\frac{0.16}{200}} = \sqrt{0.0008} \approx 0.0283 $$
+## Worked example 1: has the county flu-vaccination rate changed?
 
-**Step 4 — test statistic.** Dividing gives $z = (0.74 - 0.80) / 0.0283 \approx -2.12$: the audit came in about 2.12 standard errors below the advertised rate.
+**The question.** A county health office (hypothetical) has long used 60% as the share of adults who get a seasonal flu vaccine. This season a random sample of 400 adults finds 214 vaccinated. Is there evidence that the county's rate is no longer 60%?
 
-**Step 5 — p-value.** The area to the left of $-2.12$ under the standard normal curve is about 0.017, and because the alternative points one way only, that tail is the whole p-value.
+**Step 1: hypotheses.** Let $p$ be the proportion of all adults in the county vaccinated this season. There was no reason in advance to look only for a rise or only for a drop, so the test is two-sided:
 
-**Step 6 — decide, then say what it means.** Since 0.017 falls below the threshold set in advance, reject the null claim. Then write the sentence that matters, for a reader who has never taken this course: *these 200 arrivals show an on-time rate of 74 percent, and a shortfall that large would happen in only about seventeen audits in a thousand if the advertised 80 percent were accurate, so there is real evidence the fleet runs below what it advertises.*
+$$H_0: p = 0.60 \qquad H_A: p \ne 0.60$$
 
-One caution keeps that honest: the evidence reaches the fleet only as far as the sample represented it, and an audit that quietly over-sampled rush hour would give identical arithmetic while meaning much less.
+Use a significance level of $\alpha = 0.05$, chosen before looking at the data.
 
-### The same reasoning, transferred
+**Step 2: conditions.** The sample is random. Under $H_0$ the expected counts are $400 \times 0.60 = 240$ vaccinated and $400 \times 0.40 = 160$ not vaccinated, both at least 10.
 
-Now run the identical reasoning on a smaller audit. A different group records 50 arrivals and finds 37 on time: $37 / 50 = 0.74$, the same rate and the same six-hundredth shortfall. What stayed the same: the claims, the null value, the observed rate, the gap, every step of the procedure. What changed: the sample size, and therefore the ruler.
+**Step 3: statistic, standard error and z.** The sample proportion is $\hat{p} = 214/400 = 0.535$. Using $p_0$ in the standard error,
 
-$$ SE = \sqrt{\frac{0.80 \times 0.20}{50}} = \sqrt{0.0032} \approx 0.0566 \qquad z = \frac{-0.06}{0.0566} \approx -1.06 $$
+$$\text{SE} = \sqrt{\frac{0.60 \times 0.40}{400}} = \sqrt{0.0006} \approx 0.0245, \qquad z = \frac{0.535 - 0.600}{0.0245} = \frac{-0.065}{0.0245} \approx -2.65.$$
 
-The area to the left of $-1.06$ is about 0.145, nowhere near the threshold. With 50 arrivals an ordinary wobble is about 0.057, so landing 0.06 low is barely one wobble. The lesson: a p-value does not measure how big a shortfall is, since both audits saw the same one. It measures how surprising that shortfall is given the evidence behind it. The smaller audit also sits at the edge of what the model can handle, since $50 \times 0.20 = 10$ expected late arrivals is the bare minimum.
+**Step 4: p-value.** A $z$ of size 2.65 falls between 2.576 and 3.00 in the table, so the two-sided p-value is between 0.0027 and 0.010; StatKey shows about 0.004 in each tail, so the p-value is about 0.008. If the rate were still 60%, only about 8 in 1,000 random samples of 400 adults would land this far from 0.60.
 
-## Second worked example — a reminder program with a real but tiny effect
+**Step 5: decision.** The p-value of 0.008 is below $\alpha = 0.05$, so reject $H_0$.
 
-**Setting.** A state health department tests whether automated text-message refill reminders lower blood pressure among adults treated for hypertension. Across its clinics, 2,400 patients are randomly assigned, 1,200 to reminders and 1,200 to usual care, with systolic blood pressure measured at six months. Because assignment was random, a group difference can be read causally.
+**Step 6: interval.** The sample had 214 vaccinated and 186 not, both at least 10, so use $\hat{p}$ in the standard error:
 
-```
-Outcome: systolic blood pressure at six months (mm Hg)
+$$\text{SE} = \sqrt{\frac{0.535 \times 0.465}{400}} = \sqrt{0.000622} \approx 0.0249, \qquad 1.96 \times 0.0249 \approx 0.049.$$
 
-Group             n     mean     sd
-Reminders      1200    128.4   15.0
-Usual care     1200    129.9   15.0
+The interval $0.535 \pm 0.049$ runs from 0.486 to 0.584. It lies entirely below 0.60, in agreement with the test.
 
-Difference in means, usual care minus reminders  :  1.5
-Standard error of the difference                 :  0.612
-Test statistic                                   :  2.45
-p-value, two-sided                               :  0.014
-95 percent interval for the difference           :  0.30 to 2.70
-```
+**Conclusion in context.** The survey gives strong evidence that the county's vaccination rate is no longer 60% (p about 0.008). The rate appears to have fallen, to somewhere between about 48.6% and 58.4%. The survey cannot say why; that question needs other information.
 
-**Step 1 — the claims.** The null claim says reminders make no difference on average to six-month blood pressure; the alternative says they make some difference either way. Writing $\mu_R$ and $\mu_U$ for the two group means, $H_0: \mu_U - \mu_R = 0$ against $H_A: \mu_U - \mu_R \neq 0$. Two-sided this time, because a reminder system could in principle be counterproductive.
+## Worked example 2: does a reminder text raise follow-up attendance?
 
-**Step 2 — estimate and standard error.** The observed difference is $129.9 - 128.4 = 1.5$ mm Hg in favour of reminders, and its standard error combines both groups' variability:
+**The question.** In a hypothetical randomized experiment, a clinic randomly assigned 500 patients who needed a follow-up visit to two groups of 250. One group received a text reminder two days before the visit; the other received usual care. Attendance was 180 of 250 in the reminder group and 155 of 250 in the usual-care group. Does the reminder change attendance, and by how much?
 
-$$ SE = \sqrt{\frac{15.0^2}{1200} + \frac{15.0^2}{1200}} = \sqrt{0.1875 + 0.1875} = \sqrt{0.375} \approx 0.612 $$
+**Step 1: hypotheses.** Let $p_R$ and $p_U$ be the attendance proportions under the reminder and under usual care. A reminder could in principle lower attendance too (for example by annoying patients), and no direction was fixed in advance, so the test is two-sided:
 
-**Step 3 — statistic and p-value.** Dividing gives $1.5 / 0.612 \approx 2.45$. With samples this large the reference curve is indistinguishable from the standard normal one, and the two-sided area beyond 2.45 is about 0.014 — below the conventional 0.05 threshold.
+$$H_0: p_R - p_U = 0 \qquad H_A: p_R - p_U \ne 0$$
 
-**Step 4 — what a p-value cannot do.** The 95 percent interval gives 0.3 to 2.7 mm Hg as the plausible range for the true average effect, and its arithmetic is visible: $1.5 \pm 1.96 \times 0.612$, which is $1.5 \pm 1.20$. One or two millimetres of mercury is smaller than the swing in one person's own reading between morning and afternoon. Both sentences are therefore true at once: the reminders had an effect chance cannot comfortably explain, and the effect was small. The p-value establishes the first, the interval the second, and it is the second a committee spending money needs. That is the gap between **statistical significance** and **practical importance**.
+Use a significance level of $\alpha = 0.05$, chosen before looking at the data.
 
-**Step 5 — the same program, a smaller study.** Suppose the department had used 100 patients per group instead of 1,200:
+**Step 2: sample proportions.** $\hat{p}_R = 180/250 = 0.72$ and $\hat{p}_U = 155/250 = 0.62$, a difference of $0.72 - 0.62 = 0.10$, or 10 percentage points.
 
-$$ SE = \sqrt{\frac{15.0^2}{100} + \frac{15.0^2}{100}} = \sqrt{4.5} \approx 2.12 $$
+**Step 3: conditions and the standard error under $H_0$.** Random assignment makes the groups independent and supports a cause-and-effect reading. If $H_0$ is true, both groups share one attendance rate, estimated by pooling them: $\hat{p}_{\text{pool}} = (180 + 155)/500 = 335/500 = 0.67$. The expected counts in each group, $250 \times 0.67 = 167.5$ attending and $250 \times 0.33 = 82.5$ not, are well above 10. Then
 
-A two-sided test at alpha of 0.05 needs a statistic of at least 1.96, so it would need an observed difference of at least $1.96 \times 2.12 \approx 4.16$ mm Hg before calling anything significant. If the real effect is about 1.5, such a study has power of only about eleven percent against it: roughly nine times in ten it would report "no significant difference" while the reminders quietly worked. The design settled that before any data arrived.
+$$\text{SE} = \sqrt{0.67 \times 0.33 \times \left(\frac{1}{250} + \frac{1}{250}\right)} = \sqrt{0.2211 \times 0.008} = \sqrt{0.0017688} \approx 0.0421.$$
 
-## The misreading to avoid
+**Step 4: test statistic and p-value.** The statistic is $z = (0.10 - 0)/0.0421 \approx 2.38$. That falls between 2.33 and 2.576 in the table, so the two-sided p-value is between 0.010 and 0.020; StatKey shows about 0.009 in each tail, and before rounding the two tails total about 0.017. Since 0.017 is below 0.05, reject $H_0$.
 
-Here, near enough word for word, is the sentence that shows up every year: *"p equals 0.017, so there's only about a 1.7 percent chance the agency is telling the truth."*
+**Step 5: interval for the difference.** All four observed counts (180, 70, 155 and 95) are at least 10. For the interval, each group keeps its own proportion:
 
-It is understandable, and it even sounds like what a p-value ought to mean. But look at how the 0.017 was produced. Every step — the 0.80 at the centre, the standard error of 0.0283, the shape of the curve — was built by *assuming* the agency's claim is exactly true. A number computed inside that assumption cannot then tell you how likely the assumption is. It is like measuring a person's height from their shadow while stipulating in advance that they are six feet tall.
+$$\text{SE} = \sqrt{\frac{0.72 \times 0.28}{250} + \frac{0.62 \times 0.38}{250}} = \sqrt{0.0008064 + 0.0009424} = \sqrt{0.0017488} \approx 0.0418.$$
 
-Said carefully, a p-value is the probability of the *data*, given the *claim*; the misreading flips it into the probability of the claim, given the data. Swapping those is the same mistake you met in Week 10, when a test's sensitivity got confused with the chance that someone with a positive result actually has the disease.
+The margin of error is $1.96 \times 0.0418 \approx 0.082$, so the interval $0.10 \pm 0.082$ runs from 0.018 to 0.182. Zero lies outside it, matching the test.
 
-![Four sentences students write about a p-value, and what the number really says.](../assets/figures/week-12/four-misreadings.svg){fig-alt="Four panels, each pairing a sentence students write about a p-value with its correction underneath: two read the p-value as the probability that a claim is true or false, one reads a small p-value as a large effect, and one reads a large p-value as proof the claim holds."}
+**Conclusion in context.** In this hypothetical experiment, 72% of patients attended with the reminder and 62% without (p about 0.017). Because patients were randomly assigned, the evidence supports the conclusion that the reminder itself raised attendance. Its size is uncertain: the 95% interval runs from about 2 to 18 percentage points, and a clinic weighing the cost of reminders should notice how small the low end is.
 
-Three near relatives wear different clothes. *"So there's a 98.3 percent chance the rate really is lower"* treats what remains of the curve as a probability that the alternative is right; it is only what is left of an area. *"The p-value is tiny, so the shortfall must be big"* forgets that a p-value blends the size of an effect with the size of the study — the same 0.06 shortfall gave 0.017 with 200 arrivals and 0.145 with 50. And *"it wasn't significant, so there's no effect"* mistakes failing to rule the null claim out for ruling it in; a study with eleven percent power reports a non-significant result almost every time even when the effect is real.
+## Transfer: the same reasoning for average nightly sleep
 
-One rule to carry out of this week: a p-value is a statement about data under a claim, never a statement about a claim under the data.
+The same steps work for a mean; only the standard error changes.
 
-## Practice on your own
+**The setting.** A hypothetical random sample of 100 students at one university records how long each slept on a recent weeknight: $\bar{x} = 6.8$ hours and $s = 1.1$ hours. Seven hours is often cited as a minimum for adults. Does the mean $\mu$ for all students at this university differ from 7 hours? Test $H_0: \mu = 7$ against $H_A: \mu \ne 7$. Use a significance level of $\alpha = 0.05$, chosen before looking at the data.
 
-These are for your own checking, not for submission. Work them on paper, and note what puzzles you.
+**Conditions.** The sample is random, and with 100 students $\bar{x}$ is close to normal unless a dot plot of the sleep times shows extreme outliers.
 
-1. A campus health service claims that 30 percent of students get a flu shot each year. A survey of 400 randomly selected students finds 132 who did. Write both claims in words and in notation for a two-sided question, then compute the sample proportion, the standard error under the null claim, and the test statistic. Before looking anything up, say whether you expect a large or small p-value.
-2. Two groups audit a cafeteria's claim that 90 percent of orders arrive within five minutes. One times 40 orders and finds 32 fast; the other times 400 and finds 320. Both saw 80 percent. Without computing a p-value, say which group has the stronger case and name the quantity that makes the difference.
-3. A trial of a sleep app reports a mean improvement of 4 minutes per night, a 95 percent interval from 1 to 7 minutes, and p equal to 0.009. Write two sentences a journalist could print: one for what the study established, one for what it did not. Then say which number did more work for you.
-4. Name the misreading in each sentence, then rewrite it defensibly. (a) "The p-value was 0.30, which proves the two groups are the same." (b) "There is a 4 percent chance these results are a fluke." (c) "We tested eighteen outcomes and two were significant, so we found two real effects."
-5. A researcher comparing two teaching methods expects a difference of about two marks on a scale of 100, with a standard deviation near 12 in each group. Using the second worked example as a model, compute the standard error of the difference for 50 students per group, then the smallest difference that would reach significance at alpha of 0.05. Say what that tells her.
+**Test statistic and p-value.**
 
-## Where to read more
+$$\text{SE} = \frac{s}{\sqrt{n}} = \frac{1.1}{\sqrt{100}} = \frac{1.1}{10} = 0.11, \qquad T = \frac{6.8 - 7}{0.11} = \frac{-0.2}{0.11} \approx -1.82.$$
 
-- [Chapter 13 of Introduction to Modern Statistics](https://openintrostat.github.io/ims/foundations-mathematical.html) is this week's core reading: the mathematical models that replace last week's simulation.
-- [Chapter 14 of Introduction to Modern Statistics](https://openintrostat.github.io/ims/foundations-errors.html) goes deeper on decision errors, thresholds, and power.
-- [Chapter 11 of Introduction to Modern Statistics](https://openintrostat.github.io/ims/foundations-randomization.html) is worth rereading beside Chapter 13: seeing one test built twice is what makes the correspondence click.
-- [StatKey](https://www.lock5stat.com/statkey) lets you rebuild the left-hand panel of this week's first figure. Change the sample size and watch the p-value move while the estimate stays put.
-- The [whole of Introduction to Modern Statistics](https://openintrostat.github.io/ims) is open online, and the [life and biomedical sciences supplement](https://www.openintro.org/book/biostat) carries extra clinical examples.
-- Course pages: the [resources page](../resources/index.qmd) and the [schedule](../schedule.qmd).
+For a mean the statistic is called $T$ and is compared with a t distribution, which with 100 observations is nearly identical to the normal curve. A size of 1.82 falls between 1.645 and 1.96 in the table, so the two-sided p-value is between 0.05 and 0.10; software gives about 0.07. That is above 0.05, so fail to reject $H_0$.
+
+**Interval.** $6.8 \pm 1.96 \times 0.11 = 6.8 \pm 0.22$, which runs from 6.58 to 7.02 hours and contains 7, as the test led you to expect.
+
+**Conclusion in context.** The data do not give convincing evidence that these students average something other than 7 hours of sleep on a weeknight (p about 0.07). Nor do they show that the average **is** 7 hours: the plausible values include an average about 25 minutes short of 7 hours.
+
+The table puts the three settings side by side. In every row the test statistic is the estimate minus the null value, divided by SE, and the interval is the estimate plus or minus a multiplier times SE.
+
+| Setting | Estimate | SE for a test | SE for an interval |
+|---|---|---|---|
+| One proportion | $\hat{p}$ | $\sqrt{p_0(1-p_0)/n}$ | $\sqrt{\hat{p}(1-\hat{p})/n}$ |
+| Difference of two proportions | $\hat{p}_1 - \hat{p}_2$ | $\sqrt{\hat{p}_{\text{pool}}(1-\hat{p}_{\text{pool}})(1/n_1 + 1/n_2)}$ | $\sqrt{\hat{p}_1(1-\hat{p}_1)/n_1 + \hat{p}_2(1-\hat{p}_2)/n_2}$ |
+| One mean | $\bar{x}$ | $s/\sqrt{n}$ | $s/\sqrt{n}$ |
+
+## Decision errors: two ways a test can go wrong
+
+Even when every calculation is right, a decision based on a sample can be wrong.
+
+### Type I and Type II errors
+
+![The four possible outcomes of a hypothesis test](../assets/figures/week-12/decision-errors-table.svg){fig-alt="A 2 by 2 table. Columns: H0 true, HA true. Rows: reject H0, fail to reject H0. Rejecting a true H0 is a Type I error (probability α). Failing to reject when HA is true is a Type II error. The other two cells are correct decisions."}
+
+- A **Type I error** rejects $H_0$ when it is true: a false alarm. When $H_0$ is true, the probability of this error is $\alpha$. At $\alpha = 0.05$, about 1 in 20 tests of a true null hypothesis rejects it by chance alone.
+- A **Type II error** fails to reject $H_0$ when $H_A$ is true: a real difference goes undetected.
+
+These mirror the false positives and false negatives of diagnostic testing in [Week 10](week10-probability-risk-diagnosis.qmd). In Worked example 1, a Type I error would declare a change when the vaccination rate really stayed at 60%, perhaps sending outreach money where it is not needed. A Type II error would miss a real drop. Lowering $\alpha$ makes false alarms rarer but missed differences more common, so the choice of $\alpha$ should reflect which error costs more in the setting at hand.
+
+### Power: the chance of detecting a real difference
+
+**Power** is the probability of rejecting $H_0$ when a particular alternative is true; it equals 1 minus the probability of a Type II error for that alternative. Suppose the county's true vaccination rate had fallen from 60% to 55% (hypothetical). The figure shows, from the normal model, how often a two-sided test of $H_0: p = 0.60$ would detect that drop for surveys of different sizes.
+
+![Power to detect a drop from 60% to 55% grows with sample size](../assets/figures/week-12/power-by-sample-size.svg){fig-alt="Line chart of power against sample size for a two-sided test of p = 0.60 when the true proportion is 0.55. At α = 0.05 power is about 0.18 at n = 100, 0.53 at n = 400 and 0.89 at n = 1,000. The dashed α = 0.01 curve is lower throughout."}
+
+At $\alpha = 0.05$, a survey of 100 adults detects the drop only about 18% of the time. With 400 adults, the size of the survey in Worked example 1, power is about 0.53, close to a coin flip; with 1,000 adults it is about 0.89. At $\alpha = 0.01$ power is lower everywhere, about 0.30 with 400 adults. Worked example 1 did reject with 400 adults because its sample happened to fall 6.5 percentage points below 60%; power measures, before any data exist, how often a study of that size would succeed.
+
+Power rises with the sample size, the size of the true difference, and $\alpha$; studies are usually planned for power of at least 0.80 at the smallest difference that would matter. With only an 18% chance of detection, a small study's "not significant" says little.
+
+## Statistical versus practical significance
+
+"Statistically significant" means only that the p-value fell at or below $\alpha$. It does not mean large, important or useful. The figure shows four hypothetical studies of reminder programs, each measuring the change in follow-up attendance. Suppose a clinic considers a program worth its cost only if it raises attendance by at least 5 percentage points, the shaded region.
+
+![Four hypothetical reminder studies: statistical significance and practical importance are different questions](../assets/figures/week-12/significance-vs-importance.svg){fig-alt="Intervals for the change in attendance in percentage points, shaded at 5 or more as large enough to matter. A: 0.5 (0.2 to 0.8), p ≈ 0.001. B: 13.3 (−3.1 to 29.8), p ≈ 0.12. C: 10.0 (1.8 to 18.2), p ≈ 0.017. D: 0.4 (−1.5 to 2.3), p ≈ 0.68."}
+
+### A tiny difference in a very large study
+
+Study A had 200,000 patients per group: 62.5% attended with reminders and 62.0% without, a difference of 0.5 percentage points. With groups that large the standard error is only about 0.0015, which puts $z$ at about 3.3 and the p-value near 0.001. The evidence for a nonzero effect is strong and the interval is narrow, 0.2 to 0.8 percentage points (the lower strip of the figure enlarges it), yet the whole interval is far too small to be worth the cost. With enough data, almost any nonzero difference becomes statistically significant.
+
+### A large estimate from a small study
+
+Study B had only 60 patients per group: 45 (75%) attended with reminders and 37 (about 61.7%) without. Its estimate of 13.3 percentage points is the largest of the four, yet the p-value is about 0.12 and the interval runs from $-3.1$ to $29.8$ percentage points. The study can rule out neither no effect nor a very large one. Here "not significant" means "not enough information," not "no effect."
+
+### Studies C and D: reading each interval against the threshold
+
+Study C is Worked example 2: significant, with an interval from 1.8 to 18.2 percentage points that lies mostly, though not entirely, above the threshold. Study D, with 5,000 patients per group, is not significant (p about 0.68), but its narrow interval, $-1.5$ to $2.3$ percentage points, sits well below 5: good evidence that any effect is too small to matter. Report the estimate and its interval in meaningful units alongside the p-value, and judge size with knowledge of the setting.
+
+## A common misreading: the p-value is the chance that the null is true
+
+The most common p-value mistake is to read "p = 0.017" as "a 1.7% chance that $H_0$ is true," or as "a 98.3% chance that the reminder works." Both readings are wrong. The p-value is computed by *assuming* $H_0$ is true and asking how surprising the data would be: it is a probability about the data, given the hypothesis. The misreading flips it into a probability about the hypothesis, given the data. [Week 10](week10-probability-risk-diagnosis.qmd) showed the same flip: the chance of a positive test given no disease is not the chance of no disease given a positive test. Whether a surprising result reflects a real effect also depends on how plausible that effect was before the study, which the p-value does not measure.
+
+A correct reading of Worked example 2 is: "If reminders made no difference, a gap of 10 percentage points or more, in either direction, would turn up in only about 1.7% of experiments like this one."
+
+### Why a p-value is not proof
+
+Even a correctly read small p-value is evidence, not proof:
+
+- **Chance.** At $\alpha = 0.05$, about 1 in 20 tests of a true null hypothesis still comes out "significant."
+- **Bias.** A p-value accounts only for the variation from random sampling or random assignment. A biased sample, or confounding in an observational comparison (see [Week 6](week06-confounding.qmd)), can give a tiny p-value for a misleading difference.
+- **Replication.** Trust grows when independent studies point the same way, the subject of [Week 14](week14-meta-analysis-forest-plots.qmd).
+
+In the other direction, a large p-value is not proof of no effect; the study may simply have had low power.
+
+## Practice questions (ungraded)
+
+Explain your reasoning in words as well as numbers.
+
+1. A hospital's 30-day readmission rate has long been 15% (hypothetical). After a new discharge program starts, 36 of a random sample of 300 recent patients are readmitted. Carry out a two-sided test at $\alpha = 0.05$, from hypotheses to a conclusion in context. *What to look for:* use $p_0 = 0.15$ in the standard error, and ask whether a before-and-after comparison like this could show that the program caused any change.
+2. A hypothetical trial reports a 95% confidence interval of 0.03 to 0.11 for the recovery rate with a new treatment minus the recovery rate with the standard one. Explain what "95% confident" means here. Would a two-sided test of no difference at $\alpha = 0.05$ reject $H_0$? How can you tell without calculating?
+3. An inspector tests $H_0$: a town's tap water meets the safety standard for lead, against $H_A$: it does not. Describe a Type I error and a Type II error in this setting. Which would you most want to avoid, and would that push you toward a larger or a smaller $\alpha$?
+4. In a hypothetical randomized experiment with 400,000 people, those given a phone app averaged 40 more daily steps than those without it, with p = 0.0002. Write two sentences for a general reader that report both the strength of the evidence and the size of the effect.
+5. Rewrite this sentence so that it is correct: "The p-value was 0.03, so there is only a 3% chance that the new policy had no effect."
+6. Two teams test the same reminder program, one with 60 patients per group and one with 600, and neither finds a significant difference. Which result is stronger evidence that the program has little effect? *What to look for:* compare the widths of the intervals you would expect.
+
+## Read further on tests and intervals
+
+- *Introduction to Modern Statistics*: [Chapter 13, Inference with mathematical models](https://openintrostat.github.io/ims/foundations-mathematical.html) covers the normal model, standard errors, $z$ statistics and intervals; [Chapter 14, Decision errors](https://openintrostat.github.io/ims/foundations-errors.html) covers error types and power; [Chapter 16, Inference for a single proportion](https://openintrostat.github.io/ims/inference-one-prop.html) matches Worked example 1. For Worked example 2 and the transfer example, see [Chapter 17, Inference for comparing two proportions](https://openintrostat.github.io/ims/inference-two-props.html) and [Chapter 19, Inference for a single mean](https://openintrostat.github.io/ims/inference-one-mean.html). The book shows R code in places; you can skip the code and read the output and explanations.
+- [StatKey](https://www.lock5stat.com/statkey/): **Theoretical Distributions > Normal** finds tail areas for any $z$. To connect back to Week 11, run **Randomization Hypothesis Tests > Test for Single Proportion** with the warm-up numbers; the simulated p-value will be about 0.13, a little above the normal model's 0.11 (see the note after the table).
+- Optional, for health examples: [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat/), Chapter 4, Foundations for inference.
 
 ## Where this goes next
 
-Week 13 turns this machinery on categorical outcomes, where the data arrive as counts in a two-way table rather than as a mean or a proportion. You will compare risks between groups, meet relative risk and the odds ratio, and see the chi-square idea: compare every observed count with the count expected if the two variables were unrelated, then add up the mismatch. The vocabulary carries over unchanged; only the statistic in the middle is new. Read ahead in [Week 13](week13-categorical-outcomes.qmd).
-
-If this week's logic still feels like a magic trick, go back to [Week 11](week11-simulation-based-inference.qmd), rebuild one null distribution by shuffling, and draw the matching curve beside it. The classical machinery is not a different idea; it is the same idea with the labour taken out. The [notes index](index.qmd) has both weeks side by side.
+- Back: [Week 11: Simulation-based inference](week11-simulation-based-inference.qmd) built the null-distribution logic that this week turns into formulas.
+- Next: [Week 13: Categorical outcomes](week13-categorical-outcomes.qmd) applies these tools to rates, proportions and two-way tables.
+- Later: [Week 14: Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd) lines up confidence intervals from many studies, much like the four reminder studies above.
+- See the [notes overview](index.qmd) for all weeks and the [course schedule](../schedule.qmd) for the order of the weeks.

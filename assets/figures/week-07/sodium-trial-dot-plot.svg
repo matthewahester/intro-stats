@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 350" width="640" height="350" role="img" aria-labelledby="title desc">
+  <title id="title">Change in systolic blood pressure for 24 volunteers, by diet group (hypothetical)</title>
+  <desc id="desc">Dot plot of blood pressure change. Reduced sodium: −12 to 2 mm Hg, mean −5.0, 10 of 12 had a drop. Usual diet: −6 to 6, mean 0.0, 5 of 12 had a drop. The groups overlap, but the reduced-sodium dots sit farther left.</desc>
+  <rect x="0" y="0" width="640" height="350" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="60" y1="290" x2="610" y2="290" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="60" y1="290" x2="60" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="60" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−14</text>
+  <line x1="110" y1="290" x2="110" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="110" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−12</text>
+  <line x1="160" y1="290" x2="160" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="160" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−10</text>
+  <line x1="210" y1="290" x2="210" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="210" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−8</text>
+  <line x1="260" y1="290" x2="260" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="260" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−6</text>
+  <line x1="310" y1="290" x2="310" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="310" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−4</text>
+  <line x1="360" y1="290" x2="360" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="360" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−2</text>
+  <line x1="410" y1="290" x2="410" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="410" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="460" y1="290" x2="460" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="460" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="510" y1="290" x2="510" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="510" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="560" y1="290" x2="560" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="560" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="610" y1="290" x2="610" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="309" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <text x="335" y="332" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Change in systolic blood pressure over six weeks (mm Hg)</text>
+  <line x1="410" y1="40" x2="410" y2="290" stroke="#8a8780" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="416" y="50" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">no change</text>
+  <text x="60" y="24" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Left of 0: blood pressure went down.   Right of 0: it went up.</text>
+  <text x="60" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b" font-weight="bold">Reduced sodium (n = 12)</text>
+  <line x1="60" y1="128" x2="610" y2="128" stroke="#d8d6d0" stroke-width="1"/>
+  <circle cx="110" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="185" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="210" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="235" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="260" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="260" cy="107" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="285" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="310" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="335" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="360" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="410" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="460" cy="120" r="6" fill="#8a4a2b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="285,130 278,143 292,143" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <text x="296" y="143" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="bold">mean −5.0</text>
+  <text x="60" y="178" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#35566b" font-weight="bold">Usual diet (n = 12)</text>
+  <line x1="60" y1="236" x2="610" y2="236" stroke="#d8d6d0" stroke-width="1"/>
+  <circle cx="260" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="310" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="335" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="360" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="385" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="410" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="410" cy="215" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="435" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="460" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="485" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="510" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="560" cy="228" r="6" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <polygon points="410,238 403,251 417,251" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <text x="421" y="251" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="bold">mean 0.0</text>
+</svg>

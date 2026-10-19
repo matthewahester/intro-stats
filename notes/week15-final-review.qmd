@@ -8,244 +8,187 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: what would it take to believe a health headline?
 
-This week brings no new machinery. What arrives instead is the shape of everything before it. The course was never fourteen topics; it was one argument, built in order, each piece deciding what the next is allowed to mean.
+A made-up headline reads: "Adults who take Supplement H get 19% fewer winter infections." Before you believe it, write down three questions you would ask, and beside each one, the week of this course it comes from.
 
-Here is that argument in a single breath. How the data were produced sets a ceiling on what any comparison can show. A summary compresses. An association is a pattern, not a mechanism. A model adjusts for what somebody measured, and nothing else. Chance is a rival explanation whose size can be measured. And one study is one line of a longer table. Every technique you met serves one of those six sentences.
+This week adds no new material. It joins the earlier weeks into one line of reasoning; the headline returns in Worked example 2.
 
-Week 14 left you at the widest scale, reading a forest plot in which a dozen studies argue with one another. That is where public claims live. Nobody hands you a study; they hand you a headline summarizing somebody's summary of one. This week you practise walking that sentence backwards to the data, then forwards again saying only what the data will carry.
+## Why one chain of reasoning helps you now
 
-One note first. Every number here is invented for teaching: the arithmetic is real and worth checking with a calculator, the studies are not.
-
-### Why this matters beyond the classroom
-
-Picture a clinic manager holding a one-page summary from a vendor: patients on the new therapy schedule recovered about four days faster. Four days is a lot. The schedule costs money and reshuffles staffing, and she has a meeting on Thursday. If all she can read is the four, the decision has been made for her. If she can ask who ended up on each schedule, the four shrinks to about two, and two days may not be worth the reshuffle. That one question — were the groups comparable before anything happened to them? — separates buying a real improvement from buying a difference in who was sick to begin with.
-
-You will stand on both sides of that page. This week is about not being fooled in either direction: not talked into a claim the design cannot support, nor out of a real finding because a p-value landed at 0.06.
+Fourteen weeks of material are easier to hold as one argument that every study must make: where the data came from, what they show, how sure we can be, and what may be concluded. You will use that argument whenever a health or policy claim asks for your trust.
 
 ## What you will be able to do
 
-- Trace a claim backwards to its data: what was measured, on whom, how those people entered the study, and which comparison produced the number.
-- Choose the display, the summary, and the comparison that a given pair of variables calls for, in that order.
-- Turn a crude difference into an adjusted one, and say plainly what the adjustment fixed and what it left untouched.
-- Read a p-value, an interval of plausible values, and one line of a forest plot without overstating any of the three.
-- Name the misreading a sentence commits, then rewrite it so it stops.
-- Write a conclusion for a non-technical reader carrying the size, the uncertainty, and the limits of the design.
+By the end of this week you can:
 
-## Words worth owning
+- trace a study from question to conclusion, naming the week behind each step;
+- decide from the design whether a study supports a causal claim, an association only, or a generalization;
+- read an estimate with its standard error, interval and p-value, and say what each does not show;
+- spot common misreadings from the course and correct them in plain language.
 
-| Term | What it means in this course |
-|------|------------------------------|
-| case | one row of the data table: the person, patient, or county measured |
-| confounder | a variable linked to both the explanatory variable and the response, so it rivals your explanation |
-| crude comparison | two groups compared exactly as they came, with nothing held fixed |
-| adjusted comparison | the same comparison made within groups that already match on some measured variable |
-| p-value | how often chance alone would produce a result at least as extreme as the observed one |
-| interval of plausible values | the values of the estimated quantity that the data do not rule out |
-| risk difference | one group's rate minus the other group's rate, in the units of the outcome |
-| responsible claim | the strongest sentence the design, size, and uncertainty all support |
+## Words to know from the whole course
 
-## The course as one argument
+| Term | Meaning | Week |
+|---|---|---|
+| Random sampling | Cases chosen by chance from a population; supports generalizing to it | 2 |
+| Random assignment | Groups formed by chance; supports cause-and-effect claims | 2 |
+| Confounding variable | Linked to both the explanatory and the response variable; can create, hide or reverse an association | 6 |
+| Standard error | How much a statistic varies from sample to sample | 11, 12 |
+| Risk ratio and odds ratio | Ratio of two groups' risks; ratio of their odds (from logistic regression); 1 means no difference | 4, 9, 10 |
+| Confidence interval | Plausible values for a parameter, from a method that captures it in a stated share of samples, such as 95% | 11, 12 |
+| p-value | The probability, if $H_0$ were true, of a result at least as extreme as the one observed | 11, 12 |
+| Pooled estimate | A weighted average of several studies' results, shown in a forest plot | 14 |
 
-Fourteen weeks of material is too much to hold as a list, but not as a chain. Each link below is a claim about evidence that constrains the link after it, which is why the order matters more than the vocabulary.
+## The course as one line of reasoning
 
-![The six links the course built, in the order it built them.](../assets/figures/week-15/course-argument-map.svg){fig-alt="A vertical chain of six numbered claims, from how data are produced through summaries, association, adjustment and chance, to bodies of evidence, each labelled with the weeks that built it and ending in the Week 15 question."}
+Every week answered one question in a longer argument, laid out below in eight steps. Walk any study down them in order. The worked examples use these step numbers and skip steps that do not apply. The side arrow marks the most important link: the design, fixed before any data exist, sets what the conclusion may say.
 
-### What each link buys you
+![The course as one chain of reasoning, from question to conclusion](../assets/figures/week-15/course-reasoning-chain.svg){fig-alt="Eight steps and the weeks behind each: question (1), design (2), data (1), summaries (3, 4, 5, 13), models (6, 8, 9), uncertainty (10 to 13), evidence synthesis (14), conclusion (practiced in 7). An arrow: design limits the conclusion."}
 
-Link one buys comparability and reach. Random assignment tends to make groups alike on everything, measured or not, before the treatment lands; random sampling tends to make the sample resemble the population you want to talk about. Neither substitutes for the other.
+### Question and design: what kind of claim is possible
 
-Link two buys honesty about compression. The mean of a right-skewed variable sits above its median for a reason, and reporting only the mean hands the reader a number no typical person has. The picture is the check on the summary.
+Start with the claim: the cases, the variables, and the comparison ([Week 1](week01-data-evidence.qmd)). Then ask how the data were produced ([Week 2](week02-study-design.qmd)). Random sampling supports generalizing to the sampled population; random assignment supports cause and effect, because it balances other variables between groups on average. An observational study, however large, shows association.
 
-Link three buys restraint. Two variables moving together is a fact about the data. Which moves which, or whether a third thing moves both, is a question the scatterplot cannot settle.
+### Data and summaries: describe before you decide
 
-Link four buys a partial repair. Stratifying, or fitting a model with extra predictors, compares like with like on the variables in the model — valuable and limited at once, because nothing in the arithmetic knows about the variable nobody wrote down.
+Describe before you test, and match the summary to the variable types: a graph with center and spread for one quantitative variable ([Week 3](week03-one-variable-summaries.qmd)), side-by-side displays to compare groups ([Week 4](week04-comparing-groups.qmd)), a scatterplot and $r$ for two quantitative variables ([Week 5](week05-association.qmd)), and rates and two-way tables for categorical outcomes ([Week 13](week13-categorical-outcomes.qmd)).
 
-Link five buys a rival you can size. Before the inference weeks, "that could just be chance" was an unanswerable objection. A null distribution turns it into a number, and an interval turns an estimate into a range.
+### Models: adjusting and describing relationships
 
-Link six buys perspective. Five studies with overlapping intervals often agree far more than their headlines suggest, and pooling them sharpens precision without repairing any bias they share.
+A confounding variable can create, hide or reverse an association ([Week 6](week06-confounding.qmd)). Comparing within its levels, or adding it to a model, gives an adjusted comparison. A fitted line $\hat{y} = b_0 + b_1 x$ describes how the mean response differs across cases with different values of $x$ ([Week 8](week08-simple-regression.qmd)); multiple and logistic regression report adjusted slopes and odds ratios ([Week 9](week09-multiple-logistic-regression.qmd)). Adjustment handles only the variables that were measured.
 
-### Which link a claim actually rests on
+### Uncertainty: could chance alone explain this?
 
-Reading forwards builds a claim; reading backwards tests one. Work up the chain and stop at the first link that will not hold.
+Probability describes risk and diagnostic tests ([Week 10](week10-probability-risk-diagnosis.qmd)). Randomization tests and bootstrap intervals show by simulation how much a statistic varies from sample to sample ([Week 11](week11-simulation-based-inference.qmd)); classical tests and intervals model that variation mathematically ([Week 12](week12-classical-hypothesis-testing.qmd), [Week 13](week13-categorical-outcomes.qmd)). A small p-value says the data would be surprising if $H_0$ were true. Neither a p-value nor an interval repairs a weak design.
 
-"Students who use the tutoring centre earn higher grades, so the centre works." The chain breaks at link one: students who go are students who chose to go, and no careful modelling downstream repairs that.
+### Synthesis and conclusion: what the evidence as a whole supports
 
-"The screening test caught 96 of every 100 cases, so a positive result means you almost certainly have the condition." This passes link one, since sensitivity is a property of the test. It breaks at link five, in the Week 10 form: the chance of a positive result given the disease is not the chance of the disease given a positive result.
+A forest plot shows each study's estimate and interval, and a pooled estimate combines them, giving more weight to more precise (usually larger) studies ([Week 14](week14-meta-analysis-forest-plots.qmd)). A responsible conclusion states the effect size, its uncertainty, the kind of claim the design allows, and who it applies to, in plain words, as practiced in [Week 7](week07-synthesis-midterm.qmd).
 
-## Choosing the right comparison
+## Worked example 1: a randomized walking program and blood pressure
 
-Students often arrive at a review week hoping for a flowchart of tests. There is a chart, and it is useful, but it sits lower in the reasoning than people expect. What decides the display, summary, and comparison is the *type* of the variables in front of you.
+**The study (hypothetical).** Eighty adult volunteers with mildly high blood pressure were randomly assigned, 40 to a 12-week brisk-walking program and 40 to their usual routine. The response is the change in systolic blood pressure (mmHg) over 12 weeks; negative means it fell.
 
-![From the variables in front of you to the display, the summary, and the comparison.](../assets/figures/week-15/comparison-decision-chart.svg){fig-alt="A seven-row chart keyed on variable types. Each row runs left to right from what you are looking at, to a first display, to the summary worth quoting, to the comparison or model that fits it."}
+**1. Question.** Does the program lower systolic blood pressure, and by how much? The explanatory variable (group) is categorical, and the response variable (change in blood pressure) is quantitative.
 
-### Start from the variables, not from the formula
+**2. Design.** Random assignment makes this a randomized experiment, so a clear difference can be attributed to the program. The volunteers were not a random sample, which limits whom the results describe.
 
-Ask two questions and the row picks itself. How many variables am I comparing, and is each numerical or categorical? Two groups and a numerical outcome gives side-by-side boxplots, a mean and spread in each group, and a difference in means. Two categorical variables gives a two-way table, conditional proportions, and a risk difference or relative risk. Two numerical variables gives a scatterplot, a correlation, and a regression slope. A yes-or-no outcome gives odds and logistic regression, because a straight line would eventually predict probabilities above one.
+**3–4. Data and summaries.** The dot plot shows every participant: similar spreads, no extreme outliers, and the walking group sitting lower.
 
-The display comes first, because it tells you whether the summary is fair. You never pick a summary and then hunt for a picture that flatters it.
+![Change in systolic blood pressure for 80 hypothetical adults, by group](../assets/figures/week-15/walking-trial-dotplot.svg){fig-alt="Dot plots of blood pressure change for 40 walkers and 40 adults on their usual routine. Walking mean −6.2 mmHg, usual-routine mean −1.0 mmHg; the two groups overlap a great deal."}
 
-### What the chart cannot decide for you
+| Group | $n$ | Mean change $\bar{x}$ (mmHg) | Median (mmHg) | SD $s$ (mmHg) |
+|---|---|---|---|---|
+| Walking program | 40 | −6.2 | −6.0 | 8.0 |
+| Usual routine | 40 | −1.0 | −2.5 | 7.5 |
 
-The chart says which comparison fits. It says nothing about whether that comparison means anything, and that is not a flaw in it. Two questions sit above it: how were these data produced, and what comparison is actually being made, against what?
+The difference in means, walking minus usual routine, is
 
-Two rows deserve a warning label. The multiple-regression row produces adjusted estimates, easy to over-trust: "adjusted for age and income" means adjusted for the age and income that were recorded, in the form they were recorded. The logistic row produces odds ratios, easy to over-read: when an outcome is common, an odds ratio runs noticeably larger than the relative risk, as the second worked example shows.
+$$\bar{x}_W - \bar{x}_U = -6.2 - (-1.0) = -5.2 \text{ mmHg.}$$
 
-## Worked example — sleep hours and course averages on one campus
+**6. Uncertainty.** The standard error of the difference combines two earlier ideas: the one-mean standard error $s/\sqrt{n}$ ([Week 12](week12-classical-hypothesis-testing.qmd)), and the rule that the variances of two independent groups add ([Week 13](week13-categorical-outcomes.qmd)).
 
-**Setting.** A campus survey invited students to report their average nightly sleep and their course average out of 100. One hundred and twenty responded, and a student newspaper summarized the result as "sleep more, score higher".
+$$\text{SE} = \sqrt{\frac{s_W^2}{n_W} + \frac{s_U^2}{n_U}} = \sqrt{\frac{8.0^2}{40} + \frac{7.5^2}{40}} = \sqrt{1.600 + 1.406} = \sqrt{3.006} \approx 1.73 \text{ mmHg.}$$
 
-**Step 1. Cases and variables.** Each case is one responding student. The explanatory variable is self-reported nightly sleep; the response is the course average out of 100. Hours of paid work per week were recorded too.
+An approximate 95% confidence interval is the estimate plus or minus 1.96 standard errors, as in Week 12:
 
-**Step 2. How the data were produced.** Students volunteered. Nobody assigned anyone to sleep more, nobody sampled the campus at random, and both quantities are self-reported. That is a link-one problem, and nothing later repairs it.
+$$-5.2 \pm 1.96(1.73) = -5.2 \pm 3.39, \quad \text{about } -8.6 \text{ to } -1.8 \text{ mmHg.}$$
 
-**Step 3. The crude comparison.** Splitting respondents at seven hours gives two groups.
+To test $H_0: \mu_W - \mu_U = 0$ against $H_A: \mu_W - \mu_U \ne 0$, the test statistic is $T = -5.2 / 1.73 \approx -3.0$. Software gives a two-sided p-value of about 0.004 (a randomization test gives nearly the same), so at $\alpha = 0.05$ we reject $H_0$.
 
-| Sleep group | Number of students | Mean course average |
-|-------------|--------------------|---------------------|
-| Under seven hours | 66 | 79.8 |
-| Seven hours or more | 54 | 85.6 |
-| All respondents | 120 | 82.4 |
+**8. Responsible conclusion.** In this hypothetical experiment, walking lowered systolic blood pressure by about 5 mmHg on average compared with the usual routine (95% confidence interval for the difference about −8.6 to −1.8 mmHg, that is, a reduction of roughly 2 to 9 mmHg). Because the groups were formed at random, the program is the likely cause. The effect is an average, not a promise: 6 of the 40 walkers saw a rise, while 22 of the 40 on the usual routine saw a fall. The results apply most directly to volunteers like these.
 
-The crude difference is $85.6 - 79.8 = 5.8$ on the 0-to-100 scale. Check the margin before trusting it: the group means, weighted by group size, must reproduce the overall mean.
+## Worked example 2: Supplement H, smoking, and five trials
 
-$$\frac{66 \times 79.8 + 54 \times 85.6}{120} = \frac{5266.8 + 4622.4}{120} = \frac{9889.2}{120} = 82.41$$
+**The study (hypothetical).** A survey of 2,000 adults recorded whether each took a daily herbal supplement, Supplement H (1,000 did, 1,000 did not), whether they smoked, and whether they had a respiratory infection that winter.
 
-That rounds to 82.4, so the table is internally consistent.
+**1. Question.** Do users have fewer winter infections, and does the supplement prevent them? Supplement use (explanatory) and infection (response) are both categorical.
 
-**Step 4. The rival explanation.** Paid work is tied to both variables: students working long hours sleep less and study less. Splitting the same students by work hours gives four cells.
+**2. Design.** This is an observational study: people chose whether to take the supplement, so it can show association but not, by itself, cause. Nothing says the 2,000 adults were a random sample, so even the association applies most directly to adults like those surveyed.
 
-| Paid work | Sleep group | Number | Mean course average |
-|-----------|-------------|--------|---------------------|
-| Under 15 hours a week | Under seven hours | 26 | 83.1 |
-| Under 15 hours a week | Seven hours or more | 46 | 86.6 |
-| 15 hours or more | Under seven hours | 40 | 77.7 |
-| 15 hours or more | Seven hours or more | 8 | 80.0 |
+**3–4. Data and summaries.** Infection rates were $210/1{,}000 = 0.210$ for users and $260/1{,}000 = 0.260$ for non-users: a difference of $0.210 - 0.260 = -0.050$ (5.0 percentage points) and a risk ratio (relative risk) of $0.210/0.260 \approx 0.81$, about 19% lower. That is the warm-up headline.
 
-Check the margins again. The short-sleep cells hold $26 + 40 = 66$ students and the long-sleep cells $46 + 8 = 54$, matching the first table; the work strata hold $26 + 46 = 72$ and $40 + 8 = 48$, totalling 120.
+**5. Models: adjusting for smoking.** Only 10% of users smoked, compared with 30% of non-users, and smokers had far more infections, so smoking is a plausible confounder. Compare within smoking groups:
 
-**Step 5. The adjusted comparison.** Compare within each work stratum, which is the whole idea of adjustment.
+| Smoking status | Users infected | Users rate | Non-users infected | Non-users rate |
+|---|---|---|---|---|
+| Non-smokers | 172 of 900 | 19.1% | 140 of 700 | 20.0% |
+| Smokers | 38 of 100 | 38.0% | 120 of 300 | 40.0% |
+| All adults | 210 of 1,000 | 21.0% | 260 of 1,000 | 26.0% |
 
-- Among students working under 15 hours: $86.6 - 83.1 = 3.5$.
-- Among students working 15 hours or more: $80.0 - 77.7 = 2.3$.
-
-Both gaps are smaller than the crude 5.8. Combining them, weighted by stratum size:
-
-$$\frac{72 \times 3.5 + 48 \times 2.3}{120} = \frac{252 + 110.4}{120} = \frac{362.4}{120} = 3.02$$
-
-A gap of about 5.8 becomes about 3.0 once students with similar work hours are compared. Roughly half the crude difference was work hours wearing a sleep costume. Notice why: among light workers, 46 of 72 students sleep seven hours or more, while among heavy workers only 8 of 48 do. The two sleep groups were never made of similar students.
-
-**Step 6. Chance.** Resampling the 120 students many times, the middle 95% of bootstrap crude differences ran from about 2.9 to 8.7, and of adjusted differences from about -0.2 to 6.2. The crude interval clears zero; the adjusted interval does not.
-
-**What it means.** Among students who chose to answer this survey, those reporting seven or more hours of sleep averaged about 5.8 higher, and about 3.0 higher once paid work hours were held fixed, with plausible values for that adjusted gap running from roughly zero to six. Because nobody assigned sleep, and volunteers reported both numbers themselves, these data show an association and cannot show that sleeping more raises a course average.
-
-### The same reasoning, transferred
-
-Return to the clinic manager. Ninety patients received one of two physical therapy schedules, chosen by their therapists rather than assigned. Schedule A took a mean of 21.0 days across 50 patients; Schedule B took 25.4 days across 40. The crude difference favours A by about 4.4 days. Now split by injury severity at intake.
-
-| Severity at intake | Schedule | Number | Mean days to recover |
-|--------------------|----------|--------|----------------------|
-| Mild | A | 38 | 19.5 |
-| Mild | B | 16 | 21.6 |
-| Severe | A | 12 | 25.8 |
-| Severe | B | 24 | 28.0 |
-
-Within mild cases the gap is $21.6 - 19.5 = 2.1$ days; within severe cases it is $28.0 - 25.8 = 2.2$ days. Weighted by the 54 mild and 36 severe patients, the adjusted gap is $(54 \times 2.1 + 36 \times 2.2) / 90 = 192.6 / 90 = 2.14$ days, about half the crude 4.4.
-
-What stayed the same: the crude-then-adjusted move, and the discovery that the groups were built differently — 38 of A's 50 patients were mild cases, against 16 of B's 40. What changed: the response is a time, so smaller is better; the confounder is clinical rather than a lifestyle variable; and the stakes are a purchase.
-
-## Second worked example — a reminder experiment and the evidence around it
-
-**Setting.** A regional health programme asked whether a text-message reminder raises the share of people who complete a follow-up screening. Eight hundred enrolled people were randomly assigned, 400 to a reminder and 400 to none, and completion within eight weeks was recorded. This exercises a different half of the course: categorical outcomes, an experiment, and a body of evidence.
-
-| | Completed screening | Did not complete | Total |
-|---|---|---|---|
-| Reminder sent | 232 | 168 | 400 |
-| No reminder | 188 | 212 | 400 |
-| Total | 420 | 380 | 800 |
-
-**Step 1. Condition on the right margin.** The question is what share completed in each assigned group, so divide along the rows: $232 / 400 = 0.58$ with a reminder, $188 / 400 = 0.47$ without.
-
-**Step 2. Two honest summaries of the same pair of rates.**
-
-$$\text{risk difference} = 0.58 - 0.47 = 0.11 \qquad \text{relative risk} = \frac{0.58}{0.47} \approx 1.23$$
-
-Eleven percentage points more of the reminder group completed, which is the same as saying completion was about 1.23 times as likely. The first number tells a director how many extra people got screened per hundred enrolled; the second gives the proportional change. Only the first counts people.
-
-**Step 3. Watch the odds ratio stretch.** The odds of completing were $232 / 168 \approx 1.381$ with a reminder and $188 / 212 \approx 0.887$ without, so the odds ratio is $1.381 / 0.887 \approx 1.56$. That is far bigger than the relative risk of 1.23, and nothing changed but the scale. This is the Week 13 warning: when an outcome is common, an odds ratio exaggerates a relative risk. Reporting 1.56 as "56% more people completed" would be wrong by more than a factor of two.
-
-**Step 4. The wrong margin, for contrast.** Suppose someone writes "58% of the people who completed the screening had received a reminder". Of the 420 completers, 232 received a reminder, and $232 / 420 \approx 0.55$. That sentence is wrong twice over: wrong figure, and wrong margin, describing completers by their group instead of groups by their completion.
-
-**Step 5. Chance.** Shuffling the group labels many times gives a null distribution centred near zero; about 0.002 of the shuffles produced a gap of 0.11 or larger in size. Resampling gives a middle 95% of about 0.04 to 0.18. Chance alone is a poor explanation for this gap, which is plausibly anywhere from four to eighteen percentage points, a wide range for a budget decision.
-
-**Step 6. One line of a longer table.** Four other programmes studied the same idea. Their risk differences sit alongside this one.
+Within each smoking group, the gap shrinks to 0.9 and 2.0 percentage points. A logistic regression agrees; it reports odds ratios, which is why its unadjusted value is 0.76 rather than the risk ratio of 0.81.
 
 ```
-Study     n       risk difference    interval of plausible values
-A (this)    800         0.11              0.04 to 0.18
-B           340         0.03             -0.05 to 0.11
-C         1,500         0.08              0.03 to 0.13
-D           200         0.02             -0.09 to 0.13
-E         2,000         0.06              0.02 to 0.10
-Combined  4,840         0.07              0.04 to 0.09
+Response: winter infection (yes = 1)     Odds ratio    95% CI
+Supplement, unadjusted                         0.76    (0.61, 0.93)
+Supplement, adjusted for smoking               0.94    (0.75, 1.17)
+Smoker, adjusted for supplement                2.64    (2.07, 3.38)
 ```
 
-Weighting each study by its precision, the combined estimate is about 0.07 with a much narrower interval, roughly 0.04 to 0.09. Studies B and D have intervals including zero, and a careless reader calls them failures to replicate. They are not. They are small, so their intervals are wide, and both are consistent with 0.07. The two largest studies, C and E, land closest to the combined value, which is what precision weighting is for.
+**6. Uncertainty.** The standard error of the raw difference in proportions is
 
-**What it means.** Because assignment was random, a causal verb is available here in a way it was not in the first example: sending the reminder raised completion in this programme. The best estimate from the whole body of evidence is about seven additional completions per hundred enrolled, plausibly between four and nine. Two cautions survive: every result comes from a programme that chose to study and report this, so small studies with discouraging results may never have been written up, and each study used its own follow-up window.
+$$\text{SE} = \sqrt{\frac{0.21(0.79)}{1000} + \frac{0.26(0.74)}{1000}} = \sqrt{0.000166 + 0.000192} \approx 0.0189.$$
 
-## The recurring misreadings in one place
+An approximate 95% interval is $-0.050 \pm 1.96(0.0189) = -0.050 \pm 0.037$, about $-0.087$ to $-0.013$. Chance alone does not easily explain the raw gap, but the interval says nothing about why it exists. Adjusted for smoking, the supplement's odds ratio is 0.94, and its interval (0.75 to 1.17) includes 1.
 
-Almost every wrong sentence this term has been one of eight wearing different clothes. Reading them together, with the repair beside each, is faster than rereading eight sets of notes.
+**7. Evidence synthesis.** Now suppose five randomized trials, also hypothetical, compared Supplement H with a placebo. Every trial's interval crosses 1; the pooled risk ratio is 0.98 (95% CI 0.89 to 1.08). The pooled value is a weighted average of the five trials' log risk ratios: Trial D, the most precise, carries about 42% of the weight (the largest square) and Trial C about 7% (the smallest).
 
-![The sentences this course keeps rewriting, with the repair beside each.](../assets/figures/week-15/misreading-catalogue.svg){fig-alt="A two-column catalogue. The left column lists eight sentences students commonly write, from big samples to small p-values to disagreeing studies; the right column gives the sentence the same data actually support."}
+![Five hypothetical randomized trials of Supplement H, with the pooled estimate](../assets/figures/week-15/supplement-forest-plot.svg){fig-alt="Forest plot of risk ratios for winter infection, supplement versus placebo, in five trials: 0.91, 1.02, 0.80, 0.97, 1.07; every interval crosses 1. Pooled risk ratio 0.98, 95% CI 0.89 to 1.08."}
 
-Read the left column as a diagnostic rather than a scolding. Each sentence skips exactly one link. "The sample was huge, so it speaks for everyone" skips link one; "they move together, so one causes the other" skips link three; the two p-value sentences skip link five in opposite directions. Name the link and you know what the sentence should have said.
+**8. Responsible conclusion.** Among adults like those surveyed, most of the gap reflects smoking: users smoked less. Adjusted for smoking, and across five randomized trials, the supplement shows little or no benefit. The pooled interval (0.89 to 1.08) is consistent with no effect and does not support a benefit larger than about an 11% reduction in risk. The evidence does not support the headline.
 
-## Writing a conclusion someone can act on
+## Transfer: the same chain for a positive screening test
 
-A conclusion is not a victory lap. It is the sentence somebody else quotes after they stop reading, so it must carry its own qualifications. Seven parts do that job.
+**The setting (hypothetical numbers).** A condition affects 2% of adults who take a pharmacy screening test. The test detects 90% of those who have it (sensitivity) and clears 95% of those who do not (specificity). You test positive. How likely is it that you have the condition?
 
-![Seven parts of a conclusion a non-technical reader can act on.](../assets/figures/week-15/conclusion-checklist.svg){fig-alt="A seven-item checklist for writing a conclusion, from naming the cases to saying what would change your mind, with a worked example sentence underneath showing every part in place."}
+**Question and design.** You want the chance of the condition given a positive result, not the sensitivity (the chance of a positive result given the condition). The 2% base rate, how common the condition is among those tested, must describe people like you.
 
-Two of the seven get dropped under pressure. The first is the size: writing "sleep was associated with higher averages" without the 3.0 leaves the reader unable to weigh anything. The second is the verb: "associated with" costs nothing when the design is observational, while "improves" costs the whole claim if a reader checks. Write the verb last, after looking at how the groups were formed.
+**Summary with natural frequencies.** Picture 10,000 adults taking the test.
 
-The seventh part — what would change your mind — is unfamiliar and worth the trouble. Saying "a randomized trial assigning sleep schedules would settle this" shows you know the boundary of your own evidence.
+- With the condition: $0.02 \times 10{,}000 = 200$, and $0.90 \times 200 = 180$ of them test positive.
+- Without it: $10{,}000 - 200 = 9{,}800$, and $0.05 \times 9{,}800 = 490$ of them test positive anyway.
+- All positives: $180 + 490 = 670$, of whom $180/670 \approx 0.27$ have the condition.
 
-## The misreading to avoid
+**Conclusion.** With a 2% base rate, only about 27% of positive results come from people with the condition, so a positive screen calls for a confirmatory test, not a diagnosis. At a 10% base rate there would be $0.90 \times 1{,}000 = 900$ true and $0.05 \times 9{,}000 = 450$ false positives, a share of $900/1{,}350 \approx 0.67$: the base rate drives the result. Nothing here needs adjusting or pooling, but uncertainty still applies: the 90% and 95% are themselves estimates from earlier studies. The rest of the chain is unchanged: a clear question, the source of the numbers, a fitting summary, a conclusion sized to the evidence.
 
-The sentence to watch for is this one: *"It was statistically significant, so the thing works."* It sounds like a summary of the whole inference half, and it summarizes one small part of it.
+## Common misreadings from across the course
 
-Take it apart with numbers already on this page. In the second worked example the reminder gap was significant by any conventional standard, with about 0.002 of shuffles matching it. What that says is narrow: chance alone is a poor explanation for a gap of 0.11. It says nothing about whether eleven percentage points is worth what the programme costs, nothing about whether the effect holds elsewhere, and nothing about the first example's problem, because a significance test assumes the comparison is meaningful and only then asks whether chance could produce it. Test the crude sleep difference and it comes back convincing — its interval, 2.9 to 8.7, sits well away from zero — while still measuring paid work hours as much as sleep. A small p-value cannot detect a confounder.
+Each sounds reasonable and is wrong; the linked week reviews it.
 
-The mirror image is just as common: *"It wasn't significant, so there's no effect."* Studies B and D above are the whole rebuttal. Each is consistent with a difference of 0.07 and also with zero, because each is too small to tell those apart. Absence of evidence, from a study without the size to find anything, is not evidence of absence.
+1. **"They are associated, so one causes the other."** Confounding or reversed cause can produce an association; random assignment supports causal claims ([Week 2](week02-study-design.qmd), [Week 6](week06-confounding.qmd)).
+2. **"A huge sample fixes a biased design."** More data shrink the standard error, not the bias ([Week 2](week02-study-design.qmd)).
+3. **"The p-value is the probability that $H_0$ is true."** It is the probability, assuming $H_0$ is true, of a result at least as extreme as the one observed ([Week 12](week12-classical-hypothesis-testing.qmd)).
+4. **"Significant means important, and not significant means no effect."** Significance depends on sample size as well as effect size; judge the estimate and the width of its interval ([Week 12](week12-classical-hypothesis-testing.qmd)).
+5. **"Most people fall inside the 95% confidence interval."** The interval is for a parameter. In Worked example 1, the walking group's mean change has an approximate 95% interval of $-6.2 \pm 1.96(8.0/\sqrt{40}) = -6.2 \pm 2.48$, about $-8.7$ to $-3.7$ mmHg, while individual walkers ranged from $-21$ to $+10$ mmHg ([Week 11](week11-simulation-based-inference.qmd)).
+6. **"A 90% sensitive test makes a positive result 90% likely to be right."** This swaps the condition and the result; the base rate matters ([Week 10](week10-probability-risk-diagnosis.qmd)).
+7. **"Count the significant studies to judge the evidence."** Vote counting ignores each result's size and precision; a pooled estimate uses both ([Week 14](week14-meta-analysis-forest-plots.qmd)).
+8. **"The slope says what happens to each person."** It describes how the mean response differs across cases with different $x$, not what would happen to one person; from observational data it is not, by itself, a causal effect ([Week 8](week08-simple-regression.qmd)).
 
-One more misreading is about you rather than the data: *"I just need to remember which test goes with which situation."* The chart takes ten minutes; the reasoning above it takes a term. When a question in this course looks hard, it is almost never because the test was hard to identify. It is because the design, the confounder, or the size of the difference was doing the work.
+## Practice questions that mix the weeks (ungraded)
 
-## Practice on your own
+1. A news story reports that dog owners have lower blood pressure than other adults. Name the explanatory and response variables and a possible confounder, and describe a study that could support a causal claim. *What to look for:* can dog ownership be assigned at random?
+2. In a hypothetical survey of 50 adults, $\hat{y} = 78 - 0.9x$, with $x$ in hours of exercise per week, $y$ the resting heart rate (beats per minute), and $R^2 = 0.30$. Interpret the slope, predict $y$ for 5 hours, and explain why the line does not show that exercise lowers heart rate.
+3. A condition (hypothetical numbers) affects 1% of the people screened, and the test has 95% sensitivity and 90% specificity. Out of 10,000 people, how many test positive, and what share of them have the condition? *What to look for:* compare with the transfer example.
+4. A hypothetical randomized trial reports a 95% confidence interval of $-0.02$ to $0.10$ for the difference in recovery proportions (treatment minus placebo). What does a two-sided test of $H_0: p_T - p_P = 0$ at $\alpha = 0.05$ conclude, and what does that mean in plain words?
+5. Eight hypothetical trials give a pooled risk ratio of 0.80 (95% CI 0.70 to 0.92), yet only two were statistically significant on their own. What does the collection support, and how can both facts be true?
+6. Rewrite this sentence so it is accurate for Worked example 1: "The study proves that walking cures high blood pressure."
 
-Work these on paper, then compare your reasoning with a classmate rather than hunting for a number to match.
+## Read further in the free textbook
 
-1. A hospital reports that patients admitted through the emergency department have a higher death rate than patients admitted electively, and concludes the department is dangerous. Name the link this claim breaks, a plausible confounder, and the stratified table you would want to see.
+Each Applications chapter of *Introduction to Modern Statistics* applies one part of the book. Skip any R code; read the output and explanation.
 
-2. A campus survey of 300 students finds that 42% of first-year students and 33% of seniors report skipping breakfast. Compute the risk difference and the relative risk, first-year against senior. Then say what each number tells a dining services director that the other does not.
-
-3. Two studies of the same tutoring programme report gains on a 0-to-100 assessment. One reports 2.0 with plausible values from 1.6 to 2.4; the other reports 6.0 with an interval from -1.0 to 13.0. Which would you weight more heavily when combining them, and why? Then explain why the second is not evidence against the first.
-
-4. Using the decision chart, name the display, summary, and comparison for each: monthly rainfall in one city over 30 years; whether a patient attended a follow-up visit, across three clinics; hours of exercise per week against resting heart rate in 80 adults.
-
-5. Rewrite this sentence so all seven parts of a conclusion are present, inventing nothing outside the second worked example: "Text reminders increase screening rates."
-
-## Where to read more
-
-- The applications chapters of *Introduction to Modern Statistics* are the closest thing the book has to this unit: [Applications: Foundations](https://openintrostat.github.io/ims/foundations-applications.html) for the chance half and [Applications: Model and infer](https://openintrostat.github.io/ims/inf-model-applications.html) for the modelling half. Both work examples end to end rather than teach new tools.
-- For a specific gap, open [the whole book](https://openintrostat.github.io/ims) and pick from its table of contents. The chapters on [study design](https://openintrostat.github.io/ims/data-design.html), [exploring numerical data](https://openintrostat.github.io/ims/explore-numerical.html), and [inference for two-way tables](https://openintrostat.github.io/ims/inference-tables.html) cover the three links students most often revisit.
-- The health and biology contexts in [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) give a second explanation of the Week 10 probability and diagnostic-testing material.
-- [StatKey](https://www.lock5stat.com/statkey) is worth twenty minutes: build one null distribution and one bootstrap interval from scratch, and the two questions stop blurring together.
+- [Chapter 3, Applications: Data](https://openintrostat.github.io/ims/data-applications.html), for Weeks 1 and 2.
+- [Chapter 6, Applications: Explore](https://openintrostat.github.io/ims/explore-applications.html), for Weeks 3 to 5.
+- [Chapter 10, Applications: Model](https://openintrostat.github.io/ims/model-applications.html), for Weeks 8 and 9.
+- [Chapter 15, Applications: Foundations](https://openintrostat.github.io/ims/foundations-applications.html), for Weeks 11 and 12.
 
 ## Where this goes next
 
-There is no Week 16, so the forward link points out of the room, not into another unit. What you carry out is the chain: six claims about evidence that hold whether the next dataset you meet is in a laboratory, a policy briefing, a job, or a doctor's office. The procedures will fade; that is fine. The habit of asking how the data were produced, before asking what the number is, will not.
+This is the last week. The previous one is [Week 14: Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd), and the [notes overview](index.qmd) lists every week. To review the whole course:
 
-To see how far you have come, reread [Week 1](week01-data-evidence.qmd). It asked you to identify cases and variables in a small table, and at the time that felt like the whole task. Read it now and you will find yourself asking, unprompted, how those cases were selected and what comparison the table is set up to make. That change is the course. The [notes index](index.qmd) keeps all fifteen units together, [Week 14](week14-meta-analysis-forest-plots.qmd) holds the forest-plot material, and the [resources page](../resources/index.qmd) lists everything linked across the term.
+1. For each week, redo one worked example and name the chain step it serves.
+2. Use the misreadings list as a self-check, explaining each correction aloud.
+3. For each practice question above, first name the design and the kind of claim it allows, then compute.
+
+The [course home](../index.qmd) links everything else.

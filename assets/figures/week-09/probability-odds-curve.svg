@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 370" width="640" height="370" role="img" aria-labelledby="title desc">
+  <title id="title">Probability and odds: close together for small probabilities, far apart for large ones</title>
+  <desc id="desc">Left: odds p/(1−p) against probability; p = 0.5 gives odds 1, 0.75 gives 3, 0.9 gives 9. Right: for p up to 0.3 the odds start on the dashed line odds = p and pull above it, reaching 0.43 at p = 0.3.</desc>
+  <rect x="0" y="0" width="640" height="370" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="70" y1="300" x2="290" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="300" x2="70" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="300" x2="70" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="70" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="70" y1="300" x2="70" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="125" y1="300" x2="125" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="125" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.25</text>
+  <line x1="125" y1="300" x2="125" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="180" y1="300" x2="180" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="180" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.5</text>
+  <line x1="180" y1="300" x2="180" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="235" y1="300" x2="235" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="235" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.75</text>
+  <line x1="235" y1="300" x2="235" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="290" y1="300" x2="290" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="290" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1</text>
+  <line x1="290" y1="300" x2="290" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="300" x2="70" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="304" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="70" y1="300" x2="290" y2="300" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="250" x2="70" y2="250" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="254" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">2</text>
+  <line x1="70" y1="250" x2="290" y2="250" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="200" x2="70" y2="200" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="204" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">4</text>
+  <line x1="70" y1="200" x2="290" y2="200" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="150" x2="70" y2="150" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="154" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">6</text>
+  <line x1="70" y1="150" x2="290" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="100" x2="70" y2="100" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="104" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">8</text>
+  <line x1="70" y1="100" x2="290" y2="100" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="50" x2="70" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="54" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">10</text>
+  <line x1="70" y1="50" x2="290" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="180" y="340" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Probability p</text>
+  <text x="24" y="175" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 24 175)">Odds  p / (1 − p)</text>
+  <text x="70" y="26" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">All probabilities</text>
+  <polyline points="70,300 71.1,299.87 72.2,299.75 73.3,299.62 74.4,299.49 75.5,299.36 76.6,299.23 77.7,299.09 78.8,298.96 79.9,298.82 81,298.68 82.1,298.54 83.2,298.4 84.3,298.26 85.4,298.12 86.5,297.97 87.6,297.83 88.7,297.68 89.8,297.53 90.9,297.38 92,297.22 93.1,297.07 94.2,296.91 95.3,296.75 96.4,296.59 97.5,296.43 98.6,296.26 99.7,296.1 100.8,295.93 101.9,295.76 103,295.59 104.1,295.41 105.2,295.24 106.3,295.06 107.4,294.88 108.5,294.7 109.6,294.51 110.7,294.33 111.8,294.14 112.9,293.94 114,293.75 115.1,293.55 116.2,293.35 117.3,293.15 118.4,292.95 119.5,292.74 120.6,292.53 121.7,292.32 122.8,292.11 123.9,291.89 125,291.67 126.1,291.44 127.2,291.22 128.3,290.99 129.4,290.75 130.5,290.52 131.6,290.28 132.7,290.03 133.8,289.79 134.9,289.54 136,289.29 137.1,289.03 138.2,288.77 139.3,288.5 140.4,288.24 141.5,287.96 142.6,287.69 143.7,287.41 144.8,287.12 145.9,286.83 147,286.54 148.1,286.24 149.2,285.94 150.3,285.63 151.4,285.32 152.5,285 153.6,284.68 154.7,284.35 155.8,284.02 156.9,283.68 158,283.33 159.1,282.98 160.2,282.63 161.3,282.26 162.4,281.9 163.5,281.52 164.6,281.14 165.7,280.75 166.8,280.36 167.9,279.95 169,279.55 170.1,279.13 171.2,278.7 172.3,278.27 173.4,277.83 174.5,277.38 175.6,276.92 176.7,276.46 177.8,275.98 178.9,275.5 180,275 181.1,274.49 182.2,273.98 183.3,273.45 184.4,272.92 185.5,272.37 186.6,271.81 187.7,271.24 188.8,270.65 189.9,270.05 191,269.44 192.1,268.82 193.2,268.18 194.3,267.53 195.4,266.86 196.5,266.18 197.6,265.48 198.7,264.76 199.8,264.02 200.9,263.27 202,262.5 203.1,261.71 204.2,260.9 205.3,260.06 206.4,259.21 207.5,258.33 208.6,257.43 209.7,256.51 210.8,255.56 211.9,254.58 213,253.57 214.1,252.54 215.2,251.47 216.3,250.37 217.4,249.24 218.5,248.08 219.6,246.87 220.7,245.63 221.8,244.35 222.9,243.03 224,241.67 225.1,240.25 226.2,238.79 227.3,237.28 228.4,235.71 229.5,234.09 230.6,232.41 231.7,230.66 232.8,228.85 233.9,226.96 235,225 236.1,222.96 237.2,220.83 238.3,218.62 239.4,216.3 240.5,213.89 241.6,211.36 242.7,208.72 243.8,205.95 244.9,203.05 246,200 247.1,196.79 248.2,193.42 249.3,189.86 250.4,186.11 251.5,182.14 252.6,177.94 253.7,173.48 254.8,168.75 255.9,163.71 257,158.33 258.1,152.59 259.2,146.43 260.3,139.81 261.4,132.69 262.5,125 263.6,116.67 264.7,107.61 265.8,97.73 266.9,86.9 268,75 269.1,61.84 270,50" fill="none" stroke="#8a4a2b" stroke-width="2.4"/>
+  <circle cx="180" cy="275" r="4.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="190" y="291" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">p = 0.5, odds 1</text>
+  <circle cx="235" cy="225" r="4.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="227" y="219" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">p = 0.75, odds 3</text>
+  <circle cx="268" cy="75" r="4.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="260" y="77" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">p = 0.9, odds 9</text>
+  <line x1="390" y1="300" x2="620" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="390" y1="300" x2="390" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="390" y1="300" x2="390" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="390" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="390" y1="300" x2="390" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="466.67" y1="300" x2="466.67" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="466.67" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.1</text>
+  <line x1="466.67" y1="300" x2="466.67" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="543.33" y1="300" x2="543.33" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="543.33" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.2</text>
+  <line x1="543.33" y1="300" x2="543.33" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="620" y1="300" x2="620" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="620" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.3</text>
+  <line x1="620" y1="300" x2="620" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="385" y1="300" x2="390" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="304" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="390" y1="300" x2="620" y2="300" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="385" y1="244.44" x2="390" y2="244.44" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="248.44" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.1</text>
+  <line x1="390" y1="244.44" x2="620" y2="244.44" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="385" y1="188.89" x2="390" y2="188.89" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="192.89" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.2</text>
+  <line x1="390" y1="188.89" x2="620" y2="188.89" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="385" y1="133.33" x2="390" y2="133.33" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="137.33" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.3</text>
+  <line x1="390" y1="133.33" x2="620" y2="133.33" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="385" y1="77.78" x2="390" y2="77.78" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="81.78" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.4</text>
+  <line x1="390" y1="77.78" x2="620" y2="77.78" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="505" y="340" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Probability p</text>
+  <text x="344" y="175" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 344 175)">Odds</text>
+  <text x="390" y="26" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Zoom: probabilities up to 0.3</text>
+  <text x="390" y="43" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Labels show p → odds</text>
+  <line x1="390" y1="300" x2="620" y2="133.33" stroke="#8a8780" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <text x="618" y="227.78" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">dashed: odds = p</text>
+  <polyline points="390,300 393.83,297.21 397.67,294.39 401.5,291.54 405.33,288.66 409.17,285.75 413,282.82 416.83,279.85 420.67,276.85 424.5,273.82 428.33,270.76 432.17,267.67 436,264.54 439.83,261.38 443.67,258.18 447.5,254.95 451.33,251.69 455.17,248.39 459,245.05 462.83,241.68 466.67,238.27 470.5,234.82 474.33,231.34 478.17,227.81 482,224.24 485.83,220.63 489.67,216.99 493.5,213.29 497.33,209.56 501.17,205.78 505,201.96 508.83,198.09 512.67,194.18 516.5,190.22 520.33,186.21 524.17,182.15 528,178.05 531.83,173.89 535.67,169.68 539.5,165.42 543.33,161.11 547.17,156.74 551,152.32 554.83,147.84 558.67,143.3 562.5,138.71 566.33,134.05 570.17,129.34 574,124.56 577.83,119.72 581.67,114.81 585.5,109.84 589.33,104.8 593.17,99.7 597,94.52 600.83,89.27 604.67,83.95 608.5,78.55 612.33,73.08 616.17,67.53 620,61.9" fill="none" stroke="#8a4a2b" stroke-width="2.4"/>
+  <circle cx="428.33" cy="270.76" r="4.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="436.33" y="288.76" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">0.05 → 0.053</text>
+  <circle cx="466.67" cy="238.27" r="4.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="474.67" y="256.27" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">0.10 → 0.111</text>
+  <circle cx="543.33" cy="161.11" r="4.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="536.33" y="153.11" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">0.20 → 0.25</text>
+  <circle cx="620" cy="61.9" r="4.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="613" y="53.9" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">0.30 → 0.43</text>
+</svg>

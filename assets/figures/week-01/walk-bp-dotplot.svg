@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 385" width="680" height="385" role="img" aria-labelledby="title desc">
+  <title id="title">Systolic blood pressure of 10 walkers and 10 non-walkers (illustrative data)</title>
+  <desc id="desc">Dot plot of illustrative systolic blood pressures. Walkers range from 112 to 143 mm Hg, mean 127.0; non-walkers range from 115 to 150, mean 133.0. The groups overlap a lot; the means differ by 6.0 mm Hg.</desc>
+  <rect x="0" y="0" width="680" height="385" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="70" y="26" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#3a3935">Illustrative values, one dot per adult; dashed lines carry each mean across both rows</text>
+  <text x="70" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b" font-weight="600">Walk every morning (n = 10)</text>
+  <line x1="70" y1="110" x2="650" y2="110" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="325.2" y1="84" x2="325.2" y2="128" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="151.2" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="220.8" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="255.6" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="290.4" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="313.6" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="325.2" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="360" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="394.8" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="429.6" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <circle cx="510.8" cy="110" r="5.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <text x="319.2" y="94" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#8a4a2b" font-weight="600">mean 127.0</text>
+  <text x="70" y="200" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#35566b" font-weight="600">Do not walk every morning (n = 10)</text>
+  <line x1="70" y1="240" x2="650" y2="240" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="394.8" y1="214" x2="394.8" y2="258" stroke="#35566b" stroke-width="2.5"/>
+  <circle cx="186" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="267.2" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="313.6" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="348.4" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="371.6" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="406.4" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="441.2" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="487.6" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="534" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <circle cx="592" cy="240" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5"/>
+  <text x="400.8" y="224" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b" font-weight="600">mean 133.0</text>
+  <line x1="325.2" y1="84" x2="325.2" y2="258" stroke="#8a4a2b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="394.8" y1="84" x2="394.8" y2="258" stroke="#35566b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="325.2" y1="165" x2="394.8" y2="165" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="325.2" y1="160" x2="325.2" y2="170" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="394.8" y1="160" x2="394.8" y2="170" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="402.8" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">difference in means: 6.0 mm Hg</text>
+  <line x1="70" y1="295" x2="650" y2="295" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="295" x2="70" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="70" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">105</text>
+  <line x1="128" y1="295" x2="128" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="128" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">110</text>
+  <line x1="186" y1="295" x2="186" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="186" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">115</text>
+  <line x1="244" y1="295" x2="244" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="244" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">120</text>
+  <line x1="302" y1="295" x2="302" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="302" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">125</text>
+  <line x1="360" y1="295" x2="360" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="360" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">130</text>
+  <line x1="418" y1="295" x2="418" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="418" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">135</text>
+  <line x1="476" y1="295" x2="476" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="476" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">140</text>
+  <line x1="534" y1="295" x2="534" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="534" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">145</text>
+  <line x1="592" y1="295" x2="592" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="592" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">150</text>
+  <line x1="650" y1="295" x2="650" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="650" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">155</text>
+  <text x="360" y="337" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Systolic blood pressure (mm Hg)</text>
+  <text x="70" y="368" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">The means differ by 6.0 mm Hg, yet 3 non-walkers are below the walkers' mean.</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450" role="img" aria-labelledby="title desc">
+  <title id="title">Age mix and crude versus age-adjusted death rates in two hypothetical towns</title>
+  <desc id="desc">Left: 50% of Pinecrest residents are 65 or older, versus 10% of Fairview. Right: deaths per 1,000 per year are 22.85 versus 6.10 crude, but 14.65 versus 13.90 after age adjustment.</desc>
+  <rect x="0" y="0" width="720" height="450" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="24" y="34" font-family="Inter, system-ui, sans-serif" font-size="13.5" text-anchor="start" fill="#1c1b19" font-weight="700">Age mix of residents</text>
+  <line x1="70" y1="330" x2="290" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="65" y1="330" x2="70" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="334" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0%</text>
+  <line x1="65" y1="265" x2="70" y2="265" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="269" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">25%</text>
+  <line x1="65" y1="200" x2="70" y2="200" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="204" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">50%</text>
+  <line x1="65" y1="135" x2="70" y2="135" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="139" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">75%</text>
+  <line x1="65" y1="70" x2="70" y2="70" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="74" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">100%</text>
+  <line x1="70" y1="330" x2="70" y2="70" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="99" y="278" width="72" height="52" fill="#ffffff" stroke="#1c1b19" stroke-width="1"/>
+  <text x="135" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">20%</text>
+  <rect x="99" y="200" width="72" height="78" fill="#d8d6d0" stroke="#1c1b19" stroke-width="1"/>
+  <text x="135" y="243" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">30%</text>
+  <rect x="99" y="70" width="72" height="130" fill="#3a3935" stroke="#1c1b19" stroke-width="1"/>
+  <text x="135" y="139" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">50%</text>
+  <text x="135" y="349" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="600">Pinecrest</text>
+  <rect x="199" y="174" width="72" height="156" fill="#ffffff" stroke="#1c1b19" stroke-width="1"/>
+  <text x="235" y="256" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">60%</text>
+  <rect x="199" y="96" width="72" height="78" fill="#d8d6d0" stroke="#1c1b19" stroke-width="1"/>
+  <text x="235" y="139" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">30%</text>
+  <rect x="199" y="70" width="72" height="26" fill="#3a3935" stroke="#1c1b19" stroke-width="1"/>
+  <text x="235" y="87" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">10%</text>
+  <text x="235" y="349" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#35566b" font-weight="600">Fairview</text>
+  <rect x="80" y="356" width="12" height="12" fill="#3a3935" stroke="#1c1b19" stroke-width="1"/>
+  <text x="98" y="366" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">65 and older</text>
+  <rect x="80" y="373" width="12" height="12" fill="#d8d6d0" stroke="#1c1b19" stroke-width="1"/>
+  <text x="98" y="383" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">40 to 64</text>
+  <rect x="80" y="390" width="12" height="12" fill="#ffffff" stroke="#1c1b19" stroke-width="1"/>
+  <text x="98" y="400" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Under 40</text>
+  <text x="350" y="34" font-family="Inter, system-ui, sans-serif" font-size="13.5" text-anchor="start" fill="#1c1b19" font-weight="700">Deaths per 1,000 residents per year</text>
+  <line x1="390" y1="330" x2="700" y2="330" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="382" y="334" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="390" y1="278" x2="700" y2="278" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="382" y="282" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">5</text>
+  <line x1="390" y1="226" x2="700" y2="226" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="382" y="230" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">10</text>
+  <line x1="390" y1="174" x2="700" y2="174" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="382" y="178" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">15</text>
+  <line x1="390" y1="122" x2="700" y2="122" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="382" y="126" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">20</text>
+  <line x1="390" y1="70" x2="700" y2="70" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="382" y="74" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">25</text>
+  <line x1="390" y1="330" x2="700" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="390" y1="330" x2="390" y2="70" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="417" y="92.36" width="50" height="237.64" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <text x="442" y="85.36" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#8a4a2b" font-weight="600">22.85</text>
+  <text x="442" y="347" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="700">P</text>
+  <rect x="473" y="266.56" width="50" height="63.44" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <text x="498" y="259.56" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#35566b" font-weight="600">6.10</text>
+  <text x="498" y="347" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#35566b" font-weight="700">F</text>
+  <text x="470" y="366" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Crude (unadjusted)</text>
+  <rect x="567" y="177.64" width="50" height="152.36" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <text x="592" y="170.64" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#8a4a2b" font-weight="600">14.65</text>
+  <text x="592" y="347" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="700">P</text>
+  <rect x="623" y="185.44" width="50" height="144.56" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <text x="648" y="178.44" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#35566b" font-weight="600">13.90</text>
+  <text x="648" y="347" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#35566b" font-weight="700">F</text>
+  <text x="620" y="366" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Age-adjusted</text>
+  <text x="545" y="394" font-family="Inter, system-ui, sans-serif" font-size="11.5" text-anchor="middle" fill="#3a3935">P = Pinecrest, F = Fairview. Adjusted rates use the</text>
+  <text x="545" y="410" font-family="Inter, system-ui, sans-serif" font-size="11.5" text-anchor="middle" fill="#3a3935">combined age mix: 40% under 40, 30% 40 to 64, 30% 65+.</text>
+  <text x="545" y="432" font-family="Inter, system-ui, sans-serif" font-size="11.5" text-anchor="middle" fill="#3a3935" font-style="italic">Hypothetical values for illustration.</text>
+</svg>

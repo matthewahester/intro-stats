@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 410" width="680" height="410" role="img" aria-labelledby="title desc">
+  <title id="title">Four questions that take a claim apart</title>
+  <desc id="desc">Diagram splitting the hypothetical claim that people who get a flu shot miss fewer days of work into cases (working adults), explanatory variable (flu shot, yes or no), response variable (days missed) and the comparison.</desc>
+  <rect x="0" y="0" width="680" height="410" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <rect x="90" y="16" width="500" height="56" fill="#f1efeb" stroke="#1c1b19" stroke-width="1.5" rx="6"/>
+  <text x="340" y="38" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Hypothetical claim</text>
+  <text x="340" y="59" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#1c1b19" font-weight="600">People who get a flu shot miss fewer days of work.</text>
+  <rect x="20" y="110" width="310" height="118" fill="#ffffff" stroke="#1c1b19" stroke-width="2" rx="6"/>
+  <text x="34" y="134" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="600">1. Cases</text>
+  <text x="34" y="156" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Who or what was measured?</text>
+  <text x="34" y="184" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Working adults: one row</text>
+  <text x="34" y="203" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">for each person</text>
+  <rect x="350" y="110" width="310" height="118" fill="#ffffff" stroke="#8a4a2b" stroke-width="2" rx="6"/>
+  <text x="364" y="134" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#8a4a2b" font-weight="600">2. Explanatory variable</text>
+  <text x="364" y="156" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Which variable might explain differences?</text>
+  <text x="364" y="184" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Got a flu shot this season:</text>
+  <text x="364" y="203" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">yes or no (categorical)</text>
+  <rect x="20" y="250" width="310" height="118" fill="#ffffff" stroke="#35566b" stroke-width="2" rx="6"/>
+  <text x="34" y="274" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#35566b" font-weight="600">3. Response variable</text>
+  <text x="34" y="296" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">What outcome was measured?</text>
+  <text x="34" y="324" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Days of work missed over the</text>
+  <text x="34" y="343" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">winter (numerical, a count)</text>
+  <rect x="350" y="250" width="310" height="118" fill="#ffffff" stroke="#4d6b3c" stroke-width="2" rx="6"/>
+  <text x="364" y="274" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#4d6b3c" font-weight="600">4. Comparison</text>
+  <text x="364" y="296" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Fewer than whom? Summarized how?</text>
+  <text x="364" y="324" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Average days missed: adults with</text>
+  <text x="364" y="343" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">a flu shot vs adults without one</text>
+  <line x1="340" y1="72" x2="340" y2="92" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="175" y1="92" x2="505" y2="92" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="175" y1="92" x2="175" y2="110" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="505" y1="92" x2="505" y2="110" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="340" y1="92" x2="340" y2="240" stroke="#1c1b19" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="175" y1="240" x2="505" y2="240" stroke="#1c1b19" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="175" y1="240" x2="175" y2="250" stroke="#1c1b19" stroke-width="1"/>
+  <line x1="505" y1="240" x2="505" y2="250" stroke="#1c1b19" stroke-width="1"/>
+  <text x="340" y="396" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">A claim with no clear comparison cannot be checked against data.</text>
+</svg>

@@ -8,242 +8,271 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: should you avoid the hospital with more deaths?
 
-Last week you learned to describe a relationship: put two variables on a scatterplot, say whether the cloud drifts up or down, judge how tightly it holds, attach a correlation. That is honest work, but it stops one question short. A relationship is a fact about the data. It is not yet an explanation.
+A regional health report (hypothetical, for illustration) lists two hospitals that perform the same kind of surgery. Last year, 75 of Hospital A's 1,200 surgery patients died within 30 days of their operation. At Hospital B, 36 of 1,000 surgery patients died within 30 days.
 
-This week supplies the missing question, short enough to carry around in your head: **what else could explain this?** It is not asking whether the pattern is really in the data — you can see that it is. It is asking whether the two variables are tied to each other, or whether both are tied to some third thing you have not yet put in the picture.
+Before you read on, think about two questions:
 
-Give that third thing a name. If a variable differs between the groups you are comparing, is related to the response on its own, *and* is not simply a step on the path from one to the other, it is a **confounding variable**, and a comparison that ignores it is partly a comparison of that variable instead. The main tool against it is blunter than it sounds: stop comparing everybody to everybody, and start comparing like with like.
+1. Which hospital has the higher death rate?
+2. If you needed this surgery, would these two numbers be enough to choose a hospital? What one extra piece of information would you want first?
 
-This week builds the vocabulary, puts it on real-looking tables including the case where splitting the data reverses the conclusion, and applies it to a study you have not seen. By the end, reading "patients at Clinic A did worse" should prompt a question about who those patients were rather than a verdict about the clinic.
+Hospital A's death rate is $75/1200 = 0.0625$, or 6.25%, and Hospital B's is $36/1000 = 0.036$, or 3.6%. Many people stop there and choose Hospital B. By the end of this week you will see why that choice could be exactly backwards.
 
-### Why this matters
+Week 5 was about the association between two variables. This week adds a third. The question behind every example is the same: when two groups differ on an outcome, do they also differ in other ways that could explain it?
 
-A city newspaper ranks local hospitals by the share of surgery patients who survive the year. One hospital sits at the bottom. Readers avoid it, a health board threatens it, funding is cut. But that hospital is the regional referral centre: it takes the transfers and complications the others cannot handle. Its patients were sicker before anyone touched them. The table compares hospitals; what it partly measures is who walked through the door.
+## Why a third variable matters for evidence
 
-This is the ordinary way a naive comparison goes wrong, and the costs are real: patients get steered toward whichever hospital is best at avoiding hard cases. The habit this week installs — *ask who is in each group before you compare the groups* — is worth more in daily life than any formula in the course.
+Most data in health, biology and public policy are observational: researchers record what people already do rather than assigning a treatment. Hospitals do not receive their patients at random, and people choose whether to take vitamins, where to live and how much to exercise. Groups that form by choice or circumstance tend to differ in many ways at once, so a difference in their outcomes might come from the variable you care about, from some other variable that travels with it, or from both.
+
+That is why hospital report cards and news stories about health habits are so easy to misread. A fair comparison asks: compared with whom, and are these groups alike in the ways that matter? These questions return in every later week that interprets a comparison, including regression in Weeks 8 and 9.
 
 ## What you will be able to do
 
-- State the three conditions a third variable must meet to confound a comparison, and check them against a described study.
-- Stratify a comparison: split the data by a third variable and redo the comparison inside each slice.
-- Recombine the slices into one adjusted comparison and say how far it sits from the unadjusted one.
-- Recognize Simpson's paradox when a pooled comparison points the opposite way from every split one, and explain the reversal by group sizes.
-- Read "adjusted for age and smoking status" and say what has been ruled out and what has not.
-- Give two reasons an adjusted comparison can still mislead.
+By the end of this week you can:
 
-## Words worth owning
+- decide whether a third variable could be a confounder by checking its links to both the explanatory and the response variable;
+- draw and read a simple causal diagram with arrows;
+- stratify data by a third variable and compare rates within each stratum;
+- recognize Simpson's paradox and explain, using each group's mix, how a comparison can reverse when the strata are combined;
+- explain in plain words the difference between an unadjusted and an adjusted comparison, and compute a simple adjusted rate as a weighted average;
+- explain why random assignment breaks confounding, and what adjustment in an observational study cannot do.
 
-| Term | What it means in this course |
-|------|------------------------------|
-| Confounding variable | Differs between the groups compared, separately moves the response, and is not a step on the path between them, so part of the gap belongs to it |
-| Lurking variable | A confounder nobody has identified yet |
-| Stratum | One slice of the data defined by a value of the third variable |
-| Stratification | Splitting the data into strata and comparing separately inside each one |
-| Unadjusted comparison | The comparison on everybody at once, ignoring the third variable. Also called crude |
-| Adjusted comparison | The comparison after both groups are put on the same footing by reweighting strata |
-| Simpson's paradox | The extreme case where the pooled comparison points the opposite way from every stratum |
-| Residual confounding | Confounding that survives adjustment, because the variable was measured coarsely or not at all |
+## Words to know this week
 
-## What makes a variable a confounder
+| Term | Meaning in this course |
+|---|---|
+| Confounding variable (confounder) | A variable associated with both the explanatory and the response variable, and not itself a result of the explanatory variable, so it can create, hide or reverse an apparent relationship between them. Some books use the term lurking variable for a confounder the study did not record. |
+| Causal diagram | A sketch in which variables are boxes and an arrow from one box to another means "may influence". |
+| Stratify | Split the data into groups (strata; one group is a stratum) that share a value of a third variable, then compare within each group. |
+| Case mix | The makeup of a group on a third variable, such as the share of a hospital's patients who are high-risk. |
+| Unadjusted (crude) comparison | A comparison that pools all the data in each group and ignores the third variable. |
+| Adjusted comparison | A comparison that accounts for a third variable, by comparing within strata or by computing each group's rate for one common mix. |
+| Simpson's paradox | A comparison points one way within every stratum but the other way when the strata are combined. |
+| Random assignment | Using chance, such as a coin flip, to decide which treatment each participant receives. |
+| Residual confounding | Confounding left over after adjustment, from a confounder that was unmeasured or measured too coarsely. |
 
-### Three conditions, checked one at a time
+## Confounding: when a third variable is tied to both
 
-Students meeting this idea often start objecting to every comparison they see. "But they didn't account for shoe size." That objection is true and useless. Three things must hold at once before a third variable can distort a comparison.
+Confounding is a main reason an association in observational data can mislead. This section defines a confounder, draws one, and shows how an experiment removes it.
 
-**One: it differs between the groups being compared.** If two clinics see the same mix of wound severities, severity cannot explain any part of the gap between them, however powerfully it affects healing. A balanced variable has nothing to explain.
+### What makes a variable a confounder
 
-**Two: it is related to the response on its own.** Suppose the clinics really do see very different mixes of shoe size. If shoe size has nothing to do with healing, that imbalance is harmless. An imbalance matters only when the imbalanced thing moves the response.
+Suppose a large survey (hypothetical) follows adults for ten years and finds that people who take a daily vitamin supplement are less likely to develop heart disease. The explanatory variable is supplement use (yes or no); the response variable is whether the person develops heart disease.
 
-**Three: it is not a step on the path from the explanatory variable to the response.** Suppose Clinic A heals better *because* its nurses irrigate wounds more thoroughly. Thoroughness is not a rival explanation — it is how the clinic difference happens. A variable on that path is a **mediator**, and adjusting for one subtracts out part of the thing you wanted to see.
+It is tempting to conclude that the supplement protects the heart. But people who choose a daily supplement often look after their health in other ways too. Suppose that in this survey regular exercisers take supplements more often than non-exercisers, and that exercise lowers the risk of heart disease on its own. Then exercise is linked to both variables in the comparison:
 
-Conditions one and two make confounding possible; condition three keeps adjustment from destroying a real finding. When you hear an objection to a study, ask which of the three is being claimed — and check condition one against the numbers the report already prints.
+- it is associated with the explanatory variable (exercisers are more likely to take the supplement), and
+- it is associated with the response variable (exercisers are less likely to develop heart disease).
 
-### The picture the conditions describe
+A variable with both links is a **confounding variable**: its effect is mixed up, or confounded, with the effect of the explanatory variable. The supplement group could have less heart disease even if the supplement did nothing, simply because it contains more exercisers.
 
-![A clean comparison beside a confounded one, with the three conditions listed.](../assets/figures/week-06/confounding-diagram.svg){fig-alt="Two diagrams. On the left a single arrow runs from which clinic to whether the wound healed. On the right, wound severity points at both, so part of the clinic gap is a severity gap. Three conditions for a confounder appear below."}
+So a proposed confounder must pass two checks: it differs between the groups being compared, and it affects the response on its own. It must also not be a result of the explanatory variable itself; a variable the explanatory variable causes is a mediator (see the note below). Eye color might differ slightly between supplement takers and non-takers, but it has nothing to do with heart disease, so it is not a confounder here.
 
-On the left, one arrow. The only systematic difference between the two groups of patients is which clinic treated them, so the whole gap in healing belongs to the clinics. On the right, a second variable feeds both boxes: severity helps decide which clinic a patient reaches, and separately affects whether the wound heals. What you measure is now a clinic effect and a severity effect tangled together, and the two-variable table cannot separate them.
+### Drawing a causal diagram with arrows
 
-The right-hand picture is a warning label, not a verdict. It does not say the clinics are identical, only that the observed gap is not clean.
+A causal diagram turns this reasoning into a picture. Each variable is a box, and an arrow means "may influence". In the left panel below, exercise habits sit at the top with an arrow into each of the other two boxes. The arrow from supplement use to heart disease is dashed and marked with a question mark, because that is the effect you want to learn about.
 
-### Confounding belongs to a comparison, not to a variable
+![Causal diagrams for a supplement study: observational study versus randomized experiment](../assets/figures/week-06/confounding-causal-diagrams.svg){fig-alt="Two causal diagrams. Left, observational study: exercise habits point to both supplement use and heart disease. Right, randomized experiment: a coin flip sets supplement or placebo, so the arrow from exercise habits is cut."}
 
-It is tempting to file "age" away as a confounder and be done. Resist that. Age is a confounder *for a particular comparison in a particular study*. If your two groups happen to have identical age distributions, age confounds nothing here, even though it predicts almost every health outcome there is.
-
-This is also where Week 2 comes back. Random assignment balances every background variable at once, on average — including the ones nobody measured or even thought of. That is why a randomized experiment leans far less on this week's machinery — any one trial can still come out imbalanced — and why this week is the repair work observational studies require.
-
-## Comparing like with like
-
-### Stratify first: split, then compare inside each slice
-
-The fix is unglamorous and it works: stop comparing everybody. Split the data by the suspected confounder and make the comparison separately inside each slice. Within "minor wounds only", both clinics are treating minor wounds, so severity cannot be doing any of the work.
-
-Stratification is a discipline rather than a formula: name the variable that most plausibly differs between the groups, then look at the comparison inside its levels. Usually that means reading a table one row deeper than you were about to.
-
-### Then put the slices back together
-
-Stratified results are honest but awkward: you wanted one number and now you have several. The standard move is to combine them into a single **adjusted** comparison — a weighted average across strata that uses the *same* weights for both groups.
-
-$$ \text{adjusted rate} = w_1 \times (\text{rate in stratum one}) + w_2 \times (\text{rate in stratum two}) $$
-
-In words: pick a common mix of strata, with $w_1 + w_2 = 1$, then ask what each group's rate would have been facing that mix. The weights usually come from combining both groups, so the target is everybody in the study — and any difference between the adjusted numbers is one the mix cannot manufacture.
+The left diagram shows two routes between supplement use and heart disease. One is the direct arrow, the supplement's own effect, if any. The other runs from supplement use back up to exercise habits and down to heart disease. That second route is not an effect of the supplement, yet it still creates an association in the data. An observational comparison of takers with non-takers shows both routes blended together.
 
 ::: {.callout-note}
-Adjustment never changes the rate inside a stratum — those are what they are. It changes only the weights used to average them. Do not think of it as correcting the data; think of it as averaging both groups over the same mix.
+**Not every third variable is a confounder.** A confounder is a common cause: it influences which group a person ends up in and it influences the outcome. A variable on the path from the explanatory variable to the response is different. If a blood pressure drug lowers stroke risk by lowering blood pressure, then blood pressure is a **mediator**, a step from the drug to the outcome, and stratifying on it would hide part of the very effect you want to measure. Before adjusting for a variable, ask where its arrows point.
 :::
 
-### What "adjusted for age" is telling you
+### Why random assignment breaks confounding
 
-When a report says a comparison is "adjusted for age", read it as this sentence: *the researchers put the groups on the same age footing and then compared them.* That is a real accomplishment and a narrow one. It says nothing about income, smoking, or prior illness, and nothing about how finely age was handled — two broad bands is far weaker than single years.
+Now imagine the question studied as a randomized experiment. Researchers flip a coin for each volunteer: heads, a daily supplement; tails, an identical-looking placebo. In the right panel, the coin decides who takes the supplement, so exercise habits can no longer influence which group a person lands in. That arrow is cut.
 
-So when you meet "adjusted for age and sex" in an abstract, the useful follow-up questions are: adjusted how finely, and what was left out?
+Exercise still affects heart disease, but because the coin ignores exercise, regular exercisers end up in the two groups in about the same proportion, on average. The same holds for smoking, diet, age and every other variable, including ones nobody measured. Balancing unmeasured variables is the great strength of random assignment.
 
-## Worked example — Two clinics whose ranking reverses
+Two cautions. Random assignment balances variables on average, not exactly: in a small experiment chance can leave the groups somewhat different, and measuring that chance variation is the job of the inference methods later in the course. And it protects only the groups as assigned: if some people stop taking their pills, comparing those who kept taking them with everyone else is again a comparison of self-selected groups. Still, when a well-run randomized experiment finds a difference too large to explain by chance, the treatment is the most believable explanation. Week 2 introduced this idea; this week shows what goes wrong without it.
 
-**Setting.** A city health department reviews wound care at two urgent-care clinics. Each treated 300 patients with a stitched wound. The response is whether the wound healed without a return visit. At intake, before treatment, every wound was recorded as minor or serious.
+## Stratifying by a third variable
 
-| Clinic | Minor wounds | Serious wounds | All patients |
-|--------|--------------|----------------|--------------|
-| Clinic A | 81 healed of 90 | 126 healed of 210 | 207 healed of 300 |
-| Clinic B | 204 healed of 240 | 33 healed of 60 | 237 healed of 300 |
+Often you cannot run an experiment. Nobody can assign patients to hospitals by coin flip. When the data are observational and you have measured a possible confounder, the first tool is to **stratify**: split the data by the third variable and make the comparison within each group.
 
-**Step one — the unadjusted comparison.** Clinic A healed 207 of 300, or 69 percent. Clinic B healed 237 of 300, or 79 percent. Clinic B leads by ten percentage points. If the report stopped here, Clinic A would be the one in trouble.
+### Comparing like with like within strata
 
-**Step two — stratify.** Among minor wounds: Clinic A healed 81 of 90, or 90 percent, Clinic B 204 of 240, or 85 percent. Among serious wounds: Clinic A healed 126 of 210, or 60 percent, Clinic B 33 of 60, or 55 percent. Clinic A leads by five percentage points in each slice.
+Within one stratum everyone has the same value of the third variable, so it cannot differ between the groups being compared. To handle exercise, compare supplement takers with non-takers among regular exercisers only, then among non-exercisers only. A difference that remains cannot be explained by exercise (as measured by those categories), though other confounders could still be at work. Stratifying works best with a few categories, each holding enough people for its rates to be stable.
 
-![Clinic B leads overall, yet Clinic A leads inside both severity groups.](../assets/figures/week-06/stratified-comparison.svg){fig-alt="Paired bars of healing rates. Pooled, Clinic A is 69 percent and Clinic B is 79 percent. Among minor wounds A is 90 and B is 85; among serious wounds A is 60 and B is 55. The ranking reverses when the data are split."}
+### Why an overall rate is a weighted average
 
-**Step three — check the three conditions.** Severity differs between the clinics: 210 of Clinic A's 300 wounds are serious, or 70 percent, against 60 of Clinic B's 300, or 20 percent. Severity moves healing on its own: the rate falls from 90 to 60 percent inside Clinic A and from 85 to 55 inside Clinic B. And it is not a step on the path from clinic to healing, because it was recorded at intake. All three hold.
+An overall rate is not the simple average of the stratum rates. It is a **weighted average**, in which each stratum's rate is weighted by that stratum's share of the group:
 
-**Step four — adjust.** Pool the caseloads for a common mix: 90 plus 240 gives 330 minor wounds, and 210 plus 60 gives 270 serious, out of 600. The weights are 0.55 and 0.45. Score each clinic against that same mix.
+$$\text{overall rate} = (\text{share in stratum 1})(\text{rate in stratum 1}) + (\text{share in stratum 2})(\text{rate in stratum 2}) + \cdots$$
 
-$$ \text{Clinic A} \colon \; 0.55 \times 0.90 + 0.45 \times 0.60 = 0.495 + 0.270 = 0.765 $$
+The weights are the case mix. Two groups with identical rates in every stratum can still have very different overall rates if their mixes differ. A reversal becomes possible when two things happen together: the third variable strongly affects the response, and the groups being compared have very different mixes of it. The reversal feels impossible, which is why it is called a paradox, but the arithmetic is ordinary. Worked example 1 shows both ingredients.
 
-$$ \text{Clinic B} \colon \; 0.55 \times 0.85 + 0.45 \times 0.55 = 0.4675 + 0.2475 = 0.715 $$
+## Worked example 1: two hospitals and Simpson's paradox
 
-Adjusted for severity, Clinic A heals 76.5 percent against Clinic B's 71.5 — a lead of five percentage points, the same five it held inside each slice. That must happen when both slices show the same gap: a weighted average of five and five is five.
+**Question.** Return to the warm-up. The hypothetical report also records each patient's risk status at admission, based on age and other health conditions. Does Hospital A have worse surgical outcomes than Hospital B?
 
-**Step five — what it means.** Unadjusted, Clinic A trails by ten percentage points; on the same mix of wounds, it leads by five. Both are correct, and they describe different things. The pooled table says what happened to the patients each clinic actually saw. The adjusted comparison says how the clinics did on comparable wounds — what a patient choosing a clinic wants to know.
+| Hospital | Risk status | Patients | Deaths within 30 days |
+|---|---|---|---|
+| A | High-risk | 900 | 72 |
+| A | Low-risk | 300 | 3 |
+| A | All patients | 1,200 | 75 |
+| B | High-risk | 200 | 20 |
+| B | Low-risk | 800 | 16 |
+| B | All patients | 1,000 | 36 |
 
-The reversal stops being mysterious the moment you look at the mix.
+**Step 1: name the variables.** The explanatory variable is the hospital (A or B). The response variable is death within 30 days (yes or no). The possible confounder is risk status at admission (high or low).
 
-![The pooled rate is a weighted average, pulled toward whichever wounds the clinic mostly sees.](../assets/figures/week-06/mixing-explains-reversal.svg){fig-alt="A percentage axis with one lane per clinic. Clinic A, seeing 70 percent serious wounds, has rates of 60 and 90 and pools to 69, near the lower rate. Clinic B, seeing 80 percent minor wounds, has 55 and 85 and pools to 79."}
+**Step 2: make the unadjusted comparison.** Pool all the patients at each hospital:
 
-Each clinic's pooled rate is the average of its own two rates, weighted by its own caseload. Clinic A is 70 percent serious, so 0.30 times 90 plus 0.70 times 60 gives 69, close to its serious-wound rate. Clinic B is 80 percent minor, so 0.80 times 85 plus 0.20 times 55 gives 79. Clinic A's higher rates are averaged over a harder caseload and lose. Nothing was faked; an average moves when its weights move.
+$$\text{A: } \frac{75}{1200} = 0.0625 = 6.25\%, \qquad \text{B: } \frac{36}{1000} = 0.036 = 3.6\%.$$
 
-### The same reasoning, transferred
+Unadjusted, Hospital A's death rate is $6.25 - 3.6 = 2.65$ percentage points higher.
 
-A university health clinic tests two appointment reminders. Six hundred appointments were reminded, 300 by text message and 300 by phone call, and the response is whether the patient arrived. The third variable is whether the appointment was a first visit or a follow-up, because first visits are missed more often and staff had been using text mainly for them.
+**Step 3: stratify by risk status.** Compute the death rate within each stratum:
 
-By text, 150 of 200 first visits arrived, or 75 percent, and 90 of 100 follow-ups, or 90 percent; overall 240 of 300, or 80 percent. By phone, 70 of 100 first visits arrived, or 70 percent, and 170 of 200 follow-ups, or 85 percent; overall 240 of 300, again 80 percent.
+| Risk status | Hospital A death rate | Hospital B death rate | Which is lower |
+|---|---|---|---|
+| High-risk | $72/900 = 0.080 = 8.0\%$ | $20/200 = 0.100 = 10.0\%$ | A, by 2.0 percentage points |
+| Low-risk | $3/300 = 0.010 = 1.0\%$ | $16/800 = 0.020 = 2.0\%$ | A, by 1.0 percentage point |
 
-Pooled, the two reminders look identical. Split, text leads by five percentage points in both slices. Adjusting confirms it: combined, there are 300 first visits and 300 follow-ups, so both weights are one half, giving text an adjusted 82.5 percent against phone's 77.5 percent.
+Within each risk group, Hospital A has the *lower* death rate. The comparison has reversed: this is Simpson's paradox.
 
-What stayed the same: a third variable that differed between the groups and moved the response on its own, and the same split-then-reweight arithmetic. What changed: the pooled comparison did not reverse — it *vanished*. Confounding does not always flip a sign; far more often it hides a real difference, shrinks one, or inflates one. A pooled zero is not evidence of no difference.
+**Step 4: check that risk status is a confounder.** It needs a link to each of the other two variables. Risk status is recorded at admission, before any surgery, so it cannot be a result of the hospital's care.
 
-## Second worked example — A walking program and an age gap
+- Link to the explanatory variable (hospital): $900/1200 = 0.75$, or 75%, of Hospital A's patients are high-risk, but only $200/1000 = 0.20$, or 20%, of Hospital B's. One plausible story, which the table cannot confirm, is that Hospital A is a large referral center that receives the most complicated cases.
+- Link to the response variable (death): across both hospitals, $72 + 20 = 92$ of the $900 + 200 = 1100$ high-risk patients died ($92/1100 \approx 8.4\%$), but only $3 + 16 = 19$ of the $300 + 800 = 1100$ low-risk patients died ($19/1100 \approx 1.7\%$), both rounded to one decimal place.
 
-**Setting.** A community health centre offered a free walking group for one season and followed 300 adults: 120 joined and 180 did not. The response is numerical this time — average systolic blood pressure in mmHg at the end of the season. Age was recorded in two bands, under 55 and 55 and over. Spread inside each band was roughly twelve mmHg.
+![Case mix of two hypothetical hospitals by patient risk status](../assets/figures/week-06/hospital-case-mix.svg){fig-alt="Stacked bars. Hospital A: 900 of 1,200 surgery patients are high-risk (75%) and 300 are low-risk (25%). Hospital B: 200 of 1,000 are high-risk (20%) and 800 are low-risk (80%)."}
 
-| Group | Under 55 | 55 and over | Everyone |
-|-------|----------|-------------|----------|
-| Walking group | 90 adults, mean 124 | 30 adults, mean 136 | 120 adults, mean 127.0 |
-| No walking group | 45 adults, mean 128 | 135 adults, mean 140 | 180 adults, mean 137.0 |
+**Step 5: see how the reversal arises.** Write each overall rate as a weighted average of its stratum rates, using that hospital's own case mix as the weights:
 
-**Step one — the unadjusted comparison.** For the walking group, 90 times 124 plus 30 times 136 gives 15,240, and dividing by 120 gives 127.0. For the others, 45 times 128 plus 135 times 140 gives 24,660, divided by 180 gives 137.0. The walking group averages 10.0 mmHg lower.
+$$\text{A: } (0.75)(8.0\%) + (0.25)(1.0\%) = 6.0\% + 0.25\% = 6.25\%$$
 
-**Step two — is age a confounder here?** It differs between the groups: 90 of 120 walkers are under 55, or 75 percent, against 45 of 180 non-walkers, or 25 percent. It moves the response on its own: the mean rises from 124 to 136 across the bands inside the walking group and from 128 to 140 inside the other. And it is not on the causal path, since joining a walking group does not change how old you are.
+$$\text{B: } (0.20)(10.0\%) + (0.80)(2.0\%) = 2.0\% + 1.6\% = 3.6\%$$
 
-**Step three — stratify.** Under 55, the difference is 124 minus 128, or 4.0 mmHg lower for walkers. At 55 and over, 136 minus 140, again 4.0 lower. The gap inside each band is far smaller than the gap overall.
+Both match Step 2. Hospital A's overall rate is pulled toward its high-risk rate of 8.0% because three quarters of its patients are high-risk; Hospital B's is pulled toward its low-risk rate of 2.0% because four fifths of its patients are low-risk. Hospital B looks better overall because it treats mostly low-risk patients, not because it does better with either kind of patient.
 
-**Step four — adjust.** Combined, there are 135 adults under 55 and 165 at 55 and over, out of 300, so the weights are 0.45 and 0.55.
+![Death rates within 30 days by hospital and risk status, showing Simpson's paradox](../assets/figures/week-06/hospital-death-rates-by-risk.svg){fig-alt="Bar chart of 30-day death rates. High-risk: A 8.0%, B 10.0%. Low-risk: A 1.0%, B 2.0%. All patients combined: A 6.25%, B 3.6%. A is lower within each risk group but higher combined."}
 
-$$ \text{walking group} \colon \; 0.45 \times 124 + 0.55 \times 136 = 55.8 + 74.8 = 130.6 $$
+**Conclusion in context.** In these illustrative data, Hospital A's higher overall death rate is explained by its sicker patients. For high-risk and low-risk patients alike, Hospital A's 30-day death rate is lower than Hospital B's, so a patient choosing a hospital should look at the rate for patients like themselves. This is still an observational comparison: two risk categories are a rough summary of how sick someone is, and other differences between the hospitals' patients could remain.
 
-$$ \text{no walking group} \colon \; 0.45 \times 128 + 0.55 \times 140 = 57.6 + 77.0 = 134.6 $$
+## Adjusted versus unadjusted comparisons in plain words
 
-The age-adjusted difference is 130.6 minus 134.6, or 4.0 mmHg lower for walkers.
+An **unadjusted** comparison answers "what happened to these groups as they actually were?" An **adjusted** comparison answers "what would the comparison look like if the groups had been alike on the third variable?" They are different questions, and only the adjusted one speaks to whether the groups differ for reasons other than that variable.
 
-**Step five — what it means.** A report prints both numbers together, because the pair says far more than either alone.
+Stratum-by-stratum comparisons are already adjusted, but they give one comparison per stratum. To get a single number for each group, choose one common mix of the third variable and apply each group's own stratum rates to it.
 
-```
-Comparison : walking group versus no walking group
-Outcome    : systolic blood pressure, mmHg
+### Building an adjusted rate from a common mix
 
-                             Difference    Plausible range
-Unadjusted                        -10.0    -12.8 to  -7.2
-Adjusted for age band              -4.0     -7.2 to  -0.8
-```
+For the hospitals, a natural common mix is all their patients combined: $900 + 200 = 1100$ high-risk and $300 + 800 = 1100$ low-risk patients, out of $2200$, so 50% high-risk and 50% low-risk. Apply each hospital's stratum rates to that mix:
 
-![Adjusting for age shrinks the blood pressure gap without reversing it.](../assets/figures/week-06/adjusted-versus-unadjusted.svg){fig-alt="A difference axis in mmHg with a dashed line at zero. The unadjusted difference is 10 lower, with a bar from about 13 to 7 below zero. Adjusted for age band it is 4 lower, with a bar from about 7 to 1 below zero."}
+$$\text{A adjusted: } (0.50)(8.0\%) + (0.50)(1.0\%) = 4.0\% + 0.5\% = 4.5\%$$
 
-Both estimates point the same way, so age does not reverse this comparison the way severity reversed the clinic one. But age accounts for most of the raw gap: of the ten mmHg, roughly six were the age difference between joiners and non-joiners, and roughly four survive adjustment. The ranges say how far each number might reasonably sit from the truth; Week 11 shows where they come from. Notice the adjusted estimate is smaller and less certain: when the groups are unevenly spread across the bands, as they are here, adjustment often costs precision.
+$$\text{B adjusted: } (0.50)(10.0\%) + (0.50)(2.0\%) = 5.0\% + 1.0\% = 6.0\%$$
 
-Written for a non-technical reader: *adults who joined the walking group had systolic blood pressure about four mmHg lower than adults who did not, once the groups were put on the same age footing. Because people chose whether to join, this shows an association and does not establish that walking caused the difference.*
+Adjusted for risk status, Hospital A's death rate is $6.0 - 4.5 = 1.5$ percentage points lower than Hospital B's, although unadjusted it was 2.65 percentage points higher. The stratum rates did not change; only the weights did.
 
-## What adjustment cannot repair
+Three facts are worth remembering. An adjusted rate is a "what if" number: neither hospital actually treated this exact mix. Its value depends on the common mix chosen, so a careful report names its standard. And adjustment can move a comparison in any direction: shrink a gap, erase it, widen it or, as here, reverse it.
 
-**You can only adjust for what you measured.** If the health centre never recorded smoking, no arithmetic will remove smoking from the comparison. That is the flat ceiling on every observational study, and it is why "we adjusted for many variables" is a weaker sentence than it sounds.
+### Adjustment by a model: a preview
 
-**You can only adjust as finely as you measured.** The walking study used two age bands. Inside "55 and over" the walkers might average 58 while the non-walkers average 71 — an age gap of thirteen years the adjustment never touched, because both sit in the same band. Whatever confounding survives is called residual confounding, and coarse categories are its commonest source.
+Stratifying works for one or two categorical variables. Studies that must account for many variables at once, some numerical such as age in years, use a regression model with several explanatory variables, which you will learn to read in Week 9. The idea is the same: in a multiple regression, the coefficient of one variable describes its association with the response when the other variables in the model are held fixed. That is the model's way of comparing like with like, and it is why research reports describe such results as "adjusted for" those other variables.
 
-**Adjusting for the wrong variable does damage.** Suppose walking lowers blood pressure partly by lowering body weight. Then end-of-season weight sits on the causal path, and "adjusted for weight" would subtract out part of the program's real effect, making a working program look useless. Before adjusting, ask whether the variable was fixed before the comparison or could have been changed by it.
+## Worked example 2: age-adjusted death rates in two towns
 
-None of this is a reason to give up on adjustment, only to report it precisely and keep the word *associated* in your conclusion until a randomized study earns a stronger verb.
+**Question.** Two hypothetical towns each have 20,000 residents. In one year, Pinecrest recorded 457 deaths and Fairview recorded 122. A local headline asks whether something in Pinecrest is making people sick. Is Pinecrest's higher death rate evidence that living there is less healthy?
 
-## The misreading to avoid
+Pinecrest is a popular place to retire, and older people die at much higher rates wherever they live, so age is the obvious third variable.
 
-Here is the sentence to watch for, and it will be said out loud this week:
+| Age group | Pinecrest residents | Pinecrest deaths | Fairview residents | Fairview deaths |
+|---|---|---|---|---|
+| Under 40 | 4,000 | 4 | 12,000 | 12 |
+| 40 to 64 | 6,000 | 33 | 6,000 | 30 |
+| 65 and older | 10,000 | 420 | 2,000 | 80 |
+| All ages | 20,000 | 457 | 20,000 | 122 |
 
-> "They adjusted for age, so now it's a fair comparison — walking really does lower blood pressure."
+Death rates are often reported per 1,000 residents per year: deaths divided by residents, times 1,000.
 
-The first half is nearly right and the second half does not follow. Adjusting for age removed the part of the gap that age accounted for, and nothing else. People who volunteer for a walking group also tend to sleep better, smoke less, and have the kind of schedule that permits a daily walk — none of which were measured, so none adjusted for. An adjusted association is still an association. The verb *lower* is causal, and this study has not earned it. Write "was associated with about four mmHg lower blood pressure, adjusted for age band" and you have said everything the data support.
+**Step 1: compute the crude (unadjusted) rates.**
 
-A second misreading appears whenever a table reverses:
+$$\text{Pinecrest: } \frac{457}{20000} \times 1000 = 22.85, \qquad \text{Fairview: } \frac{122}{20000} \times 1000 = 6.10.$$
 
-> "The pooled table says Clinic B is better and the split tables say Clinic A is better, so one of them must be wrong."
+Unadjusted, Pinecrest's rate is about $22.85/6.10 \approx 3.7$ times Fairview's.
 
-Neither is wrong. Both are correct arithmetic about different quantities. The pooled rate describes what happened to the patients each clinic actually saw, mix and all. The stratified rates describe how each clinic did on comparable wounds. If your question is "how did this clinic's patients fare?", the pooled number is honest. If it is "which clinic should I go to with a serious wound?", the stratified number is. Statistics will not choose your question for you.
+**Step 2: compute the age-specific rates.**
 
-And a third, which is more a mood than a claim:
+| Age group | Pinecrest rate per 1,000 | Fairview rate per 1,000 |
+|---|---|---|
+| Under 40 | $4/4000 \times 1000 = 1.0$ | $12/12000 \times 1000 = 1.0$ |
+| 40 to 64 | $33/6000 \times 1000 = 5.5$ | $30/6000 \times 1000 = 5.0$ |
+| 65 and older | $420/10000 \times 1000 = 42.0$ | $80/2000 \times 1000 = 40.0$ |
 
-> "Simpson's paradox proves you can make numbers say anything."
+Within each age group the towns are close: equal in the youngest group, Pinecrest slightly higher in the two older groups.
 
-No. A pooled summary is a weighted average, and averages move when their weights move. Once you look at the mix, the reversal is not merely explainable — it is predictable. The paradox lives in our expectations, not in the arithmetic, and the remedy is always available: look at the mix.
+**Step 3: check that age is a confounder.** Age is linked to the explanatory variable (town): $10000/20000 = 0.50$, or 50%, of Pinecrest's residents are 65 and older, compared with $2000/20000 = 0.10$, or 10%, of Fairview's. Age is linked to the response variable (death): in both towns, residents 65 and older die at about 40 times the rate of residents under 40.
 
-## Practice on your own
+**Step 4: choose a common age mix.** Use the two towns combined: $4000 + 12000 = 16000$ residents under 40, $6000 + 6000 = 12000$ aged 40 to 64, and $10000 + 2000 = 12000$ aged 65 and older, out of 40,000. The weights are $16000/40000 = 0.40$, $12000/40000 = 0.30$ and $12000/40000 = 0.30$, which add to 1.
 
-These are for your own checking, not for submission. Work them with pencil and paper.
+**Step 5: compute the age-adjusted rates.** Apply each town's own age-specific rates to the common mix:
 
-1. A campus recreation centre reports that students who use the climbing wall get fewer winter colds. Name the third variable you think most plausibly confounds this comparison and argue for each of the three conditions. Then name a variable that fails condition two.
+$$\text{Pinecrest: } (0.40)(1.0) + (0.30)(5.5) + (0.30)(42.0) = 0.40 + 1.65 + 12.60 = 14.65$$
 
-2. A driving school compares two training programs on whether new drivers passed the road test on the first attempt. Compute each program's unadjusted pass rate, then each rate within route type, then the adjusted rates using the combined route counts as weights. Say which program you would recommend and why.
+$$\text{Fairview: } (0.40)(1.0) + (0.30)(5.0) + (0.30)(40.0) = 0.40 + 1.50 + 12.00 = 13.90$$
 
-| Program | Easy route | Hard route |
-|---------|-----------|------------|
-| Program P | 45 passed of 50 | 60 passed of 100 |
-| Program Q | 80 passed of 100 | 28 passed of 50 |
+Both are deaths per 1,000 residents per year.
 
-3. An abstract reports: "After adjustment for age, sex, and household income, the association was attenuated but persisted." Write two sentences for a non-technical reader — one saying what has been ruled out, one saying what has not.
+![Age mix and crude versus age-adjusted death rates in two hypothetical towns](../assets/figures/week-06/town-age-mix-and-adjusted-rates.svg){fig-alt="Left: 50% of Pinecrest residents are 65 or older, versus 10% of Fairview. Right: deaths per 1,000 per year are 22.85 versus 6.10 crude, but 14.65 versus 13.90 after age adjustment."}
 
-4. An observational study of a diabetes education program adjusts for participants' end-of-program diet quality, then reports almost no benefit. Using condition three, decide whether that adjustment was appropriate, and say what the adjusted number now estimates.
+**Conclusion in context.** Unadjusted, Pinecrest's death rate is about 3.7 times Fairview's (22.85 versus 6.10 per 1,000). Adjusted for age, the gap shrinks to $14.65 - 13.90 = 0.75$ deaths per 1,000, with Pinecrest about 5% higher ($14.65/13.90 \approx 1.05$). Almost all of the crude difference comes from Pinecrest's older population, not from living in Pinecrest. The small remaining gap is not by itself evidence of a health problem: Fairview's rate for residents 65 and older rests on only 80 deaths, so ordinary year-to-year chance variation, or other differences between the towns, could produce a gap this size. This is why public health reports comparing places with different age structures usually give age-adjusted rates.
 
-5. Invent your own reversal. Hold four rates fixed: Group One heals 80 percent of mild cases and 40 percent of severe ones; Group Two heals 70 percent and 30 percent. Choose caseloads so the pooled comparison favours Group Two, then state the rule you used.
+## Transfer: activity and resting heart rate across age groups
 
-## Where to read more
+The same reasoning works when both variables are numerical. A hypothetical health survey records weekly hours of physical activity and resting heart rate (beats per minute) for 12 adults aged 25 to 45 and 12 children aged 8 to 12. The scatterplot marks each age group with its own color and shape.
 
-- [Introduction to Modern Statistics, Chapter 2: Study design](https://openintrostat.github.io/ims/data-design.html) — where confounding is introduced. Reread the observational-study sections alongside your Week 2 notes.
-- [Introduction to Modern Statistics, Chapter 8: Linear regression with multiple predictors](https://openintrostat.github.io/ims/model-mlr.html) — the formal machinery behind adjustment. Read it for the concept, not the algebra; Week 9 returns for the details.
-- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — its study design material carries several health examples of confounding.
-- [The whole of Introduction to Modern Statistics](https://openintrostat.github.io/ims), if you want to browse ahead.
-- Course pages: [the resources list](../resources/index.qmd) and [the schedule](../schedule.qmd).
+![Physical activity and resting heart rate for hypothetical adults and children](../assets/figures/week-06/activity-heart-rate-by-age-group.svg){fig-alt="Scatterplot of weekly activity hours and resting heart rate for 12 adults (circles) and 12 children (triangles). Pooled r = 0.48, but r = −0.75 within adults and r = −0.78 within children."}
+
+**Question.** In these data, does more physical activity go with a higher or a lower resting heart rate?
+
+**Pooled, the association looks positive.** Treating all 24 people as one group gives a correlation of $r = 0.48$, a moderate positive association, shown by the dashed line (a straight line fitted to all 24 people; Week 8 shows how such lines are found).
+
+**Within each age group, the association is negative.** For the adults alone $r = -0.75$, and for the children alone $r = -0.78$. Within each group, each extra hour of weekly activity goes with roughly 1.4 to 1.5 fewer beats per minute (the slopes of the two solid lines, each a straight line fitted to one age group's data), the direction you would expect if activity builds fitness.
+
+**Why the pooled trend reverses.** Age group is linked to both variables. The 12 children's weekly activity hours add to 117, so they average $117/12 = 9.75$ hours per week; the 12 adults' hours add to 50, an average of $50/12 \approx 4.2$ hours. The 12 children's resting heart rates add to 1,025, an average of $1025/12 \approx 85.4$ beats per minute; the 12 adults' add to 828, an average of $828/12 = 69.0$ beats per minute. The children's average is higher because children's hearts normally beat faster at rest. Pooling puts the active, faster-heart children in the upper right and the less active, slower-heart adults in the lower left, so the combined cloud tilts upward even though each group's cloud tilts downward.
+
+**Conclusion in context.** In these illustrative data, the positive pooled correlation is produced by age group acting as a confounder. Comparing children with children and adults with adults, more activity goes with a lower resting heart rate. As with the hospitals, the stratified comparison answers the question you care about, and it is still observational: it rules out age group as the explanation for the within-group pattern, but it does not show that activity causes it.
+
+## A common misreading: adjusting for one variable settles the causal question
+
+After Worked example 1, it is tempting to announce that Hospital A's care causes fewer deaths; after the transfer example, that activity lowers resting heart rate. Both claims go further than the data allow. An adjusted or stratified comparison removes the confounding due to the variables you adjusted for, as you measured them, and nothing more. Three things can still go wrong:
+
+- **Unmeasured confounders.** Hospital B's patients might differ from Hospital A's in ways the report never recorded, such as how quickly they reached the hospital. Adjustment cannot account for a variable that is not in the data. This is also residual confounding.
+- **Coarse categories.** "High-risk" is a broad label. If Hospital A's high-risk patients were less sick than Hospital B's, some confounding remains inside the stratum: residual confounding.
+- **The wrong kind of variable.** Adjusting for a mediator removes part of the effect you want to measure.
+
+The opposite mistake also happens: treating the unadjusted number as the objective one because no choices went into it. It reflects the case mix as much as anything, so it answers a different question. Which comparison fits depends on the causal story, which you can sketch with a diagram, not on arithmetic alone. Only random assignment balances unmeasured variables, and then only on average. So for any adjusted claim, in the news or in a research paper, ask which variables were adjusted for, how they were measured, and what important variable might be missing.
+
+## Practice on confounding (ungraded)
+
+Try each question before looking back at the worked examples.
+
+1. A hypothetical survey finds that adults who carry a cigarette lighter are more likely to develop lung disease than adults who do not. Name a likely confounder, draw a causal diagram with three boxes, and say what each arrow means. *What to look for:* your confounder needs an arrow into carrying a lighter and an arrow into lung disease.
+
+2. Two physical therapy programs for knee injuries report these hypothetical outcomes. Program P: 45 of 50 patients with mild injuries recovered, and 90 of 150 with severe injuries recovered. Program Q: 132 of 150 patients with mild injuries recovered, and 28 of 50 with severe injuries recovered. Compute each program's recovery rate for mild injuries, for severe injuries and for all of its patients. Which program looks better overall, and which looks better within each severity group? *What to look for:* compare the share of each program's patients whose injuries were severe.
+
+3. County X has a higher crude death rate than County Y but a lower age-adjusted death rate. In two or three sentences, explain to a friend with no statistics background how both can be true.
+
+4. A company notices that employees who join its voluntary lunchtime walking program take fewer sick days than employees who do not. Name one possible confounder and explain why it could produce this difference. Then describe a study design that would break the confounding. *What to look for:* in each design, who or what decides whether an employee walks?
+
+5. A news story reports that, after adjusting for age and income, people who drink tea daily had slightly lower blood pressure than people who do not. Name one thing this adjusted comparison does account for, and one thing it cannot rule out.
+
+## Read further on confounding and adjustment
+
+- *Introduction to Modern Statistics* (IMS), 2nd edition, [Chapter 2: Study design](https://openintrostat.github.io/ims/data-design.html): the parts on observational studies, confounding variables and experiments.
+- IMS [Chapter 4: Exploring categorical data](https://openintrostat.github.io/ims/explore-categorical.html): contingency tables (two-way tables), row and column proportions, and bar charts for comparing groups, the tools of Worked example 1.
+- IMS [Chapter 8: Linear regression with multiple predictors](https://openintrostat.github.io/ims/model-mlr.html): a preview of adjustment by a model, which returns in Week 9. You can skip the R code and read the output and explanation.
+- Optional: *Introductory Statistics for the Life and Biomedical Sciences* (Vu and Harrington, OpenIntro), [book home page](https://www.openintro.org/book/biostat/). Chapter 1, Introduction to data, discusses observational studies and experiments with biomedical examples.
 
 ## Where this goes next
 
-Week 5 handed you a relationship; this week handed you the question that tests it. [Week 7](week07-synthesis-midterm.qmd) is a consolidation week: you will read one invented study front to back — design, cases and variables, one-variable summaries, group comparison, association, confounding check — and write a conclusion with its qualifications attached.
-
-Further out, this week is the ancestor of [Week 9](week09-multiple-logistic-regression.qmd). Multiple regression is stratification done all at once, across many variables, including numerical ones you could never split into tidy slices — and "holding the other variables fixed" does exactly the job the common weights did here.
-
-You can reach every unit from [the course home page](../index.qmd), and last week's material is at [Week 5](week05-association.qmd).
+- Previous: [Week 5: Association](week05-association.qmd) described how two variables move together; this week asked what a third variable can do to that picture.
+- Next: [Week 7: First-half synthesis](week07-synthesis-midterm.qmd) pulls together study design, summaries, association and confounding before the course turns to models.
+- Later: [Week 9: Multiple and logistic regression interpretation](week09-multiple-logistic-regression.qmd) returns to adjusted comparisons, read from regression output.
+- The [notes overview](index.qmd) lists every week, and the [course schedule](../schedule.qmd) shows the order of the weeks.

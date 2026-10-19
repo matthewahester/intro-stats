@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 450" width="640" height="450" role="img" aria-labelledby="title desc">
+  <title id="title">The course as one chain of reasoning, from question to conclusion</title>
+  <desc id="desc">Eight steps and the weeks behind each: question (1), design (2), data (1), summaries (3, 4, 5, 13), models (6, 8, 9), uncertainty (10 to 13), evidence synthesis (14), conclusion (practiced in 7). An arrow: design limits the conclusion.</desc>
+  <rect x="0" y="0" width="640" height="450" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="26" font-family="Inter, system-ui, sans-serif" font-size="15" text-anchor="start" fill="#1c1b19" font-weight="bold">One line of reasoning for the whole course</text>
+  <rect x="70" y="46" width="210" height="36" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="69" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">1. Question</text>
+  <text x="294" y="61" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">What is claimed, about whom, comparing what?</text>
+  <text x="294" y="77" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Week 1</text>
+  <line x1="175" y1="82" x2="175" y2="90" stroke="#1c1b19" stroke-width="1.8"/>
+  <polygon points="170,89 180,89 175,96" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <rect x="70" y="96" width="210" height="36" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="119" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">2. Design</text>
+  <text x="294" y="111" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Random sampling? Random assignment?</text>
+  <text x="294" y="127" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Week 2</text>
+  <line x1="175" y1="132" x2="175" y2="140" stroke="#1c1b19" stroke-width="1.8"/>
+  <polygon points="170,139 180,139 175,146" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <rect x="70" y="146" width="210" height="36" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="169" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">3. Data</text>
+  <text x="294" y="161" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Cases, explanatory and response variables</text>
+  <text x="294" y="177" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Week 1</text>
+  <line x1="175" y1="182" x2="175" y2="190" stroke="#1c1b19" stroke-width="1.8"/>
+  <polygon points="170,189 180,189 175,196" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <rect x="70" y="196" width="210" height="36" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="219" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">4. Summaries</text>
+  <text x="294" y="211" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Graphs, center, spread, rates, two-way tables</text>
+  <text x="294" y="227" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Weeks 3, 4, 5 and 13</text>
+  <line x1="175" y1="232" x2="175" y2="240" stroke="#1c1b19" stroke-width="1.8"/>
+  <polygon points="170,239 180,239 175,246" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <rect x="70" y="246" width="210" height="36" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="269" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">5. Models</text>
+  <text x="294" y="261" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Adjust for confounders; slopes and odds ratios</text>
+  <text x="294" y="277" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Weeks 6, 8 and 9</text>
+  <line x1="175" y1="282" x2="175" y2="290" stroke="#1c1b19" stroke-width="1.8"/>
+  <polygon points="170,289 180,289 175,296" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <rect x="70" y="296" width="210" height="36" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="319" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">6. Uncertainty</text>
+  <text x="294" y="311" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Probability, SE, intervals, tests, errors</text>
+  <text x="294" y="327" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Weeks 10 to 13</text>
+  <line x1="175" y1="332" x2="175" y2="340" stroke="#1c1b19" stroke-width="1.8"/>
+  <polygon points="170,339 180,339 175,346" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <rect x="70" y="346" width="210" height="36" fill="#c9d8e1" stroke="#35566b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="369" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">7. Evidence synthesis</text>
+  <text x="294" y="361" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">What do all the studies show together?</text>
+  <text x="294" y="377" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Week 14</text>
+  <line x1="175" y1="382" x2="175" y2="390" stroke="#1c1b19" stroke-width="1.8"/>
+  <polygon points="170,389 180,389 175,396" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <rect x="70" y="396" width="210" height="36" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5" rx="6"/>
+  <text x="175" y="419" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">8. Responsible conclusion</text>
+  <text x="294" y="411" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#1c1b19">Size, uncertainty, kind of claim, for whom</text>
+  <text x="294" y="427" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935" font-style="italic">Every week, practiced in Week 7</text>
+  <polyline points="70,114 42,114 42,414 63,414" fill="none" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="62,409 62,419 70,414" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="30" y="264" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#8a4a2b" transform="rotate(-90 30 264)">Design limits what the conclusion may claim</text>
+</svg>

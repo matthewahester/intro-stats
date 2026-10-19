@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" role="img" aria-labelledby="title desc">
+  <title id="title">Segmented bar chart of sleep quality by screen use before bed for 500 hypothetical adults</title>
+  <desc id="desc">Three 100 percent bars. Screen users: poor 25, fair 40, good 35 percent. Non-users: poor 15, fair 35, good 50 percent. All 500 adults: poor 21, fair 38, good 41 percent.</desc>
+  <rect x="0" y="0" width="640" height="320" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <rect x="170" y="22" width="14" height="14" fill="#5f5d57" stroke="#1c1b19" stroke-width="0.5"/>
+  <text x="190" y="34" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Poor sleep</text>
+  <rect x="280" y="22" width="14" height="14" fill="#e2dfd8" stroke="#1c1b19" stroke-width="0.5"/>
+  <text x="300" y="34" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Fair sleep</text>
+  <rect x="390" y="22" width="14" height="14" fill="#4d6b3c" stroke="#1c1b19" stroke-width="0.5"/>
+  <text x="410" y="34" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Good sleep</text>
+  <text x="170" y="56" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Sleep quality over the past month</text>
+  <line x1="170" y1="180" x2="610" y2="180" stroke="#d8d6d0" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="160" y="91" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19" font-weight="600">Screen users</text>
+  <text x="160" y="107" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">300 adults</text>
+  <rect x="170" y="74" width="110" height="38" fill="#5f5d57" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="225" y="98" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">Poor 25%</text>
+  <rect x="280" y="74" width="176" height="38" fill="#e2dfd8" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="368" y="98" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">Fair 40%</text>
+  <rect x="456" y="74" width="154" height="38" fill="#4d6b3c" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="533" y="98" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">Good 35%</text>
+  <text x="160" y="145" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19" font-weight="600">Non-users</text>
+  <text x="160" y="161" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">200 adults</text>
+  <rect x="170" y="128" width="66" height="38" fill="#5f5d57" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="203" y="152" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">Poor 15%</text>
+  <rect x="236" y="128" width="154" height="38" fill="#e2dfd8" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="313" y="152" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">Fair 35%</text>
+  <rect x="390" y="128" width="220" height="38" fill="#4d6b3c" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="500" y="152" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">Good 50%</text>
+  <text x="160" y="215" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19" font-weight="600">All adults</text>
+  <text x="160" y="231" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">500 adults</text>
+  <rect x="170" y="198" width="92.4" height="38" fill="#5f5d57" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="216.2" y="222" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">Poor 21%</text>
+  <rect x="262.4" y="198" width="167.2" height="38" fill="#e2dfd8" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="346" y="222" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">Fair 38%</text>
+  <rect x="429.6" y="198" width="180.4" height="38" fill="#4d6b3c" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="519.8" y="222" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="600">Good 41%</text>
+  <line x1="170" y1="260" x2="610" y2="260" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="170" y1="260" x2="170" y2="265" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="170" y="279" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0%</text>
+  <line x1="258" y1="260" x2="258" y2="265" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="258" y="279" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20%</text>
+  <line x1="346" y1="260" x2="346" y2="265" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="346" y="279" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">40%</text>
+  <line x1="434" y1="260" x2="434" y2="265" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="434" y="279" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">60%</text>
+  <line x1="522" y1="260" x2="522" y2="265" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="522" y="279" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">80%</text>
+  <line x1="610" y1="260" x2="610" y2="265" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="279" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">100%</text>
+  <text x="390" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Percent of the group</text>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" width="640" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">Four hypothetical reminder studies: statistical significance and practical importance are different questions</title>
+  <desc id="desc">Intervals for the change in attendance in percentage points, shaded at 5 or more as large enough to matter. A: 0.5 (0.2 to 0.8), p ≈ 0.001. B: 13.3 (−3.1 to 29.8), p ≈ 0.12. C: 10.0 (1.8 to 18.2), p ≈ 0.017. D: 0.4 (−1.5 to 2.3), p ≈ 0.68.</desc>
+  <rect x="0" y="0" width="640" height="500" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <rect x="385" y="40" width="225" height="290" fill="#d3e0c8" stroke="none" stroke-width="1.5" opacity="0.55"/>
+  <text x="497.5" y="32" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#4d6b3c" font-weight="600">large enough to matter: 5 or more</text>
+  <line x1="250" y1="330" x2="250" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="250" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−10</text>
+  <line x1="295" y1="330" x2="295" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="295" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−5</text>
+  <line x1="340" y1="330" x2="340" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="340" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="385" y1="330" x2="385" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="385" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">5</text>
+  <line x1="430" y1="330" x2="430" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="430" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10</text>
+  <line x1="475" y1="330" x2="475" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="475" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">15</text>
+  <line x1="520" y1="330" x2="520" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="520" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20</text>
+  <line x1="565" y1="330" x2="565" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="565" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">25</text>
+  <line x1="610" y1="330" x2="610" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">30</text>
+  <line x1="250" y1="330" x2="610" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="340" y1="40" x2="340" y2="330" stroke="#1c1b19" stroke-width="1.4"/>
+  <text x="336" y="32" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19">no difference</text>
+  <line x1="385" y1="40" x2="385" y2="330" stroke="#4d6b3c" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <text x="400" y="372" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Change in attendance, reminder minus usual care (percentage points)</text>
+  <line x1="341.8" y1="82" x2="347.2" y2="82" stroke="#8a4a2b" stroke-width="3"/>
+  <line x1="341.8" y1="75" x2="341.8" y2="89" stroke="#8a4a2b" stroke-width="2"/>
+  <line x1="347.2" y1="75" x2="347.2" y2="89" stroke="#8a4a2b" stroke-width="2"/>
+  <circle cx="344.5" cy="82" r="2" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="20" y="70" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Study A: 200,000 per group</text>
+  <text x="20" y="88" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">estimate 0.5 (95% CI 0.2 to 0.8)</text>
+  <text x="20" y="106" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">p ≈ 0.001 (significant)</text>
+  <line x1="311.73" y1="150" x2="608.27" y2="150" stroke="#35566b" stroke-width="3"/>
+  <line x1="311.73" y1="143" x2="311.73" y2="157" stroke="#35566b" stroke-width="2"/>
+  <line x1="608.27" y1="143" x2="608.27" y2="157" stroke="#35566b" stroke-width="2"/>
+  <circle cx="460" cy="150" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1.2"/>
+  <text x="20" y="138" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Study B: 60 per group</text>
+  <text x="20" y="156" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b">estimate 13.3 (95% CI −3.1 to 29.8)</text>
+  <text x="20" y="174" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b">p ≈ 0.12 (not significant)</text>
+  <line x1="356.23" y1="218" x2="503.77" y2="218" stroke="#8a4a2b" stroke-width="3"/>
+  <line x1="356.23" y1="211" x2="356.23" y2="225" stroke="#8a4a2b" stroke-width="2"/>
+  <line x1="503.77" y1="211" x2="503.77" y2="225" stroke="#8a4a2b" stroke-width="2"/>
+  <circle cx="430" cy="218" r="5" fill="#8a4a2b" stroke="#ffffff" stroke-width="1.2"/>
+  <text x="20" y="206" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Study C: 250 per group</text>
+  <text x="20" y="224" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">estimate 10.0 (95% CI 1.8 to 18.2)</text>
+  <text x="20" y="242" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">p ≈ 0.017 (significant)</text>
+  <line x1="326.49" y1="286" x2="360.71" y2="286" stroke="#35566b" stroke-width="3"/>
+  <line x1="326.49" y1="279" x2="326.49" y2="293" stroke="#35566b" stroke-width="2"/>
+  <line x1="360.71" y1="279" x2="360.71" y2="293" stroke="#35566b" stroke-width="2"/>
+  <circle cx="343.6" cy="286" r="5" fill="#35566b" stroke="#ffffff" stroke-width="1.2"/>
+  <text x="20" y="274" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Study D: 5,000 per group</text>
+  <text x="20" y="292" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b">estimate 0.4 (95% CI −1.5 to 2.3)</text>
+  <text x="20" y="310" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b">p ≈ 0.68 (not significant)</text>
+  <line x1="20" y1="392" x2="610" y2="392" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="20" y="424" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Study A, enlarged</text>
+  <text x="20" y="442" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">axis stretched: −0.2 to 1.0</text>
+  <text x="20" y="460" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">excludes 0, far below 5</text>
+  <line x1="250" y1="452" x2="610" y2="452" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="250" y1="452" x2="250" y2="457" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="250" y="471" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−0.2</text>
+  <line x1="310" y1="452" x2="310" y2="457" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="310" y="471" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.0</text>
+  <line x1="370" y1="452" x2="370" y2="457" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="370" y="471" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.2</text>
+  <line x1="430" y1="452" x2="430" y2="457" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="430" y="471" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.4</text>
+  <line x1="490" y1="452" x2="490" y2="457" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="490" y="471" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.6</text>
+  <line x1="550" y1="452" x2="550" y2="457" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="550" y="471" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.8</text>
+  <line x1="610" y1="452" x2="610" y2="457" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="471" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1.0</text>
+  <line x1="310" y1="408" x2="310" y2="452" stroke="#1c1b19" stroke-width="1.4"/>
+  <line x1="369.86" y1="428" x2="550.14" y2="428" stroke="#8a4a2b" stroke-width="3"/>
+  <line x1="369.86" y1="421" x2="369.86" y2="435" stroke="#8a4a2b" stroke-width="2"/>
+  <line x1="550.14" y1="421" x2="550.14" y2="435" stroke="#8a4a2b" stroke-width="2"/>
+  <circle cx="460" cy="428" r="5" fill="#8a4a2b" stroke="#ffffff" stroke-width="1.2"/>
+  <text x="610" y="410" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#4d6b3c">the line at 5 is far off to the right</text>
+</svg>

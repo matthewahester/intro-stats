@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 372" width="640" height="372" role="img" aria-labelledby="title desc">
+  <title id="title">Five hypothetical randomized trials of Supplement H, with the pooled estimate</title>
+  <desc id="desc">Forest plot of risk ratios for winter infection, supplement versus placebo, in five trials: 0.91, 1.02, 0.80, 0.97, 1.07; every interval crosses 1. Pooled risk ratio 0.98, 95% CI 0.89 to 1.08.</desc>
+  <rect x="0" y="0" width="640" height="372" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="40" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#3a3935" font-weight="bold">Trial (total n)</text>
+  <text x="620" y="40" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="end" fill="#3a3935" font-weight="bold">Risk ratio (95% CI)</text>
+  <line x1="330" y1="50" x2="330" y2="296" stroke="#8a8780" stroke-width="1.3" stroke-dasharray="4 3"/>
+  <text x="20" y="76.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial A (n = 400)</text>
+  <line x1="257.83" y1="72" x2="366.42" y2="72" stroke="#35566b" stroke-width="2"/>
+  <rect x="308.49" y="68.37" width="7.27" height="7.27" fill="#35566b" stroke="none" stroke-width="0"/>
+  <text x="620" y="76.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">0.91 (0.68, 1.21)</text>
+  <text x="20" y="112.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial B (n = 1,200)</text>
+  <line x1="296.78" y1="108" x2="370.8" y2="108" stroke="#35566b" stroke-width="2"/>
+  <rect x="328.46" y="102.67" width="10.66" height="10.66" fill="#35566b" stroke="none" stroke-width="0"/>
+  <text x="620" y="112.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">1.02 (0.84, 1.24)</text>
+  <text x="20" y="148.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial C (n = 300)</text>
+  <line x1="217.76" y1="144" x2="358.54" y2="144" stroke="#35566b" stroke-width="2"/>
+  <rect x="285.35" y="141.2" width="5.6" height="5.6" fill="#35566b" stroke="none" stroke-width="0"/>
+  <text x="620" y="148.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">0.80 (0.55, 1.16)</text>
+  <text x="20" y="184.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial D (n = 2,000)</text>
+  <line x1="295.91" y1="180" x2="352.27" y2="180" stroke="#35566b" stroke-width="2"/>
+  <rect x="317.09" y="173" width="14" height="14" fill="#35566b" stroke="none" stroke-width="0"/>
+  <text x="620" y="184.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">0.97 (0.83, 1.13)</text>
+  <text x="20" y="220.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19">Trial E (n = 800)</text>
+  <line x1="298.33" y1="216" x2="387.55" y2="216" stroke="#35566b" stroke-width="2"/>
+  <rect x="338.52" y="211.58" width="8.84" height="8.84" fill="#35566b" stroke="none" stroke-width="0"/>
+  <text x="620" y="220.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">1.07 (0.84, 1.36)</text>
+  <line x1="20" y1="238" x2="620" y2="238" stroke="#d8d6d0" stroke-width="1"/>
+  <polygon points="307.66,266 325.82,257 343.98,266 325.82,275" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <text x="20" y="270.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#8a4a2b" font-weight="bold">Pooled (5 trials)</text>
+  <text x="620" y="270.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#8a4a2b" font-weight="bold">0.98 (0.89, 1.08)</text>
+  <line x1="200" y1="296" x2="460" y2="296" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="200" y1="296" x2="200" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="200" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.5</text>
+  <line x1="288.15" y1="296" x2="288.15" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="288.15" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.8</text>
+  <line x1="330" y1="296" x2="330" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="330" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1</text>
+  <line x1="371.85" y1="296" x2="371.85" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="371.85" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1.25</text>
+  <line x1="460" y1="296" x2="460" y2="301" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="460" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <text x="330" y="336" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Risk ratio, supplement vs placebo (log scale)</text>
+  <text x="322" y="356" font-family="Inter, system-ui, sans-serif" font-size="11.5" text-anchor="end" fill="#3a3935">← fewer infections on supplement</text>
+  <text x="338" y="356" font-family="Inter, system-ui, sans-serif" font-size="11.5" text-anchor="start" fill="#3a3935">more infections on supplement →</text>
+</svg>

@@ -8,222 +8,285 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: compared with what?
 
-Last week you learned to describe one variable on its own: its shape, its center, its spread, and the numbers that stand in for a whole column of data. By itself that rarely settles anything, because almost every question people bring to data is a comparison. Do patients on the new protocol recover faster than patients on the old one? One distribution is a description; two side by side are the beginning of an argument. So the unit of thought changes this week: what you study is no longer a group but the *difference between* two groups.
+A hypothetical community clinic puts up a poster: "Patients in our spring walking program lost an average of 3 pounds." Before deciding whether the program works, write down one question you would want answered.
 
-The move is easy to do badly, and most people do. It is very natural to compute two averages, subtract, and stop. But a difference in averages tells you almost nothing about what any individual person experienced. This week's real content is the discipline that keeps you from stopping there: compare centers, but also spreads, also shapes, and always look at how much the groups overlap before you say anything about a person.
+Most good questions come down to *compared with what?* Did patients outside the program also lose weight this spring? Were the walkers different to begin with? Did everyone lose about 3 pounds, or did a few lose a lot while most lost nothing? One average for one group cannot settle these. You need a second group, compared fairly and completely.
 
-By the end of this week you should be able to look at a pair of side-by-side boxplots, or a small table of group summaries, and write two or three sentences a careful reader would accept: how big the gap is in the units of the problem, how much the groups overlap, and what the comparison does not establish. One thing it cannot establish is whether a gap this size could have appeared by chance alone. We name that question this week and leave it until Week 11.
+[Week 3](week03-one-variable-summaries.qmd) described one variable at a time. This week puts distributions side by side: a quantitative response across groups, a categorical response across groups, and two ways to express a difference in risk.
 
-### Why this matters
+## Why comparisons carry the evidence
 
-Picture an administrator choosing between two staffing plans for a walk-in clinic. The average wait is twenty-three minutes under Plan A and twenty-three under Plan B, so the choice looks like a coin flip and the administrator picks whichever is cheaper. But suppose that under Plan A nearly every patient waits between fifteen and thirty minutes, while under Plan B most are seen inside a quarter of an hour and a handful wait more than an hour. Those are not the same clinic to be a patient in. The average hid the entire difference, and a real decision got made on the wrong number.
+Most claims in health, science and public policy are comparisons, even when not phrased as one. "The new dressing lowers infections" compares patients who got it with patients who did not. Three questions do most of the work:
 
-The same failure runs through health reporting and education policy, wherever a program is called effective because the treated group's mean came out higher. Comparing distributions instead of averages changes decisions the same week you learn it.
+1. What explanatory variable defines the groups, and what response variable is being compared?
+2. How big is the difference, and in what units: minutes, centimeters, percentage points, or a ratio?
+3. Is the comparison group a fair one, alike in the other ways that matter?
+
+This week's graphs and numbers handle the first two questions; the third links back to study design in [Week 2](week02-study-design.qmd) and ahead to confounding in [Week 6](week06-confounding.qmd).
 
 ## What you will be able to do
 
-- Read side-by-side boxplots on a common axis and say which group sits higher, which is more spread out, and which is more skewed.
-- Compute a difference in means and a difference in medians, and report each in the units of the measurement with its direction named.
-- Describe how much two groups overlap using a count of individuals, not an impression.
-- Set a group difference beside the person-to-person variation inside the groups and judge whether it is large in that context.
-- Read a group summary table of sample sizes, means, standard deviations, medians, and quartiles, and describe each distribution from it.
-- State what a two-group comparison does not establish, including cause and including chance.
+By the end of this week you can:
 
-## Words worth owning
+- name the explanatory variable, the response variable and the comparison in a claim about groups;
+- compare groups in side-by-side box plots and stacked dot plots: center, spread, overlap and unusual values;
+- compute and interpret differences in means and medians, with units and a direction;
+- build a two-way table, compute conditional proportions, and read a segmented bar chart;
+- compute and interpret a risk difference and a relative risk, and explain why a report needs both;
+- explain how the comparison group, and the direction of a comparison, change what the numbers say.
 
-| Term | What it means in this course |
+## Words to know this week
+
+| Term | Meaning |
 |---|---|
-| side-by-side display | Two or more groups on one axis at the same scale, so a distance can be read across groups |
-| difference in means | One group's mean minus the other's, in the original units, with the direction named |
-| difference in medians | The same subtraction done with medians; the resistant version, preferred when either group is skewed |
-| within-group spread | How much individuals inside one group differ from one another, by standard deviation or interquartile range |
-| overlap | The stretch of values both groups contain, and how many individuals sit in it |
-| group summary table | One row per group, carrying its sample size, center, and spread |
-| practically important | Large enough to matter for the decision at hand, in the units of the problem |
+| Explanatory variable | The variable that defines the groups, such as treatment (fertilizer or water). |
+| Response variable | The outcome measured on each individual and compared across groups. |
+| Side-by-side box plots | Box plots of the same response for each group, on one shared axis. |
+| Stacked dot plot | One row of dots per group, one dot per individual, on a shared axis. |
+| Difference in means | $\bar{x}_1 - \bar{x}_2$, in the units of the response. |
+| Overlap | How much of two groups' values fall in the same range. |
+| Two-way table | Counts for two categorical variables, one in the rows and one in the columns (also called a contingency table). |
+| Marginal total | A row or column total in a two-way table. |
+| Conditional proportion | A proportion computed within one group only. |
+| Segmented bar chart | One 100% bar per group, divided by that group's percentages in each response category. |
+| Risk | The proportion of a group that has an outcome over a stated period. |
+| Risk difference | One group's risk minus the comparison group's risk, often in percentage points. |
+| Relative risk | One group's risk divided by the comparison group's risk (also called the risk ratio). |
+| Comparison group | The baseline group for a comparison, also called the reference group. |
 
-## Four questions to ask of any comparison
+## Comparing a quantitative response across groups
 
-From now until December, every time this course sets two groups next to each other, you will ask the same four questions in the same order.
+For a quantitative response, compare the groups on the features from Week 3 (shape, center, spread and unusual values) plus one new feature: **overlap**, how much of the groups' values fall in the same range.
 
-1. **Where is each group centered?** Report a mean or a median for each, and say which you used.
-2. **How spread out is each group?** Report a standard deviation or an interquartile range for each. A group with a wide spread is a group whose members disagree with one another.
-3. **What shape does each group have?** Symmetric, right-skewed, left-skewed, more than one peak. Shape decides whether the mean or the median is the more honest center.
-4. **How much do the two groups overlap?** How many individuals in one group carry values that would be perfectly ordinary in the other?
+### Side-by-side displays put the groups on one scale
 
-Only after all four do you subtract. Subtracting is the easy part; the four questions are what make it mean something.
+Always draw the groups on a **shared axis**. On separate axes with different scales, your eye compares positions that mean different things; on one axis, differences in center, spread and overlap are visible at a glance.
 
-### The comparison is the thing, not the group
+- **Stacked dot plots** show every individual, so they suit small groups.
+- **Side-by-side box plots** show each group's five-number summary (minimum, $Q_1$, median, $Q_3$, maximum). Values more than $1.5 \times \text{IQR}$ beyond the quartiles (past the lower fence $Q_1 - 1.5 \times \text{IQR}$ or the upper fence $Q_3 + 1.5 \times \text{IQR}$) are drawn as separate dots (possible outliers), and the whiskers stop at the most extreme values inside the fences.
 
-A common way to write up a two-group study is to describe group one thoroughly, then group two, and leave the reader to compare. Do not: the reader came for the comparison.
+Here are hypothetical ambulance response times (minutes from the emergency call to arrival) for 15 calls in each of two districts:
 
-Two habits follow. Always state a direction: "the group reporting no regular exercise was higher" is a sentence someone can act on, while "there was a difference" is not. And always state the units — a gap of seven beats per minute and a gap of seven minutes of waiting are both "seven" and mean entirely different things.
+- Urban: 4, 5, 5, 6, 6, 7, 7, 7, 8, 8, 9, 9, 10, 11, 18
+- Rural: 6, 8, 9, 10, 11, 12, 12, 13, 14, 15, 16, 18, 20, 23, 27
 
-### Centers, spreads, and shapes together
+With 15 sorted values, the median is the 8th value and the quartiles are the medians of the 7 values on each side of it (the median-of-halves rule; software may use a slightly different rule).
 
-Two groups can differ in three independent ways, and a comparison that mentions only one is incomplete. They can differ in **center**: one group's typical value sits above the other's. That is what most people mean when they say two groups differ.
+| District | Minimum | $Q_1$ | Median | $Q_3$ | Maximum | IQR |
+|---|---|---|---|---|---|---|
+| Urban (15 calls) | 4 | 6 | 7 | 9 | 18 | 3 |
+| Rural (15 calls) | 6 | 10 | 13 | 18 | 27 | 8 |
 
-They can differ in **spread** while sharing a center — the case in the second worked example below, where two clinics post the same average wait and one of them is far less predictable than the other.
+![Side-by-side box plots of hypothetical ambulance response times in an urban and a rural district](../assets/figures/week-04/ambulance-boxplots.svg){fig-alt="Box plots on one axis from 0 to 30 minutes. Urban, 15 calls: whiskers 4 to 11, box 6 to 9, median 7, one outlier at 18. Rural, 15 calls: whiskers 6 to 27, box 10 to 18, median 13. The boxes do not overlap."}
 
-They can differ in **shape** while sharing both, one symmetric and one with a long right tail. Shape decides whether the mean or the median is the better summary, and it is why a difference in means and a difference in medians can report different sizes, or even opposite directions.
+- **Center.** The difference in medians is $13 - 7 = 6$ minutes (rural minus urban).
+- **Spread.** The rural IQR is 8 minutes against 3 minutes for urban, so rural response times are far more variable.
+- **Overlap.** The boxes do not overlap: the rural $Q_1$ (10 minutes) is above the urban $Q_3$ (9 minutes). The whiskers overlap, but only one rural call (6 minutes) was faster than the urban median and only one urban call (18 minutes) slower than the rural median.
+- **Unusual values.** The 18-minute urban call is beyond the urban upper fence, $9 + 1.5 \times 3 = 13.5$ minutes, so it is drawn as a separate dot and the whisker stops at 11. Ask what happened on that call (heavy traffic, a wrong address, a recording error) before deciding how to treat it.
 
-Because the three move independently, no single number recovers a comparison.
+A complete comparison says all of this in context: *in these hypothetical data, rural response times were typically about 6 minutes longer than urban ones (medians 13 and 7 minutes) and much more variable (IQR 8 versus 3 minutes); the middle halves do not overlap, although one urban call took 18 minutes.*
 
-### Reading a pair of side-by-side boxplots
+### Differences in centers: means and medians
 
-Here is the study the rest of the concept material uses. A campus wellness center measured resting heart rate, in beats per minute, for twenty-two student volunteers: eleven reported regular aerobic exercise, eleven reported none. Nobody was assigned to exercise, so this is an observational comparison and Week 2's warning about causal verbs applies.
+The **difference in means** is $\bar{x}_1 - \bar{x}_2$, and the **difference in medians** is one group's median minus the other's. Three habits keep these numbers readable.
 
-![Resting heart rate for two groups of eleven students, drawn as boxplots on one axis.](../assets/figures/week-04/side-by-side-boxplots.svg){fig-alt="Two boxplots on a shared axis of beats per minute. The no-regular-exercise group sits higher, with median 74 against 66, and its box is wider, spanning 68 to 82 against 62 to 72; the two ranges overlap from 62 to 78."}
+1. **State the direction.** "Rural minus urban is 6 minutes" and "urban minus rural is $-6$ minutes" are the same finding; a bare $-6$ leaves the reader guessing.
+2. **Keep the units** of the response: minutes, centimeters, millimeters of mercury.
+3. **Match the center to the shape.** The mean is pulled toward long tails and outliers; the median is not. The urban mean, $120 / 15 = 8.0$ minutes, sits a minute above the urban median largely because of the 18-minute call. With a rural mean of $214 / 15 \approx 14.3$ minutes, the difference in means ($14.3 - 8.0 = 6.3$ minutes) is close to the difference in medians, but with skewed data the two can disagree. When they do, report the one that fits the shape and say why.
 
-Read it in the order of the four questions. **Centers:** the exercise group's median is 66 beats per minute, the other group's is 74. **Spreads:** the exercise box runs from 62 to 72, an interquartile range of 10; the other runs from 68 to 82, an interquartile range of 14, so the no-exercise group is both higher and more variable. **Shapes:** in each box the median sits near the middle and the whiskers are not wildly lopsided, so neither group is strongly skewed. **Overlap:** the part most readers skip. The two boxes share the stretch from 68 to 72, and the two full ranges share everything from 62 to 78.
+### Spread and overlap: the gap is not the whole story
 
-That last sentence has teeth. The boxes look mostly separated, but the highest value in the exercise group, 78 beats per minute, is higher than seven of the eleven values in the other group and ties an eighth. Each box stands in for eleven separate people, and a picture this compact makes them easy to forget.
+A difference in centers describes groups, not individuals. If both groups are tightly clustered, a 6-minute gap separates them almost completely; if both are widely spread, the same gap leaves most values in a shared range, and a person's group tells you little about that person's own value. So compare the gap with the spread, for example by counting how much of one group lies beyond the other group's median. Spread can even be the main finding: two hypothetical bus routes with the same median trip time are not equally reliable if one has an IQR of 4 minutes and the other 20.
 
-## Overlap, and why an average gap is not a personal gap
+## Worked example 1: seedling heights with and without fertilizer
 
-Everything difficult about comparing groups lives in one gap: the distance between a statement about averages and a statement about people. Averages are properties of piles, and an individual can sit anywhere in their pile.
+**Question.** In a hypothetical experiment, a biology class randomly assigned 20 tomato seedlings to two groups of 10: one group received a liquid fertilizer and the other plain water, with the same light, soil and pots for all plants. After three weeks the heights, to the nearest centimeter, were:
 
-### Two studies with the same gap
+- Fertilizer: 14, 16, 17, 18, 18, 19, 20, 20, 21, 27
+- Water: 11, 12, 13, 14, 14, 15, 15, 16, 17, 18
 
-Suppose two research teams report the same headline: the group means differ by seven beats per minute. Nothing in that sentence says whether the groups hold different kinds of people.
+How do the two groups compare in center, spread and overlap?
 
-![The same seven beats per minute gap between group means, under two very different amounts of overlap.](../assets/figures/week-04/overlap-two-panels.svg){fig-alt="Two dot-plot panels, each with group means seven beats per minute apart. On the left the two groups overlap heavily and most dots lie in a shared band; on the right each group is tightly clustered and the two do not overlap at all."}
+**Step 1: name the variables and the direction.** The explanatory variable is the treatment (fertilizer or water), which is categorical. The response variable is height in centimeters, which is quantitative. We subtract fertilizer minus water.
 
-Both panels show a gap of exactly seven beats per minute between the means, 67 against 74. On the left, sixteen of the twenty-four individuals fall inside the stretch of axis both groups occupy; hand someone a heart rate from that band and they could not name its group. On the right, the highest value in the lower group is 68 and the lowest in the upper is 72, so no value belongs to both groups and one number identifies a person's group with certainty.
+**Step 2: plot both groups on one axis.** Each dot is one seedling, and the dashed line in each row marks that group's mean. The small triangle under the fertilizer row marks that group's median; in the water group the mean and median are the same.
 
-Same difference in means, completely different claim about individuals. What changed is not the gap but the within-group spread: when that spread is large compared with the gap, the gap is a statement about averages and nothing more.
+![Heights of 20 hypothetical tomato seedlings after three weeks, by treatment, with group means and medians marked](../assets/figures/week-04/seedling-dotplot.svg){fig-alt="Stacked dot plots on one axis in centimeters. Fertilizer, 10 seedlings from 14 to 27, mean 19.0, median 18.5. Water, 10 seedlings from 11 to 18, mean and median 14.5. The groups overlap from 14 to 18; one seedling at 27 stands apart."}
 
-### Putting a difference next to the ordinary variation
+**Step 3: compute the centers.** The means are
 
-That gives you a move for any two-group result: hold the gap up against the typical distance between an individual and their own group's mean.
+$$\bar{x}_{F} = \frac{14+16+17+18+18+19+20+20+21+27}{10} = \frac{190}{10} = 19.0 \text{ cm}$$
 
-![The gap between the two group averages, drawn against the spread among individuals.](../assets/figures/week-04/gap-versus-spread.svg){fig-alt="Individual heart rates for both groups on one axis, with a shaded band from 62 to 78 holding seventeen of the twenty-two students. The bracketed seven beats per minute gap between the means is about as long as the marked standard deviation."}
+$$\bar{x}_{W} = \frac{11+12+13+14+14+15+15+16+17+18}{10} = \frac{145}{10} = 14.5 \text{ cm}$$
 
-These are the same twenty-two students, drawn as individuals: the boxplot showed five summary numbers per group, while this shows every person.
+With 10 values, each median is the average of the 5th and 6th sorted values: fertilizer $(18 + 19)/2 = 18.5$ cm and water $(14 + 15)/2 = 14.5$ cm. So the difference in means is $19.0 - 14.5 = 4.5$ cm and the difference in medians is $18.5 - 14.5 = 4.0$ cm.
 
-The means, 67 and 74, are seven beats per minute apart. The standard deviation is about 6.1 beats per minute inside the exercise group and about 7.2 inside the other, so call the typical within-group distance from a mean roughly 6.6. The two lengths drawn in the figure are nearly identical: stepping from one group's average to the other's is about the same size step as stepping from the average person in a group to a fairly ordinary person in that same group.
+The two differences disagree mainly because one fertilized seedling grew to 27 cm. That plant pulls the fertilizer mean up but barely moves the median. It is also beyond the upper fence: with $Q_1 = 17$ (the median of the lower five values, 14 to 18) and $Q_3 = 20$ (the median of the upper five, 19 to 27), the fence is $20 + 1.5 \times 3 = 24.5$ cm. Nothing suggests a measuring error, so the plant stays in the data, but the difference in medians (4.0 cm) is the safer summary of the typical gap.
 
-That is a real difference worth reporting. It is not a difference that lets you read one student's heart rate and name their exercise habits: seventeen of these twenty-two sit between 62 and 78 beats per minute, a band both groups occupy.
+**Step 4: compare the spreads.** The ranges are $27 - 14 = 13$ cm for fertilizer and $18 - 11 = 7$ cm for water; without the tall plant, the fertilizer range would also be $21 - 14 = 7$ cm. The standard deviations, built from each value's deviation from its own group mean, tell the same story:
 
-## The question we are not answering yet
+$$s_{F} = \sqrt{\frac{(-5)^2 + (-3)^2 + (-2)^2 + (-1)^2 + (-1)^2 + 0^2 + 1^2 + 1^2 + 2^2 + 8^2}{10 - 1}} = \sqrt{\frac{110}{9}} \approx 3.5 \text{ cm}$$
 
-Everything above is description. A careful reader will ask one more question, and this week we name it and stop: **could a gap this size have appeared even if the two groups were really no different?**
+$$s_{W} = \sqrt{\frac{(-3.5)^2 + (-2.5)^2 + (-1.5)^2 + (-0.5)^2 + (-0.5)^2 + 0.5^2 + 0.5^2 + 1.5^2 + 2.5^2 + 3.5^2}{10 - 1}} = \sqrt{\frac{42.5}{9}} \approx 2.2 \text{ cm}$$
 
-Twenty-two people is not many. Shuffle any twenty-two people into two groups of eleven at random and compute the difference in means, and you will not get zero; you will get some difference, purely from who landed where. Before treating seven beats per minute as evidence of anything, you would want to know how large a difference the shuffling alone tends to produce.
+The tall plant's squared deviation, $8^2 = 64$, is more than half of the fertilizer total of 110. Apart from that one plant, the two groups are about equally spread out.
 
-Building that machinery is the business of Week 11. For now, write the description and add the honest sentence: whether a gap this size is more than ordinary chance variation is a separate question a description cannot settle.
+**Step 5: describe the overlap.** Five of the 10 fertilized seedlings (14, 16, 17, 18 and 18 cm) are no taller than the tallest water seedling (18 cm). No water seedling reached the fertilizer median of 18.5 cm, and only one fertilized seedling (14 cm) fell below the water median of 14.5 cm.
 
-## Worked example — resting heart rate in two groups of students
+**Conclusion in context.** In this hypothetical experiment, fertilized seedlings were typically about 4 cm taller after three weeks than seedlings given water (medians 18.5 and 14.5 cm; means 19.0 and 14.5 cm), but the groups overlap: half of the fertilized seedlings were no taller than the tallest water seedling. Random assignment makes the fertilizer a plausible explanation, although with only 10 plants per group, part of the gap could come from which seedlings landed in which group ([Week 11](week11-simulation-based-inference.qmd) shows how to check).
 
-**Setting.** The wellness center's twenty-two volunteers, resting heart rate in beats per minute, each group already sorted:
+## Comparing a categorical response across groups
 
-```
-Regular exercise (n = 11):     58  60  62  64  65  66  68  70  72  74  78
-No regular exercise (n = 11):  62  66  68  70  72  74  76  78  82  82  84
-```
+When the response is categorical, each individual falls into a category (infected or not; sleep rated poor, fair or good), and the summaries become counts and proportions.
 
-**Step 1 — center each group.** Add the eleven exercise values: $58 + 60 + 62 + 64 + 65 + 66 + 68 + 70 + 72 + 74 + 78 = 737$. Divide by eleven.
+### Two-way tables and conditional proportions
 
-$$\bar{x}_{\text{exercise}} = \frac{737}{11} = 67.0 \text{ beats per minute}$$
+A **two-way table** counts individuals by two categorical variables at once. Put the explanatory variable in the rows and the response variable in the columns, with totals in the margins. Here is a hypothetical survey of 500 adults: whether they usually use a phone or other screen in the hour before bed, and how they rated their sleep over the past month.
 
-The other eleven values add to 814, so
+| Screen use before bed | Poor | Fair | Good | Total |
+|---|---|---|---|---|
+| Yes | 75 | 120 | 105 | 300 |
+| No | 30 | 70 | 100 | 200 |
+| Total | 105 | 190 | 205 | 500 |
 
-$$\bar{x}_{\text{no exercise}} = \frac{814}{11} = 74.0 \text{ beats per minute}$$
+Raw counts mislead when groups differ in size: more screen users than non-users rated their sleep good (105 versus 100) simply because there are more screen users (300 versus 200). Instead, compute **conditional proportions**: divide each count by its row total, so that each row describes its own group.
 
-Each group has eleven values, so each median is the sixth in its sorted list: 66 and 74.
+![A two-way table of screen use before bed and sleep quality for 500 hypothetical adults](../assets/figures/week-04/sleep-two-way-table.svg){fig-alt="Table with screen use in rows and sleep quality in columns. Yes: 75 poor, 120 fair, 105 good, total 300. No: 30, 70, 100, total 200. The notes below show 75 divided by 300 is 0.25 and 30 divided by 200 is 0.15."}
 
-**Step 2 — subtract, with a direction and a unit.** The difference in means is $74.0 - 67.0 = 7.0$ beats per minute, no-exercise group higher. The difference in medians is $74 - 66 = 8$ beats per minute, same direction. The two are close, which is what you expect when neither group is badly skewed. When they disagree sharply, suspect skew or an extreme value and trust the medians.
+- Screen users: poor $75/300 = 0.25$, fair $120/300 = 0.40$, good $105/300 = 0.35$.
+- Non-users: poor $30/200 = 0.15$, fair $70/200 = 0.35$, good $100/200 = 0.50$.
 
-**Step 3 — spread inside each group.** The exercise deviations from 67 are $-9, -7, -5, -3, -2, -1, 1, 3, 5, 7, 11$. Their squares add to 374, so the sample variance is $374 / 10 = 37.4$ and
+Each row adds to 1 (100%), because it is the whole distribution of the response within one group. Now the comparison is clear: 35% of screen users rated their sleep good versus 50% of non-users, and 25% rated it poor versus 15%.
 
-$$s_{\text{exercise}} = \sqrt{37.4} \approx 6.1 \text{ beats per minute}$$
+The bottom margin gives the **marginal** distribution of all 500 adults: $105/500 = 0.21$ poor, $190/500 = 0.38$ fair and $205/500 = 0.41$ good. Each sits between the two groups' values, because the whole sample mixes the two groups.
 
-The same work on the other group gives a variance of $512 / 10 = 51.2$ and a standard deviation of about 7.2. Both groups vary internally by six or seven beats per minute; hold onto that.
+Direction matters. Dividing by row totals asks "among screen users, what fraction sleep poorly?" Dividing by column totals asks "among poor sleepers, what fraction used screens?", which is $75/105 \approx 0.71$. Only the first compares the response across the explanatory groups. Whenever you read a percentage, ask: percent *of whom*?
 
-**Step 4 — overlap, counted rather than eyeballed.** Both groups contain values from 62 through 78: nine of the eleven exercisers and eight of the eleven non-exercisers, seventeen of the twenty-two students. Nine of the eleven exercisers also sit below the other group's median of 74.
+### Segmented bar charts
 
-**What the result means.** Write it as you would say it aloud. *Among these twenty-two students, the group reporting no regular exercise had a mean resting heart rate 7.0 beats per minute higher, and a median 8 beats per minute higher, than the group reporting regular exercise. That gap is about the size of the ordinary variation among individuals within a group, and seventeen of the twenty-two fall in a band both groups occupy, so resting heart rate does not identify a student's exercise habits. Because students were not assigned to exercise, this comparison cannot show that exercise lowered anyone's heart rate, and whether a gap this size is more than chance variation is a separate question it does not settle.*
+A **segmented bar chart** draws conditional proportions. Each group gets one bar of the same length (100%), divided into segments for the response categories, so groups of different sizes can be compared directly.
 
-Three sentences, and the report is complete.
+![Segmented bar chart of sleep quality by screen use before bed for 500 hypothetical adults](../assets/figures/week-04/sleep-segmented-bars.svg){fig-alt="Three 100 percent bars. Screen users: poor 25, fair 40, good 35 percent. Non-users: poor 15, fair 35, good 50 percent. All 500 adults: poor 21, fair 38, good 41 percent."}
 
-### The same reasoning, transferred
+The "Good" segment is 15 percentage points longer for non-users (50% versus 35%), and the "Poor" segment is 10 percentage points longer for screen users (25% versus 15%). If sleep quality were unrelated to screen use in these data, the top two bars would be divided in the same places. They are not, so the two variables are associated in this sample.
 
-Now the same four steps on different numbers. A city measured minutes of moderate physical activity on one weekday for five residents of a neighborhood with a new walking trail and five from a neighborhood without one.
+A survey like this cannot show that screens cause poor sleep: people who already sleep badly may reach for a phone when they cannot fall asleep, and stress could affect both. [Week 5](week05-association.qmd) and [Week 6](week06-confounding.qmd) return to associations like this one.
 
-```
-Trail neighborhood (n = 5):     22  28  31  35  44
-No-trail neighborhood (n = 5):  15  20  26  33  41
-```
+## Absolute and relative differences
 
-**Centers.** The trail values add to 160, a mean of $160 / 5 = 32$ minutes and a median of 31; the others add to 135, a mean of $135 / 5 = 27$ minutes and a median of 26. **Subtracting.** The difference in means is $32 - 27 = 5$ minutes, trail neighborhood higher, and the difference in medians is $31 - 26 = 5$ minutes, same direction and size. **Spread.** The standard deviations work out to about 8.2 and 10.3 minutes. **Overlap.** Both neighborhoods contain values from 22 to 41 minutes, a stretch holding seven of the ten residents.
+When the response has two categories, such as infected or not infected, each group's proportion with the outcome is its **risk** over a stated period. There are two standard ways to compare two risks, and they measure different things.
 
-*What stayed the same:* the four questions, their order, the insistence on direction and units, and the refusal to attach a causal verb to an observational comparison.
+### Risk difference and relative risk
 
-*What changed:* the verdict on size. In the heart-rate study the gap was about as large as the within-group spread. Here it is 5 minutes while people inside one neighborhood routinely sit 8 to 10 minutes from their own mean — roughly half the ordinary variation. With five residents per group, report that as small and unsettled, not as a finding.
+Write $\hat{p}_1$ for the risk in the group of interest and $\hat{p}_2$ for the risk in the comparison group.
 
-## Second worked example — two clinics with the same average wait
+- The **risk difference**, $\hat{p}_1 - \hat{p}_2$, is an absolute difference: how many more (or fewer) cases per 100 people. It is usually reported in **percentage points**.
+- The **relative risk**, $\hat{p}_1 / \hat{p}_2$, is a ratio: how many times as large the risk is. A value of 1 means equal risks; above 1, the group of interest has the higher risk; below 1, the lower risk.
 
-**Setting.** A health system compares walk-in wait times, in minutes, at two clinics on the same Wednesday morning. Twelve patients at each, sorted:
+For example, suppose 30% of one hypothetical group and 20% of another catch a cold over a winter. The risk difference is $0.30 - 0.20 = 0.10$, or 10 percentage points. The relative risk is $0.30 / 0.20 = 1.5$, so the first group's risk is 1.5 times the second's.
 
-```
-Clinic North (n = 12):  14  16  18  19  20  22  23  25  27  28  30  34
-Clinic South (n = 12):   7   9  11  12  13  14  15  17  20  28  58  72
-```
+That example holds two kinds of "percent". The first group's risk is 10 **percentage points** higher (30% versus 20%), an absolute difference, and 50 **percent** higher (10 is half of 20), a relative difference. News reports often confuse the two: "risk is 10 percent higher" understates this gap, and "risk is 50 percent higher" without the baseline hides how many people are affected. A relative risk below 1 is often reported as a **relative risk reduction**, $1 - \text{relative risk}$; for instance, a relative risk of 0.75 is a 25% relative reduction.
 
-**Step 1 — the means.** North's twelve values add to 276; South's also add to 276. Both means are $276 / 12 = 23.0$ minutes, so the difference in means is exactly zero. Stop here and you would report that the clinics perform identically. Keep going.
+### Same ratio, different stakes
 
-**Step 2 — the medians.** With twelve values the median is the average of the sixth and seventh: for North, $(22 + 23) / 2 = 22.5$ minutes; for South, $(14 + 15) / 2 = 14.5$ minutes. The difference in medians is $22.5 - 14.5 = 8.0$ minutes, South faster.
+A relative risk on its own cannot tell you how many people are affected, because it leaves out the baseline risk. The figure shows two hypothetical situations in which a risk factor (a trait or exposure that may raise the risk) has the same relative risk of 2.0.
 
-**Step 3 — spread and shape.** North's standard deviation is exactly 6.0 minutes; South's is about 20.6. Their middle halves are similar in width — North's quartiles are 18.5 and 27.5, a span of 9 minutes, and South's are 11.5 and 24.0, a span of 12.5 — but South's longest wait is 72 minutes against North's 34. Now notice where each mean sits relative to its own median. South's mean of 23.0 is far above its median of 14.5, the signature of a long right tail; North's 23.0 and 22.5 nearly agree, the signature of a roughly symmetric distribution. Week 3's outlier flag puts South's upper fence at $24.0 + 1.5 \times 12.5 = 42.75$ minutes, so the 58 and 72 minute waits are flagged; North has none.
+![Two hypothetical situations with the same relative risk of 2.0 but very different risk differences](../assets/figures/week-04/same-ratio-different-stakes.svg){fig-alt="Bars of cases per 1,000 people. Common outcome: 200 with the risk factor and 100 without, a difference of 100 per 1,000. Rare outcome: 2 with and 1 without, a difference of 1 per 1,000. Both ratios equal 2.0."}
 
-![A group summary table for two clinics, above the boxplots those numbers describe.](../assets/figures/week-04/group-summary-table.svg){fig-alt="A table gives both clinics a mean wait of 23.0 minutes, but Clinic South has median 14.5 against North's 22.5 and a standard deviation of 20.6 against 6.0. The boxplots below show South compact and low with two long waits far to the right."}
+For the common outcome, 200 versus 100 cases per 1,000 people is a risk difference of 100 per 1,000 (10 percentage points). For the rare outcome, 2 versus 1 per 1,000 is a risk difference of 1 per 1,000 (0.1 percentage points). "Twice the risk" is true of both, yet one means 100 more cases per 1,000 people with the risk factor than without it, and the other means 1 more. For decisions, by a patient or by a health department, the absolute difference usually matters most; the relative risk helps compare the strength of an association across settings. A careful report gives both, together with the baseline risk.
 
-**Step 4 — overlap and what a patient experiences.** Five of the twelve South patients were seen faster than the fastest North patient. Going the other way, only one North patient was seen faster than South's median.
+### Why the comparison group matters
 
-**What the result means.** *The two clinics posted the same mean wait, 23.0 minutes, but they did not deliver the same experience. South's median wait was 14.5 minutes against North's 22.5, and five of South's twelve patients were seen faster than any North patient, yet two South patients waited 58 and 72 minutes and pulled South's mean up to match. North was slower in the middle and far more predictable, with a standard deviation of 6.0 minutes against South's 20.6. Which clinic is better depends on whether the health system is minimizing the typical wait or the worst wait, and one morning cannot settle either.*
+Every difference and every ratio is measured against something, and that something shapes the number.
 
-Notice what this example exercised that the first did not. The difference in means was zero; the whole real comparison lived in the medians, the spread, and the shape. A report built on means alone would have been actively wrong.
+- **Direction.** A relative risk of 0.5 for a new treatment compared with a standard one is the same finding as a relative risk of 2.0 for the standard treatment compared with the new one. Say which group is on top of the fraction, or first in the subtraction.
+- **Fairness.** The comparison group should resemble the group of interest in every way that matters except the explanatory variable. Random assignment ([Week 2](week02-study-design.qmd)) is the most reliable way to get that.
+- **Existence.** A before-and-after comparison with no comparison group is weak evidence, because many things change over time. The warm-up's walking program needs similar patients who did not join, followed over the same spring.
 
-## The misreading to avoid
+## Worked example 2: infection risk with two wound dressings
 
-Here is the thought, in the words students genuinely use: **"The exercisers averaged 67 and the non-exercisers averaged 74, so exercisers have lower heart rates than non-exercisers."**
+**Question.** Records from a hypothetical hospital cover 600 patients who had the same surgery. The surgeons chose the dressing: 250 patients received a new antimicrobial dressing and 350 received the standard dressing. Within 30 days, 15 patients with the new dressing and 42 with the standard dressing developed a wound infection. Compare the infection risks.
 
-The sentence sounds harmless. It is doing two illegitimate things at once.
+**Step 1: name the variables and the direction.** The explanatory variable is dressing type (new or standard) and the response variable is wound infection within 30 days (yes or no); both are categorical. The standard dressing is the comparison group, so we compute new minus standard and new divided by standard.
 
-The first is the slide from groups to individuals. "Exercisers have lower heart rates" reads as a claim about people: pick one of each, and the exerciser will be lower. In this data that fails often enough to matter. The exerciser whose resting rate is 78 beats per minute is higher than seven of the eleven non-exercisers. A difference in averages is a statement about two piles of numbers, not about any pair of people you might draw from them.
+**Step 2: build the two-way table.** Fill in the missing counts by subtraction: $250 - 15 = 235$ and $350 - 42 = 308$ patients without infection, and $15 + 42 = 57$ infections in all.
 
-The second is the smuggled verb. "Have lower heart rates" sounds descriptive, but nearly everyone who writes it goes on to reason as though exercise *produced* the lower rate. Nobody assigned these students to exercise. Students who exercise regularly differ from those who do not in many ways at once — sleep, other health conditions, medication, caffeine, baseline fitness, age — and any of those could be carrying the difference. Week 2 gave you the rule and Week 6 the tools; for now, an observational comparison earns a verb like "was associated with" and nothing stronger.
+| Dressing | Infection | No infection | Total |
+|---|---|---|---|
+| New | 15 | 235 | 250 |
+| Standard | 42 | 308 | 350 |
+| Total | 57 | 543 | 600 |
 
-A third, quieter misreading is worth naming: **"The boxes barely touch, so the groups are clearly different."** A box holds only the middle half of its group and says nothing about how far the rest reach, so two boxes can sit well apart while individuals are thoroughly mixed. Whenever overlap matters, and it usually does, ask for the individuals or at minimum the full ranges.
+**Step 3: compute the conditional proportions (the risks).**
 
-A repaired version of the original sentence reads: *in this sample, students reporting regular exercise had a mean resting heart rate 7.0 beats per minute lower than students reporting none, though the two groups overlap heavily and the study cannot show that exercise caused the difference.* Longer, less quotable, and true.
+$$\hat{p}_{\text{new}} = \frac{15}{250} = 0.06 \qquad \hat{p}_{\text{std}} = \frac{42}{350} = 0.12$$
 
-## Practice on your own
+That is 6% of new-dressing patients and 12% of standard-dressing patients. The raw counts, 15 versus 42 infections, would exaggerate the gap, because the standard group is larger.
 
-For your own checking, not for submission. Verify your arithmetic twice.
+**Step 4: compute the risk difference.**
 
-1. A campus food pantry recorded days between visits for two sets of users. Regular users: 6, 7, 7, 9, 11. Occasional users: 10, 14, 18, 25, 33. Compute the mean, median, and range for each group, plus both differences. Which difference would you report to the pantry director, and why?
+$$\hat{p}_{\text{new}} - \hat{p}_{\text{std}} = 0.06 - 0.12 = -0.06$$
 
-2. Two sections of a lab course reported hours spent on a project, twelve students each. Section A: mean 9.0 hours, standard deviation 1.2. Section B: mean 11.0 hours, standard deviation 5.5. Without the raw data, describe how the shapes probably differ and what you would want to see before writing that Section B works harder.
+The infection risk was 6 percentage points lower with the new dressing: 60 versus 120 infections per 1,000 patients, or 60 fewer per 1,000.
 
-3. Sketch two dot plots, twelve values per group, with a difference in means of 4 units and so much overlap that one value tells you almost nothing about its group. Then sketch two more with the same difference and no overlap. Name the quantity you changed.
+**Step 5: compute the relative risk.**
 
-4. A summary table reports, for 40 patients, a mean systolic blood pressure of 128 and a median of 121; for a comparison group of 40, a mean of 127 and a median of 126. What does the gap between mean and median say about each group's shape? Compute both differences, notice they disagree even about direction, and decide which to report.
+$$\frac{\hat{p}_{\text{new}}}{\hat{p}_{\text{std}}} = \frac{0.06}{0.12} = 0.50$$
 
-5. Return to the two clinics, and suppose the health system's goal is that no patient waits more than forty-five minutes. Using only the summary numbers in the figure above, say which clinic came closer to that goal, and state what those numbers cannot tell you.
+Patients with the new dressing had half the infection risk of patients with the standard dressing, a 50% relative reduction ($1 - 0.50 = 0.50$). Reversing the direction, $0.12 / 0.06 = 2.0$: the standard dressing's risk was twice the new dressing's. Both statements describe the same table.
 
-## Where to read more
+**Step 6: check the comparison group.** The surgeons, not a random process, chose the dressing. If they tended to give the new dressing to healthier patients, or to use it after shorter operations, part of the gap could come from those differences rather than from the dressing.
 
-- [Introduction to Modern Statistics, Chapter 5: Exploring numerical data](https://openintrostat.github.io/ims/explore-numerical.html) — side-by-side boxplots and comparing distributions.
-- [Introduction to Modern Statistics, Chapter 6: Applications, Explore](https://openintrostat.github.io/ims/explore-applications.html) — case studies that put these habits to work.
-- [Introduction to Modern Statistics](https://openintrostat.github.io/ims) — the whole open text.
-- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — a second open text, health and biology examples throughout.
-- [StatKey](https://www.lock5stat.com/statkey) — a browser tool that draws side-by-side displays and computes group summaries. Nothing to install, no code to write.
-- [Course resources](../resources/index.qmd) and the [course schedule](../schedule.qmd).
+**Conclusion in context.** In these hypothetical hospital records, the infection risk was 6% with the new dressing and 12% with the standard one: a risk difference of 6 percentage points (60 fewer infections per 1,000 patients) and a relative risk of 0.5. Because surgeons, not chance, chose the dressing, this is an association; a randomized trial would be needed before crediting the new dressing with the whole difference.
+
+## Transfer: school start times and teen driver crashes
+
+The same reasoning carries over to a public-policy question. Two hypothetical school districts start high school at different times: District L at 8:45 a.m. and District E at 7:30 a.m. Over one school year, 36 of District L's 2,400 licensed teen drivers and 60 of District E's 2,500 were involved in at least one crash. A news story reports: "Later start linked to 37.5% fewer teen crashes." Is that accurate, and is it the whole story?
+
+- **Variables and direction.** The explanatory variable is start time (later or earlier) and the response variable is crash involvement during the year (yes or no); the earlier-starting District E is the comparison group.
+- **Risks.** District L: $36 / 2{,}400 = 0.015$, or 1.5%. District E: $60 / 2{,}500 = 0.024$, or 2.4%.
+- **Risk difference.** $0.015 - 0.024 = -0.009$, so the risk was 0.9 percentage points lower in District L: 15 versus 24 crash-involved drivers per 1,000, or 9 fewer per 1,000.
+- **Relative risk.** $0.015 / 0.024 = 0.625$, a relative reduction of $1 - 0.625 = 0.375$, or 37.5%. The headline's number is correct as a relative figure, but it gives no baseline. Strictly, 37.5% is a drop in the proportion of drivers involved in a crash, not in the number of crashes; a raw count comparison (36 versus 60, 40% fewer) would mix in the districts' different sizes.
+- **Comparison group.** The districts were not formed by random assignment. If District E is more rural, its teens may drive longer distances on faster roads, and that alone could raise its crash risk.
+
+A fair summary for a general audience: *In these two hypothetical districts, teen drivers in the later-starting district were less likely to be in a crash during the year (1.5% versus 2.4%, or 9 fewer per 1,000 teen drivers), a 37.5% relative reduction. The districts may differ in other ways, so this comparison alone cannot show that the later start caused the difference.*
+
+## A common misreading: comparing counts instead of rates
+
+**The misreading.** A hypothetical town has 10,000 adults: 9,000 are vaccinated against a respiratory illness and 1,000 are not. During one winter, 45 vaccinated adults and 30 unvaccinated adults are hospitalized with the illness. A post online says: "Most of the people in the hospital were vaccinated, so the vaccine does not work."
+
+The count is right: 45 of the 75 hospitalized adults, or 60%, were vaccinated. The conclusion does not follow.
+
+**Why it is wrong.** The post compares counts from groups of very different sizes, and it divides in the wrong direction. To learn about the vaccine, divide each count by the size of its own group:
+
+$$\text{vaccinated: } \frac{45}{9{,}000} = 0.005 \qquad \text{unvaccinated: } \frac{30}{1{,}000} = 0.03$$
+
+That is 5 hospitalizations per 1,000 vaccinated adults versus 30 per 1,000 unvaccinated adults, a relative risk of $0.005 / 0.03 \approx 0.17$: a vaccinated adult's risk was about one-sixth of an unvaccinated adult's. The 60% is large mainly because 90% of the town is vaccinated, and a big enough group can supply most of the cases even when its risk is much lower. A fuller analysis would also ask whether the groups differ in age or health, but the count comparison misleads either way.
+
+**The fix.** Compare rates, not counts: divide each group's count by that group's size, and check that the denominator is the explanatory group. Base rates return in [Week 10](week10-probability-risk-diagnosis.qmd), where they shape what a positive diagnostic test means.
+
+## Practice for this week (ungraded)
+
+1. A hypothetical study compares resting systolic blood pressure for adults who do and do not add salt at the table: medians 128 and 122 mm Hg, IQRs 18 and 16 mm Hg. Write one or two sentences comparing the groups. What to look for: a direction, a size with units, the spread, and no claim about every individual.
+2. Side-by-side box plots of hypothetical commute distances for students at two campuses show medians 1 mile apart, but the boxes overlap almost completely. Is it fair to say students at one campus "live farther away"? What would you add?
+3. A hypothetical clinic sent text reminders to 400 patients and none to 350 others. Of those reminded, 88 missed their appointment; of the others, 112 missed. Build the two-way table, then compute each group's proportion who missed, the risk difference and the relative risk (reminded compared with not reminded). What to look for: a difference in percentage points and a ratio below 1.
+4. A headline says a hypothetical food additive "raises the risk of a rare condition by 50%." If the risk without the additive is 2 in 10,000, what is the risk with it, and what is the risk difference per 10,000 people?
+5. A report gives a relative risk of 0.8 for group A compared with group B. What is the relative risk for group B compared with group A? Do the two numbers describe different findings?
+6. A hypothetical city reports 40 bicycle injuries on Main Street and 10 on Oak Street last year and concludes that Main Street is four times as dangerous. What information is missing?
+
+## Read further on comparing groups
+
+- *Introduction to Modern Statistics* (IMS), Chapter 4, [Exploring categorical data](https://openintrostat.github.io/ims/explore-categorical.html): contingency (two-way) tables, row and column proportions, and bar plots for two categorical variables.
+- IMS Chapter 5, [Exploring numerical data](https://openintrostat.github.io/ims/explore-numerical.html): box plots and comparing a numerical variable across groups. The book shows R code in places; skip the code and read the output and the explanation.
+- [StatKey](https://www.lock5stat.com/statkey/): under **Descriptive Statistics and Graphs**, open **One Quantitative and One Categorical Variable** or **Two Categorical Variables** and explore the built-in data sets.
+- For medical and biological examples, *Introductory Statistics for the Life and Biomedical Sciences* ([OpenIntro Biostat](https://www.openintro.org/book/biostat/)), chapter 1, Introduction to data.
 
 ## Where this goes next
 
-Next week the two groups become two *variables*. Instead of asking whether one pile of numbers sits above another, you will ask whether two measurements on the same person move together: does resting heart rate track with hours of sleep? The picture becomes a scatterplot and the four questions become three — direction, form, and strength — but the discipline is identical. Look at the picture before you compute. [Week 5](week05-association.qmd) picks it up there.
+[Week 5: Association](week05-association.qmd) asks how two variables vary together, and [Week 6](week06-confounding.qmd) asks what happens when a third variable, such as patient health in the dressing example, lies behind a comparison. Later, [Week 11](week11-simulation-based-inference.qmd) asks whether a gap between groups is larger than chance alone would produce, and [Week 13](week13-categorical-outcomes.qmd) returns to proportions and two-way tables.
 
-Two other threads open this week and close later: whether a gap could be chance alone is Week 11's business, and what else might explain a group difference is Week 6's. Looking backward, [Week 3](week03-one-variable-summaries.qmd) holds the shape, center, and spread vocabulary this week assumed, and the [notes index](index.qmd) lists every unit.
+- Previous: [Week 3: One-variable summaries](week03-one-variable-summaries.qmd)
+- Next: [Week 5: Association](week05-association.qmd)
+- [All weekly notes](index.qmd) and the [course schedule](../schedule.qmd)

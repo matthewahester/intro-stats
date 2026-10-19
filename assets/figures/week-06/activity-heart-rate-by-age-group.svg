@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">Physical activity and resting heart rate for hypothetical adults and children</title>
+  <desc id="desc">Scatterplot of weekly activity hours and resting heart rate for 12 adults (circles) and 12 children (triangles). Pooled r = 0.48, but r = −0.75 within adults and r = −0.78 within children.</desc>
+  <rect x="0" y="0" width="640" height="420" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="610" y2="340" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="80" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="80" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="80" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="80" y1="340" x2="80" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="186" y1="340" x2="186" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="186" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">3</text>
+  <line x1="186" y1="340" x2="186" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="292" y1="340" x2="292" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="292" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="292" y1="340" x2="292" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="398" y1="340" x2="398" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="398" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">9</text>
+  <line x1="398" y1="340" x2="398" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="504" y1="340" x2="504" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="504" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">12</text>
+  <line x1="504" y1="340" x2="504" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="610" y1="340" x2="610" y2="345" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="359" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">15</text>
+  <line x1="610" y1="340" x2="610" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="340" x2="80" y2="340" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="344" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">60</text>
+  <line x1="80" y1="340" x2="610" y2="340" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="299.72" x2="80" y2="299.72" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="303.72" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">65</text>
+  <line x1="80" y1="299.72" x2="610" y2="299.72" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="259.44" x2="80" y2="259.44" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="263.44" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">70</text>
+  <line x1="80" y1="259.44" x2="610" y2="259.44" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="219.17" x2="80" y2="219.17" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="223.17" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">75</text>
+  <line x1="80" y1="219.17" x2="610" y2="219.17" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="178.89" x2="80" y2="178.89" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="182.89" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">80</text>
+  <line x1="80" y1="178.89" x2="610" y2="178.89" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="138.61" x2="80" y2="138.61" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="142.61" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">85</text>
+  <line x1="80" y1="138.61" x2="610" y2="138.61" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="98.33" x2="80" y2="98.33" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="102.33" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">90</text>
+  <line x1="80" y1="98.33" x2="610" y2="98.33" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="58.06" x2="80" y2="58.06" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="62.06" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">95</text>
+  <line x1="80" y1="58.06" x2="610" y2="58.06" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="345" y="380" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Physical activity (hours per week)</text>
+  <text x="34" y="195" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 195)">Resting heart rate (beats per minute)</text>
+  <line x1="115.33" y1="260.36" x2="574.67" y2="131.67" stroke="#8a8780" stroke-width="2" stroke-dasharray="7 5"/>
+  <line x1="115.33" y1="228.47" x2="362.67" y2="314.75" stroke="#35566b" stroke-width="2.4"/>
+  <line x1="292" y1="93.65" x2="574.67" y2="182.41" stroke="#8a4a2b" stroke-width="2.4"/>
+  <circle cx="115.33" cy="227.22" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="150.67" cy="203.06" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="150.67" cy="259.44" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="186" cy="235.28" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="186" cy="283.61" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="221.33" cy="243.33" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="221.33" cy="291.67" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="256.67" cy="267.5" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="256.67" cy="307.78" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="292" cy="275.56" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="327.33" cy="315.83" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <circle cx="362.67" cy="299.72" r="5.5" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8"/>
+  <polygon points="292,91.33 285.5,103.33 298.5,103.33" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="327.33,123.56 320.83,135.56 333.83,135.56" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="327.33,67.17 320.83,79.17 333.83,79.17" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="362.67,99.39 356.17,111.39 369.17,111.39" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="398,139.67 391.5,151.67 404.5,151.67" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="398,91.33 391.5,103.33 404.5,103.33" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="433.33,155.78 426.83,167.78 439.83,167.78" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="468.67,115.5 462.17,127.5 475.17,127.5" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="468.67,163.83 462.17,175.83 475.17,175.83" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="504,147.72 497.5,159.72 510.5,159.72" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="539.33,188 532.83,200 545.83,200" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <polygon points="574.67,155.78 568.17,167.78 581.17,167.78" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8"/>
+  <text x="504" y="70.14" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#8a4a2b" font-weight="600">Children, ages 8 to 12 (triangles)</text>
+  <text x="504" y="86.14" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#8a4a2b">within-group r = −0.78</text>
+  <text x="94.13" y="162.78" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="start" fill="#35566b" font-weight="600">Adults (circles)</text>
+  <text x="94.13" y="178.78" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b">within-group r = −0.75</text>
+  <text x="606.47" y="241.72" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935" font-weight="600">All 24 people pooled</text>
+  <text x="606.47" y="256.72" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">(dashed line): r = +0.48</text>
+  <text x="20" y="412" font-family="Inter, system-ui, sans-serif" font-size="11.5" text-anchor="start" fill="#3a3935" font-style="italic">Hypothetical values for illustration.</text>
+</svg>

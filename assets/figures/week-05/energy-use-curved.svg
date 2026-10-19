@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Daily electricity use and outdoor temperature for a hypothetical household</title>
+  <desc id="desc">Scatterplot of daily electricity use against average outdoor temperature on 19 days. Use is lowest, about 20 kWh, near 60 °F and rises to about 45 kWh at both 24 °F and 96 °F, a U shape. r = 0.00.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="20" y="26" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="600">Daily electricity use and outdoor temperature</text>
+  <text x="20" y="44" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">One hypothetical all-electric household, 19 days</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="80" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20</text>
+  <line x1="80" y1="330" x2="80" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="146.25" y1="330" x2="146.25" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="146.25" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">30</text>
+  <line x1="146.25" y1="330" x2="146.25" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="212.5" y1="330" x2="212.5" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="212.5" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">40</text>
+  <line x1="212.5" y1="330" x2="212.5" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="278.75" y1="330" x2="278.75" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="278.75" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">50</text>
+  <line x1="278.75" y1="330" x2="278.75" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="345" y1="330" x2="345" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="345" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">60</text>
+  <line x1="345" y1="330" x2="345" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="411.25" y1="330" x2="411.25" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="411.25" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">70</text>
+  <line x1="411.25" y1="330" x2="411.25" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="477.5" y1="330" x2="477.5" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="477.5" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">80</text>
+  <line x1="477.5" y1="330" x2="477.5" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="543.75" y1="330" x2="543.75" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="543.75" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">90</text>
+  <line x1="543.75" y1="330" x2="543.75" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="610" y1="330" x2="610" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">100</text>
+  <line x1="610" y1="330" x2="610" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="330" x2="80" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="334" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">10</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="262.5" x2="80" y2="262.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="266.5" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">20</text>
+  <line x1="80" y1="262.5" x2="610" y2="262.5" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="195" x2="80" y2="195" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="199" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">30</text>
+  <line x1="80" y1="195" x2="610" y2="195" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="127.5" x2="80" y2="127.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="131.5" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">40</text>
+  <line x1="80" y1="127.5" x2="610" y2="127.5" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="60" x2="80" y2="60" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="64" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">50</text>
+  <line x1="80" y1="60" x2="610" y2="60" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="345" y="370" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Average outdoor temperature (°F)</text>
+  <text x="34" y="195" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 195)">Electricity use (kWh per day)</text>
+  <circle cx="106.5" cy="95.1" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="133" cy="151.8" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="159.5" cy="161.93" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="186" cy="200.4" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="212.5" cy="199.72" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="239" cy="234.82" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="265.5" cy="238.2" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="292" cy="266.55" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="318.5" cy="257.77" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="345" cy="253.72" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="371.5" cy="266.55" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="398" cy="250.35" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="424.5" cy="254.4" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="451" cy="219.97" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="477.5" cy="215.93" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="504" cy="199.72" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="530.5" cy="161.25" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="557" cy="142.35" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <circle cx="583.5" cy="97.12" r="5.5" fill="#35566b" stroke="#ffffff" stroke-width="1"/>
+  <text x="345" y="80.25" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#1c1b19" font-weight="600">r = 0.00</text>
+  <text x="345" y="98.25" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">yet temperature tells you a lot about use</text>
+  <text x="119.75" y="303" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">cold days: heating</text>
+  <text x="570.25" y="303" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">hot days: cooling</text>
+  <text x="345" y="303" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">mild days: lowest use</text>
+</svg>

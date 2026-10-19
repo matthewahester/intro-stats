@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Consistent versus heterogeneous sets of studies</title>
+  <desc id="desc">Two hypothetical sets of five studies that share the same five SEs. Left: clustered, I² = 0%, both models give −3.9 mmHg (−5.2 to −2.7). Right: scattered, I² = 85%; fixed effect −3.9 (−5.2 to −2.7), random effects −4.1 (−7.5 to −0.8).</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="16" y="24" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">Consistent studies</text>
+  <text x="16" y="42" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">I² = 0%</text>
+  <line x1="216.91" y1="52" x2="216.91" y2="262" stroke="#1c1b19" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="16" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 1</text>
+  <line x1="137.77" y1="66" x2="200.32" y2="66" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="164.38" y="61.33" width="9.33" height="9.33" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="16" y="98" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 2</text>
+  <line x1="158.83" y1="94" x2="200.53" y2="94" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="172.68" y="87" width="14" height="14" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="16" y="126" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 3</text>
+  <line x1="122.03" y1="122" x2="205.42" y2="122" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="160.23" y="118.5" width="7" height="7" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="16" y="154" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 4</text>
+  <line x1="149.35" y1="150" x2="199.38" y2="150" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="168.53" y="144.17" width="11.67" height="11.67" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="16" y="182" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 5</text>
+  <line x1="132.88" y1="178" x2="237.12" y2="178" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="182.2" y="175.2" width="5.6" height="5.6" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="16" y="216" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="bold">Fixed</text>
+  <polygon points="162.09,212 175.15,204 188.21,212 175.15,220" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <text x="16" y="246" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="bold">Random</text>
+  <polygon points="162.09,242 175.15,234 188.21,242 175.15,250" fill="#d3e0c8" stroke="#4d6b3c" stroke-width="1.5"/>
+  <line x1="68" y1="268" x2="302" y2="268" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="89.27" y1="268" x2="89.27" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="89.27" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−12</text>
+  <line x1="131.82" y1="268" x2="131.82" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="131.82" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−8</text>
+  <line x1="174.36" y1="268" x2="174.36" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="174.36" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−4</text>
+  <line x1="216.91" y1="268" x2="216.91" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="216.91" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="259.45" y1="268" x2="259.45" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="259.45" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="302" y1="268" x2="302" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="302" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <text x="185" y="306" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Difference in means (mmHg)</text>
+  <text x="16" y="336" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Fixed effect: −3.9 (−5.2 to −2.7)</text>
+  <text x="16" y="356" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Random effects: −3.9 (−5.2 to −2.7)</text>
+  <text x="336" y="24" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="start" fill="#1c1b19" font-weight="bold">Heterogeneous studies</text>
+  <text x="336" y="42" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">I² = 85%</text>
+  <line x1="536.91" y1="52" x2="536.91" y2="262" stroke="#1c1b19" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="336" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 1</text>
+  <line x1="404.59" y1="66" x2="467.13" y2="66" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="431.2" y="61.33" width="9.33" height="9.33" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="336" y="98" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 2</text>
+  <line x1="489.47" y1="94" x2="531.17" y2="94" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="503.32" y="87" width="14" height="14" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="336" y="126" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 3</text>
+  <line x1="415.44" y1="122" x2="498.83" y2="122" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="453.64" y="118.5" width="7" height="7" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="336" y="154" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 4</text>
+  <line x1="485.3" y1="150" x2="535.33" y2="150" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="504.48" y="144.17" width="11.67" height="11.67" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="336" y="182" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Study 5</text>
+  <line x1="506.06" y1="178" x2="610.3" y2="178" stroke="#1c1b19" stroke-width="1.4"/>
+  <rect x="555.38" y="175.2" width="5.6" height="5.6" fill="#35566b" stroke="none" stroke-width="1.5"/>
+  <text x="336" y="216" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="bold">Fixed</text>
+  <polygon points="482.07,212 495.12,204 508.18,212 495.12,220" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.5"/>
+  <text x="336" y="246" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="bold">Random</text>
+  <polygon points="457.13,242 492.82,234 528.5,242 492.82,250" fill="#d3e0c8" stroke="#4d6b3c" stroke-width="1.5"/>
+  <line x1="388" y1="268" x2="622" y2="268" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="409.27" y1="268" x2="409.27" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="409.27" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−12</text>
+  <line x1="451.82" y1="268" x2="451.82" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="451.82" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−8</text>
+  <line x1="494.36" y1="268" x2="494.36" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="494.36" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−4</text>
+  <line x1="536.91" y1="268" x2="536.91" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="536.91" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="579.45" y1="268" x2="579.45" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="579.45" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="622" y1="268" x2="622" y2="273" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="622" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <text x="505" y="306" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Difference in means (mmHg)</text>
+  <text x="336" y="336" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Fixed effect: −3.9 (−5.2 to −2.7)</text>
+  <text x="336" y="356" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">Random effects: −4.1 (−7.5 to −0.8)</text>
+  <line x1="320" y1="14" x2="320" y2="360" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="16" y="388" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Squares are sized by fixed-effect weight. Both panels use the same five standard errors.</text>
+</svg>

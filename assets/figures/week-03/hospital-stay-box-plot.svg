@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 372" width="640" height="372" role="img" aria-labelledby="title desc">
+  <title id="title">Box plot of hospital stays for 15 hypothetical patients, with the five-number summary labeled</title>
+  <desc id="desc">Box plot of 15 stays: minimum 2, Q1 3, median 4, Q3 7 days. The whisker stops at 10; 22 days lies beyond the upper fence of 13 and is drawn as a possible outlier. Dots below show each stay; the mean, about 5.9, is right of the median.</desc>
+  <rect x="0" y="0" width="640" height="372" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="353.33" y1="60" x2="353.33" y2="275" stroke="#8a4a2b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="353.33" y="52" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#8a4a2b" font-weight="600">Upper fence = 13</text>
+  <line x1="96.67" y1="142.5" x2="120" y2="142.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="213.33" y1="142.5" x2="283.33" y2="142.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="96.67" y1="131.5" x2="96.67" y2="153.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="283.33" y1="131.5" x2="283.33" y2="153.5" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="120" y="120" width="93.33" height="45" fill="#c9d8e1" stroke="#35566b" stroke-width="2"/>
+  <line x1="143.33" y1="120" x2="143.33" y2="165" stroke="#1c1b19" stroke-width="3"/>
+  <circle cx="563.33" cy="142.5" r="5.5" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="563.33" y="110.5" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">Possible outlier = 22</text>
+  <text x="563.33" y="126.5" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">(the maximum)</text>
+  <text x="143.33" y="82" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">Median = 4</text>
+  <line x1="143.33" y1="87" x2="143.33" y2="120" stroke="#3a3935" stroke-width="1"/>
+  <text x="117" y="110" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#1c1b19" font-weight="600">Q1 = 3</text>
+  <text x="216.33" y="110" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="600">Q3 = 7</text>
+  <text x="96.67" y="186" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">Minimum = 2</text>
+  <text x="283.33" y="186" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Whisker ends at 10</text>
+  <circle cx="96.67" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="96.67" cy="251" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="120" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="120" cy="251" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="120" cy="240" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="143.33" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="143.33" cy="251" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="143.33" cy="240" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="166.67" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="166.67" cy="251" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="213.33" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="213.33" cy="251" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="236.67" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="283.33" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="563.33" cy="262" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="188.44" y1="222" x2="188.44" y2="270" stroke="#8a4a2b" stroke-width="2"/>
+  <text x="188.44" y="215" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#8a4a2b" font-weight="600">Mean ≈ 5.9</text>
+  <text x="610" y="222" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">Each dot is one patient</text>
+  <line x1="50" y1="275" x2="610" y2="275" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="50" y1="275" x2="50" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="50" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="96.67" y1="275" x2="96.67" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="96.67" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="143.33" y1="275" x2="143.33" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="143.33" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="190" y1="275" x2="190" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="190" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="236.67" y1="275" x2="236.67" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="236.67" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <line x1="283.33" y1="275" x2="283.33" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="283.33" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10</text>
+  <line x1="330" y1="275" x2="330" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="330" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">12</text>
+  <line x1="376.67" y1="275" x2="376.67" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="376.67" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">14</text>
+  <line x1="423.33" y1="275" x2="423.33" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="423.33" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">16</text>
+  <line x1="470" y1="275" x2="470" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="470" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">18</text>
+  <line x1="516.67" y1="275" x2="516.67" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="516.67" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20</text>
+  <line x1="563.33" y1="275" x2="563.33" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="563.33" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">22</text>
+  <line x1="610" y1="275" x2="610" y2="280" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="610" y="294" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">24</text>
+  <text x="330" y="315" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Length of hospital stay (days)</text>
+  <text x="320" y="356" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">IQR = 7 − 3 = 4 days;  1.5 × IQR = 6 days;  fences at −3 and 13 days</text>
+</svg>

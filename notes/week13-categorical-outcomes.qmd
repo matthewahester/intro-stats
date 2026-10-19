@@ -8,246 +8,311 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+## Warm-up: more cases, or more risk?
 
-A campus health center tried something small. Of the 500 appointments booked in one month, it randomly picked half to get a text message the day before; the other 250 got nothing. Then somebody counted. Among the 250 reminded appointments, 20 were missed. Among the 250 that got no text, 40 were missed.
+Last year Alder County reported 480 cases of a tick-borne illness, and Dogwood County reported 45 (hypothetical figures). A local news story says Alder County has "more than ten times the problem." If you lived in one of these counties, where would you be more likely to get sick? What one extra piece of information would you need to be sure?
 
-That is the entire data set. There is no average to take, no line to fit, no standard deviation to work out. Every observation is a word rather than a number: kept or missed, reminded or not. Data that arrive as labels instead of measurements are **categorical**, and most evidence you meet outside this room arrives that way — infected or not, hired or not, voted or stayed home.
+Keep your first guess in mind. A count on its own cannot tell you about risk; you also need to know how many people could have been counted.
 
-Week 12 handed you the machinery of a formal test: a null claim, a test statistic, a p-value, two ways to be wrong. It did not hand you the front half of the job. Before you can test anything about counts you have to organize them, and that is where almost all of the damage happens: a table can be sliced three ways, each producing a legitimate proportion, only one of which addresses the question asked. By the end of this week you should be able to produce three honest summaries of one gap and notice which one a writer chose.
+## Why categorical outcomes need their own tools
 
-### Why this matters beyond the classroom
+Many outcomes that matter in health and public policy are not measurements on a number line. A patient was vaccinated or was not. A surgery ended with a complication or without one. A resident supports a proposal, opposes it, or is unsure. For categorical outcomes like these, the mean and standard deviation do not apply directly. Instead you count how many cases fall in each category and turn the counts into proportions.
 
-Suppose a headline says a supplement doubles the risk of a rare liver condition. "Doubles" sounds like a reason to throw the bottle out. But a ratio hides the size of what it doubles. If the condition strikes 2 people in 100,000 a year, doubling takes it to 4 in 100,000; if it strikes 20 in 100, doubling takes it to 40 in 100. The same word covers both, and only one is a reason to change what you swallow.
-
-The clinic has the mirror-image problem. Its director must decide whether the texting service is worth paying for, and for that the ratio is nearly useless. What the director needs is the difference: about eight fewer missed appointments per hundred reminded. That multiplies by appointments per year and the cost of an empty slot, and becomes a budget line. Ratios describe an association; differences decide what to do.
+Categorical outcomes are also where many public claims go wrong. Stories compare raw counts across places of very different sizes, quote a percentage without saying "a percent of whom?", or call a survey result "significant" as if that settled how large the difference is. This week gives you a tool for each situation: rates on a common scale, two-way tables read with the right conditional proportions, a confidence interval for the difference between two proportions, and the chi-square test for association. It draws on comparing groups ([Week 4](week04-comparing-groups.qmd)), confounding ([Week 6](week06-confounding.qmd)), risk ([Week 10](week10-probability-risk-diagnosis.qmd)) and the inference ideas of Weeks 11 and 12.
 
 ## What you will be able to do
 
-- Build a two-way table from a short study description and fill in its row, column, and grand totals.
-- Take a stated percentage, say which total it was divided by, and recompute it conditioning on the other margin.
-- Compute the risk in each group, then the risk difference and the relative risk, and say what each claims.
-- Turn a probability into odds and back, and explain why an odds ratio is not a relative risk.
-- Say what a chi-square statistic compares, and why a mismatch weighs more where the expected count is small.
-- Read a finding reported as a ratio and ask, out loud, for the baseline risk behind it.
+By the end of this week you can:
 
-## Words worth owning
+- turn counts into proportions and into rates per 1,000 or per 100,000, and explain when a rate is the fair comparison;
+- read a two-way table and choose the row or column conditional proportions that match the question;
+- read a segmented bar chart and describe an association between two categorical variables;
+- estimate the difference between two proportions with a 95% confidence interval and interpret it in context;
+- compute expected counts, the chi-square statistic and its degrees of freedom, and read a p-value from software output;
+- explain what a significant chi-square result does and does not show.
 
-| Term | What it means in this course |
-|------|------------------------------|
-| Two-way table | A grid of counts; rows are one variable's categories, columns another's. |
-| Margin | A total along an edge: a row total, a column total, or the grand total. |
-| Conditional proportion | A count divided by its own row or column total, not by the grand total. |
-| Risk | The conditional proportion of a group that had the outcome we are watching for. |
-| Risk difference | One risk minus the other, in percentage points: extra cases per hundred people. |
-| Relative risk | One risk divided by the other: how many times as often, with no hint of the baseline. |
-| Odds ratio | One group's odds divided by the other's; odds is the chance of the outcome over the chance of no outcome. |
-| Expected count | What a cell would hold, on average, if the two variables were unrelated. |
+## Words to know this week
 
-## Reading a two-way table without fooling yourself
+| Term | Meaning |
+|---|---|
+| Proportion | The count in one category divided by the total count, a number from 0 to 1 (often written as a percent). A sample proportion is written $\hat{p}$. |
+| Rate | A count divided by the size of its group, stated per a fixed base such as per 1,000 or per 100,000 people, usually over a stated period such as one year. |
+| Two-way table | A table of counts that classifies each case by two categorical variables at once (also called a contingency table). |
+| Conditional proportion | A proportion computed within one row or one column of a two-way table. |
+| Segmented bar chart | One bar per group, each stretched to 100% and divided into segments for the categories of the response variable. |
+| Independence | Two categorical variables are independent when the distribution of one is the same in every category of the other. |
+| Expected count | The count a cell would have, on average, if the two variables were independent. |
+| Chi-square statistic | A single number, written $X^2$, measuring how far the observed counts are from the expected counts. |
+| Degrees of freedom (df) | For a two-way table, (rows − 1) × (columns − 1); it picks out which chi-square distribution to use. |
 
-Here is the clinic month laid out properly: rows are the groups, columns the outcomes, edges the totals.
+## Counts, proportions and rates
 
-|  | Missed | Kept | Row total |
-|------|------|------|------|
-| Reminder sent | 20 | 230 | 250 |
-| No reminder | 40 | 210 | 250 |
-| Column total | 60 | 440 | 500 |
+A count tells you how many; a proportion tells you what fraction of a group; a rate is a proportion rescaled to be easy to read. Mixing them up produces many misleading headlines.
 
-Before reading anything out of a table, check that it closes. The rows give 250 and 250; the columns give 60 and 440; and 60 plus 440 is 500. A table that does not close hides a category you were not told about.
+### From a count to a proportion
 
-![One two-way table with every margin named.](../assets/figures/week-13/two-way-table-anatomy.svg){fig-alt="A two-by-two table of 500 clinic appointments. Rows are reminder sent and no reminder; columns are missed and kept. Arrows mark the row margin of 250, the column margin of 60 missed, and the grand total of 500."}
+If 45 of Dogwood County's 30,000 residents reported the illness, the proportion who reported it is
 
-### Margins, and the three totals they give you
+$$\frac{45}{30{,}000} = 0.0015,$$
 
-The word *margin* is literal: the totals live in the margins of the grid. The **row margins** describe the groups — here 250 and 250, so the groups were the same size. The **column margins** describe the outcomes with no regard to group: 60 missed, 440 kept. The **grand total**, 500, is everybody.
+or 0.15%. Proportions let you compare groups of different sizes, because each group is measured against its own total. Always ask "a proportion of whom?" The denominator defines what the number means: "15% of patients had a complication" is a different claim when the 15% is of all patients than when it is of patients over 65.
 
-### Joint, marginal, and conditional are three different questions
+### Rates put groups of different sizes on a common scale
 
-Every count in a table can be divided by three different things, and each division has its own name. Divide a middle count by the **grand total** and you get a *joint proportion*: 20 divided by 500 is 0.04, so 4 percent of appointments were both reminded and missed. Divide a margin by the grand total instead and you get a *marginal proportion*: 60 divided by 500 is 0.12, the month's overall no-show rate. Both are tidy, and both are silent about whether reminders did anything.
+Small proportions are hard to read: 0.0015 and 0.0004 look alike at a glance. A **rate** rescales the proportion to a convenient base:
 
-Divide by a **row or column total** and you get a *conditional proportion*, which is where the teaching lives. Conditioning means holding something fixed and looking only inside it. Hold the reminder group fixed: 20 of its 250 appointments were missed, so 0.08. Hold the other group fixed: 40 of 250, so 0.16. Those two numbers are the comparison the study was built to make. When the outcome is one we would rather avoid, a conditional proportion gets called a **risk**.
+$$\text{rate per 100,000} = \frac{\text{count}}{\text{population}} \times 100{,}000.$$
 
-Now condition the other way, on the outcome instead of the group. Among the 60 missed appointments, 20 had a reminder — 33 percent — and 40 did not. Both statements are arithmetically correct, but only conditioning on the group addresses "did the reminder help?". Conditioning on the outcome describes the composition of the missed appointments instead. Mixing the two up is the most common error people make with tables.
+For Dogwood County, $0.0015 \times 100{,}000 = 150$ cases per 100,000 residents in one year, which is the same as $0.0015 \times 1{,}000 = 1.5$ cases per 1,000. Use per 100 (a percent) for common outcomes, per 1,000 for events such as births or hospital admissions, and per 100,000 for rare outcomes such as a specific disease. The base is a presentation choice; it never changes which group is higher.
 
-## Three summaries of the same gap
+| County (hypothetical) | Population | Reported cases | Rate per 100,000 per year |
+|---|---|---|---|
+| Alder | 1,200,000 | 480 | 40 |
+| Birch | 400,000 | 220 | 55 |
+| Cedar | 90,000 | 81 | 90 |
+| Dogwood | 30,000 | 45 | 150 |
 
-You now have two risks, 0.08 and 0.16. There are three standard ways to compress that pair into one number, and the choice among them is rhetorical as much as statistical.
+![Case counts and rates per 100,000 for four hypothetical counties](../assets/figures/week-13/county-rates-common-scale.svg){fig-alt="Two bar panels for four hypothetical counties. Counts: Alder 480, Birch 220, Cedar 81, Dogwood 45. Rates per 100,000: Alder 40, Birch 55, Cedar 90, Dogwood 150. The order reverses."}
 
-### The risk difference, and what it buys
+Back to the warm-up. Alder County has more than ten times as many cases as Dogwood (480 against 45), but Dogwood's rate is $150 / 40 = 3.75$ times Alder's. Ranked by counts, the four counties run one way; ranked by rates, they run exactly the other way. Counts describe the size of the problem for a health department (how many people need care). Rates describe the risk to an individual resident. A ratio of two such rates, like 3.75, is called a relative risk.
 
-The **risk difference** is subtraction. Taking the no-reminder group as the baseline, 0.16 minus 0.08 is 0.08, reported as eight percentage points. In units: for every hundred appointments that got a reminder, about eight fewer were missed.
+Two cautions. First, epidemiologists sometimes reserve "rate" for events per unit of person-time (for example, infections per 1,000 patient-days); in this course a rate is a count divided by group size, stated per a fixed base. Second, a rate removes differences in size, not other differences. If Dogwood has an older population, or more residents who work outdoors, its higher rate may partly reflect that. This is the confounding story from [Week 6](week06-confounding.qmd), and it is why public-health reports often give age-adjusted rates.
 
-"Percentage points" is not the same phrase as "percent". The risk fell by eight percentage points. It also fell by half, which is 50 percent of its old value. Keep the two words apart.
+## Two-way tables and conditional proportions
 
-The difference is the summary that converts into decisions. It also travels badly, because it depends on the baseline risk, and this clinic's baseline is not every clinic's.
+When each case is classified by two categorical variables, the counts go in a two-way table. Here is a hypothetical random sample of 500 adults from one city. Each reported their usual level of physical activity (the explanatory variable) and whether they usually sleep well (the response variable).
 
-### The relative risk, and what it hides
+| Activity level | Good sleep | Poor sleep | Row total |
+|---|---|---|---|
+| Low | 72 | 88 | 160 |
+| Moderate | 116 | 84 | 200 |
+| High | 91 | 49 | 140 |
+| Column total | 279 | 221 | 500 |
 
-The **relative risk** is division: 0.16 divided by 0.08 is 2.0, so an appointment with no reminder was missed twice as often. Flip the comparison and 0.08 divided by 0.16 is 0.5, and the same fact reads "the reminder halved the risk". Always check which group sits on the bottom of the fraction, because 2.0 and 0.5 can describe the identical table.
+The six inner numbers are **cell** counts, and every adult appears in exactly one cell. The row and column totals are the **marginal totals**; 500 is the grand total.
 
-![The same two bars carry both summaries of the gap.](../assets/figures/week-13/risk-difference-and-ratio.svg){fig-alt="Two bars giving the share of appointments missed: 8 percent with a reminder and 16 percent without. A double-headed arrow marks the gap of eight percentage points, and a note reads that the shorter bar is half the height of the taller."}
+### Row proportions match the usual question
 
-Relative risk travels between settings better, which is why research papers lean on it. It also strips out what a reader needs to judge importance: "twice as often" reads the same whether the risk went from 1 in a million to 2 in a million or from 30 percent to 60 percent.
+Raw counts are hard to compare when groups differ in size. More moderate-activity adults sleep well (116) than high-activity adults (91), but there were more moderate-activity adults to begin with. To compare fairly, divide each count by its group's total.
 
-### Odds, and why they are not probabilities
+**Row proportions** divide by the row total. Among low-activity adults, $72/160 = 0.45$ report good sleep; among moderate-activity adults, $116/200 = 0.58$; among high-activity adults, $91/140 = 0.65$. These tell you how common good sleep is at each activity level, the natural comparison when activity is the explanatory variable.
 
-**Odds** compare an outcome to its absence rather than to the whole group. In the reminder group, 20 appointments were missed and 230 kept, so the odds of missing are 20 to 230, about 0.087; in the other group, 40 to 210, about 0.190. In general,
+**Column proportions** divide by the column total. Among the 279 good sleepers, $72/279 \approx 0.258$ are low-activity, $116/279 \approx 0.416$ moderate and $91/279 \approx 0.326$ high. These describe the activity levels of people who sleep well, a different question. The arithmetic is fine either way; only one set matches the comparison you want.
 
-$$\text{odds} = \frac{p}{1 - p}$$
-
-where $p$ is the probability of the outcome, and going back is $p = \text{odds} / (1 + \text{odds})$. A probability of 0.5 is odds of 1, usually said as "even odds", and a probability of 0.8 is odds of 4. But a probability of 0.05 is odds of about 0.053, close enough that down there the two scales are nearly interchangeable.
-
-The **odds ratio** divides one group's odds by the other's, and the cross-product of the table is the cleanest route to it: 40 times 230 is 9,200, and 20 times 210 is 4,200, so the odds ratio is 9,200 divided by 4,200, about 2.19. The relative risk for that same table was 2.00, so the odds ratio sits further from 1.
-
-### When the odds ratio runs ahead of the risk ratio
-
-That gap is no accident, and it is not small when the outcome is common. Take two comparisons that both double the risk. From 5 percent to 10 percent, the odds go from 0.05 divided by 0.95, about 0.0526, to 0.10 divided by 0.90, about 0.1111, so the odds ratio is 2.11 against a relative risk of 2.00. From 40 percent to 80 percent, the odds go from 0.40 divided by 0.60, about 0.667, to 0.80 divided by 0.20, which is exactly 4. The odds ratio is 4 divided by 0.667, which is 6.0 — while the relative risk is still 2.00.
-
-![Odds climb away from probability as the outcome becomes common.](../assets/figures/week-13/odds-versus-probability.svg){fig-alt="A curve of odds against probability rises slowly near zero and steeply past 0.5, pulling away from the dashed equal-value line. Beside it, doubling risk from 5 to 10 percent gives an odds ratio of 2.1; from 40 to 80 percent it gives 6.0."}
-
-The reason is the denominator. Odds divide by the chance of *not* having the outcome, so when the outcome is common that leftover chance is small and shrinking and the fraction blows up. Under roughly 10 percent in both groups, an odds ratio and a relative risk are close enough that a careless reader is not badly misled. Above that, an odds ratio is a ratio of odds and nothing more.
-
-## Observed counts against expected counts
-
-Everything so far has been description. The inference question is the Week 12 question in new clothing: if the reminder truly changed nothing, how surprising is a table like this one?
-
-So write down the table you would expect if the reminder changed nothing. "Nothing" means the missed rate is the same in both groups, and the only sensible value for that shared rate is the overall one, 0.12. Applied to each group of 250, that is 30 missed and 220 kept per row. The general recipe is
-
-$$\text{expected count} = \frac{\text{row total} \times \text{column total}}{\text{grand total}}$$
-
-and for the top-left cell that is 250 times 60, divided by 500, which is 30. Expected counts need not be whole numbers; they are averages, not predictions about a particular month.
-
-### What the chi-square statistic adds up
-
-The clinic saw 20 missed among the reminded where 30 were expected, and 40 in the other row where 30 were expected. Every one of the four cells is off by exactly ten.
-
-![What the clinic saw, beside what no difference would have produced.](../assets/figures/week-13/observed-versus-expected.svg){fig-alt="Two count tables side by side. The observed table reads 20 and 230 in the reminder row and 40 and 210 without; the expected table reads 30 and 220 in both rows. Every cell is off by ten and the four mismatch terms add to 7.58."}
-
-The chi-square statistic turns those four mismatches into one number:
-
-$$X^2 = \sum \frac{(\text{observed} - \text{expected})^2}{\text{expected}}$$
-
-Read that in words. Square each cell's miss so misses in either direction count alike, then divide by the expected count so a gap of ten matters more where 30 were expected than where 220 were. Add the four terms — 3.33 from each missed cell, 0.45 from each kept cell — for about 7.58. Software reports:
-
-```
-Two-way table: reminder text (yes / no) by appointment (missed / kept)
-
-  Pearson chi-square statistic   7.576
-  degrees of freedom             1
-  p-value                        0.0059
-```
-
-Degrees of freedom are the rows minus one times the columns minus one, so 1 here. The p-value means what it did last week: if reminders truly made no difference, a table at least this far off would turn up about six times in a thousand months like this one.
-
-::: {.callout-note}
-Some software applies a small correction when a table is two by two, moving this p-value from about 0.006 to about 0.009. Both are small, and the reading of the study does not change.
+::: {.callout-tip}
+**Which total do I divide by?** The total of the group you are comparing. If the question says "among low-activity adults," divide by the low-activity total. A helpful habit: put the explanatory variable in the rows and compute proportions within rows. The overall proportion with good sleep, $279/500 = 0.558$, ignores activity altogether; it is a marginal proportion.
 :::
 
-The statistic is silent about direction — it would report the same 7.58 if the reminded group had missed more — and about size, since a big enough study flags a gap of half a percentage point. So it never travels alone: report the two risks, then the difference, then the test.
+### Picturing a two-way table with a segmented bar chart
 
-## Worked example — a walk-in clinic compares two wound dressings
+A segmented bar chart draws one bar per group, stretches every bar to 100%, and splits it by the response categories. Because every bar has the same height, you compare segments directly, whatever the group sizes.
 
-**Setting.** A walk-in clinic treated 400 minor wounds, randomly assigning each to one of two dressings, 200 apiece, and checked for infection two weeks later. Dressing A produced 24 infections; dressing B produced 6.
+![Sleep quality within each physical activity group, hypothetical survey of 500 adults](../assets/figures/week-13/activity-sleep-segmented-bars.svg){fig-alt="Segmented bars scaled to 100 percent. Good sleep is 45 percent for low activity, 58 percent for moderate and 65 percent for high; a dashed line marks the overall 55.8 percent."}
 
-**Step 1 — build the table and close the margins.**
+The good-sleep segment grows from 45% to 58% to 65% as activity rises. If the two variables were **independent**, every bar would be split at the overall 55.8%, the dashed line. The bars depart from that line, so in this sample the variables are associated. Whether differences this large could arise by chance alone is a question for inference, taken up later on this page.
 
-|  | Infection | No infection | Row total |
-|------|------|------|------|
-| Dressing A | 24 | 176 | 200 |
-| Dressing B | 6 | 194 | 200 |
-| Column total | 30 | 370 | 400 |
+## Comparing two proportions with a confidence interval
 
-Check it: the rows give 200 and 200, the columns give 30 and 370, and both routes reach 400.
+With two groups and a two-category response, the natural summary is the difference in proportions, $\hat{p}_1 - \hat{p}_2$: how many percentage points higher one group's proportion is than the other's. Like any statistic, it would change from sample to sample, so we report it with a margin of error.
 
-**Step 2 — condition on the group.** Dressing A: 24 divided by 200 is 0.12. Dressing B: 6 divided by 200 is 0.03.
+### The standard error of a difference
 
-**Step 3 — risk difference.** 0.12 minus 0.03 is 0.09, nine percentage points. Per hundred wounds, dressing A produced about nine more infections.
+For one proportion the standard error is $\sqrt{\hat{p}(1-\hat{p})/n}$. For the difference between two independent groups, the two variances (the quantities under the square root) add:
 
-**Step 4 — relative risk.** 0.12 divided by 0.03 is 4.0. A wound under dressing A became infected four times as often.
+$$\text{SE} = \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.$$
 
-**Step 5 — odds ratio.** Odds under A are 24 to 176; under B, 6 to 194. By cross-product, 24 times 194 is 4,656 and 6 times 176 is 1,056, so the odds ratio is 4,656 divided by 1,056, about 4.41.
+They add even though the proportions are subtracted, because each group brings its own sampling variability and subtracting does not cancel it. The confidence interval has the familiar form
 
-**Step 6 — the mismatch test.** If the dressing made no difference, each group of 200 would be expected to yield 15 infections and 185 clean wounds, so every cell is off by nine. Software reports a chi-square statistic of about 11.68 with 1 degree of freedom and a p-value of about 0.0006.
+$$(\hat{p}_1 - \hat{p}_2) \pm z^\star \times \text{SE},$$
 
-**What it means.** Infection was about four times as common under dressing A, or nine more cases per hundred wounds. Because infection was fairly uncommon in both groups, the odds ratio of 4.41 sits close to the relative risk of 4.0. Random assignment is what lets this be read as an effect rather than an association.
+with $z^\star = 1.96$ for 95% confidence. As in earlier weeks, the method captures the true difference $p_1 - p_2$ in about 95% of samples in the long run. An interval entirely above 0 is evidence that group 1's proportion is higher; an interval containing 0 means the data are consistent with no difference.
 
-### The same reasoning, transferred
+### Conditions for the normal model
 
-A second clinic ran a smaller version: 120 wounds, 60 under each dressing, with 9 infections under A and 3 under B.
+1. **Independence.** Cases are independent within each group, and the groups are independent of each other. Random sampling or random assignment supports this.
+2. **Success-failure condition.** Each group has at least 10 "successes" and at least 10 "failures."
 
-The path is identical. Risks: 9 divided by 60 is 0.15, and 3 divided by 60 is 0.05. Risk difference: 0.10, ten percentage points. Relative risk: 3.0. Odds ratio by cross-product, using the 51 and 57 wounds that stayed clean: 9 times 57 is 513, 3 times 51 is 153, and 513 divided by 153 is about 3.35.
+If a group is small or the outcome rare, the normal model can be poor; the simulation methods of [Week 11](week11-simulation-based-inference.qmd) are one alternative.
 
-What stayed the same is the order of operations. What changed is worth sitting with: the relative risk fell from 4.0 to 3.0, but the risk difference *rose* from nine percentage points to ten, because wounds here became infected more often to begin with. A smaller ratio can carry a larger absolute effect. And three infections could easily have been one or six, so every summary here inherits that wobble.
+## Worked example 1: a reminder message and flu vaccination
 
-## Second worked example — a commuting survey where the margin decides the story
+**Question.** A clinic randomly assigned 1,020 adult patients (hypothetical) to receive a text-message reminder about flu shots (500 patients) or no reminder (520 patients). By the end of the season, 215 patients in the reminder group and 182 in the no-reminder group had been vaccinated. How much did the reminder change the proportion vaccinated? Give a 95% confidence interval.
 
-**Setting.** A campus survey asked 600 students how they get to campus and whether they had been late to a first-period class in the past week. Of them, 300 walk, 200 take the bus, and 100 drive. Late at least once: 60 walkers, 56 bus riders, 34 drivers.
+**Step 1: Variables and comparison.** The explanatory variable is reminder (yes or no); the response is vaccinated (yes or no). Group 1 is the reminder group and group 2 the no-reminder group.
 
-**Step 1 — build the table.**
+**Step 2: Sample proportions and their difference.**
 
-|  | Late at least once | Not late | Row total |
-|------|------|------|------|
-| Walk | 60 | 240 | 300 |
-| Bus | 56 | 144 | 200 |
-| Drive | 34 | 66 | 100 |
-| Column total | 150 | 450 | 600 |
+$$\hat{p}_1 = \frac{215}{500} = 0.43, \qquad \hat{p}_2 = \frac{182}{520} = 0.35, \qquad \hat{p}_1 - \hat{p}_2 = 0.43 - 0.35 = 0.08.$$
 
-Rows close at 300, 200, and 100; columns at 150 and 450, which add to 600.
+In the sample, the reminder group's vaccination proportion was 8 percentage points higher.
 
-**Step 2 — the claim as printed.** The student paper wrote: *"Walkers are the campus's late-comers. Four in ten students who were late walk to campus, more than any other group."*
+**Step 3: Conditions.** Random assignment makes the groups independent, and it is reasonable to treat patients as independent of one another. Successes and failures: 215 vaccinated and $500 - 215 = 285$ not in the reminder group; 182 and $520 - 182 = 338$ in the no-reminder group. All four are at least 10.
 
-**Step 3 — check its arithmetic.** It is right. Of the 150 late students, 60 walk, and 60 divided by 150 is 0.40; bus riders are 37 percent of them and drivers 23 percent.
+**Step 4: Standard error.** Compute each piece, then add and take the square root:
 
-**Step 4 — recondition on the other margin.** Those percentages divide by the *late* total. The question "does walking go with being late?" needs division by the *mode* total. Walkers: 60 divided by 300 is 0.20. Bus riders: 56 divided by 200 is 0.28. Drivers: 34 divided by 100 is 0.34. Walkers are the *least* likely group to be late.
+$$\frac{0.43 \times 0.57}{500} = \frac{0.2451}{500} = 0.0004902, \qquad \frac{0.35 \times 0.65}{520} = \frac{0.2275}{520} = 0.0004375,$$
 
-**Step 5 — see why both are true.** Walkers are half the student body, so even at the lowest rate they supply more late students than a group of 100 at the highest rate. The first calculation measures how big a group is; the second, how it behaves.
+$$\text{SE} = \sqrt{0.0004902 + 0.0004375} = \sqrt{0.0009277} \approx 0.03046.$$
 
-**Step 6 — the mismatch test.** The overall lateness rate is 0.25, so expected counts are each row total times 0.25: 75, 50, and 25 late, with 225, 150, and 75 not late. Walkers came in 15 under and drivers 9 over. Software reports a chi-square statistic of about 9.28 with 2 degrees of freedom — 3 rows minus 1 times 2 columns minus 1 — and a p-value of about 0.0097.
+**Step 5: The interval.** The margin of error is $1.96 \times 0.03046 \approx 0.0597$, so the interval runs
 
-**What it means.** Lateness rates climb steadily from walkers to drivers, and a gradient this steep would be unusual if mode and lateness were unrelated. But nothing was assigned: students chose their mode, and drivers may live farther out. The honest sentence is "students who drive reported being late more often", not "driving makes students late".
+$$\text{from } 0.08 - 0.0597 = 0.0203 \text{ to } 0.08 + 0.0597 = 0.1397,$$
 
-## The misreading to avoid
+about 0.02 to 0.14, or 2 to 14 percentage points. Keep extra decimal places in the middle steps and round only at the end.
 
-Here is the sentence, close to how it gets said aloud:
+![Vaccination proportions and the 95 percent confidence interval for their difference](../assets/figures/week-13/reminder-trial-difference-ci.svg){fig-alt="Top: 43 percent vaccinated with a reminder (215 of 500) and 35 percent without (182 of 520). Bottom: difference 8.0 percentage points, 95 percent interval 2.0 to 14.0, entirely above 0."}
 
-::: {.callout-note}
-*Forty percent of the students who were late walk to campus. That is more than any other group. So walking is what makes people late.*
-:::
+**Conclusion in context.** Using a method that captures the true difference in about 95% of samples, we estimate that a text reminder raises the proportion of patients like these who get a flu shot by between about 2 and 14 percentage points. The whole interval lies above 0, so the data give evidence that the reminder helps. A classical two-sided test of $H_0: p_1 - p_2 = 0$, in the style of [Week 12](week12-classical-hypothesis-testing.qmd), agrees. It uses a pooled proportion in its standard error: the pooled proportion is $397/1{,}020 \approx 0.389$, so $\text{SE} = \sqrt{0.389 \times 0.611 \times (1/500 + 1/520)} \approx 0.0305$ and $z = 0.08 / 0.0305 \approx 2.62$, with a two-sided p-value of about 0.009. Because of random assignment, a causal reading is justified for this clinic's patients, though they are not a random sample of all adults. The interval is also wide: a gain of 2 percentage points and a gain of 14 percentage points would mean quite different things to a clinic deciding whether reminders are worth sending.
 
-The first two sentences are correct arithmetic. The third follows from neither, and the break is a swapped denominator before it is a leap from association to cause. "Forty percent of the late students walk" conditions on the outcome; "walkers are late more often" would condition on the group. Those are different fractions with different denominators, and the second is 20 percent, the smallest rate in the table.
+## The chi-square idea: how far is the table from independence?
 
-The defence is a habit, not a formula. Every time you meet a percentage about a table, say out loud what it is a percentage *of*. Forty percent *of the late students*. Twenty percent *of the walkers*. Once the denominator is spoken, the two stop sounding alike.
+The interval above handles two groups and a yes-or-no response. Many tables are larger. The chi-square test asks one question of any two-way table: are the two variables associated in the population, or could the pattern in the sample be chance variation alone?
 
-A second misreading arrives whenever a ratio travels alone. *The risk doubled, so this is twice as dangerous for me.* A relative risk of 2 gives the ratio and nothing about the size: doubling 2 in 100,000 is a change you can reasonably ignore, doubling 30 in 100 is not.
+- $H_0$: the variables are independent; the distribution of the response is the same in every group.
+- $H_A$: the variables are associated; the distribution of the response is not the same in every group.
 
-The third is quieter. *The odds ratio was 6, so that group is six times as likely to have the condition.* Only if the condition is rare. Earlier in this note an odds ratio of 6.0 described a risk moving from 40 percent to 80 percent — a doubling. When an odds ratio is attached to a common outcome, hunt for the underlying percentages first.
+The test compares what we observed with what we would expect if $H_0$ were true.
 
-## Practice on your own
+### Expected counts under independence
 
-These are for you, not for submission. Check yourself by making every margin close.
+If activity and sleep were independent, each activity group would have the same proportion of good sleepers as the whole sample, $279/500 = 0.558$. The low-activity group has 160 adults, so we would expect $160 \times 0.558 = 89.28$ good sleepers. In general,
 
-1. A campus food pantry study followed 800 students for a semester: 300 used the pantry at least once and 500 never did. Among users, 90 reported skipping a meal for cost reasons; among non-users, 100 did. Build the table with its margins, compute the risk in each group, the risk difference, the relative risk, and the odds ratio, and write one sentence for each. Then say why a pantry user might report *more* skipped meals without the pantry having caused it.
+$$E = \frac{\text{row total} \times \text{column total}}{\text{grand total}} = \frac{160 \times 279}{500} = 89.28.$$
 
-2. From that same table, compute the proportion of all meal-skippers who were pantry users. State which margin it is divided by, and why it does not address whether the pantry helped.
+Expected counts need not be whole numbers, since they describe what happens on average under $H_0$; keep two decimal places. As a check, the expected counts have the same row and column totals as the observed table.
 
-3. Convert each of these to the other scale, showing the arithmetic: a probability of 0.25; a probability of 0.90; odds of 3; odds of 0.2. Then say which case has odds and probability closest together.
+### The chi-square statistic adds up the gaps
 
-4. A study reports a relative risk of 1.5 and an odds ratio of 3.2 for one comparison. Without seeing counts, what can you say about how common the outcome was?
+For each cell, compare the observed count $O$ with the expected count $E$, then add over all cells:
 
-5. For the commuting table above, compute the expected count for all six cells, then name the cell contributing most to the chi-square statistic and say why.
+$$X^2 = \sum_{\text{all cells}} \frac{(O - E)^2}{E}.$$
 
-## Where to read more
+The difference $O - E$ is the gap between what happened and what independence predicts. Squaring makes every gap positive, so gaps above and below cannot cancel, and weights large gaps more. Dividing by $E$ judges each gap against its cell's size: a gap of 10 is large when 20 were expected and small when 500 were expected. Under $H_0$ the gaps are only chance variation and $X^2$ tends to be small; the stronger the association in the sample, the larger $X^2$.
 
-- [Inference for a single proportion](https://openintrostat.github.io/ims/inference-one-prop.html) — the one-group case and proportions as estimates.
-- [Inference for comparing two proportions](https://openintrostat.github.io/ims/inference-two-props.html) — this unit's comparison, with intervals as well as tests.
-- [Inference for two-way tables](https://openintrostat.github.io/ims/inference-tables.html) — expected counts and the chi-square idea, including larger tables.
-- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — the same ideas in a clinical setting, where risk and odds ratios are the working vocabulary.
-- [StatKey](https://www.lock5stat.com/statkey) — its test for a difference in proportions will shuffle a two-way table for you, worth doing once.
-- The whole of [Introduction to Modern Statistics](https://openintrostat.github.io/ims), plus the course [schedule](../schedule.qmd) and [resources](../resources/index.qmd) pages.
+### Degrees of freedom and the chi-square distribution
+
+When $H_0$ is true and the expected counts are large enough, $X^2$ approximately follows a **chi-square distribution**, a family of curves indexed by degrees of freedom:
+
+$$df = (r - 1)(c - 1),$$
+
+where $r$ is the number of rows and $c$ the number of columns. Once the marginal totals are fixed, only that many cells can be filled in freely. In the activity and sleep table, knowing the good-sleep counts for the low and moderate groups forces every other cell, so $df = (3 - 1)(2 - 1) = 2$.
+
+Chi-square distributions take only values of 0 or more and are skewed to the right. Each has a mean equal to its degrees of freedom, so a statistic far above its df signals a large mismatch. The p-value is the upper-tail area beyond the observed $X^2$: if $H_0$ were true, the probability of a statistic at least as large as the one observed. Only the upper tail counts, because every kind of departure from independence makes $X^2$ larger.
+
+### Conditions and what software reports
+
+1. **Independence.** Each case appears in exactly one cell, and cases are independent, as in a random sample or a randomized experiment.
+2. **Expected counts.** Every expected count is at least 5 (check the expected counts, not the observed ones).
+
+The test works on counts, never on percentages or rates: 45% of 20 people and 45% of 2,000 people carry very different amounts of evidence. Software reports the statistic, the degrees of freedom and the p-value, and can list the expected counts.
+
+## Worked example 2: physical activity and sleep quality
+
+**Question.** In the hypothetical random sample of 500 adults, is there evidence of an association between physical activity level and sleep quality? Use $\alpha = 0.05$.
+
+**Step 1: Hypotheses.** $H_0$: activity level and sleep quality are independent among adults in this city. $H_A$: they are associated.
+
+**Step 2: Expected counts.** Each is row total times column total divided by 500, with column totals 279 (good sleep) and 221 (poor sleep).
+
+| Activity level (row total) | Good sleep: observed | Good sleep: expected | Poor sleep: observed | Poor sleep: expected |
+|---|---|---|---|---|
+| Low (160) | 72 | 160 × 279 / 500 = 89.28 | 88 | 160 × 221 / 500 = 70.72 |
+| Moderate (200) | 116 | 200 × 279 / 500 = 111.60 | 84 | 200 × 221 / 500 = 88.40 |
+| High (140) | 91 | 140 × 279 / 500 = 78.12 | 49 | 140 × 221 / 500 = 61.88 |
+
+Check: $89.28 + 111.60 + 78.12 = 279.00$ and $70.72 + 88.40 + 61.88 = 221.00$, matching the observed column totals.
+
+**Step 3: Conditions.** The adults are a random sample, each counted in one cell. The smallest expected count is 61.88, well above 5.
+
+![Observed counts and counts expected under independence, activity and sleep survey](../assets/figures/week-13/activity-sleep-observed-expected.svg){fig-alt="Paired bars for six cells. Good sleep observed vs expected: low 72 vs 89.28, moderate 116 vs 111.60, high 91 vs 78.12. Poor sleep: low 88 vs 70.72, moderate 84 vs 88.40, high 49 vs 61.88."}
+
+**Step 4: Each cell's contribution.** Square the gap and divide by the expected count.
+
+| Cell | $O$ | $E$ | $O - E$ | $(O - E)^2 / E$ |
+|---|---|---|---|---|
+| Low, good sleep | 72 | 89.28 | $-17.28$ | $298.60 / 89.28 = 3.345$ |
+| Low, poor sleep | 88 | 70.72 | $17.28$ | $298.60 / 70.72 = 4.222$ |
+| Moderate, good sleep | 116 | 111.60 | $4.40$ | $19.36 / 111.60 = 0.173$ |
+| Moderate, poor sleep | 84 | 88.40 | $-4.40$ | $19.36 / 88.40 = 0.219$ |
+| High, good sleep | 91 | 78.12 | $12.88$ | $165.89 / 78.12 = 2.124$ |
+| High, poor sleep | 49 | 61.88 | $-12.88$ | $165.89 / 61.88 = 2.681$ |
+
+**Step 5: Add.**
+
+$$X^2 = 3.345 + 4.222 + 0.173 + 0.219 + 2.124 + 2.681 = 12.764.$$
+
+The low and high rows contribute most: the low-activity group had fewer good sleepers than independence predicts (72 against 89.28) and the high-activity group had more (91 against 78.12). The moderate group is close to its expected counts.
+
+**Step 6: Degrees of freedom and p-value.** With 3 rows and 2 columns, $df = (3 - 1)(2 - 1) = 2$. The distribution's mean is 2, and our statistic is more than six times that. Software reports:
+
+```
+Chi-square test for association: activity level by sleep quality
+X-squared = 12.764, df = 2, p-value = 0.0017
+```
+
+![Chi-square distribution with 2 degrees of freedom and the observed statistic](../assets/figures/week-13/chi-square-df2-null.svg){fig-alt="Right-skewed chi-square curve with df = 2. The upper 5 percent beyond 5.99 is shaded. The observed statistic 12.76 is marked far to the right; the area beyond it is about 0.0017."}
+
+With 2 degrees of freedom, only 5% of the distribution lies beyond 5.99, and the observed 12.76 is far past that cut-off. The area beyond 12.76 is the p-value, 0.0017, too thin to see at this scale.
+
+**Conclusion in context.** The p-value, 0.0017, is below $\alpha = 0.05$, so we reject $H_0$. The survey gives strong evidence that sleep quality and physical activity level are associated among adults in this city: 45% of the low-activity group reported good sleep, against 58% of the moderate group and 65% of the high group. If activity and sleep were unrelated, a statistic at least this large would turn up in only about 1.7 of every 1,000 random samples. Because the survey is observational, it does not show that exercise causes better sleep. People with health problems may both exercise less and sleep worse, and age, work schedules or stress could also affect both. The direction could also run the other way: people who sleep poorly may be too tired to exercise.
+
+## Transfer: age group and support for a bike lane
+
+Now the same reasoning in a public-policy setting, starting from software output. A city surveyed a random sample of 600 residents (hypothetical) about a proposed protected bike lane, recording age group and opinion.
+
+| Age group | Support | Oppose | Unsure | Row total |
+|---|---|---|---|---|
+| 18 to 34 | 118 | 52 | 30 | 200 |
+| 35 to 54 | 110 | 80 | 30 | 220 |
+| 55 and older | 72 | 84 | 24 | 180 |
+| Column total | 300 | 216 | 84 | 600 |
+
+```
+Chi-square test for association: age group by opinion
+Expected counts
+                 Support   Oppose   Unsure
+18 to 34          100.00    72.00    28.00
+35 to 54          110.00    79.20    30.80
+55 and older       90.00    64.80    25.20
+X-squared = 18.313, df = 4, p-value = 0.0011
+```
+
+- **Hypotheses.** Age group (explanatory) and opinion (response) each have three categories. $H_0$: they are independent among the city's residents. $H_A$: they are associated.
+- **Check one expected count.** For "oppose, 55 and older," $180 \times 216 / 600 = 64.80$, matching the output. Checking one cell is a quick check that the software used the table you think it used.
+- **Conditions.** A random sample, each resident counted once; the smallest expected count, 25.20, is well above 5.
+- **Degrees of freedom.** The table is 3 × 3, so $df = (3 - 1)(3 - 1) = 4$. A bigger table has more cells free to vary, so its null distribution sits further right, with mean 4 rather than 2.
+- **Decision.** The p-value, 0.0011, is below 0.05, so we reject $H_0$: strong evidence that opinion is associated with age group.
+- **Describe the association.** The test does not say what the association looks like; row proportions do. Support is $118/200 = 59\%$ at ages 18 to 34, $110/220 = 50\%$ at 35 to 54, and $72/180 = 40\%$ at 55 and older. Opposition runs the other way: 26%, about 36% and about 47%. The unsure share is about 13% to 15% in every group. The largest contributions to $X^2$ come from the support and oppose cells of the youngest and oldest groups; "oppose, 55 and older" alone contributes $(84 - 64.80)^2 / 64.80 \approx 5.69$ of the 18.31 total.
+- **Conclusion in context.** Among this city's residents, opinion on the bike lane is associated with age: in the sample, younger residents were more likely to support it and older residents more likely to oppose it. The survey cannot say why; age is linked to commuting habits, neighborhood and many other factors.
+
+## A common misreading: a significant chi-square proves one variable causes the other
+
+The misreading sounds like this: "The chi-square test was significant, so activity level affects sleep." Close relatives are "so the difference is large" and "so every group differs from every other." A small p-value says only that, if the variables were independent, a mismatch at least this large between observed and expected counts would be rare. That is evidence of association. It is not the probability that the variables are independent, and it does not tell you:
+
+- **Why the variables are associated.** The calculation is identical for a randomized experiment and an observational survey. Only the study design can support a causal claim, and the sleep survey is observational, so confounding remains possible.
+- **How strong the association is.** $X^2$ grows with sample size. Multiply every count by 10 and the conditional proportions stay the same, but $X^2$ becomes 10 times as large. With tens of thousands of people, a difference of 1 percentage point can be statistically significant and still unimportant. Describe size with conditional proportions or a difference in proportions with its confidence interval.
+- **Which groups differ.** A significant result is about the table as a whole. To say where it departs from independence, look at the conditional proportions and the largest cell contributions.
+
+The opposite mistake matters too. A large p-value is not evidence of independence; the data are consistent with independence, and a small sample may lack the information to detect a real association. Say "we fail to reject $H_0$," never "the variables are independent."
+
+## Practice on your own (ungraded)
+
+1. A town of 8,000 people reported 12 cases of a foodborne illness in a year; a city of 450,000 reported 360 cases (hypothetical). Compute each rate per 100,000. Which place had the higher rate, and why might a story about counts suggest the opposite? *What to look for:* divide each count by its own population first.
+2. In the activity and sleep table, what proportion of the poor sleepers were in the high-activity group? Is that a row or a column proportion, and does it tell you whether sleep differs by activity level?
+3. In a hypothetical randomized trial, 90 of 300 patients given a new wound dressing developed an infection, compared with 120 of 300 given the standard dressing. Compute the difference in infection proportions (new minus standard) and a 95% confidence interval. Does the interval contain 0? *What to look for:* check the success-failure condition first.
+4. A two-way table has row totals 150 and 250 and column totals 100, 180 and 120 (grand total 400). Under independence, what is the expected count for row 1, column 3? How many degrees of freedom does the chi-square test have?
+5. A hypothetical report on region and vaccination status gives "X-squared = 1.9, df = 3, p-value = 0.59." Write a one-sentence plain-language conclusion. What would be wrong with writing "region and vaccination status are independent"?
+6. A hypothetical survey of 40,000 people (20,000 in each of two regions) finds 51.0% support for a proposal in one region and 50.0% in the other, with X-squared = 4.00, df = 1, p-value = 0.045. Using these numbers, explain how a result can be statistically significant and still unimportant.
+
+## Read further on categorical data
+
+- *Introduction to Modern Statistics*: [Chapter 4, Exploring categorical data](https://openintrostat.github.io/ims/explore-categorical.html) for two-way tables, conditional proportions and segmented bar charts; [Chapter 17, Inference for comparing two proportions](https://openintrostat.github.io/ims/inference-two-props.html) for the interval and test for a difference; and [Chapter 18, Inference for two-way tables](https://openintrostat.github.io/ims/inference-tables.html) for expected counts and the chi-square test. The book shows R code in places; skip the code and read the output and explanation.
+- [StatKey](https://www.lock5stat.com/statkey/), a free browser tool: open Descriptive Statistics and Graphs, then Two Categorical Variables, to enter a two-way table and see its proportions and a graph. Open Advanced Randomization Tests, then chi-square Test for Association, to see the chi-square statistic with a null distribution built by randomization, as in Week 11.
+- Optional, for biomedical examples: [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat/), the chapter on inference for categorical data (chapter 8).
 
 ## Where this goes next
 
-Fall break falls between this unit and the next, so there is a gap before Week 14 begins. Use a little of it to re-read one section: conditioning on the group versus conditioning on the outcome is what pays off for the rest of the term.
+The previous week, [Week 12: Classical hypothesis testing](week12-classical-hypothesis-testing.qmd), set up the logic of tests and p-values that this week applied to categorical outcomes. Next, [Week 14: Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd) asks what a collection of studies supports. Many forest plots show each study's difference in proportions (or ratio of proportions) with its confidence interval, exactly the kind of result from Worked example 1, stacked one above another.
 
-Week 14 changes the unit of analysis. Instead of asking what one study shows, you will ask how a pile of studies becomes a body of evidence, reading a forest plot line by line — one row per study, an estimate, an interval, a line of no effect. Nearly every estimate on such a plot is a number of the kind you built this week, so the vocabulary carries straight over. Continue to [Week 14 — Meta-analysis and forest plots](week14-meta-analysis-forest-plots.qmd), look back at [Week 12 — Classical hypothesis testing](week12-classical-hypothesis-testing.qmd) for where the p-value came from, or return to the [notes index](index.qmd).
+- Back to [the notes overview](index.qmd)
+- See [the course schedule](../schedule.qmd)

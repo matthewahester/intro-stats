@@ -8,198 +8,267 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+Weeks 3 and 4 summarized one variable at a time and compared one variable across groups. This week asks a new question: when two variables are measured on the same cases, do they move together, and what can that pattern tell you?
 
-Every comparison you made in [Week 4](week04-comparing-groups.qmd) had a group in it. You put the walkers beside the non-walkers, lined two boxplots up on one axis, and read the gap between their centers. The explanatory variable was a label, and the work was comparing.
+## Warm-up: does more exercise go with a lower heart rate?
 
-This week that label turns into a number. A clinic does not only ask whether a patient walks; it asks how many minutes a day. A county does not only ask whether a town is remote; it asks how many miles to the nearest hospital. When both variables are numerical and both are measured on the same case, the question changes shape. It is no longer "which group is higher?" but "as one number goes up, what happens to the other?"
+A hypothetical fitness app reports that among its users, people who log more weekly exercise tend to have lower resting heart rates. Before reading on, jot down a short reply to each question.
 
-That question comes with a picture of its own, the scatterplot, and a number of its own, the correlation. Both are easy to over-read, so this week spends about as much time on what they refuse to tell you as on what they say.
+1. What kind of graph would let you see this claim for yourself?
+2. If the claim holds, does every person who exercises more have a lower heart rate than every person who exercises less?
+3. Would the pattern show that exercising more lowers a person's heart rate?
 
-One thing this week deliberately does not do is fit a line. You will see a line drawn through a cloud once, because nothing else makes its point as fast, but the recipe waits for Week 8. For now the job is describing a relationship honestly.
+Keep your replies. This week sharpens each one: the first with a scatterplot, the second with the idea of strength, and the third with the difference between association and causation.
 
-### Why this matters
+## Why association matters: claims that link two things
 
-A regional health system is choosing where to open three walk-in clinics. The slide that decides it shows one number: across the forty neighborhoods already served, the correlation between the number of clinics and the share of adults reporting a routine checkup is 0.72. Strong, positive, obvious — build more clinics.
+Much of the evidence you meet in daily life says that two things go together. City planners say that neighborhoods with more tree cover stay cooler on hot afternoons. Public health reports say that counties with higher smoking rates have shorter life expectancy. Each is a claim about an **association**: knowing the value of one variable tells you something about the likely value of the other.
 
-Nobody asks to see the scatterplot. If they had, they would have seen thirty-seven neighborhoods in one shapeless blob and the whole correlation coming from three dense downtown neighborhoods that have many clinics because many people already live and work there. The number was not wrong; it answered a narrower question than the room thought, and three cases were carrying it. That is a real decision, made on a picture nobody looked at.
+Associations help you predict and point researchers toward possible causes. They are also easy to over-read. A pattern can come from a cause you care about, from a cause nobody measured, or from a single unusual case. Week 2 showed why study design matters for causal claims; this week shows how to describe an association honestly before anyone argues about why it exists.
 
 ## What you will be able to do
 
-- Build or read a scatterplot, and say which variable you put on the horizontal axis and why.
-- Describe any scatterplot in three parts — direction, form, strength — before computing anything.
-- Interpret a correlation as a unitless measure of straight-line strength, state its range, and say what its sign means.
-- Explain, with a picture, why a correlation near zero does not mean "these two variables are unrelated".
-- Recompute a correlation with one unusual case set aside, and report how far it moved.
-- Refuse three over-readings: that a correlation measures steepness, that it measures any relationship, and that it establishes cause.
+By the end of this week you can:
 
-## Words worth owning
+- choose the explanatory and response variables for two quantitative variables and read their scatterplot;
+- describe a scatterplot in context by its direction, form, strength and unusual observations;
+- explain what the correlation $r$ measures, state its properties, and compute it for a small data set;
+- recognize when $r$ misleads: a curved pattern or a single unusual observation;
+- explain why an association alone does not show that one variable causes the other, and name a plausible lurking variable;
+- decide whether two categorical variables are associated by comparing conditional proportions.
 
-| Term | What it means in this course |
-|------|------------------------------|
-| Scatterplot | One dot per case, explanatory variable across the bottom, response up the side. |
-| Explanatory variable | The variable you treat as coming first, or as the possible reason. |
-| Response variable | The outcome you are watching. |
-| Direction | Whether the cloud drifts upward (positive) or downward (negative), left to right. |
-| Form | The shape of the drift: a straight band, a curve, several clumps, or nothing. |
-| Strength | How tightly the dots hug that shape. Tight is strong, loose is weak. |
-| Correlation, written r | One number between -1 and 1 for how tightly a cloud hugs a *straight* line, and in which direction. |
-| Influential case | An observation whose presence noticeably changes a summary. Find it by setting it aside and recomputing. |
+## Words to know this week
 
-## Look at the picture before you compute
+| Term | Meaning in this course |
+|---|---|
+| Association | Knowing the value of one variable tells you something about the likely value of the other. |
+| Scatterplot | A graph of two quantitative variables measured on the same cases, one dot per case. |
+| Explanatory variable | The variable that might help explain or predict the other; it goes on the horizontal axis. |
+| Response variable | The variable you want to explain or predict; it goes on the vertical axis. |
+| Direction | Positive if larger values of one variable tend to go with larger values of the other; negative if they go with smaller values. |
+| Form | The shape of the pattern: roughly linear (straight-line), curved, or clustered. |
+| Strength | How closely the dots follow the form. |
+| Outlier in a scatterplot | An observation that falls well away from the overall pattern. |
+| Correlation $r$ | A number from $-1$ to $1$ measuring the direction and strength of a straight-line association between two quantitative variables. |
+| Lurking variable | A variable left out of the analysis that is related to both variables and can create or hide an association between them. |
+| Conditional proportion | A proportion computed within one group only, such as the proportion of rural adults with a regular health care provider. |
 
-The scatterplot is the first display in this course where a single dot carries two measurements at once. A dot at horizontal position 45 and vertical position 68 says: *this one person walked 45 minutes a day and had a resting heart rate of 68 beats per minute*. Both facts belong to the same body, which is what lets the display show a relationship at all.
+## Scatterplots: two quantitative variables at once
 
-Because it shows every case, a scatterplot is honest in a way no summary number can be: the clump, the drift, the gaps, the case off in the corner. Everything else this week compresses that picture, and every compression loses something.
+A **scatterplot** shows two quantitative variables measured on the same cases. Each case (a person, a neighborhood, a day) becomes one dot, placed horizontally by its value of one variable and vertically by its value of the other. Because each dot keeps the two values paired, a scatterplot shows what two separate histograms cannot: whether the variables tend to rise and fall together.
 
-### Which variable goes on the horizontal axis
+### Which variable goes on which axis
 
-The convention is fixed and it is not decoration. The explanatory variable goes across the bottom; the response variable goes up the side. If you think minutes of walking might help explain resting heart rate, minutes go across the bottom. If either variable is categorical, the scatterplot is the wrong display and last week's side-by-side boxplots are the right one.
+When one variable might help explain or predict the other, it is the explanatory variable and goes on the horizontal axis; the response variable goes on the vertical axis. In the warm-up, weekly exercise is explanatory and resting heart rate is the response, because the natural question is whether heart rates differ for people who exercise different amounts. Calling a variable "explanatory" describes your question. It does not claim that the variable causes anything.
 
-Two warnings come with that convention. First, deciding which variable is explanatory is a judgment you are making, not something the data announced; it can quietly smuggle in a causal story you have not earned. Second — and this one surprises people — the correlation does not care which variable you put where. It comes out identical either way, which is your first hint that correlation is not a statement about one variable acting on another.
+### Four things to describe: direction, form, strength and unusual observations
 
-### Direction, form, and strength, in that order
+Describe a scatterplot as you would a single distribution: the overall pattern first, then departures from it.
 
-Say these three things about every scatterplot, before reaching for a calculator.
+- **Direction.** In a positive association the dots rise from lower left to upper right: above-average values of one variable tend to go with above-average values of the other. In a negative association the dots fall from upper left to lower right.
+- **Form.** Is the trend roughly a straight line, a curve, or separate clusters? Form matters because the correlation in this week's notes, and the fitted lines of Week 8, are built for straight-line patterns.
+- **Strength.** If knowing one variable narrows down the other a great deal, the association is strong. If the dots scatter widely around the trend, it is weak.
+- **Unusual observations.** Look for dots far from the pattern and ask what might explain them: a recording error, an unusual case, or a real feature worth reporting.
 
-**Direction.** Read left to right. If the cloud tends upward, the association is positive: larger values of one variable go with larger values of the other. If it tends downward, it is negative. If neither, say so.
+Describe the pattern in context, with units. "Adults who exercise more tend to have lower resting heart rates" is a description; "negative, linear, moderate" is only a checklist.
 
-**Form.** Is the drift a straight band, or does it bend? Does it fan out as you move right? Are there two clumps rather than one cloud? Form is the question students skip, and it decides whether the correlation you are about to compute means anything at all.
+## Worked example 1: reading a scatterplot of exercise and resting heart rate
 
-**Strength.** How tightly do the dots hug the form you just named? Strong means a narrow band; weak means a wide scatter with the pattern barely visible through it. Strength and direction are separate: a strong negative association is as strong as an equally tight positive one.
+**Question.** A hypothetical wellness survey recorded, for 15 adults, hours of moderate exercise in a typical week and resting heart rate in beats per minute (bpm). Describe the relationship, then interpret the correlation that software reports.
 
-![Four scatterplots, each described by its direction, its form, and its strength.](../assets/figures/week-05/four-shapes.svg){fig-alt="Four scatterplots. Height and arm span rise together in a tight band; study minutes and items right drift up loosely; alertness rises with coffee and then falls in a hump; shoe size and reaction time show no pattern at all."}
+![Weekly exercise and resting heart rate for 15 hypothetical adults](../assets/figures/week-05/exercise-heart-rate-scatter.svg){fig-alt="Scatterplot of resting heart rate against weekly exercise hours for 15 hypothetical adults. Rates drift down from about 80 to 62 bpm; one adult at 8 hours and 80 bpm sits well above the pattern. r = −0.66, or −0.90 without that adult."}
 
-Work the panels with the three questions. Height and arm span: positive, straight, strong — a narrow band, correlation 0.98 for those invented values. Study minutes and items right on a twenty-item quiz: positive, straight, weak — an upward tilt with students scattered all over it, correlation 0.30. Cups of coffee and alertness: strong, curved, emphatically not straight — alertness climbs to a peak near four cups and comes back down. Shoe size and reaction time: no association, a shapeless blob, correlation 0.07.
+**Step 1: cases and variables.** The cases are 15 adults. Weekly exercise is the explanatory variable and resting heart rate is the response. Both are quantitative, so a scatterplot fits.
 
-Hold on to the third panel. That relationship is the strongest of the four in the ordinary sense of the word — coffee intake tells you a great deal about alertness — and yet the correlation of those invented numbers is exactly 0.00. Not "about zero": the values were built symmetric around four cups, so every upward product on the left cancels a downward one on the right. A number built to measure straight-line drift reports nothing when the drift goes up and then comes down.
+**Step 2: direction.** The dots drift downward. The three adults who exercise 0 to 1 hours a week have resting rates of 76 to 84 bpm, while the adults who exercise 5 hours or more (setting one adult aside for now) have rates of 62 to 69 bpm. The association is negative.
 
-## Correlation as one number for straight-line strength
+**Step 3: form.** The downward drift looks roughly like a straight line, with no clear bend.
 
-Now the compression. The correlation, written $r$, turns a whole cloud of dots into one number, and its blind spots follow from how it is built.
+**Step 4: strength.** The dots do not sit on a line: the adults at 4 and 4.5 hours have rates of 72 and 75 bpm, higher than the adult at 3.5 hours (70 bpm). The association is clear but not tight.
 
-### What the number is actually measuring
+**Step 5: unusual observations.** One adult, at 8 hours and 80 bpm (orange), sits well above the others who exercise 6 hours or more, whose rates are 62 to 69 bpm. That value should be checked (was it taken right after climbing stairs?), not simply deleted.
 
-Start with something you already did in Week 3: measuring how far a value sits from its own mean. For each case, find how far its $x$ is from the mean of the $x$ values and how far its $y$ is from the mean of the $y$ values, then multiply those two distances.
+**Step 6: the correlation.** Software reports:
 
-That product is the whole idea. A case above average on both variables gives a positive product. A case below average on both also gives a positive product, because a negative times a negative is positive. A case above average on one and below on the other gives a negative product. Add the products up: if most cases agree, high with high and low with low, the sum is strongly positive; if they mostly disagree, strongly negative; if they cancel, near zero.
+```
+Correlation of exercise (hours per week) and resting heart rate (bpm)
+  all 15 adults                        r = -0.66
+  without the adult at 8 hours         r = -0.90
+```
 
-That sum depends on your units, so it is divided by a scaling factor built from the spread of each variable:
+The value $r = -0.66$ is negative, matching the downward drift, and its size indicates a moderately strong straight-line association (as a rough guide, explained in the next section, a size of about 0.5 is moderate and about 0.8 or more is strong). Without the unusual adult, $r = -0.90$, a strong association. A careful report gives both values and says why they differ, rather than choosing the more impressive one.
 
-$$ r = \frac{\sum (x - \bar{x})(y - \bar{y})}{\sqrt{\sum (x - \bar{x})^2 \; \sum (y - \bar{y})^2}} $$
+**Conclusion.** In these 15 hypothetical adults, those who exercise more tend to have lower resting heart rates: a negative, roughly linear, moderately strong association ($r = -0.66$, or $-0.90$ without one unusual adult). This describes the sample. It does not show that exercise lowers heart rate, because the adults chose how much to exercise and may differ in other ways, such as age or general health.
 
-In words: the sum of the products of the two distances-from-average, divided by a factor made from how spread out each variable is. Three consequences fall out of that division:
+## Correlation: one number for a straight-line pattern
 
-- $r$ always lands between -1 and 1. Exactly 1 means every dot sits on one upward-sloping straight line; exactly -1 means one downward-sloping straight line; 0 means no straight-line drift at all.
-- $r$ has no units. Minutes per day and beats per minute go in; a bare number comes out. Convert minutes to hours and $r$ does not budge. That lets you compare associations measured in different units, and it is exactly why $r$ cannot tell you how big anything is.
-- $r$ is symmetric. Swap which variable you call $x$ and which you call $y$ and the number is unchanged.
+Alongside the scatterplot, it helps to have one number that says how strong a straight-line pattern is. That number is the **correlation**, written $r$.
 
-### Calibrating your eye
+### How r is built from z-scores
 
-Most people badly overestimate how tight a reported correlation will look, so matching pictures to numbers is the cheapest accuracy you will buy all term.
+A **z-score** says how many standard deviations a value sits above or below its mean: $z = (x - \bar{x})/s$. To compute $r$, convert both variables to z-scores, multiply each case's two z-scores, add the products, and divide by $n - 1$:
 
-![Three clouds labelled with their correlations, for calibrating what a number looks like.](../assets/figures/week-05/correlation-values.svg){fig-alt="Three scatterplots of twenty cases each, labelled r = 0.30, r = 0.70 and r = -0.90. The cloud tightens around a straight line as the size of r grows, and the third panel slopes downward instead of upward."}
+$$
+r = \frac{1}{n-1}\sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s_x}\right)\left(\frac{y_i - \bar{y}}{s_y}\right)
+$$
 
-The left panel, at 0.30, is a real upward drift you would struggle to see unlabelled — and 0.30 is a correlation many published health studies would call meaningful. The middle panel, at 0.70, has a pattern you would notice unprompted, but individual cases still miss it badly. Only the right panel, at -0.90, is tight enough to look like the word "relationship" in ordinary speech, and being negative takes nothing from its strength. Resist attaching labels such as "weak" or "strong" to fixed cutoffs; what counts as strong depends on the field.
+Here $s_x$ and $s_y$ are the standard deviations of the two variables. The logic matters more than the formula. A case above average on both variables has two positive z-scores, so its product is positive; a case below average on both also gives a positive product. A case above average on one variable and below on the other gives a negative product. When the positive products outweigh the negative ones, $r$ is positive; when the negative products outweigh the positive ones, $r$ is negative; when they roughly cancel, $r$ is near 0. Software normally computes $r$, but doing it once by hand, as in Worked example 2, shows where the number comes from.
 
-### Three things correlation does not measure
+### Properties of r you can rely on
 
-**It does not measure steepness.** A correlation of 0.90 says the dots sit close to some straight line. It says nothing about whether that line rises by half a beat per minute or by fifteen. Steepness is the slope, it carries units, and it is Week 8's subject.
+![Six scatterplots with correlations from −0.95 to 0.95](../assets/figures/week-05/correlation-gallery.svg){fig-alt="Six scatterplots of 50 simulated observations each. Top row: r = 0.30, 0.70 and 0.95. Bottom row: r = −0.30, −0.70 and −0.95. Dots hug a line more tightly as the size of r grows; the sign sets the direction."}
 
-**It does not measure any relationship — only straight-line relationship.** You have already seen the coffee panel: an obvious, strong, useful relationship with a correlation of exactly zero. Read "the correlation was near zero" as "there was no straight-line drift", never as "nothing was going on".
+- **Range.** $r$ is always between $-1$ and $1$, and equals $1$ or $-1$ only when every dot lies exactly on a straight line.
+- **Sign and size.** The sign gives the direction; the size gives the strength of the straight-line pattern. In the figure, $r = 0.70$ and $r = -0.70$ are equally strong associations running in opposite directions. $r$ measures how closely the dots follow a line, not how steep the line is; a gently sloping pattern can have $r$ near 1. (The panels look steeper as $r$ grows only because both variables in each panel are drawn as z-scores on the same scale.)
+- **No units.** Built from z-scores, $r$ has no units, and changing units leaves it unchanged: temperature in Fahrenheit or Celsius, weight in pounds or kilograms, the same $r$.
+- **Symmetric.** The correlation of $x$ with $y$ equals the correlation of $y$ with $x$, so swapping the axes does not change $r$.
+- **Straight lines and quantitative variables only.** $r$ can badly understate a curved relationship, and it cannot be computed for categorical variables such as blood type.
+- **Sensitive to outliers.** Like the mean and standard deviation it is built from, $r$ can be pulled a long way by one unusual observation.
 
-**It does not measure cause.** Correlation describes two columns of numbers sitting side by side. It cannot distinguish "walking lowers heart rate" from "healthier hearts make people more able to walk" from "younger people both walk more and have lower rates". That last possibility, the lurking third variable, is the whole of [Week 6](week06-confounding.qmd).
+How strong is strong? There is no official cut-off. As a rough guide in this course, a correlation whose size (ignoring the sign) is about 0.8 or more is strong, about 0.5 is moderate, and about 0.3 or less is weak. The field matters too: two readings from the same bathroom scale should correlate far more strongly than a quick screening measurement and a health outcome years later.
 
-There is a fourth, and it is why the picture comes first: two datasets can carry the same correlation and tell completely different stories.
+## Worked example 2: computing r for tree canopy and afternoon temperature
 
-![Two very different pictures carrying exactly the same correlation.](../assets/figures/week-05/same-correlation.svg){fig-alt="Two scatterplots both labelled r = 0.80. The left panel is an even upward-drifting cloud; the right panel is a flat cluster of cases plus one far-out case that produces the whole correlation by itself."}
+**Question.** A city is deciding where to plant trees. An analyst compares tree canopy cover (the percent of land area shaded by tree crowns) with afternoon air temperature, measured on the same hot summer day, in five hypothetical neighborhoods. Compute $r$ by hand and interpret it.
 
-Both panels report a correlation of 0.80. On the left that number is a fair summary: every case contributes a little to the upward drift, and dropping any single case leaves the correlation between 0.77 and 0.83. On the right the number is a fiction produced by geometry. Seventeen cases sit in a cluster whose own correlation is 0.00; one far-out case, well to the right and well above them, is far above average on both variables at once, so its single product accounts for about 94 percent of the sum. Delete that one case and 0.80 becomes 0.00. Same number, opposite meaning.
+| Neighborhood | Canopy cover $x$ (%) | Afternoon temperature $y$ (°C) |
+|---|---|---|
+| A | 10 | 36 |
+| B | 20 | 35 |
+| C | 30 | 32 |
+| D | 40 | 33 |
+| E | 50 | 29 |
 
-## Worked example — resting heart rate and daily walking
+**Step 1: the means.** $\bar{x} = (10 + 20 + 30 + 40 + 50)/5 = 150/5 = 30$ percent and $\bar{y} = (36 + 35 + 32 + 33 + 29)/5 = 165/5 = 33$ °C.
 
-**Setting.** A community clinic enrolls six adults in a walking program. For each person it records the average minutes of brisk walking per day over a month and the resting heart rate in beats per minute at the end. Six people is a very small study; the point here is the arithmetic and the description, not a finding about walking.
+**Step 2: the standard deviations.** The deviations of $x$ from its mean are $-20, -10, 0, 10, 20$; their squares add to $400 + 100 + 0 + 100 + 400 = 1000$, so $s_x = \sqrt{1000/4} = \sqrt{250} \approx 15.811$. The deviations of $y$ are $3, 2, -1, 0, -4$; their squares add to $9 + 4 + 1 + 0 + 16 = 30$, so $s_y = \sqrt{30/4} = \sqrt{7.5} \approx 2.739$.
 
-**Step 1 — set the picture up.** Minutes walked goes across the bottom, resting heart rate up the side. The people who walk more sit lower: the direction is negative, the form is roughly straight, the strength looks high.
+**Step 3: z-scores and their products.** Divide each deviation by its standard deviation, then multiply the two z-scores for each neighborhood (rounded to three decimal places).
 
-**Step 2 — find both means.** The minutes are 10, 20, 30, 30, 40, 50, which add to 180, so the mean is 30 minutes a day. The heart rates are 82, 75, 76, 68, 69, 62, which add to 432, so the mean is 72 beats per minute.
+| Neighborhood | $z_x$ | $z_y$ | Product $z_x z_y$ |
+|---|---|---|---|
+| A | $-20/15.811 = -1.265$ | $3/2.739 = 1.095$ | $-1.385$ |
+| B | $-10/15.811 = -0.632$ | $2/2.739 = 0.730$ | $-0.461$ |
+| C | $0/15.811 = 0$ | $-1/2.739 = -0.365$ | $0$ |
+| D | $10/15.811 = 0.632$ | $0/2.739 = 0$ | $0$ |
+| E | $20/15.811 = 1.265$ | $-4/2.739 = -1.460$ | $-1.847$ |
 
-**Step 3 — build the columns.** For each person, take the distance from each mean and multiply.
+**Step 4: add and divide by $n - 1$.** The products add to $-1.385 - 0.461 + 0 + 0 - 1.847 = -3.693$. With $n = 5$, $r = -3.693/4 \approx -0.92$. Software, which does not round along the way, gives $r = -0.9238$, which also rounds to $-0.92$.
 
-| Minutes | Heart rate | Minutes − 30 | Rate − 72 | Product | (Minutes − 30)² | (Rate − 72)² |
-|---:|---:|---:|---:|---:|---:|---:|
-| 10 | 82 | −20 | 10 | −200 | 400 | 100 |
-| 20 | 75 | −10 | 3 | −30 | 100 | 9 |
-| 30 | 76 | 0 | 4 | 0 | 0 | 16 |
-| 30 | 68 | 0 | −4 | 0 | 0 | 16 |
-| 40 | 69 | 10 | −3 | −30 | 100 | 9 |
-| 50 | 62 | 20 | −10 | −200 | 400 | 100 |
-| **Total** | | **0** | **0** | **−460** | **1000** | **250** |
+**Step 5: connect the number to the picture.** The figure splits the scatterplot at the two means. A and B are below average on canopy and above average on temperature, and E is the reverse, so all three products are negative. C and D each sit on a mean line and add nothing. No neighborhood falls in the "both above" or "both below" regions, so no product is positive and $r$ must be negative. A and E, far from both means, contribute large negative products, which is what makes $r$ strongly negative.
 
-Check as you go: both distance columns must add to zero, and they do. If yours does not, a mean is wrong.
+![Tree canopy and afternoon temperature in five hypothetical neighborhoods, split at the means](../assets/figures/week-05/canopy-temperature-quadrants.svg){fig-alt="Scatterplot of neighborhoods A to E with dashed lines at the mean canopy, 30 percent, and mean temperature, 33 °C. A and B sit upper left and E lower right, where products are negative; C and D sit on a mean line and add zero. r = −0.92."}
 
-**Step 4 — divide.** The scaling factor is the square root of 1000 times 250, which is the square root of 250,000, which is exactly 500.
+**Conclusion.** In these five hypothetical neighborhoods, more tree canopy goes with lower afternoon temperature: a strong negative straight-line association ($r \approx -0.92$). Two cautions belong in any report. Five neighborhoods is a very small sample, so one more could change $r$ noticeably. And canopy was not assigned at random, so leafier neighborhoods may differ in other ways that affect temperature, such as less pavement. The correlation describes the pattern; it does not tell the city how much cooler a street would become if trees were planted.
 
-$$ r = \frac{-460}{500} = -0.92 $$
+## Where correlation falls short
 
-**What this means in context.** Among these six adults, minutes of daily walking and resting heart rate have a strong negative association: those who walked more tended to have lower rates, and the dots sit close to a straight downward band. That is the entire claim. It does not say walking lowered anyone's heart rate, it does not say what ten more minutes is worth in beats per minute, and with six people it is not evidence of much. Notice too that the pattern is not perfect — one person walking 30 minutes a day had a *higher* rate (76) than the person walking 20 (75). A strong correlation describes the cloud; it promises nothing about two individuals in it.
+A correlation summarizes one kind of pattern, a straight line. The two situations below show why you should look at the scatterplot before trusting the number.
 
-### The same reasoning, transferred
+### A curved pattern can have r near zero
 
-Now run the identical recipe with the opposite sign. A state health department looks at six rural counties, recording the miles from the county seat to the nearest hospital and the average ambulance response time in minutes.
+![Daily electricity use and outdoor temperature for a hypothetical household](../assets/figures/week-05/energy-use-curved.svg){fig-alt="Scatterplot of daily electricity use against average outdoor temperature on 19 days. Use is lowest, about 20 kWh, near 60 °F and rises to about 45 kWh at both 24 °F and 96 °F, a U shape. r = 0.00."}
 
-The miles are 4, 8, 12, 16, 20, 24, averaging 14. The response times are 15, 19, 17, 21, 25, 23, averaging 20. The same three columns give a sum of products of 124, and sums of squared distances of 280 for miles and 70 for minutes. The scaling factor is the square root of 280 times 70, that is the square root of 19,600, or exactly 140. So $r = 124 / 140 = 0.886$, which is 0.89 rounded.
+The figure shows electricity use on 19 days for a hypothetical household that heats and cools with electricity. On the coldest day (24 °F) the heating runs and the household uses 44.8 kilowatt-hours (kWh). On mild days, between about 50 and 70 °F, use falls to 19 to 22 kWh. On the hottest day (96 °F) the air conditioning runs and use climbs back to 44.5 kWh. Temperature tells you a great deal about electricity use, yet $r = 0.00$ to two decimal places.
 
-What stayed the same: every step, and the three-part description that came before it. What changed: the context, the units, and the sign. Positive here means the two move together — the farther the hospital, the longer the wait — which anyone would expect, and which is why the number alone is worth little.
+The reason is that $r$ measures only straight-line association. The pattern slopes down on the cold side and up on the hot side, so the positive and negative products of z-scores cancel. A correlation near 0 means "no straight-line pattern," not "no relationship." The reverse mistake is possible too: a gently bending curve can have $r$ close to 1, so a large $r$ does not prove the form is a straight line.
 
-## Second worked example — one student who moves the number
+### One unusual observation can move r a long way
 
-**Setting.** A campus wellness survey records, for seven students, minutes of screen use in the hour before bed and minutes taken to fall asleep. Six students report between 20 and 70 screen minutes. The seventh reports 220 screen minutes and 74 minutes to fall asleep — not an error, but a real student with a real habit.
+![One student changes the correlation between sleep and reaction time](../assets/figures/week-05/sleep-reaction-outlier.svg){fig-alt="Two scatterplots of reaction time against hours of sleep. Left: 11 hypothetical students sleeping 6.5 to 8.5 hours show no pattern, r = 0.07. Right: adding one student with 3 hours and 390 ms gives r = −0.84."}
 
-**Step 1 — the six ordinary students.** Their screen minutes are 20, 30, 40, 50, 60, 70, averaging 45. Their times to fall asleep are 25, 20, 30, 22, 28, 25, averaging 25. The sum of products is 80, and the sums of squared distances are 1,750 and 68. The scaling factor is the square root of 1,750 times 68, that is the square root of 119,000, or about 345. So $r = 80 / 345 = 0.23$ to two decimals: a weak drift, barely visible.
+The left panel shows 11 hypothetical students who slept 6.5 to 8.5 hours before a reaction-time task. Their times run from 255 to 297 milliseconds (ms) with no visible pattern, and $r = 0.07$. The right panel adds a twelfth student who slept 3 hours and took 390 ms. With that student included, $r = -0.84$, which would usually be called a strong negative association.
 
-**Step 2 — put the seventh student back.** The mean screen time jumps from 45 to 70 minutes and the mean time to fall asleep from 25 to 32, because that case sits far from everything. The sum of products becomes 7,430 and the sums of squared distances become 28,000 and 2,126. The scaling factor is the square root of 28,000 times 2,126, or about 7,715. So $r = 7430 / 7715 = 0.96$ to two decimals.
+Nothing about the other 11 students changed; the correlation comes almost entirely from one observation far from the rest. An observation whose removal changes a summary this much is called **influential**, an idea that returns in Week 8. The slow time is not meaningless (very short sleep may well slow reactions), but with only one student below 6.5 hours of sleep, these data say almost nothing about that range. Report $r$ with and without such an observation. In Worked example 1, one unusual adult weakened a correlation from $-0.90$ to $-0.66$; here one unusual student creates a strong correlation where the other cases show none.
 
-**Step 3 — look at what happened.**
+## Association is not causation
 
-![One student included and then set aside, with the fitted line each way.](../assets/figures/week-05/influential-point.svg){fig-alt="Two panels on the same axes. With the student at 220 screen minutes included, the fitted line climbs steeply and r is 0.96. With that one student set aside, the line is nearly flat and r falls to 0.23."}
+A strong association invites a causal story: exercise lowers heart rate, trees cool streets. The story may be right. But in observational data, where nobody assigned the explanatory variable, an association fits several explanations, and the data alone usually cannot tell them apart.
 
-One observation out of seven moved the correlation from 0.23 to 0.96, and tilted the line that best follows the cloud from nearly flat to about six times steeper. Look at where that case sits: far to the right of everyone else. A case extreme in the explanatory direction acts like someone at the end of a see-saw — it need not be unusual on the response side to have huge leverage on the tilt.
+### Lurking variables: a preview of Week 6
 
-**What this means in context.** The honest report is not "screen time before bed is strongly associated with taking longer to fall asleep". It is this: among six students with similar habits there was almost no association, and one student with an extreme habit accounts for essentially all of the association in the group of seven. Both numbers get reported, with the reason they differ. Deleting the student would be worse than useless — that student may be the most informative case in the study — but a conclusion resting on one observation is not available either. These data justify a request for more students at the high end, and nothing stronger.
+![Foot length and reading score for 30 hypothetical children in grades 1, 3 and 5](../assets/figures/week-05/foot-length-reading-grades.svg){fig-alt="Scatterplot of reading score against foot length with three clusters by grade. Overall the dots rise from lower left to upper right, r = 0.91, but within each grade there is almost no pattern (r = 0.13, 0.08 and −0.09)."}
 
-::: {.callout-note}
-The habit to build: whenever a scatterplot has a case sitting well away from the rest, compute the summary twice, with it and without it, and report both. If they agree, say so. If they disagree, that disagreement is the finding.
-:::
+The figure shows foot length and reading score for 30 hypothetical children, 10 each from grades 1, 3 and 5. Across all 30 children the association is strong and positive, $r = 0.91$: children with longer feet tend to read better.
 
-## The misreading to avoid
+Nobody believes that growing feet improves reading. Grade, and with it age, is a **lurking variable**: older children have longer feet and have also had more years of reading instruction. Within one grade the pattern almost disappears; the within-grade correlations are $0.13$ for grade 1, $0.08$ for grade 3 and $-0.09$ for grade 5. Nearly the whole association comes from comparing children of different ages. In real studies the lurking variable is rarely this obvious: adults who exercise more may also smoke less or be younger, and leafier neighborhoods may have higher incomes. Week 6 develops this idea, called confounding.
 
-The sentence to watch for, in your writing and other people's, is some version of this: **"The correlation was only 0.05, so there's no relationship between these two variables."**
+### Other explanations to weigh before a causal claim
 
-It feels airtight, and it is wrong in a specific way. A correlation near zero says exactly one thing: the cloud has no consistent straight-line drift. It says nothing about curves, clumps, thresholds, or fans. The coffee-and-alertness panel earlier on this page has a correlation of exactly 0.00 and an obvious, strong, practically important relationship — alertness climbs to a peak and comes back down, and the two halves cancel inside the sum. A drug that helps at moderate doses and harms at high ones produces that shape. Reporting "no relationship" there would be a serious error, and no amount of recomputing would catch it; only the picture catches it. Write "no linear association" and you have said something true and narrow.
+When an explanatory variable and a response are associated, consider each possibility:
 
-Two smaller misreadings ride along. One is treating $r$ like a percentage: 0.80 is not twice 0.40, and the gap between 0.90 and 0.95 matters far more in practice than the gap between 0.10 and 0.15. The other is hearing "strong correlation" and picturing a big effect. Strength is how tightly the dots hug the line; size of effect is how steeply that line climbs. A tight, gently sloping cloud has a high correlation and almost no practical consequence. And until next week does the causal work properly, the verb to use is "is associated with".
+1. **The explanatory variable affects the response.** Possible, and usually what the headline claims.
+2. **The response affects the explanatory variable.** People who feel unwell may exercise less, so poor health could lead to less exercise rather than the reverse.
+3. **A lurking variable drives both**, as grade does for foot length and reading score.
+4. **Chance.** In a small sample, a moderate correlation can appear even when the larger population has no association. Weeks 11 and 12 develop the reasoning for judging whether chance alone could explain a pattern; in StatKey, the **Randomization Hypothesis Tests** menu item **Test for Slope, Correlation** applies the same shuffling idea to $r$.
+5. **One unusual case**, as in the sleep example.
 
-## Practice on your own
+The most convincing way to rule out the second and third explanations is the design from Week 2: a randomized experiment, in which chance assigns the explanatory variable, so the groups are alike, on average, in everything else. When an experiment is not possible or not ethical, causal evidence must be built from many studies, comparisons that account for lurking variables, and a plausible mechanism.
 
-These are for your own checking, not for submission; a calculator and graph paper suffice.
+## Association between two categorical variables
 
-1. Sketch four scatterplots of about ten dots each: strongly positive and straight, weakly negative and straight, strongly curved, and no association. Write the three-part description under each, then guess each correlation and say which guess you trust least.
-2. Two variables have a correlation of -0.85, and a classmate calls the association weak because the number is negative. Write the one-sentence correction.
-3. A campus office reports that across 30 study rooms, the correlation between the number of chairs and the hours booked last term is 0.61. Write two sentences the number supports, and two that people would be tempted to write but that it does not.
-4. Take the six walking-program adults above and change the last person's resting heart rate from 62 to 92, leaving everything else alone. Recompute the mean, the columns, and the correlation, then say how one changed value moved the description of the group.
-5. A study reports a correlation of 0.03 between hours of sleep and afternoon concentration, and concludes that sleep does not affect concentration. Name two things that could be true of the scatterplot that would make that conclusion wrong, and say what you would ask to see.
+Correlation needs two quantitative variables. When both variables are categorical, compare **conditional proportions**: the proportion in a response category, computed separately within each group of the explanatory variable.
 
-## Where to read more
+A hypothetical survey of 400 adults in one state recorded where each person lives and whether they have a regular health care provider.
 
-- [Introduction to Modern Statistics, Chapter 7](https://openintrostat.github.io/ims/model-slr.html) — the opening sections on scatterplots and correlation. Stop where it starts fitting a line; that is Week 8.
-- [Introduction to Modern Statistics, Chapter 5](https://openintrostat.github.io/ims/explore-numerical.html) — a refresher on means and spread, the raw material for everything above.
-- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat) — a second explanation with health and biology examples.
-- [StatKey](https://www.lock5stat.com/statkey) — its descriptive tools show a scatterplot and its correlation together, so you can watch the number move as the picture changes.
-- The [course home page](../index.qmd) and the [schedule](../schedule.qmd) for where this week sits.
+| Where they live | Has a regular provider | No regular provider | Total |
+|---|---|---|---|
+| Urban | 190 | 60 | 250 |
+| Rural | 99 | 51 | 150 |
+| Total | 289 | 111 | 400 |
+
+Within each group, the proportion with a regular provider is $\hat{p}_{\text{urban}} = 190/250 = 0.76$ and $\hat{p}_{\text{rural}} = 99/150 = 0.66$. These differ by $0.76 - 0.66 = 0.10$, or 10 percentage points, so in this sample, where people live is associated with having a regular provider. With no association, both conditional proportions would be close to the overall proportion, $289/400 \approx 0.72$.
+
+Two habits carry over from scatterplots. Compare proportions, not counts: more urban than rural adults have a provider (190 against 99) partly because more urban adults were surveyed. And the association is not causation: rural and urban adults may differ in age, insurance or distance to a clinic. Week 13 returns to two-way tables.
+
+## Transfer: reading correlation output for county health data
+
+**Question.** A hypothetical state health office has data on 60 counties: the percent of adults who smoke, the percent who report no leisure-time physical activity, and average life expectancy. Its report prints the correlations below and says that "smoking is the strongest driver of life expectancy in our counties." How should you read the output, and does it support that sentence?
+
+| Pair of variables (60 hypothetical counties) | Correlation $r$ |
+|---|---|
+| Smoking (%) and physical inactivity (%) | $0.62$ |
+| Smoking (%) and life expectancy (years) | $-0.71$ |
+| Physical inactivity (%) and life expectancy (years) | $-0.66$ |
+
+**Step 1: cases and variables.** The cases are counties, not people. All three variables are quantitative county-level percentages or averages, so correlations are a reasonable summary if the patterns are roughly linear.
+
+**Step 2: direction and strength.** The correlation of $-0.71$ says counties with higher smoking rates tend to have lower life expectancy, a fairly strong negative straight-line association. Inactivity and life expectancy show a similar, slightly weaker negative association ($-0.66$). Smoking and inactivity are positively associated ($0.62$): counties with more smokers tend to have more inactive adults.
+
+**Step 3: what the numbers cannot show.** None of these values reveals the form of a pattern or whether a few unusual counties drive it. Ask to see the three scatterplots, just as you would check for a curve or an outlier.
+
+**Step 4: the causal sentence.** "Strongest driver" is a causal claim, and the table does not support it. Smoking and inactivity rise together, so each one's correlation with life expectancy partly reflects the other, and both may track county income, access to care or residents' ages. The gap between $-0.71$ and $-0.66$ is small and could reverse with a different set of counties. And a pattern among county averages need not hold in the same way for individual people.
+
+**Conclusion.** In these hypothetical counties, higher smoking and higher inactivity rates each go with lower life expectancy, and the two tend to occur together. The correlations describe association among counties; they do not rank causes. That smoking harms health is well established, but from decades of other evidence, not from a table like this. A careful report would say "is associated with" rather than "drives," show the scatterplots, and point to the adjusted comparisons of Week 6.
+
+## A common misreading: treating r as a percentage or its sign as strength
+
+**"A correlation of 0.6 means the variables are 60 percent related."** Correlation is not a percentage of anything, and $r = 0.6$ is not "twice as related" as $r = 0.3$ in any simple sense. What you can say is that $r = 0.6$ describes a moderately strong positive straight-line association. In Week 8 you will meet $R^2$, the square of $r$ for a fitted line, which does have a percentage reading: the proportion of the variability in the response that the straight-line model accounts for. For $r = 0.6$, $R^2 = 0.6^2 = 0.36$, or 36 percent, not 60 percent.
+
+**"A negative correlation means a weak or bad relationship."** The sign gives direction only. A correlation of $-0.9$ describes a stronger association than a correlation of $0.5$; it simply runs the other way. In Worked example 2, $r \approx -0.92$ is a strong association even though it is negative.
+
+Read the sign for direction, the size for strength, and the scatterplot for everything else.
+
+## Practice (ungraded): association and correlation
+
+1. For each pair, name the explanatory and response variable and predict the direction of the association: (a) the age of a used car and its asking price; (b) the daily high temperature and the number of hot drinks sold at a campus café; (c) the hours a student works at a paid job each week and the hours they sleep each night. *What to look for:* direction describes how the response tends to move as the explanatory variable increases.
+2. Match each description to one of $r = -0.95$, $r = -0.40$, $r = 0.05$ and $r = 0.75$: (a) dots rise from lower left to upper right with moderate scatter; (b) dots fall almost exactly along a straight line; (c) a shapeless cloud; (d) a loose downward drift. *What to look for:* decide the sign first, then how tightly the dots hug a line.
+3. For a hypothetical sample of adults, a researcher finds $r = 0.68$ between height in inches and weight in pounds. A colleague converts to centimeters and kilograms and recomputes. What correlation will the colleague get, and why?
+4. For 25 hypothetical patients, the correlation between the dose of a medication (in milligrams) and a symptom-relief rating is $r = 0.02$. A student concludes that dose has no relationship with relief. What would you want to see before agreeing? *What to look for:* what kinds of pattern can hide behind a correlation near 0?
+5. Across 40 hypothetical cities, the number of coffee shops per 10,000 residents has a correlation of $0.55$ with median household income. Name one lurking variable that could help explain this association, and say how it might be related to both variables.
+6. In a hypothetical survey, 45 of 60 students who live on campus and 54 of 90 students who commute use the campus library at least once a week. Compute the two conditional proportions. Is library use associated with where students live in this sample? *What to look for:* compare proportions within each group, not the counts 45 and 54.
+
+## Read further on association and correlation
+
+- *Introduction to Modern Statistics* (Çetinkaya-Rundel and Hardin, OpenIntro, free online), [Chapter 7: Linear regression with a single predictor](https://openintrostat.github.io/ims/model-slr.html). Read the opening material and the part on correlation, which covers this week's ideas with more examples; the rest of the chapter belongs with Week 8. The book shows R code in places; you can skip the code and read the output and explanation.
+- For two categorical variables, [Chapter 4: Exploring categorical data](https://openintrostat.github.io/ims/explore-categorical.html) in the same book shows two-way tables and conditional proportions.
+- [StatKey](https://www.lock5stat.com/statkey/), a free browser tool: open **Descriptive Statistics and Graphs**, then **Two Quantitative Variables**. Choose a built-in data set, describe the scatterplot in words, and guess $r$ before you look at the correlation StatKey reports.
 
 ## Where this goes next
 
-You now have a picture and a number for the relationship between two numerical variables, and a short list of things that number is not entitled to say. The largest item on that list — that an association, however tight, says nothing about cause — is what [Week 6](week06-confounding.qmd) takes apart. It introduces the lurking variable properly, shows what "adjusted for age" means in an abstract, and works a case where splitting a group reverses the direction of the association entirely.
+This week described associations and showed why an association alone cannot establish a cause. [Week 6: Confounding and multivariable thinking](week06-confounding.qmd) takes the lurking-variable idea further: a third variable can create, hide or even reverse an association, and comparing like with like can change what the evidence supports. Later, [Week 8: Simple regression](week08-simple-regression.qmd) turns a straight-line pattern into a fitted line $\hat{y} = b_0 + b_1 x$ and connects it to $r$.
 
-Week 8 then returns to these scatterplots to do what this week refused to do: put a line through the cloud, give it a slope with units, and use it. The description you built this week is what makes that line safe to fit — a line through a curved cloud, or one dragged by a single influential case, is a worse summary than no line at all.
+- Previous: [Week 4: Comparing groups](week04-comparing-groups.qmd)
+- Next: [Week 6: Confounding and multivariable thinking](week06-confounding.qmd)
+- All weekly notes: [notes overview](index.qmd)
+- Week-by-week plan: [course schedule](../schedule.qmd)

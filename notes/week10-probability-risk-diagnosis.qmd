@@ -8,206 +8,283 @@ format:
     number-sections: false
 ---
 
-## Where this week starts
+This week is about the numbers used to describe chance in health and everyday life: the risk of an illness, the benefit of a treatment, and the meaning of a test result. The main tool is simple: turn every claim into counts of people.
 
-Everything you have done since Week 3 has described a group. A mean summarised forty resting heart rates. A slope in Week 8 described how two measurements moved together across a sample. Even last week's odds ratio compared two kinds of people inside one data set. This week the object changes. You take a single person out of the group — someone just handed a test result, or who has just read a headline about a risk — and ask what the numbers say about them.
+## Warm-up: what does a positive screening test tell you?
 
-That question has a name: probability. In this course a probability is a proportion of some group, and nearly all of the skill is knowing which group. Get the group right and the arithmetic is division; get it wrong and no arithmetic will save you.
+A hypothetical screening test is offered to adults with no symptoms. About 1 in 100 of the people screened have the condition it looks for. The test detects 90% of the people who have the condition, and it correctly gives a negative result to 95% of the people who do not. A friend of yours tests positive.
 
-Week 9 left something unfinished. Logistic regression handed you a fitted probability — the model puts this patient's chance at 0.18 — without our ever saying what a chance is, or what should happen to it when new information arrives. This week we say both, by counting people. A famous rule of probability sits behind everything below, and you will never need to write it down: a table of 1,000 imaginary people does the same work, and unlike the formula it cannot hide which denominator you are using.
+Before reading on, write down a guess: is the chance that your friend has the condition closer to 90%, 50%, or 15%? Worked example 3 settles the question by counting people.
 
-By the end of this week the sentence "this test is 90% accurate" should sound incomplete to you. You should be able to name the two numbers it compresses, explain why neither is the chance that your own positive result is real, and produce that chance yourself from a prevalence and a small table of counts.
+## Why risk and diagnosis need careful numbers
 
-### Why this matters beyond the classroom
-
-Picture someone who has just tested positive on a screening test for a serious but uncommon condition. They are told the test is 90% accurate, so they go home and spend three weeks believing they have a nine-in-ten chance of being ill. They cancel plans. They may accept an invasive follow-up they would have weighed differently with a clear head. In the situation we build below, their real chance is closer to one in twelve, and the right thing to feel is neither relief nor panic but a specific, quantified concern that justifies a second test.
-
-The pattern is not only medical. A fraud alert on your account, a security screen at an airport, a workplace drug test, an automated flag on a benefits application: every one searches a large population for something rare, and unless the error rate is tiny compared with how rare the thing is, most of the alarms are false. That is a fact about rarity, not a complaint about the test.
+A news story says a food raises the risk of an illness by 20%. A doctor says a medication cuts the risk of a stroke by a third. A lab report says a test came back positive. Whether each claim informs or misleads depends on details that are easy to leave out: risk of what, over what time, compared with what, and for whom. Many people, including some health professionals, overestimate the chance of disease after a positive test for a rare condition, and the same treatment effect can sound large or small depending on how it is reported. Decisions about screening and treatment depend on reading these numbers correctly.
 
 ## What you will be able to do
 
-- State any probability as a proportion of a named group, and say out loud what its denominator is.
-- Turn a prevalence, a sensitivity, and a specificity into a table of counts for 1,000 people, without a formula.
-- Compute the chance that a positive result is real, and explain why it is not the sensitivity.
-- Explain, using counts, why an accurate test for a rare condition produces mostly false positives.
-- Separate absolute risk, risk difference, and relative risk in a claim, and say which one a headline reports.
-- Read a probability tree and a two-by-two table and name which cells any quoted number compares.
+By the end of this week you can:
 
-## Words worth owning
+- explain a probability as a long-run relative frequency, and say what it does not promise about a short run;
+- compute complements, "and", "or" and conditional probabilities from a two-way table, and explain why $P(A \mid B)$ and $P(B \mid A)$ usually differ;
+- compute and interpret absolute risk, risk difference, relative risk and number needed to treat;
+- compute positive and negative predictive values from sensitivity, specificity and prevalence, using natural frequencies and a tree;
+- explain in plain language why a positive result for a rare condition is often a false positive.
 
-| Term | What it means in this course |
+## Words to know this week
+
+| Term | Meaning |
 |---|---|
-| Probability | The proportion of a named group for whom something is true, or the fraction of times it happens over a long run of repeats. Never free-floating: always has a denominator. |
-| Prevalence, or base rate | The proportion of a population that has the condition, before anybody is tested. |
-| Conditional probability | A probability worked out inside a smaller group: among commuters, among people who tested positive. |
-| Sensitivity | Of the people who truly have the condition, the proportion the test calls positive. |
-| Specificity | Of the people who truly do not have it, the proportion the test calls negative. |
-| False positive | A positive result in a person without the condition. A false negative is the mirror image. |
-| Predictive value of a positive | Of the people whose result came back positive, the proportion who truly have the condition. |
-| Absolute risk and relative risk | The size of a chance itself, versus the ratio of two chances. Same evidence, very different sentences. |
+| Probability | The proportion of times an outcome would occur in a very long run of repetitions; a number from 0 to 1. |
+| Law of large numbers | Over many repetitions, the proportion of times an outcome occurs settles near its probability. |
+| Complement | The event that $A$ does not happen, with probability $1 - P(A)$. |
+| Conditional probability | The probability of $A$ counting only the cases where $B$ happened, written $P(A \mid B)$ and read "$A$ given $B$". |
+| Independent events | Knowing that one happened does not change the probability of the other: $P(A \mid B) = P(A)$. |
+| Absolute risk | The proportion of a group who have an event over a stated time, such as 4% over 5 years. |
+| Risk difference | One group's risk minus another group's risk, written as a proportion (such as 0.010) or in percentage points (1.0). |
+| Relative risk | One group's risk divided by another group's risk; 1 means no difference. |
+| Relative risk reduction | 1 minus the relative risk, often given as a percent. |
+| Odds | The number who have the event divided by the number who do not. |
+| Odds ratio | One group's odds divided by another's; close to the relative risk when the event is rare. |
+| Number needed to treat (NNT) | How many people need the treatment, on average, for one fewer person to have the event; 1 divided by the risk difference written as a proportion. |
+| Prevalence (base rate) | The proportion of the tested group who have the condition. |
+| Sensitivity | Among people with the condition, the proportion who test positive. |
+| Specificity | Among people without the condition, the proportion who test negative. |
+| False positive, false negative | A positive result for someone without the condition; a negative result for someone with it. |
+| Positive predictive value (PPV) | Among people who test positive, the proportion who have the condition. |
+| Negative predictive value (NPV) | Among people who test negative, the proportion who do not have it. |
+| Natural frequencies | Counts of people out of a round total, such as 10,000, used in place of percentages. |
 
-## Probability as a count of people
+## Probability as long-run relative frequency
 
-### Two honest ways to finish the sentence
+In this course, the probability of an outcome is its long-run relative frequency: the proportion of times it happens when the same chance process is repeated a very large number of times. Probabilities run from 0 (never happens) to 1 (always happens), and the probabilities of all the possible outcomes of a process add to 1.
 
-Ask ten people what "a 30% chance of rain tomorrow" means and you will get a small argument. Statistics need not settle it: a probability can always be finished in one of two concrete ways, and both are frequencies.
+### What a probability claims about the long run
 
-The first is the **long-run relative frequency**. If a process can be repeated under the same conditions, the probability of an outcome is the fraction of repeats in which it happens, once the number of repeats is large. Flip a fair coin ten times and you may see seven heads; flip it ten thousand times and the fraction of heads settles near one half. That is a statement about the long run, not a promise about the next flip, and the commonest error in casual talk about chance is treating a long-run rate as a guarantee for one case.
+The probability of rolling a six with a fair die is $1/6 \approx 0.167$. That does not promise one six in every six rolls; it says that over a very large number of rolls, the proportion of sixes settles near 0.167.
 
-The second is a **proportion of a population**. "Three in a thousand adults in this age band have the condition" is a probability in exactly the sense we need: pick one adult from that population at random and the chance they have it is 0.003. Nothing is repeated. The probability is a fact about the composition of a group.
+The plot below follows two simulated runs of 1,000 rolls each. After 10 rolls, Run A had 4 sixes (a proportion of 0.40) and Run B had none. After 100 rolls the runs were at 0.22 and 0.09. After 1,000 rolls they were at 0.161 and 0.167, both close to the dashed line at 1/6. Short runs wobble; long runs settle. This pattern is the law of large numbers.
 
-Both versions carry a denominator, and that is the habit to build. Whenever you meet a probability this week, finish the sentence "out of what group?" first. Out of everyone screened. Out of the people who have the condition. Out of the people who tested positive. Those are three different groups, and a number computed in one tells you almost nothing about the others.
+![Running proportion of sixes in two simulated runs of 1,000 fair-die rolls](../assets/figures/week-10/die-running-proportion.svg){fig-alt="Line plot of the running proportion of sixes over 1,000 simulated rolls in two runs. After 10 rolls Run A is at 0.40 and Run B at 0; both settle near the dashed line at 1/6, ending at 0.161 and 0.167."}
 
-### Conditional probability read off a table
+The settling does not happen because the die catches up. After 10 rolls, Run A had about 2.3 more sixes than one sixth of the rolls ($4 - 10/6 \approx 2.3$); after 1,000 rolls it had about 5.7 fewer ($161 - 1000/6 \approx -5.7$). The gap in the count grew, but divided by 1,000 rolls it is small. A die has no memory, so a long stretch without a six does not make a six more likely on the next roll.
 
-The word *conditional* sounds technical. The action is simple: shrink the group, then count.
+The same idea gives meaning to a risk. A 4% risk of a heart attack over 5 years means that in a large group of similar adults followed for 5 years, about 4 in every 100 would have one. The probability describes the group. It is applied to one person because no one can tell in advance who will be among the 4.
 
-A campus survey asked 400 students two questions. Do you commute to campus, and did you miss any class last week because of transport? Here is the whole result.
+### Probability rules you can read from a two-way table
 
-| | Missed a class | Did not miss | Total |
+In a two-way table, each probability rule is a count divided by the right total. Let $A$ and $B$ be two events, such as "had a flu shot" and "was ill".
+
+- **Complement:** $P(\text{not } A) = 1 - P(A)$.
+- **And:** $P(A \text{ and } B)$ is the count in the one cell where both happen, divided by the grand total.
+- **Or:** $P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)$. Adding the two totals counts the overlap twice, so subtract it once.
+- **Conditional:** $P(A \mid B) = P(A \text{ and } B) \div P(B)$. In a table, divide the cell count by the total of the row or column for $B$, not by the grand total.
+- **Multiplication:** $P(A \text{ and } B) = P(B) \times P(A \mid B)$. Tree diagrams use this rule branch by branch.
+
+Order matters. $P(A \mid B)$ and $P(B \mid A)$ share a cell count but have different denominators, so they usually differ and address different questions. If $P(A \mid B) = P(A)$, the events are independent. In a table, independence means every row has the same row proportions, the pattern of no association.
+
+## Worked example 1: flu shots and illness in a two-way table
+
+**The question.** A hypothetical survey asked 800 adults whether they got a flu shot last fall and whether they had a flu-like illness during the winter.
+
+| | Flu-like illness | No flu-like illness | Total |
 |---|---|---|---|
-| Commuted | 60 | 140 | 200 |
-| Lived on campus | 20 | 180 | 200 |
-| Total | 80 | 320 | 400 |
+| Flu shot | 48 | 432 | 480 |
+| No flu shot | 64 | 256 | 320 |
+| Total | 112 | 688 | 800 |
 
-Check the margins first, every time. The row totals are 200 and 200, which add to 400. The column totals are 80 and 320, which also add to 400. The table is internally consistent, so we can trust the cells.
+For one of these adults chosen at random, find the probability of illness, of no illness, of a flu shot and illness, and of a flu shot or illness. Then find the probability of illness within each flu-shot group, and of a flu shot among the ill.
 
-Now three questions that all come out of that one table.
+**Step 1: illness.** $P(\text{ill}) = 112/800 = 0.14$.
 
-The **overall** proportion who missed a class is 80 out of 400, which is 0.20. The group is everyone surveyed.
+**Step 2: the complement.** $P(\text{not ill}) = 1 - 0.14 = 0.86$. Check against the table: $688/800 = 0.86$.
 
-The proportion who missed a class **among commuters** is 60 out of 200, which is 0.30. The group has shrunk to the first row. In symbols, $P(\text{missed} \mid \text{commuted}) = 0.30$, and the vertical bar is read "given" or, more usefully, "within the group of".
+**Step 3: "and".** This is one cell: $P(\text{shot and ill}) = 48/800 = 0.06$.
 
-The proportion who commuted **among those who missed a class** is 60 out of 80, which is 0.75. The group has shrunk to the first column instead.
+**Step 4: "or".** First, $P(\text{shot}) = 480/800 = 0.60$, so $P(\text{shot or ill}) = 0.60 + 0.14 - 0.06 = 0.68$. Check by counting people: the 480 with a shot plus the 64 ill people without one gives $544/800 = 0.68$.
 
-Read those last two again. Both come from the same cell, the same 60 students, and they are 0.30 and 0.75. Thirty percent of commuters missed a class. Seventy-five percent of the students who missed a class were commuters. Neither sentence can be swapped for the other, and the only thing that changed was the denominator. Everything difficult in the rest of this week is a disguised version of that one swap.
+**Step 5: illness given flu-shot status.** Use one row at a time: $P(\text{ill} \mid \text{shot}) = 48/480 = 0.10$ and $P(\text{ill} \mid \text{no shot}) = 64/320 = 0.20$.
 
-## What a test knows and what your result means
+**Step 6: flu shot given illness.** Use the illness column: $P(\text{shot} \mid \text{ill}) = 48/112 \approx 0.43$ and $P(\text{no shot} \mid \text{ill}) = 64/112 \approx 0.57$.
 
-### Sensitivity and specificity belong to the test
+![The same two-way table conditioned two ways: illness given flu-shot status, and flu-shot status given illness](../assets/figures/week-10/flu-shot-conditional-bars.svg){fig-alt="Two bar panels from a hypothetical survey of 800 adults. Left: 10% of the flu-shot group (48 of 480) and 20% of the no-shot group (64 of 320) were ill. Right: of the 112 ill, 43% had a flu shot and 57% did not."}
 
-A test is judged by studying people whose true status is already known from a more definitive procedure. Two proportions come out of that study.
+**Conclusion in context.** In this hypothetical survey, 14% of the adults were ill: 10% of those with a flu shot and 20% of those without, twice as high. Yet 43% of the ill adults had a flu shot. That is no contradiction: 60% of the whole group had a flu shot, so that group contributes many people to both columns. Steps 5 and 6 use the same 48 people but different denominators, 480 and 112. Because $P(\text{ill} \mid \text{shot}) = 0.10$ differs from $P(\text{ill}) = 0.14$, illness and flu-shot status are not independent here. The survey is observational, so this is an association, not proof that the shot prevented illness: people who choose flu shots may differ in age, habits or contact with sick people, the confounding problem from [Week 6](week06-confounding.qmd).
 
-**Sensitivity** is the proportion of people who truly have the condition that the test calls positive. If sensitivity is 0.90, then among 100 people who genuinely have it, about 90 get a positive result and about 10 are missed.
+## Describing risk: absolute risk, relative risk, and number needed to treat
 
-**Specificity** is the proportion of people who truly do not have the condition that the test calls negative. If specificity is 0.90, then among 100 healthy people, about 90 are correctly cleared and about 10 get a false alarm.
+In health, a risk is the probability of an unwanted event, such as a heart attack, for a group of people over a stated time. The standard ways of describing how a treatment changes a risk can make the same result sound very different.
 
-Both are conditional probabilities whose condition is the *true status*: they start from the truth and look at what the test said. That direction is why a single "accuracy" figure is not enough. One test can have sensitivity 0.99 and specificity 0.50, another the reverse, and calling either "accurate" says nothing about which mistake it makes. They are properties of the test itself, and changing the population leaves them roughly where they were.
+### Absolute risk and the risk difference
 
-### Predictive value belongs to the test in a population
+The absolute risk is the proportion of a group who have the event in the stated time, for example 40 of 1,000 people (4.0%) over 5 years. A risk with no group or no time period attached cannot be compared with anything. The risk difference subtracts: risks of 4.0% and 3.0% differ by 1.0 percentage point. Say "percentage points" for a difference between two percents, so that no one mistakes it for a relative change. The risk difference tells you how many people per 100 the change affects: here, 1.
 
-You do not know your true status. That is why you took the test. Your question runs in the opposite direction: given that my result is positive, what is the chance I have the condition?
+### Relative risk, and why headlines prefer it
 
-That number is the **predictive value of a positive result**, and it is not the sensitivity. It starts from the result and looks back at the truth. Because the group who tested positive holds both true cases and false alarms, its make-up depends on how many true cases there were to find. Prevalence is therefore part of your result, even though it is nowhere in the test.
+The relative risk, also called the risk ratio, divides:
 
-Keep the two kinds of number separated by the direction you read them:
+$$\text{relative risk} = \frac{\text{risk in the treated or exposed group}}{\text{risk in the comparison group}}.$$
 
-- Sensitivity and specificity start from the true status and ask what the test said.
-- Predictive value starts from what the test said and asks about the true status.
+A value of 1 means no difference; below 1 means lower risk in the treated or exposed group; above 1 means higher risk. With risks of 3.0% and 4.0%, the relative risk is $0.030/0.040 = 0.75$, and the relative risk reduction is $1 - 0.75 = 0.25$, or 25%.
 
-## Worked example — screening a crowd of 1,000 for a rare condition
+A relative risk hides the starting level. If a hypothetical side effect rises from 1 in 10,000 people to 2 in 10,000, a headline can truthfully say the drug "doubles the risk" (a relative risk of 2), yet the risk difference is 1 in 10,000, which is 0.01 percentage point. Relative changes make bigger numbers and more dramatic headlines, so whenever you see one, ask: relative to what baseline?
 
-**Setting.** A county health department offers a free screening test at a community health fair. In the crowd that attends, about 1 person in 100 has the condition. The test has sensitivity 0.90 and specificity 0.90. A thousand people are tested over the weekend. What should a person with a positive result conclude?
+The logistic regression output in Week 9 reported odds ratios, not relative risks. The two are close for rare events and can differ noticeably for common ones; Worked example 2 compares them.
 
-**Step 1. Work with the whole crowd.** All 1,000 of them. A round number keeps every count a whole person.
+### Number needed to treat
 
-**Step 2. Split by the truth, using the prevalence.** One in a hundred means 10 of the 1,000 have the condition, and the other 990 do not.
+The number needed to treat turns a risk difference, written as a proportion rather than a percent, into a count of people:
 
-**Step 3. Split the 10 who have it, using the sensitivity.** The test finds 90% of them, which is 9 people. The remaining 1 is missed and gets a negative result.
+$$\text{NNT} = \frac{1}{\text{risk difference}}.$$
 
-**Step 4. Split the 990 who do not have it, using the specificity.** The test correctly clears 90%, which is 891 people. The other 10%, which is 99 people, get a false alarm.
+A risk difference of 0.010 gives $\text{NNT} = 1/0.010 = 100$: on average, 100 people need the treatment over the study period for one fewer person to have the event. With risks of 4% untreated and 3% treated, among 100 treated people about 96 would have been fine anyway, about 3 still have the event, and about 1 is spared. An NNT that does not come out whole is usually rounded up. For a harm, the same calculation gives the number needed to harm; for the side effect above, it is $1/0.0001 = 10{,}000$.
 
-**Step 5. Collect everyone whose result was positive.** The 9 true cases plus the 99 false alarms, giving 108 positive results in all.
+::: {.callout-tip}
+**Three questions for any risk claim.** Risk of what, for whom, and over what time? Compared with what baseline? How many people per 100 (or per 1,000) does the change affect?
+:::
 
-![Two branchings turn one thousand people into four groups.](../assets/figures/week-10/test-tree.svg){fig-alt="A tree starting from 1,000 people splits into 10 with the condition and 990 without, then each of those splits by test result into 9 and 1, and 99 and 891."}
+## Worked example 2: one hypothetical trial reported two ways
 
-**Step 6. Answer the question that was actually asked.** Among the 108 people holding a positive result, 9 truly have the condition.
+**The question.** In a hypothetical randomized trial, 20,000 adults at moderate risk of heart disease were randomly assigned, 10,000 to a daily medication and 10,000 to a placebo, and followed for 5 years. In the placebo group 400 people had a heart attack, and in the medication group 300 did. A news story says the medication "cuts heart attack risk by 25%". Is that accurate, and what does it mean for someone deciding whether to take the medication?
 
-$$\text{predictive value of a positive} = \frac{9}{9 + 99} = \frac{9}{108} \approx 0.083$$
+**Step 1: absolute risks.** Placebo: $400/10{,}000 = 0.040$, or 4.0%. Medication: $300/10{,}000 = 0.030$, or 3.0%. Both are 5-year risks.
 
-**Checking the arithmetic.** The four cells are 9, 1, 99 and 891, and they add to 1,000. The condition split was 10 and 990. The result split was 108 positive and 892 negative. Every margin agrees, so the table is sound.
+**Step 2: risk difference.** $0.040 - 0.030 = 0.010$, or 1.0 percentage point.
 
-![The same thousand people, one square each, coloured by what the test did.](../assets/figures/week-10/frequency-grid.svg){fig-alt="A grid of 1,000 squares. An outlined block of 108 squares marks everyone who tested positive, and only 9 of them, shown in dark blue, actually have the condition, while 99 in orange do not."}
+**Step 3: relative risk.** $0.030/0.040 = 0.75$, a relative risk reduction of $1 - 0.75 = 0.25$. The headline's 25% is this relative reduction.
 
-**What the result means in context.** About 108 people leave the fair holding a positive slip, and roughly 9 of them are ill. That is a chance of about 8%, which is exactly one in twelve. Ninety-nine of the 108, more than nine in every ten, are false alarms.
+**Step 4: number needed to treat.** $1/0.010 = 100$. About 100 people would need to take the medication for 5 years for one fewer heart attack than on placebo.
 
-And now the uncomfortable part. This test was not bad. It got 9 of the 10 sick people right and 891 of the 990 healthy people right, so it was correct about 900 of the 1,000 — exactly the 90% the flyer advertised. The 90% was true. It simply never was the number a person holding a positive slip wanted to know.
+**Step 5: odds ratio.** The odds of an event are the number of people who have it divided by the number who do not. The odds of a heart attack were $300/9{,}700 \approx 0.0309$ on the medication and $400/9{,}600 \approx 0.0417$ on placebo, so the odds ratio is about $0.0309/0.0417 \approx 0.74$, close to the relative risk of 0.75 because heart attacks were rare.
 
-Two further readings come out of the same table. A negative result here is genuinely reassuring: of the 892 who tested negative, 891 do not have the condition, a predictive value of about 0.999. And a positive result is not worthless. It moved a person from 1 in 100 to 1 in 12, a chance more than eight times as large. That is what a screening test is for: a reason to take the next test, not a diagnosis.
+**Step 6: a higher baseline.** Suppose the same relative effect holds in a hypothetical higher-risk group: 2,000 of 10,000 on placebo (20%) and 1,500 of 10,000 on the medication (15%) have a heart attack. The relative risk is again $0.15/0.20 = 0.75$, but the risk difference is $0.20 - 0.15 = 0.05$, or 5 percentage points, so $\text{NNT} = 1/0.05 = 20$. The odds ratio, $(1{,}500/8{,}500) \div (2{,}000/8{,}000) \approx 0.71$, is now further from 0.75 because the event is more common.
 
-### The same reasoning, transferred
+![Same relative risk, different absolute benefit: a hypothetical medication in moderate-risk and higher-risk adults](../assets/figures/week-10/risk-absolute-relative-bars.svg){fig-alt="Bar chart of hypothetical 5-year heart attack risk. Moderate-risk adults: 4.0% on placebo, 3.0% on medication. Higher-risk adults: 20.0% and 15.0%. Relative risk is 0.75 in both; numbers needed to treat are 100 and 20."}
 
-Move the same test into a different room. In a clinic, people arrive because something is already wrong: symptoms, a family history, an abnormal earlier finding. Suppose about 3 in 10 of them have the condition. The test is unchanged, sensitivity 0.90 and specificity 0.90.
+**Conclusion in context.** The headline is accurate but incomplete. For moderate-risk adults in this hypothetical trial, the medication lowered the 5-year risk of a heart attack from 4 in 100 to 3 in 100; about 100 people would need to take it for 5 years to prevent one heart attack. If the same 25% relative reduction held for higher-risk adults (Step 6), it would prevent about 5 heart attacks per 100 people treated, and about 20 would need treatment to prevent one; the trial itself studied only moderate-risk adults. The trial randomly assigned the medication ([Week 2](week02-study-design.qmd)), and with 10,000 people per group a difference this large is unlikely to be due to chance alone (Weeks 11 and 12 show how to check), so it supports a causal effect for people like those studied. Whether the medication is worth taking also depends on side effects and cost, which everyone who takes it bears.
 
-Run the identical six steps on 1,000 clinic patients. The prevalence splits them into 300 with the condition and 700 without. Of the 300, the test finds 270 and misses 30. Of the 700, it clears 630 and raises 70 false alarms. The positives number 270 plus 70, which is 340, so the predictive value of a positive is 270 out of 340, or about 0.794.
+## Diagnostic tests: sensitivity, specificity, and base rates
 
-What stayed the same: the test, both of its properties, all six steps, and the shape of the table. What changed: only the base rate, from 1 in 100 to 3 in 10. And the meaning of an identical slip of paper moved from about 8% to about 79%.
+A screening or diagnostic test sorts people into positive and negative results, and it can be wrong in either direction.
 
-![Holding the test fixed and changing only how common the condition is.](../assets/figures/week-10/ppv-by-prevalence.svg){fig-alt="A rising curve of the predictive value of a positive against prevalence for a fixed test. At 1 percent prevalence the curve sits near 8 percent, and at 30 percent prevalence it has climbed to about 79 percent."}
+### The four possible outcomes of a test
 
-This is why a careful clinician asks who was tested before interpreting a result. The paper is the same. The news is not.
+Each person tested has a true status and a test result, which gives four possibilities:
 
-## Second worked example — a headline that doubles a small risk
+| | Test positive | Test negative |
+|---|---|---|
+| Has the condition | true positive | false negative |
+| Does not have the condition | false positive | true negative |
 
-**Setting.** A state health bulletin reports that adults who follow a particular habit have "double the risk" of a rare complication over ten years. A local paper runs it as a warning. Should a reader change anything?
+- **Sensitivity** is $P(\text{positive} \mid \text{condition})$: the true positives divided by everyone with the condition. A highly sensitive test rarely misses a case.
+- **Specificity** is $P(\text{negative} \mid \text{no condition})$: the true negatives divided by everyone without the condition. A highly specific test rarely gives a false alarm. The false-positive rate is $1 - \text{specificity}$.
 
-The counts are these. Among 10,000 adults without the habit, 4 experienced the complication over ten years. Among 10,000 with it, 8 did. Both are conditional probabilities of the kind built above: one computed within the group without the habit, the other within the group with it.
+A person holding a result needs the conditional probabilities in the other direction:
 
-**Step 1. Absolute risk in each group.** Without the habit, 4 out of 10,000, which is 0.0004, or 0.04%. With it, 8 out of 10,000, which is 0.0008, or 0.08%.
+- **Positive predictive value (PPV)** is $P(\text{condition} \mid \text{positive})$: the true positives divided by everyone who tests positive.
+- **Negative predictive value (NPV)** is $P(\text{no condition} \mid \text{negative})$: the true negatives divided by everyone who tests negative.
 
-**Step 2. The risk difference.** Subtract: 0.0008 minus 0.0004 is 0.0004. In people, that is 4 extra complications per 10,000 adults over ten years, or 1 extra per 2,500.
+Sensitivity and specificity read across the rows of the table, starting from the truth; predictive values read down the columns, starting from the result. Sensitivity and specificity are usually treated as properties of the test. Predictive values also depend on the **prevalence**, or base rate, in the group being tested, so the same test can have very different predictive values in different groups.
 
-**Step 3. The relative risk.** Divide instead of subtracting.
+### Natural frequencies: count people instead of multiplying percentages
 
-$$\text{relative risk} = \frac{0.0008}{0.0004} = 2.0$$
+Conditional probabilities are easiest to handle as counts of people:
 
-The ratio is 2, which is where the word "double" came from. Nothing in the bulletin was false.
+1. Choose a round number of people, large enough that every count comes out whole; 10,000 often works.
+2. Split them by the prevalence into those with and without the condition.
+3. Split those with the condition by the sensitivity, and those without it by the specificity.
+4. Collect everyone who tests positive. The fraction of them who have the condition is the PPV. Do the same with the negatives to find the NPV.
 
-**Step 4. Say both out loud and notice the difference.** "Doubles your risk" and "adds four cases per ten thousand people over a decade" describe the same two counts. The first says how the rates compare; the second says how many people are affected. A reader deciding whether to change their behaviour needs the second, and the headline gave only the first.
+Each split is the multiplication rule at work. With 1% prevalence and 90% sensitivity, a fraction $0.01 \times 0.90 = 0.009$ of everyone both has the condition and tests positive, which is 90 people out of 10,000. A tree diagram lays out the splits and lets you check that the counts add up at every level.
 
-**Why the ratio alone cannot tell you the size of anything.** Imagine a second habit where the ten-year risk without it is 20%, so 2,000 per 10,000, and with it is 40%, so 4,000 per 10,000. The relative risk is again exactly 2.0, but the risk difference is 20 percentage points, or 2,000 extra cases per 10,000 people. Two claims with identical ratios, one of them five hundred times larger in human terms. A ratio compares two numbers and then throws both away, which is why a responsible report states the absolute risk beside it.
+## Worked example 3: the screening result from the warm-up
 
-One caution carried forward from Week 2 and Week 6: these are observational counts. People with the habit may differ from people without it in many ways, so "double the risk" describes an association, not a demonstrated effect. The arithmetic is correct regardless; the causal verb is the part that is not earned.
+**The question.** The warm-up test has sensitivity 90% and specificity 95%, and 1% of the people screened have the condition. Your friend tests positive. What is the probability that your friend has the condition?
 
-## The misreading to avoid
+**Step 1: start with 10,000 people.** A prevalence of 1% gives $0.01 \times 10{,}000 = 100$ people with the condition and $10{,}000 - 100 = 9{,}900$ without it.
 
-Here is the thought, in the words students actually use: *"The test is 90% accurate and I tested positive, so there is a 90% chance I have it."*
+**Step 2: split the 100 by sensitivity.** $0.90 \times 100 = 90$ test positive (true positives) and $100 - 90 = 10$ test negative (false negatives).
 
-It is a completely reasonable thought, and it is wrong, so let us take it apart precisely rather than just declare it so.
+**Step 3: split the 9,900 by specificity.** $0.95 \times 9{,}900 = 9{,}405$ test negative (true negatives) and $9{,}900 - 9{,}405 = 495$ test positive (false positives).
 
-The 90% is a promise made to a group you are not standing in. Sensitivity says: of the people who have the condition, 90% test positive. It reads down the column of people who have it. Your question reads across the row of people who tested positive. The two directions share only one cell, the 9 true positives, and divide it by different totals — by 10 in one case and by 108 in the other. Same numerator, different denominator, different number. That is the commuting table again, wearing a lab coat.
+**Step 4: collect the positives.** $90 + 495 = 585$ people test positive.
 
-![One two-by-two table read two ways.](../assets/figures/week-10/two-way-reading.svg){fig-alt="The same two-by-two table shown twice. On the left the columns are shaded, giving sensitivity 9 of 10 and specificity 891 of 990. On the right the rows are shaded, giving 9 of 108 positives and 891 of 892 negatives."}
+**Step 5: the positive predictive value.** $90/585 \approx 0.154$.
 
-There is also a plain counting reason, worth saying in one breath. The condition is rare, so there are only 10 sick people in the crowd of 1,000 and the test can find at most those 10. Meanwhile there are 990 healthy people, and even a small error rate applied to a large group produces many alarms: 10% of 990 is 99. Ninety-nine false alarms against nine real cases. The false positives win because the healthy group is enormous, not because the test is careless.
+![Natural-frequency tree for 10,000 people screened for a condition with 1% prevalence](../assets/figures/week-10/screening-frequency-tree.svg){fig-alt="Tree diagram. 10,000 people split into 100 with the condition and 9,900 without. Of the 100, 90 test positive and 10 negative. Of the 9,900, 495 test positive and 9,405 negative. 90 of the 585 positives, about 15%, have it."}
 
-A second misreading usually follows within a minute: *"So screening is pointless."* That is an overcorrection. The positive result did real work: it multiplied the chance by more than eight, and it narrowed 1,000 people down to 108 worth investigating. Screening is the first filter in a sequence, not the verdict, and the right response to a positive screen is a second, more specific test on that smaller and now much richer group — the same calculation run again with a new base rate.
+The same counts as a two-way table:
 
-A third misreading is quieter: *"The prevalence is not part of the test, so it cannot be part of my result."* Two people holding the same slip of paper, one from the health fair and one from the symptom clinic, are holding different news, because they were drawn from different populations. Who was tested is not background detail. It is an input.
+| | Test positive | Test negative | Total |
+|---|---|---|---|
+| Has the condition | 90 | 10 | 100 |
+| Does not have the condition | 495 | 9,405 | 9,900 |
+| Total | 585 | 9,415 | 10,000 |
 
-## Practice on your own
+The icon array below shows only the people who test positive, one square per person. The two dark rows are the only people in the picture who have the condition.
 
-These are for you, on paper, with a calculator. Nothing here is collected. Build a table of counts before you divide anything.
+![Everyone who tests positive in the screening example, one square per person](../assets/figures/week-10/screening-positives-icon-array.svg){fig-alt="Icon array of 585 squares, one per person who tested positive. 90 dark orange squares mark people who have the condition; 495 light blue squares mark false positives. About 15% of positives have the condition."}
 
-1. **A different test.** A test has sensitivity 0.95 and specificity 0.80, and 2 people in 100 in the screened population have the condition. Build the table for 1,000 people, find how many test positive, and work out the predictive value of a positive. Then write one sentence you would be comfortable saying to someone who just got that result.
+**Step 6: the negative predictive value.** Of the 9,415 people who test negative, 9,405 do not have the condition: $9{,}405/9{,}415 \approx 0.999$.
 
-2. **Back to the commuters.** From the campus survey table above, find the proportion who did not miss a class among the commuters, and the proportion who commuted among the students who did not miss a class. Say which group each one describes, and explain to a friend why they are not the same number.
+**Conclusion in context.** A positive result from this hypothetical test means about a 15% chance of having the condition, not 90%: about 85 of every 100 positives are false ($495/585 \approx 0.85$). The base rate is the reason. The 5% false-positive rate applies to 9,900 people and produces 495 false positives, while the 90% detection rate applies to only 100 people. The positive result still matters, raising your friend's probability from 1% to about 15%, which is why a positive screen leads to further testing. A negative result is very reassuring: about 99.9% of negatives are correct.
 
-3. **A headline with only a ratio.** A report says an exposure is associated with "50% higher risk" of an outcome, and that the ten-year risk without the exposure is 1 in 500. Express both risks per 10,000 people, give the risk difference, and write the sentence you would put in a newspaper so that a reader is neither frightened nor falsely reassured.
+## How the base rate changes what a positive result means
 
-4. **The second test.** Take the 108 people who tested positive at the health fair, 9 with the condition and 99 without. They are offered a confirmatory test with sensitivity 0.95 and specificity 0.99. Work out roughly how many of each group test positive again, and the predictive value of a second positive. Expected counts need not be whole people; leave them as decimals. Then say why two tests in sequence behave so differently from one.
+With the sensitivity and specificity of a test held fixed, the base rate is what changes from one setting to another. The plot shows the PPV of a test with 90% sensitivity across a range of prevalences.
 
-5. **Naming the number.** For each of these, say which quantity it is and which cells of a two-by-two table it compares: "the test catches 19 of every 20 cases"; "8 in 100 of those flagged actually have it"; "1 in 400 adults in this age band are affected"; "the rate is twice as high in the exposed group".
+![Positive predictive value rises with prevalence for a test with 90% sensitivity](../assets/figures/week-10/ppv-by-prevalence.svg){fig-alt="Line plot of positive predictive value against prevalence from 0% to 20%. With 95% specificity, PPV is about 15% at 1% prevalence, 49% at 5% and 67% at 10%. With 99% specificity, PPV is about 48% at 1% prevalence."}
 
-## Where to read more
+For the warm-up test (specificity 95%, the lower curve), the PPV is about 15% at 1% prevalence, 49% at 5%, and 67% at 10%. Check the 10% value by counting: of 10,000 people, 1,000 have the condition and 900 of them test positive; 5% of the other 9,000, or 450 people, also test positive; so the PPV is $900/(900 + 450) = 900/1{,}350 \approx 0.67$. Specificity matters most when the condition is rare. With 99% specificity (the upper curve) at 1% prevalence, only 99 of the 9,900 people without the condition test positive, and the PPV rises to $90/(90 + 99) = 90/189 \approx 0.48$.
 
-- The life and biomedical sciences supplement is the strongest source this week; work through its probability chapter and its treatment of diagnostic testing in [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat).
-- For more practice reading proportions out of two-way tables, the machinery underneath every calculation above, see [Exploring categorical data](https://openintrostat.github.io/ims/explore-categorical.html).
-- For the connection back to odds and fitted probabilities, revisit [Logistic regression](https://openintrostat.github.io/ims/model-logistic.html), or browse [Introduction to Modern Statistics](https://openintrostat.github.io/ims) as a whole.
-- Course pages: the [course home page](../index.qmd), the [schedule](../schedule.qmd), and the [resources page](../resources/index.qmd). Last week's notes are at [Week 9](week09-multiple-logistic-regression.qmd).
+Two practical lessons follow. First, a positive result means more when the test is used on people with symptoms or risk factors, who have a higher base rate, than when it screens everyone (a negative result means somewhat less there, because the NPV falls as the base rate rises). Second, a positive screen is usually followed by a more specific second test: among people who screened positive the base rate is already about 15%, not 1%, so a positive second result is far more convincing (provided its errors are not tied to the first test's errors).
+
+## Transfer: the same reasoning for a bank's fraud alerts
+
+**The new setting.** A bank's hypothetical fraud-detection system flags 95% of fraudulent card transactions and wrongly flags 2% of legitimate ones. About 0.2% of transactions are fraudulent. A purchase on your card is flagged. How likely is it that the purchase was fraud?
+
+Fraud plays the role of the condition and a flag plays the role of a positive result, so the sensitivity is 95% and the specificity is 98%.
+
+**Step 1: choose 100,000 transactions.** Fraudulent: $0.002 \times 100{,}000 = 200$. Legitimate: $100{,}000 - 200 = 99{,}800$.
+
+**Step 2: flags among fraud.** $0.95 \times 200 = 190$ are flagged and 10 are missed.
+
+**Step 3: flags among legitimate transactions.** $0.02 \times 99{,}800 = 1{,}996$ are flagged and $99{,}800 - 1{,}996 = 97{,}804$ are not.
+
+**Step 4: collect the flags.** $190 + 1{,}996 = 2{,}186$ transactions are flagged.
+
+**Step 5: the positive predictive value of a flag.** $190/2{,}186 \approx 0.087$.
+
+**Conclusion in context.** Only about 8.7% of flagged transactions in this hypothetical system, fewer than 1 in 10, are fraud; most flags land on legitimate purchases. That is why a flag usually brings a quick check with the cardholder rather than an accusation. An unflagged transaction is almost certainly legitimate: $97{,}804/97{,}814 \approx 0.9999$. Whenever a rare event is screened for among a huge number of ordinary cases, even a small false-alarm rate produces many false alarms.
+
+## A common misreading: a 90% sensitive test means a positive is 90% certain
+
+**The misreading.** "The test catches 90% of cases, so if I test positive, there is a 90% chance I have the condition."
+
+**Why it is wrong.** Sensitivity, $P(\text{positive} \mid \text{condition})$, starts from the people who have the condition. After a positive result, the question is $P(\text{condition} \mid \text{positive})$, which starts from the people who test positive. Worked example 1 showed that the two directions of a conditional probability can be very different numbers; swapping them is called the confusion of the inverse. Reading the sensitivity as the PPV also ignores the base rate, a mistake called base-rate neglect, and in Worked example 3 the base rate was the reason most positives were false.
+
+A related trap is the word "accurate". The warm-up test gives the right result for $90 + 9{,}405 = 9{,}495$ of 10,000 people, so it is 94.95% accurate. A useless "test" that calls everyone negative would be right for all 9,900 people without the condition, 99% accurate, and would never find a single case. To judge a test, ask for its sensitivity, its specificity and the base rate, then count people.
+
+## Practice questions (ungraded)
+
+1. A forecast gives a 30% chance of rain, and the day stays dry. Was the forecast wrong? Explain what a 30% chance claims and how you could check this forecaster's 30% forecasts. *What to look for:* many days with a 30% forecast, not one day.
+
+2. In a hypothetical group of 200 students, 120 usually sleep at least 7 hours, and 84 of them feel rested most mornings; 28 of the other 80 also feel rested. Build the two-way table and find $P(\text{rested} \mid \text{at least 7 hours})$ and $P(\text{at least 7 hours} \mid \text{rested})$. Say in words what each number describes. *What to look for:* one denominator is a row total, the other a column total.
+
+3. A hypothetical supplement is advertised as cutting the 5-year risk of kidney stones by 50%. In the trial behind the claim, the risk was 2% without it and 1% with it. Find the risk difference and the number needed to treat, and restate the claim using people out of 100. *What to look for:* write the risk difference as a proportion before dividing.
+
+4. A hypothetical rapid test for an infection has sensitivity 80% and specificity 98%. In a clinic where 30% of the patients tested have the infection, use a tree for 1,000 patients to find the PPV and the NPV. *What to look for:* your four end counts should add to 1,000.
+
+5. The same rapid test is proposed for screening a whole town where 0.5% of people have the infection. Predict whether the PPV will be higher or lower than in the clinic, then check with a tree for 10,000 people. *What to look for:* which group, infected or not, produces most of the positive results?
+
+6. A hypothetical news report says that 60% of the people hospitalized with a disease had been vaccinated and concludes that the vaccine does not work. Which conditional probability is the 60%, and which would you need to judge the vaccine? What other fact about the population would help? *What to look for:* in Worked example 1, 43% of the ill adults had a flu shot, yet the flu-shot group had half the illness rate.
+
+## Read further on probability and risk
+
+- [Introductory Statistics for the Life and Biomedical Sciences](https://www.openintro.org/book/biostat/) (Vu and Harrington, OpenIntro, free), chapter 2, Probability: probability rules and conditional probability with biomedical examples. Optional; it goes further than this page.
+- [Introduction to Modern Statistics, chapter 4: Exploring categorical data](https://openintrostat.github.io/ims/explore-categorical.html) (Çetinkaya-Rundel and Hardin, OpenIntro, free): two-way tables (called contingency tables there), row and column proportions, and graphs for two categorical variables. The book shows R code in places; skip the code and read the output and explanation.
 
 ## Where this goes next
 
-This week the probabilities were handed to you: a prevalence from public health records, a sensitivity and a specificity from a validation study. Next week the direction reverses. You will have a data set and no probabilities at all, and the question becomes whether the pattern in front of you is the kind of thing chance alone produces. The tool is simulation: shuffle the labels, recompute, and repeat until you can see the whole range of what chance can do.
+This week treated probability as what happens over many repetitions. [Week 11: Simulation-based inference](week11-simulation-based-inference.qmd) builds on exactly that idea: to judge whether a difference between two groups could be due to chance alone, you will simulate many repetitions of a study in which only chance is at work and see how often a result as extreme as the real one appears. [Week 13: Categorical outcomes](week13-categorical-outcomes.qmd) later returns to rates and proportions in two-way tables.
 
-Bring the denominator habit with you. In [Week 11](week11-simulation-based-inference.qmd) the phrase "how often does that happen by chance" has the same structure as this week's "out of what group", and the students who keep asking it are the ones for whom p-values in Week 12 arrive as an old friend rather than a new formula. The full sequence is laid out on the [course home page](../index.qmd).
+Looking back, [Week 9: Multiple and logistic regression interpretation](week09-multiple-logistic-regression.qmd) reported odds ratios, which this week connected to relative risk. See the [notes overview](index.qmd) for all weeks and the [course schedule](../schedule.qmd) for the order of the weeks.

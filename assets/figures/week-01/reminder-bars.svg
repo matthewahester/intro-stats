@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Proportion of drivers who renewed on time, with and without a text reminder (hypothetical)</title>
+  <desc id="desc">Bar chart. 410 of 500 drivers who got a text reminder renewed on time (0.82), compared with 360 of 500 who got no reminder (0.72), a difference of 0.10, or 10 percentage points.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="100" y1="320" x2="600" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="100" y1="320" x2="100" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="95" y1="320" x2="100" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="92" y="324" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.0</text>
+  <line x1="95" y1="266" x2="100" y2="266" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="92" y="270" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.2</text>
+  <line x1="95" y1="212" x2="100" y2="212" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="92" y="216" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.4</text>
+  <line x1="95" y1="158" x2="100" y2="158" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="92" y="162" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.6</text>
+  <line x1="95" y1="104" x2="100" y2="104" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="92" y="108" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.8</text>
+  <line x1="95" y1="50" x2="100" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="92" y="54" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">1.0</text>
+  <text x="54" y="185" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 54 185)">Proportion renewed on time</text>
+  <line x1="100" y1="266" x2="600" y2="266" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="100" y1="212" x2="600" y2="212" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="100" y1="158" x2="600" y2="158" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="100" y1="104" x2="600" y2="104" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="100" y1="50" x2="600" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="100" y1="320" x2="600" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="150" y="98.6" width="120" height="221.4" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="2"/>
+  <text x="210" y="74.6" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#8a4a2b" font-weight="600">0.82</text>
+  <text x="210" y="90.6" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">(410 of 500)</text>
+  <text x="210" y="342" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="600">Text reminder</text>
+  <text x="210" y="360" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">n = 500 drivers</text>
+  <rect x="430" y="125.6" width="120" height="194.4" fill="#c9d8e1" stroke="#35566b" stroke-width="2"/>
+  <text x="490" y="101.6" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#35566b" font-weight="600">0.72</text>
+  <text x="490" y="117.6" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">(360 of 500)</text>
+  <text x="490" y="342" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#35566b" font-weight="600">No reminder</text>
+  <text x="490" y="360" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">n = 500 drivers</text>
+  <line x1="274" y1="98.6" x2="358" y2="98.6" stroke="#1c1b19" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="342" y1="125.6" x2="426" y2="125.6" stroke="#1c1b19" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="350" y1="98.6" x2="350" y2="125.6" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="345" y1="98.6" x2="355" y2="98.6" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="345" y1="125.6" x2="355" y2="125.6" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="350" y="68.6" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">difference: 0.82 − 0.72 = 0.10</text>
+  <text x="350" y="84.6" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">(10 percentage points)</text>
+  <text x="100" y="386" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Hypothetical program: 1,000 drivers whose registration was about to expire.</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380" role="img" aria-labelledby="title desc">
+  <title id="title">The same odds ratio means a smaller risk ratio when the outcome is common</title>
+  <desc id="desc">Risk ratio against the comparison-group risk from 0 to 0.6. For odds ratio 2 the risk ratio falls from near 2 to 1.82 at 0.10, 1.43 at 0.40 and 1.25 at 0.60. For odds ratio 0.5 it rises from near 0.5 to 0.71.</desc>
+  <rect x="0" y="0" width="640" height="380" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="70" y1="320" x2="450" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="320" x2="70" y2="40" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="70" y1="320" x2="70" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="70" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="70" y1="320" x2="70" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="133.33" y1="320" x2="133.33" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="133.33" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.1</text>
+  <line x1="133.33" y1="320" x2="133.33" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="196.67" y1="320" x2="196.67" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="196.67" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.2</text>
+  <line x1="196.67" y1="320" x2="196.67" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="260" y1="320" x2="260" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="260" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.3</text>
+  <line x1="260" y1="320" x2="260" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="323.33" y1="320" x2="323.33" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="323.33" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.4</text>
+  <line x1="323.33" y1="320" x2="323.33" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="386.67" y1="320" x2="386.67" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="386.67" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.5</text>
+  <line x1="386.67" y1="320" x2="386.67" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="450" y1="320" x2="450" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="450" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0.6</text>
+  <line x1="450" y1="320" x2="450" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="320" x2="70" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="324" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="70" y1="320" x2="450" y2="320" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="256.36" x2="70" y2="256.36" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="260.36" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.5</text>
+  <line x1="70" y1="256.36" x2="450" y2="256.36" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="192.73" x2="70" y2="192.73" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="196.73" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">1</text>
+  <line x1="70" y1="192.73" x2="450" y2="192.73" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="129.09" x2="70" y2="129.09" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="133.09" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">1.5</text>
+  <line x1="70" y1="129.09" x2="450" y2="129.09" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="65" y1="65.45" x2="70" y2="65.45" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="62" y="69.45" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">2</text>
+  <line x1="70" y1="65.45" x2="450" y2="65.45" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="260" y="360" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Risk of the outcome in the comparison group</text>
+  <text x="24" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 24 180)">Risk ratio</text>
+  <line x1="70" y1="65.45" x2="450" y2="65.45" stroke="#8a8780" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="70" y1="256.36" x2="450" y2="256.36" stroke="#8a8780" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="70" y1="192.73" x2="450" y2="192.73" stroke="#1c1b19" stroke-width="1"/>
+  <text x="446" y="186.73" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">risk ratio 1 (no difference)</text>
+  <polyline points="73.17,66.72 76.33,67.97 79.5,69.22 82.67,70.45 85.83,71.66 89,72.87 92.17,74.06 95.33,75.24 98.5,76.42 101.67,77.58 104.83,78.72 108,79.86 111.17,80.99 114.33,82.11 117.5,83.21 120.67,84.31 123.83,85.4 127,86.47 130.17,87.54 133.33,88.6 136.5,89.64 139.67,90.68 142.83,91.71 146,92.73 149.17,93.74 152.33,94.74 155.5,95.73 158.67,96.71 161.83,97.69 165,98.66 168.17,99.61 171.33,100.56 174.5,101.51 177.67,102.44 180.83,103.37 184,104.28 187.17,105.19 190.33,106.1 193.5,106.99 196.67,107.88 199.83,108.76 203,109.63 206.17,110.5 209.33,111.36 212.5,112.21 215.67,113.05 218.83,113.89 222,114.72 225.17,115.55 228.33,116.36 231.5,117.17 234.67,117.98 237.83,118.78 241,119.57 244.17,120.36 247.33,121.14 250.5,121.91 253.67,122.68 256.83,123.44 260,124.2 263.17,124.95 266.33,125.69 269.5,126.43 272.67,127.16 275.83,127.89 279,128.61 282.17,129.33 285.33,130.04 288.5,130.75 291.67,131.45 294.83,132.14 298,132.83 301.17,133.52 304.33,134.2 307.5,134.88 310.67,135.55 313.83,136.21 317,136.87 320.17,137.53 323.33,138.18 326.5,138.83 329.67,139.47 332.83,140.11 336,140.74 339.17,141.37 342.33,142 345.5,142.62 348.67,143.23 351.83,143.84 355,144.45 358.17,145.05 361.33,145.65 364.5,146.25 367.67,146.84 370.83,147.43 374,148.01 377.17,148.59 380.33,149.16 383.5,149.74 386.67,150.3 389.83,150.87 393,151.43 396.17,151.98 399.33,152.54 402.5,153.08 405.67,153.63 408.83,154.17 412,154.71 415.17,155.25 418.33,155.78 421.5,156.31 424.67,156.83 427.83,157.35 431,157.87 434.17,158.38 437.33,158.9 440.5,159.4 443.67,159.91 446.83,160.41 450,160.91" fill="none" stroke="#8a4a2b" stroke-width="2.4"/>
+  <text x="462" y="164.91" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b" font-weight="600">Odds ratio 2</text>
+  <text x="462" y="179.91" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b">(risk ratio 1.25 at 0.6)</text>
+  <polyline points="73.17,256.2 76.33,256.04 79.5,255.88 82.67,255.72 85.83,255.56 89,255.39 92.17,255.23 95.33,255.06 98.5,254.9 101.67,254.73 104.83,254.56 108,254.4 111.17,254.23 114.33,254.06 117.5,253.88 120.67,253.71 123.83,253.54 127,253.37 130.17,253.19 133.33,253.01 136.5,252.84 139.67,252.66 142.83,252.48 146,252.3 149.17,252.12 152.33,251.94 155.5,251.76 158.67,251.57 161.83,251.39 165,251.2 168.17,251.02 171.33,250.83 174.5,250.64 177.67,250.45 180.83,250.26 184,250.07 187.17,249.88 190.33,249.68 193.5,249.49 196.67,249.29 199.83,249.1 203,248.9 206.17,248.7 209.33,248.5 212.5,248.3 215.67,248.09 218.83,247.89 222,247.69 225.17,247.48 228.33,247.27 231.5,247.06 234.67,246.85 237.83,246.64 241,246.43 244.17,246.22 247.33,246 250.5,245.79 253.67,245.57 256.83,245.35 260,245.13 263.17,244.91 266.33,244.69 269.5,244.47 272.67,244.24 275.83,244.02 279,243.79 282.17,243.56 285.33,243.33 288.5,243.1 291.67,242.87 294.83,242.63 298,242.39 301.17,242.16 304.33,241.92 307.5,241.68 310.67,241.44 313.83,241.19 317,240.95 320.17,240.7 323.33,240.45 326.5,240.21 329.67,239.95 332.83,239.7 336,239.45 339.17,239.19 342.33,238.93 345.5,238.68 348.67,238.41 351.83,238.15 355,237.89 358.17,237.62 361.33,237.36 364.5,237.09 367.67,236.82 370.83,236.54 374,236.27 377.17,235.99 380.33,235.71 383.5,235.43 386.67,235.15 389.83,234.87 393,234.58 396.17,234.29 399.33,234 402.5,233.71 405.67,233.42 408.83,233.12 412,232.83 415.17,232.53 418.33,232.23 421.5,231.92 424.67,231.62 427.83,231.31 431,231 434.17,230.69 437.33,230.37 440.5,230.05 443.67,229.74 446.83,229.41 450,229.09" fill="none" stroke="#35566b" stroke-width="2.4"/>
+  <text x="462" y="233.09" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b" font-weight="600">Odds ratio 0.5</text>
+  <text x="462" y="248.09" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#35566b">(risk ratio 0.71 at 0.6)</text>
+  <circle cx="82.67" cy="70.45" r="4.8" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="89.67" y="98.45" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">1.96</text>
+  <circle cx="133.33" cy="88.6" r="4.8" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="140.33" y="116.6" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">1.82</text>
+  <circle cx="323.33" cy="138.18" r="4.8" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="330.33" y="128.18" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">1.43</text>
+  <text x="446" y="59.45" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">dashed: the odds ratio itself</text>
+</svg>

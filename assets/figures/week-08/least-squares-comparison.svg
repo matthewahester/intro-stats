@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">Predicting with the mean alone versus the least-squares line: the line leaves a much smaller sum of squared residuals</title>
+  <desc id="desc">Two panels, same 10 hypothetical adults. Predicting 75.0 bpm for everyone leaves a sum of squared residuals of 200.0; the least-squares line leaves 55.3, so R-squared = 1 − 55.3/200.0 = 0.72.</desc>
+  <rect x="0" y="0" width="640" height="420" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="80" y1="310" x2="300" y2="310" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="310" x2="80" y2="75" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="102" y1="310" x2="102" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="102" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="146" y1="310" x2="146" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="146" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="190" y1="310" x2="190" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="190" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="234" y1="310" x2="234" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="234" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <line x1="278" y1="310" x2="278" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="278" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10</text>
+  <line x1="75" y1="310" x2="80" y2="310" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">64</text>
+  <line x1="75" y1="263" x2="80" y2="263" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="267" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">68</text>
+  <line x1="75" y1="216" x2="80" y2="216" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="220" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">72</text>
+  <line x1="75" y1="169" x2="80" y2="169" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="173" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">76</text>
+  <line x1="75" y1="122" x2="80" y2="122" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="126" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">80</text>
+  <line x1="75" y1="75" x2="80" y2="75" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="79" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">84</text>
+  <text x="190" y="350" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Daily steps (thousands)</text>
+  <text x="34" y="192.5" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 192.5)">Resting heart rate (bpm)</text>
+  <text x="190" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">Prediction 1: 75.0 bpm for everyone</text>
+  <text x="190" y="50" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#3a3935">(the mean, ignoring steps)</text>
+  <line x1="106.4" y1="180.75" x2="284.6" y2="180.75" stroke="#1c1b19" stroke-width="2.5"/>
+  <line x1="106.4" y1="180.75" x2="106.4" y2="110.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="106.4" cy="110.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="124" y1="180.75" x2="124" y2="157.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="124" cy="157.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="143.8" y1="180.75" x2="143.8" y2="133.75" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="143.8" cy="133.75" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="159.2" y1="180.75" x2="159.2" y2="192.5" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="159.2" cy="192.5" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="174.6" y1="180.75" x2="174.6" y2="157.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="174.6" cy="157.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="196.6" y1="180.75" x2="196.6" y2="122" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="196.6" cy="122" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="216.4" y1="180.75" x2="216.4" y2="204.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="216.4" cy="204.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="236.2" y1="180.75" x2="236.2" y2="204.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="236.2" cy="204.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="258.2" y1="180.75" x2="258.2" y2="239.5" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="258.2" cy="239.5" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="284.6" y1="180.75" x2="284.6" y2="286.5" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="284.6" cy="286.5" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="190" y="376" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="bold">Sum of squared residuals = 200.0</text>
+  <line x1="390" y1="310" x2="610" y2="310" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="390" y1="310" x2="390" y2="75" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="412" y1="310" x2="412" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="412" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">2</text>
+  <line x1="456" y1="310" x2="456" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="456" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="500" y1="310" x2="500" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="500" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">6</text>
+  <line x1="544" y1="310" x2="544" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="544" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <line x1="588" y1="310" x2="588" y2="315" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="588" y="329" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10</text>
+  <line x1="385" y1="310" x2="390" y2="310" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="314" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">64</text>
+  <line x1="385" y1="263" x2="390" y2="263" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="267" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">68</text>
+  <line x1="385" y1="216" x2="390" y2="216" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="220" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">72</text>
+  <line x1="385" y1="169" x2="390" y2="169" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="173" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">76</text>
+  <line x1="385" y1="122" x2="390" y2="122" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="126" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">80</text>
+  <line x1="385" y1="75" x2="390" y2="75" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="382" y="79" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">84</text>
+  <text x="500" y="350" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Daily steps (thousands)</text>
+  <text x="500" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">Prediction 2: the least-squares line</text>
+  <text x="500" y="50" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#3a3935">ŷ = 84.0 − 1.50x</text>
+  <line x1="416.4" y1="113.77" x2="594.6" y2="256.54" stroke="#1c1b19" stroke-width="2.5"/>
+  <line x1="416.4" y1="113.77" x2="416.4" y2="110.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="416.4" cy="110.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="434" y1="127.88" x2="434" y2="157.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="434" cy="157.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="453.8" y1="143.74" x2="453.8" y2="133.75" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="453.8" cy="133.75" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="469.2" y1="156.08" x2="469.2" y2="192.5" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="469.2" cy="192.5" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="484.6" y1="168.41" x2="484.6" y2="157.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="484.6" cy="157.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="506.6" y1="186.04" x2="506.6" y2="122" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="506.6" cy="122" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="526.4" y1="201.9" x2="526.4" y2="204.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="526.4" cy="204.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="546.2" y1="217.76" x2="546.2" y2="204.25" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="546.2" cy="204.25" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="568.2" y1="235.39" x2="568.2" y2="239.5" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="568.2" cy="239.5" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <line x1="594.6" y1="256.54" x2="594.6" y2="286.5" stroke="#8a4a2b" stroke-width="2.5"/>
+  <circle cx="594.6" cy="286.5" r="5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <text x="500" y="376" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#8a4a2b" font-weight="bold">Sum of squared residuals = 55.3</text>
+  <text x="320" y="405" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Vertical segments are residuals. R² = 1 − 55.3/200.0 = 0.72</text>
+</svg>

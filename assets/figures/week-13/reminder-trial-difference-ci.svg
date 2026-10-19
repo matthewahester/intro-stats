@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Vaccination proportions and the 95 percent confidence interval for their difference</title>
+  <desc id="desc">Top: 43 percent vaccinated with a reminder (215 of 500) and 35 percent without (182 of 520). Bottom: difference 8.0 percentage points, 95 percent interval 2.0 to 14.0, entirely above 0.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="200" y="30" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Percent vaccinated in each group</text>
+  <line x1="200" y1="44" x2="200" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="200" y1="150" x2="200" y2="155" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="200" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0%</text>
+  <line x1="265" y1="44" x2="265" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="265" y1="150" x2="265" y2="155" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="265" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10%</text>
+  <line x1="330" y1="44" x2="330" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="330" y1="150" x2="330" y2="155" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="330" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20%</text>
+  <line x1="395" y1="44" x2="395" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="395" y1="150" x2="395" y2="155" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="395" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">30%</text>
+  <line x1="460" y1="44" x2="460" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="460" y1="150" x2="460" y2="155" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="460" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">40%</text>
+  <line x1="525" y1="44" x2="525" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="525" y1="150" x2="525" y2="155" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="525" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">50%</text>
+  <line x1="590" y1="44" x2="590" y2="150" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="590" y1="150" x2="590" y2="155" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="590" y="169" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">60%</text>
+  <line x1="200" y1="150" x2="590" y2="150" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="200" y1="44" x2="200" y2="150" stroke="#1c1b19" stroke-width="1.5"/>
+  <rect x="200" y="58" width="279.5" height="30" fill="#8a4a2b" stroke="#8a4a2b" stroke-width="1"/>
+  <text x="190" y="78" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">Reminder (n = 500)</text>
+  <text x="485.5" y="78" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">43% (215 of 500)</text>
+  <rect x="200" y="106" width="227.5" height="30" fill="#c9d8e1" stroke="#35566b" stroke-width="1"/>
+  <text x="190" y="126" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">No reminder (n = 520)</text>
+  <text x="433.5" y="126" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">35% (182 of 520)</text>
+  <text x="200" y="212" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#1c1b19" font-weight="600">Difference, reminder minus no reminder</text>
+  <line x1="200" y1="300" x2="200" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="200" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">−4</text>
+  <line x1="265" y1="300" x2="265" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="265" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="330" y1="300" x2="330" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="330" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">4</text>
+  <line x1="395" y1="300" x2="395" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="395" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">8</text>
+  <line x1="460" y1="300" x2="460" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="460" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">12</text>
+  <line x1="525" y1="300" x2="525" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="525" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">16</text>
+  <line x1="590" y1="300" x2="590" y2="305" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="590" y="319" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20</text>
+  <line x1="200" y1="300" x2="590" y2="300" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="395" y="340" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Difference in percent vaccinated (percentage points)</text>
+  <line x1="265" y1="226" x2="265" y2="300" stroke="#1c1b19" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="259" y="240" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0 = no difference</text>
+  <line x1="297.99" y1="262" x2="492.01" y2="262" stroke="#8a4a2b" stroke-width="3"/>
+  <line x1="297.99" y1="253" x2="297.99" y2="271" stroke="#8a4a2b" stroke-width="3"/>
+  <line x1="492.01" y1="253" x2="492.01" y2="271" stroke="#8a4a2b" stroke-width="3"/>
+  <circle cx="395" cy="262" r="6" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="395" y="248" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19" font-weight="600">8.0</text>
+  <text x="297.99" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">2.0</text>
+  <text x="492.01" y="286" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">14.0</text>
+  <text x="190" y="267" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#1c1b19">95% confidence interval</text>
+  <text x="320" y="388" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Hypothetical randomized experiment with 1,020 clinic patients</text>
+</svg>

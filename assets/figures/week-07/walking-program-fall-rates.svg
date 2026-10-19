@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 372" width="640" height="372" role="img" aria-labelledby="title desc">
+  <title id="title">Percent of older adults who fell, by walking program and age group (hypothetical)</title>
+  <desc id="desc">Bar chart. All ages: 17.5% of joiners fell vs 24.7% of non-joiners, a 7.2 percentage point gap. Ages 65 to 74: 15.0% vs 18.0%. Ages 75 and older: 25.0% vs 28.0%. Within each age group the gap is 3.0 percentage points.</desc>
+  <rect x="0" y="0" width="640" height="372" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="84" y1="318" x2="624" y2="318" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="84" y1="318" x2="84" y2="40" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="79" y1="318" x2="84" y2="318" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="76" y="322" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="84" y1="318" x2="624" y2="318" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="79" y1="271.67" x2="84" y2="271.67" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="76" y="275.67" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">5</text>
+  <line x1="84" y1="271.67" x2="624" y2="271.67" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="79" y1="225.33" x2="84" y2="225.33" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="76" y="229.33" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">10</text>
+  <line x1="84" y1="225.33" x2="624" y2="225.33" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="79" y1="179" x2="84" y2="179" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="76" y="183" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">15</text>
+  <line x1="84" y1="179" x2="624" y2="179" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="79" y1="132.67" x2="84" y2="132.67" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="76" y="136.67" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">20</text>
+  <line x1="84" y1="132.67" x2="624" y2="132.67" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="79" y1="86.33" x2="84" y2="86.33" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="76" y="90.33" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">25</text>
+  <line x1="84" y1="86.33" x2="624" y2="86.33" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="79" y1="40" x2="84" y2="40" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="76" y="44" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">30</text>
+  <line x1="84" y1="40" x2="624" y2="40" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="38" y="179" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 38 179)">Percent who fell within 12 months</text>
+  <line x1="84" y1="318" x2="624" y2="318" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="264" y1="40" x2="264" y2="362" stroke="#8a8780" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="99" y="155.83" width="72" height="162.17" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="2"/>
+  <text x="135" y="148.83" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">17.5%</text>
+  <text x="135" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Joined</text>
+  <rect x="177" y="89.42" width="72" height="228.58" fill="#c9d8e1" stroke="#35566b" stroke-width="2"/>
+  <text x="213" y="82.42" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">24.7%</text>
+  <text x="213" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Not joined</text>
+  <text x="174" y="338" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">All ages (unadjusted)</text>
+  <text x="174" y="356" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">gap 7.2 percentage points</text>
+  <rect x="279" y="179" width="72" height="139" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="2"/>
+  <text x="315" y="172" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">15.0%</text>
+  <text x="315" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Joined</text>
+  <rect x="357" y="151.2" width="72" height="166.8" fill="#c9d8e1" stroke="#35566b" stroke-width="2"/>
+  <text x="393" y="144.2" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">18.0%</text>
+  <text x="393" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Not joined</text>
+  <text x="354" y="338" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Ages 65 to 74</text>
+  <text x="354" y="356" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">gap 3.0 percentage points</text>
+  <rect x="459" y="86.33" width="72" height="231.67" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="2"/>
+  <text x="495" y="79.33" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">25.0%</text>
+  <text x="495" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Joined</text>
+  <rect x="537" y="58.53" width="72" height="259.47" fill="#c9d8e1" stroke="#35566b" stroke-width="2"/>
+  <text x="573" y="51.53" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="bold">28.0%</text>
+  <text x="573" y="308" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Not joined</text>
+  <text x="534" y="338" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Ages 75 and older</text>
+  <text x="534" y="356" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">gap 3.0 percentage points</text>
+  <text x="84" y="22" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#3a3935">Joined the walking program (orange) vs did not join (blue); 1,000 hypothetical adults aged 65+</text>
+</svg>

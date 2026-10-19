@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390" width="640" height="390" role="img" aria-labelledby="title desc">
+  <title id="title">Power to detect a drop from 60% to 55% grows with sample size</title>
+  <desc id="desc">Line chart of power against sample size for a two-sided test of p = 0.60 when the true proportion is 0.55. At α = 0.05 power is about 0.18 at n = 100, 0.53 at n = 400 and 0.89 at n = 1,000. The dashed α = 0.01 curve is lower throughout.</desc>
+  <rect x="0" y="0" width="640" height="390" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <line x1="80" y1="320" x2="600" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="320" x2="80" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="320" x2="80" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="80" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="80" y1="320" x2="80" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="166.67" y1="320" x2="166.67" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="166.67" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">250</text>
+  <line x1="166.67" y1="320" x2="166.67" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="253.33" y1="320" x2="253.33" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="253.33" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">500</text>
+  <line x1="253.33" y1="320" x2="253.33" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="340" y1="320" x2="340" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="340" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">750</text>
+  <line x1="340" y1="320" x2="340" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="426.67" y1="320" x2="426.67" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="426.67" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1000</text>
+  <line x1="426.67" y1="320" x2="426.67" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="513.33" y1="320" x2="513.33" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="513.33" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1250</text>
+  <line x1="513.33" y1="320" x2="513.33" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="600" y1="320" x2="600" y2="325" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="600" y="339" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">1500</text>
+  <line x1="600" y1="320" x2="600" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="320" x2="80" y2="320" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="324" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0</text>
+  <line x1="80" y1="320" x2="600" y2="320" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="266" x2="80" y2="266" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="270" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.2</text>
+  <line x1="80" y1="266" x2="600" y2="266" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="212" x2="80" y2="212" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="216" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.4</text>
+  <line x1="80" y1="212" x2="600" y2="212" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="158" x2="80" y2="158" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="162" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.6</text>
+  <line x1="80" y1="158" x2="600" y2="158" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="104" x2="80" y2="104" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="108" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">0.8</text>
+  <line x1="80" y1="104" x2="600" y2="104" stroke="#d8d6d0" stroke-width="1"/>
+  <line x1="75" y1="50" x2="80" y2="50" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="54" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">1.0</text>
+  <line x1="80" y1="50" x2="600" y2="50" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="340" y="360" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Sample size n (adults surveyed)</text>
+  <text x="34" y="185" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 185)">Power (chance of rejecting H0)</text>
+  <polyline points="86.93,314.64 90.4,313.38 93.87,312.06 97.33,310.68 100.8,309.25 104.27,307.76 107.73,306.22 111.2,304.63 114.67,302.99 118.13,301.3 121.6,299.57 125.07,297.79 128.53,295.97 132,294.11 135.47,292.21 138.93,290.27 142.4,288.3 145.87,286.29 149.33,284.25 152.8,282.19 156.27,280.09 159.73,277.97 163.2,275.82 166.67,273.64 170.13,271.45 173.6,269.23 177.07,267 180.53,264.74 184,262.47 187.47,260.19 190.93,257.89 194.4,255.59 197.87,253.27 201.33,250.94 204.8,248.6 208.27,246.26 211.73,243.91 215.2,241.56 218.67,239.21 222.13,236.85 225.6,234.49 229.07,232.13 232.53,229.78 236,227.43 239.47,225.08 242.93,222.73 246.4,220.39 249.87,218.06 253.33,215.74 256.8,213.42 260.27,211.11 263.73,208.81 267.2,206.52 270.67,204.25 274.13,201.98 277.6,199.73 281.07,197.49 284.53,195.26 288,193.05 291.47,190.86 294.93,188.68 298.4,186.51 301.87,184.36 305.33,182.23 308.8,180.12 312.27,178.02 315.73,175.95 319.2,173.89 322.67,171.85 326.13,169.83 329.6,167.83 333.07,165.84 336.53,163.88 340,161.94 343.47,160.02 346.93,158.12 350.4,156.24 353.87,154.38 357.33,152.55 360.8,150.73 364.27,148.94 367.73,147.16 371.2,145.41 374.67,143.68 378.13,141.98 381.6,140.29 385.07,138.63 388.53,136.99 392,135.37 395.47,133.77 398.93,132.19 402.4,130.64 405.87,129.1 409.33,127.59 412.8,126.1 416.27,124.63 419.73,123.19 423.2,121.76 426.67,120.36 430.13,118.98 433.6,117.61 437.07,116.27 440.53,114.95 444,113.65 447.47,112.38 450.93,111.12 454.4,109.88 457.87,108.66 461.33,107.46 464.8,106.28 468.27,105.12 471.73,103.99 475.2,102.87 478.67,101.76 482.13,100.68 485.6,99.62 489.07,98.57 492.53,97.55 496,96.54 499.47,95.55 502.93,94.57 506.4,93.62 509.87,92.68 513.33,91.76 516.8,90.85 520.27,89.96 523.73,89.09 527.2,88.24 530.67,87.4 534.13,86.57 537.6,85.77 541.07,84.97 544.53,84.2 548,83.43 551.47,82.68 554.93,81.95 558.4,81.23 561.87,80.53 565.33,79.84 568.8,79.16 572.27,78.5 575.73,77.85 579.2,77.21 582.67,76.58 586.13,75.97 589.6,75.37 593.07,74.78 596.53,74.21 600,73.65" fill="none" stroke="#35566b" stroke-width="2.2" stroke-dasharray="6 4"/>
+  <polyline points="86.93,298.93 90.4,295.59 93.87,292.22 97.33,288.82 100.8,285.41 104.27,281.98 107.73,278.54 111.2,275.09 114.67,271.63 118.13,268.18 121.6,264.72 125.07,261.27 128.53,257.82 132,254.39 135.47,250.96 138.93,247.55 142.4,244.15 145.87,240.77 149.33,237.41 152.8,234.08 156.27,230.76 159.73,227.47 163.2,224.21 166.67,220.97 170.13,217.76 173.6,214.58 177.07,211.43 180.53,208.32 184,205.24 187.47,202.19 190.93,199.17 194.4,196.19 197.87,193.25 201.33,190.35 204.8,187.48 208.27,184.65 211.73,181.85 215.2,179.1 218.67,176.38 222.13,173.7 225.6,171.07 229.07,168.47 232.53,165.91 236,163.39 239.47,160.91 242.93,158.47 246.4,156.07 249.87,153.71 253.33,151.39 256.8,149.11 260.27,146.86 263.73,144.66 267.2,142.49 270.67,140.37 274.13,138.28 277.6,136.23 281.07,134.22 284.53,132.25 288,130.31 291.47,128.41 294.93,126.55 298.4,124.72 301.87,122.93 305.33,121.17 308.8,119.45 312.27,117.76 315.73,116.11 319.2,114.49 322.67,112.91 326.13,111.36 329.6,109.84 333.07,108.35 336.53,106.89 340,105.47 343.47,104.08 346.93,102.71 350.4,101.38 353.87,100.07 357.33,98.8 360.8,97.55 364.27,96.33 367.73,95.14 371.2,93.97 374.67,92.83 378.13,91.72 381.6,90.63 385.07,89.57 388.53,88.53 392,87.52 395.47,86.53 398.93,85.56 402.4,84.62 405.87,83.7 409.33,82.8 412.8,81.92 416.27,81.06 419.73,80.23 423.2,79.41 426.67,78.62 430.13,77.84 433.6,77.09 437.07,76.35 440.53,75.63 444,74.93 447.47,74.24 450.93,73.57 454.4,72.92 457.87,72.29 461.33,71.67 464.8,71.07 468.27,70.48 471.73,69.91 475.2,69.36 478.67,68.81 482.13,68.29 485.6,67.77 489.07,67.27 492.53,66.78 496,66.31 499.47,65.84 502.93,65.39 506.4,64.95 509.87,64.53 513.33,64.11 516.8,63.71 520.27,63.31 523.73,62.93 527.2,62.56 530.67,62.2 534.13,61.84 537.6,61.5 541.07,61.16 544.53,60.84 548,60.52 551.47,60.22 554.93,59.92 558.4,59.63 561.87,59.34 565.33,59.07 568.8,58.8 572.27,58.54 575.73,58.29 579.2,58.05 582.67,57.81 586.13,57.58 589.6,57.35 593.07,57.13 596.53,56.92 600,56.71" fill="none" stroke="#8a4a2b" stroke-width="2.6"/>
+  <text x="461.33" y="61.67" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#8a4a2b" font-weight="700">α = 0.05 (solid)</text>
+  <text x="322.67" y="193.85" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="start" fill="#35566b" font-weight="700">α = 0.01 (dashed)</text>
+  <circle cx="114.67" cy="271.63" r="4.5" fill="#8a4a2b" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="218.67" cy="176.38" r="4.5" fill="#8a4a2b" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="426.67" cy="78.62" r="4.5" fill="#8a4a2b" stroke="#ffffff" stroke-width="1.5"/>
+  <rect x="88" y="58" width="172" height="80" fill="#ffffff" stroke="#d8d6d0" stroke-width="1"/>
+  <text x="96" y="74" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19" font-weight="600">Marked values (α = 0.05):</text>
+  <text x="96" y="92" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">n = 100: power 0.18</text>
+  <text x="96" y="110" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">n = 400: power 0.53</text>
+  <text x="96" y="128" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#1c1b19">n = 1,000: power 0.89</text>
+  <text x="600" y="28" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">Null value 0.60, true proportion 0.55 (hypothetical), two-sided test</text>
+</svg>

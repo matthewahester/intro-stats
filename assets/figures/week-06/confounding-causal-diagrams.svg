@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Causal diagrams for a supplement study: observational study versus randomized experiment</title>
+  <desc id="desc">Two causal diagrams. Left, observational study: exercise habits point to both supplement use and heart disease. Right, randomized experiment: a coin flip sets supplement or placebo, so the arrow from exercise habits is cut.</desc>
+  <rect x="0" y="0" width="800" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <rect x="14" y="14" width="380" height="372" fill="none" stroke="#d8d6d0" stroke-width="1.2" rx="8"/>
+  <rect x="406" y="14" width="380" height="372" fill="none" stroke="#d8d6d0" stroke-width="1.2" rx="8"/>
+  <text x="204" y="42" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#1c1b19" font-weight="700">Observational study</text>
+  <text x="204" y="61" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">people choose whether to take the supplement</text>
+  <rect x="126" y="102" width="156" height="52" fill="#d3e0c8" stroke="#4d6b3c" stroke-width="1.8" rx="6"/>
+  <text x="204" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Exercise habits</text>
+  <text x="204" y="143" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#3a3935" font-style="italic">confounder</text>
+  <rect x="25" y="274" width="140" height="52" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8" rx="6"/>
+  <text x="95" y="297" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Takes supplement</text>
+  <text x="95" y="315" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#3a3935" font-style="italic">explanatory variable</text>
+  <rect x="247" y="274" width="136" height="52" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8" rx="6"/>
+  <text x="315" y="297" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Heart disease</text>
+  <text x="315" y="315" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#3a3935" font-style="italic">response variable</text>
+  <line x1="185.38" y1="157.38" x2="119.51" y2="261.33" stroke="#4d6b3c" stroke-width="2.2"/>
+  <polygon points="113.62,270.62 114.86,258.39 124.15,264.27" fill="#4d6b3c" stroke="none" stroke-width="1"/>
+  <line x1="222.95" y1="157.36" x2="290.09" y2="261.4" stroke="#4d6b3c" stroke-width="2.2"/>
+  <polygon points="296.05,270.64 285.47,264.38 294.71,258.41" fill="#4d6b3c" stroke="none" stroke-width="1"/>
+  <text x="78" y="206" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#4d6b3c">exercisers take</text>
+  <text x="78" y="221" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#4d6b3c">supplements more</text>
+  <text x="333" y="206" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#4d6b3c">exercise lowers</text>
+  <text x="333" y="221" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#4d6b3c">heart disease risk</text>
+  <line x1="169" y1="300" x2="233" y2="300" stroke="#1c1b19" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="243,300 232,294.5 232,305.5" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <text x="206" y="290" font-family="Inter, system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#1c1b19" font-weight="700">?</text>
+  <text x="204" y="350" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Is there a supplement effect? The two</text>
+  <text x="204" y="367" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">groups also differ in exercise habits.</text>
+  <text x="596" y="42" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#1c1b19" font-weight="700">Randomized experiment</text>
+  <text x="596" y="61" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">a coin flip decides who gets the supplement</text>
+  <rect x="430" y="102" width="140" height="52" fill="#f1f0ec" stroke="#3a3935" stroke-width="1.8" rx="6"/>
+  <text x="500" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Coin flip</text>
+  <text x="500" y="143" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#3a3935" font-style="italic">random assignment</text>
+  <rect x="612" y="102" width="156" height="52" fill="#d3e0c8" stroke="#4d6b3c" stroke-width="1.8" rx="6"/>
+  <text x="690" y="125" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Exercise habits</text>
+  <text x="690" y="143" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#3a3935" font-style="italic">still varies</text>
+  <rect x="414" y="274" width="172" height="52" fill="#e9cdbd" stroke="#8a4a2b" stroke-width="1.8" rx="6"/>
+  <text x="500" y="297" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Supplement or placebo</text>
+  <text x="500" y="315" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#3a3935" font-style="italic">explanatory variable</text>
+  <rect x="638" y="274" width="136" height="52" fill="#c9d8e1" stroke="#35566b" stroke-width="1.8" rx="6"/>
+  <text x="706" y="297" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" font-weight="600">Heart disease</text>
+  <text x="706" y="315" font-family="Inter, system-ui, sans-serif" font-size="12.5" text-anchor="middle" fill="#3a3935" font-style="italic">response variable</text>
+  <line x1="500" y1="158" x2="500" y2="259" stroke="#1c1b19" stroke-width="2.2"/>
+  <polygon points="500,270 494.5,259 505.5,259" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <line x1="692.79" y1="157.98" x2="702.19" y2="259.06" stroke="#4d6b3c" stroke-width="2.2"/>
+  <polygon points="703.21,270.02 696.72,259.57 707.67,258.56" fill="#4d6b3c" stroke="none" stroke-width="1"/>
+  <line x1="658.31" y1="156.68" x2="539.84" y2="263.93" stroke="#8a8780" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <polygon points="531.69,271.32 536.15,259.86 543.53,268.01" fill="#8a8780" stroke="none" stroke-width="1"/>
+  <line x1="586" y1="205" x2="604" y2="223" stroke="#8a4a2b" stroke-width="3"/>
+  <line x1="586" y1="223" x2="604" y2="205" stroke="#8a4a2b" stroke-width="3"/>
+  <text x="611" y="219" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="start" fill="#8a4a2b" font-weight="600">cut</text>
+  <line x1="590" y1="300" x2="624" y2="300" stroke="#1c1b19" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="634,300 623,294.5 623,305.5" fill="#1c1b19" stroke="none" stroke-width="1"/>
+  <text x="612" y="290" font-family="Inter, system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#1c1b19" font-weight="700">?</text>
+  <text x="596" y="344" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">Exercise can no longer affect who gets the</text>
+  <text x="596" y="360" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#1c1b19">supplement, so a difference in heart disease</text>
+  <text x="596" y="376" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">points to the supplement (or to chance).</text>
+</svg>

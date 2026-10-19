@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Extrapolation: a growth line for children aged 2 to 10, carried out to age 30</title>
+  <desc id="desc">Heights of 9 hypothetical children aged 2 to 10 lie close to the line predicted height = 76.2 + 6.42 × age, R-squared 0.995. At age 30 the line predicts about 269 cm, far above the 150 to 190 cm of most adults.</desc>
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <rect x="113.12" y="30" width="132.5" height="300" fill="#c9d8e1" stroke="none" stroke-width="1.5"/>
+  <text x="179.38" y="48" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b" font-weight="bold">Ages in the data</text>
+  <text x="179.38" y="64" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#35566b" font-weight="bold">2 to 10</text>
+  <rect x="80" y="162" width="530" height="48" fill="#d3e0c8" stroke="none" stroke-width="1.5"/>
+  <text x="601.72" y="202" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#4d6b3c" font-weight="bold">Most adults: about 150 to 190 cm</text>
+  <line x1="80" y1="330" x2="610" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="30" stroke="#1c1b19" stroke-width="1.5"/>
+  <line x1="80" y1="330" x2="80" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="80" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">0</text>
+  <line x1="162.81" y1="330" x2="162.81" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="162.81" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">5</text>
+  <line x1="245.62" y1="330" x2="245.62" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="245.62" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">10</text>
+  <line x1="328.44" y1="330" x2="328.44" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="328.44" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">15</text>
+  <line x1="411.25" y1="330" x2="411.25" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="411.25" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">20</text>
+  <line x1="494.06" y1="330" x2="494.06" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="494.06" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">25</text>
+  <line x1="576.88" y1="330" x2="576.88" y2="335" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="576.88" y="349" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">30</text>
+  <line x1="75" y1="330" x2="80" y2="330" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="334" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">50</text>
+  <line x1="75" y1="270" x2="80" y2="270" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="274" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">100</text>
+  <line x1="75" y1="210" x2="80" y2="210" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="214" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">150</text>
+  <line x1="75" y1="150" x2="80" y2="150" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="154" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">200</text>
+  <line x1="75" y1="90" x2="80" y2="90" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="94" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">250</text>
+  <line x1="75" y1="30" x2="80" y2="30" stroke="#1c1b19" stroke-width="1.5"/>
+  <text x="72" y="34" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="end" fill="#3a3935">300</text>
+  <text x="345" y="370" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19">Age (years)</text>
+  <text x="34" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="middle" fill="#1c1b19" transform="rotate(-90 34 180)">Height (centimeters)</text>
+  <line x1="113.12" y1="283.15" x2="245.62" y2="221.52" stroke="#1c1b19" stroke-width="2.5"/>
+  <line x1="245.62" y1="221.52" x2="576.88" y2="67.44" stroke="#1c1b19" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <circle cx="113.12" cy="285.6" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="129.69" cy="276" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="146.25" cy="266.4" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="162.81" cy="259.2" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="179.38" cy="250.8" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="195.94" cy="243.6" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="212.5" cy="236.4" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="229.06" cy="230.4" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="245.62" cy="223.2" r="4.5" fill="#35566b" stroke="none" stroke-width="1"/>
+  <circle cx="576.88" cy="67.44" r="7" fill="#8a4a2b" stroke="none" stroke-width="1"/>
+  <text x="564.88" y="55.44" font-family="Inter, system-ui, sans-serif" font-size="13" text-anchor="end" fill="#8a4a2b" font-weight="bold">Line's prediction at age 30: about 269 cm</text>
+  <text x="336.72" y="102" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">Dashed: the line carried</text>
+  <text x="336.72" y="118" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#3a3935">beyond the data</text>
+</svg>
